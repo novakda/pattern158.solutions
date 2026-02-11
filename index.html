@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
     <title>Pattern 158 | Dan Novak - Systems Architect</title>
     <style>
         /* ========== COLOR PALETTE ========== */
         :root {
             --navy: #1a2838;
             --teal: #17a2b8;
-            --orange: #ff6b35;
             --charcoal: #2d3436;
             --cream: #faf9f6;
             --light-gray: #e8e8e8;
@@ -61,17 +66,14 @@
             align-items: center;
         }
 
-        nav .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--cream);
-            text-decoration: none;
-            font-family: 'Bebas Neue', sans-serif;
-            letter-spacing: 2px;
+        nav .logo-link {
+            display: flex;
+            align-items: center;
         }
 
-        nav .logo span {
-            color: var(--teal);
+        nav .logo-img {
+            height: 48px;
+            width: auto;
         }
 
         nav ul {
@@ -93,34 +95,33 @@
 
         /* ========== HERO SECTION ========== */
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+            position: relative;
+            background-image: url('assets/images/hero/pattern158_organ_pipes_hero.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: var(--cream);
             padding: 6rem 2rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                linear-gradient(var(--navy) 2px, transparent 2px),
-                linear-gradient(90deg, var(--navy) 2px, transparent 2px);
-            background-size: 50px 50px;
-            opacity: 0.1;
-            z-index: 0;
+            inset: 0;
+            background-color: rgba(26, 40, 56, 0.4);
+            z-index: 1;
         }
 
         .hero .container {
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -275,7 +276,7 @@
         .finding-card {
             background: white;
             margin-bottom: 2rem;
-            border-left: 6px solid var(--orange);
+            border-left: 6px solid var(--teal);
             padding: 2rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s;
@@ -292,7 +293,7 @@
         }
 
         .finding-label {
-            background: var(--orange);
+            background: var(--teal);
             color: white;
             padding: 0.3rem 1rem;
             font-weight: bold;
@@ -469,7 +470,12 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <a href="#" class="logo">PATTERN <span>158</span></a>
+            <a href="#" class="logo-link">
+                <img src="assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
             <ul>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#about">About</a></li>
