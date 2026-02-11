@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern 158 | Dan Novak - Systems Architect</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --orange: #ff6b35;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--cream);
+            text-decoration: none;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        nav .logo span {
+            color: var(--teal);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+            color: var(--cream);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(var(--navy) 2px, transparent 2px),
+                linear-gradient(90deg, var(--navy) 2px, transparent 2px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--teal);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero .cta-buttons {
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: var(--teal);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #138496;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--cream);
+            border: 2px solid var(--cream);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cream);
+            color: var(--navy);
+        }
+
+        /* ========== PATTERN VISUAL ========== */
+        .pattern-visual {
+            margin: 2rem auto;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .pattern-bar {
+            background: var(--teal);
+            width: 30px;
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+
+        .pattern-bar:nth-child(1) { height: 60px; }
+        .pattern-bar:nth-child(2) { height: 60px; }
+        .pattern-bar:nth-child(3) { height: 80px; }
+
+        .pattern-visual:hover .pattern-bar {
+            opacity: 1;
+            transform: scaleY(1.1);
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== INTRO SECTION ========== */
+        .intro {
+            background: white;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .intro .specialties {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .specialty-card {
+            background: var(--cream);
+            padding: 1.5rem;
+            border-left: 4px solid var(--teal);
+            text-align: left;
+        }
+
+        .specialty-card h3 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* ========== FINDINGS SECTION (NTSB Style) ========== */
+        .findings {
+            background: var(--light-gray);
+        }
+
+        .findings h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--navy);
+            text-align: center;
+        }
+
+        .finding-card {
+            background: white;
+            margin-bottom: 2rem;
+            border-left: 6px solid var(--orange);
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .finding-card:hover {
+            transform: translateX(4px);
+        }
+
+        .finding-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .finding-label {
+            background: var(--orange);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-weight: bold;
+            margin-right: 1rem;
+            border-radius: 3px;
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .finding-title {
+            font-size: 1.8rem;
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        .finding-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .finding-section {
+            margin: 1rem 0;
+        }
+
+        .finding-section h4 {
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .finding-section p {
+            margin-left: 1rem;
+            line-height: 1.8;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* ========== PHILOSOPHY SECTION ========== */
+        .philosophy {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .philosophy h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .philosophy-item h3 {
+            color: var(--teal);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .philosophy-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .philosophy-item li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .philosophy-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+
+        /* ========== TUNING FORK VISUAL ========== */
+        .tuning-fork-section {
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .tuning-fork {
+            width: 80px;
+            height: 120px;
+            margin: 2rem auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .fork-prong {
+            width: 20px;
+            height: 80px;
+            background: var(--teal);
+            border-radius: 10px 10px 0 0;
+        }
+
+        .fork-prong:first-child {
+            margin-right: 20px;
+        }
+
+        .fork-handle {
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 40px;
+            background: var(--teal);
+            border-radius: 0 0 5px 5px;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .btn {
+                display: block;
+                margin: 0.5rem auto;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">PATTERN <span>158</span></a>
+            <ul>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#philosophy">Philosophy</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>PATTERN <span class="pattern-number">158</span></h1>
+            <p class="subtitle">Finding elegant solutions to complex problems</p>
+            
+            <!-- Pattern Visual (558 representation) -->
+            <div class="pattern-visual">
+                <div class="pattern-bar"></div>
+                <div class="pattern-bar"></div>
+                <div class="pattern-bar"></div>
+            </div>
+
+            <p class="tagline">I cheat, but I cheat fair.</p>
+
+            <div class="cta-buttons">
+                <a href="#work" class="btn btn-primary">View My Work</a>
+                <a href="#about" class="btn btn-secondary">About Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <h2>I Reverse-Engineer Chaos Into Clarity</h2>
+            <p>After 28 years building and rescuing enterprise systems, I've learned that the best solutions aren't always the obvious ones—they're the elegant shortcuts that work properly.</p>
+
+            <div class="specialties">
+                <div class="specialty-card">
+                    <h3>Legacy System Rescue</h3>
+                    <p>Forensic reverse-engineering of "black box" systems. Making undocumented legacy systems work when documentation doesn't exist.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Cross-Platform Integration</h3>
+                    <p>Building bridges between systems that weren't designed to talk. SCORM, xAPI, AICC protocol expertise.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>AI Implementation</h3>
+                    <p>Thoughtful AI/LLM application. Understanding when to use generative AI vs. structured data for production systems.</p>
+                </div>
+                <div class="specialty-card">
+                    <h3>Systems Architecture</h3>
+                    <p>Building foundational systems that harmonize—like the diapason register that gives a pipe organ its character.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects (NTSB Style) -->
+    <section class="findings" id="work">
+        <div class="container">
+            <h2>Featured Projects</h2>
+
+            <!-- Finding 1: CSBB Dispatch -->
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-label">⚠ FINDING 1</span>
+                    <h3 class="finding-title">CSBB Dispatch Framework</h3>
+                </div>
+                <p class="finding-meta">2011-2016 | Status: 10+ years in production</p>
+
+                <div class="finding-section">
+                    <h4>Analysis</h4>
+                    <p>Energy utilities needed cross-domain SCORM delivery before browsers or LMS vendors supported it. Same-origin policy blocked the obvious solutions.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Solution</h4>
+                    <p>Engineered cross-domain communication using EasyXDM. Built SCORM API proxy for transparent AICC/SCORM protocol translation. Created automated package generation tooling.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Outcome</h4>
+                    <p>System served FPL, Exelon, NRG Energy, BP, Calpine, Colorado Springs Utilities, and Puget Sound Energy. Remained in production 10+ years.</p>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">EasyXDM</span>
+                    <span class="tech-tag">SCORM</span>
+                    <span class="tech-tag">AICC</span>
+                    <span class="tech-tag">Groovy</span>
+                </div>
+            </div>
+
+            <!-- Finding 2: Ready2Role -->
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-label">⚠ FINDING 2</span>
+                    <h3 class="finding-title">Ready2Role Legacy Rescue</h3>
+                </div>
+                <p class="finding-meta">2004-2016 | Status: Extended system lifespan 10+ years</p>
+
+                <div class="finding-section">
+                    <h4>Analysis</h4>
+                    <p>Inherited undocumented courseware CMS on Macromedia JRun platform when original developer left. No documentation, no source code access, production system serving clients.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Solution</h4>
+                    <p>Decompiled Java/JSP packages to understand system behavior. Built JavaScript workarounds where server-side refactoring wasn't practical. Maintained critical system beyond expected EOL.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Outcome</h4>
+                    <p>System remained operational 10+ years. Enabled company to continue serving clients while planning proper migration path.</p>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Java/JSP</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Macromedia JRun</span>
+                    <span class="tech-tag">Forensic Engineering</span>
+                </div>
+            </div>
+
+            <!-- Finding 3: Microsoft MCAPS -->
+            <div class="finding-card">
+                <div class="finding-header">
+                    <span class="finding-label">⚠ FINDING 3</span>
+                    <h3 class="finding-title">Microsoft MCAPS AI Training</h3>
+                </div>
+                <p class="finding-meta">2025-2026 | Status: Production</p>
+
+                <div class="finding-section">
+                    <h4>Analysis</h4>
+                    <p>Needed AI instructor agent in Copilot Studio. Prompt engineering alone couldn't establish reliable guardrails for progress tracking and navigation.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Solution</h4>
+                    <p>Built data pipeline converting Articulate Rise materials into structured JSON. Used AI code interpreter for content transformation, structured data for deterministic control. Created adaptive cards for navigation and assessments.</p>
+                </div>
+
+                <div class="finding-section">
+                    <h4>Outcome</h4>
+                    <p>Reliable course navigation and progress tracking. Demonstrated hybrid AI/structured data architecture pattern.</p>
+                </div>
+
+                <div class="tech-stack">
+                    <span class="tech-tag">Microsoft Copilot Studio</span>
+                    <span class="tech-tag">Adaptive Cards</span>
+                    <span class="tech-tag">AI Code Interpreter</span>
+                    <span class="tech-tag">JSON</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy" id="philosophy">
+        <div class="container">
+            <h2>The "Cheat Fair" Philosophy</h2>
+
+            <div class="tuning-fork-section">
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Like a tuning fork finds the right frequency, I find the optimal solution—but always within the rules.</p>
+                <div class="tuning-fork">
+                    <div class="fork-prong"></div>
+                    <div class="fork-handle"></div>
+                    <div class="fork-prong"></div>
+                </div>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <h3>The "Cheat" Part</h3>
+                    <ul>
+                        <li>Using AI to analyze 34,650 emails instead of reading manually</li>
+                        <li>Decompiling code when documentation doesn't exist</li>
+                        <li>Building cross-domain proxies instead of waiting for vendors</li>
+                        <li>Finding the 2-hour solution vs. the 2-week rewrite</li>
+                    </ul>
+                </div>
+
+                <div class="philosophy-item">
+                    <h3>The "Fair" Part</h3>
+                    <ul>
+                        <li>Validating AI output against source data</li>
+                        <li>Testing decompiled insights before production</li>
+                        <li>Documenting workarounds for maintainability</li>
+                        <li>Ensuring shortcuts aren't technical debt</li>
+                    </ul>
+                </div>
+
+                <div class="philosophy-item">
+                    <h3>The Influences</h3>
+                    <ul>
+                        <li>Air crash investigation (forensic methodology)</li>
+                        <li>Speedrunning/TAS culture (optimal paths)</li>
+                        <li>Pipe organs (harmonic foundation)</li>
+                        <li>The Three Stooges (direct problem-solving)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
