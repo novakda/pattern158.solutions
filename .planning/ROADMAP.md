@@ -12,7 +12,7 @@ This roadmap transforms the Pattern 158 Solutions static portfolio site from a f
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: CSS Foundation** - Extract inline styles to external stylesheets, establish design system
+- [x] **Phase 1: CSS Foundation** - Extract inline styles to external stylesheets, establish design system
 - [ ] **Phase 2: Dark Mode Implementation** - Add brand-aligned dark theme with system preference support
 - [ ] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
 - [ ] **Phase 4: SEO Optimization** - Meta tags, Open Graph, structured data, sitemap
@@ -33,9 +33,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Pass 1: Verbatim CSS extraction from 14 pages + color audit checkpoint
-- [ ] 01-02-PLAN.md — Pass 2: Design token system, deduplication, body class scoping
-- [ ] 01-03-PLAN.md — Final automated audit + visual regression verification
+- [x] 01-01-PLAN.md — Pass 1: Verbatim CSS extraction from 14 pages + color audit checkpoint
+- [x] 01-02-PLAN.md — Pass 2: Design token system, deduplication, body class scoping
+- [x] 01-03-PLAN.md — Final automated audit + visual regression verification
 
 ### Phase 2: Dark Mode Implementation
 **Goal**: Provide brand-aligned dark theme with system preference support
@@ -104,7 +104,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. CSS Foundation | 0/3 | Planned | - |
+| 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. Dark Mode Implementation | 0/TBD | Not started | - |
 | 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
 | 4. SEO Optimization | 0/TBD | Not started | - |
@@ -112,4 +112,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13*
+*Last updated: 2026-02-13 (Phase 1 complete)*
