@@ -5,35 +5,45 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Accurately and compellingly present Dan's professional identity and body of work to hiring managers, engineers, and potential clients
-**Current focus:** Phase 1 - CSS Foundation (executing)
+**Current focus:** Phase 2 - Dark Mode Implementation (executing)
 
 ## Current Position
 
-Phase: 1 of 5 (CSS Foundation - COMPLETE)
-Plan: 3 of 3 complete
-Status: Phase 1 Complete - Ready for Phase 2
-Last activity: 2026-02-13 — Plan 01-03 complete (final validation & quality gate)
+Phase: 2 of 5 (Dark Mode Implementation - IN PROGRESS)
+Plan: 1 of 2 complete
+Status: Phase 2 Plan 01 Complete - Dark mode CSS foundation ready
+Last activity: 2026-02-13 — Plan 02-01 complete (dark mode CSS foundation)
 
-Progress: [████████░░] 20%
+Progress: [█████████░] 25%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: ~15 min
-- Total execution time: ~0.8 hours
+- Total plans completed: 4
+- Average duration: ~14 min
+- Total execution time: ~0.85 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1 | 3/3 | ~50min | ~17min |
+| 2 | 1/2 | ~1min | ~1min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (~35min), 01-02 (~5min), 01-03 (~10min)
-- Trend: Accelerating (validation faster than extraction/consolidation)
+- Last 5 plans: 01-01 (~35min), 01-02 (~5min), 01-03 (~10min), 02-01 (~1min)
+- Trend: CSS-only tasks execute very quickly compared to extraction/validation
 
 *Updated after each plan completion*
+
+**Detailed Metrics:**
+
+| Plan | Duration | Tasks | Files |
+|------|----------|-------|-------|
+| 01-01 | ~35min | 3 | 14 |
+| 01-02 | ~5min | 1 | 1 |
+| 01-03 | ~10min | 2 | 14 |
+| 02-01 | 88s | 2 | 1 |
 
 ## Accumulated Context
 
@@ -51,6 +61,9 @@ Recent decisions affecting current work:
 - Semantic token naming: --color-primary (not --navy), --color-background (not --cream) for theme flexibility
 - 62 design tokens established: 19 colors, 3 fonts, 9 spacing scale, 3 radii, 5 shadows, 2 text-shadow, 3 overlays
 - Phase 1 complete: Zero inline styles, zero hardcoded colors, user-approved visual fidelity across all 14 pages
+- [Phase 02-01]: Dark mode uses brand-aligned navy #1a2838 (not generic black) for backgrounds
+- [Phase 02-01]: Nav/footer/hero keep dark appearance in both themes (no inverse token swaps)
+- [Phase 02-01]: Theme toggle icon visibility uses display:none/block (not opacity) for cleaner accessibility
 
 ### Pending Todos
 
@@ -67,9 +80,9 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-13 (Phase 1 complete)
-Stopped at: Phase 1 CSS Foundation complete - all 3 plans executed successfully
+Last session: 2026-02-13 (Phase 2 executing)
+Stopped at: Completed 02-01-PLAN.md - Dark mode CSS foundation
 Resume file: None
 
 ---
-*Next action: Begin Phase 2 (Dark Mode) - plan-phase workflow to create phase plan*
+*Next action: Execute Phase 02 Plan 02 (HTML integration & JavaScript theme switching)*
