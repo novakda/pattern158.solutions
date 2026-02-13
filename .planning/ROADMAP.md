@@ -13,8 +13,8 @@ This roadmap transforms the Pattern 158 Solutions static portfolio site from a f
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: CSS Foundation** - Extract inline styles to external stylesheets, establish design system
-- [ ] **Phase 2: Dark Mode Implementation** - Add brand-aligned dark theme with system preference support
-- [ ] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
+- [x] **Phase 2: Dark Mode Implementation** - Add brand-aligned dark theme with system preference support
+- [x] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
 - [ ] **Phase 4: SEO Optimization** - Meta tags, Open Graph, structured data, sitemap
 - [ ] **Phase 5: Performance Optimization** - Image optimization, lazy loading, font loading
 
@@ -66,8 +66,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Standardize navigation HTML (absolute paths, consistent links, hamburger markup) + mobile menu CSS
-- [ ] 03-02-PLAN.md — Navigation toggle JavaScript (keyboard accessibility, state management) + visual verification
+- [x] 03-01-PLAN.md — Standardize navigation HTML (absolute paths, consistent links, hamburger markup) + mobile menu CSS
+- [x] 03-02-PLAN.md — Navigation toggle JavaScript (keyboard accessibility, state management) + visual verification
 
 ### Phase 4: SEO Optimization
 **Goal**: Maximize discoverability and social media sharing
@@ -108,10 +108,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. Dark Mode Implementation | 2/2 | ✓ Complete | 2026-02-13 |
-| 3. Navigation & Mobile Responsiveness | 0/2 | Not started | - |
+| 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 0/TBD | Not started | - |
 | 5. Performance Optimization | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13 (Phase 2 complete)*
+*Last updated: 2026-02-13 (Phase 3 complete)*
