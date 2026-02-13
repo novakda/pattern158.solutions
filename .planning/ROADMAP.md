@@ -63,10 +63,11 @@ Plans:
   3. Mobile viewport (<768px) displays hamburger menu with smooth transitions
   4. Hamburger menu is keyboard-accessible (Enter/Space to toggle, Tab navigation, Escape to close)
   5. Touch targets in mobile menu meet 48x48px minimum size
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 03-01: TBD during planning
+- [ ] 03-01-PLAN.md — Standardize navigation HTML (absolute paths, consistent links, hamburger markup) + mobile menu CSS
+- [ ] 03-02-PLAN.md — Navigation toggle JavaScript (keyboard accessibility, state management) + visual verification
 
 ### Phase 4: SEO Optimization
 **Goal**: Maximize discoverability and social media sharing
@@ -107,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. Dark Mode Implementation | 2/2 | ✓ Complete | 2026-02-13 |
-| 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
+| 3. Navigation & Mobile Responsiveness | 0/2 | Not started | - |
 | 4. SEO Optimization | 0/TBD | Not started | - |
 | 5. Performance Optimization | 0/TBD | Not started | - |
 
