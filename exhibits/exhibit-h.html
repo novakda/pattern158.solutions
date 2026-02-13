@@ -238,6 +238,79 @@
         </div>
     </footer>
 
+    <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
     <script>
     (function() {
         var STORAGE_KEY = 'theme';
