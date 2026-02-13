@@ -50,8 +50,8 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Dark mode CSS token overrides and toggle button styling
-- [ ] 02-02-PLAN.md — HTML integration: blocking script, toggle button, and JS across all 14 pages
+- [x] 02-01-PLAN.md — Dark mode CSS token overrides and toggle button styling
+- [x] 02-02-PLAN.md — HTML integration: blocking script, toggle button, and JS across all 14 pages
 
 ### Phase 3: Navigation & Mobile Responsiveness
 **Goal**: Consistent cross-page navigation with mobile-friendly access
@@ -106,11 +106,11 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
-| 2. Dark Mode Implementation | 0/2 | Planning complete | - |
+| 2. Dark Mode Implementation | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
 | 4. SEO Optimization | 0/TBD | Not started | - |
 | 5. Performance Optimization | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13 (Phase 2 planned)*
+*Last updated: 2026-02-13 (Phase 2 complete)*
