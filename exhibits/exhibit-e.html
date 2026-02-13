@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit E - PNC AMG Journey: Client Showcase</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== REPORT SECTIONS ========== */
+        .report-body {
+            background: white;
+        }
+
+        .report-body .container {
+            max-width: 900px;
+        }
+
+        .report-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--teal);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .report-section h2 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .report-section h3 {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .report-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        /* ========== PERSONNEL TABLE ========== */
+        .personnel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personnel-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .personnel-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .personnel-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        /* ========== BLOCKQUOTES ========== */
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ========== TEAM NOTE ========== */
+        .team-note {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid var(--brass);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .team-note strong {
+            color: var(--teal);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ========== IMPACT TAGS ========== */
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .impact-tag.highlight {
+            background: var(--teal);
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link-section {
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid var(--navy);
+            padding: 0.8rem 2rem;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .personnel-table {
+                font-size: 0.8rem;
+            }
+
+            .personnel-table th,
+            .personnel-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../testimonials.html" aria-current="page">Field Reports</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">EXHIBIT E &mdash; PNC AMG Journey: Client Showcases Work as Internal Model</p>
+            <span class="classification">Team Recognition &middot; Instructional Design &middot; February 2016</span>
+        </div>
+    </section>
+
+    <!-- Report Body -->
+    <section class="report-body">
+        <div class="container">
+
+            <!-- Section 1: Background -->
+            <div class="report-section">
+                <span class="section-number">Section 1</span>
+                <h2>Background</h2>
+                <p>The AMG Journey was a year-long instructional design project for PNC Financial Services. The team adapted to changing client requirements throughout the engagement while maintaining creative quality. This was a large-scale, cross-functional effort involving designers, editors, developers, and project managers.</p>
+                <p>PNC ultimately elevated this project internally as a model for how to approach training design partnerships &mdash; a distinction that reflects not just the quality of the deliverables but the collaborative process that produced them.</p>
+            </div>
+
+            <!-- Section 2: Personnel -->
+            <div class="report-section">
+                <span class="section-number">Section 2</span>
+                <h2>Personnel</h2>
+
+                <table class="personnel-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title / Organization</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Jennifer Sim</strong></td>
+                            <td>Project Management Specialist (860-460-7378)</td>
+                            <td>Authored the team kudos email. Primary project management contact.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kimberly Vahlsing</strong></td>
+                            <td>Sr. Director, Learning Solutions</td>
+                            <td>Recipient of the kudos email. Executive sponsor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dan Novak</strong></td>
+                            <td>GP Strategies</td>
+                            <td>Team member, software engineering contribution.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="color: #666; font-style: italic;">25+ additional team members including designers, editors, developers, and project managers contributed to this year-long engagement.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="team-note">
+                    <strong>Note on Scope</strong>
+                    This was a team recognition. Dan contributed as part of a large cross-functional team. The exhibit is included because it documents the caliber of work and collaboration standards maintained across the team, and because PNC's decision to present this internally as a model validates the quality of the overall engagement.
+                </div>
+            </div>
+
+            <!-- Section 3: Findings -->
+            <div class="report-section">
+                <span class="section-number">Section 3</span>
+                <h2>Findings</h2>
+                <p>The AMG Journey project succeeded despite changing requirements over a year-long timeline. The client specifically identified three factors in their satisfaction:</p>
+                <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 2;">
+                    <li><strong>Creativity</strong> &mdash; The design approach was novel enough for PNC to present internally</li>
+                    <li><strong>Adaptability</strong> &mdash; The team adjusted seamlessly to evolving client needs</li>
+                    <li><strong>Partnership</strong> &mdash; PNC called out the collaborative relationship, not just the deliverables</li>
+                </ul>
+                <p>The fact that PNC was asked to present this series as a model design approach within their organization indicates the project exceeded standard client expectations and was recognized at institutional level.</p>
+            </div>
+
+            <!-- Section 4: Evidence -->
+            <div class="report-section">
+                <span class="section-number">Section 4</span>
+                <h2>Evidence</h2>
+
+                <blockquote>
+                    I just wanted to pass on a huge job well done and appreciation to all the resources here that have had some part in supporting the AMG Journey project this past year.
+                    <div class="attribution">
+                        Jennifer Sim
+                        <span class="role">&mdash; Project Management Specialist</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Due to a strong and thoughtful design collaboration early on, this team was able to seamlessly adapt to the changing needs of PNC. Everyone throughout the project was engaged and very collaborative. This team was a model in how resources engage and collaborate with each other and with the client.
+                    <div class="attribution">
+                        Jennifer Sim
+                        <span class="role">&mdash; Project Management Specialist</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    PNC has shared with me that they were asked to present this series as a model design approach internally. On numerous occasions they have complemented this team on their creativity, professionalism, and quality. During a recent project debrief meeting this week they made a special mention that the reason for success on this project was the partnership as a whole and our ability to work toward their needs no matter what the circumstances.
+                    <div class="attribution">
+                        Jennifer Sim
+                        <span class="role">&mdash; relaying feedback from PNC Financial Services</span>
+                    </div>
+                </blockquote>
+            </div>
+
+            <!-- Section 5: Client Impact -->
+            <div class="report-section">
+                <span class="section-number">Section 5</span>
+                <h2>Client Impact</h2>
+                <p>PNC Financial Services took the following actions based on their satisfaction with the AMG Journey project:</p>
+                <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 2;">
+                    <li>Presented the series internally as a model design approach for future training partnerships</li>
+                    <li>Complimented the team on creativity, professionalism, and quality on numerous occasions</li>
+                    <li>Called out the partnership as the primary reason for success during the project debrief</li>
+                    <li>Specifically noted the team's ability to work toward their needs regardless of circumstances</li>
+                </ul>
+            </div>
+
+            <!-- Section 6: Significance -->
+            <div class="report-section">
+                <span class="section-number">Section 6</span>
+                <h2>Significance</h2>
+                <p>When a client elevates vendor work to the level of an internal model, it represents the highest form of implicit endorsement. PNC was not simply satisfied &mdash; they considered the collaboration process and output worthy of institutional replication. This reflects on the entire team's ability to maintain standards under evolving requirements over an extended engagement.</p>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Client Showcase</span>
+                    <span class="impact-tag highlight">Model Design Approach</span>
+                    <span class="impact-tag">PNC Financial Services</span>
+                    <span class="impact-tag">Instructional Design</span>
+                    <span class="impact-tag">Year-Long Engagement</span>
+                    <span class="impact-tag">Team Recognition</span>
+                    <span class="impact-tag">Cross-Functional</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back Link -->
+    <section class="back-link-section">
+        <div class="container">
+            <a href="../testimonials.html" class="back-link">&larr; Back to Field Reports</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

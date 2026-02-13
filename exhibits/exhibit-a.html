@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit A - Electric Boat LMS Integration Investigation</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .report-meta {
+            font-size: 0.95rem;
+            color: rgba(250, 249, 246, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ========== REPORT SECTION HEADERS ========== */
+        .report-section {
+            padding: 4rem 2rem;
+        }
+
+        .report-section:nth-child(odd) {
+            background: white;
+        }
+
+        .report-section:nth-child(even) {
+            background: var(--cream);
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 3px solid var(--navy);
+        }
+
+        .section-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: var(--teal);
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            color: var(--navy);
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        /* ========== BACKGROUND SECTION ========== */
+        .background-content {
+            max-width: 900px;
+        }
+
+        .background-content p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1.2rem;
+            color: var(--charcoal);
+        }
+
+        .background-content strong {
+            color: var(--navy);
+        }
+
+        .key-fact {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.15rem 0.6rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            border-radius: 3px;
+            margin: 0 0.1rem;
+        }
+
+        /* ========== PERSONNEL TABLE ========== */
+        .personnel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personnel-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .personnel-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .personnel-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        .personnel-table .person-name {
+            font-weight: 600;
+            color: var(--navy);
+            white-space: nowrap;
+        }
+
+        .personnel-table .person-org {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--teal);
+            letter-spacing: 0.5px;
+        }
+
+        /* ========== TIMELINE ========== */
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 1rem 0 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 12px;
+            width: 3px;
+            height: 100%;
+            background: var(--navy);
+        }
+
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -2.55rem;
+            top: 0.35rem;
+            width: 14px;
+            height: 14px;
+            background: var(--teal);
+            border: 3px solid var(--navy);
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline-entry.milestone::before {
+            width: 18px;
+            height: 18px;
+            left: -2.65rem;
+            top: 0.25rem;
+            background: var(--brass);
+            border-color: var(--navy);
+        }
+
+        .timeline-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--teal);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-entry.milestone .timeline-date {
+            color: var(--brass);
+        }
+
+        .timeline-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.25rem;
+            color: var(--navy);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .timeline-content blockquote {
+            margin: 0.8rem 0 0;
+            padding: 0.8rem 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        .timeline-content .speaker {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        /* ========== RESOLUTION TABLE ========== */
+        .resolution-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .resolution-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resolution-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .resolution-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        .resolution-table .issue-id {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--teal);
+            white-space: nowrap;
+        }
+
+        /* ========== BLOCKQUOTES ========== */
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ========== PROBABLE CAUSE SECTION ========== */
+        .probable-cause-box {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 2rem 2.5rem;
+            border-left: 6px solid var(--brass);
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .probable-cause-box::before {
+            content: 'DETERMINATION';
+            position: absolute;
+            top: -0.6rem;
+            left: 2rem;
+            background: var(--brass);
+            color: var(--navy);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            padding: 0.2rem 0.8rem;
+            font-weight: 700;
+        }
+
+        .probable-cause-box p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .probable-cause-box code {
+            background: rgba(23, 162, 184, 0.2);
+            color: var(--teal);
+        }
+
+        /* ========== RECOMMENDATIONS ========== */
+        .recommendations-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .recommendations-list li {
+            padding: 0.8rem 0 0.8rem 2.5rem;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.7;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .recommendations-list li:last-child {
+            border-bottom: none;
+        }
+
+        .recommendations-list li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            top: 0.8rem;
+            width: 24px;
+            height: 24px;
+            background: var(--teal);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+        }
+
+        /* ========== EVIDENCE SECTION ========== */
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .evidence-card {
+            background: white;
+            border-left: 6px solid var(--teal);
+            padding: 2rem 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .evidence-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 40px 40px 0;
+            border-color: transparent var(--cream) transparent transparent;
+        }
+
+        .evidence-card blockquote {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        .evidence-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.8rem;
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link-section {
+            padding: 2rem;
+            text-align: center;
+            background: var(--light-gray);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--navy);
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .back-link .arrow {
+            font-size: 1.1rem;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .section-heading {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .section-number,
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .timeline {
+                padding-left: 2.5rem;
+            }
+
+            .timeline-entry {
+                padding-left: 1rem;
+            }
+
+            .resolution-table {
+                font-size: 0.8rem;
+            }
+
+            .resolution-table th,
+            .resolution-table td {
+                padding: 0.5rem;
+            }
+
+            .personnel-table {
+                font-size: 0.8rem;
+            }
+
+            .personnel-table th,
+            .personnel-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+
+            .probable-cause-box {
+                padding: 1.5rem;
+            }
+
+            .hero .classification {
+                font-size: 0.65rem;
+                letter-spacing: 1px;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .report-meta {
+                font-size: 0.85rem;
+            }
+
+            .timeline::before {
+                left: 8px;
+            }
+
+            .timeline-entry::before {
+                left: -2.2rem;
+                width: 12px;
+                height: 12px;
+            }
+
+            .timeline-entry.milestone::before {
+                left: -2.3rem;
+                width: 14px;
+                height: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../testimonials.html">Field Reports</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">Electric Boat LMS Integration &mdash; Cross-Domain SCORM Resolution</p>
+            <div class="report-meta">
+                <strong>Classification:</strong> Client Engagement / Technical Investigation<br>
+                <strong>Client:</strong> General Dynamics Electric Boat (GDEB)<br>
+                <strong>Location:</strong> Groton, Connecticut<br>
+                <strong>Period:</strong> September 2017 &ndash; August 2018<br>
+                <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
+            </div>
+            <span class="classification">Field Report &middot; Exhibit A &middot; Electric Boat &middot; General Dynamics</span>
+        </div>
+    </section>
+
+    <!-- 1. BACKGROUND -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">1.</span>
+                <span class="section-title">Background</span>
+            </div>
+            <div class="background-content">
+                <p>Electric Boat, a division of General Dynamics, has been the primary submarine builder for the United States Navy for over <strong>120 years</strong>. Located in Groton, Connecticut, EB designs, builds, and maintains nuclear submarines including the <em>Virginia</em>-class attack submarine and the <em>Columbia</em>-class ballistic missile submarine. With a significant percentage of its workforce approaching retirement within 10 years, recruitment and onboarding became paramount to maintaining institutional knowledge and operational readiness.</p>
+
+                <p>EB used <span class="key-fact">Cornerstone OnDemand</span> as their Learning Management System, with course content hosted on separate internal EB servers &mdash; a cross-domain architecture that caused persistent training delivery failures. The LMS was hosted externally by Cornerstone, while EB's content resided on internal EB network servers. This split created a same-origin policy conflict that broke standard LMS-to-course communication protocols.</p>
+
+                <p>GP Strategies Corporation (<span class="key-fact">$490M revenue</span>) provided learning solutions to General Dynamics/Electric Boat as a <strong>Top 20 client (ranked #15)</strong>. GP maintained an on-site training support team at EB. <strong>Chris Sproule</strong>, Senior Vice President of Learning Solutions, flagged the engagement opportunity and directed the technical team to pursue resolution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PERSONNEL INVOLVED -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">2.</span>
+                <span class="section-title">Personnel Involved</span>
+            </div>
+            <table class="personnel-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Title</th>
+                        <th>Organization</th>
+                        <th>Role in Investigation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="person-name">Dan Novak</td>
+                        <td>Computer Programmer, Software Engineering</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Lead investigator and solution architect</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Charlie Rando</td>
+                        <td>Chief of Learning Services, Metrics, Processes &amp; Technology</td>
+                        <td class="person-org">Electric Boat</td>
+                        <td>Client counterpart, technical lead on EB side</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Kimberly Vahlsing</td>
+                        <td>Sr. Director, Learning Solutions</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Executive sponsor, authorized on-site visit</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Thomas Pizer</td>
+                        <td>Director of Learning Technologies</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Direct manager, relayed client praise</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Chris Sproule</td>
+                        <td>Senior Vice President, Learning Solutions</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Executive who initiated engagement</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Deborah Schultz</td>
+                        <td>&mdash;</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Co-investigator on testing</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Allison McGuire</td>
+                        <td>Program Manager</td>
+                        <td class="person-org">GP Strategies</td>
+                        <td>Coordination</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Rosemary Trahan</td>
+                        <td>Curriculum Developer</td>
+                        <td class="person-org">Electric Boat</td>
+                        <td>Collaborated on testing</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Sascia Hayden</td>
+                        <td>Curriculum Developer</td>
+                        <td class="person-org">Electric Boat</td>
+                        <td>Collaborated on testing</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Lisa Jackson</td>
+                        <td>Training Analyst Specialist</td>
+                        <td class="person-org">Electric Boat</td>
+                        <td>Provided technical data</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 3. SEQUENCE OF EVENTS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">3.</span>
+                <span class="section-title">Sequence of Events</span>
+            </div>
+
+            <div class="timeline">
+                <!-- Sept 5, 2017 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">September 5, 2017</div>
+                    <div class="timeline-title">Initial Contact</div>
+                    <div class="timeline-content">
+                        <blockquote>
+                            This company has one or some courses that they cannot get to work on their Cornerstone LMS. Chris Sproule would like us to jump on troubleshooting so we can have a 'quick win' with this client.
+                            <div class="attribution">
+                                Allison McGuire
+                                <span class="role">&mdash; Program Manager, GP Strategies</span>
+                            </div>
+                        </blockquote>
+                        <p style="margin-top: 0.8rem;"><span class="speaker">Dan notes:</span> "I have worked with General Dynamics before and am familiar with their issues with SuccessFactors."</p>
+                    </div>
+                </div>
+
+                <!-- June 13, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">June 13, 2018</div>
+                    <div class="timeline-title">Formal Investigation Begins</div>
+                    <div class="timeline-content">
+                        <p>EB reports: HTML5 AICC courses failing to record completions. Issue began May 21, 2018. Job number <code>ELB075.002</code> assigned.</p>
+                    </div>
+                </div>
+
+                <!-- June 14, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">June 14, 2018</div>
+                    <div class="timeline-title">Technical Requirements Issued</div>
+                    <div class="timeline-content">
+                        <p>Dan issues detailed request for Fiddler logs, published course copies, source files, debug logs, and Network Player documentation. Suggests tests: swap AICC with SCORM, enable debug logging, observe browser console errors.</p>
+                    </div>
+                </div>
+
+                <!-- June 18, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">June 18, 2018</div>
+                    <div class="timeline-title">Root Cause Analysis Begins</div>
+                    <div class="timeline-content">
+                        <p>Charlie Rando provides Fiddler traces. Dan analyzes the data.</p>
+                        <blockquote>
+                            The Confined Spaces log has interesting results. It is posting to the 'proxlet' included for cross-domain AICC, but isn't getting any response.
+                            <div class="attribution">
+                                Dan Novak
+                                <span class="role">&mdash; identifying silent failure in PHP relay script</span>
+                            </div>
+                        </blockquote>
+                        <p style="margin-top: 0.8rem;">Identifies the PHP relay script (from Articulate) as having no error checking &mdash; silently failing on all cross-domain requests.</p>
+                        <blockquote>
+                            That SCORM wrapper does sound intriguing! We do more SCORM 2004 here than 1.2, but having both options would be very helpful!
+                            <div class="attribution">
+                                Charlie Rando
+                                <span class="role">&mdash; Chief of Learning Services, Electric Boat</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- June 20, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">June 20, 2018</div>
+                    <div class="timeline-title">Proof of Concept Delivered</div>
+                    <div class="timeline-content">
+                        <p>Dan uploads three SCORM 1.2 test packages with cross-domain wrappers from the GPiLEARN library. Provides detailed 6-step testing protocol.</p>
+                        <blockquote>
+                            This is awesome Dan!
+                            <div class="attribution">
+                                Deborah Schultz
+                                <span class="role">&mdash; GP Strategies</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- June 21, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">June 21, 2018</div>
+                    <div class="timeline-title">Cross-Domain Architecture Confirmed</div>
+                    <div class="timeline-content">
+                        <blockquote>
+                            Our LMS and our content server are definitely on different domains&hellip; we can't put content up on our Cornerstone server.
+                            <div class="attribution">
+                                Charlie Rando
+                                <span class="role">&mdash; confirming cross-domain constraint</span>
+                            </div>
+                        </blockquote>
+                        <p style="margin-top: 0.8rem;"><span class="speaker">Kim Vahlsing</span> asks Dan: "Do you think it would be helpful to send you onsite?"</p>
+                    </div>
+                </div>
+
+                <!-- July-August 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">July &ndash; August 2018</div>
+                    <div class="timeline-title">On-Site Visit Authorized</div>
+                    <div class="timeline-content">
+                        <p>Kimberly Vahlsing authorizes travel to Groton, CT for on-site troubleshooting and solution deployment at Electric Boat's facility.</p>
+                    </div>
+                </div>
+
+                <!-- August 15-16, 2018 -->
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">August 15 &ndash; 16, 2018</div>
+                    <div class="timeline-title">On-Site Resolution (2 Days)</div>
+                    <div class="timeline-content">
+                        <p>Dan works directly with Charlie Rando, Rosemary Trahan, and Sascia Hayden at Electric Boat's facility. <strong>Five critical issues resolved</strong> during the two-day engagement. (See Section 4: Findings.)</p>
+                    </div>
+                </div>
+
+                <!-- August 17, 2018 -->
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">August 17, 2018</div>
+                    <div class="timeline-title">Client Summary Report</div>
+                    <div class="timeline-content">
+                        <p>Charlie Rando emails his leadership chain (Courtney Murphy, Susan Hutnan, Kathleen Heller) with a detailed summary of the engagement outcomes.</p>
+                        <blockquote>
+                            I'd consider the last couple days a huge success, and I look forward to working with Dan in the future.
+                            <div class="attribution">
+                                Charlie Rando
+                                <span class="role">&mdash; in summary email to EB leadership</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- August 20, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">August 20, 2018</div>
+                    <div class="timeline-title">Executive Recognition</div>
+                    <div class="timeline-content">
+                        <blockquote>
+                            I hear you did an AWESOME job onsite! EB really appreciated your support.
+                            <div class="attribution">
+                                Kimberly Vahlsing
+                                <span class="role">&mdash; Sr. Director, Learning Solutions, GP Strategies</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- August 21, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">August 21, 2018</div>
+                    <div class="timeline-title">Director Recognition</div>
+                    <div class="timeline-content">
+                        <blockquote>
+                            Thanks for all of the great work you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, and Quinn Gladu.
+                            <div class="attribution">
+                                Thomas Pizer
+                                <span class="role">&mdash; Director of Learning Technologies, GP Strategies</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- August 22, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">August 22, 2018</div>
+                    <div class="timeline-title">Follow-Up Development</div>
+                    <div class="timeline-content">
+                        <p>Dan reports SCORM 2004 cross-domain wrapper prototype working.</p>
+                        <blockquote>
+                            I just got the first API call to work across domains with a modified wrapper.
+                            <div class="attribution">
+                                Dan Novak
+                                <span class="role">&mdash; SCORM 2004 prototype breakthrough</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- August 23, 2018 -->
+                <div class="timeline-entry">
+                    <div class="timeline-date">August 23, 2018</div>
+                    <div class="timeline-title">Continued Client Engagement</div>
+                    <div class="timeline-content">
+                        <blockquote>
+                            That is fantastic news! One of our more regular SCORM 2004 customers is very excited about not needing the Cornerstone player any more&hellip; Thanks again for your help.
+                            <div class="attribution">
+                                Charlie Rando
+                                <span class="role">&mdash; Chief of Learning Services, Electric Boat</span>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FINDINGS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">4.</span>
+                <span class="section-title">Findings</span>
+            </div>
+            <p style="margin-bottom: 1.5rem; font-size: 1rem; color: #555;">The following five issues were identified and resolved during the on-site engagement at Electric Boat, August 15&ndash;16, 2018. This table reconstructs Charlie Rando's summary report to EB leadership.</p>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 22%;">Issue</th>
+                        <th style="width: 33%;">Background</th>
+                        <th style="width: 40%;">Resolution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="issue-id">F-01</td>
+                        <td><strong>SCORM courses dependent on Cornerstone Network Player</strong></td>
+                        <td>SCORM requires a player to communicate between the course and the LMS. If the Cornerstone Network Player went down, all SCORM courses stopped functioning. AICC was used as a workaround but had significant limitations.</td>
+                        <td>Dan provided a cross-domain SCORM wrapper that eliminates dependency on the Cornerstone Network Player entirely. The wrapper was well-tested across GP's enterprise client base. A SCORM 2004 version was prototyped within one week of the on-site visit.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-02</td>
+                        <td><strong>HTML5 courses failing under AICC protocol</strong></td>
+                        <td>HTML5 is the modern publishing format replacing Flash. EB's HTML5 AICC courses threw errors at launch and could not communicate with the LMS, preventing completion recording.</td>
+                        <td>Converted AICC courses to SCORM HTML5 using the cross-domain wrapper. Courses performed better than they had under the previous AICC configuration.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-03</td>
+                        <td><strong>Quiz bookmarking and reset failures</strong></td>
+                        <td>AICC could not properly reset quizzes for multiple attempts. Bookmarking was unreliable, limiting course design options for EB's curriculum development team.</td>
+                        <td>SCORM HTML5 with the cross-domain wrapper properly supports bookmarking, reset, and multiple quiz attempts. Curriculum developers gained new design freedom previously unavailable under AICC constraints.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-04</td>
+                        <td><strong>No tools to verify SCORM data flow</strong></td>
+                        <td>EB's IT department was disabling troubleshooting tools (Inspect Element) on workstations. There was no way to observe data moving between courses and the LMS during testing or debugging.</td>
+                        <td>Dan provided an LMS simulation tool that captures and displays all course-to-LMS communication. The tool was also usable for training EB staff on SCORM data concepts and troubleshooting methodology.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-05</td>
+                        <td><strong>Bulk SCORM import not available</strong></td>
+                        <td>Cornerstone only allowed single-course uploads. GP's iLearn library (1,000+ courses) could not be practically migrated to EB's LMS using the one-at-a-time upload process.</td>
+                        <td>Dan and Charlie tested Cornerstone's new bulk Course Publication tool with 7 iLearn SCORM courses. Successfully validated the migration path for future large-scale course library deployment.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. PROBABLE CAUSE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">5.</span>
+                <span class="section-title">Probable Cause</span>
+            </div>
+
+            <div class="probable-cause-box">
+                <p>The investigation determined that the <strong>root cause</strong> was Electric Boat's cross-domain architecture: the Cornerstone LMS (hosted externally by Cornerstone OnDemand) and EB's content servers (hosted on the internal EB network) resided on <strong>different domains</strong>. The browser's <code>same-origin policy</code> blocked JavaScript LMS API calls between the course content and the LMS runtime. The Articulate-provided PHP relay script &mdash; intended to bridge this gap via AICC &mdash; had <strong>no error handling</strong> and was silently failing on all cross-domain POST requests.</p>
+                <p style="margin-top: 1rem;">The solution bypassed the AICC/relay architecture entirely by deploying a custom <strong>SCORM cross-domain wrapper</strong> that transparently proxied LMS API calls using <code>postMessage</code> and an intermediary iframe hosted on the LMS domain. This approach eliminated the single point of failure (Cornerstone Network Player) and restored reliable bidirectional communication between course content and the LMS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. RECOMMENDATIONS IMPLEMENTED -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">6.</span>
+                <span class="section-title">Recommendations Implemented</span>
+            </div>
+            <ul class="recommendations-list">
+                <li><strong>Cross-domain SCORM 1.2 wrapper deployed</strong> &mdash; replacing the unreliable AICC/PHP relay architecture and eliminating dependency on the Cornerstone Network Player.</li>
+                <li><strong>SCORM 2004 wrapper prototyped</strong> &mdash; development path established for EB's SCORM 2004 course catalog, with first successful cross-domain API call achieved within one week of the on-site visit.</li>
+                <li><strong>LMS simulation/troubleshooting tool provided to EB team</strong> &mdash; enabling self-service diagnostics and SCORM data education for curriculum developers and training analysts.</li>
+                <li><strong>Bulk course import path validated</strong> &mdash; Cornerstone's Course Publication tool tested with 7 GPiLEARN SCORM courses, establishing a viable migration path for the 1,000+ course library.</li>
+                <li><strong>GDAIS cross-pollination opportunity identified</strong> &mdash; Dan identified that the General Dynamics Advanced Information Systems (GDAIS) group, which also uses Cornerstone OnDemand, could benefit from the same cross-domain solutions deployed at Electric Boat.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 7. CORROBORATING EVIDENCE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">7.</span>
+                <span class="section-title">Corroborating Evidence</span>
+            </div>
+
+            <div class="evidence-grid">
+                <div class="evidence-card">
+                    <div class="evidence-label">Primary Source -- Client Report to Leadership</div>
+                    <blockquote>
+                        I'd consider the last couple days a huge success, and I look forward to working with Dan in the future&hellip; Thank you Dan for working with us and listening to our ideas and problems!
+                        <div class="attribution">
+                            Charlie Rando
+                            <span class="role">&mdash; Chief of Learning Services, Metrics, Processes &amp; Technology, Electric Boat. In summary email to Courtney Murphy, Susan Hutnan, and Kathleen Heller.</span>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-label">Primary Source -- Executive Recognition</div>
+                    <blockquote>
+                        I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making the trip and doing all the great things you do!
+                        <div class="attribution">
+                            Kimberly Vahlsing
+                            <span class="role">&mdash; Sr. Director, Learning Solutions, GP Strategies</span>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <div class="evidence-card">
+                    <div class="evidence-label">Primary Source -- Director Recognition (Multi-Channel)</div>
+                    <blockquote>
+                        Thanks for all of the great work you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, and Quinn Gladu.
+                        <div class="attribution">
+                            Thomas Pizer
+                            <span class="role">&mdash; Director of Learning Technologies, GP Strategies. Recognition relayed independently through three separate contacts.</span>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../testimonials.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Field Reports
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

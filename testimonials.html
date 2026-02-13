@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Field Reports - Testimonials & Incident Records</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== SUMMARY SECTION ========== */
+        .summary {
+            background: white;
+            text-align: center;
+        }
+
+        .summary h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .summary p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .stat-item {
+            background: var(--cream);
+            padding: 1.5rem 1rem;
+            border-top: 4px solid var(--teal);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--teal);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ========== EXHIBIT SECTION ========== */
+        .exhibits {
+            background: var(--light-gray);
+        }
+
+        .exhibits h2 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+            text-align: center;
+        }
+
+        .exhibits .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 3rem;
+        }
+
+        /* ========== EXHIBIT CARDS ========== */
+        .exhibit-card {
+            background: white;
+            margin-bottom: 2.5rem;
+            border-left: 6px solid var(--teal);
+            padding: 2rem 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .exhibit-card:hover {
+            transform: translateX(4px);
+        }
+
+        .exhibit-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 40px 40px 0;
+            border-color: transparent var(--light-gray) transparent transparent;
+        }
+
+        .exhibit-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .exhibit-label {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .exhibit-client {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            color: var(--teal);
+            letter-spacing: 1px;
+        }
+
+        .exhibit-date {
+            font-size: 0.85rem;
+            color: #999;
+            margin-left: auto;
+        }
+
+        .exhibit-title {
+            font-size: 1.6rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .exhibit-context {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .exhibit-context h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .exhibit-context p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .impact-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .impact-tag.highlight {
+            background: var(--teal);
+        }
+
+        .exhibit-link {
+            display: inline-block;
+            margin-top: 1.2rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--teal);
+            text-decoration: none;
+            border: 1px solid var(--teal);
+            padding: 0.5rem 1.2rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .exhibit-link:hover {
+            background: var(--teal);
+            color: white;
+        }
+
+        .exhibit-link::after {
+            content: ' \2192';
+        }
+
+        /* ========== DETAIL FINDING (EB ONSITE) ========== */
+        .detail-exhibit {
+            border-left-color: var(--brass);
+        }
+
+        .detail-exhibit .exhibit-label {
+            background: var(--brass);
+        }
+
+        .resolution-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .resolution-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resolution-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .resolution-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        /* ========== METRICS SECTION ========== */
+        .metrics {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .metrics h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .metric-card {
+            border: 1px solid rgba(23, 162, 184, 0.3);
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--teal);
+        }
+
+        .metric-card h3 {
+            color: var(--teal);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-card ul {
+            list-style: none;
+        }
+
+        .metric-card li {
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .metric-card li::before {
+            content: '\2192';
+            position: absolute;
+            left: 0;
+            color: var(--teal);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .exhibit-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .exhibit-date {
+                margin-left: 0;
+            }
+
+            .resolution-table {
+                font-size: 0.8rem;
+            }
+
+            .resolution-table th,
+            .resolution-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#philosophy">Philosophy</a></li>
+                <li><a href="#" aria-current="page">Field Reports</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>FIELD <span class="pattern-number">REPORTS</span></h1>
+            <p class="subtitle">Documented evidence from incident sites, client debriefs, and post-action reviews</p>
+            <span class="classification">Corroborated &middot; Primary Sources &middot; 2009&ndash;2022</span>
+        </div>
+    </section>
+
+    <!-- Summary Stats -->
+    <section class="summary">
+        <div class="container">
+            <h2>Executive Summary</h2>
+            <p>The following exhibits are extracted from 30,878 archived communications spanning 17 years across enterprise clients including General Dynamics Electric Boat, HSBC, Wells Fargo, PNC, Microsoft, and SunTrust. Each citation is sourced from primary correspondence.</p>
+
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">17</div>
+                    <div class="stat-label">Years Documented</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">600+</div>
+                    <div class="stat-label">Labor Hours Saved (Single Project)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Critical Issues Resolved (2-Day Onsite)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,216</div>
+                    <div class="stat-label">Lessons Refreshed (Content Overhaul)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exhibits -->
+    <section class="exhibits" id="exhibits">
+        <div class="container">
+            <h2>Exhibits</h2>
+            <p class="section-subtitle">Direct quotations from primary sources, organized by engagement</p>
+
+            <!-- ===== EXHIBIT A: Electric Boat ===== -->
+            <div class="exhibit-card detail-exhibit">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit A</span>
+                    <span class="exhibit-client">General Dynamics Electric Boat</span>
+                    <span class="exhibit-date">August 2018</span>
+                </div>
+                <h3 class="exhibit-title">On-Site Technical Engagement: 5 Critical Resolutions in 2 Days</h3>
+
+                <blockquote>
+                    I'd consider the last couple days a huge success, and I look forward to working with Dan in the future.
+                    <div class="attribution">
+                        Charlie Rando
+                        <span class="role">&mdash; Chief of Learning Services, Metrics, Processes &amp; Technology, Electric Boat</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Thank you Dan for working with us and listening to our ideas and problems!
+                    <div class="attribution">
+                        Charlie Rando
+                        <span class="role">&mdash; in summary email to EB leadership</span>
+                    </div>
+                </blockquote>
+
+                <table class="resolution-table">
+                    <thead>
+                        <tr>
+                            <th>Issue</th>
+                            <th>Resolution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SCORM courses dependent on unreliable Cornerstone network player</td>
+                            <td>Provided cross-domain SCORM wrapper eliminating player dependency</td>
+                        </tr>
+                        <tr>
+                            <td>HTML5 courses failing under AICC protocol</td>
+                            <td>Converted AICC to SCORM HTML5 with improved performance</td>
+                        </tr>
+                        <tr>
+                            <td>Quiz bookmarking and reset failures</td>
+                            <td>Implemented SCORM HTML5 course with proper reset and bookmarking</td>
+                        </tr>
+                        <tr>
+                            <td>No tools to verify SCORM data flow</td>
+                            <td>Provided LMS simulation tool for troubleshooting and training</td>
+                        </tr>
+                        <tr>
+                            <td>Bulk SCORM import not possible</td>
+                            <td>Tested and validated Cornerstone's new bulk publication tool</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Client-Facing</span>
+                    <span class="impact-tag">SCORM</span>
+                    <span class="impact-tag">Cornerstone LMS</span>
+                    <span class="impact-tag">Cross-Domain</span>
+                    <span class="impact-tag">Tooling</span>
+                </div>
+
+                <a href="exhibits/exhibit-a.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT B: Leadership Recognition of EB Visit ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit B</span>
+                    <span class="exhibit-client">GP Strategies Leadership</span>
+                    <span class="exhibit-date">August 2018</span>
+                </div>
+                <h3 class="exhibit-title">Multi-Level Leadership Recognition (Electric Boat Engagement)</h3>
+
+                <blockquote>
+                    I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making the trip and doing all the great things you do!
+                    <div class="attribution">
+                        Kimberly Vahlsing
+                        <span class="role">&mdash; Sr. Director, Learning Solutions, GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Thanks for all of the great work you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, and Quinn Gladu. Thanks for your hard work!
+                    <div class="attribution">
+                        Thomas Pizer
+                        <span class="role">&mdash; Director of Learning Technologies, GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <div class="exhibit-context">
+                    <h4>Context</h4>
+                    <p>Praise independently relayed through three separate EB contacts (Chris Sproule, Tracey Nicholson, Quinn Gladu) before formal report was submitted. Recognition escalated from Director to Sr. Director level.</p>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Leadership Recognition</span>
+                    <span class="impact-tag">Client Relationship</span>
+                    <span class="impact-tag">General Dynamics</span>
+                </div>
+
+                <a href="exhibits/exhibit-b.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT C: Content Refresh / Automation ===== -->
+            <div class="exhibit-card detail-exhibit">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit C</span>
+                    <span class="exhibit-client">GP Strategies &mdash; Content Team</span>
+                    <span class="exhibit-date">December 2015</span>
+                </div>
+                <h3 class="exhibit-title">1,216-Lesson Content Refresh: Automation Saves 600+ Hours</h3>
+
+                <blockquote>
+                    Dan Novak "The Fiddler" (Automation) &mdash; Dan gets this name not only because he makes extensive use of the Fiddler application to help us troubleshoot communications errors for customers, but because he fiddles with stuff until we get a tool that makes things&hellip; possible. He also used Fiddler to figure out how to automate the publishing process out of Xyleme. <strong>This resulted in a savings of about 600 hours of labor</strong> by allowing us to publish large batches of lessons unattended.
+                    <div class="attribution">
+                        Chris Kaplan
+                        <span class="role">&mdash; Manager, Content Team, GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <div class="exhibit-context">
+                    <h4>Context</h4>
+                    <p>Part of a comprehensive team recognition email celebrating the completion of a 1,216-lesson content refresh. Each of 15 team members received a unique title and individual recognition. Dan's callout focused on tooling and automation that enabled the project to complete on schedule. The automation tool was also used by Zach Taylor to publish every lesson at least three times during the refresh cycle.</p>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">600+ Hours Saved</span>
+                    <span class="impact-tag">Automation</span>
+                    <span class="impact-tag">Xyleme</span>
+                    <span class="impact-tag">Fiddler</span>
+                    <span class="impact-tag">1,216 Lessons</span>
+                </div>
+
+                <a href="exhibits/exhibit-c.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT D: Wells Fargo ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit D</span>
+                    <span class="exhibit-client">Wells Fargo</span>
+                    <span class="exhibit-date">August 2018</span>
+                </div>
+                <h3 class="exhibit-title">Critical Client Testing Under Adverse Conditions</h3>
+
+                <blockquote>
+                    Kelly Shute reached out to me today to convey her appreciation for the work that you two did in order to test the WF courses in spite of the fact that you were seeing issues related to IE. Thanks for your hard work on this. WF is a critical client and our ability to meet their volume of needs is important to the success of the relationship.
+                    <div class="attribution">
+                        Thomas Pizer
+                        <span class="role">&mdash; Director of Learning Technologies, relaying client feedback from Kelly Shute (Wells Fargo)</span>
+                    </div>
+                </blockquote>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Client-Facing</span>
+                    <span class="impact-tag">Wells Fargo</span>
+                    <span class="impact-tag">QA Testing</span>
+                    <span class="impact-tag">IE Compatibility</span>
+                </div>
+
+                <a href="exhibits/exhibit-d.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT E: PNC / AMG Journey ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit E</span>
+                    <span class="exhibit-client">PNC Financial Services</span>
+                    <span class="exhibit-date">February 2016</span>
+                </div>
+                <h3 class="exhibit-title">AMG Journey: Client Showcases Team's Work as Model Design</h3>
+
+                <blockquote>
+                    PNC has shared with me that they were asked to present this series as a model design approach internally. On numerous occasions they have complemented this team on their creativity, professionalism, and quality. During a recent project debrief meeting this week they made a special mention that the reason for success on this project was the partnership as a whole and our ability to work toward their needs no matter what the circumstances.
+                    <div class="attribution">
+                        Jennifer Sim
+                        <span class="role">&mdash; Project Management Specialist, relaying feedback from PNC</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    All around &mdash; this project was a success for both sides of the partnership and everyone here should be proud of their efforts!
+                    <div class="attribution">
+                        Jennifer Sim
+                        <span class="role">&mdash; in team recognition email</span>
+                    </div>
+                </blockquote>
+
+                <div class="exhibit-context">
+                    <h4>Context</h4>
+                    <p>PNC elevated this project internally as a model for how to approach training design partnerships. The team adapted to changing client requirements throughout the year-long engagement while maintaining quality and creative standards.</p>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Client Showcase</span>
+                    <span class="impact-tag">PNC</span>
+                    <span class="impact-tag">Financial Services</span>
+                    <span class="impact-tag">Instructional Design</span>
+                </div>
+
+                <a href="exhibits/exhibit-e.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT F: HSBC ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit F</span>
+                    <span class="exhibit-client">HSBC</span>
+                    <span class="exhibit-date">August 2022</span>
+                </div>
+                <h3 class="exhibit-title">IDAM Training: Rapid Fix Under Security Deadline</h3>
+
+                <blockquote>
+                    Thanks so much for your great work making the fixes. HSBC LMS team has approved the updated courseware!
+                    <div class="attribution">
+                        Doug Hsu
+                        <span class="role">&mdash; Project Manager, GP Strategies (HSBC Account)</span>
+                    </div>
+                </blockquote>
+
+                <div class="exhibit-context">
+                    <h4>Context</h4>
+                    <p>HSBC's security team required rapid resolution of exposed credentials in IDAM training completions. Fixes were developed, tested, and approved by HSBC's LMS team under tight compliance deadlines. Source files archived to DevOps per protocol.</p>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Security/Compliance</span>
+                    <span class="impact-tag">HSBC</span>
+                    <span class="impact-tag">LMS Integration</span>
+                </div>
+
+                <a href="exhibits/exhibit-f.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT G: SunTrust AWARE ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit G</span>
+                    <span class="exhibit-client">SunTrust (now Truist)</span>
+                    <span class="exhibit-date">March 2016</span>
+                </div>
+                <h3 class="exhibit-title">AWARE Platform: Technical Forensics and Recommendation</h3>
+
+                <blockquote>
+                    Thanks for the thorough documentation of the issue and solution.
+                    <div class="attribution">
+                        Jeanie DuGan
+                        <span class="role">&mdash; SunTrust (Client)</span>
+                    </div>
+                </blockquote>
+
+                <div class="exhibit-context">
+                    <h4>Context</h4>
+                    <p>Team investigated and documented the AWARE platform situation, producing a detailed findings report with recommended path forward. Client requested follow-up meeting to discuss implementation options based on the quality of the technical analysis.</p>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Client-Facing</span>
+                    <span class="impact-tag">SunTrust</span>
+                    <span class="impact-tag">Technical Writing</span>
+                    <span class="impact-tag">Forensic Analysis</span>
+                </div>
+
+                <a href="exhibits/exhibit-g.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT H: Additive Manufacturing Fix ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit H</span>
+                    <span class="exhibit-client">Internal &mdash; Cross-Functional</span>
+                    <span class="exhibit-date">October 2019</span>
+                </div>
+                <h3 class="exhibit-title">Metal Additive Manufacturing Course: Rapid Diagnosis</h3>
+
+                <blockquote>
+                    Kudos on finding this solution so promptly!
+                    <div class="attribution">
+                        Angela Alexander
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Thank you so much. This email was a huge relief.
+                    <div class="attribution">
+                        Justin Halloran
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Thank you all so very much for your time and diligence on this effort!
+                    <div class="attribution">
+                        Brittany Todd
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Rapid Resolution</span>
+                    <span class="impact-tag">LMS Troubleshooting</span>
+                    <span class="impact-tag">SCORM Completion</span>
+                </div>
+
+                <a href="exhibits/exhibit-h.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+            <!-- ===== EXHIBIT I: TD MIC ===== -->
+            <div class="exhibit-card">
+                <div class="exhibit-header">
+                    <span class="exhibit-label">Exhibit I</span>
+                    <span class="exhibit-client">TD Bank (via GP Strategies)</span>
+                    <span class="exhibit-date">August 2022</span>
+                </div>
+                <h3 class="exhibit-title">TD MIC Project Completion</h3>
+
+                <blockquote>
+                    Thank you for all your amazing work!
+                    <div class="attribution">
+                        Juliana Ma
+                        <span class="role">&mdash; Senior Learning Project Manager, GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <div class="impact-tags">
+                    <span class="impact-tag">TD Bank</span>
+                    <span class="impact-tag">Accessibility</span>
+                    <span class="impact-tag">Code Review</span>
+                </div>
+
+                <a href="exhibits/exhibit-i.html" class="exhibit-link">View Full Investigation Report</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="metrics">
+        <div class="container">
+            <h2>Recurring Patterns in the Record</h2>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Tooling &amp; Automation</h3>
+                    <ul>
+                        <li>Built publishing automation saving 600+ labor hours</li>
+                        <li>Created cross-domain SCORM wrappers used across enterprise clients</li>
+                        <li>Developed LMS simulation tools adopted by client teams</li>
+                        <li>Recognized as someone who "fiddles with stuff until we get a tool that makes things possible"</li>
+                    </ul>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Client Impact</h3>
+                    <ul>
+                        <li>Work praised independently by 3+ contacts at Electric Boat</li>
+                        <li>PNC presented team's output as internal model design</li>
+                        <li>Wells Fargo account manager relayed direct client appreciation</li>
+                        <li>HSBC LMS team approved fixes under compliance deadline</li>
+                    </ul>
+                </div>
+
+                <div class="metric-card">
+                    <h3>Problem-Solving Speed</h3>
+                    <ul>
+                        <li>5 critical issues resolved in a 2-day on-site (Electric Boat)</li>
+                        <li>Course completion fix described as "a huge relief"</li>
+                        <li>Solutions delivered under tight security compliance windows</li>
+                        <li>Cross-domain SCORM 2004 wrapper prototyped within a week of request</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

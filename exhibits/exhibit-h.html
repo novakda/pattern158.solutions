@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit H - Metal Additive Manufacturing Course</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== REPORT SECTIONS ========== */
+        .report-section {
+            background: white;
+            margin-bottom: 2rem;
+            border-left: 6px solid var(--teal);
+            padding: 2rem 2.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+        }
+
+        .report-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 40px 40px 0;
+            border-color: transparent var(--light-gray) transparent transparent;
+        }
+
+        .report-section.brass {
+            border-left-color: var(--brass);
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--teal);
+            margin-bottom: 0.5rem;
+        }
+
+        .report-section h2 {
+            font-size: 1.8rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+
+        .report-section h3 {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .report-section p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== PERSONNEL TABLE ========== */
+        .personnel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personnel-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .personnel-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .personnel-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        /* ========== BLOCKQUOTES ========== */
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ========== IMPACT TAGS ========== */
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .impact-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .impact-tag.highlight {
+            background: var(--teal);
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            border: 2px solid var(--navy);
+            padding: 0.8rem 2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .report-section {
+                padding: 1.5rem;
+            }
+
+            .personnel-table {
+                font-size: 0.8rem;
+            }
+
+            .personnel-table th,
+            .personnel-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../testimonials.html" aria-current="page">Field Reports</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">EXHIBIT H &mdash; Metal Additive Manufacturing Course: Rapid Diagnosis</p>
+            <span class="classification">Corroborated &middot; Cross-Functional Resolution &middot; October 2019</span>
+        </div>
+    </section>
+
+    <!-- Section 1: Background -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="report-section brass">
+                <div class="section-number">Section 1</div>
+                <h2>Background</h2>
+                <p>In October 2019, a client-facing online course on "Design for Metal Additive Manufacturing" had functionality issues &mdash; specifically, it was failing to record course completions in the LMS. Multiple stakeholders were involved and urgency was high.</p>
+                <p>The course was live and learners were completing content without receiving credit, creating both a compliance tracking issue and a learner experience problem that required immediate attention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Personnel -->
+    <section style="background: var(--light-gray);">
+        <div class="container">
+            <div class="report-section">
+                <div class="section-number">Section 2</div>
+                <h2>Personnel</h2>
+                <table class="personnel-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kristina Djekovic</td>
+                            <td>GP Strategies, LMS Configuration Specialist &mdash; Found Root Cause</td>
+                        </tr>
+                        <tr>
+                            <td>Angela Alexander</td>
+                            <td>GP Strategies</td>
+                        </tr>
+                        <tr>
+                            <td>Brittany Todd</td>
+                            <td>GP Strategies</td>
+                        </tr>
+                        <tr>
+                            <td>Justin Halloran</td>
+                            <td>GP Strategies</td>
+                        </tr>
+                        <tr>
+                            <td>Catherine Murphy</td>
+                            <td>GP Strategies, Client Liaison</td>
+                        </tr>
+                        <tr>
+                            <td>Dan Novak</td>
+                            <td>GP Strategies, Technical Troubleshooting</td>
+                        </tr>
+                        <tr>
+                            <td>Tim Hommey</td>
+                            <td>GP Strategies</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Evidence -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="report-section brass">
+                <div class="section-number">Section 3</div>
+                <h2>Evidence</h2>
+
+                <blockquote>
+                    Kudos on finding this solution so promptly!
+                    <div class="attribution">
+                        Angela Alexander
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Agreed. Thank you so much. This email was a huge relief.
+                    <div class="attribution">
+                        Justin Halloran
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Yes, thank you all so very much for your time and diligence on this effort!! Catherine, Kristina, and Angela &mdash; Please share this resolution with any other appropriate parties. We would like to ensure we close the loop and everyone's expectations are met here.
+                    <div class="attribution">
+                        Brittany Todd
+                        <span class="role">&mdash; GP Strategies</span>
+                    </div>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Root Cause Analysis -->
+    <section style="background: var(--light-gray);">
+        <div class="container">
+            <div class="report-section">
+                <div class="section-number">Section 4</div>
+                <h2>Root Cause Analysis</h2>
+                <p>Kristina Djekovic identified an LMS configuration issue causing the completion tracking failure. After adjustment, testing confirmed successful completion recording. The rapid resolution relieved significant stakeholder anxiety.</p>
+                <p>The issue was isolated to the LMS configuration layer rather than the courseware itself, which meant the fix could be applied without republishing the course content &mdash; a critical distinction under time pressure.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Findings -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="report-section brass">
+                <div class="section-number">Section 5</div>
+                <h2>Findings</h2>
+
+                <h3>Significance</h3>
+                <p>Cross-functional collaboration to quickly resolve a client-impacting issue. Three independent expressions of relief and gratitude indicate the pressure the team was under and the quality of the resolution. The word "relief" from Halloran is particularly telling &mdash; it reveals the weight of the situation before the fix was found.</p>
+                <p>Brittany Todd's directive to "share this resolution with any other appropriate parties" and "close the loop" indicates this was not a minor issue but one with visibility across multiple stakeholder groups.</p>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Rapid Resolution</span>
+                    <span class="impact-tag highlight">3 Independent Testimonials</span>
+                    <span class="impact-tag">LMS Troubleshooting</span>
+                    <span class="impact-tag">SCORM Completion</span>
+                    <span class="impact-tag">Cross-Functional</span>
+                    <span class="impact-tag">Metal Additive Manufacturing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../testimonials.html" class="back-link">&larr; Back to Field Reports</a>
+    </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

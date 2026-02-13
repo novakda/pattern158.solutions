@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit B - Leadership Recognition Chain</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== REPORT SECTIONS ========== */
+        .report-body {
+            background: white;
+        }
+
+        .report-body .container {
+            max-width: 900px;
+        }
+
+        .report-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--teal);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .report-section h2 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .report-section h3 {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .report-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        /* ========== PERSONNEL TABLE ========== */
+        .personnel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personnel-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .personnel-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .personnel-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        /* ========== BLOCKQUOTES ========== */
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ========== EVIDENCE CHAIN ========== */
+        .evidence-chain {
+            margin: 1.5rem 0;
+            padding: 0;
+            list-style: none;
+            counter-reset: evidence;
+        }
+
+        .evidence-chain li {
+            counter-increment: evidence;
+            padding: 1rem 1rem 1rem 3.5rem;
+            margin-bottom: 0.5rem;
+            background: var(--cream);
+            border-left: 3px solid var(--light-gray);
+            position: relative;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .evidence-chain li::before {
+            content: counter(evidence);
+            position: absolute;
+            left: 0.8rem;
+            top: 1rem;
+            width: 1.8rem;
+            height: 1.8rem;
+            background: var(--navy);
+            color: var(--cream);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        /* ========== IMPACT TAGS ========== */
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .impact-tag.highlight {
+            background: var(--teal);
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link-section {
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid var(--navy);
+            padding: 0.8rem 2rem;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .personnel-table {
+                font-size: 0.8rem;
+            }
+
+            .personnel-table th,
+            .personnel-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+
+            .evidence-chain li {
+                padding-left: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../testimonials.html" aria-current="page">Field Reports</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">EXHIBIT B &mdash; Leadership Recognition Chain (Electric Boat Engagement)</p>
+            <span class="classification">Multi-Source Corroboration &middot; August 2018</span>
+        </div>
+    </section>
+
+    <!-- Report Body -->
+    <section class="report-body">
+        <div class="container">
+
+            <!-- Section 1: Background -->
+            <div class="report-section">
+                <span class="section-number">Section 1</span>
+                <h2>Background</h2>
+                <p>This exhibit documents the multi-level recognition cascade following Dan Novak's on-site technical engagement at General Dynamics Electric Boat in August 2018.</p>
+                <p>After a 2-day on-site visit, recognition came from three independent channels before the formal trip report was even submitted. This exhibit traces how client satisfaction propagated through GP Strategies' leadership hierarchy, demonstrating genuine rather than perfunctory appreciation.</p>
+            </div>
+
+            <!-- Section 2: Personnel -->
+            <div class="report-section">
+                <span class="section-number">Section 2</span>
+                <h2>Personnel</h2>
+
+                <table class="personnel-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Title / Role</th>
+                            <th>Involvement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kimberly Vahlsing</strong></td>
+                            <td>Sr. Director, Learning Solutions (443.367.9688)</td>
+                            <td>Executive sponsor who authorized the on-site trip. 15+ year leadership at GP Strategies.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thomas Pizer</strong></td>
+                            <td>Director of Learning Technologies (443.367.9888)</td>
+                            <td>Dan's management chain. Previously relayed Wells Fargo client praise.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chris Sproule</strong></td>
+                            <td>Senior Vice President, Learning Solutions</td>
+                            <td>Initiated the EB engagement in Sept 2017. Among those who independently praised Dan's work.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tracey Nicholson</strong></td>
+                            <td>GP Strategies EB team</td>
+                            <td>Independently relayed positive feedback to Tom Pizer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quinn Gladu</strong></td>
+                            <td>GP Strategies EB team</td>
+                            <td>Independently relayed positive feedback to Tom Pizer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kelly Shute</strong></td>
+                            <td>Wells Fargo</td>
+                            <td>Separately conveyed appreciation for Dan's testing work.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Section 3: Findings -->
+            <div class="report-section">
+                <span class="section-number">Section 3</span>
+                <h2>Findings</h2>
+                <p>Recognition of the Electric Boat on-site engagement propagated through GP Strategies' leadership hierarchy via multiple independent channels. The timeline below establishes that praise was not coordinated or solicited &mdash; it arose organically from multiple touchpoints with the client.</p>
+            </div>
+
+            <!-- Section 4: Evidence Chain -->
+            <div class="report-section">
+                <span class="section-number">Section 4</span>
+                <h2>Evidence Chain</h2>
+
+                <ol class="evidence-chain">
+                    <li><strong>August 17, 2018</strong> &mdash; Charlie Rando (EB client, Chief of Learning Services) emails his internal EB leadership chain, summarizing the visit outcomes and expressing satisfaction with the engagement.</li>
+                    <li><strong>August 20, 2018</strong> &mdash; Kimberly Vahlsing (Sr. Director) hears from her EB contacts and emails Dan directly, without prompting from Dan's management chain.</li>
+                    <li><strong>August 21, 2018</strong> &mdash; Thomas Pizer (Director) hears from three independent sources &mdash; Chris Sproule (SVP), Tracey Nicholson, and Quinn Gladu &mdash; and emails Dan to relay the feedback.</li>
+                </ol>
+            </div>
+
+            <!-- Section 5: Primary Source Testimony -->
+            <div class="report-section">
+                <span class="section-number">Section 5</span>
+                <h2>Primary Source Testimony</h2>
+
+                <blockquote>
+                    I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making the trip and doing all the great things you do!
+                    <div class="attribution">
+                        Kimberly Vahlsing
+                        <span class="role">&mdash; Sr. Director, Learning Solutions, GP Strategies (August 20, 2018)</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Thanks for all of the great work you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, and Quinn Gladu. Thanks for your hard work!
+                    <div class="attribution">
+                        Thomas Pizer
+                        <span class="role">&mdash; Director of Learning Technologies, GP Strategies (August 21, 2018)</span>
+                    </div>
+                </blockquote>
+            </div>
+
+            <!-- Section 6: Significance -->
+            <div class="report-section">
+                <span class="section-number">Section 6</span>
+                <h2>Significance</h2>
+                <p>Recognition escalated from client technical lead (Charlie Rando at Electric Boat) to GP Strategies Sr. Director and Director levels, with at least three independent corroborating sources. This pattern indicates genuine rather than perfunctory praise:</p>
+                <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 2;">
+                    <li>The Sr. Director reached out before the formal trip report was filed</li>
+                    <li>The Director cited three named sources who independently contacted him</li>
+                    <li>The sources spanned multiple levels of the organization (SVP, team members)</li>
+                    <li>Recognition came within 4 days of the on-site visit concluding</li>
+                </ul>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">Leadership Recognition</span>
+                    <span class="impact-tag highlight">Multi-Source Corroboration</span>
+                    <span class="impact-tag">Client Relationship</span>
+                    <span class="impact-tag">General Dynamics</span>
+                    <span class="impact-tag">Electric Boat</span>
+                    <span class="impact-tag">SVP-Level Praise</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back Link -->
+    <section class="back-link-section">
+        <div class="container">
+            <a href="../testimonials.html" class="back-link">&larr; Back to Field Reports</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>

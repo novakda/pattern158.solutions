@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit C - Content Refresh: 600 Hours Saved</title>
+    <style>
+        /* ========== COLOR PALETTE ========== */
+        :root {
+            --navy: #1a2838;
+            --teal: #17a2b8;
+            --charcoal: #2d3436;
+            --cream: #faf9f6;
+            --light-gray: #e8e8e8;
+            --brass: #b8860b;
+        }
+
+        /* ========== BASE STYLES ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--charcoal);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        /* ========== FOCUS STATES ========== */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus,
+        select:focus,
+        [tabindex]:not([tabindex="-1"]):focus {
+            outline: 2px solid var(--teal);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
+        }
+
+        .hero a:focus,
+        .hero button:focus,
+        nav a:focus,
+        header a:focus {
+            outline: 2px solid var(--cream);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(250, 249, 246, 0.3);
+        }
+
+        *:focus:not(:focus-visible) {
+            outline: revert;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--teal);
+            color: var(--cream);
+            padding: 12px 24px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', 'Arial Black', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            background: var(--light-gray);
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+
+        /* ========== NAVIGATION ========== */
+        nav {
+            background: var(--navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo-link {
+            display: flex;
+            align-items: center;
+        }
+
+        nav .logo-img {
+            height: 48px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--teal);
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative;
+            background: var(--navy);
+            color: var(--cream);
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(23, 162, 184, 0.03) 40px,
+                    rgba(23, 162, 184, 0.03) 41px
+                );
+            z-index: 1;
+        }
+
+        .hero .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .hero .pattern-number {
+            color: var(--teal);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        .hero .classification {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 0.4rem 1.2rem;
+            margin-top: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* ========== CONTAINER ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* ========== REPORT SECTIONS ========== */
+        .report-body {
+            background: white;
+        }
+
+        .report-body .container {
+            max-width: 900px;
+        }
+
+        .report-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--teal);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .report-section h2 {
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .report-section h3 {
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .report-section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--charcoal);
+        }
+
+        /* ========== PERSONNEL TABLE ========== */
+        .personnel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        .personnel-table th {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .personnel-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            vertical-align: top;
+        }
+
+        .personnel-table tr:hover td {
+            background: rgba(23, 162, 184, 0.04);
+        }
+
+        /* ========== BLOCKQUOTES ========== */
+        blockquote {
+            border-left: 3px solid var(--teal);
+            margin: 1.2rem 0;
+            padding: 1rem 1.5rem;
+            background: var(--cream);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        blockquote::before {
+            content: '\201C';
+            position: absolute;
+            top: -0.3rem;
+            left: 0.5rem;
+            font-size: 3rem;
+            color: var(--teal);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .attribution {
+            margin-top: 0.8rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .attribution .role {
+            font-weight: 400;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* ========== STATS BAR ========== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: var(--cream);
+            padding: 1.5rem 1rem;
+            border-top: 4px solid var(--teal);
+        }
+
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--teal);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ========== IMPACT TAGS ========== */
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .impact-tag {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 0.25rem 0.7rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .impact-tag.highlight {
+            background: var(--teal);
+        }
+
+        /* ========== BACK LINK ========== */
+        .back-link-section {
+            background: var(--light-gray);
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid var(--navy);
+            padding: 0.8rem 2rem;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--charcoal);
+            color: var(--cream);
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--teal);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .personnel-table {
+                font-size: 0.8rem;
+            }
+
+            .personnel-table th,
+            .personnel-table td {
+                padding: 0.5rem;
+            }
+
+            blockquote {
+                padding: 0.8rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     height="48">
+            </a>
+            <ul>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#philosophy">Philosophy</a></li>
+                <li><a href="../testimonials.html" aria-current="page">Field Reports</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">EXHIBIT C &mdash; Content Refresh Project: 600 Hours Saved Through Automation</p>
+            <span class="classification">Automation &middot; Process Engineering &middot; December 2015</span>
+        </div>
+    </section>
+
+    <!-- Report Body -->
+    <section class="report-body">
+        <div class="container">
+
+            <!-- Section 1: Background -->
+            <div class="report-section">
+                <span class="section-number">Section 1</span>
+                <h2>Background</h2>
+                <p>In 2015, GP Strategies undertook a massive content refresh of their GPiLEARN course library. A total of 1,216 lessons needed to be verified, fixed, and republished through the Xyleme content authoring platform. The project involved 15+ team members over several months and represented one of the largest single content operations in the team's history.</p>
+            </div>
+
+            <!-- Section 2: The Problem -->
+            <div class="report-section">
+                <span class="section-number">Section 2</span>
+                <h2>The Problem</h2>
+                <p>Publishing lessons from Xyleme was a manual, time-consuming process. Each lesson had to be individually published through the Xyleme interface &mdash; selecting the lesson, configuring output parameters, initiating the publish, and waiting for confirmation. With 1,216 lessons needing multiple publish cycles, the labor cost was enormous.</p>
+                <p>The team collectively needed to verify that all content in every lesson matched what was currently being served to customers. This meant each lesson went through multiple rounds of verification and republishing, compounding the manual effort exponentially.</p>
+            </div>
+
+            <!-- Section 3: The Solution -->
+            <div class="report-section">
+                <span class="section-number">Section 3</span>
+                <h2>The Solution</h2>
+                <p>Dan Novak used the Fiddler network debugging tool to reverse-engineer Xyleme's publishing API calls. By capturing and analyzing the HTTP traffic between the browser and Xyleme's servers, he identified the exact sequence of API requests needed to trigger a publish operation.</p>
+                <p>He then built an automation tool that could batch-publish lessons unattended &mdash; eliminating the need for a human to manually click through each lesson's publish workflow. This saved an estimated 600+ hours of manual labor across the project.</p>
+            </div>
+
+            <!-- Section 4: Personnel -->
+            <div class="report-section">
+                <span class="section-number">Section 4</span>
+                <h2>Personnel</h2>
+
+                <table class="personnel-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Nickname</th>
+                            <th>Role / Contribution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Chris Kaplan</strong></td>
+                            <td>&mdash;</td>
+                            <td>Manager, Content Team. Authored the team recognition email. Managed the overall refresh project.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dan Novak</strong></td>
+                            <td>"The Fiddler"</td>
+                            <td>Built the publishing automation tooling using Fiddler. Saved 600+ hours of manual labor.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Zach Taylor</strong></td>
+                            <td>"The Slacker"</td>
+                            <td>Used Dan's automation tool to publish every lesson at least 3 times. Built auto-integration of custom code (saving 75+ more hours) and the new responsive skin.</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="color: #666; font-style: italic;">13 additional team members, each recognized with unique nicknames highlighting their individual contributions to the refresh project.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Section 5: Primary Source Testimony -->
+            <div class="report-section">
+                <span class="section-number">Section 5</span>
+                <h2>Primary Source Testimony</h2>
+
+                <blockquote>
+                    Dan Novak "The Fiddler" (Automation) &mdash; Dan gets this name not only because he makes extensive use of the Fiddler application to help us troubleshoot communications errors for customers, but because he fiddles with stuff until we get a tool that makes things&hellip; possible. He also used Fiddler to figure out how to automate the publishing process out of Xyleme. <strong>This resulted in a savings of about 600 hours of labor</strong> by allowing us to publish large batches of lessons unattended.
+                    <div class="attribution">
+                        Chris Kaplan
+                        <span class="role">&mdash; Manager, Content Team, GP Strategies</span>
+                    </div>
+                </blockquote>
+
+                <blockquote>
+                    Page after page, lesson after lesson, week after week, the team took the task at hand and worked it until it was done &mdash; and then asked for more. Relentless forward motion towards our goal.
+                    <div class="attribution">
+                        Chris Kaplan
+                        <span class="role">&mdash; describing the team's approach in the recognition email</span>
+                    </div>
+                </blockquote>
+            </div>
+
+            <!-- Section 6: Additional Context -->
+            <div class="report-section">
+                <span class="section-number">Section 6</span>
+                <h2>Additional Context</h2>
+                <p>The recognition email gave each of 15 team members a unique nickname highlighting their specific contribution. Tom Pizer (Director) highlighted this as a kudos during the All Hands meeting, elevating the team's work to division-wide visibility.</p>
+                <p>The team collectively verified that all of the content in 1,216 lessons matched the content currently being served to customers. The Content Server Black Box (CSBB) library was fully refreshed for all clients including GPiLEARN.</p>
+            </div>
+
+            <!-- Section 7: Impact Metrics -->
+            <div class="report-section">
+                <span class="section-number">Section 7</span>
+                <h2>Impact Metrics</h2>
+
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-number">600+</div>
+                        <div class="stat-label">Labor Hours Saved via Automation</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,216</div>
+                        <div class="stat-label">Lessons Refreshed &amp; Verified</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">75+</div>
+                        <div class="stat-label">Additional Hours Saved (Custom Code)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Team Members Recognized</div>
+                    </div>
+                </div>
+
+                <div class="impact-tags">
+                    <span class="impact-tag highlight">600+ Hours Saved</span>
+                    <span class="impact-tag highlight">Automation</span>
+                    <span class="impact-tag">Xyleme</span>
+                    <span class="impact-tag">Fiddler</span>
+                    <span class="impact-tag">1,216 Lessons</span>
+                    <span class="impact-tag">GPiLEARN</span>
+                    <span class="impact-tag">Responsive Skin</span>
+                    <span class="impact-tag">CSBB Library</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Back Link -->
+    <section class="back-link-section">
+        <div class="container">
+            <a href="../testimonials.html" class="back-link">&larr; Back to Field Reports</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:xhiris@gmail.com">xhiris@gmail.com</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--teal);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
+        </div>
+    </footer>
+
+</body>
+</html>
