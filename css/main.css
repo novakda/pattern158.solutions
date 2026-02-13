@@ -64,6 +64,45 @@
     --overlay-hover-row: rgba(23, 162, 184, 0.04);
 }
 
+/* === DARK MODE OVERRIDES === */
+[data-theme="dark"] {
+    /* Backgrounds: navy-based palette (NTSB brand, NOT generic black) */
+    --color-background: #1a2838;
+    --color-background-alt: #243447;
+    --color-surface: #2a3f54;
+
+    /* Text: high contrast on dark backgrounds */
+    --color-text: #e8e8e8;
+    --color-text-muted: #a0a0a0;
+    --color-text-light: #888888;
+    --color-text-medium: #b0b0b0;
+    --color-text-source: #909090;
+    --color-text-timeline: #b0b0b0;
+
+    /* Borders: lighter for visibility on dark */
+    --color-border: #3d5266;
+    --color-border-primary: rgba(23, 162, 184, 0.4);
+
+    /* Hover state */
+    --color-hover-background: #324456;
+
+    /* Shadows: stronger for depth on dark backgrounds */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+    /* Overlays: adjust for dark backgrounds */
+    --overlay-hero: rgba(26, 40, 56, 0.80);
+    --overlay-grid-line: rgba(23, 162, 184, 0.08);
+    --overlay-hover-row: rgba(23, 162, 184, 0.1);
+}
+
+/* Footer dark mode override to maintain dark appearance */
+[data-theme="dark"] footer {
+    background: var(--color-surface);
+    color: var(--color-text);
+}
+
 /* === RESET === */
 * {
     margin: 0;
