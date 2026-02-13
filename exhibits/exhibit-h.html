@@ -51,6 +51,18 @@
                 <li><a href="../index.html#philosophy">Philosophy</a></li>
                 <li><a href="../testimonials.html" aria-current="page">Field Reports</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -212,6 +224,65 @@
             <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #888;">All quotations sourced from primary correspondence. Extracted from 30,878 archived emails (2005&ndash;2022).</p>
         </div>
     </footer>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
 
 </body>
 </html>
