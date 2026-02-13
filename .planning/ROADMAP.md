@@ -79,10 +79,11 @@ Plans:
   3. JSON-LD structured data appears in Google Rich Results Test
   4. sitemap.xml lists all 14 pages with correct URLs
   5. Search engines can discover and index all public pages
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01: TBD during planning
+- [ ] 04-01-PLAN.md — SEO meta tags, Open Graph, canonical URLs, and JSON-LD on all 14 pages
+- [ ] 04-02-PLAN.md — sitemap.xml, robots.txt, and comprehensive SEO validation
 
 ### Phase 5: Performance Optimization
 **Goal**: Fast load times and optimal user experience
@@ -109,9 +110,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
 | 2. Dark Mode Implementation | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
-| 4. SEO Optimization | 0/TBD | Not started | - |
+| 4. SEO Optimization | 0/2 | In progress | - |
 | 5. Performance Optimization | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13 (Phase 3 complete)*
+*Last updated: 2026-02-13 (Phase 4 planned)*
