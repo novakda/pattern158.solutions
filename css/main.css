@@ -62,7 +62,7 @@ header a:focus {
 
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 0;
     background: var(--teal);
     color: var(--cream);
@@ -156,9 +156,9 @@ footer a:hover {
    ================================================================ */
 
 /* ========== HERO SECTION ========== */
-.hero {
+.page-index .hero {
     position: relative;
-    background-image: url('assets/images/hero/pattern158_organ_pipes_hero.png');
+    background-image: url('/assets/images/hero/pattern158_organ_pipes_hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,7 +171,7 @@ footer a:hover {
     justify-content: center;
 }
 
-.hero::before {
+.page-index .hero::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -179,32 +179,32 @@ footer a:hover {
     z-index: 1;
 }
 
-.hero .container {
+.page-index .hero .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.hero h1 {
+.page-index .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     color: var(--cream);
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero .pattern-number {
+.page-index .hero .pattern-number {
     color: var(--teal);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7);
 }
 
-.hero .subtitle {
+.page-index .hero .subtitle {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 300;
 }
 
-.hero .tagline {
+.page-index .hero .tagline {
     font-size: 1.2rem;
     font-style: italic;
     color: var(--teal);
@@ -213,11 +213,11 @@ footer a:hover {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7);
 }
 
-.hero .cta-buttons {
+.page-index .hero .cta-buttons {
     margin-top: 2rem;
 }
 
-.btn {
+.page-index .btn {
     display: inline-block;
     padding: 0.8rem 2rem;
     margin: 0 0.5rem;
@@ -227,30 +227,30 @@ footer a:hover {
     font-weight: 500;
 }
 
-.btn-primary {
+.page-index .btn-primary {
     background: var(--teal);
     color: white;
 }
 
-.btn-primary:hover {
+.page-index .btn-primary:hover {
     background: #138496;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.btn-secondary {
+.page-index .btn-secondary {
     background: transparent;
     color: var(--cream);
     border: 2px solid var(--cream);
 }
 
-.btn-secondary:hover {
+.page-index .btn-secondary:hover {
     background: var(--cream);
     color: var(--navy);
 }
 
 /* ========== PATTERN VISUAL ========== */
-.pattern-visual {
+.page-index .pattern-visual {
     margin: 2rem auto;
     width: 200px;
     height: 100px;
@@ -260,85 +260,85 @@ footer a:hover {
     gap: 10px;
 }
 
-.pattern-bar {
+.page-index .pattern-bar {
     background: var(--teal);
     width: 30px;
     opacity: 0.8;
     transition: all 0.3s;
 }
 
-.pattern-bar:nth-child(1) { height: 60px; }
-.pattern-bar:nth-child(2) { height: 60px; }
-.pattern-bar:nth-child(3) { height: 80px; }
+.page-index .pattern-bar:nth-child(1) { height: 60px; }
+.page-index .pattern-bar:nth-child(2) { height: 60px; }
+.page-index .pattern-bar:nth-child(3) { height: 80px; }
 
-.pattern-visual:hover .pattern-bar {
+.page-index .pattern-visual:hover .pattern-bar {
     opacity: 1;
     transform: scaleY(1.1);
 }
 
 /* ========== CONTAINER ========== */
-.container {
+.page-index .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-section {
+.page-index section {
     padding: 4rem 2rem;
 }
 
 /* ========== INTRO SECTION ========== */
-.intro {
+.page-index .intro {
     background: white;
     text-align: center;
 }
 
-.intro h2 {
+.page-index .intro h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--navy);
 }
 
-.intro p {
+.page-index .intro p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto 2rem;
     line-height: 1.8;
 }
 
-.intro .specialties {
+.page-index .intro .specialties {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.specialty-card {
+.page-index .specialty-card {
     background: var(--cream);
     padding: 1.5rem;
     border-left: 4px solid var(--teal);
     text-align: left;
 }
 
-.specialty-card h3 {
+.page-index .specialty-card h3 {
     color: var(--navy);
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 /* ========== FINDINGS SECTION (NTSB Style) ========== */
-.findings {
+.page-index .findings {
     background: var(--light-gray);
 }
 
-.findings h2 {
+.page-index .findings h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--navy);
     text-align: center;
 }
 
-.finding-card {
+.page-index .finding-card {
     background: white;
     margin-bottom: 2rem;
     border-left: 6px solid var(--teal);
@@ -347,17 +347,17 @@ section {
     transition: transform 0.3s;
 }
 
-.finding-card:hover {
+.page-index .finding-card:hover {
     transform: translateX(4px);
 }
 
-.finding-header {
+.page-index .finding-header {
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.finding-label {
+.page-index .finding-label {
     background: var(--teal);
     color: white;
     padding: 0.3rem 1rem;
@@ -368,23 +368,23 @@ section {
     letter-spacing: 1px;
 }
 
-.finding-title {
+.page-index .finding-title {
     font-size: 1.8rem;
     color: var(--navy);
     font-weight: bold;
 }
 
-.finding-meta {
+.page-index .finding-meta {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
-.finding-section {
+.page-index .finding-section {
     margin: 1rem 0;
 }
 
-.finding-section h4 {
+.page-index .finding-section h4 {
     color: var(--navy);
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -392,19 +392,19 @@ section {
     letter-spacing: 1px;
 }
 
-.finding-section p {
+.page-index .finding-section p {
     margin-left: 1rem;
     line-height: 1.8;
 }
 
-.tech-stack {
+.page-index .tech-stack {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1rem;
 }
 
-.tech-tag {
+.page-index .tech-tag {
     background: var(--navy);
     color: var(--cream);
     padding: 0.3rem 0.8rem;
@@ -413,56 +413,56 @@ section {
 }
 
 /* ========== PHILOSOPHY SECTION ========== */
-.philosophy {
+.page-index .philosophy {
     background: var(--navy);
     color: var(--cream);
 }
 
-.philosophy h2 {
+.page-index .philosophy h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: var(--cream);
     text-align: center;
 }
 
-.philosophy-grid {
+.page-index .philosophy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 3rem;
 }
 
-.philosophy-item h3 {
+.page-index .philosophy-item h3 {
     color: var(--teal);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-.philosophy-item ul {
+.page-index .philosophy-item ul {
     list-style: none;
     padding-left: 0;
 }
 
-.philosophy-item li {
+.page-index .philosophy-item li {
     padding: 0.5rem 0;
     padding-left: 1.5rem;
     position: relative;
 }
 
-.philosophy-item li::before {
-    content: '→';
+.page-index .philosophy-item li::before {
+    content: '\2192';
     position: absolute;
     left: 0;
     color: var(--teal);
 }
 
 /* ========== TUNING FORK VISUAL ========== */
-.tuning-fork-section {
+.page-index .tuning-fork-section {
     text-align: center;
     padding: 3rem 0;
 }
 
-.tuning-fork {
+.page-index .tuning-fork {
     width: 80px;
     height: 120px;
     margin: 2rem auto;
@@ -472,18 +472,18 @@ section {
     align-items: flex-end;
 }
 
-.fork-prong {
+.page-index .fork-prong {
     width: 20px;
     height: 80px;
     background: var(--teal);
     border-radius: 10px 10px 0 0;
 }
 
-.fork-prong:first-child {
+.page-index .fork-prong:first-child {
     margin-right: 20px;
 }
 
-.fork-handle {
+.page-index .fork-handle {
     position: absolute;
     bottom: 0;
     width: 10px;
@@ -494,19 +494,19 @@ section {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .hero h1 {
+    .page-index .hero h1 {
         font-size: 2.5rem;
     }
 
-    .hero .subtitle {
+    .page-index .hero .subtitle {
         font-size: 1.2rem;
     }
 
-    nav ul {
+    .page-index nav ul {
         gap: 1rem;
     }
 
-    .btn {
+    .page-index .btn {
         display: block;
         margin: 0.5rem auto;
         max-width: 200px;
@@ -520,39 +520,39 @@ section {
 /* ========== PHILOSOPHY PAGE STYLES ========== */
 
 /* Minimal hero for philosophy page */
-.hero-minimal {
+.page-philosophy .hero-minimal {
     background: var(--navy);
     color: var(--cream);
     padding: 4rem 2rem;
     text-align: center;
 }
 
-.hero-minimal h1 {
+.page-philosophy .hero-minimal h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
-.hero-minimal .subtitle {
+.page-philosophy .hero-minimal .subtitle {
     font-size: 1.2rem;
     font-weight: 300;
     opacity: 0.9;
 }
 
 /* Content sections */
-.content-section {
+.page-philosophy .content-section {
     max-width: 800px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
 
-.content-section h2 {
+.page-philosophy .content-section h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3rem;
     color: var(--navy);
     margin-bottom: 1rem;
 }
 
-.section-intro {
+.page-philosophy .section-intro {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 2rem;
@@ -560,11 +560,11 @@ section {
 }
 
 /* Brand elements as definition list */
-.brand-elements-list {
+.page-philosophy .brand-elements-list {
     margin: 2rem 0;
 }
 
-.brand-elements-list dt {
+.page-philosophy .brand-elements-list dt {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.5rem;
     color: var(--teal);
@@ -572,22 +572,22 @@ section {
     margin-bottom: 0.5rem;
 }
 
-.brand-elements-list dd {
+.page-philosophy .brand-elements-list dd {
     margin-left: 0;
     padding-left: 1.5rem;
     border-left: 3px solid var(--teal);
     margin-bottom: 1.5rem;
 }
 
-.brand-elements-list dd p {
+.page-philosophy .brand-elements-list dd p {
     margin-bottom: 0.5rem;
 }
 
-.brand-elements-list dd p:last-child {
+.page-philosophy .brand-elements-list dd p:last-child {
     margin-bottom: 0;
 }
 
-.source-note {
+.page-philosophy .source-note {
     font-size: 0.9rem;
     color: #888;
     font-style: italic;
@@ -595,21 +595,21 @@ section {
 }
 
 /* Methodology ordered list */
-.methodology-steps {
+.page-philosophy .methodology-steps {
     list-style: none;
     counter-reset: step-counter;
     margin: 2rem 0;
     padding: 0;
 }
 
-.methodology-steps li {
+.page-philosophy .methodology-steps li {
     counter-increment: step-counter;
     margin-bottom: 2.5rem;
     padding-left: 4rem;
     position: relative;
 }
 
-.methodology-steps li::before {
+.page-philosophy .methodology-steps li::before {
     content: counter(step-counter);
     position: absolute;
     left: 0;
@@ -620,19 +620,19 @@ section {
     line-height: 1;
 }
 
-.methodology-steps h3 {
+.page-philosophy .methodology-steps h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     color: var(--navy);
     margin-bottom: 0.5rem;
 }
 
-.methodology-steps p {
+.page-philosophy .methodology-steps p {
     margin: 0;
     line-height: 1.7;
 }
 
-.methodology-note {
+.page-philosophy .methodology-note {
     background: var(--light-gray);
     padding: 1.5rem;
     border-left: 4px solid var(--teal);
@@ -642,20 +642,20 @@ section {
 }
 
 /* Origin story */
-.origin-story {
+.page-philosophy .origin-story {
     line-height: 1.8;
     font-size: 1.05rem;
 }
 
-.origin-story p {
+.page-philosophy .origin-story p {
     margin-bottom: 1.2rem;
 }
 
-.origin-story p:last-child {
+.page-philosophy .origin-story p:last-child {
     margin-bottom: 0;
 }
 
-.domain-note {
+.page-philosophy .domain-note {
     background: var(--cream);
     border: 2px solid var(--teal);
     padding: 1rem;
@@ -664,78 +664,78 @@ section {
 }
 
 /* Influences */
-.influence {
+.page-philosophy .influence {
     margin-bottom: 3rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid #ddd;
 }
 
-.influence:last-child {
+.page-philosophy .influence:last-child {
     border-bottom: none;
 }
 
-.influence h3 {
+.page-philosophy .influence h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     color: var(--navy);
     margin-bottom: 1rem;
 }
 
-.influence p {
+.page-philosophy .influence p {
     margin-bottom: 0.8rem;
     line-height: 1.7;
 }
 
-.influence p:last-child {
+.page-philosophy .influence p:last-child {
     margin-bottom: 0;
 }
 
-.influence strong {
+.page-philosophy .influence strong {
     color: var(--teal);
 }
 
 /* Mobile responsive */
 @media (max-width: 767px) {
-    .hero-minimal h1 {
+    .page-philosophy .hero-minimal h1 {
         font-size: 2.5rem;
     }
 
-    .content-section {
+    .page-philosophy .content-section {
         padding: 3rem 1rem;
     }
 
-    .content-section h2 {
+    .page-philosophy .content-section h2 {
         font-size: 2.5rem;
     }
 
-    .section-intro {
+    .page-philosophy .section-intro {
         font-size: 1.1rem;
     }
 
-    .brand-elements-list dt {
+    .page-philosophy .brand-elements-list dt {
         font-size: 1.3rem;
     }
 
-    .methodology-steps li {
+    .page-philosophy .methodology-steps li {
         padding-left: 3rem;
     }
 
-    .methodology-steps li::before {
+    .page-philosophy .methodology-steps li::before {
         font-size: 2.5rem;
     }
 
-    .methodology-steps h3 {
+    .page-philosophy .methodology-steps h3 {
         font-size: 1.5rem;
     }
 
-    .influence h3 {
+    .page-philosophy .influence h3 {
         font-size: 1.5rem;
     }
 }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    nav ul {
+    .page-philosophy nav ul {
         gap: 1rem;
     }
 }
@@ -750,31 +750,31 @@ section {
 /* hero-minimal already defined in philosophy.html section */
 
 /* FAQ Category sections */
-.faq-category {
+.page-faq .faq-category {
     max-width: 800px;
     margin: 0 auto 3rem;
     padding: 0 1rem;
 }
 
-.faq-category h2 {
+.page-faq .faq-category h2 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: var(--navy);
     margin-bottom: 0.5rem;
 }
 
-.category-intro {
+.page-faq .category-intro {
     color: #666;
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }
 
 /* Details/Summary styling */
-details {
+.page-faq details {
     margin-bottom: 1rem;
 }
 
-details summary {
+.page-faq details summary {
     list-style: none;
     cursor: pointer;
     padding: 1rem 3rem 1rem 1.5rem;
@@ -791,12 +791,12 @@ details summary {
 }
 
 /* Remove default triangle */
-details summary::-webkit-details-marker {
+.page-faq details summary::-webkit-details-marker {
     display: none;
 }
 
 /* Custom icon */
-details summary::after {
+.page-faq details summary::after {
     content: "+";
     position: absolute;
     right: 1.5rem;
@@ -808,32 +808,32 @@ details summary::after {
     transition: all 0.2s;
 }
 
-details[open] summary::after {
-    content: "−";
+.page-faq details[open] summary::after {
+    content: "\2212";
 }
 
 /* Hover state */
-details summary:hover {
+.page-faq details summary:hover {
     background: #f0f0f0;
     border-color: var(--teal);
 }
 
 /* Focus state (accessibility) */
-details summary:focus {
+.page-faq details summary:focus {
     outline: 2px solid var(--teal);
     outline-offset: 2px;
     box-shadow: 0 0 0 4px rgba(23, 162, 184, 0.2);
 }
 
 /* Open state styling */
-details[open] summary {
+.page-faq details[open] summary {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-color: var(--teal);
 }
 
 /* Answer content */
-.faq-answer {
+.page-faq .faq-answer {
     padding: 1.5rem;
     background: white;
     border-left: 4px solid var(--teal);
@@ -844,62 +844,62 @@ details[open] summary {
     margin-bottom: 0;
 }
 
-.faq-answer p {
+.page-faq .faq-answer p {
     margin-bottom: 1rem;
 }
 
-.faq-answer p:last-child {
+.page-faq .faq-answer p:last-child {
     margin-bottom: 0;
 }
 
-.faq-answer ul,
-.faq-answer ol {
+.page-faq .faq-answer ul,
+.page-faq .faq-answer ol {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.faq-answer li {
+.page-faq .faq-answer li {
     margin-bottom: 0.5rem;
 }
 
-.faq-answer a {
+.page-faq .faq-answer a {
     color: var(--teal);
     text-decoration: underline;
 }
 
-.faq-answer a:hover {
+.page-faq .faq-answer a:hover {
     color: #138496;
 }
 
-.faq-answer strong {
+.page-faq .faq-answer strong {
     color: var(--navy);
 }
 
 /* Mobile responsive */
 @media (max-width: 767px) {
-    .hero-minimal h1 {
+    .page-faq .hero-minimal h1 {
         font-size: 2.25rem;
     }
 
-    .faq-category h2 {
+    .page-faq .faq-category h2 {
         font-size: 2rem;
     }
 
-    .category-intro {
+    .page-faq .category-intro {
         font-size: 1rem;
     }
 
-    details summary {
+    .page-faq details summary {
         padding: 0.75rem 2.5rem 0.75rem 1rem;
         font-size: 0.95rem;
     }
 
-    details summary::after {
+    .page-faq details summary::after {
         right: 1rem;
         font-size: 1.25rem;
     }
 
-    .faq-answer {
+    .page-faq .faq-answer {
         padding: 1rem;
         font-size: 0.95rem;
     }
@@ -907,7 +907,7 @@ details[open] summary {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    nav ul {
+    .page-faq nav ul {
         gap: 1rem;
     }
 }
@@ -922,19 +922,19 @@ details[open] summary {
 /* hero-minimal already defined in philosophy.html section */
 
 /* Email section */
-.contact-methods {
+.page-contact .contact-methods {
     background: white;
     padding: 4rem 2rem;
     text-align: center;
 }
 
-.contact-methods h2 {
+.page-contact .contact-methods h2 {
     font-size: 2.5rem;
     color: var(--navy);
     margin-bottom: 1.5rem;
 }
 
-.email-container {
+.page-contact .email-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -943,7 +943,7 @@ details[open] summary {
     margin: 1rem 0 2rem;
 }
 
-.email-link {
+.page-contact .email-link {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--teal);
@@ -951,11 +951,11 @@ details[open] summary {
     font-family: 'JetBrains Mono', monospace;
 }
 
-.email-link:hover {
+.page-contact .email-link:hover {
     text-decoration: underline;
 }
 
-.copy-btn {
+.page-contact .copy-btn {
     background: var(--teal);
     color: var(--cream);
     border: none;
@@ -968,19 +968,19 @@ details[open] summary {
     min-height: 44px;
 }
 
-.copy-btn:hover {
+.page-contact .copy-btn:hover {
     background: #138496;
     transform: translateY(-2px);
 }
 
-.email-note {
+.page-contact .email-note {
     font-size: 0.9rem;
     color: #666;
     margin-top: 0.5rem;
 }
 
 /* Social buttons */
-.social-buttons {
+.page-contact .social-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -988,7 +988,7 @@ details[open] summary {
     margin-top: 2rem;
 }
 
-.btn-social {
+.page-contact .btn-social {
     display: inline-block;
     padding: 0.8rem 2rem;
     background: var(--teal);
@@ -1002,58 +1002,58 @@ details[open] summary {
     min-height: 44px;
 }
 
-.btn-social:hover {
+.page-contact .btn-social:hover {
     background: #138496;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Guidance section */
-.guidance {
+.page-contact .guidance {
     background: var(--cream);
     padding: 4rem 2rem;
 }
 
-.guidance h2 {
+.page-contact .guidance h2 {
     font-size: 2.5rem;
     color: var(--navy);
     margin-bottom: 1.5rem;
     text-align: center;
 }
 
-.guidance h3 {
+.page-contact .guidance h3 {
     font-size: 1.5rem;
     color: var(--navy);
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.guidance-intro {
+.page-contact .guidance-intro {
     text-align: center;
     max-width: 700px;
     margin: 0 auto 2rem;
     font-size: 1.1rem;
 }
 
-.guidance-list {
+.page-contact .guidance-list {
     list-style: none;
     padding: 0;
     max-width: 700px;
     margin: 2rem auto;
 }
 
-.guidance-list li {
+.page-contact .guidance-list li {
     background: white;
     padding: 1rem 1.5rem;
     margin-bottom: 1rem;
     border-left: 4px solid var(--teal);
 }
 
-.guidance-list strong {
+.page-contact .guidance-list strong {
     color: var(--navy);
 }
 
-.timezone-note {
+.page-contact .timezone-note {
     background: var(--light-gray);
     padding: 1.5rem;
     border-radius: 8px;
@@ -1062,26 +1062,26 @@ details[open] summary {
     text-align: center;
 }
 
-.preferences,
-.exclusions {
+.page-contact .preferences,
+.page-contact .exclusions {
     max-width: 700px;
     margin: 2rem auto;
 }
 
-.preferences ul,
-.exclusions ul {
+.page-contact .preferences ul,
+.page-contact .exclusions ul {
     margin-left: 1.5rem;
     line-height: 1.8;
 }
 
 /* Testimonial section */
-.testimonial {
+.page-contact .testimonial {
     background: var(--navy);
     color: var(--cream);
     padding: 4rem 2rem;
 }
 
-.testimonial-quote {
+.page-contact .testimonial-quote {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -1089,8 +1089,8 @@ details[open] summary {
     padding: 2rem;
 }
 
-.testimonial-quote::before {
-    content: '"';
+.page-contact .testimonial-quote::before {
+    content: '\201C';
     font-size: 6rem;
     color: var(--teal);
     position: absolute;
@@ -1100,20 +1100,20 @@ details[open] summary {
     opacity: 0.3;
 }
 
-.quote-text {
+.page-contact .quote-text {
     font-size: 1.25rem;
     line-height: 1.8;
     font-style: italic;
     margin-bottom: 2rem;
 }
 
-.quote-attribution {
+.page-contact .quote-attribution {
     font-style: normal;
     border-top: 2px solid var(--teal);
     padding-top: 1rem;
 }
 
-.quote-attribution cite {
+.page-contact .quote-attribution cite {
     display: block;
     font-size: 1.1rem;
     font-weight: 600;
@@ -1121,61 +1121,61 @@ details[open] summary {
     margin-bottom: 0.5rem;
 }
 
-.quote-context {
+.page-contact .quote-context {
     font-size: 0.9rem;
     color: rgba(250, 249, 246, 0.8);
 }
 
-.testimonial-secondary {
+.page-contact .testimonial-secondary {
     margin-top: 3rem;
     padding-top: 3rem;
     border-top: 1px solid rgba(23, 162, 184, 0.3);
 }
 
-.testimonial-secondary .quote-text {
+.page-contact .testimonial-secondary .quote-text {
     font-size: 1.5rem;
 }
 
 /* Mobile responsive */
 @media (max-width: 767px) {
-    .hero-minimal h1 {
+    .page-contact .hero-minimal h1 {
         font-size: 2.25rem;
     }
 
-    .email-link {
+    .page-contact .email-link {
         font-size: 1.25rem;
     }
 
-    .email-container {
+    .page-contact .email-container {
         flex-direction: column;
         gap: 0.75rem;
     }
 
-    .copy-btn {
+    .page-contact .copy-btn {
         width: 100%;
         max-width: 200px;
     }
 
-    .guidance h2 {
+    .page-contact .guidance h2 {
         font-size: 2rem;
     }
 
-    .guidance-list li {
+    .page-contact .guidance-list li {
         padding: 0.75rem 1rem;
     }
 
-    .quote-text {
+    .page-contact .quote-text {
         font-size: 1.1rem;
     }
 
-    .testimonial-quote::before {
+    .page-contact .testimonial-quote::before {
         font-size: 4rem;
         top: -1rem;
     }
 }
 
 @media (min-width: 768px) {
-    .social-buttons {
+    .page-contact .social-buttons {
         flex-direction: row;
         justify-content: center;
         gap: 1.5rem;
@@ -1184,7 +1184,7 @@ details[open] summary {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    nav ul {
+    .page-contact nav ul {
         gap: 1rem;
     }
 }
@@ -1194,7 +1194,7 @@ details[open] summary {
    ================================================================ */
 
 /* ========== HERO SECTION ========== */
-.hero {
+.page-testimonials .hero {
     position: relative;
     background: var(--navy);
     color: var(--cream);
@@ -1202,7 +1202,7 @@ details[open] summary {
     text-align: center;
 }
 
-.hero::before {
+.page-testimonials .hero::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -1224,30 +1224,30 @@ details[open] summary {
     z-index: 1;
 }
 
-.hero .container {
+.page-testimonials .hero .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.hero h1 {
+.page-testimonials .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
     color: var(--cream);
 }
 
-.hero .pattern-number {
+.page-testimonials .hero .pattern-number {
     color: var(--teal);
 }
 
-.hero .subtitle {
+.page-testimonials .hero .subtitle {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     font-weight: 300;
 }
 
-.hero .classification {
+.page-testimonials .hero .classification {
     display: inline-block;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
@@ -1260,56 +1260,56 @@ details[open] summary {
 }
 
 /* ========== CONTAINER ========== */
-.container {
+.page-testimonials .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
-section {
+.page-testimonials section {
     padding: 4rem 2rem;
 }
 
 /* ========== SUMMARY SECTION ========== */
-.summary {
+.page-testimonials .summary {
     background: white;
     text-align: center;
 }
 
-.summary h2 {
+.page-testimonials .summary h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--navy);
 }
 
-.summary p {
+.page-testimonials .summary p {
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto 2rem;
     line-height: 1.8;
 }
 
-.stats-bar {
+.page-testimonials .stats-bar {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem;
     margin-top: 2.5rem;
 }
 
-.stat-item {
+.page-testimonials .stat-item {
     background: var(--cream);
     padding: 1.5rem 1rem;
     border-top: 4px solid var(--teal);
 }
 
-.stat-number {
+.page-testimonials .stat-number {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: var(--teal);
     line-height: 1;
 }
 
-.stat-label {
+.page-testimonials .stat-label {
     font-size: 0.85rem;
     color: #666;
     margin-top: 0.3rem;
@@ -1318,18 +1318,18 @@ section {
 }
 
 /* ========== EXHIBIT SECTION ========== */
-.exhibits {
+.page-testimonials .exhibits {
     background: var(--light-gray);
 }
 
-.exhibits h2 {
+.page-testimonials .exhibits h2 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: var(--navy);
     text-align: center;
 }
 
-.exhibits .section-subtitle {
+.page-testimonials .exhibits .section-subtitle {
     text-align: center;
     color: #666;
     font-size: 0.95rem;
@@ -1337,7 +1337,7 @@ section {
 }
 
 /* ========== EXHIBIT CARDS ========== */
-.exhibit-card {
+.page-testimonials .exhibit-card {
     background: white;
     margin-bottom: 2.5rem;
     border-left: 6px solid var(--teal);
@@ -1347,11 +1347,11 @@ section {
     position: relative;
 }
 
-.exhibit-card:hover {
+.page-testimonials .exhibit-card:hover {
     transform: translateX(4px);
 }
 
-.exhibit-card::after {
+.page-testimonials .exhibit-card::after {
     content: '';
     position: absolute;
     top: 0;
@@ -1363,7 +1363,7 @@ section {
     border-color: transparent var(--light-gray) transparent transparent;
 }
 
-.exhibit-header {
+.page-testimonials .exhibit-header {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -1371,7 +1371,7 @@ section {
     flex-wrap: wrap;
 }
 
-.exhibit-label {
+.page-testimonials .exhibit-label {
     background: var(--navy);
     color: var(--cream);
     padding: 0.25rem 0.8rem;
@@ -1382,26 +1382,26 @@ section {
     white-space: nowrap;
 }
 
-.exhibit-client {
+.page-testimonials .exhibit-client {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.1rem;
     color: var(--teal);
     letter-spacing: 1px;
 }
 
-.exhibit-date {
+.page-testimonials .exhibit-date {
     font-size: 0.85rem;
     color: #999;
     margin-left: auto;
 }
 
-.exhibit-title {
+.page-testimonials .exhibit-title {
     font-size: 1.6rem;
     color: var(--navy);
     margin-bottom: 1rem;
 }
 
-blockquote {
+.page-testimonials blockquote {
     border-left: 3px solid var(--teal);
     margin: 1.2rem 0;
     padding: 1rem 1.5rem;
@@ -1412,7 +1412,7 @@ blockquote {
     position: relative;
 }
 
-blockquote::before {
+.page-testimonials blockquote::before {
     content: '\201C';
     position: absolute;
     top: -0.3rem;
@@ -1423,7 +1423,7 @@ blockquote::before {
     font-family: Georgia, serif;
 }
 
-.attribution {
+.page-testimonials .attribution {
     margin-top: 0.8rem;
     font-style: normal;
     font-weight: 600;
@@ -1431,19 +1431,19 @@ blockquote::before {
     font-size: 0.95rem;
 }
 
-.attribution .role {
+.page-testimonials .attribution .role {
     font-weight: 400;
     color: #666;
     font-size: 0.85rem;
 }
 
-.exhibit-context {
+.page-testimonials .exhibit-context {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid var(--light-gray);
 }
 
-.exhibit-context h4 {
+.page-testimonials .exhibit-context h4 {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -1452,20 +1452,20 @@ blockquote::before {
     margin-bottom: 0.5rem;
 }
 
-.exhibit-context p {
+.page-testimonials .exhibit-context p {
     font-size: 0.9rem;
     color: #555;
     line-height: 1.7;
 }
 
-.impact-tags {
+.page-testimonials .impact-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-top: 1rem;
 }
 
-.impact-tag {
+.page-testimonials .impact-tag {
     background: var(--navy);
     color: var(--cream);
     padding: 0.25rem 0.7rem;
@@ -1473,11 +1473,11 @@ blockquote::before {
     font-size: 0.8rem;
 }
 
-.impact-tag.highlight {
+.page-testimonials .impact-tag.highlight {
     background: var(--teal);
 }
 
-.exhibit-link {
+.page-testimonials .exhibit-link {
     display: inline-block;
     margin-top: 1.2rem;
     font-family: 'JetBrains Mono', monospace;
@@ -1491,32 +1491,32 @@ blockquote::before {
     transition: background 0.3s, color 0.3s;
 }
 
-.exhibit-link:hover {
+.page-testimonials .exhibit-link:hover {
     background: var(--teal);
     color: white;
 }
 
-.exhibit-link::after {
+.page-testimonials .exhibit-link::after {
     content: ' \2192';
 }
 
 /* ========== DETAIL FINDING (EB ONSITE) ========== */
-.detail-exhibit {
+.page-testimonials .detail-exhibit {
     border-left-color: var(--brass);
 }
 
-.detail-exhibit .exhibit-label {
+.page-testimonials .detail-exhibit .exhibit-label {
     background: var(--brass);
 }
 
-.resolution-table {
+.page-testimonials .resolution-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
     font-size: 0.9rem;
 }
 
-.resolution-table th {
+.page-testimonials .resolution-table th {
     background: var(--navy);
     color: var(--cream);
     padding: 0.7rem 1rem;
@@ -1527,41 +1527,41 @@ blockquote::before {
     letter-spacing: 1px;
 }
 
-.resolution-table td {
+.page-testimonials .resolution-table td {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid var(--light-gray);
     vertical-align: top;
 }
 
-.resolution-table tr:hover td {
+.page-testimonials .resolution-table tr:hover td {
     background: rgba(23, 162, 184, 0.04);
 }
 
 /* ========== METRICS SECTION ========== */
-.metrics {
+.page-testimonials .metrics {
     background: var(--navy);
     color: var(--cream);
 }
 
-.metrics h2 {
+.page-testimonials .metrics h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
 }
 
-.metrics-grid {
+.page-testimonials .metrics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.metric-card {
+.page-testimonials .metric-card {
     border: 1px solid rgba(23, 162, 184, 0.3);
     padding: 1.5rem;
     position: relative;
 }
 
-.metric-card::before {
+.page-testimonials .metric-card::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1571,24 +1571,24 @@ blockquote::before {
     background: var(--teal);
 }
 
-.metric-card h3 {
+.page-testimonials .metric-card h3 {
     color: var(--teal);
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
-.metric-card ul {
+.page-testimonials .metric-card ul {
     list-style: none;
 }
 
-.metric-card li {
+.page-testimonials .metric-card li {
     padding: 0.4rem 0;
     padding-left: 1.5rem;
     position: relative;
     font-size: 0.95rem;
 }
 
-.metric-card li::before {
+.page-testimonials .metric-card li::before {
     content: '\2192';
     position: absolute;
     left: 0;
@@ -1597,37 +1597,37 @@ blockquote::before {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .hero h1 {
+    .page-testimonials .hero h1 {
         font-size: 2.5rem;
     }
 
-    .hero .subtitle {
+    .page-testimonials .hero .subtitle {
         font-size: 1.1rem;
     }
 
-    nav ul {
+    .page-testimonials nav ul {
         gap: 1rem;
     }
 
-    .exhibit-header {
+    .page-testimonials .exhibit-header {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .exhibit-date {
+    .page-testimonials .exhibit-date {
         margin-left: 0;
     }
 
-    .resolution-table {
+    .page-testimonials .resolution-table {
         font-size: 0.8rem;
     }
 
-    .resolution-table th,
-    .resolution-table td {
+    .page-testimonials .resolution-table th,
+    .page-testimonials .resolution-table td {
         padding: 0.5rem;
     }
 
-    blockquote {
+    .page-testimonials blockquote {
         padding: 0.8rem 1rem;
     }
 }
@@ -1637,7 +1637,7 @@ blockquote::before {
    ================================================================ */
 
 /* ========== HERO SECTION ========== */
-.hero {
+.page-exhibit .hero {
     position: relative;
     background: var(--navy);
     color: var(--cream);
@@ -1645,7 +1645,7 @@ blockquote::before {
     text-align: center;
 }
 
-.hero::before {
+.page-exhibit .hero::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -1667,37 +1667,37 @@ blockquote::before {
     z-index: 1;
 }
 
-.hero .container {
+.page-exhibit .hero .container {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
 }
 
-.hero h1 {
+.page-exhibit .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 0.5rem;
     color: var(--cream);
 }
 
-.hero .pattern-number {
+.page-exhibit .hero .pattern-number {
     color: var(--teal);
 }
 
-.hero .subtitle {
+.page-exhibit .hero .subtitle {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     font-weight: 300;
 }
 
-.hero .report-meta {
+.page-exhibit .hero .report-meta {
     font-size: 0.95rem;
     color: rgba(250, 249, 246, 0.7);
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
 
-.hero .classification {
+.page-exhibit .hero .classification {
     display: inline-block;
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.85rem;
@@ -1710,26 +1710,26 @@ blockquote::before {
 }
 
 /* ========== CONTAINER ========== */
-.container {
+.page-exhibit .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
 }
 
 /* ========== REPORT SECTION HEADERS ========== */
-.report-section {
+.page-exhibit .report-section {
     padding: 4rem 2rem;
 }
 
-.report-section:nth-child(odd) {
+.page-exhibit .report-section:nth-child(odd) {
     background: white;
 }
 
-.report-section:nth-child(even) {
+.page-exhibit .report-section:nth-child(even) {
     background: var(--cream);
 }
 
-.section-heading {
+.page-exhibit .section-heading {
     display: flex;
     align-items: baseline;
     gap: 1rem;
@@ -1738,7 +1738,7 @@ blockquote::before {
     border-bottom: 3px solid var(--navy);
 }
 
-.section-number {
+.page-exhibit .section-number {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
     color: var(--teal);
@@ -1746,7 +1746,7 @@ blockquote::before {
     flex-shrink: 0;
 }
 
-.section-title {
+.page-exhibit .section-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.2rem;
     color: var(--navy);
@@ -1755,22 +1755,22 @@ blockquote::before {
 }
 
 /* ========== BACKGROUND SECTION ========== */
-.background-content {
+.page-exhibit .background-content {
     max-width: 900px;
 }
 
-.background-content p {
+.page-exhibit .background-content p {
     font-size: 1.05rem;
     line-height: 1.9;
     margin-bottom: 1.2rem;
     color: var(--charcoal);
 }
 
-.background-content strong {
+.page-exhibit .background-content strong {
     color: var(--navy);
 }
 
-.key-fact {
+.page-exhibit .key-fact {
     display: inline-block;
     background: var(--navy);
     color: var(--cream);
@@ -1782,7 +1782,7 @@ blockquote::before {
 }
 
 /* ========== BLOCKQUOTES ========== */
-blockquote {
+.page-exhibit blockquote {
     border-left: 3px solid var(--teal);
     margin: 1.2rem 0;
     padding: 1rem 1.5rem;
@@ -1793,7 +1793,7 @@ blockquote {
     position: relative;
 }
 
-blockquote::before {
+.page-exhibit blockquote::before {
     content: '\201C';
     position: absolute;
     top: -0.3rem;
@@ -1804,7 +1804,7 @@ blockquote::before {
     font-family: Georgia, serif;
 }
 
-.attribution {
+.page-exhibit .attribution {
     margin-top: 0.8rem;
     font-style: normal;
     font-weight: 600;
@@ -1812,7 +1812,7 @@ blockquote::before {
     font-size: 0.95rem;
 }
 
-.attribution .role {
+.page-exhibit .attribution .role {
     font-weight: 400;
     color: #666;
     font-size: 0.85rem;
@@ -1820,30 +1820,30 @@ blockquote::before {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .hero h1 {
+    .page-exhibit .hero h1 {
         font-size: 2.5rem;
     }
 
-    .hero .subtitle {
+    .page-exhibit .hero .subtitle {
         font-size: 1.1rem;
     }
 
-    nav ul {
+    .page-exhibit nav ul {
         gap: 1rem;
     }
 
-    .section-heading {
+    .page-exhibit .section-heading {
         flex-direction: column;
         align-items: flex-start;
         gap: 0.5rem;
     }
 
-    .section-number,
-    .section-title {
+    .page-exhibit .section-number,
+    .page-exhibit .section-title {
         font-size: 1.8rem;
     }
 
-    blockquote {
+    .page-exhibit blockquote {
         padding: 0.8rem 1rem;
         font-size: 1rem;
     }
@@ -1854,14 +1854,14 @@ blockquote::before {
    ================================================================ */
 
 /* ========== PERSONNEL TABLE ========== */
-.personnel-table {
+.page-exhibit-a .personnel-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
     font-size: 0.9rem;
 }
 
-.personnel-table th {
+.page-exhibit-a .personnel-table th {
     background: var(--navy);
     color: var(--cream);
     padding: 0.7rem 1rem;
@@ -1872,23 +1872,23 @@ blockquote::before {
     letter-spacing: 1px;
 }
 
-.personnel-table td {
+.page-exhibit-a .personnel-table td {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid var(--light-gray);
     vertical-align: top;
 }
 
-.personnel-table tr:hover td {
+.page-exhibit-a .personnel-table tr:hover td {
     background: rgba(23, 162, 184, 0.04);
 }
 
-.personnel-table .person-name {
+.page-exhibit-a .personnel-table .person-name {
     font-weight: 600;
     color: var(--navy);
     white-space: nowrap;
 }
 
-.personnel-table .person-org {
+.page-exhibit-a .personnel-table .person-org {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     color: var(--teal);
@@ -1896,13 +1896,13 @@ blockquote::before {
 }
 
 /* ========== TIMELINE ========== */
-.timeline {
+.page-exhibit-a .timeline {
     position: relative;
     padding-left: 3rem;
     margin: 1rem 0 2rem;
 }
 
-.timeline::before {
+.page-exhibit-a .timeline::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1912,17 +1912,17 @@ blockquote::before {
     background: var(--navy);
 }
 
-.timeline-entry {
+.page-exhibit-a .timeline-entry {
     position: relative;
     margin-bottom: 2.5rem;
     padding-left: 1.5rem;
 }
 
-.timeline-entry:last-child {
+.page-exhibit-a .timeline-entry:last-child {
     margin-bottom: 0;
 }
 
-.timeline-entry::before {
+.page-exhibit-a .timeline-entry::before {
     content: '';
     position: absolute;
     left: -2.55rem;
@@ -1935,7 +1935,7 @@ blockquote::before {
     z-index: 2;
 }
 
-.timeline-entry.milestone::before {
+.page-exhibit-a .timeline-entry.milestone::before {
     width: 18px;
     height: 18px;
     left: -2.65rem;
@@ -1944,7 +1944,7 @@ blockquote::before {
     border-color: var(--navy);
 }
 
-.timeline-date {
+.page-exhibit-a .timeline-date {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.8rem;
     color: var(--teal);
@@ -1954,11 +1954,11 @@ blockquote::before {
     margin-bottom: 0.3rem;
 }
 
-.timeline-entry.milestone .timeline-date {
+.page-exhibit-a .timeline-entry.milestone .timeline-date {
     color: var(--brass);
 }
 
-.timeline-title {
+.page-exhibit-a .timeline-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.25rem;
     color: var(--navy);
@@ -1966,32 +1966,32 @@ blockquote::before {
     margin-bottom: 0.5rem;
 }
 
-.timeline-content {
+.page-exhibit-a .timeline-content {
     font-size: 0.95rem;
     line-height: 1.7;
     color: #444;
 }
 
-.timeline-content blockquote {
+.page-exhibit-a .timeline-content blockquote {
     margin: 0.8rem 0 0;
     padding: 0.8rem 1.2rem;
     font-size: 0.95rem;
 }
 
-.timeline-content .speaker {
+.page-exhibit-a .timeline-content .speaker {
     font-weight: 600;
     color: var(--navy);
 }
 
 /* ========== RESOLUTION TABLE ========== */
-.resolution-table {
+.page-exhibit-a .resolution-table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
     font-size: 0.9rem;
 }
 
-.resolution-table th {
+.page-exhibit-a .resolution-table th {
     background: var(--navy);
     color: var(--cream);
     padding: 0.7rem 1rem;
@@ -2002,17 +2002,17 @@ blockquote::before {
     letter-spacing: 1px;
 }
 
-.resolution-table td {
+.page-exhibit-a .resolution-table td {
     padding: 0.8rem 1rem;
     border-bottom: 1px solid var(--light-gray);
     vertical-align: top;
 }
 
-.resolution-table tr:hover td {
+.page-exhibit-a .resolution-table tr:hover td {
     background: rgba(23, 162, 184, 0.04);
 }
 
-.resolution-table .issue-id {
+.page-exhibit-a .resolution-table .issue-id {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.75rem;
     color: var(--teal);
@@ -2020,7 +2020,7 @@ blockquote::before {
 }
 
 /* ========== PROBABLE CAUSE SECTION ========== */
-.probable-cause-box {
+.page-exhibit-a .probable-cause-box {
     background: var(--navy);
     color: var(--cream);
     padding: 2rem 2.5rem;
@@ -2029,7 +2029,7 @@ blockquote::before {
     position: relative;
 }
 
-.probable-cause-box::before {
+.page-exhibit-a .probable-cause-box::before {
     content: 'DETERMINATION';
     position: absolute;
     top: -0.6rem;
@@ -2043,7 +2043,7 @@ blockquote::before {
     font-weight: 700;
 }
 
-.probable-cause-box h3 {
+.page-exhibit-a .probable-cause-box h3 {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.8rem;
     color: var(--brass);
@@ -2052,32 +2052,32 @@ blockquote::before {
     letter-spacing: 1px;
 }
 
-.probable-cause-box p {
+.page-exhibit-a .probable-cause-box p {
     font-size: 1.05rem;
     line-height: 1.9;
     margin-bottom: 1rem;
 }
 
-.probable-cause-box p:last-child {
+.page-exhibit-a .probable-cause-box p:last-child {
     margin-bottom: 0;
 }
 
 /* ========== OUTCOME/IMPACT SECTION ========== */
-.outcome-metrics {
+.page-exhibit-a .outcome-metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
 }
 
-.outcome-metric {
+.page-exhibit-a .outcome-metric {
     background: var(--cream);
     padding: 1.5rem;
     border-left: 4px solid var(--teal);
     text-align: center;
 }
 
-.outcome-metric .metric-value {
+.page-exhibit-a .outcome-metric .metric-value {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2.5rem;
     color: var(--teal);
@@ -2085,7 +2085,7 @@ blockquote::before {
     margin-bottom: 0.5rem;
 }
 
-.outcome-metric .metric-label {
+.page-exhibit-a .outcome-metric .metric-label {
     font-size: 0.9rem;
     color: #666;
     text-transform: uppercase;
@@ -2093,7 +2093,7 @@ blockquote::before {
 }
 
 /* ========== BACK LINK ========== */
-.back-link {
+.page-exhibit-a .back-link {
     display: inline-block;
     margin: 2rem 0 1rem;
     font-family: 'JetBrains Mono', monospace;
@@ -2107,46 +2107,46 @@ blockquote::before {
     transition: background 0.3s, color 0.3s;
 }
 
-.back-link:hover {
+.page-exhibit-a .back-link:hover {
     background: var(--teal);
     color: white;
 }
 
-.back-link::before {
+.page-exhibit-a .back-link::before {
     content: '\2190 ';
 }
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .timeline {
+    .page-exhibit-a .timeline {
         padding-left: 2.5rem;
     }
 
-    .timeline-entry {
+    .page-exhibit-a .timeline-entry {
         padding-left: 1rem;
     }
 
-    .timeline-entry::before {
+    .page-exhibit-a .timeline-entry::before {
         left: -2.25rem;
     }
 
-    .timeline-entry.milestone::before {
+    .page-exhibit-a .timeline-entry.milestone::before {
         left: -2.35rem;
     }
 
-    .personnel-table,
-    .resolution-table {
+    .page-exhibit-a .personnel-table,
+    .page-exhibit-a .resolution-table {
         font-size: 0.8rem;
     }
 
-    .personnel-table th,
-    .personnel-table td,
-    .resolution-table th,
-    .resolution-table td {
+    .page-exhibit-a .personnel-table th,
+    .page-exhibit-a .personnel-table td,
+    .page-exhibit-a .resolution-table th,
+    .page-exhibit-a .resolution-table td {
         padding: 0.5rem;
     }
 
-    .outcome-metrics {
+    .page-exhibit-a .outcome-metrics {
         grid-template-columns: 1fr;
     }
 }
