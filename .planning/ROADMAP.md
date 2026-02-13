@@ -30,10 +30,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. All pages render identically to before extraction (visual regression test passes)
   4. Design system tokens (colors, fonts, spacing) centralized in :root{} block
   5. Browser caching enabled (stylesheet loads once, applies to all pages)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 01-01: TBD during planning
+- [ ] 01-01-PLAN.md — Pass 1: Verbatim CSS extraction from 14 pages + color audit checkpoint
+- [ ] 01-02-PLAN.md — Pass 2: Design token system, deduplication, body class scoping
+- [ ] 01-03-PLAN.md — Final automated audit + visual regression verification
 
 ### Phase 2: Dark Mode Implementation
 **Goal**: Provide brand-aligned dark theme with system preference support
@@ -102,7 +104,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. CSS Foundation | 0/TBD | Not started | - |
+| 1. CSS Foundation | 0/3 | Planned | - |
 | 2. Dark Mode Implementation | 0/TBD | Not started | - |
 | 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
 | 4. SEO Optimization | 0/TBD | Not started | - |
