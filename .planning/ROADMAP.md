@@ -47,10 +47,11 @@ Plans:
   3. User's theme preference persists across browser sessions (localStorage)
   4. Theme automatically respects system preference (prefers-color-scheme) on first visit
   5. No flash of unstyled content (FOUC) on any page load in either theme
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 02-01: TBD during planning
+- [ ] 02-01-PLAN.md — Dark mode CSS token overrides and toggle button styling
+- [ ] 02-02-PLAN.md — HTML integration: blocking script, toggle button, and JS across all 14 pages
 
 ### Phase 3: Navigation & Mobile Responsiveness
 **Goal**: Consistent cross-page navigation with mobile-friendly access
@@ -105,11 +106,11 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. CSS Foundation | 3/3 | ✓ Complete | 2026-02-13 |
-| 2. Dark Mode Implementation | 0/TBD | Not started | - |
+| 2. Dark Mode Implementation | 0/2 | Planning complete | - |
 | 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
 | 4. SEO Optimization | 0/TBD | Not started | - |
 | 5. Performance Optimization | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13 (Phase 1 complete)*
+*Last updated: 2026-02-13 (Phase 2 planned)*
