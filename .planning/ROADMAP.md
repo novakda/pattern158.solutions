@@ -1,0 +1,113 @@
+# Roadmap: Pattern 158 Solutions Website
+
+## Overview
+
+This roadmap transforms the Pattern 158 Solutions static portfolio site from a functional 14-page website with duplicated inline CSS into a maintainable, modern portfolio with dark mode, mobile responsiveness, and SEO optimization. The five phases follow a foundation-first approach: extract CSS to eliminate duplication, add dark mode support, establish consistent navigation, optimize discoverability, and finalize performance.
+
+## Phases
+
+**Phase Numbering:**
+- Integer phases (1, 2, 3): Planned milestone work
+- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
+
+Decimal phases appear between their surrounding integers in numeric order.
+
+- [ ] **Phase 1: CSS Foundation** - Extract inline styles to external stylesheets, establish design system
+- [ ] **Phase 2: Dark Mode Implementation** - Add brand-aligned dark theme with system preference support
+- [ ] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
+- [ ] **Phase 4: SEO Optimization** - Meta tags, Open Graph, structured data, sitemap
+- [ ] **Phase 5: Performance Optimization** - Image optimization, lazy loading, font loading
+
+## Phase Details
+
+### Phase 1: CSS Foundation
+**Goal**: Eliminate CSS duplication and establish single source of truth for styling
+**Depends on**: Nothing (first phase)
+**Requirements**: CSS-01, CSS-02, CSS-03
+**Success Criteria** (what must be TRUE):
+  1. All 14 HTML pages link to external stylesheet(s) and contain zero inline `<style>` blocks
+  2. All color values reference CSS custom properties (no hardcoded rgba/hex values in stylesheets)
+  3. All pages render identically to before extraction (visual regression test passes)
+  4. Design system tokens (colors, fonts, spacing) centralized in :root{} block
+  5. Browser caching enabled (stylesheet loads once, applies to all pages)
+**Plans**: TBD
+
+Plans:
+- [ ] 01-01: TBD during planning
+
+### Phase 2: Dark Mode Implementation
+**Goal**: Provide brand-aligned dark theme with system preference support
+**Depends on**: Phase 1 (requires extracted CSS)
+**Requirements**: DARK-01, DARK-02, DARK-03, DARK-04
+**Success Criteria** (what must be TRUE):
+  1. User can toggle between light and dark themes via navigation control
+  2. Dark theme uses brand-aligned palette (not generic black) maintaining NTSB investigation aesthetic
+  3. User's theme preference persists across browser sessions (localStorage)
+  4. Theme automatically respects system preference (prefers-color-scheme) on first visit
+  5. No flash of unstyled content (FOUC) on any page load in either theme
+**Plans**: TBD
+
+Plans:
+- [ ] 02-01: TBD during planning
+
+### Phase 3: Navigation & Mobile Responsiveness
+**Goal**: Consistent cross-page navigation with mobile-friendly access
+**Depends on**: Phase 1 (benefits from shared CSS)
+**Requirements**: NAV-01, NAV-02, NAV-03, NAV-04
+**Success Criteria** (what must be TRUE):
+  1. All 14 pages have identical navigation links (Home, Philosophy, FAQ, Contact, Field Reports)
+  2. All navigation links work correctly from both root pages and exhibits/ subdirectory
+  3. Mobile viewport (<768px) displays hamburger menu with smooth transitions
+  4. Hamburger menu is keyboard-accessible (Enter/Space to toggle, Tab navigation, Escape to close)
+  5. Touch targets in mobile menu meet 48x48px minimum size
+**Plans**: TBD
+
+Plans:
+- [ ] 03-01: TBD during planning
+
+### Phase 4: SEO Optimization
+**Goal**: Maximize discoverability and social media sharing
+**Depends on**: Phase 3 (requires stable URLs and navigation)
+**Requirements**: SEO-01, SEO-02, SEO-03, SEO-04
+**Success Criteria** (what must be TRUE):
+  1. Every page has unique, descriptive meta description (no placeholder text)
+  2. Open Graph tags generate correct social media previews on LinkedIn/Twitter/Facebook
+  3. JSON-LD structured data appears in Google Rich Results Test
+  4. sitemap.xml lists all 14 pages with correct URLs
+  5. Search engines can discover and index all public pages
+**Plans**: TBD
+
+Plans:
+- [ ] 04-01: TBD during planning
+
+### Phase 5: Performance Optimization
+**Goal**: Fast load times and optimal user experience
+**Depends on**: Phases 1-4 (optimizing final structure)
+**Requirements**: PERF-01, PERF-02, PERF-03
+**Success Criteria** (what must be TRUE):
+  1. Images load in WebP format with PNG fallback for unsupported browsers
+  2. Non-critical images use native lazy loading (loading="lazy" attribute)
+  3. Fonts load without blocking page render (font-display: swap or preload)
+  4. Lighthouse mobile performance score reaches 90+ on all pages
+  5. Core Web Vitals meet "Good" thresholds (LCP <2.5s, FID <100ms, CLS <0.1)
+**Plans**: TBD
+
+Plans:
+- [ ] 05-01: TBD during planning
+
+## Progress
+
+**Execution Order:**
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 1. CSS Foundation | 0/TBD | Not started | - |
+| 2. Dark Mode Implementation | 0/TBD | Not started | - |
+| 3. Navigation & Mobile Responsiveness | 0/TBD | Not started | - |
+| 4. SEO Optimization | 0/TBD | Not started | - |
+| 5. Performance Optimization | 0/TBD | Not started | - |
+
+---
+*Roadmap created: 2026-02-13*
+*Last updated: 2026-02-13*
