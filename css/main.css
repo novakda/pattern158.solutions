@@ -19,7 +19,12 @@
     --color-text-source: #888888;
     --color-inverse: #1a2838;
     --color-inverse-text: #faf9f6;
+    --color-inverse-text-muted: rgba(250, 249, 246, 0.8);
+    --color-inverse-text-light: rgba(250, 249, 246, 0.7);
     --color-border: #dddddd;
+    --color-border-primary: rgba(23, 162, 184, 0.3);
+    --color-hover-background: #f0f0f0;
+    --color-text-timeline: #444;
 
     /* --- Typography --- */
     --font-heading: 'Bebas Neue', 'Arial Black', sans-serif;
@@ -48,6 +53,10 @@
     --shadow-focus: 0 0 0 4px rgba(23, 162, 184, 0.2);
     --shadow-focus-inverse: 0 0 0 4px rgba(250, 249, 246, 0.3);
     --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* --- Text Shadows --- */
+    --text-shadow-hero: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
+    --text-shadow-hero-accent: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7);
 
     /* --- Overlays --- */
     --overlay-hero: rgba(26, 40, 56, 0.65);
@@ -319,12 +328,12 @@ footer a:hover {
     font-size: 4rem;
     margin-bottom: var(--space-md);
     color: var(--color-inverse-text);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: var(--text-shadow-hero);
 }
 
 .page-index .hero .pattern-number {
     color: var(--color-primary);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7);
+    text-shadow: var(--text-shadow-hero-accent);
 }
 
 .page-index .hero .subtitle {
@@ -339,7 +348,7 @@ footer a:hover {
     color: var(--color-primary);
     margin-top: var(--space-xl);
     margin-bottom: var(--space-xl);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 0 12px rgba(0, 0, 0, 0.7);
+    text-shadow: var(--text-shadow-hero-accent);
 }
 
 .page-index .hero .cta-buttons {
@@ -850,7 +859,7 @@ footer a:hover {
 
 /* Hover state */
 .page-faq details summary:hover {
-    background: #f0f0f0;
+    background: var(--color-hover-background);
     border-color: var(--color-primary);
 }
 
@@ -1097,13 +1106,13 @@ footer a:hover {
 
 .page-contact .quote-context {
     font-size: 0.9rem;
-    color: rgba(250, 249, 246, 0.8);
+    color: var(--color-inverse-text-muted);
 }
 
 .page-contact .testimonial-secondary {
     margin-top: var(--space-2xl);
     padding-top: var(--space-2xl);
-    border-top: 1px solid rgba(23, 162, 184, 0.3);
+    border-top: 1px solid var(--color-border-primary);
 }
 
 .page-contact .testimonial-secondary .quote-text {
@@ -1477,7 +1486,7 @@ footer a:hover {
 }
 
 .page-testimonials .metric-card {
-    border: 1px solid rgba(23, 162, 184, 0.3);
+    border: 1px solid var(--color-border-primary);
     padding: var(--space-lg);
     position: relative;
 }
@@ -1576,7 +1585,7 @@ footer a:hover {
 
 .page-exhibit .hero .report-meta {
     font-size: 0.95rem;
-    color: rgba(250, 249, 246, 0.7);
+    color: var(--color-inverse-text-light);
     margin-bottom: var(--space-lg);
     line-height: 1.8;
 }
@@ -1822,7 +1831,7 @@ footer a:hover {
 .page-exhibit-a .timeline-content {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #444;
+    color: var(--color-text-timeline);
 }
 
 .page-exhibit-a .timeline-content blockquote {
