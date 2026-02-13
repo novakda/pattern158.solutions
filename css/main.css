@@ -270,6 +270,68 @@ nav a:hover {
     border-width: 0;
 }
 
+/* --- Hamburger Menu --- */
+.hamburger {
+    display: none;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--color-inverse-text);
+}
+
+.hamburger-box {
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 28px;
+    height: 3px;
+    background-color: currentColor;
+    border-radius: 2px;
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger-inner {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-inner::before {
+    content: '';
+    top: -8px;
+}
+
+.hamburger-inner::after {
+    content: '';
+    bottom: -8px;
+}
+
+.hamburger.is-active .hamburger-inner {
+    transform: rotate(45deg);
+}
+
+.hamburger.is-active .hamburger-inner::before {
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+.hamburger.is-active .hamburger-inner::after {
+    opacity: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: var(--space-xl);
+}
+
 /* === LAYOUT === */
 .container {
     max-width: 1200px;
@@ -2076,9 +2138,49 @@ footer a:hover {
    ================================================================ */
 
 @media (max-width: 768px) {
-    /* Global navigation */
-    nav ul {
-        gap: var(--space-md);
+    /* Global navigation - Mobile hamburger menu */
+    .hamburger {
+        display: block;
+        z-index: 101;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 72px;
+        right: 0;
+        width: 280px;
+        height: calc(100vh - 72px);
+        background: var(--color-inverse);
+        flex-direction: column;
+        gap: 0;
+        padding: var(--space-lg) 0;
+        transform: translate3d(100%, 0, 0);
+        transition: transform 0.3s ease-in-out;
+        visibility: hidden;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        overflow-y: auto;
+        z-index: 100;
+    }
+
+    .nav-menu.is-open {
+        transform: translate3d(0, 0, 0);
+        visibility: visible;
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 14px 20px;
+        min-height: 48px;
+        line-height: 20px;
+    }
+
+    .nav-menu .theme-toggle {
+        margin: var(--space-md) 20px;
+        min-height: 48px;
     }
 
     /* Index page */
