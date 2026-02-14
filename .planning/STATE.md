@@ -95,7 +95,7 @@ Recent decisions affecting current work:
 
 | # | Task | Date | Commit |
 |---|------|------|--------|
-| 1 | Anonymize site content — remove all individual names (except Dan Novak), phone numbers, internal product names (GPiLEARN, Ready2Role, CSBB), revenue/ranking data, and HSBC security vulnerability details across all 14 HTML pages | 2026-02-13 | pending |
+| 1 | Anonymize site content — remove all individual names (except Dan Novak), phone numbers, internal product names (GPiLEARN, Ready2Role, CSBB), revenue/ranking data, and HSBC security vulnerability details across all 14 HTML pages | 2026-02-13 | cd9f10e |
 
 ### Pending Todos
 
