@@ -91,6 +91,12 @@ Recent decisions affecting current work:
 - [Phase 04-02]: Implemented comprehensive automated validation (10 categories) for reproducible SEO audit
 - **Phase 4 complete**: Full SEO coverage with meta tags, OG tags, JSON-LD, sitemap, robots.txt, and validation
 
+### Quick Tasks Completed
+
+| # | Task | Date | Commit |
+|---|------|------|--------|
+| 1 | Anonymize site content — remove all individual names (except Dan Novak), phone numbers, internal product names (GPiLEARN, Ready2Role, CSBB), revenue/ranking data, and HSBC security vulnerability details across all 14 HTML pages | 2026-02-13 | pending |
+
 ### Pending Todos
 
 None.
