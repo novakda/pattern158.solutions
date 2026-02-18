@@ -112,7 +112,10 @@ Plans:
   3. All inline color values use design system tokens (var(--color-primary), var(--color-text-light), etc.)
   4. Dark mode toggle changes ALL text and background colors on ALL pages (no inline style bypass)
   5. WCAG AA contrast (4.5:1) maintained in both light and dark themes for all inline-styled text
-**Plans:** TBD
+**Plans:** 1 plan
+
+Plans:
+- [ ] 06-01-PLAN.md — Replace 49 inline style color problems (undefined vars + hardcoded hex) with design system tokens across 17 HTML files
 
 ## Progress
 
@@ -126,8 +129,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 2/2 | ✓ Complete | 2026-02-13 |
 | 5. Performance Optimization | 1/1 | ✓ Complete | 2026-02-18 |
-| 6. Inline Style Token Cleanup | 0/? | Planned | — |
+| 6. Inline Style Token Cleanup | 0/1 | In Progress | — |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-18 (Phase 6 added — gap closure from milestone audit)*
+*Last updated: 2026-02-18 (Phase 6 planned — gap closure from milestone audit)*
