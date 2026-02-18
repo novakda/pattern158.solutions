@@ -1943,6 +1943,54 @@ footer a:hover {
     font-size: 0.85rem;
 }
 
+/* ========== BACK LINK (shared across all exhibits) ========== */
+.page-exhibit .back-link-section {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.page-exhibit .back-link {
+    display: inline-block;
+    margin: var(--space-xl) 0 var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    text-decoration: none;
+    border: 1px solid var(--color-primary);
+    padding: var(--space-sm) 1.2rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.page-exhibit .back-link:hover {
+    background: var(--color-primary);
+    color: var(--color-surface);
+}
+
+/* ========== EVIDENCE GRID (shared across all exhibits) ========== */
+.page-exhibit .evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.page-exhibit .evidence-card {
+    background: var(--color-background);
+    padding: var(--space-lg);
+    border-left: 4px solid var(--color-primary);
+}
+
+.page-exhibit .evidence-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-md);
+}
+
 /* ================================================================
    PAGE: Exhibit A (unique additions)
    ================================================================ */
@@ -2211,6 +2259,303 @@ footer a:hover {
 }
 
 /* ================================================================
+   PAGES: Exhibit J, K, L (Investigation Reports)
+   ================================================================ */
+
+/* ========== SHARED: Personnel Table ========== */
+.page-exhibit-j .personnel-table,
+.page-exhibit-k .personnel-table,
+.page-exhibit-l .personnel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    font-size: 0.9rem;
+}
+
+.page-exhibit-j .personnel-table th,
+.page-exhibit-k .personnel-table th,
+.page-exhibit-l .personnel-table th {
+    background: var(--color-inverse);
+    color: var(--color-inverse-text);
+    padding: 0.7rem var(--space-md);
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-exhibit-j .personnel-table td,
+.page-exhibit-k .personnel-table td,
+.page-exhibit-l .personnel-table td {
+    padding: 0.8rem var(--space-md);
+    border-bottom: 1px solid var(--color-background-alt);
+    vertical-align: top;
+}
+
+.page-exhibit-j .personnel-table tr:hover td,
+.page-exhibit-k .personnel-table tr:hover td,
+.page-exhibit-l .personnel-table tr:hover td {
+    background: var(--overlay-hover-row);
+}
+
+.page-exhibit-j .personnel-table .person-name,
+.page-exhibit-k .personnel-table .person-name,
+.page-exhibit-l .personnel-table .person-name {
+    font-weight: 600;
+    color: var(--color-inverse);
+    white-space: nowrap;
+}
+
+.page-exhibit-j .personnel-table .person-org,
+.page-exhibit-k .personnel-table .person-org,
+.page-exhibit-l .personnel-table .person-org {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    letter-spacing: 0.5px;
+}
+
+/* ========== SHARED: Resolution Table ========== */
+.page-exhibit-j .resolution-table,
+.page-exhibit-k .resolution-table,
+.page-exhibit-l .resolution-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-lg) 0;
+    font-size: 0.9rem;
+}
+
+.page-exhibit-j .resolution-table th,
+.page-exhibit-k .resolution-table th,
+.page-exhibit-l .resolution-table th {
+    background: var(--color-inverse);
+    color: var(--color-inverse-text);
+    padding: 0.7rem var(--space-md);
+    text-align: left;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.page-exhibit-j .resolution-table td,
+.page-exhibit-k .resolution-table td,
+.page-exhibit-l .resolution-table td {
+    padding: 0.8rem var(--space-md);
+    border-bottom: 1px solid var(--color-background-alt);
+    vertical-align: top;
+}
+
+.page-exhibit-j .resolution-table tr:hover td,
+.page-exhibit-k .resolution-table tr:hover td,
+.page-exhibit-l .resolution-table tr:hover td {
+    background: var(--overlay-hover-row);
+}
+
+.page-exhibit-j .resolution-table .issue-id,
+.page-exhibit-k .resolution-table .issue-id,
+.page-exhibit-l .resolution-table .issue-id {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+.page-exhibit-l .resolution-table .severity {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.page-exhibit-l .resolution-table .severity-critical {
+    color: #dc3545;
+}
+
+.page-exhibit-l .resolution-table .severity-high {
+    color: var(--color-accent);
+}
+
+/* ========== SHARED: Probable Cause Box ========== */
+.page-exhibit-j .probable-cause-box,
+.page-exhibit-k .probable-cause-box,
+.page-exhibit-l .probable-cause-box {
+    background: var(--color-inverse);
+    color: var(--color-inverse-text);
+    padding: var(--space-xl) 2.5rem;
+    border-left: 6px solid var(--color-accent);
+    margin: var(--space-lg) 0;
+    position: relative;
+}
+
+.page-exhibit-j .probable-cause-box::before,
+.page-exhibit-k .probable-cause-box::before,
+.page-exhibit-l .probable-cause-box::before {
+    content: 'DETERMINATION';
+    position: absolute;
+    top: -0.6rem;
+    left: var(--space-xl);
+    background: var(--color-accent);
+    color: var(--color-inverse);
+    padding: 0.2rem 0.8rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.page-exhibit-j .probable-cause-box p,
+.page-exhibit-k .probable-cause-box p,
+.page-exhibit-l .probable-cause-box p {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: var(--space-md);
+}
+
+.page-exhibit-j .probable-cause-box p:last-child,
+.page-exhibit-k .probable-cause-box p:last-child,
+.page-exhibit-l .probable-cause-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ========== EXHIBIT J: Timeline ========== */
+.page-exhibit-j .timeline {
+    position: relative;
+    padding-left: var(--space-2xl);
+    margin: var(--space-md) 0 var(--space-xl);
+}
+
+.page-exhibit-j .timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 3px;
+    height: 100%;
+    background: var(--color-inverse);
+}
+
+.page-exhibit-j .timeline-entry {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: var(--space-lg);
+}
+
+.page-exhibit-j .timeline-entry:last-child {
+    margin-bottom: 0;
+}
+
+.page-exhibit-j .timeline-entry::before {
+    content: '';
+    position: absolute;
+    left: -2.55rem;
+    top: 0.35rem;
+    width: 14px;
+    height: 14px;
+    background: var(--color-primary);
+    border: 3px solid var(--color-inverse);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.page-exhibit-j .timeline-entry.milestone::before {
+    width: 18px;
+    height: 18px;
+    left: -2.65rem;
+    top: 0.25rem;
+    background: var(--color-accent);
+    border-color: var(--color-inverse);
+}
+
+.page-exhibit-j .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.page-exhibit-j .timeline-entry.milestone .timeline-date {
+    color: var(--color-accent);
+}
+
+.page-exhibit-j .timeline-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-inverse);
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-sm);
+}
+
+.page-exhibit-j .timeline-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-timeline);
+}
+
+/* ========== EXHIBIT L: Requirements Chain Visual ========== */
+.page-exhibit-l .requirements-chain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin: var(--space-xl) 0;
+    padding: var(--space-xl);
+    background: var(--color-background);
+}
+
+.page-exhibit-l .chain-step {
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    min-width: 120px;
+}
+
+.page-exhibit-l .chain-step.degraded {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.page-exhibit-l .chain-step.critical {
+    border-color: #dc3545;
+    color: #dc3545;
+}
+
+.page-exhibit-l .chain-arrow {
+    font-size: 1.5rem;
+    color: var(--color-text-light);
+}
+
+/* ========== INVESTIGATION REPORTS HEADING (Testimonials page) ========== */
+.page-testimonials .investigation-reports-heading {
+    border-top: 3px solid var(--color-border);
+    margin-top: var(--space-3xl);
+    padding-top: var(--space-2xl);
+    text-align: center;
+}
+
+.page-testimonials .investigation-reports-heading h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    color: var(--color-inverse);
+}
+
+.page-testimonials .investigation-reports-heading .section-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-2xl);
+}
+
+/* ================================================================
    RESPONSIVE
    ================================================================ */
 
@@ -2438,6 +2783,55 @@ footer a:hover {
     .page-exhibit blockquote {
         padding: 0.8rem var(--space-md);
         font-size: 1rem;
+    }
+
+    /* Exhibit J/K/L specific */
+    .page-exhibit-j .timeline {
+        padding-left: 2.5rem;
+    }
+
+    .page-exhibit-j .timeline-entry {
+        padding-left: var(--space-md);
+    }
+
+    .page-exhibit-j .timeline-entry::before {
+        left: -2.25rem;
+    }
+
+    .page-exhibit-j .timeline-entry.milestone::before {
+        left: -2.35rem;
+    }
+
+    .page-exhibit-j .personnel-table,
+    .page-exhibit-j .resolution-table,
+    .page-exhibit-k .personnel-table,
+    .page-exhibit-k .resolution-table,
+    .page-exhibit-l .personnel-table,
+    .page-exhibit-l .resolution-table {
+        font-size: 0.8rem;
+    }
+
+    .page-exhibit-j .personnel-table th,
+    .page-exhibit-j .personnel-table td,
+    .page-exhibit-j .resolution-table th,
+    .page-exhibit-j .resolution-table td,
+    .page-exhibit-k .personnel-table th,
+    .page-exhibit-k .personnel-table td,
+    .page-exhibit-k .resolution-table th,
+    .page-exhibit-k .resolution-table td,
+    .page-exhibit-l .personnel-table th,
+    .page-exhibit-l .personnel-table td,
+    .page-exhibit-l .resolution-table th,
+    .page-exhibit-l .resolution-table td {
+        padding: var(--space-sm);
+    }
+
+    .page-exhibit-l .requirements-chain {
+        flex-direction: column;
+    }
+
+    .page-exhibit-l .chain-arrow {
+        transform: rotate(90deg);
     }
 
     /* Exhibit A specific */
