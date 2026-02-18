@@ -95,10 +95,10 @@ Plans:
   3. Fonts load without blocking page render (font-display: swap or preload)
   4. Lighthouse mobile performance score reaches 90+ on all pages
   5. Core Web Vitals meet "Good" thresholds (LCP <2.5s, FID <100ms, CLS <0.1)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 05-01: TBD during planning
+- [ ] 05-01-PLAN.md — Fix color contrast (WCAG 4.5:1), add logo width attribute (CLS), compress hero image (LCP), validate font/lazy-loading requirements
 
 ## Progress
 
@@ -111,8 +111,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Dark Mode Implementation | 2/2 | ✓ Complete | 2026-02-13 |
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 2/2 | ✓ Complete | 2026-02-13 |
-| 5. Performance Optimization | 0/TBD | Not started | - |
+| 5. Performance Optimization | 0/1 | In progress | - |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-13 (Phase 4 complete)*
+*Last updated: 2026-02-18 (Phase 5 planned)*
