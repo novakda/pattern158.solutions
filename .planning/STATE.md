@@ -96,6 +96,7 @@ Recent decisions affecting current work:
 | # | Task | Date | Commit |
 |---|------|------|--------|
 | 1 | Anonymize site content — remove all individual names (except Dan Novak), phone numbers, internal product names (GPiLEARN, Ready2Role, CSBB), revenue/ranking data, and HSBC security vulnerability details across all 14 HTML pages | 2026-02-13 | cd9f10e |
+| 2 | Full 14-page content audit — verified all internal links, anchors, images, sitemap; fixed inaccurate FAQ link text "Power Platform project" -> "featured projects" | 2026-02-18 | 28aad09 |
 
 ### Pending Todos
 
@@ -112,8 +113,8 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-13 (Phase 4 complete)
-Stopped at: Completed 04-02-PLAN.md - sitemap, robots.txt, and SEO validation
+Last session: 2026-02-18 (Quick Task 2 complete)
+Stopped at: Completed quick-2 - full 14-page site content audit
 Resume file: None
 
 ---
