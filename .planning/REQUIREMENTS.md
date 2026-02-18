@@ -9,30 +9,30 @@ Requirements for current milestone. Each maps to roadmap phases.
 
 ### CSS Foundation
 
-- [ ] **CSS-01**: All inline `<style>` blocks extracted to shared external stylesheet(s)
+- [x] **CSS-01**: All inline `<style>` blocks extracted to shared external stylesheet(s)
 - [ ] **CSS-02**: All hardcoded color values (rgba, hex) replaced with CSS custom properties
-- [ ] **CSS-03**: Page structure normalized across all 14 HTML files (consistent markup patterns)
+- [x] **CSS-03**: Page structure normalized across all 14 HTML files (consistent markup patterns)
 
 ### Navigation
 
-- [ ] **NAV-01**: All 14 pages have identical navigation links (Home, Philosophy, FAQ, Contact, Field Reports)
-- [ ] **NAV-02**: All navigation paths use absolute-from-root URLs (resolves exhibits/ subdirectory issues)
-- [ ] **NAV-03**: Mobile hamburger menu with accessible ARIA attributes (aria-expanded, aria-controls)
-- [ ] **NAV-04**: Hamburger menu has 48x48px touch targets and keyboard support
+- [x] **NAV-01**: All 14 pages have identical navigation links (Home, Philosophy, FAQ, Contact, Field Reports)
+- [x] **NAV-02**: All navigation paths use absolute-from-root URLs (resolves exhibits/ subdirectory issues)
+- [x] **NAV-03**: Mobile hamburger menu with accessible ARIA attributes (aria-expanded, aria-controls)
+- [x] **NAV-04**: Hamburger menu has 48x48px touch targets and keyboard support
 
 ### Dark Mode
 
 - [ ] **DARK-01**: Dark theme using CSS custom properties with brand-aligned palette (not generic black)
-- [ ] **DARK-02**: System preference detection via `prefers-color-scheme` media query
-- [ ] **DARK-03**: User toggle with localStorage persistence across page loads
-- [ ] **DARK-04**: No flash of unstyled content (inline theme detection in `<head>`)
+- [x] **DARK-02**: System preference detection via `prefers-color-scheme` media query
+- [x] **DARK-03**: User toggle with localStorage persistence across page loads
+- [x] **DARK-04**: No flash of unstyled content (inline theme detection in `<head>`)
 
 ### SEO
 
-- [ ] **SEO-01**: Unique meta description for each of the 14 pages
-- [ ] **SEO-02**: Open Graph tags (og:title, og:description, og:image, og:url) on all pages
-- [ ] **SEO-03**: JSON-LD structured data (Person schema for Dan, WebSite schema)
-- [ ] **SEO-04**: sitemap.xml listing all 14 pages
+- [x] **SEO-01**: Unique meta description for each of the 14 pages
+- [x] **SEO-02**: Open Graph tags (og:title, og:description, og:image, og:url) on all pages
+- [x] **SEO-03**: JSON-LD structured data (Person schema for Dan, WebSite schema)
+- [x] **SEO-04**: sitemap.xml listing all 14 pages
 
 ### Performance
 
@@ -79,21 +79,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CSS-01 | Phase 1 | Pending |
-| CSS-02 | Phase 1 | Pending |
-| CSS-03 | Phase 1 | Pending |
-| NAV-01 | Phase 3 | Pending |
-| NAV-02 | Phase 3 | Pending |
-| NAV-03 | Phase 3 | Pending |
-| NAV-04 | Phase 3 | Pending |
-| DARK-01 | Phase 2 | Pending |
-| DARK-02 | Phase 2 | Pending |
-| DARK-03 | Phase 2 | Pending |
-| DARK-04 | Phase 2 | Pending |
-| SEO-01 | Phase 4 | Pending |
-| SEO-02 | Phase 4 | Pending |
-| SEO-03 | Phase 4 | Pending |
-| SEO-04 | Phase 4 | Pending |
+| CSS-01 | Phase 1 | Complete |
+| CSS-02 | Phase 6 (gap closure) | Pending |
+| CSS-03 | Phase 1 | Complete |
+| NAV-01 | Phase 3 | Complete |
+| NAV-02 | Phase 3 | Complete |
+| NAV-03 | Phase 3 | Complete |
+| NAV-04 | Phase 3 | Complete |
+| DARK-01 | Phase 6 (gap closure) | Pending |
+| DARK-02 | Phase 2 | Complete |
+| DARK-03 | Phase 2 | Complete |
+| DARK-04 | Phase 2 | Complete |
+| SEO-01 | Phase 4 | Complete |
+| SEO-02 | Phase 4 | Complete |
+| SEO-03 | Phase 4 | Complete |
+| SEO-04 | Phase 4 | Complete |
 | PERF-01 | Phase 5 | Complete |
 | PERF-02 | Phase 5 | Complete |
 | PERF-03 | Phase 5 | Complete |
@@ -102,7 +102,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 - v1 requirements: 18 total
 - Mapped to phases: 18
 - Unmapped: 0
+- Complete: 16
+- Pending (gap closure): 2 (CSS-02, DARK-01 → Phase 6)
 
 ---
 *Requirements defined: 2026-02-13*
-*Last updated: 2026-02-13 after roadmap creation*
+*Last updated: 2026-02-18 after milestone audit gap closure planning*

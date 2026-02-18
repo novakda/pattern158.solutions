@@ -17,6 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
 - [x] **Phase 4: SEO Optimization** - Meta tags, Open Graph, structured data, sitemap
 - [x] **Phase 5: Performance Optimization** - Image optimization, lazy loading, font loading
+- [ ] **Phase 6: Inline Style Token Cleanup** - Replace undefined CSS variables and hardcoded hex in HTML inline styles (gap closure)
 
 ## Phase Details
 
@@ -100,10 +101,23 @@ Plans:
 Plans:
 - [x] 05-01-PLAN.md — Fix color contrast (WCAG 4.5:1), add logo width attribute (CLS), compress hero image (LCP), validate font/lazy-loading requirements
 
+### Phase 6: Inline Style Token Cleanup
+**Goal**: Close CSS-02 and DARK-01 audit gaps — replace undefined CSS variable references and hardcoded hex colors in HTML inline styles
+**Depends on**: Phase 1 (uses design token names), Phase 2 (dark mode must cover all color values)
+**Requirements**: CSS-02, DARK-01
+**Gap Closure**: Closes gaps from v1.0 milestone audit
+**Success Criteria** (what must be TRUE):
+  1. Zero references to deleted CSS variable names (--teal, --light-gray) in any HTML file
+  2. Zero hardcoded hex color values (#888, #555, #666) in HTML inline style= attributes
+  3. All inline color values use design system tokens (var(--color-primary), var(--color-text-light), etc.)
+  4. Dark mode toggle changes ALL text and background colors on ALL pages (no inline style bypass)
+  5. WCAG AA contrast (4.5:1) maintained in both light and dark themes for all inline-styled text
+**Plans:** TBD
+
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
+Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -112,7 +126,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 2/2 | ✓ Complete | 2026-02-13 |
 | 5. Performance Optimization | 1/1 | ✓ Complete | 2026-02-18 |
+| 6. Inline Style Token Cleanup | 0/? | Planned | — |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-18 (Phase 5 complete — all phases done)*
+*Last updated: 2026-02-18 (Phase 6 added — gap closure from milestone audit)*
