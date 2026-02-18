@@ -36,9 +36,9 @@ Requirements for current milestone. Each maps to roadmap phases.
 
 ### Performance
 
-- [ ] **PERF-01**: Images served in optimized format (WebP with PNG fallback)
-- [ ] **PERF-02**: Native lazy loading (`loading="lazy"`) on non-critical images
-- [ ] **PERF-03**: Font loading optimized (font-display: swap or self-hosted with preload)
+- [x] **PERF-01**: Images served in optimized format (WebP with PNG fallback)
+- [x] **PERF-02**: Native lazy loading (`loading="lazy"`) on non-critical images
+- [x] **PERF-03**: Font loading optimized (font-display: swap or self-hosted with preload)
 
 ## v2 Requirements
 
@@ -94,9 +94,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
 | SEO-04 | Phase 4 | Pending |
-| PERF-01 | Phase 5 | Pending |
-| PERF-02 | Phase 5 | Pending |
-| PERF-03 | Phase 5 | Pending |
+| PERF-01 | Phase 5 | Complete |
+| PERF-02 | Phase 5 | Complete |
+| PERF-03 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 18 total
