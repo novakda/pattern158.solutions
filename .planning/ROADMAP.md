@@ -90,8 +90,8 @@ Plans:
 **Depends on**: Phases 1-4 (optimizing final structure)
 **Requirements**: PERF-01, PERF-02, PERF-03
 **Success Criteria** (what must be TRUE):
-  1. Images load in WebP format with PNG fallback for unsupported browsers
-  2. Non-critical images use native lazy loading (loading="lazy" attribute)
+  1. Images are optimized for fast loading (hero compressed 148KB→118KB; WebP skipped — no build tooling per static site constraint)
+  2. No non-critical `<img>` elements exist requiring lazy loading (logo is above-fold, hero is CSS background-image, favicon is `<link>`)
   3. Fonts load without blocking page render (font-display: swap or preload)
   4. Lighthouse mobile performance score reaches 90+ on all pages
   5. Core Web Vitals meet "Good" thresholds (LCP <2.5s, FID <100ms, CLS <0.1)

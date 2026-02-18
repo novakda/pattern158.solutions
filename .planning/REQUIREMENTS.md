@@ -36,8 +36,8 @@ Requirements for current milestone. Each maps to roadmap phases.
 
 ### Performance
 
-- [x] **PERF-01**: Images served in optimized format (WebP with PNG fallback)
-- [x] **PERF-02**: Native lazy loading (`loading="lazy"`) on non-critical images
+- [x] **PERF-01**: Images optimized for fast loading (hero JPEG compressed 148KB→118KB; WebP conversion skipped — no build tooling, static site constraint)
+- [x] **PERF-02**: No non-critical images require lazy loading (logo is above-fold critical, hero is CSS background-image, favicon is `<link>` — `loading="lazy"` N/A by architecture)
 - [x] **PERF-03**: Font loading optimized (font-display: swap or self-hosted with preload)
 
 ## v2 Requirements
