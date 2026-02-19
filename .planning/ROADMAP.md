@@ -116,7 +116,7 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Replace 49 inline style color problems (undefined vars + hardcoded hex) with design system tokens across 17 HTML files
-- [ ] 06-02-PLAN.md — Fix footer attribution contrast (replace --color-text-muted with --color-inverse-text-muted in 10 files)
+- [x] 06-02-PLAN.md — Fix footer attribution contrast (replace --color-text-muted with --color-inverse-text-muted in 10 files)
 
 ## Progress
 
@@ -130,8 +130,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 2/2 | ✓ Complete | 2026-02-13 |
 | 5. Performance Optimization | 1/1 | ✓ Complete | 2026-02-18 |
-| 6. Inline Style Token Cleanup | 1/2 | In Progress | - |
+| 6. Inline Style Token Cleanup | 2/2 | ✓ Complete | 2026-02-19 |
 
 ---
 *Roadmap created: 2026-02-13*
-*Last updated: 2026-02-19 (Phase 6 gap closure plan 06-02 added from UAT findings)*
+*Last updated: 2026-02-19 (Phase 6 complete - all plans executed, CSS-02 and DARK-01 gaps fully satisfied)*
