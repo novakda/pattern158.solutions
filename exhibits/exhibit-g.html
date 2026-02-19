@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="SunTrust learning platform case study. Enterprise-scale learning management system integration for one of the largest US regional banks.">
+    <meta name="description" content="SunTrust AWARE platform: Custom SCORM-to-API integration architecture for external learner onboarding. Multi-year engagement (2015-2018) building proprietary web service integration layer for compliance training delivery.">
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-g.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit G - SunTrust Learning Platform">
-    <meta property="og:description" content="SunTrust learning platform case study. Enterprise-scale learning management system integration for one of the largest US regional banks.">
+    <meta property="og:title" content="Pattern 158 | Exhibit G - SunTrust AWARE Platform">
+    <meta property="og:description" content="Custom SCORM-to-API integration architecture for SunTrust's external learner onboarding platform. Architected proprietary web service integration layer bypassing traditional LMS infrastructure.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="559">
@@ -42,7 +42,7 @@
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit G - SunTrust Learning Platform</title>
+    <title>Pattern 158 | Exhibit G - SunTrust AWARE Platform</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -109,8 +109,8 @@
     <section class="hero">
         <div class="container">
             <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
-            <p class="subtitle">EXHIBIT G &mdash; SunTrust Learning Platform: Technical Forensics</p>
-            <span class="classification">Corroborated &middot; Client-Facing Analysis &middot; March 2016</span>
+            <p class="subtitle">EXHIBIT G &mdash; SunTrust AWARE Platform: Custom SCORM-to-API Integration Architecture</p>
+            <span class="classification">Custom Integration &middot; SCORM-to-API Wrapper &middot; 2015&ndash;2018</span>
         </div>
     </section>
 
@@ -120,8 +120,9 @@
             <div class="report-section brass">
                 <div class="section-number">Section 1</div>
                 <h2>Background</h2>
-                <p>SunTrust Bank (now Truist Financial, formed from the SunTrust/BB&amp;T merger in 2019) was a major GP Strategies client. The learning platform had technical issues requiring investigation and a documented recommendation for a path forward.</p>
-                <p>The team produced a comprehensive technical document analyzing the learning platform situation with recommended paths forward. The documentation quality was sufficient that the client immediately requested pricing for implementation, indicating the analysis was clear, actionable, and trustworthy.</p>
+                <p>SunTrust Bank (now Truist Financial, formed from the SunTrust/BB&amp;T merger in 2019) required a specialized compliance and onboarding training platform for external learners—individuals who were not SunTrust employees but required bank-certified training to conduct business with the institution.</p>
+                <p>The AWARE platform could not use SunTrust's standard internal LMS infrastructure. External learners operated outside the corporate network and identity management systems, yet required the same rigorous compliance tracking and completion verification as internal staff. This created a unique architectural challenge: deliver SCORM-based courseware through a proprietary web application without a traditional Learning Management System.</p>
+                <p>The solution required building a custom integration layer that would translate between SCORM courseware (Lectora, Adobe Captivate) and SunTrust's proprietary web service API—replacing the entire LMS stack with a purpose-built wrapper that handled status tracking, score reporting, and bookmark/state persistence through direct API calls.</p>
             </div>
         </div>
     </section>
@@ -141,28 +142,24 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>SunTrust Client Contact</td>
-                            <td>SunTrust Client Contact</td>
+                            <td>SunTrust Developer</td>
+                            <td>API/Backend Development, SunTrust</td>
                         </tr>
                         <tr>
-                            <td>GP Strategies, Team Lead (SunTrust Account)</td>
-                            <td>GP Strategies, Team Lead (SunTrust Account)</td>
+                            <td>Project Manager / Account Lead</td>
+                            <td>SunTrust Account Management, GP Strategies</td>
                         </tr>
                         <tr>
-                            <td>Director of Learning Technologies, GP Strategies</td>
-                            <td>Director of Learning Technologies, GP Strategies</td>
-                        </tr>
-                        <tr>
-                            <td>GP Strategies</td>
-                            <td>GP Strategies</td>
+                            <td>Director of Learning Technologies</td>
+                            <td>Technical Leadership, GP Strategies</td>
                         </tr>
                         <tr>
                             <td>Dan Novak</td>
-                            <td>Technical Investigation and Documentation</td>
+                            <td>Lead Technical Engineer, Integration Architecture</td>
                         </tr>
                         <tr>
-                            <td>GP Strategies</td>
-                            <td>GP Strategies</td>
+                            <td>GP Strategies Team Members</td>
+                            <td>Instructional Design, Quality Assurance</td>
                         </tr>
                     </tbody>
                 </table>
@@ -170,44 +167,119 @@
         </div>
     </section>
 
-    <!-- Section 3: Evidence -->
+    <!-- Section 3: The Integration Challenge -->
     <section style="background: var(--color-surface);">
         <div class="container">
             <div class="report-section brass">
                 <div class="section-number">Section 3</div>
+                <h2>The Integration Challenge</h2>
+                <p>Standard SCORM courseware expects to communicate with an LMS through the SCORM API adapter (JavaScript runtime). The LMS tracks learner progress, stores scores, manages bookmarks, and handles completion status. Removing the LMS from this equation meant rebuilding that entire communication layer.</p>
+
+                <h3>Architectural Requirements</h3>
+                <p>The custom SCORM-to-API wrapper needed to:</p>
+                <ul>
+                    <li><strong>Intercept SCORM Runtime Calls:</strong> Capture <code>LMSInitialize</code>, <code>LMSSetValue</code>, <code>LMSGetValue</code>, <code>LMSCommit</code>, and <code>LMSFinish</code> calls from Lectora/Captivate courseware</li>
+                    <li><strong>Translate to REST API:</strong> Convert SCORM data model elements to SunTrust's proprietary web service endpoints</li>
+                    <li><strong>Persist State:</strong> Handle cross-session resume functionality using SunTrust's backend storage rather than LMS session management</li>
+                    <li><strong>Cross-Computer Resume:</strong> Enable learners to start training on one machine and resume on another—requiring server-side state management instead of local browser storage</li>
+                    <li><strong>Fallback Mechanism:</strong> Implement cookie-based fallback for scenarios where API connectivity was degraded</li>
+                    <li><strong>Browser Expansion:</strong> Support modern browsers (Chrome, Firefox) in addition to legacy IE8/IE10 requirements</li>
+                </ul>
+
+                <h3>Security and Trust Implications</h3>
+                <p>The integration required such deep access to SunTrust's systems that Dan was issued a dedicated SunTrust laptop and employee credentials (Daniel.A.Novak@SunTrust.com)—extraordinary measures for an external contractor. This level of trust reflected both the sensitivity of the banking institution's systems and the confidence in Dan's ability to operate within those constraints responsibly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Technical Approach -->
+    <section style="background: var(--color-background-alt);">
+        <div class="container">
+            <div class="report-section">
+                <div class="section-number">Section 4</div>
+                <h2>Technical Approach</h2>
+                <p>Dan scoped a 66-hour integration lifecycle covering the full development process. The approach built on GP Strategies' existing SCORM-to-AICC wrapper technology, adapted for SunTrust's proprietary REST API.</p>
+
+                <h3>Five-Phase Integration Lifecycle</h3>
+                <ol>
+                    <li><strong>API Development Consultation:</strong> Work directly with SunTrust's backend developer during API design phase to ensure the endpoints could handle SCORM data model requirements (status values, score normalization, suspend_data size limits, interaction tracking)</li>
+                    <li><strong>API Definition Agreement:</strong> Formalize endpoint contracts, authentication mechanisms, error handling protocols, and data format specifications—establishing the interface contract between courseware wrapper and banking backend</li>
+                    <li><strong>Direct API Testing (Fiddler):</strong> Use HTTP debugging tools to test raw API calls independent of courseware, validating authentication, data serialization, edge cases, and error responses before integration</li>
+                    <li><strong>SCORM Call Monitoring:</strong> Instrument Lectora lessons to capture actual SCORM runtime behavior—identifying which data model elements were set, in what sequence, and with what values during real courseware execution</li>
+                    <li><strong>Wrapper Adaptation:</strong> Modify GP's existing SCORM-to-AICC bridge to route calls through SunTrust's API instead of AICC HACP endpoints, implementing mapping logic, retry handling, and the cookie-based fallback mechanism</li>
+                </ol>
+
+                <h3>Key Architectural Decisions Dan Shaped</h3>
+                <p>During the scoping and consultation phase, Dan raised critical questions that directly influenced the final architecture:</p>
+                <ul>
+                    <li><strong>Cross-Computer Resume Requirements:</strong> Clarified whether learners needed the ability to start training on one device and continue on another—a requirement that mandated server-side state storage rather than client-side browser caching</li>
+                    <li><strong>Security Implications of Backend Modifications:</strong> Identified potential risks in exposing training data through web services and recommended authentication patterns appropriate for external learner access</li>
+                    <li><strong>Development and Testing Environment Needs:</strong> Specified the requirement for proper dev/test/prod environment separation to allow safe integration development without risking production training delivery</li>
+                </ul>
+
+                <h3>Technology Stack</h3>
+                <ul>
+                    <li><strong>Courseware Authoring:</strong> Lectora, Adobe Captivate</li>
+                    <li><strong>Standards:</strong> SCORM 1.2, AICC (reference implementation)</li>
+                    <li><strong>Integration Layer:</strong> Custom JavaScript wrapper, REST API client</li>
+                    <li><strong>Debugging:</strong> Fiddler (HTTP traffic analysis), browser developer tools</li>
+                    <li><strong>Browser Support:</strong> IE8, IE10, Chrome, Firefox (modern standards)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Evidence -->
+    <section style="background: var(--color-surface);">
+        <div class="container">
+            <div class="report-section brass">
+                <div class="section-number">Section 5</div>
                 <h2>Evidence</h2>
 
                 <blockquote>
                     Thanks for the thorough documentation of the issue and solution. Do you have a figure?
                     <div class="attribution">
-                        SunTrust (Client)
-                        <span class="role">&mdash; SunTrust (Client)</span>
+                        SunTrust Client
+                        <span class="role">&mdash; March 2016</span>
                     </div>
                 </blockquote>
 
-                <p>The client's immediate follow-up requesting pricing indicates the quality of the analysis built sufficient confidence to move forward. When a client reads a technical investigation and immediately asks "what does it cost to implement?" rather than requesting further clarification, that signals the document did its job.</p>
+                <p>The client's immediate follow-up requesting pricing ("Do you have a figure?") indicates the quality of the technical analysis built sufficient confidence to move directly to implementation. This response pattern—reading a technical investigation document and immediately asking for a quote rather than requesting clarification or additional analysis—signals that the documentation was clear, actionable, and trustworthy enough to justify budget allocation.</p>
+
+                <p>In client-facing technical work, the ability to translate complex integration challenges into business-ready recommendations is what converts technical expertise into revenue. The SunTrust response demonstrates that Dan's documentation achieved that conversion: technical depth without obscurity, architectural clarity without oversimplification, and enough detail to build confidence without requiring follow-up questions.</p>
             </div>
         </div>
     </section>
 
-    <!-- Section 4: Findings -->
+    <!-- Section 6: Findings -->
     <section style="background: var(--color-background-alt);">
         <div class="container">
             <div class="report-section">
-                <div class="section-number">Section 4</div>
+                <div class="section-number">Section 6</div>
                 <h2>Findings</h2>
-                <p>The team produced a comprehensive technical document analyzing the learning platform situation with recommended paths forward. The documentation quality was sufficient that the client immediately requested pricing for implementation, indicating the analysis was clear, actionable, and trustworthy.</p>
+                <p>The SunTrust AWARE platform engagement represents a multi-year (2015-2018) custom integration architecture project where Dan served as lead technical engineer, building a SCORM-to-API wrapper that bypassed traditional LMS infrastructure entirely.</p>
 
                 <h3>Significance</h3>
-                <p>Client-facing technical forensics work for a major banking institution. The quality of documentation directly influenced the client's decision to proceed &mdash; a direct connection between technical writing quality and business development. This demonstrates how precise technical communication serves as a revenue driver, not merely a support function.</p>
+                <p>This engagement demonstrates several key capabilities:</p>
+                <ul>
+                    <li><strong>Architectural Leadership:</strong> Dan didn't just implement requirements—he shaped the API definition through consultation, identified security and cross-computer resume implications before development began, and scoped the full 66-hour integration lifecycle</li>
+                    <li><strong>Deep Client Trust:</strong> SunTrust issued Dan employee credentials and a dedicated laptop—extraordinary measures for an external contractor working with a banking institution's internal systems</li>
+                    <li><strong>Technology Adaptation:</strong> Rather than building from scratch, Dan adapted GP's existing SCORM-to-AICC wrapper technology to work with SunTrust's proprietary REST API—demonstrating the ability to leverage existing solutions while customizing for unique requirements</li>
+                    <li><strong>Client-Facing Technical Communication:</strong> The "Do you have a figure?" response shows Dan's documentation quality directly influenced business development—converting technical forensics into actionable proposals that clients trusted enough to fund immediately</li>
+                    <li><strong>Multi-Year Engagement Stability:</strong> 133 emails spanning 2015-2018 indicate sustained involvement and ongoing value delivery beyond the initial integration build</li>
+                </ul>
 
                 <div class="impact-tags">
-                    <span class="impact-tag highlight">Client-Facing</span>
-                    <span class="impact-tag highlight">Business Development</span>
-                    <span class="impact-tag">SunTrust</span>
-                    <span class="impact-tag">Technical Writing</span>
-                    <span class="impact-tag">Forensic Analysis</span>
-                    <span class="impact-tag">Learning Platform</span>
+                    <span class="impact-tag highlight">Custom Integration Architecture</span>
+                    <span class="impact-tag highlight">SCORM-to-API Wrapper</span>
+                    <span class="impact-tag highlight">Multi-Year Engagement</span>
+                    <span class="impact-tag">SunTrust Bank</span>
+                    <span class="impact-tag">API Design Consultation</span>
+                    <span class="impact-tag">Enterprise Security</span>
+                    <span class="impact-tag">Learning Technologies</span>
+                    <span class="impact-tag">JavaScript</span>
+                    <span class="impact-tag">REST API</span>
+                    <span class="impact-tag">Client-Facing Documentation</span>
                 </div>
             </div>
         </div>
