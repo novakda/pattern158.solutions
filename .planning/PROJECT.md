@@ -2,7 +2,7 @@
 
 ## What This Is
 
-The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site showcases the "I cheat, but I cheat fair" philosophy, project case studies as "Findings," and client testimonials as "Field Reports" with detailed exhibit pages.
+The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site features a unified CSS design system with dark mode, responsive mobile navigation, full SEO coverage, and WCAG AA accessibility compliance across 17 pages.
 
 ## Core Value
 
@@ -12,7 +12,7 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ### Validated
 
-<!-- Shipped and confirmed valuable. Carried forward from vault GSD project v1.0-v2.3. -->
+<!-- Shipped and confirmed valuable. -->
 
 - ✓ **HOME-01**: Landing page with hero, specialty cards, featured projects, philosophy section -- v2.0
 - ✓ **PHIL-01**: Philosophy page with six brand elements (Provider of Clarity, Cheat Fair, Build the Tool, Seek Knowledge, Time Machine, TASBot) -- v2.2
@@ -22,20 +22,37 @@ The site must accurately and compellingly present Dan's professional identity an
 - ✓ **A11Y-01**: WCAG 2.1 AA compliance (contrast, focus indicators, skip link, semantic elements) -- v2.1
 - ✓ **BRAND-01**: Brand assets deployed (hero image, logo with 1:5:8 ratio, favicon) -- v2.0
 - ✓ **BRAND-02**: Design system (Navy/Teal/Cream palette, Bebas Neue/Inter/JetBrains Mono typography) -- v2.0
+- ✓ **FIELD-01**: Testimonials page ("Field Reports") with 9 exhibit case study pages integrated into site navigation -- v1.0
+- ✓ **FIELD-02**: Field Reports nav link present in all page navigations -- v1.0
+- ✓ **POLISH-01**: Consistent navigation across ALL 17 pages including testimonials and exhibits -- v1.0
+- ✓ **POLISH-02**: All pages use same nav structure (Home, Philosophy, FAQ, Contact, Field Reports) -- v1.0
+- ✓ **TECH-01**: Dark mode with CSS custom properties, brand-aligned palette, toggle, persistence, FOUC prevention -- v1.0
+- ✓ **TECH-02**: SEO metadata (Open Graph, JSON-LD structured data, meta descriptions) across all 17 pages -- v1.0
+- ✓ **TECH-03**: Performance optimization (hero compression, WCAG color contrast, CLS elimination, font-display swap) -- v1.0
+- ✓ **TECH-05**: Mobile hamburger menu with keyboard accessibility and 48px touch targets -- v1.0
+- ✓ **CSS-01**: All inline `<style>` blocks extracted to shared external stylesheet -- v1.0
+- ✓ **CSS-02**: All hardcoded color values replaced with CSS custom properties (including inline styles) -- v1.0
+- ✓ **CSS-03**: Page structure normalized across all HTML files -- v1.0
+- ✓ **NAV-02**: All navigation paths use absolute-from-root URLs -- v1.0
+- ✓ **NAV-03**: Mobile hamburger menu with accessible ARIA attributes -- v1.0
+- ✓ **NAV-04**: Hamburger menu has 48x48px touch targets and keyboard support -- v1.0
+- ✓ **DARK-01**: Dark theme using CSS custom properties with brand-aligned palette -- v1.0
+- ✓ **DARK-02**: System preference detection via prefers-color-scheme -- v1.0
+- ✓ **DARK-03**: User toggle with localStorage persistence -- v1.0
+- ✓ **DARK-04**: No flash of unstyled content (inline theme detection in `<head>`) -- v1.0
+- ✓ **SEO-01**: Unique meta description for each page -- v1.0
+- ✓ **SEO-02**: Open Graph tags on all pages -- v1.0
+- ✓ **SEO-03**: JSON-LD structured data (Person + WebSite schema) -- v1.0
+- ✓ **SEO-04**: sitemap.xml listing all 17 pages -- v1.0
+- ✓ **PERF-01**: Hero image compressed (148KB to 118KB) -- v1.0
+- ✓ **PERF-02**: No non-critical images require lazy loading (N/A by architecture) -- v1.0
+- ✓ **PERF-03**: Font loading optimized (font-display: swap) -- v1.0
 
 ### Active
 
-<!-- Current scope. Building toward these. -->
+<!-- Next milestone scope. -->
 
-- [ ] **FIELD-01**: Testimonials page ("Field Reports") with 9 exhibit case study pages integrated into site navigation across all pages
-- [ ] **FIELD-02**: Field Reports nav link present in all page navigations (philosophy, faq, contact, exhibits), not just index.html
-- [ ] **POLISH-01**: Consistent navigation across ALL pages including testimonials.html and all exhibit pages
-- [ ] **POLISH-02**: Testimonials/exhibit pages use same nav structure as other pages (philosophy.html, faq.html, contact.html links)
-- [ ] **TECH-01**: Dark mode support with CSS custom properties
-- [ ] **TECH-02**: SEO metadata (Open Graph, structured data, meta descriptions) across all pages
-- [ ] **TECH-03**: Performance audit and optimization (image compression, lazy loading, critical CSS)
-- [ ] **TECH-04**: Analytics integration
-- [ ] **TECH-05**: Mobile hamburger menu for responsive navigation
+- [ ] **TECH-04**: Analytics integration (privacy-first, cookieless)
 
 ### Out of Scope
 
@@ -45,30 +62,26 @@ The site must accurately and compellingly present Dan's professional identity an
 - Resume hosting/download -- resumes are tailored per application, managed elsewhere
 - Backend/CMS -- static site, no server-side processing
 - Cover letter or LinkedIn management -- external platforms
-- Content creation (new case studies, new testimonials) -- content sourced from existing archives; this project is about the website, not content authoring
+- Content creation (new case studies, new testimonials) -- content sourced from existing archives
+- JavaScript frameworks (React, Vue, etc.) -- violates static HTML constraint
+- Build tools (Webpack, Vite, etc.) -- site intentionally has zero build dependencies
+- Google Analytics -- privacy concerns, performance impact, requires cookie consent
+- Parallax scrolling / animations -- conflicts with NTSB investigation aesthetic
+- Cookie consent banner -- eliminated by choosing cookieless analytics
 
 ## Context
 
-This website was originally developed as part of a broader "Career Documentation Refactoring" GSD project in an Obsidian vault (`/mnt/c/main/Obsidian Vault/`). That project covered brand identity, career files, resumes, AND the website across milestones v1.0 through v2.3 (24 phases). The website-specific work (phases 12-19) has been factored out to this standalone repository.
+Shipped v1.0 with 10,299 LOC (7,422 HTML + 2,877 CSS) across 17 pages. Tech stack: static HTML, single CSS file with 62 design tokens, minimal vanilla JS (theme toggle, hamburger menu). No build tools, no frameworks, no dependencies.
 
-**Source material in the vault (reference only -- this repo is now source of truth):**
-- `CAREER/Website/Pages/` -- Markdown source content for Home, About, Portfolio
-- `CAREER/Website/Assets/Design-System.md` -- Complete design system specification
-- `CAREER/Brand Vision 1.md` -- Brand identity and positioning
-- `CAREER/Dan Novak - Writing Style Profile.md` -- Voice and tone guidelines
-- `CAREER/Dan Novak - Master Career File.md` -- Canonical career history
-- `CAREER/Case Studies/` -- Detailed project case studies
-- `CAREER/Pattern158/Brand/` -- Brand quick reference and guidelines
-- `.planning/phases/12-19` -- Previous website phase plans and verification docs
-- `.planning/claims-database.yaml` -- 55 audited claims with source traceability
+This website was originally developed as part of a broader "Career Documentation Refactoring" GSD project in an Obsidian vault. The website-specific work was factored out to this standalone repository. This repo is now the source of truth.
 
-**Current site pages (14 HTML files):**
+**Current site pages (17 HTML files):**
 - index.html -- Home/landing with hero, projects as "Findings," philosophy preview
 - philosophy.html -- Six brand elements, methodology, origin story, influences
 - faq.html -- 15 questions, native accordion, 4 categories
 - contact.html -- Email, LinkedIn, GitHub, guidance, testimonial
 - testimonials.html -- "Field Reports" with 9 exhibit summaries, metrics
-- exhibits/exhibit-a.html through exhibit-i.html -- Detailed case study pages
+- exhibits/exhibit-a.html through exhibit-l.html -- 12 detailed case study pages
 
 **Brand identity:**
 - Name: Pattern 158 (Myst fireplace puzzle reference -- 1:5:8 ratio)
@@ -78,7 +91,7 @@ This website was originally developed as part of a broader "Career Documentation
 
 ## Constraints
 
-- **Static HTML only**: No build tools, no frameworks, no JavaScript dependencies. Pure HTML/CSS with minimal vanilla JS where needed (copy-to-clipboard, accordions).
+- **Static HTML only**: No build tools, no frameworks, no JavaScript dependencies. Pure HTML/CSS with minimal vanilla JS where needed.
 - **Accessibility**: WCAG 2.1 AA minimum. All changes must maintain or improve compliance.
 - **Brand consistency**: All content must align with established brand voice and design system.
 - **Factual accuracy**: Every claim on the site must be traceable to primary sources (emails, project files). No embellishment.
@@ -87,11 +100,20 @@ This website was originally developed as part of a broader "Career Documentation
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Factor website out of vault GSD project | Vault project scope too broad (career docs + website); website needs its own development lifecycle | -- Pending |
-| This repo is source of truth | Vault managed content authoring; now that site is live, HTML is the canonical form | -- Pending |
+| Factor website out of vault GSD project | Vault project scope too broad; website needs its own development lifecycle | ✓ Good |
+| This repo is source of truth | Vault managed content authoring; now that site is live, HTML is the canonical form | ✓ Good |
 | Static HTML, no framework | Simplicity, zero dependencies, fast load times, easy to deploy | ✓ Good |
-| NTSB investigation aesthetic | Unique, memorable, aligns with Dan's forensic engineering brand | ✓ Good |
-| Testimonials as "Field Reports" with exhibit pages | Gives weight to testimonials, matches investigation aesthetic | -- Pending |
+| NTSB investigation aesthetic | Unique, memorable, aligns with forensic engineering brand | ✓ Good |
+| Testimonials as "Field Reports" with exhibit pages | Gives weight to testimonials, matches investigation aesthetic | ✓ Good |
+| Color source of truth: implemented values | Keep #1a2838, #17a2b8, #faf9f6 not design spec values | ✓ Good |
+| Semantic token naming (--color-primary not --navy) | Enables theme flexibility without renaming tokens | ✓ Good |
+| Brand-aligned dark mode (navy not generic black) | Preserves NTSB aesthetic in both themes | ✓ Good |
+| localStorage for theme persistence (not cookies) | Simpler, no server needed, immediate access in blocking script | ✓ Good |
+| Absolute-from-root nav paths (/page.html) | Avoids relative path fragility in exhibits/ subdirectory | ✓ Good |
+| Automated Playwright testing over manual verification | Reproducible, 27/27 tests passed, faster iteration | ✓ Good |
+| --color-primary #17a2b8 to #0e7c8c | WCAG 4.5:1 compliance while preserving teal brand identity | ✓ Good |
+| JPEG Q72 for hero (not Q85) | Q85 gave <1% reduction, Q72 gives 20% at acceptable quality | ✓ Good |
+| --color-inverse-text-muted for dark backgrounds | --color-text-muted fails WCAG on dark footer/nav/hero contexts | ✓ Good |
 
 ---
-*Last updated: 2026-02-13 after project initialization (factored out from vault GSD project)*
+*Last updated: 2026-02-19 after v1.0 milestone*

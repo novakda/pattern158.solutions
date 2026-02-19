@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="GM Course Completion Investigation: NTSB-style forensic analysis of a 4x spike in incomplete training courses. Five systemic failures identified through multi-angle investigation.">
+    <meta name="author" content="Dan Novak">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-j.html">
+    <meta property="og:title" content="Pattern 158 | Exhibit J - GM Course Completion Investigation">
+    <meta property="og:description" content="GM Course Completion Investigation: NTSB-style forensic analysis of a 4x spike in incomplete training courses. Five systemic failures identified through multi-angle investigation.">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="559">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-j.html">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit J - GM Course Completion Investigation</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "url": "https://pattern158.solutions"
+}
+</script>
+</head>
+<body class="page-exhibit page-exhibit-j">
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">GM Learning Portal &mdash; Course Completion Anomaly</p>
+            <div class="report-meta">
+                <strong>Client:</strong> General Motors<br>
+                <strong>Platform:</strong> Enterprise LMS (PeopleSoft-based) + Third-Party Authoring Tools<br>
+                <strong>Period:</strong> ~2017<br>
+                <strong>Team:</strong> Director (Investigation Lead), Dan Novak (Technical Forensics), Data Analyst / UX Researcher
+            </div>
+            <span class="classification">Field Report &middot; Exhibit J &middot; General Motors &middot; ~2017</span>
+        </div>
+    </section>
+
+    <!-- 1. BACKGROUND -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">1.</span>
+                <span class="section-title">Background</span>
+            </div>
+            <div class="background-content">
+                <p>General Motors reported that <strong>19% of launched lessons</strong> were not being marked completed or passed &mdash; nearly <strong>four times</strong> their historical baseline of ~5%. The spike coincided with a migration to a new LMS platform six months prior. Completion of training had direct financial impact on GM dealerships, making this a high-priority investigation.</p>
+
+                <p>With over <span class="key-fact">10,000 courses</span> in the library, reviewing every course was impractical. The team relied on data reports to identify candidate courses for analysis. GM&rsquo;s initial framing assumed a tracking bug. The investigation was designed to test that assumption &mdash; and look deeper if the evidence pointed elsewhere.</p>
+
+                <p>A small team was assembled to conduct a multi-angle forensic investigation, applying air crash investigation methodology: never blame the user first &mdash; investigate the system design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PERSONNEL INVOLVED -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">2.</span>
+                <span class="section-title">Personnel Involved</span>
+            </div>
+            <table class="personnel-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Responsibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="person-name">Director / Investigation Lead</td>
+                        <td>Project authorization, stakeholder management, investigation oversight</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Technical Forensics (Dan Novak)</td>
+                        <td>Fiddler traces, browser debugging, code analysis, architecture review</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name">Data Analyst / UX Researcher</td>
+                        <td>Data analysis, UX evaluation, user interviews, behavioral research</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 3. SEQUENCE OF EVENTS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">3.</span>
+                <span class="section-title">Sequence of Events</span>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div class="timeline-date">Initial Report</div>
+                    <div class="timeline-title">Anomalous Completion Rates Flagged</div>
+                    <div class="timeline-content">
+                        <p>GM reports ~19% of launched lessons not being marked completed &mdash; nearly 4x the historical baseline of ~5%. Investigation authorized. Client-side stakeholders describe the problem as affecting roughly &ldquo;30% of cases&rdquo; in some course categories.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Initial Review</div>
+                    <div class="timeline-title">Initial Investigation</div>
+                    <div class="timeline-content">
+                        <p>An initial investigation is conducted but cannot identify the root cause. The problem persists and escalates.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Team Assignment</div>
+                    <div class="timeline-title">Dedicated Team Assembled</div>
+                    <div class="timeline-content">
+                        <p>The director assembles a dedicated investigation team: Dan Novak for technical forensics, and a data analyst for UX evaluation and user research.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">Technical Forensics Phase</div>
+                    <div class="timeline-title">Architecture Analysis</div>
+                    <div class="timeline-content">
+                        <p>Dan uses Fiddler and browser debugging to trace course-to-LMS communication. Discovers that the LMS holds all course state in memory cache and only persists to the database via form submit when the course closes properly. No periodic auto-save. No graceful degradation for connection loss.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">UX Analysis</div>
+                    <div class="timeline-title">&ldquo;Congratulations You Failed&rdquo; Discovery</div>
+                    <div class="timeline-content">
+                        <p>The team reviews courses built with the vendor&rsquo;s authoring tool. Courses display &ldquo;Congratulations! You&rsquo;re done!&rdquo; after the final assessment &mdash; but that isn&rsquo;t the last page. Users must navigate to one more slide to trigger SCORM completion. The UI actively misleads learners into closing before completion registers.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">User Research Breakthrough</div>
+                    <div class="timeline-title">Mobile Workforce Discovery</div>
+                    <div class="timeline-content">
+                        <p>Interviews with actual GM sales reps reveal the critical insight: they are always on the road, working on poor WiFi, taking training in <strong>short bursts between customer meetings</strong> &mdash; not the hour-long desktop sessions the system was designed for. This reframes the entire investigation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">Synthesis</div>
+                    <div class="timeline-title">Five Concurrent Failures Identified</div>
+                    <div class="timeline-content">
+                        <p>All investigation tracks converge: fragile architecture, misleading UX, confusing navigation, mobile usage patterns, and poor connectivity align to produce a &ldquo;perfect storm&rdquo; &mdash; a systemic mismatch between how the system was designed and how people actually work.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Delivery</div>
+                    <div class="timeline-title">Findings Delivered</div>
+                    <div class="timeline-content">
+                        <p>Comprehensive report delivered documenting all findings. Not all stakeholders agree with the technical assessment. Dan documents uncertainty honestly: the cache vulnerability couldn&rsquo;t be conclusively proven in a controlled environment.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Validation (Years Later)</div>
+                    <div class="timeline-title">GM Abandons Platform</div>
+                    <div class="timeline-content">
+                        <p>GM abandons the platform entirely and migrates to a new LMS. The systemic architecture and UX failures identified in the investigation would not follow to a properly designed platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FINDINGS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">4.</span>
+                <span class="section-title">Findings &mdash; Five System Failures</span>
+            </div>
+            <p style="margin-bottom: 1.5rem; font-size: 1rem; color: var(--color-text-medium);">The investigation identified five concurrent systemic failures &mdash; not a single bug, but a &ldquo;Swiss cheese model&rdquo; alignment where multiple holes in defenses lined up to produce a 4x degradation in completion rates.</p>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 22%;">Failure</th>
+                        <th style="width: 73%;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="issue-id">F-01</td>
+                        <td><strong>Memory Cache Vulnerability</strong></td>
+                        <td>The LMS held all course state in memory cache. Only saved to database via form submit when the course closed properly. No auto-save, no graceful degradation. Browser crash, tab close, or connection drop = all progress lost.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-02</td>
+                        <td><strong>&ldquo;Congratulations You Failed&rdquo; UX</strong></td>
+                        <td>Courses displayed a completion message after the final assessment &mdash; but that wasn&rsquo;t the last page. Users had to navigate to one more slide to trigger SCORM completion. The UI actively misled learners into closing before completion registered.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-03</td>
+                        <td><strong>Confusing Navigation</strong></td>
+                        <td>The vendor&rsquo;s authoring tool produced courses with unintuitive navigation controls. Even expert users with deep courseware experience struggled to use the interface &mdash; average GM sales reps with no eLearning background had no chance.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-04</td>
+                        <td><strong>Mobile Workforce / Poor WiFi</strong></td>
+                        <td>GM sales reps were always on the road, working on intermittent WiFi connections. The system had no recovery mechanism for connection drops, making every session a gamble.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-05</td>
+                        <td><strong>Short-Burst Usage Pattern</strong></td>
+                        <td>System was designed for hour-long desktop sessions. Actual users took training in 5-minute bursts between customer meetings. Each improper close triggered the cache vulnerability, dumping all progress.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. PROBABLE CAUSE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">5.</span>
+                <span class="section-title">Probable Cause</span>
+            </div>
+
+            <div class="probable-cause-box">
+                <p>The investigation determined that the root cause was <strong>not a single tracking bug</strong> but a systemic mismatch between how the platform was designed and how people actually worked. Five concurrent failures aligned in a <strong>Swiss cheese model</strong>: fragile memory-cache architecture with no auto-save (F-01), a completion UI that actively misled users (F-02), navigation so confusing that even experts struggled (F-03), a mobile workforce on unreliable WiFi (F-04), and a short-burst usage pattern that triggered the cache vulnerability repeatedly (F-05).</p>
+                <p>No single failure would have caused a 4x degradation in completion rates. Together, they created a &ldquo;perfect storm&rdquo; where the system design set users up to fail &mdash; then the metrics blamed the users for failing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. OUTCOME & VALIDATION -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">6.</span>
+                <span class="section-title">Outcome &amp; Validation</span>
+            </div>
+            <div class="background-content">
+                <p>The comprehensive report was delivered documenting all findings. Not all stakeholders agreed with the technical assessment &mdash; the memory cache vulnerability couldn&rsquo;t be conclusively reproduced in a controlled environment. Dan documented this uncertainty honestly, presenting evidence-based hypotheses while acknowledging what couldn&rsquo;t be proven.</p>
+
+                <p>Years later, GM abandoned the platform entirely and migrated to a new LMS. The systemic architecture and UX failures identified in this investigation would not follow to a properly designed platform &mdash; a mere tracking bug would have. The platform migration itself served as indirect validation of the findings.</p>
+
+                <p><strong>What this demonstrated:</strong> Systems thinking over code debugging. Multi-disciplinary investigation (technical forensics + UX analysis + user research). Intellectual honesty under organizational pressure. The Provider of Clarity approach: entering chaos, delivering understanding &mdash; even when the organization resists uncomfortable truths.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../testimonials.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Field Reports
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>

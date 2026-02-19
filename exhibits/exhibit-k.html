@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="1,216-lesson content refresh automated to save 600+ hours. Custom tooling transformed a manual process into a systematic content migration pipeline.">
+    <meta name="description" content="Microsoft MCAPS AI-Led Training Agent: How a hybrid AI/structured-data architecture outperformed the platform vendor's own approach in Copilot Studio.">
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-c.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit C - Content Refresh: 600 Hours Saved">
-    <meta property="og:description" content="1,216-lesson content refresh automated to save 600+ hours. Custom tooling transformed a manual process into a systematic content migration pipeline.">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-k.html">
+    <meta property="og:title" content="Pattern 158 | Exhibit K - Microsoft MCAPS AI-Led Training Agent">
+    <meta property="og:description" content="Microsoft MCAPS AI-Led Training Agent: How a hybrid AI/structured-data architecture outperformed the platform vendor's own approach in Copilot Studio.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="559">
@@ -38,11 +38,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-c.html">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-k.html">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit C - Content Refresh: 600 Hours Saved</title>
+    <title>Pattern 158 | Exhibit K - Microsoft MCAPS AI-Led Training Agent</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,7 +53,7 @@
 }
 </script>
 </head>
-<body class="page-exhibit page-exhibit-c">
+<body class="page-exhibit page-exhibit-k">
     <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -109,151 +109,155 @@
     <section class="hero">
         <div class="container">
             <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
-            <p class="subtitle">EXHIBIT C &mdash; Content Refresh Project: 600 Hours Saved Through Automation</p>
-            <span class="classification">Automation &middot; Process Engineering &middot; December 2015</span>
+            <p class="subtitle">Microsoft MCAPS &mdash; AI-Led Training Agent</p>
+            <div class="report-meta">
+                <strong>Client:</strong> Microsoft (MCAPS &mdash; sales/partner organization)<br>
+                <strong>Platform:</strong> Microsoft Copilot Studio + Teams<br>
+                <strong>Period:</strong> 2025&ndash;2026<br>
+                <strong>Role:</strong> AI Agent Developer, GP Strategies (contracted by Microsoft)
+            </div>
+            <span class="classification">Field Report &middot; Exhibit K &middot; Microsoft &middot; 2025&ndash;2026</span>
         </div>
     </section>
 
-    <!-- Report Body -->
-    <section class="report-body">
+    <!-- 1. BACKGROUND -->
+    <section class="report-section">
         <div class="container">
-
-            <!-- Section 1: Background -->
-            <div class="report-section">
-                <span class="section-number">Section 1</span>
-                <h2>Background</h2>
-                <p>In 2015, GP Strategies undertook a massive content refresh of their enterprise course library. A total of 1,216 lessons needed to be verified, fixed, and republished through the Xyleme content authoring platform. The project involved 15+ team members over several months and represented one of the largest single content operations in the team's history.</p>
+            <div class="section-heading">
+                <span class="section-number">1.</span>
+                <span class="section-title">Background</span>
             </div>
+            <div class="background-content">
+                <p>Microsoft MCAPS (their sales and partner organization) brought in outside expertise to evolve their existing AI-Led Training (AILT) concept. Microsoft had built an initial <strong>declarative agent</strong> using a one-shot prompt &mdash; a single system instruction that relied entirely on the LLM to manage course navigation, progress tracking, and assessments through conversation.</p>
 
-            <!-- Section 2: The Problem -->
-            <div class="report-section">
-                <span class="section-number">Section 2</span>
-                <h2>The Problem</h2>
-                <p>Publishing lessons from Xyleme was a manual, time-consuming process. Each lesson had to be individually published through the Xyleme interface &mdash; selecting the lesson, configuring output parameters, initiating the publish, and waiting for confirmation. With 1,216 lessons needing multiple publish cycles, the labor cost was enormous.</p>
-                <p>The team collectively needed to verify that all content in every lesson matched what was currently being served to customers. This meant each lesson went through multiple rounds of verification and republishing, compounding the manual effort exponentially.</p>
+                <p>The engagement called for rebuilding it as a proper <span class="key-fact">Copilot Studio</span> implementation that made effective use of the platform&rsquo;s features: topic-based conversation design, structured data flows, and native Teams integration.</p>
+
+                <p>Dan entered the project with <strong>zero Copilot Studio experience</strong> &mdash; brought in for engineering methodology and learning technology domain knowledge, not platform familiarity.</p>
             </div>
-
-            <!-- Section 3: The Solution -->
-            <div class="report-section">
-                <span class="section-number">Section 3</span>
-                <h2>The Solution</h2>
-                <p>Dan Novak used the Fiddler network debugging tool to analyze and integrate with Xyleme's publishing API. By capturing and analyzing the HTTP traffic between the browser and Xyleme's servers, he identified the exact sequence of API requests needed to trigger a publish operation.</p>
-                <p>He then built an automation tool that could batch-publish lessons unattended &mdash; eliminating the need for a human to manually click through each lesson's publish workflow. This saved an estimated 600+ hours of manual labor across the project.</p>
-            </div>
-
-            <!-- Section 4: Personnel -->
-            <div class="report-section">
-                <span class="section-number">Section 4</span>
-                <h2>Personnel</h2>
-
-                <table class="personnel-table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Nickname</th>
-                            <th>Role / Contribution</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>&mdash;</strong></td>
-                            <td>&mdash;</td>
-                            <td>Manager, Content Team. Authored the team recognition email. Managed the overall refresh project.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Dan Novak</strong></td>
-                            <td>"The Fiddler"</td>
-                            <td>Built the publishing automation tooling using Fiddler. Saved 600+ hours of manual labor.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>&mdash;</strong></td>
-                            <td>"The Slacker"</td>
-                            <td>A colleague who used Dan's automation tool to publish every lesson at least 3 times. Built auto-integration of custom code (saving 75+ more hours) and the new responsive skin.</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" style="color: var(--color-inverse-text-muted); font-style: italic;">13 additional team members, each recognized with unique nicknames highlighting their individual contributions to the refresh project.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Section 5: Primary Source Testimony -->
-            <div class="report-section">
-                <span class="section-number">Section 5</span>
-                <h2>Primary Source Testimony</h2>
-
-                <blockquote>
-                    Dan Novak "The Fiddler" (Automation) &mdash; Dan gets this name not only because he makes extensive use of the Fiddler application to help us troubleshoot communications errors for customers, but because he fiddles with stuff until we get a tool that makes things&hellip; possible. He also used Fiddler to figure out how to automate the publishing process out of Xyleme. <strong>This resulted in a savings of about 600 hours of labor</strong> by allowing us to publish large batches of lessons unattended.
-                    <div class="attribution">
-                        Manager, Content Team, GP Strategies
-                        <span class="role"></span>
-                    </div>
-                </blockquote>
-
-                <blockquote>
-                    Page after page, lesson after lesson, week after week, the team took the task at hand and worked it until it was done &mdash; and then asked for more. Relentless forward motion towards our goal.
-                    <div class="attribution">
-                        Manager, Content Team, GP Strategies
-                        <span class="role">&mdash; describing the team's approach in the recognition email</span>
-                    </div>
-                </blockquote>
-            </div>
-
-            <!-- Section 6: Additional Context -->
-            <div class="report-section">
-                <span class="section-number">Section 6</span>
-                <h2>Additional Context</h2>
-                <p>The recognition email gave each of 15 team members a unique nickname highlighting their specific contribution. The Director of Learning Technologies highlighted this as a kudos during the All Hands meeting, elevating the team's work to division-wide visibility.</p>
-                <p>The team collectively verified that all of the content in 1,216 lessons matched the content currently being served to customers. The content delivery framework library was fully refreshed for all clients including the enterprise course library.</p>
-            </div>
-
-            <!-- Section 7: Impact Metrics -->
-            <div class="report-section">
-                <span class="section-number">Section 7</span>
-                <h2>Impact Metrics</h2>
-
-                <div class="stats-bar">
-                    <div class="stat-item">
-                        <div class="stat-number">600+</div>
-                        <div class="stat-label">Labor Hours Saved via Automation</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">1,216</div>
-                        <div class="stat-label">Lessons Refreshed &amp; Verified</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">75+</div>
-                        <div class="stat-label">Additional Hours Saved (Custom Code)</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Team Members Recognized</div>
-                    </div>
-                </div>
-
-                <div class="impact-tags">
-                    <span class="impact-tag highlight">600+ Hours Saved</span>
-                    <span class="impact-tag highlight">Automation</span>
-                    <span class="impact-tag">Xyleme</span>
-                    <span class="impact-tag">Fiddler</span>
-                    <span class="impact-tag">1,216 Lessons</span>
-                    <span class="impact-tag">Enterprise Course Library</span>
-                    <span class="impact-tag">Responsive Skin</span>
-                    <span class="impact-tag">Content Delivery Framework</span>
-                </div>
-            </div>
-
         </div>
     </section>
 
-    <!-- Back Link -->
-    <section class="back-link-section">
+    <!-- 2. THE PROMPT ENGINEERING CEILING -->
+    <section class="report-section">
         <div class="container">
-            <a href="../testimonials.html" class="back-link">&larr; Back to Field Reports</a>
+            <div class="section-heading">
+                <span class="section-number">2.</span>
+                <span class="section-title">The Prompt Engineering Ceiling</span>
+            </div>
+            <div class="background-content">
+                <p>The core challenge: pure prompt engineering cannot reliably enforce <strong>deterministic state</strong>. A declarative agent can be told &ldquo;track which lessons the user has completed,&rdquo; but LLMs are probabilistic &mdash; they approximate, hallucinate, and lose context across conversation boundaries. For a training application, this is catastrophic:</p>
+
+                <ul style="margin: var(--space-md) 0 var(--space-md) var(--space-xl); line-height: 1.8;">
+                    <li>Progress tracking must be <strong>deterministic</strong>, not approximate</li>
+                    <li>Course sequence must be <strong>enforced</strong>, not suggested</li>
+                    <li>Assessment scores must be <strong>persisted</strong>, not remembered</li>
+                    <li>State must survive <strong>across conversation boundaries</strong></li>
+                </ul>
+
+                <p>Declarative agents and topic-based conversation design alone couldn&rsquo;t solve this. The LLM was being asked to serve as both the interface <em>and</em> the data store &mdash; a fundamental architectural mistake.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. THE HYBRID ARCHITECTURE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">3.</span>
+                <span class="section-title">The Hybrid Architecture</span>
+            </div>
+            <div class="background-content">
+                <p>The breakthrough was separating concerns: <strong>structured data for state, AI for interaction</strong>. Instead of asking the LLM to track everything, the architecture used structured JSON for all deterministic operations and reserved AI capabilities for what AI does well &mdash; content transformation, natural language interaction, and adaptive responses.</p>
+
+                <ul style="margin: var(--space-md) 0 var(--space-md) var(--space-xl); line-height: 1.8;">
+                    <li><strong>Structured JSON</strong> for course catalog, progress tracking, and state persistence</li>
+                    <li><strong>AI code interpreter</strong> for content transformation and dynamic response generation</li>
+                    <li><strong>Adaptive Cards</strong> for navigation UI, assessments, and structured learner interactions</li>
+                    <li><strong>Copilot Studio topic flows</strong> for conversation orchestration and guardrails</li>
+                </ul>
+
+                <p>This hybrid approach solved the reliability challenges of the original declarative design. The AI wasn&rsquo;t fighting its nature trying to be a database &mdash; it was doing what LLMs do best while structured data handled what structured data does best.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. IMPLEMENTATION -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">4.</span>
+                <span class="section-title">Implementation</span>
+            </div>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Component</th>
+                        <th style="width: 30%;">Approach</th>
+                        <th style="width: 50%;">Rationale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Course Catalog</strong></td>
+                        <td>Structured JSON</td>
+                        <td>Deterministic course structure, sequence, and metadata. No hallucination risk for course content or ordering.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Progress Tracking</strong></td>
+                        <td>JSON State Object</td>
+                        <td>Persists across conversation boundaries. Exact completion status, not LLM approximation.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Navigation</strong></td>
+                        <td>Adaptive Cards</td>
+                        <td>Structured UI buttons enforce valid navigation paths. Users can&rsquo;t accidentally skip or repeat lessons.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Assessments</strong></td>
+                        <td>Adaptive Cards + Scoring</td>
+                        <td>Deterministic scoring with structured answer validation. No LLM interpretation of whether an answer is &ldquo;close enough.&rdquo;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Content Delivery</strong></td>
+                        <td>Copilot Studio Topic Flow</td>
+                        <td>AI code interpreter transforms structured content into natural conversation. The AI handles presentation; the data handles truth.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. OUTCOME -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">5.</span>
+                <span class="section-title">Outcome</span>
+            </div>
+            <div class="background-content">
+                <p>Functional proof of concept delivered in <strong>~4 weeks</strong> &mdash; from zero Copilot Studio experience to a working hybrid agent that resolved the reliability and deterministic behavior challenges of the original declarative approach.</p>
+
+                <p>The architecture pattern demonstrated a reusable principle: <strong>hybrid AI/structured-data beats pure LLM for stateful workflows</strong>. This isn&rsquo;t specific to training &mdash; any application requiring deterministic state management (onboarding flows, compliance workflows, sequential processes) benefits from the same separation of concerns.</p>
+
+                <p>The proof of concept was in active development when the engagement concluded.</p>
+            </div>
+
+            <div class="probable-cause-box">
+                <p><strong>The mistake is treating AI as the data store. AI is the interface to the data store.</strong></p>
+                <p>When you separate what needs to be deterministic (state, progress, scores) from what benefits from intelligence (content presentation, adaptive interaction, natural language), you get a system that&rsquo;s both smarter and more reliable than either approach alone.</p>
+            </div>
         </div>
     </section>
 
     </main>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../testimonials.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Field Reports
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -261,7 +265,6 @@
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
             <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
             <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-inverse-text-muted);">All quotations sourced from professional correspondence (2005&ndash;2022).</p>
         </div>
     </footer>
 
@@ -281,7 +284,6 @@
             hamburger.classList.toggle('is-active', newState);
             navMenu.classList.toggle('is-open', newState);
 
-            // Prevent body scroll when menu is open
             document.body.style.overflow = newState ? 'hidden' : '';
         }
 
@@ -292,10 +294,8 @@
             document.body.style.overflow = '';
         }
 
-        // Click handler
         hamburger.addEventListener('click', toggleMenu);
 
-        // Keyboard: Enter or Space activates button
         hamburger.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -303,7 +303,6 @@
             }
         });
 
-        // Escape closes menu, returns focus to hamburger
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
@@ -314,7 +313,6 @@
             }
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', function(e) {
             var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
             if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
@@ -322,14 +320,12 @@
             }
         });
 
-        // Close menu when a nav link is clicked (for same-page navigation)
         navMenu.addEventListener('click', function(e) {
             if (e.target.tagName === 'A') {
                 closeMenu();
             }
         });
 
-        // Close menu on window resize to desktop (cleanup stale mobile state)
         window.addEventListener('resize', function() {
             if (window.innerWidth > 768) {
                 closeMenu();
@@ -345,11 +341,9 @@
         var toggle = document.getElementById('theme-toggle');
         if (!toggle) return;
 
-        // Set initial ARIA state based on current theme
         var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
         toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
 
-        // Toggle handler
         toggle.addEventListener('click', function() {
             var html = document.documentElement;
             var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
@@ -366,7 +360,6 @@
             try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
         });
 
-        // Cross-tab synchronization
         window.addEventListener('storage', function(e) {
             if (e.key === STORAGE_KEY) {
                 var html = document.documentElement;
@@ -380,7 +373,6 @@
             }
         });
 
-        // System preference change listener (respects manual override)
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
             try {
                 if (localStorage.getItem(STORAGE_KEY) !== null) return;

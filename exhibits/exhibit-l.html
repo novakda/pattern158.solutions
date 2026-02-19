@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="Power Platform Architecture Audit: Forensic diagnosis of enterprise-scale architectural failures. The diagnosis was the deliverable.">
+    <meta name="author" content="Dan Novak">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-l.html">
+    <meta property="og:title" content="Pattern 158 | Exhibit L - Power Platform Architecture Audit">
+    <meta property="og:description" content="Power Platform Architecture Audit: Forensic diagnosis of enterprise-scale architectural failures. The diagnosis was the deliverable.">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="559">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-l.html">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit L - Power Platform Architecture Audit</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "url": "https://pattern158.solutions"
+}
+</script>
+</head>
+<body class="page-exhibit page-exhibit-l">
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
+            <p class="subtitle">Power Platform Architecture Audit</p>
+            <div class="report-meta">
+                <strong>Context:</strong> Internal ERP modernization<br>
+                <strong>Platform:</strong> Microsoft Power Platform (Power Apps, Dataverse, Power Automate)<br>
+                <strong>Period:</strong> 2025<br>
+                <strong>Role:</strong> Technical Analyst / Developer
+            </div>
+            <span class="classification">Field Report &middot; Exhibit L &middot; Internal &middot; 2025</span>
+        </div>
+    </section>
+
+    <!-- 1. BACKGROUND -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">1.</span>
+                <span class="section-title">Background</span>
+            </div>
+            <div class="background-content">
+                <p>The organization initiated an internal ERP modernization effort on <strong>Microsoft Power Platform</strong>. Through organizational transitions, institutional knowledge was lost and the project&rsquo;s original architectural vision became disconnected from its execution.</p>
+
+                <p>An external Power Platform consultancy had been brought in to architect the solution. They produced high-level requirements documents and recommended that experienced Power Platform developers were essential to succeed. That recommendation was not followed. Domain expertise left the project, and development continued without architectural review or adherence to Microsoft best practices.</p>
+
+                <p>Dan was assigned development lead on a scheduling module. By the time he joined, the original architects were long gone &mdash; there was no overlap for consultation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. THE REQUIREMENTS CHAIN -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">2.</span>
+                <span class="section-title">The Requirements Degradation Chain</span>
+            </div>
+            <div class="background-content">
+                <p>Requirements degraded through multiple format conversions, each losing fidelity. By the time requirements reached Azure DevOps, individual tickets looked actionable but had lost all architectural context:</p>
+            </div>
+
+            <div class="requirements-chain">
+                <div class="chain-step">PowerPoint<br><small>Crimson decks</small></div>
+                <span class="chain-arrow">&rarr;</span>
+                <div class="chain-step">Word<br><small>Document conversion</small></div>
+                <span class="chain-arrow">&rarr;</span>
+                <div class="chain-step degraded">Excel<br><small>Spreadsheet conversion</small></div>
+                <span class="chain-arrow">&rarr;</span>
+                <div class="chain-step critical">ADO Tickets<br><small>CSV import</small></div>
+            </div>
+
+            <div class="background-content">
+                <p>Each conversion lost fidelity. High-level summaries were treated as actionable work items when they were all epic-level at best. <strong>No decomposition into user stories with acceptance criteria ever happened.</strong> The requirements looked like a backlog but functioned as a wish list.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FORENSIC METHODOLOGY -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">3.</span>
+                <span class="section-title">Forensic Methodology</span>
+            </div>
+            <div class="background-content">
+                <p>Dan had a hunch something was fundamentally wrong. Rather than continuing to build on a suspect foundation, he used <strong>GitHub Spec Kit</strong> &mdash; an AI-assisted requirements analysis tool &mdash; to generate a baseline from his understanding of what the scheduling apps should do, then compared that baseline against the project&rsquo;s reality.</p>
+
+                <p>This was <strong>collaborative analysis</strong>: engineering intuition pressure-tested with an AI tool. Not &ldquo;AI wrote the requirements&rdquo; &mdash; AI systematically exposed what was absent. The gaps became apparent quickly, not because the AI was sophisticated, but because the problems were that fundamental.</p>
+
+                <p>The findings were confirmed through <strong>convergence</strong>: practical deployment pain, Microsoft documentation comparison, and AI analysis all pointed to the same conclusions independently.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FINDINGS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">4.</span>
+                <span class="section-title">Findings</span>
+            </div>
+            <p style="margin-bottom: 1.5rem; font-size: 1rem; color: var(--color-text-medium);">Five foundational gaps identified &mdash; problems so fundamental they would have become catastrophic failures in production.</p>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 25%;">Finding</th>
+                        <th style="width: 10%;">Severity</th>
+                        <th style="width: 60%;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="issue-id">F-01</td>
+                        <td><strong>No Data Model</strong></td>
+                        <td><span class="severity severity-critical">Critical</span></td>
+                        <td>No fully defined data model existed. Dataverse tables were being created ad hoc during development without a schema design phase. Entity relationships, data types, and constraints were improvised.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-02</td>
+                        <td><strong>No Version Control</strong></td>
+                        <td><span class="severity severity-critical">Critical</span></td>
+                        <td>No git, no source control of any kind. The only method of versioning was solution exports kept by the lead developer. No rollback capability, no change tracking, no collaborative development safety net.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-03</td>
+                        <td><strong>Monolithic Solution Architecture</strong></td>
+                        <td><span class="severity severity-high">High</span></td>
+                        <td>One large solution for the entire system instead of a modular core with separate solutions per model-driven app. Deployment required manually identifying dependencies and copying components to a new fresh solution.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-04</td>
+                        <td><strong>Requirements Atomization Without Context</strong></td>
+                        <td><span class="severity severity-high">High</span></td>
+                        <td>Requirements degraded through PPT &rarr; Word &rarr; Excel &rarr; ADO conversion chain. Individual tickets looked actionable but had lost architectural context. Epic-level summaries treated as stories.</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id">F-05</td>
+                        <td><strong>No Decomposed User Stories</strong></td>
+                        <td><span class="severity severity-high">High</span></td>
+                        <td>No user stories with acceptance criteria. No definition of done. No way to verify whether built features matched business intent. The gap between &ldquo;what was being built&rdquo; and &ldquo;what the business actually needed&rdquo; was invisible.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. PROBABLE CAUSE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">5.</span>
+                <span class="section-title">Probable Cause</span>
+            </div>
+
+            <div class="probable-cause-box">
+                <p>The project did not fail because of Power Platform&rsquo;s limitations. Power Platform is designed for citizen developer tools, departmental apps, and lightweight automation. <strong>The project failed because enterprise-scale architectural practices were never applied.</strong></p>
+                <p>The domain experts were removed. Requirements were never decomposed. Architecture was never reviewed against Microsoft best practices. The result was a system being built at enterprise scale with citizen-developer methodology &mdash; tool misuse, not a tool problem.</p>
+                <p><strong>The diagnosis was the deliverable.</strong> Dan could have kept building, but his instinct was to step back and verify the foundation first. The AI-assisted analysis confirmed what engineering intuition suspected: the problems were not in the code, they were in the architecture that the code was being built on.</p>
+            </div>
+
+            <div class="background-content" style="margin-top: var(--space-xl);">
+                <p>Findings were shared with management and the governance architect via a documented deliverable &mdash; an internal repo containing findings, prompts, and annotated analysis. This case demonstrates how forensic engineering methodology, augmented by AI-assisted analysis, can surface foundational gaps early &mdash; before they become production failures. The earlier these methods are applied, the more costly the problems they prevent.</p>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../testimonials.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Field Reports
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>
