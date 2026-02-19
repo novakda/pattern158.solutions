@@ -19,6 +19,7 @@
     --color-text-source: #888888;
     --color-inverse: #1a2838;
     --color-inverse-text: #faf9f6;
+    --color-heading: #1a2838;
     --color-inverse-text-muted: rgba(250, 249, 246, 0.8);
     --color-inverse-text-light: rgba(250, 249, 246, 0.7);
     --color-border: #dddddd;
@@ -82,6 +83,9 @@
     /* Borders: lighter for visibility on dark */
     --color-border: #3d5266;
     --color-border-primary: rgba(14, 124, 140, 0.4);
+
+    /* Headings: flip to light for visibility on dark backgrounds */
+    --color-heading: #e8e8e8;
 
     /* Hover state */
     --color-hover-background: #324456;
@@ -589,7 +593,7 @@ footer a:hover {
 .page-index .intro h2 {
     font-size: 2.5rem;
     margin-bottom: var(--space-md);
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 .page-index .intro p {
@@ -614,7 +618,7 @@ footer a:hover {
 }
 
 .page-index .specialty-card h3 {
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-sm);
     font-size: 1.2rem;
 }
@@ -627,7 +631,7 @@ footer a:hover {
 .page-index .findings h2 {
     font-size: 2.5rem;
     margin-bottom: var(--space-xl);
-    color: var(--color-inverse);
+    color: var(--color-heading);
     text-align: center;
 }
 
@@ -663,7 +667,7 @@ footer a:hover {
 
 .page-index .finding-title {
     font-size: 1.8rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     font-weight: bold;
 }
 
@@ -678,7 +682,7 @@ footer a:hover {
 }
 
 .page-index .finding-section h4 {
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-sm);
     font-size: 1rem;
     text-transform: uppercase;
@@ -876,7 +880,7 @@ footer a:hover {
 .page-philosophy .content-section h2 {
     font-family: var(--font-heading);
     font-size: 3rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-md);
 }
 
@@ -951,7 +955,7 @@ footer a:hover {
 .page-philosophy .methodology-steps h3 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-sm);
 }
 
@@ -1005,7 +1009,7 @@ footer a:hover {
 .page-philosophy .influence h3 {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-md);
 }
 
@@ -1036,7 +1040,7 @@ footer a:hover {
 .page-faq .faq-category h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-sm);
 }
 
@@ -1059,7 +1063,7 @@ footer a:hover {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     transition: all 0.2s;
     position: relative;
     min-height: 44px;
@@ -1149,7 +1153,7 @@ footer a:hover {
 }
 
 .page-faq .faq-answer strong {
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 /* ================================================================
@@ -1165,7 +1169,7 @@ footer a:hover {
 
 .page-contact .contact-methods h2 {
     font-size: 2.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-lg);
 }
 
@@ -1231,14 +1235,14 @@ footer a:hover {
 
 .page-contact .guidance h2 {
     font-size: 2.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-lg);
     text-align: center;
 }
 
 .page-contact .guidance h3 {
     font-size: 1.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-top: var(--space-xl);
     margin-bottom: var(--space-md);
 }
@@ -1265,7 +1269,7 @@ footer a:hover {
 }
 
 .page-contact .guidance-list strong {
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 .page-contact .timezone-note {
@@ -1441,7 +1445,7 @@ footer a:hover {
 .page-testimonials .summary h2 {
     font-size: 2.5rem;
     margin-bottom: var(--space-md);
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 .page-testimonials .summary p {
@@ -1487,7 +1491,7 @@ footer a:hover {
 .page-testimonials .exhibits h2 {
     font-size: 2.5rem;
     margin-bottom: var(--space-sm);
-    color: var(--color-inverse);
+    color: var(--color-heading);
     text-align: center;
 }
 
@@ -1559,7 +1563,7 @@ footer a:hover {
 
 .page-testimonials .exhibit-title {
     font-size: 1.6rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-md);
 }
 
@@ -1589,7 +1593,7 @@ footer a:hover {
     margin-top: 0.8rem;
     font-style: normal;
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     font-size: 0.95rem;
 }
 
@@ -1875,7 +1879,7 @@ footer a:hover {
 .page-exhibit .section-title {
     font-family: var(--font-heading);
     font-size: 2.2rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     text-transform: uppercase;
     line-height: 1;
 }
@@ -1893,7 +1897,7 @@ footer a:hover {
 }
 
 .page-exhibit .background-content strong {
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 .page-exhibit .key-fact {
@@ -1934,7 +1938,7 @@ footer a:hover {
     margin-top: 0.8rem;
     font-style: normal;
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     font-size: 0.95rem;
 }
 
@@ -2027,7 +2031,7 @@ footer a:hover {
 
 .page-exhibit-a .personnel-table .person-name {
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     white-space: nowrap;
 }
 
@@ -2104,7 +2108,7 @@ footer a:hover {
 .page-exhibit .timeline-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     letter-spacing: 0.5px;
     margin-bottom: var(--space-sm);
 }
@@ -2123,7 +2127,7 @@ footer a:hover {
 
 .page-exhibit .timeline-content .speaker {
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 /* ========== EVIDENCE CHAIN (ordered lists) ========== */
@@ -2143,7 +2147,7 @@ footer a:hover {
 }
 
 .page-exhibit .evidence-chain li strong {
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 /* ========== RESOLUTION TABLE ========== */
@@ -2324,7 +2328,7 @@ footer a:hover {
 .page-exhibit-k .personnel-table .person-name,
 .page-exhibit-l .personnel-table .person-name {
     font-weight: 600;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     white-space: nowrap;
 }
 
@@ -2511,7 +2515,7 @@ footer a:hover {
 .page-exhibit-j .timeline-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     letter-spacing: 0.5px;
     margin-bottom: var(--space-sm);
 }
@@ -2570,7 +2574,7 @@ footer a:hover {
 .page-testimonials .investigation-reports-heading h2 {
     font-size: 2.5rem;
     margin-bottom: var(--space-sm);
-    color: var(--color-inverse);
+    color: var(--color-heading);
 }
 
 .page-testimonials .investigation-reports-heading .section-subtitle {
@@ -2600,7 +2604,7 @@ footer a:hover {
 .page-technologies .tech-category h2 {
     font-family: var(--font-heading);
     font-size: 2.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     margin-bottom: var(--space-sm);
 }
 
@@ -2649,7 +2653,7 @@ footer a:hover {
 .page-technologies .tech-name {
     font-family: var(--font-heading);
     font-size: 1.5rem;
-    color: var(--color-inverse);
+    color: var(--color-heading);
     letter-spacing: 0.5px;
 }
 
