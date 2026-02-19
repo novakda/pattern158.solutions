@@ -1,5 +1,5 @@
 ---
-status: complete
+status: diagnosed
 phase: 06-inline-style-token-cleanup
 source: 06-01-SUMMARY.md
 started: 2026-02-19T01:00:00Z
@@ -58,7 +58,32 @@ skipped: 0
   reason: "User reported: Footer attribution text uses --color-text-muted (#666666) but footer background is --color-text (#2d3436). Contrast ratio 2.21:1 — fails WCAG AA 4.5:1. Affects 10 pages: testimonials.html, exhibits a-i. Text is barely legible in light mode."
   severity: major
   test: 4
-  root_cause: ""
-  artifacts: []
-  missing: []
-  debug_session: ""
+  root_cause: "Phase 6 replaced hardcoded #888 with --color-text-muted without considering that footer has dark background (var(--color-text) = #2d3436). Token --color-text-muted is for light backgrounds. Should use --color-inverse-text-muted for dark footer context."
+  artifacts:
+    - path: "css/main.css:22"
+      issue: "--color-inverse-text-muted: rgba(250, 249, 246, 0.8) exists but was not used"
+    - path: "css/main.css:347-349"
+      issue: "footer { background: var(--color-text) } confirms dark background context"
+    - path: "testimonials.html:605"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-a.html:499"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-b.html:258"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-c.html:264"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-d.html:244"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-e.html:261"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-f.html:236"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-g.html:229"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-h.html:259"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+    - path: "exhibits/exhibit-i.html:245"
+      issue: "color: var(--color-text-muted) in footer — wrong token"
+  missing:
+    - "Replace var(--color-text-muted) with var(--color-inverse-text-muted) in all 10 footer attribution instances"
+  debug_session: ".planning/debug/footer-attribution-contrast.md"
