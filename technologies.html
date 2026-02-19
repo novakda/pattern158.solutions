@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="26 technologies documented across 28 years of email archives. Dan Novak's verified technical expertise in eLearning standards, LMS platforms, authoring tools, and web development.">
+    <meta name="author" content="Dan Novak">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pattern158.solutions/technologies.html">
+    <meta property="og:title" content="Technologies | Pattern 158 - Dan Novak">
+    <meta property="og:description" content="26 technologies documented across 28 years of email archives. Dan Novak's verified technical expertise in eLearning standards, LMS platforms, authoring tools, and web development.">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="559">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://pattern158.solutions/technologies.html">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Technologies | Pattern 158 - Dan Novak</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "url": "https://pattern158.solutions"
+}
+</script>
+</head>
+<body class="page-technologies">
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/technologies.html" aria-current="page">Technologies</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-minimal">
+            <div class="container">
+                <h1>Technologies</h1>
+                <p class="subtitle">26 technologies documented across 28 years of email archives</p>
+            </div>
+        </section>
+
+        <!-- Category 1: eLearning Standards & Protocols -->
+        <section class="tech-category" aria-labelledby="elearning-standards-heading">
+            <div class="container">
+                <h2 id="elearning-standards-heading">eLearning Standards & Protocols</h2>
+                <p class="category-intro">The communication protocols between learning content and platforms</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">SCORM</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Primary technical authority on SCORM 1.2 and 2004. Code-level API debugging, manifest construction, cross-platform troubleshooting.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">Cigna</span>
+                            <span class="impact-tag">National Grid</span>
+                            <span class="impact-tag">HSBC</span>
+                            <span class="impact-tag">State Farm</span>
+                            <span class="impact-tag">PNC</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">AICC</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Deep understanding of HACP protocol. Led Chrome 80 impact analysis. Key advisor on migration strategies.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">GDLS</span>
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">Cigna</span>
+                            <span class="impact-tag">National Grid</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">xAPI</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Evaluated xAPI for non-traditional learning environments including VR. Participated in technical strategy discussions.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">State Farm</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">Cigna</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 2: Learning Management Systems -->
+        <section class="tech-category" aria-labelledby="lms-heading">
+            <div class="container">
+                <h2 id="lms-heading">Learning Management Systems</h2>
+                <p class="category-intro">Enterprise platforms for delivering, tracking, and managing learning content</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">GPiLEARN</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Engineered and maintained custom SCORM-to-AICC wrapper. Led Chrome 80 remediation across customer base.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">GPU</span>
+                            <span class="impact-tag">Multiple Energy Utilities</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Cornerstone OnDemand</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Go-to expert for SCORM/AICC integration. JavaScript-level debugging of XDM adapters and completion reporting.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">PNC</span>
+                            <span class="impact-tag">LCRA</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">SAP SuccessFactors</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Internal SME on SuccessFactors' idiosyncratic SCORM implementation. Status/score normalization, version compatibility.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">Entergy</span>
+                            <span class="impact-tag">Corning</span>
+                            <span class="impact-tag">PNC</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Saba/SumTotal</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Understood platform-specific technical requirements across multiple client accounts. QA testing and migration consulting.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GDLS</span>
+                            <span class="impact-tag">BCG</span>
+                            <span class="impact-tag">Corning</span>
+                            <span class="impact-tag">Colonial Pipeline</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Moodle</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Used as controlled testing environment to isolate whether failures were content, protocol, or platform-specific.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">GPiLEARN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 3: Authoring Tools -->
+        <section class="tech-category" aria-labelledby="authoring-heading">
+            <div class="container">
+                <h2 id="authoring-heading">Authoring Tools</h2>
+                <p class="category-intro">Content creation platforms for building interactive eLearning</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Articulate Storyline</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Deep knowledge of published package internals. Customized HTML/JavaScript beyond authoring UI. SCORM version compatibility advisor.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Colonial Pipeline</span>
+                            <span class="impact-tag">Entergy</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">UTC</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Adobe Captivate</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Diagnosed SCORM completion tracking issues. Analyzed JavaScript internals of published packages.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Xyleme</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Deep familiarity with content lifecycle through GPiLEARN ecosystem. SCORM-to-AICC wrapper debugging.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GPiLEARN</span>
+                            <span class="impact-tag">Wells Fargo</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Lectora</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Encountered in UTC Legacy Branding project. Analyzed authoring tool composition for automation feasibility.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">UTC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 4: Programming & Web Development -->
+        <section class="tech-category" aria-labelledby="programming-heading">
+            <div class="container">
+                <h2 id="programming-heading">Programming & Web Development</h2>
+                <p class="category-intro">Core languages and frameworks used across the full stack</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">JavaScript</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Primary language for eLearning systems integration. SCORM runtime APIs, jQuery/AJAX, fetch API migration, cross-browser compatibility. Recognized as "LMS debugging expert."</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GPiLEARN</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">PNC</span>
+                            <span class="impact-tag">Cigna</span>
+                            <span class="impact-tag">UOB</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">HTML/CSS</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">Built custom eLearning content and course menus. Pixel-level debugging, Chrome 80 META tag workarounds. Proactively recommended Flash-to-HTML conversion in 2012.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GDAIS</span>
+                            <span class="impact-tag">PNC</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">UOB</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">XML/XSLT</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">SCORM manifest construction, AICC HACP XML packets, content delivery troubleshooting. Embedded in every aspect of eLearning engineering.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">GPiLEARN</span>
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">HSBC</span>
+                            <span class="impact-tag">Cigna</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Flash/ActionScript</h3>
+                            <span class="expertise-badge badge-deep">Deep</span>
+                        </div>
+                        <p class="tech-summary">From early 2000s through end-of-life. ActionScript debugging, Flash content packages, led Flash-to-HTML5 transition.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GDAIS</span>
+                            <span class="impact-tag">Electric Boat</span>
+                            <span class="impact-tag">GDLS</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Node.js</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Custom eLearning course build pipeline. npm dependency management, SCORM package generation and validation.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GPU</span>
+                            <span class="impact-tag">UOB</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">React</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Troubleshot React-based SCORM wrappers and course completion tracking in production environments.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Electric Boat</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Angular</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Provided SCORM expertise to Angular-based 'Simple Learning' platform projects.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">Cigna</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 5: Platforms & DevOps -->
+        <section class="tech-category" aria-labelledby="platforms-heading">
+            <div class="container">
+                <h2 id="platforms-heading">Platforms & DevOps</h2>
+                <p class="category-intro">Infrastructure, collaboration, and deployment tooling</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Azure DevOps</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Maintained personal instance for work item tracking. Source control operations, build coordination.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GPiLEARN</span>
+                            <span class="impact-tag">GM</span>
+                            <span class="impact-tag">Cigna</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">GitHub</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Technical research and open-source engagement. Tracked browser compatibility issues, framework accessibility.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GPiLEARN</span>
+                            <span class="impact-tag">Entergy</span>
+                            <span class="impact-tag">Cigna</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">SharePoint</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Central collaboration platform for eLearning engineering projects. Document management, parallel work coordination.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Entergy</span>
+                            <span class="impact-tag">UOB</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Oracle</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Oracle iLearning as underlying engine for GPiLEARN. ERP/project accounting integration.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GDLS</span>
+                            <span class="impact-tag">UOB</span>
+                            <span class="impact-tag">Cigna</span>
+                            <span class="impact-tag">National Grid</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">Docker</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Supported containerized content delivery deployments. Multi-environment testing workflows.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">GM</span>
+                            <span class="impact-tag">Wells Fargo</span>
+                            <span class="impact-tag">GPiLEARN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category 6: Emerging & Specialized -->
+        <section class="tech-category" aria-labelledby="emerging-heading">
+            <div class="container">
+                <h2 id="emerging-heading">Emerging & Specialized</h2>
+                <p class="category-intro">Newer technologies and specialized project management tooling</p>
+
+                <div class="tech-cards">
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">VR/Unity</h3>
+                            <span class="expertise-badge badge-aware">Aware</span>
+                        </div>
+                        <p class="tech-summary">Part of VR development team building immersive training. Unity 2019, Oculus Quest APK builds, Immerse SDK evaluation.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">State Farm</span>
+                        </div>
+                    </div>
+
+                    <div class="tech-card">
+                        <div class="tech-card-header">
+                            <h3 class="tech-name">JIRA</h3>
+                            <span class="expertise-badge badge-working">Working</span>
+                        </div>
+                        <p class="tech-summary">Large-scale project tracking. Technical expertise shaped workflow decisions on content conversion projects.</p>
+                        <div class="tech-tags">
+                            <span class="impact-tag">Entergy</span>
+                            <span class="impact-tag">PNC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>
