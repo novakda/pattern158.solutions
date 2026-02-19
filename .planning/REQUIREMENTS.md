@@ -10,7 +10,7 @@ Requirements for current milestone. Each maps to roadmap phases.
 ### CSS Foundation
 
 - [x] **CSS-01**: All inline `<style>` blocks extracted to shared external stylesheet(s)
-- [ ] **CSS-02**: All hardcoded color values (rgba, hex) replaced with CSS custom properties
+- [x] **CSS-02**: All hardcoded color values (rgba, hex) replaced with CSS custom properties
 - [x] **CSS-03**: Page structure normalized across all 14 HTML files (consistent markup patterns)
 
 ### Navigation
@@ -22,7 +22,7 @@ Requirements for current milestone. Each maps to roadmap phases.
 
 ### Dark Mode
 
-- [ ] **DARK-01**: Dark theme using CSS custom properties with brand-aligned palette (not generic black)
+- [x] **DARK-01**: Dark theme using CSS custom properties with brand-aligned palette (not generic black)
 - [x] **DARK-02**: System preference detection via `prefers-color-scheme` media query
 - [x] **DARK-03**: User toggle with localStorage persistence across page loads
 - [x] **DARK-04**: No flash of unstyled content (inline theme detection in `<head>`)
@@ -80,13 +80,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | CSS-01 | Phase 1 | Complete |
-| CSS-02 | Phase 6 (gap closure) | Pending |
+| CSS-02 | Phase 6 (gap closure) | Complete |
 | CSS-03 | Phase 1 | Complete |
 | NAV-01 | Phase 3 | Complete |
 | NAV-02 | Phase 3 | Complete |
 | NAV-03 | Phase 3 | Complete |
 | NAV-04 | Phase 3 | Complete |
-| DARK-01 | Phase 6 (gap closure) | Pending |
+| DARK-01 | Phase 6 (gap closure) | Complete |
 | DARK-02 | Phase 2 | Complete |
 | DARK-03 | Phase 2 | Complete |
 | DARK-04 | Phase 2 | Complete |

@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-13)
 
 **Core value:** Accurately and compellingly present Dan's professional identity and body of work to hiring managers, engineers, and potential clients
-**Current focus:** Phase 5 - Performance Optimization (in progress)
+**Current focus:** Phase 6 - Inline Style Token Cleanup (complete)
 
 ## Current Position
 
-Phase: 5 of 5 (Performance Optimization)
+Phase: 6 of 6 (Inline Style Token Cleanup)
 Plan: 1 of 1 complete
-Status: Phase 5 Plan 1 complete - WCAG color contrast, logo CLS fix, hero image compression
-Last activity: 2026-02-18 - Completed 05-01: color contrast fix, logo dimensions, hero compression
+Status: Phase 6 Plan 1 complete - CSS-02 and DARK-01 gap closure, 49 inline style token replacements
+Last activity: 2026-02-19 - Completed 06-01: inline style token cleanup across 17 HTML files
 
-Progress: [████████████████████] 100% Phase 5 Plan 1
+Progress: [████████████████████] 100% Phase 6 Plan 1
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: ~10 min
-- Total execution time: ~97 min
+- Total plans completed: 11
+- Average duration: ~9 min
+- Total execution time: ~98 min
 
 **By Phase:**
 
@@ -32,10 +32,11 @@ Progress: [████████████████████] 100% Ph
 | 3 | 2/2 | ~26min | ~13min |
 | 4 | 2/2 | ~8min | ~4min |
 | 5 | 1/1 | ~3min | ~3min |
+| 6 | 1/1 | ~1min | ~1min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (~6min), 03-02 (~20min), 04-01 (~5min), 04-02 (~3min), 05-01 (~2.5min)
-- Trend: Consistent fast execution on metadata, validation, and performance tasks
+- Last 5 plans: 03-02 (~20min), 04-01 (~5min), 04-02 (~3min), 05-01 (~2.5min), 06-01 (~1min)
+- Trend: Consistent fast execution on metadata, validation, and cleanup tasks
 
 *Updated after each plan completion*
 
@@ -53,6 +54,7 @@ Progress: [████████████████████] 100% Ph
 | 04-01 | 5m12s | 2 | 14 |
 | 04-02 | 2m48s | 2 | 2 |
 | 05-01 | 2m30s | 2 | 19 |
+| 06-01 | 1min | 2 | 17 |
 
 ## Accumulated Context
 
@@ -96,6 +98,10 @@ Recent decisions affecting current work:
 - [Phase 05-01]: Used JPEG quality 72 (not 85) for hero compression — Q85 gave <1% reduction, Q72 gives 20% at acceptable quality
 - [Phase 05-01]: Used Pillow (Python) for compression — jpegoptim unavailable, sudo not accessible in execution environment
 - **Phase 5 complete**: PERF-01, PERF-02, PERF-03 all satisfied — hero compressed, no lazy-load candidates, display=swap confirmed
+- [Phase 06-01]: #888 attribution text mapped to --color-text-muted (not --color-text-source) — text-source fails WCAG 4.5:1 at 3.37:1, text-muted achieves 5.45:1
+- [Phase 06-01]: Inline style= values fixed in place (token substitution only) — CSS class extraction is out of scope for gap closure
+- [Phase 06-01]: background: white maps to --color-surface, not --color-background (page canvas token)
+- **Phase 6 complete**: CSS-02 and DARK-01 gaps closed — 49 inline style token replacements across 17 HTML files
 
 ### Quick Tasks Completed
 
@@ -119,9 +125,9 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-18 (05-01 complete)
-Stopped at: Completed 05-01-PLAN.md - performance optimization (WCAG contrast, CLS fix, hero compression)
+Last session: 2026-02-19 (06-01 complete)
+Stopped at: Completed 06-01-PLAN.md - inline style token cleanup (CSS-02 and DARK-01 gap closure)
 Resume file: None
 
 ---
-*All 5 phases complete. Project ready for Lighthouse validation.*
+*All 6 phases complete. v1.0 milestone requirements (CSS-02 and DARK-01) fully satisfied. Ready for Lighthouse validation.*

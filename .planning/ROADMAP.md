@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Navigation & Mobile Responsiveness** - Consistent cross-page navigation with mobile hamburger menu
 - [x] **Phase 4: SEO Optimization** - Meta tags, Open Graph, structured data, sitemap
 - [x] **Phase 5: Performance Optimization** - Image optimization, lazy loading, font loading
-- [ ] **Phase 6: Inline Style Token Cleanup** - Replace undefined CSS variables and hardcoded hex in HTML inline styles (gap closure)
+- [x] **Phase 6: Inline Style Token Cleanup** - Replace undefined CSS variables and hardcoded hex in HTML inline styles (gap closure) (completed 2026-02-19)
 
 ## Phase Details
 
@@ -112,7 +112,7 @@ Plans:
   3. All inline color values use design system tokens (var(--color-primary), var(--color-text-light), etc.)
   4. Dark mode toggle changes ALL text and background colors on ALL pages (no inline style bypass)
   5. WCAG AA contrast (4.5:1) maintained in both light and dark themes for all inline-styled text
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 Plans:
 - [ ] 06-01-PLAN.md — Replace 49 inline style color problems (undefined vars + hardcoded hex) with design system tokens across 17 HTML files
@@ -129,7 +129,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6
 | 3. Navigation & Mobile Responsiveness | 2/2 | ✓ Complete | 2026-02-13 |
 | 4. SEO Optimization | 2/2 | ✓ Complete | 2026-02-13 |
 | 5. Performance Optimization | 1/1 | ✓ Complete | 2026-02-18 |
-| 6. Inline Style Token Cleanup | 0/1 | In Progress | — |
+| 6. Inline Style Token Cleanup | 1/1 | Complete   | 2026-02-19 |
 
 ---
 *Roadmap created: 2026-02-13*
