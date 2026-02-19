@@ -1620,14 +1620,15 @@ footer a:hover {
     line-height: 1.7;
 }
 
-.page-testimonials .impact-tags {
+/* Impact tags — shared across testimonials and exhibit pages */
+.impact-tags {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
     margin-top: var(--space-md);
 }
 
-.page-testimonials .impact-tag {
+.impact-tag {
     background: var(--color-inverse);
     color: var(--color-inverse-text);
     padding: 0.25rem 0.7rem;
@@ -1635,7 +1636,7 @@ footer a:hover {
     font-size: 0.8rem;
 }
 
-.page-testimonials .impact-tag.highlight {
+.impact-tag.highlight {
     background: var(--color-primary);
 }
 
@@ -2038,7 +2039,7 @@ footer a:hover {
 }
 
 /* ========== TIMELINE ========== */
-.page-exhibit-a .timeline {
+.page-exhibit .timeline {
     position: relative;
     padding-left: var(--space-2xl);
     margin: var(--space-md) 0 var(--space-xl);
@@ -2054,17 +2055,17 @@ footer a:hover {
     background: var(--color-inverse);
 }
 
-.page-exhibit-a .timeline-entry {
+.page-exhibit .timeline-entry {
     position: relative;
     margin-bottom: 2.5rem;
     padding-left: var(--space-lg);
 }
 
-.page-exhibit-a .timeline-entry:last-child {
+.page-exhibit .timeline-entry:last-child {
     margin-bottom: 0;
 }
 
-.page-exhibit-a .timeline-entry::before {
+.page-exhibit .timeline-entry::before {
     content: '';
     position: absolute;
     left: -2.55rem;
@@ -2077,7 +2078,7 @@ footer a:hover {
     z-index: 2;
 }
 
-.page-exhibit-a .timeline-entry.milestone::before {
+.page-exhibit .timeline-entry.milestone::before {
     width: 18px;
     height: 18px;
     left: -2.65rem;
@@ -2086,7 +2087,7 @@ footer a:hover {
     border-color: var(--color-inverse);
 }
 
-.page-exhibit-a .timeline-date {
+.page-exhibit .timeline-date {
     font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--color-primary);
@@ -2096,11 +2097,11 @@ footer a:hover {
     margin-bottom: 0.3rem;
 }
 
-.page-exhibit-a .timeline-entry.milestone .timeline-date {
+.page-exhibit .timeline-entry.milestone .timeline-date {
     color: var(--color-accent);
 }
 
-.page-exhibit-a .timeline-title {
+.page-exhibit .timeline-title {
     font-family: var(--font-heading);
     font-size: 1.25rem;
     color: var(--color-inverse);
@@ -2108,20 +2109,40 @@ footer a:hover {
     margin-bottom: var(--space-sm);
 }
 
-.page-exhibit-a .timeline-content {
+.page-exhibit .timeline-content {
     font-size: 0.95rem;
     line-height: 1.7;
     color: var(--color-text-timeline);
 }
 
-.page-exhibit-a .timeline-content blockquote {
+.page-exhibit .timeline-content blockquote {
     margin: 0.8rem 0 0;
     padding: 0.8rem 1.2rem;
     font-size: 0.95rem;
 }
 
-.page-exhibit-a .timeline-content .speaker {
+.page-exhibit .timeline-content .speaker {
     font-weight: 600;
+    color: var(--color-inverse);
+}
+
+/* ========== EVIDENCE CHAIN (ordered lists) ========== */
+.page-exhibit .evidence-chain {
+    list-style-position: inside;
+    padding-left: 0;
+    margin: var(--space-md) 0 var(--space-lg);
+}
+
+.page-exhibit .evidence-chain li {
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--color-surface);
+    border-left: 3px solid var(--color-primary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.page-exhibit .evidence-chain li strong {
     color: var(--color-inverse);
 }
 
@@ -2839,19 +2860,19 @@ footer a:hover {
     }
 
     /* Exhibit A specific */
-    .page-exhibit-a .timeline {
+    .page-exhibit .timeline {
         padding-left: 2.5rem;
     }
 
-    .page-exhibit-a .timeline-entry {
+    .page-exhibit .timeline-entry {
         padding-left: var(--space-md);
     }
 
-    .page-exhibit-a .timeline-entry::before {
+    .page-exhibit .timeline-entry::before {
         left: -2.25rem;
     }
 
-    .page-exhibit-a .timeline-entry.milestone::before {
+    .page-exhibit .timeline-entry.milestone::before {
         left: -2.35rem;
     }
 
