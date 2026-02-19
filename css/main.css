@@ -2379,6 +2379,7 @@ footer a:hover {
 }
 
 /* ========== SHARED: Probable Cause Box ========== */
+.page-exhibit-f .probable-cause-box,
 .page-exhibit-j .probable-cause-box,
 .page-exhibit-k .probable-cause-box,
 .page-exhibit-l .probable-cause-box {
@@ -2390,6 +2391,7 @@ footer a:hover {
     position: relative;
 }
 
+.page-exhibit-f .probable-cause-box::before,
 .page-exhibit-j .probable-cause-box::before,
 .page-exhibit-k .probable-cause-box::before,
 .page-exhibit-l .probable-cause-box::before {
@@ -2406,6 +2408,7 @@ footer a:hover {
     font-weight: 700;
 }
 
+.page-exhibit-f .probable-cause-box p,
 .page-exhibit-j .probable-cause-box p,
 .page-exhibit-k .probable-cause-box p,
 .page-exhibit-l .probable-cause-box p {
@@ -2414,6 +2417,7 @@ footer a:hover {
     margin-bottom: var(--space-md);
 }
 
+.page-exhibit-f .probable-cause-box p:last-child,
 .page-exhibit-j .probable-cause-box p:last-child,
 .page-exhibit-k .probable-cause-box p:last-child,
 .page-exhibit-l .probable-cause-box p:last-child {
