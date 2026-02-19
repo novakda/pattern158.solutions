@@ -2876,20 +2876,36 @@ footer a:hover {
         left: -2.35rem;
     }
 
-    .page-exhibit-a .personnel-table,
-    .page-exhibit-a .resolution-table {
+    .page-exhibit .personnel-table,
+    .page-exhibit .resolution-table {
         font-size: 0.8rem;
     }
 
-    .page-exhibit-a .personnel-table th,
-    .page-exhibit-a .personnel-table td,
-    .page-exhibit-a .resolution-table th,
-    .page-exhibit-a .resolution-table td {
+    .page-exhibit .personnel-table th,
+    .page-exhibit .personnel-table td,
+    .page-exhibit .resolution-table th,
+    .page-exhibit .resolution-table td {
         padding: var(--space-sm);
     }
 
-    .page-exhibit-a .outcome-metrics {
+    .page-exhibit .outcome-metrics {
         grid-template-columns: 1fr;
+    }
+
+    /* Impact tags: tighter on mobile */
+    .page-exhibit .impact-tags {
+        padding: 0 var(--space-sm);
+    }
+
+    .page-exhibit .impact-tag {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* Evidence chains: tighter on mobile */
+    .page-exhibit .evidence-chain li {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.75rem;
     }
 }
 
