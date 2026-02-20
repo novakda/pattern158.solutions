@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/stylelintrc",
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "comment-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "no-descending-specificity": null,
+    "font-family-name-quotes": ["always-where-recommended", {
+      "severity": "warning"
+    }],
+    "no-duplicate-selectors": true,
+    "declaration-block-no-duplicate-properties": true,
+    "selector-class-pattern": "^[a-z][a-z0-9-]*$",
+    "declaration-property-value-disallowed-list": {
+      "font-size": ["/^\\d/"],
+      "color": ["/#/", "/rgb/", "/hsl/"],
+      "background-color": ["/#/", "/rgb/", "/hsl/"],
+      "border-color": ["/#/", "/rgb/", "/hsl/"],
+      "outline-color": ["/#/", "/rgb/", "/hsl/"],
+      "background": ["/#/", "/rgb(?!a\\(0\\))/", "/hsl/"],
+      "padding": ["/^\\d/", {
+        "severity": "warning"
+      }],
+      "margin": ["/^\\d/", {
+        "severity": "warning"
+      }],
+      "gap": ["/^\\d/", {
+        "severity": "warning"
+      }]
+    }
+  },
+  "ignoreFiles": []
+}
