@@ -37,7 +37,7 @@ All v1.0 decisions logged in PROJECT.md Key Decisions table (14 entries).
 | 2 | Full content audit — verified internal links, anchors, images, sitemap; fixed FAQ link text | 2026-02-18 | 28aad09 |
 | 3 | Remove manual QA and accessibility testing messaging — reframed forward-facing pages to emphasize engineering/methodology | 2026-02-20 | 45af5a3, 9f6857c |
 | 4 | Mobile table rendering with PowerApps-style card transformation — 22 tables across 13 HTML files | 2026-02-20 | 10b37f0, 5ee4c46 |
-| 5 | Improve mobile horizontal space usage — reduced padding, tightened heroes and nested elements | 2026-02-20 | 7575c1f |
+| 5 | Improve mobile horizontal space usage — reduced padding, tightened heroes and nested elements | 2026-02-20 | 7575c1f, d0ac4a6, 41147ef |
 
 ### Pending Todos
 

@@ -2,7 +2,7 @@
 phase: quick-5
 plan: 01
 status: complete
-commits: [7575c1f]
+commits: [7575c1f, d0ac4a6, 41147ef]
 files_modified: [css/main.css]
 ---
 
@@ -28,10 +28,14 @@ Audited mobile rendering across all 6 main pages using Playwright screenshots at
 
 **4. Nested element padding reduced**
 - Flagship cards: 1.5rem → 1rem
+- Finding cards, specialty cards, tech cards: --space-xl/--space-lg → --space-md
 - FAQ summaries/answers: --space-md → --space-sm
 - Contact guidance list: --space-md → --space-sm
 - Blockquotes (testimonials + exhibits): 0.8rem/--space-md → 0.6rem/--space-sm
 - Footer: --space-xl → --space-md vertical, 0.75rem horizontal
+
+**5. Page-specific section overrides** (specificity fix)
+- Added all page-specific selectors (.page-index section, .page-technologies .tech-category, .page-contact .contact-methods/.guidance/.testimonial, .page-portfolio .portfolio-flagships/.portfolio-directory, .page-philosophy .content-section, .page-index .field-reports-teaser) to the mobile override block to ensure they inherit the tighter padding
 
 ## Verification
 
