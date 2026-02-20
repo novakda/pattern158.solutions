@@ -11,7 +11,7 @@ See: .planning/PROJECT.md (updated 2026-02-19)
 
 Milestone: v1.0 MVP shipped (2026-02-19)
 Status: All 6 phases complete, 12/12 plans executed, 18/18 requirements satisfied
-Last activity: 2026-02-19 - v1.0 milestone archived
+Last activity: 2026-02-20 - Completed quick task 3: Remove manual QA/testing messaging — reframed toward forensic engineering and tool building
 
 Progress: [████████████████████] 100% v1.0 complete
 
