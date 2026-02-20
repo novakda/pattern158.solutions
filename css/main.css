@@ -2710,12 +2710,27 @@ footer a:hover {
 
 @media (max-width: 768px) {
     /* Mobile spacing overrides — recover horizontal space */
-    .container {
+    .container,
+    .page-index .container,
+    .page-testimonials .container,
+    .page-exhibit .container {
         padding: 0 0.75rem;
     }
 
-    section {
+    section,
+    .page-index section,
+    .page-testimonials section,
+    .page-exhibit .report-section {
         padding: var(--space-2xl) 0.75rem;
+    }
+
+    /* Cards — tighten inner padding on mobile */
+    .finding-card,
+    .exhibit-card,
+    .specialty-card,
+    .page-index .finding-card,
+    .page-index .specialty-card {
+        padding: var(--space-md);
     }
 
     /* Hero sections — reduce vertical dead space on mobile */
