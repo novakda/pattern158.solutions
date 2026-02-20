@@ -26,11 +26,49 @@
     --color-border-primary: rgba(14, 124, 140, 0.3);
     --color-hover-background: #f0f0f0;
     --color-text-timeline: #444;
+    --color-danger: #dc3545;
 
     /* --- Typography --- */
     --font-heading: 'Bebas Neue', 'Arial Black', sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+    /* Font Size Scale
+       Mapping from 24 unique hardcoded values:
+       xs (0.75rem): 0.7rem, 0.75rem
+       sm (0.875rem): 0.8rem, 0.85rem, 0.9rem, 0.95rem
+       base (1rem): 1rem
+       md (1.125rem): 1.05rem, 1.1rem
+       lg (1.25rem): 1.2rem, 1.25rem, 1.3rem
+       xl (1.5rem): 1.5rem, 1.6rem
+       2xl (1.875rem): 1.8rem
+       3xl (2.25rem): 2rem, 2.2rem, 2.25rem, 2.5rem
+       4xl (3.5rem): 3rem, 3.5rem
+       5xl (5rem): 4rem, 6rem
+       Note: code blocks use 0.9em (relative) - not tokenized
+    */
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-md: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.875rem;
+    --font-size-3xl: 2.25rem;
+    --font-size-4xl: 3.5rem;
+    --font-size-5xl: 5rem;
+
+    /* Line Height Scale (paired with font-size tokens) */
+    --line-height-xs: 1.4;
+    --line-height-sm: 1.5;
+    --line-height-base: 1.6;
+    --line-height-md: 1.6;
+    --line-height-lg: 1.6;
+    --line-height-xl: 1.5;
+    --line-height-2xl: 1.4;
+    --line-height-3xl: 1.3;
+    --line-height-4xl: 1.2;
+    --line-height-5xl: 1.1;
 
     /* --- Spacing --- */
     --space-xs: 0.25rem;
@@ -99,6 +137,9 @@
     --overlay-hero: rgba(26, 40, 56, 0.80);
     --overlay-grid-line: rgba(14, 124, 140, 0.08);
     --overlay-hover-row: rgba(14, 124, 140, 0.1);
+
+    /* Colors: maintain same danger color in dark mode */
+    --color-danger: #dc3545;
 }
 
 /* Footer dark mode override to maintain dark appearance */
