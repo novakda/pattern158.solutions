@@ -176,7 +176,7 @@
                                 <span class="role"></span>
                             </div>
                         </blockquote>
-                        <p style="margin-top: 0.8rem;"><span class="speaker">Dan notes:</span> "I have worked with General Dynamics before and am familiar with their issues with SuccessFactors."</p>
+                        <p class="solution-detail"><span class="speaker">Dan notes:</span> "I have worked with General Dynamics before and am familiar with their issues with SuccessFactors."</p>
                     </div>
                 </div>
 
@@ -211,7 +211,7 @@
                                 <span class="role">&mdash; identifying silent failure in PHP relay script</span>
                             </div>
                         </blockquote>
-                        <p style="margin-top: 0.8rem;">Identifies the PHP relay script (from Articulate) as having no error checking &mdash; silently failing on all cross-domain requests.</p>
+                        <p class="solution-detail">Identifies the PHP relay script (from Articulate) as having no error checking &mdash; silently failing on all cross-domain requests.</p>
                         <blockquote>
                             That SCORM wrapper does sound intriguing! We do more SCORM 2004 here than 1.2, but having both options would be very helpful!
                             <div class="attribution">
@@ -250,7 +250,7 @@
                                 <span class="role">&mdash; confirming cross-domain constraint</span>
                             </div>
                         </blockquote>
-                        <p style="margin-top: 0.8rem;"><span class="speaker">The Sr. Director</span> asks Dan: "Do you think it would be helpful to send you onsite?"</p>
+                        <p class="solution-detail"><span class="speaker">The Sr. Director</span> asks Dan: "Do you think it would be helpful to send you onsite?"</p>
                     </div>
                 </div>
 
@@ -409,7 +409,7 @@
                 <span class="section-number">4.</span>
                 <span class="section-title">Findings</span>
             </div>
-            <p style="margin-bottom: 1.5rem; font-size: 1rem; color: var(--color-text-medium);">The following five issues were identified and resolved during the on-site engagement at Electric Boat, August 15&ndash;16, 2018. This table reconstructs the summary report sent to EB leadership.</p>
+            <p class="report-intro">The following five issues were identified and resolved during the on-site engagement at Electric Boat, August 15&ndash;16, 2018. This table reconstructs the summary report sent to EB leadership.</p>
 
             <table class="resolution-table">
                 <thead>
@@ -466,7 +466,7 @@
 
             <div class="probable-cause-box">
                 <p>The investigation determined that the <strong>root cause</strong> was Electric Boat's cross-domain architecture: the Cornerstone LMS (hosted externally by Cornerstone OnDemand) and EB's content servers (hosted on the internal EB network) resided on <strong>different domains</strong>. The browser's <code>same-origin policy</code> blocked JavaScript LMS API calls between the course content and the LMS runtime. The Articulate-provided PHP relay script &mdash; intended to bridge this gap via AICC &mdash; had <strong>no error handling</strong> and was silently failing on all cross-domain POST requests.</p>
-                <p style="margin-top: 1rem;">The solution bypassed the AICC/relay architecture entirely by deploying a custom <strong>SCORM cross-domain wrapper</strong> that transparently proxied LMS API calls using <code>postMessage</code> and an intermediary iframe hosted on the LMS domain. This approach eliminated the single point of failure (Cornerstone Network Player) and restored reliable bidirectional communication between course content and the LMS.</p>
+                <p class="solution-detail">The solution bypassed the AICC/relay architecture entirely by deploying a custom <strong>SCORM cross-domain wrapper</strong> that transparently proxied LMS API calls using <code>postMessage</code> and an intermediary iframe hosted on the LMS domain. This approach eliminated the single point of failure (Cornerstone Network Player) and restored reliable bidirectional communication between course content and the LMS.</p>
             </div>
         </div>
     </section>
@@ -597,8 +597,8 @@
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
             <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
-            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-inverse-text-muted);">All quotations sourced from professional correspondence (2005&ndash;2022).</p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
+            <p class="footer-attribution">All quotations sourced from professional correspondence (2005&ndash;2022).</p>
         </div>
     </footer>
 

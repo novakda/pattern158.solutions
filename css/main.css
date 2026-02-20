@@ -528,6 +528,36 @@ footer a:hover {
         color: var(--color-text-muted);
         margin-top: var(--space-sm);
     }
+
+    /* ========== COMMON COMPONENTS ========== */
+    /* Footer tagline */
+    .footer-tagline {
+        margin-top: var(--space-md);
+        font-style: italic;
+        color: var(--color-primary);
+    }
+
+    /* Testimonial section divider */
+    .testimonial-divider {
+        margin-top: var(--space-2xl);
+        border-top: 1px solid var(--color-border);
+        padding-top: var(--space-2xl);
+    }
+
+    /* Section heading styled */
+    .section-heading-styled {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-xl);
+        color: var(--color-inverse);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Link in primary color */
+    .link-primary {
+        color: var(--color-primary);
+    }
 }
 
 @layer pages {
@@ -840,6 +870,12 @@ footer a:hover {
 .page-index .tuning-fork-section {
     text-align: center;
     padding: var(--space-2xl) 0;
+}
+
+.page-index .tuning-fork-section > p {
+    font-size: var(--font-size-lg);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .page-index .tuning-fork {
@@ -1254,6 +1290,10 @@ footer a:hover {
     font-size: var(--font-size-3xl);
     color: var(--color-heading);
     margin-bottom: var(--space-lg);
+}
+
+.page-contact .email-note + h2 {
+    margin-top: var(--space-2xl);
 }
 
 .page-contact .email-container {
@@ -2064,6 +2104,54 @@ footer a:hover {
     letter-spacing: 2px;
     color: var(--color-text-light);
     margin-bottom: var(--space-md);
+}
+
+/* ================================================================
+   SHARED EXHIBIT UTILITIES
+   ================================================================ */
+
+/* Common exhibit paragraph styles */
+.page-exhibit p[style*="margin-top: 0.8rem"],
+.page-exhibit-a p[style*="margin-top: 0.8rem"],
+.page-exhibit-b p[style*="margin-top: 0.8rem"] {
+    margin-top: var(--space-md);
+}
+
+.footer-attribution {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-sm);
+    color: var(--color-inverse-text-muted);
+}
+
+.report-intro {
+    margin-bottom: var(--space-lg);
+    font-size: var(--font-size-base);
+    color: var(--color-text-medium);
+}
+
+.solution-detail {
+    margin-top: var(--space-md);
+}
+
+.sub-heading {
+    margin-top: var(--space-lg);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+}
+
+.detail-list {
+    margin: var(--space-md) 0 var(--space-md) var(--space-xl);
+    line-height: 1.8;
+}
+
+.note-muted {
+    font-size: var(--font-size-sm);
+    color: var(--color-inverse-text-muted);
+    margin-top: var(--space-sm);
+}
+
+.impact-tags-container {
+    margin-top: var(--space-lg);
 }
 
 /* ================================================================
@@ -3507,5 +3595,14 @@ footer a:hover {
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border-width: 0;
+    }
+
+    /* Section background utilities */
+    .section-surface {
+        background: var(--color-surface);
+    }
+
+    .section-alt {
+        background: var(--color-background-alt);
     }
 }

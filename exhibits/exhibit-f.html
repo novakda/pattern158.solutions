@@ -204,13 +204,13 @@
                 <h2>Technical Contributions</h2>
                 <p>Dan&rsquo;s contributions to the HSBC engagement spanned protocol-level debugging, forensic asset recovery, and international deployment coordination:</p>
 
-                <h3 style="margin-top: 1.5rem; font-size: 1.1rem; font-weight: 600;">3a. SCORM API Wrapper Bug Discovery</h3>
+                <h3 class="sub-heading">3a. SCORM API Wrapper Bug Discovery</h3>
                 <p>While debugging course completion failures on HSBC&rsquo;s SuccessFactors instance, Dan traced the root cause to a bug in the vendor-built <code>SCORM_API_wrapper.js</code>. The wrapper was setting an incorrect <code>cmi.core.exit</code> value, causing the LMS to improperly terminate user sessions. This was not a content issue &mdash; it was a platform-level bug embedded in the communication layer between courses and the LMS. The fix restored reliable completion tracking across HSBC&rsquo;s entire course catalog.</p>
 
-                <h3 style="margin-top: 1.5rem; font-size: 1.1rem; font-weight: 600;">3b. Flash Legacy Content Recovery</h3>
+                <h3 class="sub-heading">3b. Flash Legacy Content Recovery</h3>
                 <p>When HSBC needed to update legacy Flash-based courses but the original FLA source files had been lost, Dan decompiled the published SWF files to recover the source content. This forensic recovery process extracted assets, ActionScript code, and timeline data from compiled binaries &mdash; enabling course updates that would otherwise have required complete rebuilds from scratch.</p>
 
-                <h3 style="margin-top: 1.5rem; font-size: 1.1rem; font-weight: 600;">3c. Global Localization Debugging</h3>
+                <h3 class="sub-heading">3c. Global Localization Debugging</h3>
                 <p>A localized HTML5 Sales Suitability course was failing to deploy correctly on HSBC&rsquo;s global SAP SuccessFactors instance. The deployment spanned teams in Mexico, India, and the Philippines. Dan diagnosed the SCORM deployment issues and coordinated the fix across international stakeholders, navigating time zones, language barriers, and regional LMS configuration differences.</p>
             </div>
 
@@ -277,8 +277,8 @@
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
             <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
-            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-inverse-text-muted);">All quotations sourced from professional correspondence (2005&ndash;2022).</p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
+            <p class="footer-attribution">All quotations sourced from professional correspondence (2005&ndash;2022).</p>
         </div>
     </footer>
 

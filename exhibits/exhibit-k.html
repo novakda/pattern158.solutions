@@ -198,7 +198,7 @@
             <div class="background-content">
                 <p>The core challenge: pure prompt engineering cannot reliably enforce <strong>deterministic state</strong>. A declarative agent can be told &ldquo;track which lessons the user has completed,&rdquo; but LLMs are probabilistic &mdash; they approximate, hallucinate, and lose context across conversation boundaries. For a training application, this is catastrophic:</p>
 
-                <ul style="margin: var(--space-md) 0 var(--space-md) var(--space-xl); line-height: 1.8;">
+                <ul class="detail-list">
                     <li>Progress tracking must be <strong>deterministic</strong>, not approximate</li>
                     <li>Course sequence must be <strong>enforced</strong>, not suggested</li>
                     <li>Assessment scores must be <strong>persisted</strong>, not remembered</li>
@@ -220,7 +220,7 @@
             <div class="background-content">
                 <p>The breakthrough was separating concerns: <strong>structured data for state, AI for interaction</strong>. Instead of asking the LLM to track everything, the architecture used structured JSON for all deterministic operations and reserved AI capabilities for what AI does well &mdash; content transformation, natural language interaction, and adaptive responses.</p>
 
-                <ul style="margin: var(--space-md) 0 var(--space-md) var(--space-xl); line-height: 1.8;">
+                <ul class="detail-list">
                     <li><strong>Structured JSON</strong> for course catalog, progress tracking, and state persistence</li>
                     <li><strong>AI code interpreter</strong> for content transformation and dynamic response generation</li>
                     <li><strong>Adaptive Cards</strong> for navigation UI, assessments, and structured learner interactions</li>
@@ -299,7 +299,7 @@
                 <p>When you separate what needs to be deterministic (state, progress, scores) from what benefits from intelligence (content presentation, adaptive interaction, natural language), you get a system that&rsquo;s both smarter and more reliable than either approach alone.</p>
             </div>
 
-            <div class="impact-tags" style="margin-top: var(--space-lg);">
+            <div class="impact-tags" class="impact-tags-container">
                 <span class="impact-tag highlight">Zero to POC in ~4 Weeks</span>
                 <span class="impact-tag highlight">Hybrid AI Architecture</span>
                 <span class="impact-tag">Copilot Studio</span>
@@ -326,7 +326,7 @@
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
             <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
-            <p style="margin-top: 1rem; font-style: italic; color: var(--color-primary);">Pattern 158: I cheat, but I cheat fair.</p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
         </div>
     </footer>
 

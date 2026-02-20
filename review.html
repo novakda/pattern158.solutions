@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Index — Session Changes</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: #1a1a2e; color: #e0e0e0; padding: 2rem; max-width: 900px; margin: 0 auto; line-height: 1.6; }
+        h1 { color: #f0c040; margin-bottom: 0.5rem; font-size: 1.8rem; }
+        .subtitle { color: #888; margin-bottom: 2rem; font-size: 0.9rem; }
+        .pass { background: #16213e; border: 1px solid #2a2a4a; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; }
+        .pass h2 { color: #f0c040; font-size: 1.1rem; margin-bottom: 0.25rem; }
+        .pass .version { color: #888; font-size: 0.8rem; margin-bottom: 0.75rem; }
+        .pass ul { margin: 0.5rem 0 0.75rem 1.5rem; }
+        .pass li { margin-bottom: 0.3rem; }
+        .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+        .links a { display: inline-block; background: #0f3460; color: #e0e0e0; padding: 0.4rem 0.8rem; border-radius: 4px; text-decoration: none; font-size: 0.85rem; }
+        .links a:hover { background: #1a5276; }
+        .fix { border-left: 3px solid #e74c3c; }
+        .enrich { border-left: 3px solid #2ecc71; }
+        .structural { border-left: 3px solid #3498db; }
+        .tag { display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.4rem; border-radius: 3px; margin-left: 0.5rem; vertical-align: middle; }
+        .tag-fix { background: #5c1a1a; color: #e74c3c; }
+        .tag-enrich { background: #1a3c1a; color: #2ecc71; }
+        .tag-structural { background: #1a2a3c; color: #3498db; }
+        .warning { background: #2c1810; border: 1px solid #e74c3c; border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 2rem; font-size: 0.85rem; color: #e7a08c; }
+    </style>
+</head>
+<body>
+    <h1>Review Index</h1>
+    <p class="subtitle">All changes from this session — 21 commits ahead of origin/main. Delete this file before pushing.</p>
+
+    <div class="warning">
+        <strong>TEMPORARY FILE</strong> — Do not commit. Delete after review.
+    </div>
+
+    <!-- v1.3 -->
+    <div class="pass enrich">
+        <h2>v1.3 — Testimonial Curation <span class="tag tag-enrich">enrichment</span></h2>
+        <div class="version">Branch: milestone/v1.3-testimonial-curation</div>
+        <ul>
+            <li>index.html — Swapped teaser quote #1 to GDEB Rando "Dan's technical expertise is tremendous..."</li>
+            <li>contact.html — Swapped quote #1 to Microsoft Radloff "helped us move the bar"</li>
+            <li>testimonials.html — Updated Exhibit D/G/H/I cards, replaced PNC with Microsoft in Recurring Patterns</li>
+        </ul>
+        <div class="links">
+            <a href="/index.html">index.html</a>
+            <a href="/contact.html">contact.html</a>
+            <a href="/testimonials.html">testimonials.html</a>
+        </div>
+    </div>
+
+    <!-- v1.4 -->
+    <div class="pass enrich">
+        <h2>v1.4 — Exhibit A Enrichment (Electric Boat 2015–2022) <span class="tag tag-enrich">enrichment</span></h2>
+        <div class="version">Branch: milestone/v1.4-exhibit-a-enrichment</div>
+        <ul>
+            <li>Extended timeline with 5 new entries (2019 on-site, peak year, SCORM 2004, final engagement)</li>
+            <li>New Section 8: "Continued Engagement (2019–2022)" with by-the-numbers box</li>
+            <li>Expanded Section 7 evidence with Vahlsing + Rando cards</li>
+            <li>Updated testimonials.html card date and title</li>
+        </ul>
+        <div class="links">
+            <a href="/exhibits/exhibit-a.html">exhibit-a.html</a>
+            <a href="/testimonials.html#exhibits">testimonials.html card</a>
+        </div>
+    </div>
+
+    <!-- v1.5 -->
+    <div class="pass enrich">
+        <h2>v1.5 — Testimonial Placement (Philosophy + FAQ) <span class="tag tag-enrich">enrichment</span></h2>
+        <div class="version">Branch: milestone/v1.5-testimonial-placement</div>
+        <ul>
+            <li>philosophy.html — Added Huchital (Microsoft) + Stacy George (Entergy) quotes</li>
+            <li>faq.html — Added Juliana Ma (GP) + Max Glick (Accessibility) quotes</li>
+        </ul>
+        <div class="links">
+            <a href="/philosophy.html">philosophy.html</a>
+            <a href="/faq.html">faq.html</a>
+        </div>
+    </div>
+
+    <!-- Consistency fix -->
+    <div class="pass fix">
+        <h2>Cross-Page Consistency Fix <span class="tag tag-fix">fix</span></h2>
+        <div class="version">Branch: fix/cross-page-consistency</div>
+        <ul>
+            <li>testimonials.html classification "2009–2022" → "2005–2022"</li>
+            <li>Exhibit G card date "March 2016" → "2015–2018"</li>
+            <li>Exhibit I card date "August 2022" → "2021–2024"</li>
+        </ul>
+        <div class="links">
+            <a href="/testimonials.html">testimonials.html</a>
+        </div>
+    </div>
+
+    <!-- v1.6 -->
+    <div class="pass enrich">
+        <h2>v1.6 — Exhibit F Rewrite (HSBC) <span class="tag tag-enrich">enrichment</span></h2>
+        <div class="version">Branch: milestone/v1.6-exhibit-f-rewrite</div>
+        <ul>
+            <li>Full rewrite from thin stub to 6-section NTSB-style report</li>
+            <li>3 technical stories: SCORM API bug, Flash decompilation, global localization</li>
+            <li>New personnel table, evidence section, findings, significance box</li>
+            <li>Updated testimonials.html card</li>
+        </ul>
+        <div class="links">
+            <a href="/exhibits/exhibit-f.html">exhibit-f.html</a>
+            <a href="/testimonials.html#exhibits">testimonials.html card</a>
+        </div>
+    </div>
+
+    <!-- v1.7 -->
+    <div class="pass enrich">
+        <h2>v1.7 — Exhibit B Enrichment (Dual Recognition Cascade) <span class="tag tag-enrich">enrichment</span><span class="tag tag-fix">fix</span></h2>
+        <div class="version">Branch: milestone/v1.7-exhibit-b-enrichment</div>
+        <ul>
+            <li><strong>Fix:</strong> Schultz quote re-dated from Aug 2018 to May 2019 (vault-confirmed)</li>
+            <li><strong>Fix:</strong> Quote attributions corrected to Director of Learning Technologies</li>
+            <li>Expanded from single incident to dual-cascade pattern (Aug 2018 + Apr 2019)</li>
+            <li>Added 6-entry timeline showing both cascades</li>
+            <li>New Section 5: Second Recognition Cascade with named sources</li>
+            <li>New Section 6: Pattern Analysis (speed, independence, cross-level, repeatability)</li>
+        </ul>
+        <div class="links">
+            <a href="/exhibits/exhibit-b.html">exhibit-b.html</a>
+            <a href="/testimonials.html#exhibits">testimonials.html card</a>
+        </div>
+    </div>
+
+    <!-- v1.8 -->
+    <div class="pass enrich">
+        <h2>v1.8 — Exhibit K Enrichment (Microsoft MCAPS AI Agent) <span class="tag tag-enrich">enrichment</span><span class="tag tag-fix">fix</span></h2>
+        <div class="version">Branch: milestone/v1.8-exhibit-k-enrichment</div>
+        <ul>
+            <li>Added 10-year GP Strategies/Microsoft relationship context to Background</li>
+            <li>Added personnel table — <strong>Max Glick as lead dev</strong>, Dan as R&D/implementation support</li>
+            <li>Added impact tags to exhibit page</li>
+            <li>Updated testimonials.html card with relationship context</li>
+        </ul>
+        <div class="links">
+            <a href="/exhibits/exhibit-k.html">exhibit-k.html</a>
+            <a href="/testimonials.html#exhibits">testimonials.html card</a>
+        </div>
+    </div>
+
+    <!-- Exhibit L -->
+    <div class="pass structural">
+        <h2>Exhibit L Structural (Power Platform Audit) <span class="tag tag-structural">structural</span></h2>
+        <div class="version">Branch: fix/exhibit-l-structural</div>
+        <ul>
+            <li>Added 4-role personnel table</li>
+            <li>Added impact tags (Diagnosis as Deliverable, 5 Foundational Gaps, etc.)</li>
+        </ul>
+        <div class="links">
+            <a href="/exhibits/exhibit-l.html">exhibit-l.html</a>
+        </div>
+    </div>
+
+</body>
+</html>
