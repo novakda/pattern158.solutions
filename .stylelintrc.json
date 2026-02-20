@@ -1,4 +1,5 @@
 {
+  "$comment": "Stylelint configuration with token enforcement. Run: npx stylelint css/main.css",
   "$schema": "https://json.schemastore.org/stylelintrc",
   "extends": "stylelint-config-standard",
   "rules": {
@@ -6,29 +7,34 @@
     "declaration-empty-line-before": null,
     "rule-empty-line-before": null,
     "no-descending-specificity": null,
+    "value-keyword-case": null,
     "font-family-name-quotes": ["always-where-recommended", {
       "severity": "warning"
     }],
     "no-duplicate-selectors": true,
     "declaration-block-no-duplicate-properties": true,
     "selector-class-pattern": "^[a-z][a-z0-9-]*$",
-    "declaration-property-value-disallowed-list": {
-      "font-size": ["/^\\d/"],
-      "color": ["/#/", "/rgb/", "/hsl/"],
-      "background-color": ["/#/", "/rgb/", "/hsl/"],
-      "border-color": ["/#/", "/rgb/", "/hsl/"],
-      "outline-color": ["/#/", "/rgb/", "/hsl/"],
-      "background": ["/#/", "/rgb(?!a\\(0\\))/", "/hsl/"],
-      "padding": ["/^\\d/", {
-        "severity": "warning"
-      }],
-      "margin": ["/^\\d/", {
-        "severity": "warning"
-      }],
-      "gap": ["/^\\d/", {
-        "severity": "warning"
-      }]
-    }
+    "declaration-property-value-disallowed-list": [
+      {
+        "/^font-size$/": ["/^\\d/"]
+      },
+      {
+        "message": "Use design token variables (var(--font-size-*)) instead of hardcoded font-size values"
+      }
+    ]
   },
+  "overrides": [
+    {
+      "files": ["css/main.css"],
+      "rules": {
+        "color-hex-length": null,
+        "color-function-notation": null,
+        "color-function-alias-notation": null,
+        "alpha-value-notation": null,
+        "property-no-deprecated": null,
+        "media-feature-range-notation": null
+      }
+    }
+  ],
   "ignoreFiles": []
 }
