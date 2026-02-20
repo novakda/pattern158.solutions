@@ -150,6 +150,7 @@ select:focus,
 .hero a:focus,
 .hero button:focus,
 nav a:focus,
+nav button:focus,
 header a:focus {
     outline: 2px solid var(--color-inverse-text);
     outline-offset: 2px;
@@ -299,6 +300,7 @@ nav a:hover {
     background-color: currentColor;
     border-radius: 2px;
     position: absolute;
+    left: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -318,7 +320,7 @@ nav a:hover {
 }
 
 .hamburger.is-active .hamburger-inner {
-    transform: rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
 }
 
 .hamburger.is-active .hamburger-inner::before {
