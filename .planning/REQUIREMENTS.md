@@ -9,10 +9,10 @@ Requirements for the Comprehensive Quality Audit & Polish milestone. Each maps t
 
 ### CSS Foundation
 
-- [ ] **CSS-04**: All CSS values use design tokens — zero hardcoded colors, spacing, or font sizes in selectors
+- [x] **CSS-04**: All CSS values use design tokens — zero hardcoded colors, spacing, or font sizes in selectors
 - [ ] **CSS-05**: Shared components (stats bars, cards, buttons) extracted to global CSS section — page-scoped sections contain only overrides
 - [ ] **CSS-06**: Zero `!important` declarations — clean specificity cascade throughout stylesheet
-- [ ] **CSS-07**: Font-size token system added (`--font-size-xs` through `--font-size-5xl`) with consistent usage across all pages
+- [x] **CSS-07**: Font-size token system added (`--font-size-xs` through `--font-size-5xl`) with consistent usage across all pages
 
 ### Content & Information Architecture
 
@@ -109,10 +109,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CSS-04 | Phase 7 | Pending |
+| CSS-04 | Phase 7 | Complete |
 | CSS-05 | Phase 7 | Pending |
 | CSS-06 | Phase 7 | Pending |
-| CSS-07 | Phase 7 | Pending |
+| CSS-07 | Phase 7 | Complete |
 | CONTENT-01 | Phase 8 | Pending |
 | CONTENT-02 | Phase 8 | Pending |
 | CONTENT-03 | Phase 8 | Pending |
