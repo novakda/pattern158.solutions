@@ -1,7 +1,9 @@
 /* ================================================================
    Pattern 158 Solutions - Design System
-   Pass 2: Consolidated with semantic tokens and scoped page styles
+   Pass 3: Cascade layers with extracted shared components
    ================================================================ */
+
+@layer reset, base, components, pages, utilities;
 
 /* === DESIGN TOKENS === */
 :root {
@@ -148,13 +150,16 @@
     color: var(--color-text);
 }
 
-/* === RESET === */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@layer reset {
+    /* === RESET === */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 }
 
+@layer base {
 /* === BASE TYPOGRAPHY === */
 body {
     font-family: var(--font-body);
@@ -407,6 +412,9 @@ footer a:hover {
     text-decoration: underline;
 }
 
+}
+
+@layer components {
 /* === COMPONENTS === */
 
 /* Shared button styles */
@@ -491,6 +499,38 @@ footer a:hover {
     opacity: 0.9;
 }
 
+
+    /* ========== SHARED COMPONENTS (EXTRACTED) ========== */
+    /* Stats Bar - extracted from testimonials and portfolio pages */
+    .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: var(--space-lg);
+    }
+
+    .stat-item {
+        padding: var(--space-lg) var(--space-md);
+        border-top: 4px solid var(--color-primary);
+        text-align: center;
+        background: var(--color-surface);
+        border-radius: var(--radius-md);
+    }
+
+    .stat-number {
+        font-family: var(--font-heading);
+        font-size: var(--font-size-3xl);
+        color: var(--color-primary);
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-size: var(--font-size-xs);
+        color: var(--color-text-muted);
+        margin-top: var(--space-sm);
+    }
+}
+
+@layer pages {
 /* ================================================================
    PAGE: Index
    ================================================================ */
@@ -1498,29 +1538,16 @@ footer a:hover {
     line-height: 1.8;
 }
 
+/* Stats-bar overrides for testimonials page */
 .page-testimonials .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--space-lg);
     margin-top: var(--space-2xl);
 }
 
 .page-testimonials .stat-item {
     background: var(--color-background);
-    padding: var(--space-lg) var(--space-md);
-    border-top: 4px solid var(--color-primary);
-}
-
-.page-testimonials .stat-number {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-3xl);
-    color: var(--color-primary);
-    line-height: 1;
 }
 
 .page-testimonials .stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
     margin-top: 0.3rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3430,31 +3457,7 @@ footer a:hover {
     padding: var(--space-3xl) 0;
 }
 
-.page-portfolio .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--space-lg);
-}
-
-.page-portfolio .stat-item {
-    background: var(--color-surface);
-    padding: var(--space-lg) var(--space-md);
-    border-top: 4px solid var(--color-primary);
-    text-align: center;
-}
-
-.page-portfolio .stat-number {
-    font-family: var(--font-heading);
-    font-size: var(--font-size-3xl);
-    color: var(--color-primary);
-    line-height: 1;
-}
-
-.page-portfolio .stat-label {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-muted);
-    margin-top: var(--space-sm);
-}
+/* Stats-bar for portfolio page uses default styles from components layer */
 
 /* --- Portfolio Responsive --- */
 @media (max-width: 768px) {
@@ -3487,5 +3490,22 @@ footer a:hover {
 
     .page-portfolio .stat-number {
         font-size: var(--font-size-3xl);
+    }
+}
+
+}
+
+@layer utilities {
+    /* === UTILITY CLASSES === */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
     }
 }
