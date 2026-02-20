@@ -2709,6 +2709,40 @@ footer a:hover {
    ================================================================ */
 
 @media (max-width: 768px) {
+    /* Mobile spacing overrides — recover horizontal space */
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    section {
+        padding: var(--space-2xl) 0.75rem;
+    }
+
+    /* Hero sections — reduce vertical dead space on mobile */
+    .hero-minimal {
+        padding: var(--space-2xl) 0.75rem;
+    }
+
+    .page-index .hero {
+        padding: var(--space-3xl) 0.75rem;
+        min-height: 480px;
+    }
+
+    .page-testimonials .hero,
+    .page-exhibit .hero {
+        padding: var(--space-2xl) 0.75rem;
+    }
+
+    /* Nested element padding — prevent compounding with container */
+    .page-portfolio .flagship-card {
+        padding: var(--space-md);
+    }
+
+    /* Footer — tighten on mobile */
+    footer {
+        padding: var(--space-md) 0.75rem;
+    }
+
     /* Global navigation - Mobile hamburger menu */
     .hamburger {
         display: block;
@@ -2828,17 +2862,17 @@ footer a:hover {
     }
 
     .page-faq details summary {
-        padding: 0.75rem 2.5rem 0.75rem var(--space-md);
+        padding: 0.75rem 2.5rem 0.75rem var(--space-sm);
         font-size: 0.95rem;
     }
 
     .page-faq details summary::after {
-        right: var(--space-md);
+        right: var(--space-sm);
         font-size: 1.25rem;
     }
 
     .page-faq .faq-answer {
-        padding: var(--space-md);
+        padding: var(--space-sm);
         font-size: 0.95rem;
     }
 
@@ -2866,7 +2900,7 @@ footer a:hover {
     }
 
     .page-contact .guidance-list li {
-        padding: 0.75rem var(--space-md);
+        padding: 0.75rem var(--space-sm);
     }
 
     .page-contact .quote-text {
@@ -3008,7 +3042,7 @@ footer a:hover {
     }
 
     .page-testimonials blockquote {
-        padding: 0.8rem var(--space-md);
+        padding: 0.6rem var(--space-sm);
     }
 
     /* Exhibit pages (shared) */
@@ -3032,7 +3066,7 @@ footer a:hover {
     }
 
     .page-exhibit blockquote {
-        padding: 0.8rem var(--space-md);
+        padding: 0.6rem var(--space-sm);
         font-size: 1rem;
     }
 
@@ -3374,7 +3408,7 @@ footer a:hover {
     }
 
     .page-portfolio .flagship-card {
-        padding: var(--space-lg);
+        padding: var(--space-md);
     }
 
     .page-portfolio .impact-tag {
