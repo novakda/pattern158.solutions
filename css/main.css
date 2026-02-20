@@ -2896,13 +2896,115 @@ footer a:hover {
         margin-left: 0;
     }
 
-    .page-testimonials .resolution-table {
-        font-size: 0.8rem;
+    /* Mobile card transformation for all tables */
+    .directory-table,
+    .personnel-table,
+    .resolution-table {
+        display: block;
+        border: none;
     }
 
-    .page-testimonials .resolution-table th,
-    .page-testimonials .resolution-table td {
-        padding: var(--space-sm);
+    .directory-table thead,
+    .personnel-table thead,
+    .resolution-table thead {
+        display: none;
+    }
+
+    .directory-table tbody,
+    .personnel-table tbody,
+    .resolution-table tbody {
+        display: block;
+    }
+
+    .directory-table tr,
+    .personnel-table tr,
+    .resolution-table tr {
+        display: block;
+        background: var(--color-surface);
+        margin-bottom: var(--space-md);
+        padding: var(--space-md);
+        border-left: 4px solid var(--color-primary);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        position: relative;
+        transition: box-shadow 0.2s;
+    }
+
+    .directory-table tr:hover,
+    .personnel-table tr:hover,
+    .resolution-table tr:hover {
+        box-shadow: var(--shadow-hover);
+    }
+
+    .directory-table td,
+    .personnel-table td,
+    .resolution-table td {
+        display: block;
+        padding: var(--space-xs) 0;
+        border-bottom: none;
+        border: none;
+        font-size: 0.9rem;
+    }
+
+    .directory-table td::before,
+    .personnel-table td::before,
+    .resolution-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    /* Colspan rows (summary/note rows) */
+    .directory-table td[colspan],
+    .personnel-table td[colspan],
+    .resolution-table td[colspan] {
+        border-left-color: var(--color-border);
+        font-style: italic;
+    }
+
+    .directory-table td[colspan]::before,
+    .personnel-table td[colspan]::before,
+    .resolution-table td[colspan]::before {
+        display: none;
+    }
+
+    /* Directory table specific (portfolio page) */
+    .directory-table td:first-child {
+        font-weight: 700;
+        color: var(--color-heading);
+        margin-bottom: var(--space-xs);
+    }
+
+    .directory-table-wrap {
+        overflow-x: visible;
+    }
+
+    /* Personnel table specific (exhibit pages) */
+    .personnel-table td:first-child {
+        font-weight: 700;
+        color: var(--color-heading);
+    }
+
+    /* Resolution table specific (testimonials + exhibits) */
+    .resolution-table .issue-id {
+        position: absolute;
+        top: var(--space-md);
+        right: var(--space-md);
+        font-family: var(--font-mono);
+        background: var(--color-background-alt);
+        display: inline-block;
+        padding: 0.1rem 0.5rem;
+        border-radius: var(--radius-pill);
+        font-size: 0.75rem;
+    }
+
+    .resolution-table .issue-id::before {
+        display: none;
     }
 
     .page-testimonials blockquote {
@@ -2951,29 +3053,6 @@ footer a:hover {
         left: -2.35rem;
     }
 
-    .page-exhibit-j .personnel-table,
-    .page-exhibit-j .resolution-table,
-    .page-exhibit-k .personnel-table,
-    .page-exhibit-k .resolution-table,
-    .page-exhibit-l .personnel-table,
-    .page-exhibit-l .resolution-table {
-        font-size: 0.8rem;
-    }
-
-    .page-exhibit-j .personnel-table th,
-    .page-exhibit-j .personnel-table td,
-    .page-exhibit-j .resolution-table th,
-    .page-exhibit-j .resolution-table td,
-    .page-exhibit-k .personnel-table th,
-    .page-exhibit-k .personnel-table td,
-    .page-exhibit-k .resolution-table th,
-    .page-exhibit-k .resolution-table td,
-    .page-exhibit-l .personnel-table th,
-    .page-exhibit-l .personnel-table td,
-    .page-exhibit-l .resolution-table th,
-    .page-exhibit-l .resolution-table td {
-        padding: var(--space-sm);
-    }
 
     .page-exhibit-l .requirements-chain {
         flex-direction: column;
@@ -3000,17 +3079,6 @@ footer a:hover {
         left: -2.35rem;
     }
 
-    .page-exhibit .personnel-table,
-    .page-exhibit .resolution-table {
-        font-size: 0.8rem;
-    }
-
-    .page-exhibit .personnel-table th,
-    .page-exhibit .personnel-table td,
-    .page-exhibit .resolution-table th,
-    .page-exhibit .resolution-table td {
-        padding: var(--space-sm);
-    }
 
     .page-exhibit .outcome-metrics {
         grid-template-columns: 1fr;
@@ -3314,14 +3382,6 @@ footer a:hover {
         padding: 0.2rem 0.5rem;
     }
 
-    .page-portfolio .directory-table {
-        font-size: 0.8rem;
-    }
-
-    .page-portfolio .directory-table th,
-    .page-portfolio .directory-table td {
-        padding: var(--space-sm);
-    }
 
     .page-portfolio .stat-number {
         font-size: 2rem;
