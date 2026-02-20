@@ -159,29 +159,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Max Glick</strong></td>
-                        <td>Lead Developer, GP Strategies</td>
-                        <td>Technical lead on the Copilot Studio implementation. Drove overall architecture and delivery.</td>
+                        <td data-label="Name"><strong>Max Glick</strong></td>
+                        <td data-label="Role">Lead Developer, GP Strategies</td>
+                        <td data-label="Involvement">Technical lead on the Copilot Studio implementation. Drove overall architecture and delivery.</td>
                     </tr>
                     <tr>
-                        <td><strong>Dan Novak</strong></td>
-                        <td>AI Agent Developer, GP Strategies</td>
-                        <td>R&amp;D, experimentation, and implementation support. Designed and built components, variables, and flows in Copilot Studio. Developed the hybrid AI/structured-data architecture concept.</td>
+                        <td data-label="Name"><strong>Dan Novak</strong></td>
+                        <td data-label="Role">AI Agent Developer, GP Strategies</td>
+                        <td data-label="Involvement">R&amp;D, experimentation, and implementation support. Designed and built components, variables, and flows in Copilot Studio. Developed the hybrid AI/structured-data architecture concept.</td>
                     </tr>
                     <tr>
-                        <td><strong>&mdash;</strong></td>
-                        <td>Instructional Designer, GP Strategies</td>
-                        <td>Course content author. Provided training content and learning objectives for the agent.</td>
+                        <td data-label="Name"><strong>&mdash;</strong></td>
+                        <td data-label="Role">Instructional Designer, GP Strategies</td>
+                        <td data-label="Involvement">Course content author. Provided training content and learning objectives for the agent.</td>
                     </tr>
                     <tr>
-                        <td><strong>&mdash;</strong></td>
-                        <td>Project Manager, GP Strategies</td>
-                        <td>Microsoft account relationship. Coordinated between GP Strategies development and MCAPS stakeholders.</td>
+                        <td data-label="Name"><strong>&mdash;</strong></td>
+                        <td data-label="Role">Project Manager, GP Strategies</td>
+                        <td data-label="Involvement">Microsoft account relationship. Coordinated between GP Strategies development and MCAPS stakeholders.</td>
                     </tr>
                     <tr>
-                        <td><strong>&mdash;</strong></td>
-                        <td>MCAPS Program Lead, Microsoft</td>
-                        <td>Defined training requirements. Originated the AI-Led Training concept and commissioned the rebuild.</td>
+                        <td data-label="Name"><strong>&mdash;</strong></td>
+                        <td data-label="Role">MCAPS Program Lead, Microsoft</td>
+                        <td data-label="Involvement">Defined training requirements. Originated the AI-Led Training concept and commissioned the rebuild.</td>
                     </tr>
                 </tbody>
             </table>
@@ -250,29 +250,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Course Catalog</strong></td>
-                        <td>Structured JSON</td>
-                        <td>Deterministic course structure, sequence, and metadata. No hallucination risk for course content or ordering.</td>
+                        <td data-label="Component"><strong>Course Catalog</strong></td>
+                        <td data-label="Approach">Structured JSON</td>
+                        <td data-label="Rationale">Deterministic course structure, sequence, and metadata. No hallucination risk for course content or ordering.</td>
                     </tr>
                     <tr>
-                        <td><strong>Progress Tracking</strong></td>
-                        <td>JSON State Object</td>
-                        <td>Persists across conversation boundaries. Exact completion status, not LLM approximation.</td>
+                        <td data-label="Component"><strong>Progress Tracking</strong></td>
+                        <td data-label="Approach">JSON State Object</td>
+                        <td data-label="Rationale">Persists across conversation boundaries. Exact completion status, not LLM approximation.</td>
                     </tr>
                     <tr>
-                        <td><strong>Navigation</strong></td>
-                        <td>Adaptive Cards</td>
-                        <td>Structured UI buttons enforce valid navigation paths. Users can&rsquo;t accidentally skip or repeat lessons.</td>
+                        <td data-label="Component"><strong>Navigation</strong></td>
+                        <td data-label="Approach">Adaptive Cards</td>
+                        <td data-label="Rationale">Structured UI buttons enforce valid navigation paths. Users can&rsquo;t accidentally skip or repeat lessons.</td>
                     </tr>
                     <tr>
-                        <td><strong>Assessments</strong></td>
-                        <td>Adaptive Cards + Scoring</td>
-                        <td>Deterministic scoring with structured answer validation. No LLM interpretation of whether an answer is &ldquo;close enough.&rdquo;</td>
+                        <td data-label="Component"><strong>Assessments</strong></td>
+                        <td data-label="Approach">Adaptive Cards + Scoring</td>
+                        <td data-label="Rationale">Deterministic scoring with structured answer validation. No LLM interpretation of whether an answer is &ldquo;close enough.&rdquo;</td>
                     </tr>
                     <tr>
-                        <td><strong>Content Delivery</strong></td>
-                        <td>Copilot Studio Topic Flow</td>
-                        <td>AI code interpreter transforms structured content into natural conversation. The AI handles presentation; the data handles truth.</td>
+                        <td data-label="Component"><strong>Content Delivery</strong></td>
+                        <td data-label="Approach">Copilot Studio Topic Flow</td>
+                        <td data-label="Rationale">AI code interpreter transforms structured content into natural conversation. The AI handles presentation; the data handles truth.</td>
                     </tr>
                 </tbody>
             </table>

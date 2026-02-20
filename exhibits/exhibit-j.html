@@ -155,16 +155,16 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="person-name">Director / Investigation Lead</td>
-                        <td>Project authorization, stakeholder management, investigation oversight</td>
+                        <td class="person-name" data-label="Role">Director / Investigation Lead</td>
+                        <td data-label="Responsibility">Project authorization, stakeholder management, investigation oversight</td>
                     </tr>
                     <tr>
-                        <td class="person-name">Technical Forensics (Dan Novak)</td>
-                        <td>Fiddler traces, browser debugging, code analysis, architecture review</td>
+                        <td class="person-name" data-label="Role">Technical Forensics (Dan Novak)</td>
+                        <td data-label="Responsibility">Fiddler traces, browser debugging, code analysis, architecture review</td>
                     </tr>
                     <tr>
-                        <td class="person-name">Data Analyst / UX Researcher</td>
-                        <td>Data analysis, UX evaluation, user interviews, behavioral research</td>
+                        <td class="person-name" data-label="Role">Data Analyst / UX Researcher</td>
+                        <td data-label="Responsibility">Data analysis, UX evaluation, user interviews, behavioral research</td>
                     </tr>
                 </tbody>
             </table>
@@ -274,29 +274,29 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="issue-id">F-01</td>
-                        <td><strong>Memory Cache Vulnerability</strong></td>
-                        <td>The LMS held all course state in memory cache. Only saved to database via form submit when the course closed properly. No auto-save, no graceful degradation. Browser crash, tab close, or connection drop = all progress lost.</td>
+                        <td class="issue-id" data-label="#">F-01</td>
+                        <td data-label="Failure"><strong>Memory Cache Vulnerability</strong></td>
+                        <td data-label="Description">The LMS held all course state in memory cache. Only saved to database via form submit when the course closed properly. No auto-save, no graceful degradation. Browser crash, tab close, or connection drop = all progress lost.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-02</td>
-                        <td><strong>&ldquo;Congratulations You Failed&rdquo; UX</strong></td>
-                        <td>Courses displayed a completion message after the final assessment &mdash; but that wasn&rsquo;t the last page. Users had to navigate to one more slide to trigger SCORM completion. The UI actively misled learners into closing before completion registered.</td>
+                        <td class="issue-id" data-label="#">F-02</td>
+                        <td data-label="Failure"><strong>&ldquo;Congratulations You Failed&rdquo; UX</strong></td>
+                        <td data-label="Description">Courses displayed a completion message after the final assessment &mdash; but that wasn&rsquo;t the last page. Users had to navigate to one more slide to trigger SCORM completion. The UI actively misled learners into closing before completion registered.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-03</td>
-                        <td><strong>Confusing Navigation</strong></td>
-                        <td>The vendor&rsquo;s authoring tool produced courses with unintuitive navigation controls. Even expert users with deep courseware experience struggled to use the interface &mdash; average GM sales reps with no eLearning background had no chance.</td>
+                        <td class="issue-id" data-label="#">F-03</td>
+                        <td data-label="Failure"><strong>Confusing Navigation</strong></td>
+                        <td data-label="Description">The vendor&rsquo;s authoring tool produced courses with unintuitive navigation controls. Even expert users with deep courseware experience struggled to use the interface &mdash; average GM sales reps with no eLearning background had no chance.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-04</td>
-                        <td><strong>Mobile Workforce / Poor WiFi</strong></td>
-                        <td>GM sales reps were always on the road, working on intermittent WiFi connections. The system had no recovery mechanism for connection drops, making every session a gamble.</td>
+                        <td class="issue-id" data-label="#">F-04</td>
+                        <td data-label="Failure"><strong>Mobile Workforce / Poor WiFi</strong></td>
+                        <td data-label="Description">GM sales reps were always on the road, working on intermittent WiFi connections. The system had no recovery mechanism for connection drops, making every session a gamble.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-05</td>
-                        <td><strong>Short-Burst Usage Pattern</strong></td>
-                        <td>System was designed for hour-long desktop sessions. Actual users took training in 5-minute bursts between customer meetings. Each improper close triggered the cache vulnerability, dumping all progress.</td>
+                        <td class="issue-id" data-label="#">F-05</td>
+                        <td data-label="Failure"><strong>Short-Burst Usage Pattern</strong></td>
+                        <td data-label="Description">System was designed for hour-long desktop sessions. Actual users took training in 5-minute bursts between customer meetings. Each improper close triggered the cache vulnerability, dumping all progress.</td>
                     </tr>
                 </tbody>
             </table>

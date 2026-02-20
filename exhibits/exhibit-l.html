@@ -146,20 +146,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Dan Novak</strong> &mdash; Development Lead, Scheduling Module</td>
-                        <td>Assigned to build scheduling apps on Power Platform. Identified foundational gaps, conducted AI-assisted forensic analysis, and authored the architectural findings deliverable.</td>
+                        <td data-label="Role"><strong>Dan Novak</strong> &mdash; Development Lead, Scheduling Module</td>
+                        <td data-label="Involvement">Assigned to build scheduling apps on Power Platform. Identified foundational gaps, conducted AI-assisted forensic analysis, and authored the architectural findings deliverable.</td>
                     </tr>
                     <tr>
-                        <td><strong>External Power Platform Consultancy</strong></td>
-                        <td>Original architects. Produced high-level requirements and recommended experienced Power Platform developers. Left the project before development began.</td>
+                        <td data-label="Role"><strong>External Power Platform Consultancy</strong></td>
+                        <td data-label="Involvement">Original architects. Produced high-level requirements and recommended experienced Power Platform developers. Left the project before development began.</td>
                     </tr>
                     <tr>
-                        <td><strong>Lead Developer</strong> (anonymized)</td>
-                        <td>Primary developer on the existing Power Platform solution. Maintained solution exports as the sole versioning mechanism.</td>
+                        <td data-label="Role"><strong>Lead Developer</strong> (anonymized)</td>
+                        <td data-label="Involvement">Primary developer on the existing Power Platform solution. Maintained solution exports as the sole versioning mechanism.</td>
                     </tr>
                     <tr>
-                        <td><strong>Governance Architect</strong> (anonymized)</td>
-                        <td>Recipient of the findings deliverable. Responsible for architectural oversight across the organization.</td>
+                        <td data-label="Role"><strong>Governance Architect</strong> (anonymized)</td>
+                        <td data-label="Involvement">Recipient of the findings deliverable. Responsible for architectural oversight across the organization.</td>
                     </tr>
                 </tbody>
             </table>
@@ -230,34 +230,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="issue-id">F-01</td>
-                        <td><strong>No Data Model</strong></td>
-                        <td><span class="severity severity-critical">Critical</span></td>
-                        <td>No fully defined data model existed. Dataverse tables were being created ad hoc during development without a schema design phase. Entity relationships, data types, and constraints were improvised.</td>
+                        <td class="issue-id" data-label="#">F-01</td>
+                        <td data-label="Finding"><strong>No Data Model</strong></td>
+                        <td data-label="Severity"><span class="severity severity-critical">Critical</span></td>
+                        <td data-label="Description">No fully defined data model existed. Dataverse tables were being created ad hoc during development without a schema design phase. Entity relationships, data types, and constraints were improvised.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-02</td>
-                        <td><strong>No Version Control</strong></td>
-                        <td><span class="severity severity-critical">Critical</span></td>
-                        <td>No git, no source control of any kind. The only method of versioning was solution exports kept by the lead developer. No rollback capability, no change tracking, no collaborative development safety net.</td>
+                        <td class="issue-id" data-label="#">F-02</td>
+                        <td data-label="Finding"><strong>No Version Control</strong></td>
+                        <td data-label="Severity"><span class="severity severity-critical">Critical</span></td>
+                        <td data-label="Description">No git, no source control of any kind. The only method of versioning was solution exports kept by the lead developer. No rollback capability, no change tracking, no collaborative development safety net.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-03</td>
-                        <td><strong>Monolithic Solution Architecture</strong></td>
-                        <td><span class="severity severity-high">High</span></td>
-                        <td>One large solution for the entire system instead of a modular core with separate solutions per model-driven app. Deployment required manually identifying dependencies and copying components to a new fresh solution.</td>
+                        <td class="issue-id" data-label="#">F-03</td>
+                        <td data-label="Finding"><strong>Monolithic Solution Architecture</strong></td>
+                        <td data-label="Severity"><span class="severity severity-high">High</span></td>
+                        <td data-label="Description">One large solution for the entire system instead of a modular core with separate solutions per model-driven app. Deployment required manually identifying dependencies and copying components to a new fresh solution.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-04</td>
-                        <td><strong>Requirements Atomization Without Context</strong></td>
-                        <td><span class="severity severity-high">High</span></td>
-                        <td>Requirements degraded through PPT &rarr; Word &rarr; Excel &rarr; ADO conversion chain. Individual tickets looked actionable but had lost architectural context. Epic-level summaries treated as stories.</td>
+                        <td class="issue-id" data-label="#">F-04</td>
+                        <td data-label="Finding"><strong>Requirements Atomization Without Context</strong></td>
+                        <td data-label="Severity"><span class="severity severity-high">High</span></td>
+                        <td data-label="Description">Requirements degraded through PPT &rarr; Word &rarr; Excel &rarr; ADO conversion chain. Individual tickets looked actionable but had lost architectural context. Epic-level summaries treated as stories.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-05</td>
-                        <td><strong>No Decomposed User Stories</strong></td>
-                        <td><span class="severity severity-high">High</span></td>
-                        <td>No user stories with acceptance criteria. No definition of done. No way to verify whether built features matched business intent. The gap between &ldquo;what was being built&rdquo; and &ldquo;what the business actually needed&rdquo; was invisible.</td>
+                        <td class="issue-id" data-label="#">F-05</td>
+                        <td data-label="Finding"><strong>No Decomposed User Stories</strong></td>
+                        <td data-label="Severity"><span class="severity severity-high">High</span></td>
+                        <td data-label="Description">No user stories with acceptance criteria. No definition of done. No way to verify whether built features matched business intent. The gap between &ldquo;what was being built&rdquo; and &ldquo;what the business actually needed&rdquo; was invisible.</td>
                     </tr>
                 </tbody>
             </table>

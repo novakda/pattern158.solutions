@@ -422,34 +422,34 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="issue-id">F-01</td>
-                        <td><strong>SCORM courses dependent on Cornerstone Network Player</strong></td>
-                        <td>SCORM requires a player to communicate between the course and the LMS. If the Cornerstone Network Player went down, all SCORM courses stopped functioning. AICC was used as a workaround but had significant limitations.</td>
-                        <td>Dan provided a cross-domain SCORM wrapper that eliminates dependency on the Cornerstone Network Player entirely. The wrapper was well-tested across GP's enterprise client base. A SCORM 2004 version was prototyped within one week of the on-site visit.</td>
+                        <td class="issue-id" data-label="#">F-01</td>
+                        <td data-label="Issue"><strong>SCORM courses dependent on Cornerstone Network Player</strong></td>
+                        <td data-label="Background">SCORM requires a player to communicate between the course and the LMS. If the Cornerstone Network Player went down, all SCORM courses stopped functioning. AICC was used as a workaround but had significant limitations.</td>
+                        <td data-label="Resolution">Dan provided a cross-domain SCORM wrapper that eliminates dependency on the Cornerstone Network Player entirely. The wrapper was well-tested across GP's enterprise client base. A SCORM 2004 version was prototyped within one week of the on-site visit.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-02</td>
-                        <td><strong>HTML5 courses failing under AICC protocol</strong></td>
-                        <td>HTML5 is the modern publishing format replacing Flash. EB's HTML5 AICC courses threw errors at launch and could not communicate with the LMS, preventing completion recording.</td>
-                        <td>Converted AICC courses to SCORM HTML5 using the cross-domain wrapper. Courses performed better than they had under the previous AICC configuration.</td>
+                        <td class="issue-id" data-label="#">F-02</td>
+                        <td data-label="Issue"><strong>HTML5 courses failing under AICC protocol</strong></td>
+                        <td data-label="Background">HTML5 is the modern publishing format replacing Flash. EB's HTML5 AICC courses threw errors at launch and could not communicate with the LMS, preventing completion recording.</td>
+                        <td data-label="Resolution">Converted AICC courses to SCORM HTML5 using the cross-domain wrapper. Courses performed better than they had under the previous AICC configuration.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-03</td>
-                        <td><strong>Quiz bookmarking and reset failures</strong></td>
-                        <td>AICC could not properly reset quizzes for multiple attempts. Bookmarking was unreliable, limiting course design options for EB's curriculum development team.</td>
-                        <td>SCORM HTML5 with the cross-domain wrapper properly supports bookmarking, reset, and multiple quiz attempts. Curriculum developers gained new design freedom previously unavailable under AICC constraints.</td>
+                        <td class="issue-id" data-label="#">F-03</td>
+                        <td data-label="Issue"><strong>Quiz bookmarking and reset failures</strong></td>
+                        <td data-label="Background">AICC could not properly reset quizzes for multiple attempts. Bookmarking was unreliable, limiting course design options for EB's curriculum development team.</td>
+                        <td data-label="Resolution">SCORM HTML5 with the cross-domain wrapper properly supports bookmarking, reset, and multiple quiz attempts. Curriculum developers gained new design freedom previously unavailable under AICC constraints.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-04</td>
-                        <td><strong>No tools to verify SCORM data flow</strong></td>
-                        <td>EB's IT department was disabling troubleshooting tools (Inspect Element) on workstations. There was no way to observe data moving between courses and the LMS during testing or debugging.</td>
-                        <td>Dan provided an LMS simulation tool that captures and displays all course-to-LMS communication. The tool was also usable for training EB staff on SCORM data concepts and troubleshooting methodology.</td>
+                        <td class="issue-id" data-label="#">F-04</td>
+                        <td data-label="Issue"><strong>No tools to verify SCORM data flow</strong></td>
+                        <td data-label="Background">EB's IT department was disabling troubleshooting tools (Inspect Element) on workstations. There was no way to observe data moving between courses and the LMS during testing or debugging.</td>
+                        <td data-label="Resolution">Dan provided an LMS simulation tool that captures and displays all course-to-LMS communication. The tool was also usable for training EB staff on SCORM data concepts and troubleshooting methodology.</td>
                     </tr>
                     <tr>
-                        <td class="issue-id">F-05</td>
-                        <td><strong>Bulk SCORM import not available</strong></td>
-                        <td>Cornerstone only allowed single-course uploads. GP's enterprise course library (1,000+ courses) could not be practically migrated to EB's LMS using the one-at-a-time upload process.</td>
-                        <td>The team tested Cornerstone's new bulk Course Publication tool with 7 SCORM courses from the enterprise course library. Successfully validated the migration path for future large-scale course library deployment.</td>
+                        <td class="issue-id" data-label="#">F-05</td>
+                        <td data-label="Issue"><strong>Bulk SCORM import not available</strong></td>
+                        <td data-label="Background">Cornerstone only allowed single-course uploads. GP's enterprise course library (1,000+ courses) could not be practically migrated to EB's LMS using the one-at-a-time upload process.</td>
+                        <td data-label="Resolution">The team tested Cornerstone's new bulk Course Publication tool with 7 SCORM courses from the enterprise course library. Successfully validated the migration path for future large-scale course library deployment.</td>
                     </tr>
                 </tbody>
             </table>
