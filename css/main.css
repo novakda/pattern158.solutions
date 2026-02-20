@@ -28,7 +28,7 @@
     --color-border-primary: rgba(14, 124, 140, 0.3);
     --color-hover-background: #f0f0f0;
     --color-text-timeline: #444;
-    --color-danger: var(--color-danger);
+    --color-danger: #dc3545;
 
     /* --- Typography --- */
     --font-heading: 'Bebas Neue', 'Arial Black', sans-serif;
@@ -141,7 +141,7 @@
     --overlay-hover-row: rgba(14, 124, 140, 0.1);
 
     /* Colors: maintain same danger color in dark mode */
-    --color-danger: var(--color-danger);
+    --color-danger: #dc3545;
 }
 
 /* Footer dark mode override to maintain dark appearance */
