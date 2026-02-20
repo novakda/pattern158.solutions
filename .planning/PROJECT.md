@@ -54,6 +54,20 @@ The site must accurately and compellingly present Dan's professional identity an
 
 - [ ] **TECH-04**: Analytics integration (privacy-first, cookieless)
 
+## Current Milestone: v1.1 Comprehensive Quality Audit & Polish
+
+**Goal:** Audit and polish all 17 pages across content, layout, color, accessibility, branding, and information architecture — benchmarked against portfolio site best practices — to achieve forensic-level quality.
+
+**Target areas:**
+- Full content audit: eliminate redundancy, improve writing quality, ensure compelling presentation
+- Information architecture: right content on right pages, clear user journeys
+- Visual polish: layout consistency, spacing, color refinement, typography hierarchy
+- Accessibility: maintain/exceed WCAG AA, improve beyond minimum
+- Branding: consistency across all pages, NTSB aesthetic adapts where UX demands
+- Best practices: benchmark against portfolio site standards
+
+**Guiding principle:** UX takes priority when best practices conflict with the NTSB aesthetic.
+
 ### Out of Scope
 
 <!-- Explicit boundaries. -->
@@ -115,5 +129,7 @@ This website was originally developed as part of a broader "Career Documentation
 | JPEG Q72 for hero (not Q85) | Q85 gave <1% reduction, Q72 gives 20% at acceptable quality | ✓ Good |
 | --color-inverse-text-muted for dark backgrounds | --color-text-muted fails WCAG on dark footer/nav/hero contexts | ✓ Good |
 
+| UX over brand when conflicting | Best practices should win over aesthetic when they improve usability | — Pending |
+
 ---
-*Last updated: 2026-02-19 after v1.0 milestone*
+*Last updated: 2026-02-20 after v1.1 milestone start*
