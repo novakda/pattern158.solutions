@@ -109,42 +109,52 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CSS-04 | — | Pending |
-| CSS-05 | — | Pending |
-| CSS-06 | — | Pending |
-| CSS-07 | — | Pending |
-| CONTENT-01 | — | Pending |
-| CONTENT-02 | — | Pending |
-| CONTENT-03 | — | Pending |
-| CONTENT-04 | — | Pending |
-| LAYOUT-01 | — | Pending |
-| LAYOUT-02 | — | Pending |
-| LAYOUT-03 | — | Pending |
-| LAYOUT-04 | — | Pending |
-| TYPO-01 | — | Pending |
-| TYPO-02 | — | Pending |
-| TYPO-03 | — | Pending |
-| COLOR-01 | — | Pending |
-| COLOR-02 | — | Pending |
-| COLOR-03 | — | Pending |
-| EXHIBIT-01 | — | Pending |
-| EXHIBIT-02 | — | Pending |
-| EXHIBIT-03 | — | Pending |
-| EXHIBIT-04 | — | Pending |
-| NAV-05 | — | Pending |
-| NAV-06 | — | Pending |
-| NAV-07 | — | Pending |
-| A11Y-02 | — | Pending |
-| A11Y-03 | — | Pending |
-| A11Y-04 | — | Pending |
-| A11Y-05 | — | Pending |
-| A11Y-06 | — | Pending |
+| CSS-04 | Phase 7 | Pending |
+| CSS-05 | Phase 7 | Pending |
+| CSS-06 | Phase 7 | Pending |
+| CSS-07 | Phase 7 | Pending |
+| CONTENT-01 | Phase 8 | Pending |
+| CONTENT-02 | Phase 8 | Pending |
+| CONTENT-03 | Phase 8 | Pending |
+| CONTENT-04 | Phase 8 | Pending |
+| LAYOUT-01 | Phase 9 | Pending |
+| LAYOUT-02 | Phase 9 | Pending |
+| LAYOUT-03 | Phase 9 | Pending |
+| LAYOUT-04 | Phase 9 | Pending |
+| TYPO-01 | Phase 10 | Pending |
+| TYPO-02 | Phase 10 | Pending |
+| TYPO-03 | Phase 10 | Pending |
+| COLOR-01 | Phase 11 | Pending |
+| COLOR-02 | Phase 11 | Pending |
+| COLOR-03 | Phase 11 | Pending |
+| EXHIBIT-01 | Phase 12 | Pending |
+| EXHIBIT-02 | Phase 12 | Pending |
+| EXHIBIT-03 | Phase 12 | Pending |
+| EXHIBIT-04 | Phase 12 | Pending |
+| NAV-05 | Phase 13 | Pending |
+| NAV-06 | Phase 13 | Pending |
+| NAV-07 | Phase 13 | Pending |
+| A11Y-02 | Phase 14 | Pending |
+| A11Y-03 | Phase 14 | Pending |
+| A11Y-04 | Phase 14 | Pending |
+| A11Y-05 | Phase 14 | Pending |
+| A11Y-06 | Phase 14 | Pending |
 
 **Coverage:**
 - v1.1 requirements: 30 total
-- Mapped to phases: 0
-- Unmapped: 30 (will be mapped during roadmap creation)
+- Mapped to phases: 30/30 (100%)
+- Unmapped: 0
+
+**Phase distribution:**
+- Phase 7 (CSS Foundation): 4 requirements
+- Phase 8 (Content & IA): 4 requirements
+- Phase 9 (Layout & Spacing): 4 requirements
+- Phase 10 (Typography): 3 requirements
+- Phase 11 (Color & Contrast): 3 requirements
+- Phase 12 (Exhibit Content): 4 requirements
+- Phase 13 (Navigation & Footer): 3 requirements
+- Phase 14 (Accessibility & QA): 5 requirements
 
 ---
 *Requirements defined: 2026-02-20*
-*Last updated: 2026-02-20 after initial definition*
+*Traceability updated: 2026-02-20 (100% coverage across 8 phases)*
