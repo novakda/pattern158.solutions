@@ -51,9 +51,14 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 4. Font-size token system (`--font-size-xs` through `--font-size-5xl`) implemented and used consistently across all 17 pages
 5. Stylelint configuration enforces token usage and catches future violations
 
-**Research**: Skip (standard patterns, no additional research needed)
+**Research**: Complete (07-RESEARCH.md)
 
-**Plans**: TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 07-01-PLAN.md — Font-size token scale definition and hardcoded value migration
+- [ ] 07-02-PLAN.md — Component extraction, cascade layers, and inline style cleanup
+- [ ] 07-03-PLAN.md — Stylelint configuration and enforcement validation
 
 ---
 
@@ -208,7 +213,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 | 4. SEO Optimization | v1.0 | 2/2 | ✓ Complete | 2026-02-13 |
 | 5. Performance Optimization | v1.0 | 1/1 | ✓ Complete | 2026-02-18 |
 | 6. Inline Style Token Cleanup | v1.0 | 2/2 | ✓ Complete | 2026-02-19 |
-| 7. CSS Foundation & Token System Audit | v1.1 | 0/? | Not started | - |
+| 7. CSS Foundation & Token System Audit | v1.1 | 0/3 | Planned | - |
 | 8. Content Quality & Information Architecture | v1.1 | 0/? | Not started | - |
 | 9. Layout & Spacing Consistency | v1.1 | 0/? | Not started | - |
 | 10. Typography & Hierarchy | v1.1 | 0/? | Not started | - |
