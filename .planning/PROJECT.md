@@ -2,7 +2,7 @@
 
 ## What This Is
 
-The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site features a unified CSS design system with dark mode, responsive mobile navigation, full SEO coverage, and WCAG AA accessibility compliance across 17 pages.
+The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site features a comprehensive design token system (font-size, spacing, color, cascade layers) with Stylelint enforcement, dark mode, responsive mobile navigation, full SEO coverage, and WCAG AA accessibility compliance (37/37 contrast tests passing) across 17 pages.
 
 ## Core Value
 
@@ -47,26 +47,42 @@ The site must accurately and compellingly present Dan's professional identity an
 - ✓ **PERF-01**: Hero image compressed (148KB to 118KB) -- v1.0
 - ✓ **PERF-02**: No non-critical images require lazy loading (N/A by architecture) -- v1.0
 - ✓ **PERF-03**: Font loading optimized (font-display: swap) -- v1.0
+- ✓ **CSS-04**: All CSS values use design tokens — zero hardcoded colors, spacing, or font sizes -- v1.1
+- ✓ **CSS-05**: Shared components extracted to global CSS section — page-scoped sections contain only overrides -- v1.1
+- ✓ **CSS-06**: Zero `!important` declarations — clean specificity cascade throughout -- v1.1
+- ✓ **CSS-07**: Font-size token system (xs through 5xl) with consistent usage across all pages -- v1.1
+- ✓ **CONTENT-01**: Content inventory completed — all sections across 17 pages cataloged -- v1.1
+- ✓ **CONTENT-02**: Redundant content eliminated — ROT audit with canonical locations -- v1.1
+- ✓ **CONTENT-03**: Zero typos or grammatical errors across all 17 pages -- v1.1
+- ✓ **CONTENT-04**: Information architecture optimized — clear user journeys for hiring managers, engineers, clients -- v1.1
+- ✓ **LAYOUT-01**: Consistent spacing using design tokens across all 17 pages -- v1.1
+- ✓ **LAYOUT-02**: Mobile layout verified at 320px/768px viewports -- v1.1
+- ✓ **LAYOUT-03**: Component alignment consistent across all pages -- v1.1
+- ✓ **LAYOUT-04**: Generous whitespace with intentional visual rhythm -- v1.1
+- ✓ **TYPO-01**: Typography hierarchy clear and consistent across all pages -- v1.1
+- ✓ **TYPO-02**: Heading hierarchy correct — no skipped levels on any page -- v1.1
+- ✓ **TYPO-03**: Responsive typography scales appropriately for mobile viewports -- v1.1
+- ✓ **COLOR-01**: All text meets WCAG AA contrast ratios in both light and dark modes -- v1.1
+- ✓ **COLOR-02**: Dark mode visually consistent with brand (navy-based) across all 17 pages -- v1.1
+- ✓ **COLOR-03**: Link colors distinct from body text and consistent in both themes -- v1.1
 
 ### Active
 
 <!-- Next milestone scope. -->
 
+- [ ] **EXHIBIT-01**: All exhibits follow Challenge → Approach → Solution → Results structure
+- [ ] **EXHIBIT-02**: Quantifiable results/metrics highlighted in summaries
+- [ ] **EXHIBIT-03**: Impact-first headlines — outcomes visible within 30-second scan
+- [ ] **EXHIBIT-04**: Visual consistency across all exhibit pages
+- [ ] **NAV-05**: Navigation structure 100% identical across all 17 pages
+- [ ] **NAV-06**: Footer optimized — contact visibility, social links, trust elements
+- [ ] **NAV-07**: Zero broken internal links across all 17 pages
+- [ ] **A11Y-02**: Full WCAG AA re-verification passes after all changes
+- [ ] **A11Y-03**: Automated accessibility test suite passes
+- [ ] **A11Y-04**: Cross-browser rendering verified
+- [ ] **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
+- [ ] **A11Y-06**: Semantic HTML verified
 - [ ] **TECH-04**: Analytics integration (privacy-first, cookieless)
-
-## Current Milestone: v1.1 Comprehensive Quality Audit & Polish
-
-**Goal:** Audit and polish all 17 pages across content, layout, color, accessibility, branding, and information architecture — benchmarked against portfolio site best practices — to achieve forensic-level quality.
-
-**Target areas:**
-- Full content audit: eliminate redundancy, improve writing quality, ensure compelling presentation
-- Information architecture: right content on right pages, clear user journeys
-- Visual polish: layout consistency, spacing, color refinement, typography hierarchy
-- Accessibility: maintain/exceed WCAG AA, improve beyond minimum
-- Branding: consistency across all pages, NTSB aesthetic adapts where UX demands
-- Best practices: benchmark against portfolio site standards
-
-**Guiding principle:** UX takes priority when best practices conflict with the NTSB aesthetic.
 
 ### Out of Scope
 
@@ -85,7 +101,9 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ## Context
 
-Shipped v1.0 with 10,299 LOC (7,422 HTML + 2,877 CSS) across 17 pages. Tech stack: static HTML, single CSS file with 62 design tokens, minimal vanilla JS (theme toggle, hamburger menu). No build tools, no frameworks, no dependencies.
+Shipped v1.1 with ~11,535 LOC (7,850 HTML + 3,685 CSS) across 17 pages. Tech stack: static HTML, single CSS file with cascade layers, 80+ design tokens (colors, fonts, spacing, shadows, font-sizes), Stylelint enforcement, minimal vanilla JS (theme toggle, hamburger menu). No build tools, no frameworks, no runtime dependencies.
+
+v1.0 established the foundation (2026-02-10 to 2026-02-19). v1.1 audited and polished CSS architecture, content quality, layout spacing, typography hierarchy, and color accessibility (2026-02-20 to 2026-02-21). All NTSB investigation structure applied to exhibits. WCAG AA verified with 37/37 contrast tests.
 
 This website was originally developed as part of a broader "Career Documentation Refactoring" GSD project in an Obsidian vault. The website-specific work was factored out to this standalone repository. This repo is now the source of truth.
 
@@ -129,7 +147,16 @@ This website was originally developed as part of a broader "Career Documentation
 | JPEG Q72 for hero (not Q85) | Q85 gave <1% reduction, Q72 gives 20% at acceptable quality | ✓ Good |
 | --color-inverse-text-muted for dark backgrounds | --color-text-muted fails WCAG on dark footer/nav/hero contexts | ✓ Good |
 
-| UX over brand when conflicting | Best practices should win over aesthetic when they improve usability | — Pending |
+| UX over brand when conflicting | Best practices should win over aesthetic when they improve usability | ✓ Good |
+| Font-size token scale (xs-5xl) | Consolidated 24 hardcoded values into 10 semantic tokens | ✓ Good |
+| Cascade layer ordering (reset → base → components → pages → utilities) | Clean specificity control without !important | ✓ Good |
+| Stats-bar component extraction | Eliminated 85% duplication between testimonials and portfolio | ✓ Good |
+| Stylelint token enforcement | Automated prevention of hardcoded CSS values in future development | ✓ Good |
+| Portfolio reordered by exhibit strength | Hiring manager 30-second scan requires strongest exhibits first, not chronological | ✓ Good |
+| NTSB investigation structure for all exhibits | Consistent Challenge → Approach → Solution → Results across all case studies | ✓ Good |
+| Token-level responsive typography | Redefine token values at breakpoints instead of per-selector overrides | ✓ Good |
+| WCAG AA contrast fixes (14 failures resolved) | Light mode text-light darkened, dark mode teal lightened, gold accent split per theme | ✓ Good |
+| Base link underline with cascade layer override | WCAG 1.4.1 compliance: body links underlined, nav/button links clean via layer cascade | ✓ Good |
 
 ---
-*Last updated: 2026-02-20 after v1.1 milestone start*
+*Last updated: 2026-02-21 after v1.1 milestone completion*

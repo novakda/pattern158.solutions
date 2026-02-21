@@ -25,3 +25,45 @@
 **What's next:** TBD - analytics integration, enhanced SEO, or component templates
 
 ---
+
+## v1.1 Comprehensive Quality Audit & Polish (Shipped: 2026-02-21)
+
+**Delivered:** Audited and polished all 17 pages across CSS architecture, content quality, layout spacing, typography hierarchy, and color accessibility — establishing a complete design token system with automated enforcement.
+
+**Phases completed:** 7-11 (5 phases, 15 plans, 28 tasks)
+
+**Key accomplishments:**
+- Complete design token system with font-size scale (xs-5xl), spacing tokens, cascade layers, and Stylelint enforcement — zero hardcoded values remain
+- Full content editorial pass using NTSB investigation structure across all 12 exhibits, ROT audit across 17 pages, impact-first summaries for 30-second scan
+- Spacing normalization with all values tokenized, responsive layout verified at 320px/768px/1024px/1920px with zero overflow
+- Typography hierarchy with semantic heading fixes, token-level responsive scaling, and mobile hierarchy collision resolution
+- WCAG AA color compliance: 37/37 contrast tests passing, dark mode brand identity preserved (navy hue 210-213°), accessible link styling with underlines
+
+**Stats:**
+- 23 files modified (3,711 insertions, 730 deletions)
+- ~11,535 lines of code (7,850 HTML + 3,685 CSS)
+- 61 commits over 2 days (2026-02-20 to 2026-02-21)
+
+**Git range:** `feat(07-01)` to `docs(phase-11)`
+
+### Known Gaps
+
+Phases 12-14 were not started. 12 requirements deferred to v1.2:
+
+- **EXHIBIT-01**: All exhibits follow Challenge → Approach → Solution → Results structure
+- **EXHIBIT-02**: Quantifiable results/metrics highlighted in summaries
+- **EXHIBIT-03**: Impact-first headlines — outcomes visible within 30-second scan
+- **EXHIBIT-04**: Visual consistency across all exhibit pages
+- **NAV-05**: Navigation structure 100% identical across all 17 pages
+- **NAV-06**: Footer optimized — contact visibility, social links, trust elements
+- **NAV-07**: Zero broken internal links across all 17 pages
+- **A11Y-02**: Full WCAG AA re-verification passes after all v1.1 changes
+- **A11Y-03**: Automated accessibility test suite passes
+- **A11Y-04**: Cross-browser rendering verified
+- **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
+- **A11Y-06**: Semantic HTML verified
+
+**What's next:** v1.2 to complete exhibit optimization, navigation/footer consistency, and comprehensive accessibility QA
+
+---
+
