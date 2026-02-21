@@ -16,9 +16,9 @@ Requirements for the Comprehensive Quality Audit & Polish milestone. Each maps t
 
 ### Content & Information Architecture
 
-- [ ] **CONTENT-01**: Content inventory completed — all sections across 17 pages cataloged with purpose and audience
+- [x] **CONTENT-01**: Content inventory completed — all sections across 17 pages cataloged with purpose and audience
 - [ ] **CONTENT-02**: Redundant content eliminated — ROT audit (Redundant, Obsolete, Trivial) with canonical locations for each piece of information
-- [ ] **CONTENT-03**: Zero typos or grammatical errors across all 17 pages
+- [x] **CONTENT-03**: Zero typos or grammatical errors across all 17 pages
 - [ ] **CONTENT-04**: Information architecture optimized — right content on right pages, clear user journeys for hiring managers, engineers, and clients
 
 ### Layout & Spacing
@@ -113,9 +113,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CSS-05 | Phase 7 | Complete |
 | CSS-06 | Phase 7 | Complete |
 | CSS-07 | Phase 7 | Complete |
-| CONTENT-01 | Phase 8 | Pending |
+| CONTENT-01 | Phase 8 | Complete |
 | CONTENT-02 | Phase 8 | Pending |
-| CONTENT-03 | Phase 8 | Pending |
+| CONTENT-03 | Phase 8 | Complete |
 | CONTENT-04 | Phase 8 | Pending |
 | LAYOUT-01 | Phase 9 | Pending |
 | LAYOUT-02 | Phase 9 | Pending |
