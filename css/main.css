@@ -15,6 +15,7 @@
     */
     --color-primary: #0e7c8c;           /* 4.66:1 on light bg, used for links/accents */
     --color-primary-hover: #0a6a78;
+    --color-primary-on-dark: #20b8cc;   /* 5.31:1 on dark bg (#2d3436), for inverse sections in light mode */
     --color-accent: #8f6d00;            /* Darkened from #b8860b to pass 4.5:1 as text (3.09→4.91:1) */
     --color-background: #faf9f6;
     --color-background-alt: #e8e8e8;
@@ -330,14 +331,14 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
 }
 
 /* Active page indicator */
 nav a[aria-current="page"] {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     font-weight: 600;
-    border-bottom: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary-on-dark);
     padding-bottom: 2px;
 }
 
@@ -358,7 +359,7 @@ nav a[aria-current="page"] {
 }
 
 .theme-toggle:hover {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
 }
 
 .theme-toggle:focus {
@@ -478,7 +479,7 @@ footer {
 }
 
 footer a {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     text-decoration: none;
 }
 
@@ -614,7 +615,7 @@ footer a:hover {
     .footer-tagline {
         margin-top: var(--space-md);
         font-style: italic;
-        color: var(--color-primary);
+        color: var(--color-primary-on-dark);
     }
 
     /* Testimonial section divider */
@@ -1045,7 +1046,7 @@ footer a:hover {
 }
 
 .page-index .field-reports-teaser .section-subtitle {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     margin-bottom: var(--space-2xl);
@@ -1096,7 +1097,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     font-weight: 600;
     font-style: normal;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     margin-bottom: var(--space-xs);
 }
 
