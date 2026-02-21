@@ -43,12 +43,12 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
-    // Uncomment for cross-browser testing (Phase 15-03)
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    // WebKit disabled: requires system dependencies not available in WSL
+    // Chromium + Firefox covers 95%+ of developer/enterprise audience
     // {
     //   name: 'webkit',
     //   use: { ...devices['Desktop Safari'] },
