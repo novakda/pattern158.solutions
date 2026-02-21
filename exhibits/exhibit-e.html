@@ -138,7 +138,7 @@
                 <span class="section-title">Background</span>
             </div>
             <div class="background-content">
-                <p>Version control nightmare: every course update required emailing zip files to <strong>7+ energy utility clients</strong> for manual re-upload to their respective LMS platforms. Different versions of the same content running on different client systems, with no centralized control over what was deployed where. A single course update could take days to propagate across all client deployments.</p>
+                <p>Version control nightmare: every course update required emailing zip files to <strong><span class="key-fact">7+ energy utility clients</span></strong> for manual re-upload to their respective LMS platforms. Different versions of the same content running on different client systems, with no centralized control over what was deployed where. A single course update could take days to propagate across all client deployments.</p>
 
                 <p>The problem wasn&rsquo;t just logistics &mdash; it was architectural. Each client&rsquo;s LMS enforced same-origin security policies, making direct cross-domain content hosting impossible with standard approaches. The content needed to live on GP Strategies&rsquo; servers for centralized control, but execute inside each client&rsquo;s LMS domain for SCORM communication. No commercial product existed to solve this problem in 2011.</p>
             </div>
@@ -234,7 +234,7 @@
                     <div class="timeline-date">Scale</div>
                     <div class="timeline-title">Multi-Client Deployment</div>
                     <div class="timeline-content">
-                        <p>Deployed across 7+ energy utility clients: FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP. <strong>100+ packages</strong> in production.</p>
+                        <p>Deployed across <span class="key-fact">7+ energy utility clients</span>: FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP. <strong><span class="key-fact">100+ packages</span></strong> in production.</p>
                     </div>
                 </div>
 
@@ -250,7 +250,7 @@
                     <div class="timeline-date">Validation</div>
                     <div class="timeline-title">Market Catches Up</div>
                     <div class="timeline-content">
-                        <p>System remained in production for 10+ years. In 2016, Rustici Software released Content Controller to solve the same centralized dispatch problem commercially.</p>
+                        <p>System remained in production for <span class="key-fact">10+ years</span>. In 2016, Rustici Software released Content Controller to solve the same centralized dispatch problem commercially.</p>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@
                     <tr>
                         <td class="issue-id" data-label="#">F-04</td>
                         <td data-label="Finding"><strong>Automation at Scale</strong></td>
-                        <td data-label="Description">CSBB Generator tooling (Groovy, Access, Windows Forms) automated package creation for 100+ courses across 7+ clients &mdash; global deployments without touching individual systems.</td>
+                        <td data-label="Description">CSBB Generator tooling (Groovy, Access, Windows Forms) automated package creation for <span class="key-fact">100+ courses</span> across <span class="key-fact">7+ clients</span> &mdash; global deployments without touching individual systems.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-05</td>
@@ -314,7 +314,7 @@
 
             <div class="probable-cause-box">
                 <p>CSBB Dispatch solved a problem that had no commercial solution in 2011: <strong>centralized cross-domain content delivery with transparent protocol translation</strong>. The architecture &mdash; lightweight stubs on client LMS platforms communicating with centralized content servers via EasyXDM &mdash; eliminated the version control nightmare of distributing zip files to multiple clients and enabled instant, centralized updates across all deployments.</p>
-                <p>Five years later, in 2016, Rustici Software released Content Controller to address the same centralized dispatch problem. This is not a &ldquo;budget substitute&rdquo; narrative &mdash; CSBB was built <strong>five years before the commercial solution existed</strong>. It solved a real architectural problem using the tools available, and remained in production for over a decade.</p>
+                <p>Five years later, in 2016, Rustici Software released Content Controller to address the same centralized dispatch problem. CSBB was built <strong>five years before the commercial solution existed</strong>. It solved a real architectural problem using the tools available, and remained in production for over a decade.</p>
             </div>
         </div>
     </section>
@@ -327,7 +327,7 @@
                 <span class="section-title">Outcome</span>
             </div>
             <div class="background-content">
-                <p>The system served <strong>7+ major energy utility clients</strong> (FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP) with <strong>100+ packages</strong> in production. It remained operational for 10+ years &mdash; outlasting most of the projects it was built to support.</p>
+                <p>The system served <strong><span class="key-fact">7+ major energy utility clients</span></strong> (FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP) with <strong><span class="key-fact">100+ packages</span></strong> in production. It remained operational for <span class="key-fact">10+ years</span> &mdash; outlasting most of the projects it was built to support.</p>
 
                 <p>The architecture proved reusable when adapted for General Dynamics Electric Boat&rsquo;s defense sector deployment, demonstrating that the cross-domain dispatch pattern wasn&rsquo;t a one-off solution but a generalizable approach to multi-tenant content delivery.</p>
 

@@ -131,9 +131,9 @@
             <div class="background-content">
                 <p>The BP Learning Platform was a React/GraphQL frontend acting as a federated facade over multiple backend systems: Rustici Content Controller for content playback, PeopleFluent LMS for learning management, Watershed LRS for xAPI analytics, and Amazon Cognito for authentication. Dan worked directly with Rustici Content Controller as an integrator and client-side developer.</p>
 
-                <p>Dan&rsquo;s central challenge was a large-scale multi-tenant rebranding that required navigating the platform&rsquo;s largely undocumented Material UI theming system. Initially scoped as a one-week task, it expanded into a several-month effort as theming complexity revealed deeply interrelated style dependencies across the entire component library. This was Dan&rsquo;s first brownfield project with well-organized engineering practices (JIRA, defined acceptance criteria) from the acquired Leo Learning group.</p>
+                <p>Dan&rsquo;s central challenge was a large-scale multi-tenant rebranding that required navigating the platform&rsquo;s largely undocumented Material UI theming system. Initially scoped as <span class="key-fact">a one-week task</span>, it expanded into <span class="key-fact">a several-month effort</span> as theming complexity revealed deeply interrelated style dependencies across the entire component library. This was Dan&rsquo;s first brownfield project with well-organized engineering practices (JIRA, defined acceptance criteria) from the acquired Leo Learning group.</p>
 
-                <p>The platform was built by the Leo Learning team before GP Strategies acquired them &mdash; Dan joined as a developer on an existing, well-architected system. But the architectural pattern was immediately familiar: another federated integration layer stitching multiple backend systems through a single frontend, echoing the CSBB Dispatch approach Dan had built a decade earlier. He recognized the pattern because he&rsquo;d invented his own version of it in 2011.</p>
+                <p>The platform was built by the Leo Learning team before GP Strategies acquired them &mdash; Dan joined as a developer on an existing, well-architected system. But the architectural pattern was immediately familiar: another federated integration layer stitching <span class="key-fact">multiple backend systems</span> through a single frontend, echoing the CSBB Dispatch approach Dan had built <span class="key-fact">a decade earlier</span>. He recognized the pattern because he&rsquo;d invented his own version of it in 2011.</p>
             </div>
         </div>
     </section>
@@ -183,7 +183,7 @@
                     <div class="timeline-date">Rebranding Scope</div>
                     <div class="timeline-title">Multi-Tenant Rebranding Begins</div>
                     <div class="timeline-content">
-                        <p>Multi-tenant rebranding initially scoped as one week. Material UI theming system is largely undocumented.</p>
+                        <p>Multi-tenant rebranding initially scoped as <span class="key-fact">one week</span>. Material UI theming system is largely undocumented.</p>
                     </div>
                 </div>
 
@@ -191,7 +191,7 @@
                     <div class="timeline-date">Complexity Discovery</div>
                     <div class="timeline-title">Interrelated Style Dependencies Revealed</div>
                     <div class="timeline-content">
-                        <p>Theming work reveals deeply interrelated style dependencies. One change cascades through the component library. Scope expands to several months.</p>
+                        <p>Theming work reveals deeply interrelated style dependencies. One change cascades through the component library. Scope expands to <span class="key-fact">several months</span>.</p>
                     </div>
                 </div>
 
@@ -247,7 +247,7 @@
                     <tr>
                         <td class="issue-id" data-label="#">F-02</td>
                         <td data-label="Finding"><strong>Federated Architecture</strong></td>
-                        <td data-label="Description">The platform was a facade over four independent systems (Rustici, PeopleFluent, Watershed, Cognito) &mdash; each with its own API contracts, state models, and failure modes</td>
+                        <td data-label="Description">The platform was a facade over <span class="key-fact">four independent systems</span> (Rustici, PeopleFluent, Watershed, Cognito) &mdash; each with its own API contracts, state models, and failure modes</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-03</td>
@@ -294,7 +294,7 @@
             <div class="background-content">
                 <p>Dan successfully navigated the theming challenge through systematic exploration of the undocumented Material UI system, delivered bug fixes across the React/GraphQL frontend, troubleshot Amazon Cognito authentication issues through log analysis, and reverse-engineered Watershed LRS queries for xAPI analytics.</p>
 
-                <p>The architectural through-line is the most significant observation: CSBB Dispatch (2011) and the BP Learning Platform (2024) represent the same architectural pattern thirteen years apart &mdash; a unifying integration layer that makes multiple backend systems behave as one. Dan built the 2011 version from scratch; he worked inside the 2024 version as a developer. In 2011, it was EasyXDM bridging SCORM content servers and client LMS platforms. In 2024, it was React/GraphQL bridging Rustici, PeopleFluent, Watershed, and Cognito. Different authors, same pattern. Dan recognized it because he&rsquo;d invented his own version of it.</p>
+                <p>The architectural through-line is the most significant observation: CSBB Dispatch (2011) and the BP Learning Platform (2024) represent the same architectural pattern <span class="key-fact">thirteen years apart</span> &mdash; a unifying integration layer that makes multiple backend systems behave as one. Dan built the 2011 version from scratch; he worked inside the 2024 version as a developer. In 2011, it was EasyXDM bridging SCORM content servers and client LMS platforms. In 2024, it was React/GraphQL bridging Rustici, PeopleFluent, Watershed, and Cognito. Different authors, same pattern. Dan recognized it because he&rsquo;d invented his own version of it.</p>
             </div>
         </div>
     </section>
