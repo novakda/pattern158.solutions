@@ -113,7 +113,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 | 10. Typography & Hierarchy | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
-| 13. Exhibit Content Optimization | v1.2 | 3/3 | ✓ Complete | 2026-02-21 |
+| 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
 
