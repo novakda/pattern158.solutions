@@ -257,6 +257,7 @@ nav ul {
     display: flex;
     list-style: none;
     gap: var(--space-xl);
+    align-items: center;
 }
 
 nav a {
