@@ -3171,7 +3171,7 @@ footer a:hover {
         text-transform: uppercase;
         color: var(--color-primary);
         display: block;
-        margin-bottom: 2px;
+        margin-bottom: var(--space-xs);
     }
 
     /* Colspan rows (summary/note rows) */
