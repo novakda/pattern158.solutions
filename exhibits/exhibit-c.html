@@ -111,7 +111,7 @@
     <section class="hero">
         <div class="container">
             <h1>EXHIBIT C: <span class="pattern-number">XYLEME AUTOMATION</span></h1>
-            <p class="subtitle">Reverse-Engineering the Publishing API to Save 600+ Hours</p>
+            <p class="subtitle">Reverse-Engineering the Publishing API to Save <span class="key-fact">600+ Hours</span></p>
             <span class="classification">Process Engineering &middot; API Integration &middot; December 2015</span>
         </div>
     </section>
@@ -122,31 +122,39 @@
 
             <!-- Section 1: Background -->
             <div class="report-section">
-                <span class="section-number">Section 1</span>
-                <h2>Background</h2>
-                <p>In 2015, GP Strategies undertook a massive content refresh of their enterprise course library. A total of 1,216 lessons needed to be verified, fixed, and republished through the Xyleme content authoring platform. The project involved 15+ team members over several months and represented one of the largest single content operations in the team's history.</p>
+                <div class="section-heading">
+                    <span class="section-number">1.</span>
+                    <span class="section-title">Background</span>
+                </div>
+                <p>In 2015, GP Strategies undertook a massive content refresh of their enterprise course library. A total of <span class="key-fact">1,216 lessons</span> needed to be verified, fixed, and republished through the Xyleme content authoring platform. The project involved <span class="key-fact">15+ team members</span> over several months and represented one of the largest single content operations in the team's history.</p>
             </div>
 
             <!-- Section 2: The Problem -->
             <div class="report-section">
-                <span class="section-number">Section 2</span>
-                <h2>The Problem</h2>
+                <div class="section-heading">
+                    <span class="section-number">2.</span>
+                    <span class="section-title">The Problem</span>
+                </div>
                 <p>Publishing lessons from Xyleme was a manual, time-consuming process. Each lesson had to be individually published through the Xyleme interface &mdash; selecting the lesson, configuring output parameters, initiating the publish, and waiting for confirmation. With 1,216 lessons needing multiple publish cycles, the labor cost was enormous.</p>
                 <p>The team collectively needed to verify that all content in every lesson matched what was currently being served to customers. This meant each lesson went through multiple rounds of verification and republishing, compounding the manual effort exponentially.</p>
             </div>
 
             <!-- Section 3: The Solution -->
             <div class="report-section">
-                <span class="section-number">Section 3</span>
-                <h2>The Solution</h2>
+                <div class="section-heading">
+                    <span class="section-number">3.</span>
+                    <span class="section-title">The Solution</span>
+                </div>
                 <p>Dan Novak used the Fiddler network debugging tool to analyze and integrate with Xyleme's publishing API. By capturing and analyzing the HTTP traffic between the browser and Xyleme's servers, he identified the exact sequence of API requests needed to trigger a publish operation.</p>
                 <p>He then built an automation tool that could batch-publish lessons unattended &mdash; eliminating the need for a human to manually click through each lesson's publish workflow. This saved an estimated 600+ hours of manual labor across the project.</p>
             </div>
 
             <!-- Section 4: Personnel -->
             <div class="report-section">
-                <span class="section-number">Section 4</span>
-                <h2>Personnel</h2>
+                <div class="section-heading">
+                    <span class="section-number">4.</span>
+                    <span class="section-title">Personnel</span>
+                </div>
 
                 <table class="personnel-table">
                     <thead>
@@ -181,8 +189,10 @@
 
             <!-- Section 5: Primary Source Testimony -->
             <div class="report-section">
-                <span class="section-number">Section 5</span>
-                <h2>Primary Source Testimony</h2>
+                <div class="section-heading">
+                    <span class="section-number">5.</span>
+                    <span class="section-title">Primary Source Testimony</span>
+                </div>
 
                 <blockquote>
                     Dan Novak "The Fiddler" (Automation) &mdash; Dan gets this name not only because he makes extensive use of the Fiddler application to help us troubleshoot communications errors for customers, but because he fiddles with stuff until we get a tool that makes things&hellip; possible. He also used Fiddler to figure out how to automate the publishing process out of Xyleme. <strong>This resulted in a savings of about 600 hours of labor</strong> by allowing us to publish large batches of lessons unattended.
@@ -203,16 +213,20 @@
 
             <!-- Section 6: Additional Context -->
             <div class="report-section">
-                <span class="section-number">Section 6</span>
-                <h2>Additional Context</h2>
+                <div class="section-heading">
+                    <span class="section-number">6.</span>
+                    <span class="section-title">Additional Context</span>
+                </div>
                 <p>The recognition email gave each of 15 team members a unique nickname highlighting their specific contribution. The Director of Learning Technologies highlighted this as a kudos during the All Hands meeting, elevating the team's work to division-wide visibility.</p>
                 <p>The team collectively verified that all of the content in 1,216 lessons matched the content currently being served to customers. The content delivery framework library was fully refreshed for all clients including the enterprise course library.</p>
             </div>
 
             <!-- Section 7: Impact Metrics -->
             <div class="report-section">
-                <span class="section-number">Section 7</span>
-                <h2>Impact Metrics</h2>
+                <div class="section-heading">
+                    <span class="section-number">7.</span>
+                    <span class="section-title">Impact Metrics</span>
+                </div>
 
                 <div class="stats-bar">
                     <div class="stat-item">
@@ -234,7 +248,7 @@
                 </div>
 
                 <div class="impact-tags">
-                    <span class="impact-tag highlight">600+ Hours Saved</span>
+                    <span class="impact-tag highlight"><span class="key-fact">600+ Hours</span> Saved</span>
                     <span class="impact-tag highlight">Automation</span>
                     <span class="impact-tag">Xyleme</span>
                     <span class="impact-tag">Fiddler</span>
@@ -247,8 +261,10 @@
 
             <!-- Section 8: Technologies -->
             <div class="report-section">
-                <span class="section-number">Section 8</span>
-                <h2>Technologies</h2>
+                <div class="section-heading">
+                    <span class="section-number">8.</span>
+                    <span class="section-title">Technologies</span>
+                </div>
 
                 <p><strong>Reverse Engineering & Analysis:</strong> Fiddler (HTTP traffic capture and analysis), browser DevTools, Xyleme API inspection, HTTP request/response debugging</p>
 
