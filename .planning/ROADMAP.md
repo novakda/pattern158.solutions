@@ -27,7 +27,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 - [x] **Phase 7: CSS Foundation & Token System Audit** - Clean architecture foundation before content/visual polish (completed 2026-02-20)
 - [ ] **Phase 8: Content Quality & Information Architecture** - Finalize content structure before layout changes
 - [x] **Phase 9: Layout & Spacing Consistency** - Establish visual rhythm after content finalized (completed 2026-02-21)
-- [ ] **Phase 10: Typography & Hierarchy** - Polish typography after layout rhythm established
+- [x] **Phase 10: Typography & Hierarchy** - Polish typography after layout rhythm established (completed 2026-02-21)
 - [ ] **Phase 11: Color Refinement & Contrast Verification** - Verify color/contrast after typography finalized
 - [ ] **Phase 12: Exhibit Content Structure Optimization** - Apply established visual system to case studies
 - [ ] **Phase 13: Navigation & Footer Consistency Verification** - Verify cross-page consistency after content/layout stable
@@ -130,7 +130,7 @@ Plans:
 
 **Research**: Skip (standard patterns, no additional research needed)
 
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 10-01-PLAN.md — Typography hierarchy audit, semantic heading fixes, and heading style normalization
@@ -232,7 +232,7 @@ Plans:
 | 7. CSS Foundation & Token System Audit | v1.1 | Complete    | 2026-02-20 | - |
 | 8. Content Quality & Information Architecture | v1.1 | 0/5 | Planned | - |
 | 9. Layout & Spacing Consistency | v1.1 | 0/3 | Planned | - |
-| 10. Typography & Hierarchy | 1/2 | In Progress|  | - |
+| 10. Typography & Hierarchy | 2/2 | Complete   | 2026-02-21 | - |
 | 11. Color Refinement & Contrast Verification | v1.1 | 0/? | Not started | - |
 | 12. Exhibit Content Structure Optimization | v1.1 | 0/? | Not started | - |
 | 13. Navigation & Footer Consistency Verification | v1.1 | 0/? | Not started | - |
