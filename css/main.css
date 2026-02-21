@@ -162,10 +162,26 @@
     --color-accent: #c9a226;            /* Lightened to pass 4.5:1 on dark bg (3.92→4.58:1) */
 }
 
-/* Footer dark mode override to maintain dark appearance */
+/* === DARK MODE INVERSE SECTION HANDLING ===
+   In light mode, inverse sections (nav, hero, footer) use --color-inverse (#1a2838)
+   as their background, which matches dark mode's --color-background.
+
+   To maintain visual distinction in dark mode:
+   - Nav and hero: Keep --color-inverse background (already equals dark bg, creates
+     seamless integration with page, using --color-inverse-text maintains contrast)
+   - Footer: Override to --color-surface (elevated appearance, visually distinct
+     from page background while maintaining dark theme cohesion)
+
+   This approach ensures:
+   1. Nav/hero blend naturally with dark mode page background
+   2. Footer appears elevated, signaling page boundary
+   3. All inverse-text tokens (including muted/light variants) pass contrast on
+      dark backgrounds (11.56:1 and 10.24:1 respectively)
+*/
+
 [data-theme="dark"] footer {
-    background: var(--color-surface);
-    color: var(--color-text);
+    background: var(--color-surface);   /* Elevated from page bg for visual boundary */
+    color: var(--color-text);           /* Standard text color for dark mode */
 }
 
 @layer reset {
