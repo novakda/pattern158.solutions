@@ -800,6 +800,47 @@ footer a:hover {
     font-size: var(--font-size-lg);
 }
 
+/* ========== INFLUENCES COMPACT (Homepage) ========== */
+.page-index .influences-compact {
+    background: var(--color-surface);
+}
+
+.page-index .influences-compact h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+    text-align: center;
+}
+
+.page-index .influences-compact .section-subtitle {
+    text-align: center;
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.page-index .influences-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-index .influences-list dt {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-lg);
+    color: var(--color-heading);
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-xs);
+}
+
+.page-index .influences-list dd {
+    margin-left: 0;
+    padding-left: var(--space-lg);
+    border-left: 3px solid var(--color-primary);
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
 /* ========== FINDINGS SECTION (NTSB Style) ========== */
 .page-index .findings {
     background: var(--color-background-alt);
@@ -3424,6 +3465,51 @@ footer a:hover {
 /* ================================================================
    PORTFOLIO PAGE
    ================================================================ */
+
+/* --- Positioning Narratives Section --- */
+.page-portfolio .portfolio-narratives {
+    background: var(--color-surface);
+    padding: var(--space-4xl) 0;
+}
+
+.page-portfolio .portfolio-narratives h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-sm);
+    color: var(--color-heading);
+    text-align: center;
+}
+
+.page-portfolio .narrative-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.page-portfolio .narrative-card {
+    background: var(--color-background);
+    padding: var(--space-xl);
+    border-left: 4px solid var(--color-primary);
+}
+
+.page-portfolio .narrative-card h3 {
+    font-size: var(--font-size-lg);
+    color: var(--color-heading);
+    margin-bottom: var(--space-sm);
+}
+
+.page-portfolio .narrative-card p {
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: var(--space-sm);
+}
+
+.page-portfolio .narrative-clients {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
 
 /* --- Flagship Engagements Section --- */
 .page-portfolio .portfolio-flagships {

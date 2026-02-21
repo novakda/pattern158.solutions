@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="GM Course Completion Investigation: NTSB-style forensic analysis of a 4x spike in incomplete training courses. Five systemic failures identified through multi-angle investigation.">
+    <meta name="description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. 100+ packages, 7+ energy clients, 10+ years in production.">
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-j.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit J: GM Course Completion - Systemic Failure Analysis">
-    <meta property="og:description" content="GM Course Completion Investigation: NTSB-style forensic analysis of a 4x spike in incomplete training courses. Five systemic failures identified through multi-angle investigation.">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-e.html">
+    <meta property="og:title" content="Pattern 158 | Exhibit E: CSBB Dispatch — Cross-Domain Content Delivery">
+    <meta property="og:description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. 100+ packages, 7+ energy clients, 10+ years in production.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="559">
@@ -38,11 +38,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-j.html">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-e.html">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit J: GM Course Completion - Systemic Failure Analysis</title>
+    <title>Pattern 158 | Exhibit E: CSBB Dispatch &mdash; Cross-Domain Content Delivery</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,7 +53,7 @@
 }
 </script>
 </head>
-<body class="page-exhibit page-exhibit-j">
+<body class="page-exhibit page-exhibit-e">
     <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -110,15 +110,23 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>EXHIBIT J: <span class="pattern-number">GM COURSE COMPLETION</span></h1>
-            <p class="subtitle">Exhibit J: GM Course Completion &mdash; Systemic Failure Analysis</p>
+            <h1>EXHIBIT E: <span class="pattern-number">CSBB DISPATCH</span></h1>
+            <p class="subtitle">Exhibit E: CSBB Dispatch &mdash; Cross-Domain Content Delivery</p>
             <div class="report-meta">
-                <strong>Client:</strong> General Motors<br>
-                <strong>Platform:</strong> Enterprise LMS (PeopleSoft-based) + Third-Party Authoring Tools<br>
-                <strong>Period:</strong> ~2017<br>
-                <strong>Team:</strong> Director (Investigation Lead), Dan Novak (Technical Forensics), Data Analyst / UX Researcher
+                <strong>Client:</strong> GP Strategies (Multiple Energy Utility Clients)<br>
+                <strong>Period:</strong> 2011&ndash;2016+ (10+ years in production)<br>
+                <strong>Team:</strong> Dan Novak (Architect/Developer), Zach Taylor (GPiLEARN Developer), Ron Cyran (Program Manager), Tom Pizer (Director of Learning Technologies)
             </div>
-            <span class="classification">Field Report &middot; Exhibit J &middot; General Motors &middot; ~2017</span>
+            <span class="classification">Field Report &middot; Exhibit E &middot; GP Strategies &middot; 2011&ndash;2016+</span>
+        </div>
+    </section>
+
+    <!-- Prominent Callout -->
+    <section class="report-section">
+        <div class="container">
+            <div class="probable-cause-box">
+                <p>&ldquo;Built in 2011 &mdash; five years before Rustici released Content Controller to solve the same problem.&rdquo;</p>
+            </div>
         </div>
     </section>
 
@@ -130,16 +138,9 @@
                 <span class="section-title">Background</span>
             </div>
             <div class="background-content">
-                <p>General Motors reported that <strong>19% of launched lessons</strong> were not being marked completed or passed &mdash; nearly <strong>four times</strong> their historical baseline of ~5%. The spike coincided with a migration to a new LMS platform six months prior. Completion of training had direct financial impact on GM dealerships, making this a high-priority investigation.</p>
+                <p>Version control nightmare: every course update required emailing zip files to <strong>7+ energy utility clients</strong> for manual re-upload to their respective LMS platforms. Different versions of the same content running on different client systems, with no centralized control over what was deployed where. A single course update could take days to propagate across all client deployments.</p>
 
-                <p>With over <span class="key-fact">10,000 courses</span> in the library, reviewing every course was impractical. The team relied on data reports to identify candidate courses for analysis. GM&rsquo;s initial framing assumed a tracking bug. The investigation was designed to test that assumption &mdash; and look deeper if the evidence pointed elsewhere.</p>
-
-                <p>A small team was assembled to conduct a multi-angle forensic investigation modeled on air crash investigation methodology &mdash; the same approach the NTSB uses when an aircraft goes down. The core principle: <strong>never blame the user first &mdash; investigate the system design.</strong> Three independent investigation tracks ran in parallel, each examining the problem from a different angle:</p>
-                <ul class="detail-list">
-                    <li><strong>Angle 1 &mdash; Technical Forensics:</strong> Fiddler network traces and browser debugging to analyze course-to-LMS communication at the protocol level</li>
-                    <li><strong>Angle 2 &mdash; UX Analysis:</strong> Course navigation and completion flow review to identify design patterns that could mislead users</li>
-                    <li><strong>Angle 3 &mdash; User Research:</strong> Interviews with actual GM sales reps to understand real-world usage patterns and environmental conditions</li>
-                </ul>
+                <p>The problem wasn&rsquo;t just logistics &mdash; it was architectural. Each client&rsquo;s LMS enforced same-origin security policies, making direct cross-domain content hosting impossible with standard approaches. The content needed to live on GP Strategies&rsquo; servers for centralized control, but execute inside each client&rsquo;s LMS domain for SCORM communication. No commercial product existed to solve this problem in 2011.</p>
             </div>
         </div>
     </section>
@@ -160,16 +161,20 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="person-name" data-label="Role">Director / Investigation Lead</td>
-                        <td data-label="Responsibility">Project authorization, stakeholder management, investigation oversight</td>
+                        <td class="person-name" data-label="Role">Architect / Developer (Dan Novak)</td>
+                        <td data-label="Responsibility">System architecture, cross-domain communication layer, SCORM API proxy, package generation tooling</td>
                     </tr>
                     <tr>
-                        <td class="person-name" data-label="Role">Technical Forensics (Dan Novak)</td>
-                        <td data-label="Responsibility">Fiddler traces, browser debugging, code analysis, architecture review</td>
+                        <td class="person-name" data-label="Role">GPiLEARN Developer (Zach Taylor)</td>
+                        <td data-label="Responsibility">Primary development collaborator, platform engineering</td>
                     </tr>
                     <tr>
-                        <td class="person-name" data-label="Role">Data Analyst / UX Researcher</td>
-                        <td data-label="Responsibility">Data analysis, UX evaluation, user interviews, behavioral research</td>
+                        <td class="person-name" data-label="Role">Program Manager (Ron Cyran)</td>
+                        <td data-label="Responsibility">GPiLEARN program management, client coordination</td>
+                    </tr>
+                    <tr>
+                        <td class="person-name" data-label="Role">Director of Learning Technologies (Tom Pizer)</td>
+                        <td data-label="Responsibility">Technical direction, hosting infrastructure</td>
                     </tr>
                 </tbody>
             </table>
@@ -186,74 +191,66 @@
 
             <div class="timeline">
                 <div class="timeline-entry">
-                    <div class="timeline-date">Initial Report</div>
-                    <div class="timeline-title">Anomalous Completion Rates Flagged</div>
+                    <div class="timeline-date">The Problem</div>
+                    <div class="timeline-title">Version Control Nightmare</div>
                     <div class="timeline-content">
-                        <p>GM reports ~19% of launched lessons not being marked completed &mdash; nearly 4x the historical baseline of ~5%. Investigation authorized. Client-side stakeholders describe the problem as affecting roughly &ldquo;30% of cases&rdquo; in some course categories.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry">
-                    <div class="timeline-date">Initial Review</div>
-                    <div class="timeline-title">Initial Investigation</div>
-                    <div class="timeline-content">
-                        <p>An initial investigation is conducted but cannot identify the root cause. The problem persists and escalates.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-entry">
-                    <div class="timeline-date">Team Assignment</div>
-                    <div class="timeline-title">Dedicated Team Assembled</div>
-                    <div class="timeline-content">
-                        <p>The director assembles a dedicated investigation team: Dan Novak for technical forensics, and a data analyst for UX evaluation and user research.</p>
+                        <p>Course updates require emailing zip files to 7+ energy clients for manual re-upload. Version chaos across deployments.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry milestone">
-                    <div class="timeline-date">Technical Forensics Phase</div>
-                    <div class="timeline-title">Architecture Analysis</div>
+                    <div class="timeline-date">Architecture Design</div>
+                    <div class="timeline-title">Centralized Hosting with Stub Packages</div>
                     <div class="timeline-content">
-                        <p>Dan uses Fiddler and browser debugging to trace course-to-LMS communication. Discovers that the LMS holds all course state in memory cache and only persists to the database via form submit when the course closes properly. No periodic auto-save. No graceful degradation for connection loss.</p>
+                        <p>Dan designs centralized content hosting on GP servers with lightweight &ldquo;stub&rdquo; packages deployed to client LMS platforms. Stubs are kilobytes, not megabytes.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry milestone">
-                    <div class="timeline-date">UX Analysis</div>
-                    <div class="timeline-title">&ldquo;Congratulations You Failed&rdquo; Discovery</div>
+                    <div class="timeline-date">Cross-Domain Bridge</div>
+                    <div class="timeline-title">EasyXDM Communication Layer</div>
                     <div class="timeline-content">
-                        <p>The team reviews courses built with the vendor&rsquo;s authoring tool. Courses display &ldquo;Congratulations! You&rsquo;re done!&rdquo; after the final assessment &mdash; but that isn&rsquo;t the last page. Users must navigate to one more slide to trigger SCORM completion. The UI actively misleads learners into closing before completion registers.</p>
+                        <p>JavaScript/CORS communication layer using EasyXDM to bridge the cross-domain gap between GP&rsquo;s content servers and client LMS domains.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry milestone">
-                    <div class="timeline-date">User Research Breakthrough</div>
-                    <div class="timeline-title">Mobile Workforce Discovery</div>
+                    <div class="timeline-date">Protocol Translation</div>
+                    <div class="timeline-title">SCORM API Proxy</div>
                     <div class="timeline-content">
-                        <p>Interviews with actual GM sales reps reveal the critical insight: they are always on the road, working on poor WiFi, taking training in <strong>short bursts between customer meetings</strong> &mdash; not the hour-long desktop sessions the system was designed for. This reframes the entire investigation.</p>
+                        <p>SCORM API proxy with transparent AICC/SCORM protocol translation &mdash; the same content works regardless of whether the client LMS speaks SCORM or AICC.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry milestone">
-                    <div class="timeline-date">Synthesis</div>
-                    <div class="timeline-title">Five Concurrent Failures Identified</div>
+                    <div class="timeline-date">CSBB Generator</div>
+                    <div class="timeline-title">Automated Package Generation</div>
                     <div class="timeline-content">
-                        <p>All investigation tracks converge: fragile architecture, misleading UX, confusing navigation, mobile usage patterns, and poor connectivity align to produce a &ldquo;perfect storm&rdquo; &mdash; a systemic mismatch between how the system was designed and how people actually work.</p>
+                        <p>Package generation tooling (Groovy, Access, Windows Forms) automating the creation and deployment of stub packages. Global deployments without touching individual client systems.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry">
-                    <div class="timeline-date">Delivery</div>
-                    <div class="timeline-title">Findings Delivered</div>
+                    <div class="timeline-date">Scale</div>
+                    <div class="timeline-title">Multi-Client Deployment</div>
                     <div class="timeline-content">
-                        <p>Comprehensive report delivered documenting all findings. Not all stakeholders agree with the technical assessment. Dan documents uncertainty honestly: the cache vulnerability couldn&rsquo;t be conclusively proven in a controlled environment.</p>
+                        <p>Deployed across 7+ energy utility clients: FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP. <strong>100+ packages</strong> in production.</p>
                     </div>
                 </div>
 
                 <div class="timeline-entry">
-                    <div class="timeline-date">Validation (Years Later)</div>
-                    <div class="timeline-title">GM Abandons Platform</div>
+                    <div class="timeline-date">Defense Adaptation</div>
+                    <div class="timeline-title">Cross-Industry Reuse</div>
                     <div class="timeline-content">
-                        <p>GM abandons the platform entirely and migrates to SAP SuccessFactors. The systemic architecture and UX failures identified in the investigation would not follow to a properly designed platform &mdash; but a simple tracking bug would have. The migration itself was indirect validation.</p>
+                        <p>Architecture later adapted for General Dynamics Electric Boat defense sector deployment, proving the pattern was reusable across industries.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Validation</div>
+                    <div class="timeline-title">Market Catches Up</div>
+                    <div class="timeline-content">
+                        <p>System remained in production for 10+ years. In 2016, Rustici Software released Content Controller to solve the same centralized dispatch problem commercially.</p>
                     </div>
                 </div>
             </div>
@@ -265,43 +262,42 @@
         <div class="container">
             <div class="section-heading">
                 <span class="section-number">4.</span>
-                <span class="section-title">Findings &mdash; Five System Failures</span>
+                <span class="section-title">Findings</span>
             </div>
-            <p class="report-intro">The investigation identified five concurrent systemic failures &mdash; not a single bug, but a <strong>Swiss cheese model</strong> alignment, the same framework used in aviation safety analysis. In the Swiss cheese model, each layer of defense has holes; an accident occurs when the holes in multiple layers momentarily align. Applied to software: fragile architecture, misleading UX, confusing navigation, mobile workforce constraints, and usage pattern mismatch each had individual vulnerabilities. Alone, none would cause a 4x degradation. Together, the holes aligned.</p>
 
             <table class="resolution-table">
                 <thead>
                     <tr>
                         <th style="width: 5%;">#</th>
-                        <th style="width: 22%;">Failure</th>
+                        <th style="width: 22%;">Finding</th>
                         <th style="width: 73%;">Description</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="issue-id" data-label="#">F-01</td>
-                        <td data-label="Failure"><strong>Memory Cache Vulnerability</strong></td>
-                        <td data-label="Description">The LMS held all course state in memory cache. Only saved to database via form submit when the course closed properly. No auto-save, no graceful degradation. Browser crash, tab close, or connection drop = all progress lost.</td>
+                        <td data-label="Finding"><strong>Cross-Domain Architecture</strong></td>
+                        <td data-label="Description">EasyXDM-based communication layer bridged same-origin policy constraints between GP content servers and client LMS domains &mdash; transparent to both content and LMS.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-02</td>
-                        <td data-label="Failure"><strong>&ldquo;Congratulations You Failed&rdquo; UX</strong></td>
-                        <td data-label="Description">Courses displayed a completion message after the final assessment &mdash; but that wasn&rsquo;t the last page. Users had to navigate to one more slide to trigger SCORM completion. The UI actively misled learners into closing before completion registered.</td>
+                        <td data-label="Finding"><strong>Protocol Agnostic</strong></td>
+                        <td data-label="Description">SCORM API proxy provided transparent AICC/SCORM protocol translation &mdash; identical content packages worked across LMS platforms regardless of protocol dialect.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-03</td>
-                        <td data-label="Failure"><strong>Confusing Navigation</strong></td>
-                        <td data-label="Description">The vendor&rsquo;s authoring tool produced courses with unintuitive navigation controls. Even expert users with deep courseware experience struggled to use the interface &mdash; average GM sales reps with no eLearning background had no chance.</td>
+                        <td data-label="Finding"><strong>Deployment Revolution</strong></td>
+                        <td data-label="Description">Stub packages (kilobytes) replaced full content packages (megabytes) on client LMS. Course updates deployed centrally, propagated instantly to all clients.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-04</td>
-                        <td data-label="Failure"><strong>Mobile Workforce / Poor WiFi</strong></td>
-                        <td data-label="Description">GM sales reps were always on the road, working on intermittent WiFi connections. The system had no recovery mechanism for connection drops, making every session a gamble.</td>
+                        <td data-label="Finding"><strong>Automation at Scale</strong></td>
+                        <td data-label="Description">CSBB Generator tooling (Groovy, Access, Windows Forms) automated package creation for 100+ courses across 7+ clients &mdash; global deployments without touching individual systems.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-05</td>
-                        <td data-label="Failure"><strong>Short-Burst Usage Pattern</strong></td>
-                        <td data-label="Description">System was designed for hour-long desktop sessions. Actual users took training in 5-minute bursts between customer meetings. Each improper close triggered the cache vulnerability, dumping all progress.</td>
+                        <td data-label="Finding"><strong>Cross-Industry Reuse</strong></td>
+                        <td data-label="Description">Architecture originally built for energy utilities was successfully adapted for defense sector (General Dynamics Electric Boat) &mdash; proving the pattern was reusable, not domain-specific.</td>
                     </tr>
                 </tbody>
             </table>
@@ -317,25 +313,25 @@
             </div>
 
             <div class="probable-cause-box">
-                <p>The investigation determined that the root cause was <strong>not a single tracking bug</strong> but a systemic mismatch between how the platform was designed and how people actually worked. Five concurrent failures aligned in a <strong>Swiss cheese model</strong>: fragile memory-cache architecture with no auto-save (F-01), a completion UI that actively misled users (F-02), navigation so confusing that even experts struggled (F-03), a mobile workforce on unreliable WiFi (F-04), and a short-burst usage pattern that triggered the cache vulnerability repeatedly (F-05).</p>
-                <p>No single failure would have caused a 4x degradation in completion rates. Together, they created a &ldquo;perfect storm&rdquo; where the system design set users up to fail &mdash; then the metrics blamed the users for failing.</p>
+                <p>CSBB Dispatch solved a problem that had no commercial solution in 2011: <strong>centralized cross-domain content delivery with transparent protocol translation</strong>. The architecture &mdash; lightweight stubs on client LMS platforms communicating with centralized content servers via EasyXDM &mdash; eliminated the version control nightmare of distributing zip files to multiple clients and enabled instant, centralized updates across all deployments.</p>
+                <p>Five years later, in 2016, Rustici Software released Content Controller to address the same centralized dispatch problem. This is not a &ldquo;budget substitute&rdquo; narrative &mdash; CSBB was built <strong>five years before the commercial solution existed</strong>. It solved a real architectural problem using the tools available, and remained in production for over a decade.</p>
             </div>
         </div>
     </section>
 
-    <!-- 6. OUTCOME & VALIDATION -->
+    <!-- 6. OUTCOME -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
                 <span class="section-number">6.</span>
-                <span class="section-title">Outcome &amp; Validation</span>
+                <span class="section-title">Outcome</span>
             </div>
             <div class="background-content">
-                <p>The comprehensive report was delivered documenting all findings. Not all stakeholders agreed with the technical assessment &mdash; the memory cache vulnerability couldn&rsquo;t be conclusively reproduced in a controlled environment. Dan documented this uncertainty honestly, presenting evidence-based hypotheses while acknowledging what couldn&rsquo;t be proven.</p>
+                <p>The system served <strong>7+ major energy utility clients</strong> (FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP) with <strong>100+ packages</strong> in production. It remained operational for 10+ years &mdash; outlasting most of the projects it was built to support.</p>
 
-                <p>Years later, GM abandoned the platform entirely and migrated to SAP SuccessFactors. The systemic architecture and UX failures identified in this investigation would not follow to a properly designed platform &mdash; a mere tracking bug would have. The platform migration itself served as indirect validation of the findings.</p>
+                <p>The architecture proved reusable when adapted for General Dynamics Electric Boat&rsquo;s defense sector deployment, demonstrating that the cross-domain dispatch pattern wasn&rsquo;t a one-off solution but a generalizable approach to multi-tenant content delivery.</p>
 
-                <p><strong>What this demonstrated:</strong> This exhibit showcases forensic methodology and systems thinking &mdash; not debugging skill. The distinction matters. A debugger would have searched for the tracking bug GM assumed existed. This investigation ran three independent tracks in parallel (technical forensics, UX analysis, user research), synthesized findings across disciplines, and identified a systemic mismatch that no single track could have found alone. Intellectual honesty under organizational pressure &mdash; documenting what couldn&rsquo;t be conclusively proven alongside what could &mdash; is central to the approach. The Provider of Clarity enters chaos and delivers understanding, even when the organization resists uncomfortable truths.</p>
+                <p>Dan encountered the same architectural pattern a decade later on the <a href="/exhibits/exhibit-n.html" class="link-primary">BP Learning Platform</a> (2024) &mdash; a federated integration layer (React/GraphQL) stitching together Rustici Content Controller, PeopleFluent LMS, Watershed LRS, and Amazon Cognito. He didn&rsquo;t build that platform, but he recognized the architecture immediately because he&rsquo;d invented his own version of it in 2011.</p>
             </div>
         </div>
     </section>
@@ -357,28 +353,28 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td data-label="Category"><strong>LMS Platform</strong></td>
-                        <td data-label="Technologies & Tools">PeopleSoft-based Enterprise LMS, Memory cache architecture, Form-based state persistence</td>
+                        <td data-label="Category"><strong>Core Languages</strong></td>
+                        <td data-label="Technologies & Tools">JavaScript (ES5), HTML5</td>
                     </tr>
                     <tr>
-                        <td data-label="Category"><strong>Authoring Tools</strong></td>
-                        <td data-label="Technologies & Tools">Third-party vendor authoring platform (custom navigation, assessment flows, completion triggers)</td>
+                        <td data-label="Category"><strong>Cross-Domain Communication</strong></td>
+                        <td data-label="Technologies & Tools">EasyXDM (cross-domain messaging library), CORS, postMessage</td>
                     </tr>
                     <tr>
-                        <td data-label="Category"><strong>Forensic Analysis</strong></td>
-                        <td data-label="Technologies & Tools">Fiddler (HTTP traffic capture, course-to-LMS communication tracing), Browser DevTools (JavaScript debugging, network analysis, state inspection)</td>
+                        <td data-label="Category"><strong>eLearning Standards</strong></td>
+                        <td data-label="Technologies & Tools">SCORM 1.2, AICC (HACP protocol), SCORM-to-AICC protocol translation</td>
                     </tr>
                     <tr>
-                        <td data-label="Category"><strong>Investigation Methodology</strong></td>
-                        <td data-label="Technologies & Tools">NTSB air crash investigation model (Swiss cheese model, multi-angle forensic investigation, systems thinking over code debugging)</td>
+                        <td data-label="Category"><strong>Package Generation</strong></td>
+                        <td data-label="Technologies & Tools">Groovy (scripting), Microsoft Access (database/UI), Windows Forms (tooling UI)</td>
                     </tr>
                     <tr>
-                        <td data-label="Category"><strong>Data Analysis</strong></td>
-                        <td data-label="Technologies & Tools">LMS completion reports, Course launch/completion statistics, Anomaly detection (4x baseline degradation)</td>
+                        <td data-label="Category"><strong>Infrastructure</strong></td>
+                        <td data-label="Technologies & Tools">SQL (content metadata), GP Strategies content servers, client LMS platforms</td>
                     </tr>
                     <tr>
-                        <td data-label="Category"><strong>UX Research</strong></td>
-                        <td data-label="Technologies & Tools">Course navigation analysis, User interviews (GM sales reps), Mobile usage pattern discovery, WiFi connectivity assessment</td>
+                        <td data-label="Category"><strong>Client Deployments</strong></td>
+                        <td data-label="Technologies & Tools">FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP, General Dynamics Electric Boat</td>
                     </tr>
                 </tbody>
             </table>
@@ -386,10 +382,10 @@
             <div class="background-content">
                 <h2>Key Technical Insights</h2>
                 <ul class="detail-list">
-                    <li><strong>Architecture Vulnerability Discovery:</strong> Fiddler traces revealed memory cache held all course state with no periodic auto-save—browser crash or connection drop triggered complete progress loss</li>
-                    <li><strong>UX Misdirection:</strong> "Congratulations! You're done!" appeared after final assessment but wasn't the last page—completion trigger required one more slide navigation</li>
-                    <li><strong>Mobile Workforce Reality:</strong> User interviews exposed short-burst usage pattern (5-minute sessions between customer meetings) on unreliable WiFi—system designed for hour-long desktop sessions</li>
-                    <li><strong>Perfect Storm Convergence:</strong> Five concurrent failures aligned to produce 4x degradation in completion rates—not a single bug, but systemic mismatch between design assumptions and actual use</li>
+                    <li><strong>Stub Architecture:</strong> Lightweight packages (kilobytes) deployed to client LMS contain only launch and communication code &mdash; actual content served from centralized GP servers, enabling instant updates without client-side redeployment</li>
+                    <li><strong>Protocol Translation Layer:</strong> SCORM API proxy transparently converts between SCORM and AICC protocols &mdash; content authors write once, the dispatch layer handles LMS dialect differences</li>
+                    <li><strong>Predating the Market:</strong> Built in 2011, five years before Rustici Content Controller (2016). The same centralized dispatch problem, solved independently with the tools available at the time</li>
+                    <li><strong>Cross-Industry Pattern:</strong> Architecture proved reusable from energy utilities to defense sector &mdash; the cross-domain dispatch pattern is domain-agnostic</li>
                 </ul>
             </div>
         </div>

@@ -68,21 +68,28 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ### Active
 
-<!-- Next milestone scope. -->
+<!-- Current milestone: v1.2 — Rustici-Targeted Content + Exhibit/Nav/QA -->
 
+- [x] **CONTENT-05**: SCORM Debugger exhibit (exhibit-m) — TASBot for eLearning, Rustici gap callout
+- [x] **CONTENT-06**: CSBB Dispatch exhibit (exhibit-e) — "Built 2011, 5 years before Rustici Content Controller"
+- [x] **CONTENT-07**: BP Learning Platform exhibit (exhibit-n) — Rustici Content Controller integration experience
+- [x] **CONTENT-08**: Three positioning narratives surfaced on portfolio page (Three Lenses section)
+- [x] **CONTENT-09**: GM Investigation exhibit strengthened — Swiss cheese model, three-angle methodology, SuccessFactors
+- [x] **CONTENT-10**: Homepage Five Core Influences section with application context
+- [x] **CONTENT-11**: Cross-references updated — philosophy, homepage, sitemap for new exhibits
+- [x] **CONTENT-12**: Framing correction verified — no "budget substitute" language in codebase
 - [ ] **EXHIBIT-01**: All exhibits follow Challenge → Approach → Solution → Results structure
 - [ ] **EXHIBIT-02**: Quantifiable results/metrics highlighted in summaries
 - [ ] **EXHIBIT-03**: Impact-first headlines — outcomes visible within 30-second scan
 - [ ] **EXHIBIT-04**: Visual consistency across all exhibit pages
-- [ ] **NAV-05**: Navigation structure 100% identical across all 17 pages
+- [ ] **NAV-05**: Navigation structure 100% identical across all pages
 - [ ] **NAV-06**: Footer optimized — contact visibility, social links, trust elements
-- [ ] **NAV-07**: Zero broken internal links across all 17 pages
+- [ ] **NAV-07**: Zero broken internal links across all pages
 - [ ] **A11Y-02**: Full WCAG AA re-verification passes after all changes
 - [ ] **A11Y-03**: Automated accessibility test suite passes
 - [ ] **A11Y-04**: Cross-browser rendering verified
 - [ ] **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
 - [ ] **A11Y-06**: Semantic HTML verified
-- [ ] **TECH-04**: Analytics integration (privacy-first, cookieless)
 
 ### Out of Scope
 
@@ -98,10 +105,11 @@ The site must accurately and compellingly present Dan's professional identity an
 - Google Analytics -- privacy concerns, performance impact, requires cookie consent
 - Parallax scrolling / animations -- conflicts with NTSB investigation aesthetic
 - Cookie consent banner -- eliminated by choosing cookieless analytics
+- Analytics integration (TECH-04) -- deferred past v1.2, not needed for Rustici opportunity
 
 ## Context
 
-Shipped v1.1 with ~11,535 LOC (7,850 HTML + 3,685 CSS) across 17 pages. Tech stack: static HTML, single CSS file with cascade layers, 80+ design tokens (colors, fonts, spacing, shadows, font-sizes), Stylelint enforcement, minimal vanilla JS (theme toggle, hamburger menu). No build tools, no frameworks, no runtime dependencies.
+Shipped v1.1 with ~11,535 LOC (7,850 HTML + 3,685 CSS) across 17 pages. v1.2 Phase 12 added 3 new exhibit pages (SCORM Debugger, CSBB Dispatch, BP Learning Platform), Three Lenses positioning section, Five Core Influences on homepage, and GM exhibit enhancements — now 22 HTML pages total. Tech stack: static HTML, single CSS file with cascade layers, 80+ design tokens (colors, fonts, spacing, shadows, font-sizes), Stylelint enforcement, minimal vanilla JS (theme toggle, hamburger menu). No build tools, no frameworks, no runtime dependencies.
 
 v1.0 established the foundation (2026-02-10 to 2026-02-19). v1.1 audited and polished CSS architecture, content quality, layout spacing, typography hierarchy, and color accessibility (2026-02-20 to 2026-02-21). All NTSB investigation structure applied to exhibits. WCAG AA verified with 37/37 contrast tests.
 
@@ -159,4 +167,4 @@ This website was originally developed as part of a broader "Career Documentation
 | Base link underline with cascade layer override | WCAG 1.4.1 compliance: body links underlined, nav/button links clean via layer cascade | ✓ Good |
 
 ---
-*Last updated: 2026-02-21 after v1.1 milestone completion*
+*Last updated: 2026-02-21 after v1.2 Phase 12 (Rustici-targeted content)*

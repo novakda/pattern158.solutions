@@ -114,6 +114,32 @@
             </div>
         </section>
 
+        <!-- Positioning Narratives -->
+        <section class="portfolio-narratives" aria-labelledby="narratives-heading">
+            <div class="container">
+                <h2 id="narratives-heading">Three Lenses</h2>
+                <p class="section-subtitle">The same career, three ways to read it</p>
+
+                <div class="narrative-cards">
+                    <div class="narrative-card">
+                        <h3>Enterprise Integration Architect</h3>
+                        <p>Complex multi-system integrations where nothing was designed to work together. Cross-domain SCORM dispatch, federated platform facades, protocol translation layers.</p>
+                        <span class="narrative-clients">GDEB &middot; HSBC &middot; GM &middot; Wells Fargo &middot; BP &middot; SunTrust</span>
+                    </div>
+                    <div class="narrative-card">
+                        <h3>AI-Driven Legacy Modernization</h3>
+                        <p>Forensic engineering amplified by AI tooling. Using LLMs to pressure-test analysis, generate baselines, and surface gaps that manual review misses.</p>
+                        <span class="narrative-clients">Microsoft MCAPS &middot; Power Platform &middot; GitHub Spec Kit &middot; Copilot Studio</span>
+                    </div>
+                    <div class="narrative-card">
+                        <h3>Learning Systems Expert</h3>
+                        <p>Deep eLearning standards knowledge &mdash; SCORM, xAPI, AICC at the protocol level. LMS architecture, accessibility methodology, cross-platform content delivery.</p>
+                        <span class="narrative-clients">Rustici integration &middot; SCORM Debugger &middot; CSBB Dispatch &middot; TD Bank a11y</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Featured Engagements -->
         <section class="portfolio-flagships" aria-labelledby="flagships-heading">
             <div class="container">
@@ -234,7 +260,73 @@
                     <a href="/exhibits/exhibit-c.html" class="exhibit-link">Full Investigation Report →</a>
                 </div>
 
-                <!-- 6. TD Bank (Exhibit I) -->
+                <!-- 6. CSBB Dispatch (Exhibit E) -->
+                <div class="flagship-card">
+                    <div class="flagship-header">
+                        <h3 class="flagship-client">GP Strategies (Energy Sector)</h3>
+                        <span class="flagship-title">Exhibit E: CSBB Dispatch &mdash; Cross-Domain Content Delivery</span>
+                    </div>
+                    <div class="flagship-meta">
+                        <span class="flagship-dates">2011&ndash;2016+</span>
+                        <span class="email-badge">10+ years in production</span>
+                    </div>
+                    <p class="flagship-role">Architect &mdash; built in 2011, five years before Rustici Content Controller</p>
+                    <p class="flagship-summary">Centralized cross-domain content delivery: lightweight stub packages (kilobytes) deployed to client LMS platforms, actual content served from GP servers. EasyXDM cross-domain communication layer with transparent SCORM/AICC protocol translation. Package generation tooling (Groovy, Access, Windows Forms) automated global deployments across 7+ energy utility clients. 100+ packages, 10+ years in production. Architecture later adapted for General Dynamics Electric Boat defense sector.</p>
+                    <div class="flagship-tags impact-tags">
+                        <span class="impact-tag">Cross-Domain</span>
+                        <span class="impact-tag">SCORM/AICC</span>
+                        <span class="impact-tag">EasyXDM</span>
+                        <span class="impact-tag">Content Dispatch</span>
+                    </div>
+                    <blockquote class="flagship-quote">
+                        <p>&ldquo;Built in 2011 &mdash; five years before Rustici released Content Controller to solve the same problem.&rdquo;</p>
+                    </blockquote>
+                    <a href="/exhibits/exhibit-e.html" class="exhibit-link">Full Investigation Report →</a>
+                </div>
+
+                <!-- 7. BP Learning Platform (Exhibit N) -->
+                <div class="flagship-card">
+                    <div class="flagship-header">
+                        <h3 class="flagship-client">BP</h3>
+                        <span class="flagship-title">Exhibit N: BP Learning Platform &mdash; Federated System Integration</span>
+                    </div>
+                    <div class="flagship-meta">
+                        <span class="flagship-dates">2024</span>
+                        <span class="email-badge">Recent engagement</span>
+                    </div>
+                    <p class="flagship-role">Rebranding lead / troubleshooter &mdash; direct Rustici Content Controller integration experience</p>
+                    <p class="flagship-summary">Existing React/GraphQL platform acting as a federated facade over Rustici Content Controller, PeopleFluent LMS, Watershed LRS (xAPI), and Amazon Cognito. Dan&rsquo;s primary work: large-scale multi-tenant rebranding navigating an undocumented Material UI theming system &mdash; scoped as one week, expanded to months as interrelated style dependencies emerged. Also: bug fixes, Cognito troubleshooting via log analysis, reverse-engineering Watershed LRS queries. Same federated integration pattern Dan built independently as CSBB Dispatch a decade earlier.</p>
+                    <div class="flagship-tags impact-tags">
+                        <span class="impact-tag">React</span>
+                        <span class="impact-tag">Rustici</span>
+                        <span class="impact-tag">GraphQL</span>
+                        <span class="impact-tag">Federated Architecture</span>
+                    </div>
+                    <a href="/exhibits/exhibit-n.html" class="exhibit-link">Full Investigation Report →</a>
+                </div>
+
+                <!-- 8. SCORM Debugger (Exhibit M) -->
+                <div class="flagship-card">
+                    <div class="flagship-header">
+                        <h3 class="flagship-client">GP Strategies (Internal Tooling)</h3>
+                        <span class="flagship-title">Exhibit M: SCORM Debugger &mdash; TASBot for eLearning</span>
+                    </div>
+                    <div class="flagship-meta">
+                        <span class="flagship-dates">~2019&ndash;2020</span>
+                        <span class="email-badge">Developer tooling</span>
+                    </div>
+                    <p class="flagship-role">Creator &mdash; speedrunning methodology applied to eLearning QA</p>
+                    <p class="flagship-summary">Vue.js wrapper with fake SCORM API providing emulator save-state functionality for eLearning QA: save course state at any point, restore instantly, edit SCORM values directly, jump to any section. Reduced testing cycles from hours to minutes for gated content. Addresses a gap in commercial SCORM tools &mdash; reproducible debug states and session state inspection are not first-class features in SCORM Cloud or SCORM Engine.</p>
+                    <div class="flagship-tags impact-tags">
+                        <span class="impact-tag">Vue.js</span>
+                        <span class="impact-tag">SCORM API</span>
+                        <span class="impact-tag">Developer Tooling</span>
+                        <span class="impact-tag">TASBot</span>
+                    </div>
+                    <a href="/exhibits/exhibit-m.html" class="exhibit-link">Full Investigation Report →</a>
+                </div>
+
+                <!-- 9. TD Bank (Exhibit I) -->
                 <div class="flagship-card">
                     <div class="flagship-header">
                         <h3 class="flagship-client">TD Bank</h3>

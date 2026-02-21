@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 MVP** — Phases 1-6 (shipped 2026-02-19)
 - ✅ **v1.1 Quality Audit & Polish** — Phases 7-11 (shipped 2026-02-21)
-- 📋 **v1.2 Exhibit, Nav & QA** — Phases 12-14 (planned)
+- 📋 **v1.2 Rustici-Targeted Content + Quality** — Phases 12-15 (in progress)
 
 ## Phases
 
@@ -35,11 +35,63 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 </details>
 
-### 📋 v1.2 Exhibit, Nav & QA (Planned)
+### 📋 v1.2 Rustici-Targeted Content + Quality (In Progress)
 
-- [ ] Phase 12: Exhibit Content Structure Optimization
-- [ ] Phase 13: Navigation & Footer Consistency Verification
-- [ ] Phase 14: Comprehensive Accessibility & Cross-Browser QA
+**Goal:** Add Rustici-relevant exhibits and positioning narratives, then complete deferred quality audit phases from v1.1.
+
+#### Phase 12: Rustici-Targeted Content ✅
+
+**Goal:** Create Rustici-relevant exhibit pages and positioning narratives to optimize for immediate Rustici Software opportunity.
+
+**Requirements:** CONTENT-05, CONTENT-06, CONTENT-07, CONTENT-08, CONTENT-09, CONTENT-10, CONTENT-11, CONTENT-12
+
+**Delivered:**
+- SCORM Debugger exhibit (exhibit-m) — TASBot for eLearning, Rustici gap callout
+- CSBB Dispatch exhibit (exhibit-e) — "Built 2011, 5 years before Rustici Content Controller"
+- BP Learning Platform exhibit (exhibit-n) — Rustici Content Controller integration experience
+- Three Lenses positioning narratives on portfolio page
+- GM Investigation exhibit strengthened with Swiss cheese model, three-angle methodology
+- Homepage Five Core Influences section with application context
+- Cross-references updated across philosophy, homepage, sitemap
+- Framing correction verified — no "budget substitute" language
+
+**Completed:** 2026-02-21
+
+#### Phase 13: Exhibit Content Optimization
+
+**Goal:** Ensure all 14 exhibits follow consistent NTSB investigation structure with impact-first presentation and quantifiable results.
+
+**Requirements:** EXHIBIT-01, EXHIBIT-02, EXHIBIT-03, EXHIBIT-04
+
+**Scope:**
+- Verify Challenge → Approach → Solution → Results structure across all 14 exhibits
+- Highlight quantifiable results/metrics in exhibit summaries
+- Create impact-first headlines visible within 30-second scan
+- Ensure visual consistency across all exhibit pages (spacing, typography, component usage)
+
+#### Phase 14: Navigation & Footer Consistency
+
+**Goal:** Achieve 100% navigation and footer consistency across all 22 pages with zero broken links.
+
+**Requirements:** NAV-05, NAV-06, NAV-07
+
+**Scope:**
+- Verify navigation structure identical across all 22 pages (including 3 new exhibits)
+- Optimize footer — contact visibility, social links, trust elements
+- Audit and fix all internal links across 22 pages
+
+#### Phase 15: Comprehensive Accessibility QA
+
+**Goal:** Full accessibility and cross-browser verification after all v1.2 content changes.
+
+**Requirements:** A11Y-02, A11Y-03, A11Y-04, A11Y-05, A11Y-06
+
+**Scope:**
+- WCAG AA re-verification across all 22 pages (light + dark modes)
+- Automated accessibility test suite
+- Cross-browser rendering verification
+- Light/dark mode visual verification on desktop and mobile
+- Semantic HTML audit
 
 ## Progress
 
@@ -56,11 +108,12 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 | 9. Layout & Spacing Consistency | v1.1 | 3/3 | ✓ Complete | 2026-02-21 |
 | 10. Typography & Hierarchy | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
-| 12. Exhibit Content Structure Optimization | v1.2 | 0/? | Not started | - |
-| 13. Navigation & Footer Consistency Verification | v1.2 | 0/? | Not started | - |
-| 14. Comprehensive Accessibility & Cross-Browser QA | v1.2 | 0/? | Not started | - |
+| 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
+| 13. Exhibit Content Optimization | v1.2 | 0/? | Not started | - |
+| 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
+| 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21*
+*Last updated: 2026-02-21 — v1.2 restructured with Phase 12 (Rustici content) complete*

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="BP Learning Platform: Rebranding and troubleshooting on a federated React/GraphQL facade integrating Rustici Content Controller, PeopleFluent LMS, Watershed LRS, and Amazon Cognito.">
+    <meta name="author" content="Dan Novak">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-n.html">
+    <meta property="og:title" content="Pattern 158 | Exhibit N: BP Learning Platform — Federated System Integration">
+    <meta property="og:description" content="BP Learning Platform: Rebranding and troubleshooting on a federated React/GraphQL facade integrating Rustici Content Controller, PeopleFluent LMS, Watershed LRS, and Amazon Cognito.">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="559">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-n.html">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+    <title>Pattern 158 | Exhibit N: BP Learning Platform — Federated System Integration</title>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "url": "https://pattern158.solutions"
+}
+</script>
+</head>
+<body class="page-exhibit page-exhibit-n">
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/technologies.html">Technologies</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>EXHIBIT N: <span class="pattern-number">BP LEARNING PLATFORM</span></h1>
+            <p class="subtitle">Exhibit N: BP Learning Platform &mdash; Federated System Integration</p>
+            <div class="report-meta">
+                <strong>Client:</strong> BP (via Leo Learning / GP Strategies)<br>
+                <strong>Period:</strong> 2024<br>
+                <strong>Team:</strong> Dan Novak (Frontend Developer / Integration Engineer)
+            </div>
+            <span class="classification">Field Report &middot; Exhibit N &middot; BP &middot; 2024</span>
+        </div>
+    </section>
+
+    <!-- 1. BACKGROUND -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">1.</span>
+                <span class="section-title">Background</span>
+            </div>
+            <div class="background-content">
+                <p>The BP Learning Platform was a React/GraphQL frontend acting as a federated facade over multiple backend systems: Rustici Content Controller for content playback, PeopleFluent LMS for learning management, Watershed LRS for xAPI analytics, and Amazon Cognito for authentication. Dan worked directly with Rustici Content Controller as an integrator and client-side developer.</p>
+
+                <p>Dan&rsquo;s central challenge was a large-scale multi-tenant rebranding that required navigating the platform&rsquo;s largely undocumented Material UI theming system. Initially scoped as a one-week task, it expanded into a several-month effort as theming complexity revealed deeply interrelated style dependencies across the entire component library. This was Dan&rsquo;s first brownfield project with well-organized engineering practices (JIRA, defined acceptance criteria) from the acquired Leo Learning group.</p>
+
+                <p>The platform was built by the Leo Learning team before GP Strategies acquired them &mdash; Dan joined as a developer on an existing, well-architected system. But the architectural pattern was immediately familiar: another federated integration layer stitching multiple backend systems through a single frontend, echoing the CSBB Dispatch approach Dan had built a decade earlier. He recognized the pattern because he&rsquo;d invented his own version of it in 2011.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PERSONNEL INVOLVED -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">2.</span>
+                <span class="section-title">Personnel Involved</span>
+            </div>
+            <table class="personnel-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Responsibility</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="person-name" data-label="Role">Frontend Developer / Integration Engineer (Dan Novak)</td>
+                        <td data-label="Responsibility">Material UI theming, bug fixes, Cognito troubleshooting, Watershed LRS query analysis, component development</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 3. SEQUENCE OF EVENTS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">3.</span>
+                <span class="section-title">Sequence of Events</span>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-entry">
+                    <div class="timeline-date">Assignment</div>
+                    <div class="timeline-title">Joining the BP Learning Platform Team</div>
+                    <div class="timeline-content">
+                        <p>Dan joins the BP Learning Platform team, his second project from the acquired Leo Learning group. First brownfield project with proper engineering practices (JIRA, acceptance criteria).</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Rebranding Scope</div>
+                    <div class="timeline-title">Multi-Tenant Rebranding Begins</div>
+                    <div class="timeline-content">
+                        <p>Multi-tenant rebranding initially scoped as one week. Material UI theming system is largely undocumented.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">Complexity Discovery</div>
+                    <div class="timeline-title">Interrelated Style Dependencies Revealed</div>
+                    <div class="timeline-content">
+                        <p>Theming work reveals deeply interrelated style dependencies. One change cascades through the component library. Scope expands to several months.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">Integration Work</div>
+                    <div class="timeline-title">Cross-System Bug Fixes and Troubleshooting</div>
+                    <div class="timeline-content">
+                        <p>Bug fixes across the React/GraphQL frontend. Amazon Cognito authentication troubleshooting via log analysis. Reverse-engineering Watershed LRS (xAPI) queries.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry milestone">
+                    <div class="timeline-date">Pattern Recognition</div>
+                    <div class="timeline-title">Familiar Architecture Recognized</div>
+                    <div class="timeline-content">
+                        <p>Dan recognizes the federated facade architecture &mdash; multiple backend systems stitched through a single frontend &mdash; as the same pattern he built independently as CSBB Dispatch a decade earlier, now implemented with React/GraphQL instead of EasyXDM/SCORM.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Rustici Integration</div>
+                    <div class="timeline-title">Content Playback Pipeline</div>
+                    <div class="timeline-content">
+                        <p>Working directly with Rustici Content Controller as an integrator, understanding the content playback pipeline from the client side.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FINDINGS -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">4.</span>
+                <span class="section-title">Findings</span>
+            </div>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 22%;">Finding</th>
+                        <th style="width: 73%;">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="issue-id" data-label="#">F-01</td>
+                        <td data-label="Finding"><strong>Undocumented Theming</strong></td>
+                        <td data-label="Description">Material UI&rsquo;s theming system had deeply interrelated style dependencies &mdash; changes cascaded unpredictably through the component library, turning a &ldquo;one-week&rdquo; rebranding into months of systematic discovery</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id" data-label="#">F-02</td>
+                        <td data-label="Finding"><strong>Federated Architecture</strong></td>
+                        <td data-label="Description">The platform was a facade over four independent systems (Rustici, PeopleFluent, Watershed, Cognito) &mdash; each with its own API contracts, state models, and failure modes</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id" data-label="#">F-03</td>
+                        <td data-label="Finding"><strong>Familiar Pattern</strong></td>
+                        <td data-label="Description">Same architectural pattern Dan built independently as CSBB Dispatch in 2011 &mdash; a single integration layer stitching together multiple backend systems &mdash; here with modern tooling (React/GraphQL vs. EasyXDM/SCORM). Dan recognized it because he&rsquo;d invented his own version</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id" data-label="#">F-04</td>
+                        <td data-label="Finding"><strong>Scope Estimation Challenge</strong></td>
+                        <td data-label="Description">The rebranding scope underestimate revealed a common pattern in brownfield work: interrelated dependencies in undocumented systems make accurate estimation nearly impossible without exploratory work first</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-id" data-label="#">F-05</td>
+                        <td data-label="Finding"><strong>Cross-System Debugging</strong></td>
+                        <td data-label="Description">Troubleshooting required tracing issues across system boundaries &mdash; Cognito auth &rarr; React frontend &rarr; GraphQL API &rarr; backend services &mdash; each with different logging and debugging tools</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- 5. PROBABLE CAUSE -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">5.</span>
+                <span class="section-title">Probable Cause</span>
+            </div>
+
+            <div class="probable-cause-box">
+                <p>The BP Learning Platform exemplifies federated system integration &mdash; the architectural challenge of making multiple independent systems behave as a coherent whole. The platform&rsquo;s React/GraphQL frontend served as a unifying facade over Rustici Content Controller (content playback), PeopleFluent LMS (learning management), Watershed LRS (xAPI analytics), and Amazon Cognito (authentication).</p>
+                <p>The rebranding challenge exposed a truth about brownfield integration work: when systems are undocumented and deeply interrelated, every change becomes an archaeological expedition. Material UI&rsquo;s theming cascades meant that modifying one component&rsquo;s appearance could ripple through dozens of others in unpredictable ways. The only reliable approach was systematic exploration &mdash; the same forensic methodology Dan applied to SCORM protocol debugging and LMS architecture analysis throughout his career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. OUTCOME -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">6.</span>
+                <span class="section-title">Outcome</span>
+            </div>
+            <div class="background-content">
+                <p>Dan successfully navigated the theming challenge through systematic exploration of the undocumented Material UI system, delivered bug fixes across the React/GraphQL frontend, troubleshot Amazon Cognito authentication issues through log analysis, and reverse-engineered Watershed LRS queries for xAPI analytics.</p>
+
+                <p>The architectural through-line is the most significant observation: CSBB Dispatch (2011) and the BP Learning Platform (2024) represent the same architectural pattern thirteen years apart &mdash; a unifying integration layer that makes multiple backend systems behave as one. Dan built the 2011 version from scratch; he worked inside the 2024 version as a developer. In 2011, it was EasyXDM bridging SCORM content servers and client LMS platforms. In 2024, it was React/GraphQL bridging Rustici, PeopleFluent, Watershed, and Cognito. Different authors, same pattern. Dan recognized it because he&rsquo;d invented his own version of it.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. TECHNOLOGIES -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">7.</span>
+                <span class="section-title">Technologies</span>
+            </div>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Category</th>
+                        <th style="width: 70%;">Technologies & Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Category"><strong>Frontend Framework</strong></td>
+                        <td data-label="Technologies & Tools">React, Material UI (component library, theming system)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>API Layer</strong></td>
+                        <td data-label="Technologies & Tools">GraphQL (queries, mutations, schema navigation)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Content Delivery</strong></td>
+                        <td data-label="Technologies & Tools">Rustici Content Controller (content playback, SCORM/xAPI runtime)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Learning Management</strong></td>
+                        <td data-label="Technologies & Tools">PeopleFluent LMS (enrollment, tracking, reporting)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Analytics</strong></td>
+                        <td data-label="Technologies & Tools">Watershed LRS (xAPI/Learning Record Store, experience data)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Authentication</strong></td>
+                        <td data-label="Technologies & Tools">Amazon Cognito (OAuth, JWT, multi-tenant auth flows)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Standards</strong></td>
+                        <td data-label="Technologies & Tools">xAPI (Experience API / Tin Can), SCORM (via Rustici)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Engineering Practices</strong></td>
+                        <td data-label="Technologies & Tools">JIRA (ticketing), Git (version control), defined acceptance criteria</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="background-content">
+                <h2>Key Technical Insights</h2>
+                <ul class="detail-list">
+                    <li><strong>Federated Facade Pattern:</strong> Single React frontend unifying four independent backend systems &mdash; each with its own API contracts, state models, authentication flows, and failure modes</li>
+                    <li><strong>Material UI Archaeology:</strong> Undocumented theming system with deeply interrelated style dependencies &mdash; systematic exploration revealed cascade patterns invisible to static analysis</li>
+                    <li><strong>The CSBB Through-Line:</strong> CSBB Dispatch (2011) &rarr; BP Learning Platform (2024). Dan built the first; he worked inside the second. Same architectural pattern &mdash; a unifying integration layer making multiple systems behave as one &mdash; recognized because he&rsquo;d invented his own version a decade earlier</li>
+                    <li><strong>Rustici as Client:</strong> First-hand experience integrating with Rustici Content Controller from the client/integrator side &mdash; understanding the content playback pipeline, API contracts, and operational characteristics</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Back Link -->
+    <div class="back-link-section">
+        <a href="../portfolio.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Portfolio
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a></p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+    <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>
