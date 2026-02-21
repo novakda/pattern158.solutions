@@ -24,8 +24,8 @@ Requirements for the Comprehensive Quality Audit & Polish milestone. Each maps t
 ### Layout & Spacing
 
 - [x] **LAYOUT-01**: Consistent spacing using design tokens across all 17 pages (no raw pixel/rem values)
-- [ ] **LAYOUT-02**: Mobile layout verified — consistent padding/margins, no cramped or oversized sections at 320px/768px viewports
-- [ ] **LAYOUT-03**: Component alignment consistent — cards, sections, and CTAs visually aligned across all pages
+- [x] **LAYOUT-02**: Mobile layout verified — consistent padding/margins, no cramped or oversized sections at 320px/768px viewports
+- [x] **LAYOUT-03**: Component alignment consistent — cards, sections, and CTAs visually aligned across all pages
 - [x] **LAYOUT-04**: Generous whitespace with intentional visual rhythm between sections
 
 ### Typography
@@ -118,8 +118,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONTENT-03 | Phase 8 | Complete |
 | CONTENT-04 | Phase 8 | Complete |
 | LAYOUT-01 | Phase 9 | Complete |
-| LAYOUT-02 | Phase 9 | Pending |
-| LAYOUT-03 | Phase 9 | Pending |
+| LAYOUT-02 | Phase 9 | Complete |
+| LAYOUT-03 | Phase 9 | Complete |
 | LAYOUT-04 | Phase 9 | Complete |
 | TYPO-01 | Phase 10 | Pending |
 | TYPO-02 | Phase 10 | Pending |
