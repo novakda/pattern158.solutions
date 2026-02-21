@@ -26,7 +26,7 @@ Full details: `.planning/milestones/v1.0-ROADMAP.md`
 
 - [x] **Phase 7: CSS Foundation & Token System Audit** - Clean architecture foundation before content/visual polish (completed 2026-02-20)
 - [ ] **Phase 8: Content Quality & Information Architecture** - Finalize content structure before layout changes
-- [ ] **Phase 9: Layout & Spacing Consistency** - Establish visual rhythm after content finalized
+- [x] **Phase 9: Layout & Spacing Consistency** - Establish visual rhythm after content finalized (completed 2026-02-21)
 - [ ] **Phase 10: Typography & Hierarchy** - Polish typography after layout rhythm established
 - [ ] **Phase 11: Color Refinement & Contrast Verification** - Verify color/contrast after typography finalized
 - [ ] **Phase 12: Exhibit Content Structure Optimization** - Apply established visual system to case studies
@@ -105,12 +105,12 @@ Plans:
 
 **Research**: Skip (standard patterns, no additional research needed)
 
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 09-01-PLAN.md — Spacing token migration and section rhythm normalization
-- [ ] 09-02-PLAN.md — Responsive viewport verification and component alignment
-- [ ] 09-03-PLAN.md — Human visual verification checkpoint
+- [x] 09-01-PLAN.md — Spacing token migration and section rhythm normalization
+- [x] 09-02-PLAN.md — Responsive viewport verification and component alignment
+- [x] 09-03-PLAN.md — Human visual verification checkpoint
 
 ---
 
