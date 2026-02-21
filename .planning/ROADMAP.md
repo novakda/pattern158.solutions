@@ -98,12 +98,23 @@ Plans:
 
 **Requirements:** A11Y-02, A11Y-03, A11Y-04, A11Y-05, A11Y-06
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 15-01-PLAN.md — Semantic HTML overhaul + automated accessibility test suite (axe-core/Playwright)
+- [ ] 15-02-PLAN.md — WCAG AA audit-fix cycle + cross-browser rendering verification
+- [ ] 15-03-PLAN.md — Visual evidence (screenshots), Lighthouse reports, internal report, public accessibility statement page
+
 **Scope:**
+- Semantic HTML overhaul across all 22 pages
+- Permanent automated accessibility test suite (Playwright + axe-core)
 - WCAG AA re-verification across all 22 pages (light + dark modes)
-- Automated accessibility test suite
-- Cross-browser rendering verification
+- Cross-browser rendering verification (Chromium, Firefox, WebKit)
+- Screenshot evidence for all pages in 4 configurations
+- Lighthouse/axe-core audit reports per page
+- Internal accessibility report with per-page WCAG criterion checklist
+- Public accessibility statement page (accessibility.html)
 - Light/dark mode visual verification on desktop and mobile
-- Semantic HTML audit
 
 #### Phase 16: Phase 12 Remediation & Verification
 
@@ -143,10 +154,10 @@ Plans:
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
-| 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
+| 15. Comprehensive Accessibility QA | v1.2 | 0/3 | Planned | - |
 | 16. Phase 12 Remediation & Verification | 2/2 | Complete    | 2026-02-21 | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 14 planned (2 plans)*
+*Last updated: 2026-02-21 — Phase 15 planned (3 plans)*
