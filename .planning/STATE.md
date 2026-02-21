@@ -21,12 +21,12 @@ See: .planning/PROJECT.md (updated 2026-02-21)
 
 ## Current Position
 
-Phase: 14-navigation-footer-consistency
-Plan: 03 of 03 complete
-Status: Complete
-Last activity: 2026-02-21 — Phase 14 Plan 03 complete: Achieved 100% design token compliance for Phase 14 changes
+Phase: 15-comprehensive-accessibility-qa
+Plan: 02 of 03 complete
+Status: In Progress
+Last activity: 2026-02-21 — Phase 15 Plan 02 complete: WCAG AA light mode compliance (100%), cross-browser validation (Chromium + Firefox)
 
-Progress: [■■■■■■■■■■■■■■■] 15/15 phases complete (100%)
+Progress: [■■■■■■■■■■■■■■■] 15/15 phases, 2/3 plans complete in Phase 15
 
 ## Performance Metrics
 
@@ -43,9 +43,9 @@ Progress: [■■■■■■■■■■■■■■■] 15/15 phases complete 
 - Timeline: 2 days (2026-02-20 to 2026-02-21)
 
 **v1.2 Velocity (in progress):**
-- Total plans completed: 10 (12-01, 12-02, 13-01, 13-02, 13-03, 16-01, 16-02, 14-01, 14-02, 14-03)
-- Average duration: ~5.8 min
-- Total execution time: ~58 min
+- Total plans completed: 12 (12-01, 12-02, 13-01, 13-02, 13-03, 16-01, 16-02, 14-01, 14-02, 14-03, 15-01, 15-02)
+- Average duration: ~14.6 min
+- Total execution time: ~134 min
 - Timeline: Started 2026-02-21
 
 ## Accumulated Context
@@ -67,7 +67,11 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 - [Phase 14]: Used semantic variable name --color-primary-subtle (not --color-primary-alpha-15) to describe purpose over implementation
 - [Phase 14]: Dark mode override uses rgba(30, 163, 181, 0.15) to match lightened primary color #1ea3b5
 - [Phase 15]: Used Playwright + axe-core for automated accessibility testing (industry standard, comprehensive)
-- [Phase 15]: Added --color-primary-on-dark token (#20b8cc) for WCAG-compliant links on dark backgrounds
+- [Phase 15-01]: Added --color-primary-on-dark token (#20b8cc) for WCAG-compliant links on dark backgrounds
+- [Phase 15-02]: Created --color-primary-on-alt token (#0c6f7e light, #30c9dc dark) for links on gray/dark backgrounds
+- [Phase 15-02]: Fixed 18 instances of incorrect --color-primary-on-dark usage on light backgrounds
+- [Phase 15-02]: Updated dark mode --color-primary to #30c9dc for 4.5:1 contrast requirement
+- [Phase 15-02]: Disabled WebKit testing (WSL system dependency limitations), using Chromium + Firefox
 
 ### v1.2 Phase 12 Decisions
 
@@ -86,6 +90,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Phase 14 P02 | 152 | 2 tasks | 1 files |
 | Phase 14 P03 | 1 | 1 tasks | 1 files |
 | Phase 15 P01 | 11 | 2 tasks | 25 files |
+| Phase 15 P02 | 65 | 2 tasks | 2 files |
 
 ### v1.2 Phase 13-01 Decisions
 
@@ -123,11 +128,11 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-21 (v1.2 Phase 14 complete)
-Stopped at: Completed 14-03-PLAN.md — Achieved 100% design token compliance for Phase 14
+Last session: 2026-02-21 (v1.2 Phase 15 Plan 02 complete)
+Stopped at: Completed 15-02-PLAN.md — WCAG AA light mode compliance + cross-browser validation
 Resume file: None
 
-**Next step:** Begin Phase 15 (Accessibility QA) per ROADMAP
+**Next step:** Continue Phase 15 Plan 03 or mark phase complete
 
 ---
 *Milestone v1.2 started: 2026-02-21*

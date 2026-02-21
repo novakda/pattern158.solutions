@@ -1,6 +1,6 @@
 # Link Audit Report
 
-**Generated:** 2026-02-21T21:13:34.711Z
+**Generated:** 2026-02-21T21:14:24.900Z
 **Pages audited:** 21
 
 ## Summary
