@@ -154,7 +154,11 @@ Plans:
 
 **Research**: Skip (WCAG verification methodology standard, automated tools cover this)
 
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 11-01-PLAN.md — WCAG AA contrast audit, token fixes, dark mode brand verification
+- [ ] 11-02-PLAN.md — Link styling, color distribution evaluation, and human visual verification
 
 ---
 
@@ -233,7 +237,7 @@ Plans:
 | 8. Content Quality & Information Architecture | v1.1 | 0/5 | Planned | - |
 | 9. Layout & Spacing Consistency | v1.1 | 0/3 | Planned | - |
 | 10. Typography & Hierarchy | 2/2 | Complete    | 2026-02-21 | - |
-| 11. Color Refinement & Contrast Verification | v1.1 | 0/? | Not started | - |
+| 11. Color Refinement & Contrast Verification | v1.1 | 0/2 | Planned | - |
 | 12. Exhibit Content Structure Optimization | v1.1 | 0/? | Not started | - |
 | 13. Navigation & Footer Consistency Verification | v1.1 | 0/? | Not started | - |
 | 14. Comprehensive Accessibility & Cross-Browser QA | v1.1 | 0/? | Not started | - |
