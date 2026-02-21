@@ -1,0 +1,549 @@
+{
+  "timestamp": "2026-02-21T23:18:03.928Z",
+  "wcagVersion": "2.1 AA",
+  "tooling": "axe-core via @axe-core/playwright",
+  "pages": {
+    "index": {
+      "path": "/index.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "philosophy": {
+      "path": "/philosophy.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 0,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "faq": {
+      "path": "/faq.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 21,
+          "incomplete": 1,
+          "inapplicable": 40,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 21,
+          "incomplete": 0,
+          "inapplicable": 40,
+          "violationDetails": []
+        }
+      }
+    },
+    "contact": {
+      "path": "/contact.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 0,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 3,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 0,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "portfolio": {
+      "path": "/portfolio.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 22,
+          "incomplete": 0,
+          "inapplicable": 39,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 22,
+          "incomplete": 0,
+          "inapplicable": 39,
+          "violationDetails": []
+        }
+      }
+    },
+    "technologies": {
+      "path": "/technologies.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 0,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 27,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 0,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "field-reports": {
+      "path": "/testimonials.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 22,
+          "incomplete": 1,
+          "inapplicable": 39,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 24,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 22,
+          "incomplete": 1,
+          "inapplicable": 39,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-a": {
+      "path": "/exhibits/exhibit-a.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-b": {
+      "path": "/exhibits/exhibit-b.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 21,
+          "incomplete": 1,
+          "inapplicable": 40,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 7,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 21,
+          "incomplete": 1,
+          "inapplicable": 40,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-c": {
+      "path": "/exhibits/exhibit-c.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 3,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-d": {
+      "path": "/exhibits/exhibit-d.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 3,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-e": {
+      "path": "/exhibits/exhibit-e.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 24,
+          "incomplete": 1,
+          "inapplicable": 37,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 4,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 24,
+          "incomplete": 1,
+          "inapplicable": 37,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-f": {
+      "path": "/exhibits/exhibit-f.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 3,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-g": {
+      "path": "/exhibits/exhibit-g.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 3,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-h": {
+      "path": "/exhibits/exhibit-h.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 2,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-i": {
+      "path": "/exhibits/exhibit-i.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 4,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 20,
+          "incomplete": 1,
+          "inapplicable": 41,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-j": {
+      "path": "/exhibits/exhibit-j.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-k": {
+      "path": "/exhibits/exhibit-k.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 2,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-l": {
+      "path": "/exhibits/exhibit-l.html",
+      "configurations": {
+        "light": {
+          "violations": 1,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "nodes": 11,
+              "wcagCriteria": [
+                "wcag2aa",
+                "wcag143"
+              ]
+            }
+          ]
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-m": {
+      "path": "/exhibits/exhibit-m.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    },
+    "exhibit-n": {
+      "path": "/exhibits/exhibit-n.html",
+      "configurations": {
+        "light": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        },
+        "dark": {
+          "violations": 0,
+          "passes": 23,
+          "incomplete": 1,
+          "inapplicable": 38,
+          "violationDetails": []
+        }
+      }
+    }
+  }
+}
