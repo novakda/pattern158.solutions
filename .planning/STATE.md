@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 8 - Content Quality & Information Architecture
-Plan: 01 / 05
+Plan: 02 / 05
 Status: In Progress
-Last activity: 2026-02-21 — Completed 08-01 (Content analysis infrastructure and IA blueprint)
+Last activity: 2026-02-21 — Completed 08-02 (Editorial pass on 6 core pages with ROT audit)
 
 Progress: [■■■■■■■□□□□□□□] 7/14 phases complete (50%)
 
@@ -60,6 +60,10 @@ All v1.0 decisions logged in PROJECT.md Key Decisions table (15 entries).
 | Phase 08 P01 | 6.6 | 2 tasks | 7 files |
 - [Phase 08-01]: Section-level content inventory (291 sections) balances detail with actionable usefulness
 - [Phase 08-01]: 9-section IA analysis structure provides comprehensive editorial blueprint for Plans 02-05
+| Phase 08 P02 | 6.5 | 2 tasks | 7 files |
+- [Phase 08-02]: FAQ decision: STRENGTHEN in place (15 substantive questions justify retention)
+- [Phase 08-02]: Removed philosophy section from homepage (major redundancy trim)
+- [Phase 08-02]: Added engagement criteria to contact page with billable-hours anti-pattern
 
 ### Quick Tasks Completed (v1.0)
 
