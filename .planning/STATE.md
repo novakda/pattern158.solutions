@@ -2,19 +2,19 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-20)
+See: .planning/PROJECT.md (updated 2026-02-21)
 
 **Core value:** Accurately and compellingly present Dan's professional identity and body of work to hiring managers, engineers, and potential clients
-**Current focus:** v1.1 Comprehensive Quality Audit & Polish
+**Current focus:** Planning next milestone (v1.2)
 
 ## Current Position
 
-Phase: 11 - Color Refinement & Contrast Verification
-Plan: 02 / 02
-Status: Complete
-Last activity: 2026-02-21 — Completed 11-02 (Link Styling & Visual Verification)
+Phase: v1.1 complete — milestone archived
+Plan: N/A
+Status: Milestone completed
+Last activity: 2026-02-21 — Completed v1.1 milestone (Phases 7-11)
 
-Progress: [■■■■■■■■□□□□□□] 8/14 phases complete (57%)
+Progress: [■■■■■■■■■■■□□□] 11/14 phases complete (79%)
 
 ## Performance Metrics
 
@@ -25,101 +25,19 @@ Progress: [■■■■■■■■□□□□□□] 8/14 phases complete (57%
 - Timeline: 8 days (2026-02-10 to 2026-02-18)
 
 **v1.1 Velocity:**
-- Phase 7, Plan 01: 3.9 min (2 tasks, 1 file)
-- Phase 7, Plan 02: 6.8 min (2 tasks, 21 files)
-- Phase 7, Plan 03: 2.4 min (2 tasks, 4 files)
-- Phase 8, Plan 01: 6.6 min (2 tasks, 7 files)
-- Phase 8, Plan 02: 6.5 min (2 tasks, 7 files)
-- Phase 8, Plan 03: 4.0 min (1 task, 5 files)
-- Phase 8, Plan 04: 6.0 min (2 tasks, 11 files)
-- Phase 8, Plan 05: 39.0 min (2 tasks, 4 files)
-- Phase 9, Plan 01: 5.9 min (2 tasks, 1 file)
-- Phase 9, Plan 02: 10.7 min (2 tasks, 2 files)
-- Phase 9, Plan 03: 1.0 min (1 task, 1 file)
-- Phase 9: Complete (3/3 plans complete)
-- Phase 10, Plan 01: 3.0 min (2 tasks, 4 files)
-- Phase 10, Plan 02: 26.0 min (2 tasks, 1 file)
-- Phase 10: Complete (2 plans complete)
-- Phase 11, Plan 01: 7.3 min (2 tasks, 1 file, 2 created)
-- Phase 11, Plan 02: 8.0 min (2 tasks, 1 file)
-- Phase 11: Complete (2/2 plans complete)
-- Phase 12: Not started
-- Phase 13: Not started
-- Phase 14: Not started
+- Total plans completed: 15
+- Average duration: ~9.1 min
+- Total execution time: ~137 min
+- Timeline: 2 days (2026-02-20 to 2026-02-21)
 
 ## Accumulated Context
 
 ### Decisions
 
 All v1.0 decisions logged in PROJECT.md Key Decisions table (15 entries).
+All v1.1 decisions logged in PROJECT.md Key Decisions table (10 entries added).
 
-**v1.1 Decisions:**
-
-| Decision | Rationale | Outcome |
-|----------|-----------|---------|
-| Foundation-first phase ordering (CSS → Content → Layout → Typography → Color → Exhibits → Nav → QA) | Dependencies drive order: content depends on clean CSS, layout depends on final content, typography depends on layout rhythm, color depends on typography (contrast), exhibits use established system, nav after content stable, QA last for comprehensive verification | — Planned |
-| UX over brand when conflicting | Best practices should win over aesthetic when they improve usability | — Pending |
-| Standard depth (8 phases) for 30 requirements | Balanced grouping: foundation (2), visual polish (3), content polish (1), global consistency (1), verification (1) | ✓ Good |
-| Font-size token scale mapping (07-01) | Consolidated 24 unique hardcoded values into 10 semantic tokens (xs-5xl) by mapping visually similar sizes to same token | ✓ Simplified design system with clear semantic sizing |
-| Preserved 0.9em for code blocks (07-01) | Code block font-size uses em (relative to parent) rather than rem (root-relative) for proper scaling | ✓ Single exception maintains correct typography behavior |
-| Spacing token boundaries (07-01) | Structural px values (hamburger menu, border widths) excluded from tokenization as they're precise component specifications | ✓ Clear distinction between design spacing (tokenized) and structural dimensions (hardcoded) |
-| Cascade layer ordering (07-02) | Reset → base → components → pages → utilities. Ensures components can be overridden by page-specific styles without !important | ✓ Clean specificity control with predictable cascade |
-| Stats-bar component extraction (07-02) | Testimonials and portfolio had nearly identical implementations. Extract shared base, keep only page-specific overrides | ✓ Single source of truth, 85% duplication reduction |
-| Inline style conversion strategy (07-02) | Group common patterns into semantic classes rather than creating utility classes for every property. Exception: structural table widths remain inline | ✓ 81 inline styles converted to 12 semantic classes |
-| Opinionated code style rules disabled (07-03) | Stylelint standard config enforces modern conventions (rgb vs rgba, hex shorthand) unrelated to token enforcement. Disabled via overrides to focus on token compliance without forcing style refactoring | ✓ Zero errors on token-migrated CSS, token enforcement remains strict |
-| Single font-size token enforcement (07-03) | declaration-property-value-disallowed-list with /^\\d/ regex catches all hardcoded font-size values. Custom error message guides to var(--font-size-*) tokens | ✓ Automated enforcement of CSS-04 requirement, future violations caught immediately |
-| Phase 08 P01 | 6.6 | 2 tasks | 7 files |
-- [Phase 08-01]: Section-level content inventory (291 sections) balances detail with actionable usefulness
-- [Phase 08-01]: 9-section IA analysis structure provides comprehensive editorial blueprint for Plans 02-05
-| Phase 08 P02 | 6.5 | 2 tasks | 7 files |
-- [Phase 08-02]: FAQ decision: STRENGTHEN in place (15 substantive questions justify retention)
-- [Phase 08-02]: Removed philosophy section from homepage (major redundancy trim)
-- [Phase 08-02]: Added engagement criteria to contact page with billable-hours anti-pattern
-| Phase 08 P03 | 4.0 | 1 task | 5 files |
-- [Phase 08-03]: Exhibit A accessibility practice arc emphasizes full evolution (no training → methodology → organizational standard)
-- [Phase 08-03]: NTSB investigation structure variants per exhibit (investigation-inspired, pattern analysis, process engineering, standard technical, long-running)
-| Phase 08 P04 | 6.0 | 2 tasks | 11 files |
-- [Phase 08-04]: Exhibit naming convention standardization across all 11 exhibits ("Exhibit [Letter]: [Subtitle]")
-- [Phase 08-04]: Technology summary sections added to exhibits G-L (comprehensive coverage: eLearning standards, development tools, methodologies)
-- [Phase 08-04]: Cross-exhibit consistency verified: back-navigation standardized to portfolio, authoritative tone uniform
-- [Phase 08-04]: Consolidation assessment: Exhibit H flagged as potential merge candidate (6 sections vs 7-12 average)
-| Phase 08 P05 | 39 | 2 tasks | 4 files |
-- [Phase 08-05]: Portfolio reordered by exhibit strength (A→J→L→K→C→I→D→F→G→B→H) rather than chronological
-- [Phase 08-05]: NTSB probable-cause-summary model with impact-first presentation for 30-second scan optimization
-- [Phase 08-05]: User verification checkpoint: all content changes approved across 16 pages
-- [Phase 08-05]: Post-review content accuracy corrections (Exhibits A, I) and visual polish (code contrast, paragraph spacing, key-fact styling)
-| Phase 09 P01 | 5.9 | 2 tasks | 1 files |
-- [Phase 09-01]: Added --space-ms token (0.75rem) for mobile horizontal padding pattern
-- [Phase 09-01]: Replaced all hardcoded spacing values except documented structural exceptions (nav dimensions, timeline positioning, sr-only patterns)
-- [Phase 09-01]: Used calc() for negative positioning values to properly negate CSS variables
-| Phase 09 P02 | 10.7 | 2 tasks | 2 files |
-- [Phase 09-02]: Fixed circular reference in spacing tokens (--space-sm and --space-ms)
-- [Phase 09-02]: Normalized card padding to var(--space-xl) for desktop consistency across all card types
-- [Phase 09-02]: Verified responsive layout at all four target viewports (320px, 768px, 1024px, 1920px) with zero overflow
-| Phase 09 P02 | 10.7 | 2 tasks | 2 files |
-- [Phase 09]: Fixed circular reference in spacing tokens (--space-sm and --space-ms)
-- [Phase 09]: Normalized card padding to var(--space-xl) for desktop consistency across all card types
-| Phase 09 P03 | 1.0 | 1 tasks | 1 files |
-- [Phase 09-03]: Fixed nav vertical alignment by adding align-items: center to nav ul
-- [Phase 09-03]: User confirmed layout spacing looks balanced and professional at all viewports (GitHub/Linear-density target achieved)
-| Phase 10 P01 | 3 | 2 tasks | 4 files |
-- [Phase 10-01]: Fixed semantic heading hierarchy violations in exhibits J, K, L (h3→h2)
-- [Phase 10-01]: Normalized line-height and font-weight usage with design tokens
-- [Phase 10-01]: Preserved intentional line-height variations (1.7, 1.8) for long-form content readability
-- [Phase 10-01]: Typography system balances consistency (182 font-size tokens) with readability (documented exceptions)
-| Phase 10 P02 | 26 | 2 tasks | 1 files |
-- [Phase 10-02]: Token-level responsive scaling instead of selector-level overrides — redefine token values at breakpoint for automatic cascading
-- [Phase 10-02]: Fixed mobile h1/h2 hierarchy collision discovered via Playwright visual verification (8 pages h1 changed from 3xl to 4xl token)
-| Phase 11 P01 | 7.3 | 2 tasks | 1 file |
-- [Phase 11-01]: Fixed 14 WCAG AA contrast failures across light and dark modes (100% compliance: 37/37 tests passing)
-- [Phase 11-01]: Light mode text-light darkened (#999999 → #737373) for 4.5:1 minimum, dark mode primary teal lightened (#0e7c8c → #1ea3b5) for 3:1 on all surfaces
-- [Phase 11-01]: Gold accent split for theme-specific optimization (light: #8f6d00, dark: #c9a226) to pass 4.5:1 in both contexts
-- [Phase 11-01]: Verified dark mode 3-tier surface elevation (62% and 42% luminance increases) with navy brand identity (hue: 210-213°, sat: 33-37%)
-- [Phase 11-01]: Documented inverse section strategy: nav/hero integrate with dark background, footer elevated for visual boundary
-| Phase 11 P02 | 480 | 2 tasks | 1 files |
-- [Phase 11]: Base link underline strategy with cascade layer override for WCAG 1.4.1 compliance
-- [Phase 11]: 60-30-10 color distribution evaluated visually (documented, not rigidly enforced)
-- [Phase 11]: Skipped visited link styling (appropriate for 17-page portfolio scale)
+Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 
 ### Quick Tasks Completed (v1.0)
 
@@ -141,12 +59,12 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-21 (Phase 11 complete)
-Stopped at: Completed 11-02-PLAN.md - Link styling and visual verification complete
+Last session: 2026-02-21 (v1.1 milestone completed)
+Stopped at: Milestone v1.1 archived, phases 12-14 deferred to v1.2
 Resume file: None
 
-**Next step:** Proceed to Phase 12 (Exhibit Content Structure Optimization)
+**Next step:** `/gsd:new-milestone` to define v1.2 (Exhibit, Nav & QA)
 
 ---
-*Milestone v1.1: Comprehensive Quality Audit & Polish*
-*Phases 7-14: Foundation → Content → Layout → Typography → Color → Exhibits → Nav → QA*
+*Milestone v1.1 shipped: 2026-02-21*
+*Next: v1.2 — Phases 12-14 (Exhibit Content, Navigation, Accessibility QA)*
