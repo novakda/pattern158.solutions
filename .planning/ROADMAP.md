@@ -63,6 +63,13 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 **Requirements:** EXHIBIT-01, EXHIBIT-02, EXHIBIT-03, EXHIBIT-04
 
+**Plans:** 3 plans
+
+Plans:
+- [ ] 13-01-PLAN.md — Standardize structure for older exhibits (b, c, d, f, g, h, i)
+- [ ] 13-02-PLAN.md — Polish and verify structure for conforming exhibits (a, e, j, k, l, m, n)
+- [ ] 13-03-PLAN.md — Impact-first headlines, table restructuring, visual consistency audit
+
 **Scope:**
 - Verify Challenge → Approach → Solution → Results structure across all 14 exhibits
 - Highlight quantifiable results/metrics in exhibit summaries
@@ -109,7 +116,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 | 10. Typography & Hierarchy | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
-| 13. Exhibit Content Optimization | v1.2 | 0/? | Not started | - |
+| 13. Exhibit Content Optimization | v1.2 | 0/3 | Planned | - |
 | 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
 
