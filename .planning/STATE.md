@@ -66,6 +66,8 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 - [Phase 14-01]: Footer structure optimized with GitHub link, trust elements (28+ years, 14 case studies)
 - [Phase 14]: Used semantic variable name --color-primary-subtle (not --color-primary-alpha-15) to describe purpose over implementation
 - [Phase 14]: Dark mode override uses rgba(30, 163, 181, 0.15) to match lightened primary color #1ea3b5
+- [Phase 15]: Used Playwright + axe-core for automated accessibility testing (industry standard, comprehensive)
+- [Phase 15]: Added --color-primary-on-dark token (#20b8cc) for WCAG-compliant links on dark backgrounds
 
 ### v1.2 Phase 12 Decisions
 
@@ -83,6 +85,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Phase 14 P01 | 182 | 2 tasks | 22 files |
 | Phase 14 P02 | 152 | 2 tasks | 1 files |
 | Phase 14 P03 | 1 | 1 tasks | 1 files |
+| Phase 15 P01 | 11 | 2 tasks | 25 files |
 
 ### v1.2 Phase 13-01 Decisions
 
