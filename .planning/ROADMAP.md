@@ -75,14 +75,21 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 #### Phase 14: Navigation & Footer Consistency
 
-**Goal:** Achieve 100% navigation and footer consistency across all 22 pages with zero broken links.
+**Goal:** Achieve 100% navigation and footer consistency across all 21 site pages with zero broken links.
 
 **Requirements:** NAV-05, NAV-06, NAV-07
 
+**Plans:** 2 plans
+
+Plans:
+- [ ] 14-01-PLAN.md — Nav/footer audit, canonical structure, and uniform application with active states
+- [ ] 14-02-PLAN.md — Comprehensive link audit across all pages with fixes
+
 **Scope:**
-- Verify navigation structure identical across all 22 pages (including 3 new exhibits)
-- Optimize footer — contact visibility, social links, trust elements
-- Audit and fix all internal links across 22 pages
+- Verify navigation structure identical across all 21 pages (including 3 new exhibits)
+- Optimize footer — contact visibility, social links (LinkedIn + GitHub), trust elements
+- Add active state indicators for current page in navigation
+- Audit and fix all internal, external, and anchor links across 21 pages
 
 #### Phase 15: Comprehensive Accessibility QA
 
@@ -134,11 +141,11 @@ Plans:
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
-| 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
+| 14. Navigation & Footer Consistency | v1.2 | 0/2 | Planned | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
 | 16. Phase 12 Remediation & Verification | 2/2 | Complete    | 2026-02-21 | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 16 added (gap closure from milestone audit)*
+*Last updated: 2026-02-21 — Phase 14 planned (2 plans)*
