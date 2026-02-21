@@ -105,7 +105,12 @@ Plans:
 
 **Research**: Skip (standard patterns, no additional research needed)
 
-**Plans**: TBD
+**Plans:** 3 plans
+
+Plans:
+- [ ] 09-01-PLAN.md — Spacing token migration and section rhythm normalization
+- [ ] 09-02-PLAN.md — Responsive viewport verification and component alignment
+- [ ] 09-03-PLAN.md — Human visual verification checkpoint
 
 ---
 
@@ -222,7 +227,7 @@ Plans:
 | 6. Inline Style Token Cleanup | v1.0 | 2/2 | ✓ Complete | 2026-02-19 |
 | 7. CSS Foundation & Token System Audit | v1.1 | Complete    | 2026-02-20 | - |
 | 8. Content Quality & Information Architecture | v1.1 | 0/5 | Planned | - |
-| 9. Layout & Spacing Consistency | v1.1 | 0/? | Not started | - |
+| 9. Layout & Spacing Consistency | v1.1 | 0/3 | Planned | - |
 | 10. Typography & Hierarchy | v1.1 | 0/? | Not started | - |
 | 11. Color Refinement & Contrast Verification | v1.1 | 0/? | Not started | - |
 | 12. Exhibit Content Structure Optimization | v1.1 | 0/? | Not started | - |
