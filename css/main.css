@@ -37,11 +37,11 @@
 
     /* Font Size Scale
        Mapping from 24 unique hardcoded values:
-       xs (0.75rem): 0.7rem, 0.75rem
-       sm (0.875rem): 0.8rem, 0.85rem, 0.9rem, 0.95rem
+       xs (var(--space-ms)): 0.7rem, var(--space-ms)
+       sm (0.875rem): var(--space-ms), 0.85rem, 0.9rem, 0.95rem
        base (1rem): 1rem
        md (1.125rem): 1.05rem, 1.1rem
-       lg (1.25rem): 1.2rem, 1.25rem, 1.3rem
+       lg (1.25rem): var(--space-md), 1.25rem, 1.3rem
        xl (1.5rem): 1.5rem, 1.6rem
        2xl (1.875rem): 1.8rem
        3xl (2.25rem): 2rem, 2.2rem, 2.25rem, 2.5rem
@@ -49,7 +49,7 @@
        5xl (5rem): 4rem, 6rem
        Note: code blocks use 0.9em (relative) - not tokenized
     */
-    --font-size-xs: 0.75rem;
+    --font-size-xs: var(--space-ms);
     --font-size-sm: 0.875rem;
     --font-size-base: 1rem;
     --font-size-md: 1.125rem;
@@ -74,7 +74,8 @@
 
     /* --- Spacing --- */
     --space-xs: 0.25rem;
-    --space-sm: 0.5rem;
+    --space-sm: var(--space-sm);
+    --space-ms: var(--space-ms);  /* medium-small: mobile horizontal padding */
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
@@ -177,7 +178,7 @@ code {
     font-family: var(--font-mono);
     background: var(--color-background-alt);
     color: var(--color-text);
-    padding: 2px 6px;
+    padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-sm);
     /* stylelint-disable-next-line declaration-property-value-disallowed-list */
     font-size: 0.9em; /* Intentional: relative to parent, not root */
@@ -669,7 +670,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    gap: 10px;
+    gap: var(--space-sm);
 }
 
 .page-index .pattern-bar {
@@ -898,7 +899,7 @@ footer a:hover {
 }
 
 .page-index .fork-prong:first-child {
-    margin-right: 20px;
+    margin-right: var(--space-lg);
 }
 
 .page-index .fork-handle {
@@ -952,8 +953,8 @@ footer a:hover {
     font-size: var(--font-size-5xl);
     color: var(--color-primary);
     position: absolute;
-    top: -0.5rem;
-    left: 0.5rem;
+    top: calc(-1 * var(--space-sm));
+    left: var(--space-sm);
     font-family: var(--font-heading);
     opacity: 0.3;
     line-height: 1;
@@ -1544,7 +1545,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     margin-top: var(--space-lg);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1590,7 +1591,7 @@ footer a:hover {
 }
 
 .page-testimonials .stat-label {
-    margin-top: 0.3rem;
+    margin-top: var(--space-xs);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -1619,7 +1620,7 @@ footer a:hover {
     background: var(--color-surface);
     margin-bottom: var(--space-2xl);
     border-left: 6px solid var(--color-primary);
-    padding: var(--space-xl) 2.5rem;
+    padding: var(--space-xl) var(--space-xl);
     box-shadow: var(--shadow-sm);
     transition: transform 0.3s;
     position: relative;
@@ -1681,7 +1682,7 @@ footer a:hover {
 
 .page-testimonials blockquote {
     border-left: 3px solid var(--color-primary);
-    margin: 1.2rem 0;
+    margin: var(--space-md) 0;
     padding: var(--space-md) var(--space-lg);
     background: var(--color-background);
     font-style: italic;
@@ -1693,7 +1694,7 @@ footer a:hover {
 .page-testimonials blockquote::before {
     content: '\201C';
     position: absolute;
-    top: -0.3rem;
+    top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
     color: var(--color-primary);
@@ -1702,7 +1703,7 @@ footer a:hover {
 }
 
 .page-testimonials .attribution {
-    margin-top: 0.8rem;
+    margin-top: var(--space-ms);
     font-style: normal;
     font-weight: 600;
     color: var(--color-heading);
@@ -1758,7 +1759,7 @@ footer a:hover {
 
 .page-testimonials .exhibit-link {
     display: inline-block;
-    margin-top: 1.2rem;
+    margin-top: var(--space-md);
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
@@ -1766,7 +1767,7 @@ footer a:hover {
     color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     transition: background 0.3s, color 0.3s;
 }
 
@@ -1945,7 +1946,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     color: var(--color-primary);
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     margin-top: var(--space-md);
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1976,7 +1977,7 @@ footer a:hover {
     align-items: baseline;
     gap: var(--space-md);
     margin-bottom: var(--space-xl);
-    padding-bottom: 0.75rem;
+    padding-bottom: var(--space-ms);
     border-bottom: 3px solid var(--color-inverse);
 }
 
@@ -2021,7 +2022,7 @@ footer a:hover {
 /* ========== BLOCKQUOTES ========== */
 .page-exhibit blockquote {
     border-left: 3px solid var(--color-primary);
-    margin: 1.2rem 0;
+    margin: var(--space-md) 0;
     padding: var(--space-md) var(--space-lg);
     background: var(--color-background);
     font-style: italic;
@@ -2033,7 +2034,7 @@ footer a:hover {
 .page-exhibit blockquote::before {
     content: '\201C';
     position: absolute;
-    top: -0.3rem;
+    top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
     color: var(--color-primary);
@@ -2042,7 +2043,7 @@ footer a:hover {
 }
 
 .page-exhibit .attribution {
-    margin-top: 0.8rem;
+    margin-top: var(--space-ms);
     font-style: normal;
     font-weight: 600;
     color: var(--color-heading);
@@ -2071,7 +2072,7 @@ footer a:hover {
     color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     transition: background 0.3s, color 0.3s;
 }
 
@@ -2108,9 +2109,9 @@ footer a:hover {
    ================================================================ */
 
 /* Common exhibit paragraph styles */
-.page-exhibit p[style*="margin-top: 0.8rem"],
-.page-exhibit-a p[style*="margin-top: 0.8rem"],
-.page-exhibit-b p[style*="margin-top: 0.8rem"] {
+.page-exhibit p[style*="margin-top: var(--space-ms)"],
+.page-exhibit-a p[style*="margin-top: var(--space-ms)"],
+.page-exhibit-b p[style*="margin-top: var(--space-ms)"] {
     margin-top: var(--space-md);
 }
 
@@ -2253,7 +2254,7 @@ footer a:hover {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: var(--space-xs);
 }
 
 .page-exhibit .timeline-entry.milestone .timeline-date {
@@ -2345,7 +2346,7 @@ footer a:hover {
 .page-exhibit-a .probable-cause-box {
     background: var(--color-inverse);
     color: var(--color-inverse-text);
-    padding: var(--space-xl) 2.5rem;
+    padding: var(--space-xl) var(--space-xl);
     border-left: 6px solid var(--color-accent);
     margin: var(--space-lg) 0;
     position: relative;
@@ -2354,7 +2355,7 @@ footer a:hover {
 .page-exhibit-a .probable-cause-box::before {
     content: 'DETERMINATION';
     position: absolute;
-    top: -0.6rem;
+    top: calc(-1 * var(--space-sm));
     left: var(--space-xl);
     background: var(--color-accent);
     color: var(--color-inverse);
@@ -2425,7 +2426,7 @@ footer a:hover {
     color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     transition: background 0.3s, color 0.3s;
 }
 
@@ -2565,7 +2566,7 @@ footer a:hover {
 .page-exhibit-l .probable-cause-box {
     background: var(--color-inverse);
     color: var(--color-inverse-text);
-    padding: var(--space-xl) 2.5rem;
+    padding: var(--space-xl) var(--space-xl);
     border-left: 6px solid var(--color-accent);
     margin: var(--space-lg) 0;
     position: relative;
@@ -2577,7 +2578,7 @@ footer a:hover {
 .page-exhibit-l .probable-cause-box::before {
     content: 'DETERMINATION';
     position: absolute;
-    top: -0.6rem;
+    top: calc(-1 * var(--space-sm));
     left: var(--space-xl);
     background: var(--color-accent);
     color: var(--color-inverse);
@@ -2660,7 +2661,7 @@ footer a:hover {
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: var(--space-xs);
 }
 
 .page-exhibit-j .timeline-entry.milestone .timeline-date {
@@ -2856,7 +2857,7 @@ footer a:hover {
 
 .page-technologies .tech-tags .impact-tag {
     font-size: var(--font-size-xs);
-    padding: 0.2rem 0.6rem;
+    padding: var(--space-xs) var(--space-sm);
 }
 
 /* ================================================================
@@ -2869,7 +2870,7 @@ footer a:hover {
     .page-index .container,
     .page-testimonials .container,
     .page-exhibit .container {
-        padding: 0 0.75rem;
+        padding: 0 var(--space-ms);
     }
 
     /* Section vertical + horizontal padding — covers all page-specific overrides */
@@ -2885,7 +2886,7 @@ footer a:hover {
     .page-technologies .tech-category,
     .page-portfolio .portfolio-flagships,
     .page-portfolio .portfolio-directory {
-        padding: var(--space-2xl) 0.75rem;
+        padding: var(--space-2xl) var(--space-ms);
     }
 
     /* Cards — tighten inner padding on mobile */
@@ -2900,17 +2901,17 @@ footer a:hover {
 
     /* Hero sections — reduce vertical dead space on mobile */
     .hero-minimal {
-        padding: var(--space-2xl) 0.75rem;
+        padding: var(--space-2xl) var(--space-ms);
     }
 
     .page-index .hero {
-        padding: var(--space-3xl) 0.75rem;
+        padding: var(--space-3xl) var(--space-ms);
         min-height: 480px;
     }
 
     .page-testimonials .hero,
     .page-exhibit .hero {
-        padding: var(--space-2xl) 0.75rem;
+        padding: var(--space-2xl) var(--space-ms);
     }
 
     /* Nested element padding — prevent compounding with container */
@@ -2920,7 +2921,7 @@ footer a:hover {
 
     /* Footer — tighten on mobile */
     footer {
-        padding: var(--space-md) 0.75rem;
+        padding: var(--space-md) var(--space-ms);
     }
 
     /* Global navigation - Mobile hamburger menu */
@@ -3042,7 +3043,7 @@ footer a:hover {
     }
 
     .page-faq details summary {
-        padding: 0.75rem 2.5rem 0.75rem var(--space-sm);
+        padding: var(--space-ms) var(--space-xl) var(--space-ms) var(--space-sm);
         font-size: var(--font-size-sm);
     }
 
@@ -3067,7 +3068,7 @@ footer a:hover {
 
     .page-contact .email-container {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: var(--space-ms);
     }
 
     .page-contact .copy-btn {
@@ -3080,7 +3081,7 @@ footer a:hover {
     }
 
     .page-contact .guidance-list li {
-        padding: 0.75rem var(--space-sm);
+        padding: var(--space-ms) var(--space-sm);
     }
 
     .page-contact .quote-text {
@@ -3212,7 +3213,7 @@ footer a:hover {
         font-family: var(--font-mono);
         background: var(--color-background-alt);
         display: inline-block;
-        padding: 0.1rem 0.5rem;
+        padding: var(--space-xs) var(--space-sm);
         border-radius: var(--radius-pill);
         font-size: var(--font-size-xs);
     }
@@ -3222,7 +3223,7 @@ footer a:hover {
     }
 
     .page-testimonials blockquote {
-        padding: 0.6rem var(--space-sm);
+        padding: var(--space-sm) var(--space-sm);
     }
 
     /* Exhibit pages (shared) */
@@ -3246,7 +3247,7 @@ footer a:hover {
     }
 
     .page-exhibit blockquote {
-        padding: 0.6rem var(--space-sm);
+        padding: var(--space-sm) var(--space-sm);
         font-size: var(--font-size-base);
     }
 
@@ -3305,13 +3306,13 @@ footer a:hover {
 
     .page-exhibit .impact-tag {
         font-size: var(--font-size-xs);
-        padding: 0.2rem 0.5rem;
+        padding: var(--space-xs) var(--space-sm);
     }
 
     /* Evidence chains: tighter on mobile */
     .page-exhibit .evidence-chain li {
         font-size: var(--font-size-sm);
-        padding: 0.6rem 0.75rem;
+        padding: var(--space-sm) var(--space-ms);
     }
 
     /* Technologies page */
@@ -3392,7 +3393,7 @@ footer a:hover {
     display: block;
     font-size: var(--font-size-sm);
     color: var(--color-text-muted);
-    margin-top: 0.2rem;
+    margin-top: var(--space-xs);
 }
 
 .page-portfolio .flagship-meta {
@@ -3416,7 +3417,7 @@ footer a:hover {
     text-transform: uppercase;
     background: var(--color-inverse);
     color: var(--color-inverse-text);
-    padding: 0.2rem 0.6rem;
+    padding: var(--space-xs) var(--space-sm);
     border-radius: var(--radius-sm);
 }
 
@@ -3461,7 +3462,7 @@ footer a:hover {
     color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
-    padding: var(--space-sm) 1.2rem;
+    padding: var(--space-sm) var(--space-md);
     transition: background 0.3s, color 0.3s;
 }
 
@@ -3569,7 +3570,7 @@ footer a:hover {
 
     .page-portfolio .impact-tag {
         font-size: var(--font-size-xs);
-        padding: 0.2rem 0.5rem;
+        padding: var(--space-xs) var(--space-sm);
     }
 
 
