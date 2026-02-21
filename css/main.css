@@ -174,6 +174,10 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
+ul, ol {
+    padding-left: var(--space-xl);
+}
+
 code {
     font-family: var(--font-mono);
     background: var(--color-background-alt);
@@ -2139,7 +2143,7 @@ footer a:hover {
 }
 
 .detail-list {
-    margin: var(--space-md) 0 var(--space-md) var(--space-xl);
+    margin: var(--space-md) 0;
     line-height: 1.8;
 }
 
@@ -2974,7 +2978,9 @@ footer a:hover {
     }
 
     .nav-menu li {
+        width: 100%;
         border-bottom: 1px solid var(--color-border);
+        text-align: center;
     }
 
     .nav-menu a {
@@ -2985,13 +2991,13 @@ footer a:hover {
     }
 
     .nav-menu .theme-toggle {
-        margin: var(--space-md) 20px;
+        margin: var(--space-md) auto;
         min-height: 48px;
     }
 
     /* Index page */
     .page-index .hero h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-index .hero .subtitle {
@@ -3014,7 +3020,7 @@ footer a:hover {
 
     /* Philosophy page */
     .page-philosophy .hero-minimal h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-philosophy .content-section {
@@ -3051,7 +3057,7 @@ footer a:hover {
 
     /* FAQ page */
     .page-faq .hero-minimal h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     /* .page-faq .faq-category h2 — removed: uses 3xl on desktop, token scaling handles mobile */
@@ -3077,7 +3083,7 @@ footer a:hover {
 
     /* Contact page */
     .page-contact .hero-minimal h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-contact .email-link {
@@ -3111,7 +3117,7 @@ footer a:hover {
 
     /* Testimonials page */
     .page-testimonials .hero h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-testimonials .hero .subtitle {
@@ -3248,7 +3254,7 @@ footer a:hover {
 
     /* Exhibit pages (shared) */
     .page-exhibit .hero h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-exhibit .hero .subtitle {
@@ -3337,7 +3343,7 @@ footer a:hover {
 
     /* Technologies page */
     .page-technologies .hero-minimal h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     /* .page-technologies .tech-category h2 — removed: uses 3xl on desktop, token scaling handles mobile */
@@ -3571,7 +3577,7 @@ footer a:hover {
     }
 
     .page-portfolio .hero-minimal h1 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
 
     .page-portfolio .flagship-client {
