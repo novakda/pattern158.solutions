@@ -76,9 +76,15 @@ Plans:
 4. Information architecture optimized — right content on right pages, clear user journeys for hiring managers (30s scan), engineers (3-4min review), and clients (full review)
 5. All exhibits verified to follow Challenge → Approach → Solution → Results structure
 
-**Research**: Skip initially, flag for light research mid-phase if IA gaps emerge not covered by existing guidance
+**Research**: Complete (08-RESEARCH.md)
 
-**Plans**: TBD
+**Plans:** 4 plans
+
+Plans:
+- [ ] 08-01-PLAN.md — Content inventory, quality tooling, and IA analysis
+- [ ] 08-02-PLAN.md — Main pages editorial pass (ROT audit, grammar, tone, IA optimization)
+- [ ] 08-03-PLAN.md — Exhibit restructuring per NTSB investigation model
+- [ ] 08-04-PLAN.md — Portfolio alignment, final quality gate, and user verification
 
 ---
 
@@ -214,7 +220,7 @@ Plans:
 | 5. Performance Optimization | v1.0 | 1/1 | ✓ Complete | 2026-02-18 |
 | 6. Inline Style Token Cleanup | v1.0 | 2/2 | ✓ Complete | 2026-02-19 |
 | 7. CSS Foundation & Token System Audit | v1.1 | Complete    | 2026-02-20 | - |
-| 8. Content Quality & Information Architecture | v1.1 | 0/? | Not started | - |
+| 8. Content Quality & Information Architecture | v1.1 | 0/4 | Planned | - |
 | 9. Layout & Spacing Consistency | v1.1 | 0/? | Not started | - |
 | 10. Typography & Hierarchy | v1.1 | 0/? | Not started | - |
 | 11. Color Refinement & Contrast Verification | v1.1 | 0/? | Not started | - |
