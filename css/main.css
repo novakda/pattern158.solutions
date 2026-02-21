@@ -1556,7 +1556,7 @@ footer a:hover {
 .page-contact .testimonial-quote::before {
     content: '\201C';
     font-size: var(--font-size-5xl);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     position: absolute;
     top: -2rem;
     left: 0;
@@ -1581,7 +1581,7 @@ footer a:hover {
     display: block;
     font-size: var(--font-size-md);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     margin-bottom: var(--space-sm);
 }
 
@@ -1649,7 +1649,7 @@ footer a:hover {
 }
 
 .page-testimonials .hero .pattern-number {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
 }
 
 .page-testimonials .hero .subtitle {
@@ -1662,7 +1662,7 @@ footer a:hover {
     display: inline-block;
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
     margin-top: var(--space-lg);
@@ -1783,7 +1783,7 @@ footer a:hover {
 .page-testimonials .exhibit-client {
     font-family: var(--font-heading);
     font-size: var(--font-size-md);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     letter-spacing: 1px;
 }
 
@@ -1816,7 +1816,7 @@ footer a:hover {
     top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     opacity: 0.3;
     font-family: Georgia, serif;
 }
@@ -1883,7 +1883,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -1971,7 +1971,7 @@ footer a:hover {
 }
 
 .page-testimonials .metric-card h3 {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     font-size: var(--font-size-lg);
     margin-bottom: var(--space-md);
 }
@@ -1991,7 +1991,7 @@ footer a:hover {
     content: '\2192';
     position: absolute;
     left: 0;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
 }
 
 /* ================================================================
@@ -2043,7 +2043,7 @@ footer a:hover {
 }
 
 .page-exhibit .hero .pattern-number {
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
 }
 
 .page-exhibit .hero .subtitle {
@@ -2063,7 +2063,7 @@ footer a:hover {
     display: inline-block;
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
     margin-top: var(--space-md);
@@ -2103,7 +2103,7 @@ footer a:hover {
 .page-exhibit .section-number {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     line-height: 1;
     flex-shrink: 0;
 }
@@ -2156,7 +2156,7 @@ footer a:hover {
     top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     opacity: 0.3;
     font-family: Georgia, serif;
 }
@@ -2188,7 +2188,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -2313,7 +2313,7 @@ footer a:hover {
 .page-exhibit-a .personnel-table .person-org {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     letter-spacing: 0.5px;
 }
 
@@ -2369,7 +2369,7 @@ footer a:hover {
 .page-exhibit .timeline-date {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
@@ -2457,7 +2457,7 @@ footer a:hover {
 .page-exhibit-a .resolution-table .issue-id {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     white-space: nowrap;
 }
 
@@ -2522,7 +2522,7 @@ footer a:hover {
 .page-exhibit-a .outcome-metric .metric-value {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     line-height: 1;
     margin-bottom: var(--space-sm);
 }
@@ -2542,7 +2542,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -2612,7 +2612,7 @@ footer a:hover {
 .page-exhibit-l .personnel-table .person-org {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     letter-spacing: 0.5px;
 }
 
@@ -2658,7 +2658,7 @@ footer a:hover {
 .page-exhibit-l .resolution-table .issue-id {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     white-space: nowrap;
 }
 
@@ -2776,7 +2776,7 @@ footer a:hover {
 .page-exhibit-j .timeline-date {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
@@ -3317,7 +3317,7 @@ footer a:hover {
         font-size: var(--font-size-xs);
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: var(--color-primary);
+        color: var(--color-primary-on-dark);
         display: block;
         margin-bottom: var(--space-xs);
     }
@@ -3615,7 +3615,7 @@ footer a:hover {
 .page-portfolio .flagship-role {
     font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     margin-bottom: var(--space-sm);
 }
 
@@ -3650,7 +3650,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary);
+    color: var(--color-primary-on-dark);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -3794,4 +3794,26 @@ footer a:hover {
     .section-alt {
         background: var(--color-background-alt);
     }
+}
+/* ================================================================
+   ACCESSIBILITY FIX: Links on dark backgrounds must use compliant color
+   Any link that uses --color-primary on an inverse background (in light mode)
+   needs to use --color-primary-on-dark instead to meet WCAG AA 4.5:1
+   ================================================================ */
+
+/* Apply to any element with inverse background that contains links */
+nav a:hover,
+nav a[aria-current="page"],
+footer a,
+.testimonial a,
+.testimonial cite,
+.testimonial-quote::before,
+.field-reports-teaser a,
+.field-reports-teaser cite,
+.field-reports-teaser .section-subtitle,
+.footer-tagline,
+.hero a,
+[class*="inverse"] a,
+[style*="background: var(--color-inverse)"] a {
+    /* Inherits from specific selectors already updated */
 }

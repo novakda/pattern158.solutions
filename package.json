@@ -3,9 +3,13 @@
     "audit:inventory": "node .planning/phases/08-content-quality-information-architecture/scripts/extract-content.mjs",
     "audit:grammar": "node .planning/phases/08-content-quality-information-architecture/scripts/check-grammar.mjs",
     "audit:duplicates": "node .planning/phases/08-content-quality-information-architecture/scripts/find-duplicates.mjs",
-    "audit:all": "npm run audit:inventory && npm run audit:grammar && npm run audit:duplicates"
+    "audit:all": "npm run audit:inventory && npm run audit:grammar && npm run audit:duplicates",
+    "test": "npx playwright test",
+    "test:a11y": "npx playwright test tests/accessibility.spec.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "@playwright/test": "^1.58.2",
     "cheerio": "^1.2.0",
     "glob": "^13.0.6",
     "playwright": "^1.58.2",
