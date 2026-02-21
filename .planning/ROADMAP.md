@@ -78,13 +78,14 @@ Plans:
 
 **Research**: Complete (08-RESEARCH.md)
 
-**Plans:** 4 plans
+**Plans:** 5 plans
 
 Plans:
 - [ ] 08-01-PLAN.md — Content inventory, quality tooling, and IA analysis
 - [ ] 08-02-PLAN.md — Main pages editorial pass (ROT audit, grammar, tone, IA optimization)
-- [ ] 08-03-PLAN.md — Exhibit restructuring per NTSB investigation model
-- [ ] 08-04-PLAN.md — Portfolio alignment, final quality gate, and user verification
+- [ ] 08-03-PLAN.md — Exhibit restructuring A-F per NTSB investigation model
+- [ ] 08-04-PLAN.md — Exhibit restructuring G-L and cross-exhibit consistency verification
+- [ ] 08-05-PLAN.md — Portfolio alignment, final quality gate, and user verification
 
 ---
 
@@ -220,7 +221,7 @@ Plans:
 | 5. Performance Optimization | v1.0 | 1/1 | ✓ Complete | 2026-02-18 |
 | 6. Inline Style Token Cleanup | v1.0 | 2/2 | ✓ Complete | 2026-02-19 |
 | 7. CSS Foundation & Token System Audit | v1.1 | Complete    | 2026-02-20 | - |
-| 8. Content Quality & Information Architecture | v1.1 | 0/4 | Planned | - |
+| 8. Content Quality & Information Architecture | v1.1 | 0/5 | Planned | - |
 | 9. Layout & Spacing Consistency | v1.1 | 0/? | Not started | - |
 | 10. Typography & Hierarchy | v1.1 | 0/? | Not started | - |
 | 11. Color Refinement & Contrast Verification | v1.1 | 0/? | Not started | - |
