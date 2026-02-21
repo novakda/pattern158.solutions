@@ -31,6 +31,7 @@
     --color-inverse-text-light: rgba(250, 249, 246, 0.7);  /* 10.24:1 on dark sections */
     --color-border: #dddddd;
     --color-border-primary: rgba(14, 124, 140, 0.3);
+    --color-primary-subtle: rgba(14, 124, 140, 0.15);  /* Primary with 15% alpha for subtle backgrounds */
     --color-hover-background: #f0f0f0;
     --color-text-timeline: #444444;     /* Fixed from shorthand #444 */
     --color-danger: #c82333;            /* Darkened from #dc3545 to pass 4.5:1 (4.30→4.99:1) */
@@ -134,6 +135,7 @@
     /* Borders: lighter for visibility on dark */
     --color-border: #5d7289;            /* Lightened from #3d5266 to pass 3:1 UI visibility (1.85→3.18:1) */
     --color-border-primary: rgba(14, 124, 140, 0.4);
+    --color-primary-subtle: rgba(30, 163, 181, 0.15);  /* Dark mode primary (#1ea3b5) with 15% alpha */
 
     /* Headings: flip to light for visibility on dark backgrounds */
     --color-heading: #e8e8e8;           /* 12.20:1 on dark bg */
@@ -3103,7 +3105,7 @@ footer a:hover {
 
     /* Mobile active state: left border accent */
     .nav-menu a[aria-current="page"] {
-        background: rgba(14, 124, 140, 0.15);
+        background: var(--color-primary-subtle);
         border-left: 4px solid var(--color-primary);
         border-bottom: none;
         padding-bottom: 14px;
