@@ -57,8 +57,10 @@
     <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
+    <!-- Header -->
+    <header>
     <!-- Navigation -->
-    <nav>
+    <nav aria-label="Main navigation">
         <div class="container">
             <a href="/index.html" class="logo-link">
                 <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
@@ -103,9 +105,10 @@
             </ul>
         </div>
     </nav>
+    </header>
 
     <!-- Main Content -->
-    <main id="main-content">
+    <main id="main-content" aria-label="Main content">
 
     <!-- Hero -->
     <section class="hero">
@@ -161,7 +164,7 @@
             <div class="background-content">
                 <p>Standard SCORM courseware expects to communicate with an LMS through the SCORM API adapter (JavaScript runtime). The LMS tracks learner progress, stores scores, manages bookmarks, and handles completion status. Removing the LMS from this equation meant rebuilding that entire communication layer.</p>
 
-                <h3>Architectural Requirements</h3>
+                <h2>Architectural Requirements</h2>
                 <p>The custom SCORM-to-API wrapper needed to:</p>
                 <ul>
                     <li><strong>Intercept SCORM Runtime Calls:</strong> Capture <code>LMSInitialize</code>, <code>LMSSetValue</code>, <code>LMSGetValue</code>, <code>LMSCommit</code>, and <code>LMSFinish</code> calls from Lectora/Captivate courseware</li>
@@ -172,7 +175,7 @@
                     <li><strong>Browser Expansion:</strong> Support modern browsers (Chrome, Firefox) in addition to legacy IE8/IE10 requirements</li>
                 </ul>
 
-                <h3>Security and Trust Implications</h3>
+                <h2>Security and Trust Implications</h2>
                 <p>The integration required such deep access to SunTrust's systems that Dan was issued a dedicated SunTrust laptop and employee credentials (Daniel.A.Novak@SunTrust.com)—extraordinary measures for an external contractor. This level of trust reflected both the sensitivity of the banking institution's systems and the confidence in Dan's ability to operate within those constraints responsibly.</p>
             </div>
             </div>
@@ -190,7 +193,7 @@
             <div class="background-content">
                 <p>Dan scoped a <span class="key-fact">66-hour integration lifecycle</span> covering the full development process. The approach built on GP Strategies' existing SCORM-to-AICC wrapper technology, adapted for SunTrust's proprietary REST API.</p>
 
-                <h3>Five-Phase Integration Lifecycle</h3>
+                <h2>Five-Phase Integration Lifecycle</h2>
                 <ol>
                     <li><strong>API Development Consultation:</strong> Work directly with SunTrust's backend developer during API design phase to ensure the endpoints could handle SCORM data model requirements (status values, score normalization, suspend_data size limits, interaction tracking)</li>
                     <li><strong>API Definition Agreement:</strong> Formalize endpoint contracts, authentication mechanisms, error handling protocols, and data format specifications—establishing the interface contract between courseware wrapper and banking backend</li>
@@ -199,7 +202,7 @@
                     <li><strong>Wrapper Adaptation:</strong> Modify GP's existing SCORM-to-AICC bridge to route calls through SunTrust's API instead of AICC HACP endpoints, implementing mapping logic, retry handling, and the cookie-based fallback mechanism</li>
                 </ol>
 
-                <h3>Key Architectural Decisions Dan Shaped</h3>
+                <h2>Key Architectural Decisions Dan Shaped</h2>
                 <p>During the scoping and consultation phase, Dan raised critical questions that directly influenced the final architecture:</p>
                 <ul>
                     <li><strong>Cross-Computer Resume Requirements:</strong> Clarified whether learners needed the ability to start training on one device and continue on another—a requirement that mandated server-side state storage rather than client-side browser caching</li>
@@ -207,7 +210,7 @@
                     <li><strong>Development and Testing Environment Needs:</strong> Specified the requirement for proper dev/test/prod environment separation to allow safe integration development without risking production training delivery</li>
                 </ul>
 
-                <h3>Technology Stack</h3>
+                <h2>Technology Stack</h2>
                 <ul>
                     <li><strong>Courseware Authoring:</strong> Lectora, Adobe Captivate</li>
                     <li><strong>Standards:</strong> SCORM 1.2, AICC (reference implementation)</li>
@@ -257,7 +260,7 @@
             <div class="background-content">
                 <p>The SunTrust AWARE platform engagement represents a <span class="key-fact">multi-year (2015-2018)</span> custom integration architecture project where Dan served as lead technical engineer, building a SCORM-to-API wrapper that bypassed traditional LMS infrastructure entirely.</p>
 
-                <h3>Significance</h3>
+                <h2>Significance</h2>
                 <p>This engagement demonstrates several key capabilities:</p>
                 <ul>
                     <li><strong>Architectural Leadership:</strong> Dan didn't just implement requirements—he shaped the API definition through consultation, identified security and cross-computer resume implications before development began, and scoped the full <span class="key-fact">66-hour integration lifecycle</span></li>
@@ -294,27 +297,27 @@
             </div>
             <div class="background-content">
 
-                <h3>eLearning Standards & Integration</h3>
+                <h2>eLearning Standards & Integration</h2>
                 <ul>
                     <li><strong>SCORM 1.2:</strong> JavaScript API adapter, data model mapping, runtime communication</li>
                     <li><strong>AICC:</strong> Reference implementation for HTTP-based communication patterns</li>
                     <li><strong>Custom REST API Integration:</strong> SCORM-to-API translation layer, authentication, state persistence</li>
                 </ul>
 
-                <h3>Courseware Authoring</h3>
+                <h2>Courseware Authoring</h2>
                 <ul>
                     <li><strong>Lectora:</strong> SCORM output analysis, runtime behavior testing</li>
                     <li><strong>Adobe Captivate:</strong> SCORM courseware compatibility testing</li>
                 </ul>
 
-                <h3>Development & Debugging</h3>
+                <h2>Development & Debugging</h2>
                 <ul>
                     <li><strong>JavaScript:</strong> Custom wrapper development, SCORM API implementation, client-side logic</li>
                     <li><strong>Fiddler:</strong> HTTP traffic analysis, API endpoint testing, authentication verification</li>
                     <li><strong>Browser DevTools:</strong> SCORM call monitoring, JavaScript debugging, network analysis</li>
                 </ul>
 
-                <h3>Browser Compatibility</h3>
+                <h2>Browser Compatibility</h2>
                 <ul>
                     <li><strong>Legacy Support:</strong> Internet Explorer 8, Internet Explorer 10</li>
                     <li><strong>Modern Standards:</strong> Chrome, Firefox (cross-browser compatibility testing)</li>
