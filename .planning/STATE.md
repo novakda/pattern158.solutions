@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 8 - Content Quality & Information Architecture
-Plan: 03 / 05
+Plan: 04 / 05
 Status: In Progress
-Last activity: 2026-02-21 — Completed 08-03 (Exhibit restructuring A-F with NTSB investigation model)
+Last activity: 2026-02-21 — Completed 08-04 (Exhibit restructuring G-L + cross-exhibit consistency verification)
 
 Progress: [■■■■■■■□□□□□□□] 7/14 phases complete (50%)
 
@@ -31,6 +31,7 @@ Progress: [■■■■■■■□□□□□□□] 7/14 phases complete (50%
 - Phase 8, Plan 01: 6.6 min (2 tasks, 7 files)
 - Phase 8, Plan 02: 6.5 min (2 tasks, 7 files)
 - Phase 8, Plan 03: 4.0 min (1 task, 5 files)
+- Phase 8, Plan 04: 6.0 min (2 tasks, 11 files)
 - Phase 9: Not started
 - Phase 10: Not started
 - Phase 11: Not started
@@ -69,7 +70,11 @@ All v1.0 decisions logged in PROJECT.md Key Decisions table (15 entries).
 | Phase 08 P03 | 4.0 | 1 task | 5 files |
 - [Phase 08-03]: Exhibit A accessibility practice arc emphasizes full evolution (no training → methodology → organizational standard)
 - [Phase 08-03]: NTSB investigation structure variants per exhibit (investigation-inspired, pattern analysis, process engineering, standard technical, long-running)
-| Phase 08 P03 | 4 | 1 tasks | 5 files |
+| Phase 08 P04 | 6.0 | 2 tasks | 11 files |
+- [Phase 08-04]: Exhibit naming convention standardization across all 11 exhibits ("Exhibit [Letter]: [Subtitle]")
+- [Phase 08-04]: Technology summary sections added to exhibits G-L (comprehensive coverage: eLearning standards, development tools, methodologies)
+- [Phase 08-04]: Cross-exhibit consistency verified: back-navigation standardized to portfolio, authoritative tone uniform
+- [Phase 08-04]: Consolidation assessment: Exhibit H flagged as potential merge candidate (6 sections vs 7-12 average)
 
 ### Quick Tasks Completed (v1.0)
 
@@ -91,11 +96,11 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-20 (Phase 7 Plan 03 executed)
-Stopped at: Completed 07-03-PLAN.md - Stylelint token enforcement (zero errors, font-size enforcement active)
+Last session: 2026-02-21 (Phase 8 Plan 04 executed)
+Stopped at: Completed 08-04-PLAN.md - Exhibit restructuring G-L complete, cross-exhibit consistency verified across all 11 exhibits
 Resume file: None
 
-**Next step:** Proceed to Phase 8
+**Next step:** Proceed to Phase 8 Plan 05 (IA Optimization)
 
 ---
 *Milestone v1.1: Comprehensive Quality Audit & Polish*
