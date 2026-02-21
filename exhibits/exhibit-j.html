@@ -8,7 +8,7 @@
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-j.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit J - GM Course Completion Investigation">
+    <meta property="og:title" content="Pattern 158 | Exhibit J: GM Course Completion - Systemic Failure Analysis">
     <meta property="og:description" content="GM Course Completion Investigation: NTSB-style forensic analysis of a 4x spike in incomplete training courses. Five systemic failures identified through multi-angle investigation.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
@@ -42,7 +42,7 @@
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit J - GM Course Completion Investigation</title>
+    <title>Pattern 158 | Exhibit J: GM Course Completion - Systemic Failure Analysis</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -111,7 +111,7 @@
     <section class="hero">
         <div class="container">
             <h1>INVESTIGATION <span class="pattern-number">REPORT</span></h1>
-            <p class="subtitle">GM Learning Portal &mdash; Course Completion Anomaly</p>
+            <p class="subtitle">Exhibit J: GM Course Completion &mdash; Systemic Failure Analysis</p>
             <div class="report-meta">
                 <strong>Client:</strong> General Motors<br>
                 <strong>Platform:</strong> Enterprise LMS (PeopleSoft-based) + Third-Party Authoring Tools<br>
@@ -335,12 +335,67 @@
         </div>
     </section>
 
+    <!-- 7. TECHNOLOGIES -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">7.</span>
+                <span class="section-title">Technologies</span>
+            </div>
+
+            <table class="resolution-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Category</th>
+                        <th style="width: 70%;">Technologies & Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Category"><strong>LMS Platform</strong></td>
+                        <td data-label="Technologies & Tools">PeopleSoft-based Enterprise LMS, Memory cache architecture, Form-based state persistence</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Authoring Tools</strong></td>
+                        <td data-label="Technologies & Tools">Third-party vendor authoring platform (custom navigation, assessment flows, completion triggers)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Forensic Analysis</strong></td>
+                        <td data-label="Technologies & Tools">Fiddler (HTTP traffic capture, course-to-LMS communication tracing), Browser DevTools (JavaScript debugging, network analysis, state inspection)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Investigation Methodology</strong></td>
+                        <td data-label="Technologies & Tools">NTSB air crash investigation model (Swiss cheese model, multi-angle forensic investigation, systems thinking over code debugging)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>Data Analysis</strong></td>
+                        <td data-label="Technologies & Tools">LMS completion reports, Course launch/completion statistics, Anomaly detection (4x baseline degradation)</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Category"><strong>UX Research</strong></td>
+                        <td data-label="Technologies & Tools">Course navigation analysis, User interviews (GM sales reps), Mobile usage pattern discovery, WiFi connectivity assessment</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="background-content">
+                <h3>Key Technical Insights</h3>
+                <ul class="detail-list">
+                    <li><strong>Architecture Vulnerability Discovery:</strong> Fiddler traces revealed memory cache held all course state with no periodic auto-save—browser crash or connection drop triggered complete progress loss</li>
+                    <li><strong>UX Misdirection:</strong> "Congratulations! You're done!" appeared after final assessment but wasn't the last page—completion trigger required one more slide navigation</li>
+                    <li><strong>Mobile Workforce Reality:</strong> User interviews exposed short-burst usage pattern (5-minute sessions between customer meetings) on unreliable WiFi—system designed for hour-long desktop sessions</li>
+                    <li><strong>Perfect Storm Convergence:</strong> Five concurrent failures aligned to produce 4x degradation in completion rates—not a single bug, but systemic mismatch between design assumptions and actual use</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     </main>
 
     <!-- Back Link -->
     <div class="back-link-section">
-        <a href="../testimonials.html" class="back-link">
-            <span class="arrow">&larr;</span> Back to Field Reports
+        <a href="../portfolio.html" class="back-link">
+            <span class="arrow">&larr;</span> Back to Portfolio
         </a>
     </div>
 
