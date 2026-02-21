@@ -16,6 +16,7 @@
     --color-primary: #0e7c8c;           /* 4.66:1 on light bg, used for links/accents */
     --color-primary-hover: #0a6a78;
     --color-primary-on-dark: #20b8cc;   /* 5.31:1 on dark bg (#2d3436), for inverse sections in light mode */
+    --color-primary-on-alt: #0c6f7e;    /* 4.77:1 on alt bg (#e8e8e8), for gray backgrounds in light mode */
     --color-accent: #8f6d00;            /* Darkened from #b8860b to pass 4.5:1 as text (3.09→4.91:1) */
     --color-background: #faf9f6;
     --color-background-alt: #e8e8e8;
@@ -141,9 +142,10 @@
     /* Headings: flip to light for visibility on dark backgrounds */
     --color-heading: #e8e8e8;           /* 12.20:1 on dark bg */
 
-    /* Primary teal: lightened for 3:1 minimum on all dark backgrounds */
-    --color-primary: #1ea3b5;           /* Lightened from #0e7c8c to pass 3:1 on all dark surfaces (2.21→3.52:1 on surface) */
-    --color-primary-hover: #17919f;     /* Proportionally adjusted */
+    /* Primary teal: lightened to pass 4.5:1 on all dark surfaces for text */
+    --color-primary: #30c9dc;           /* 5.43:1 on surface (#2a3f54), passes WCAG AA 4.5:1 for normal text */
+    --color-primary-hover: #2abdd0;     /* Proportionally adjusted */
+    --color-primary-on-alt: #30c9dc;    /* Same as primary in dark mode */
 
     /* Hover state */
     --color-hover-background: #324456;
@@ -163,6 +165,15 @@
 
     /* Accent: lightened for dark mode (light mode uses darker #8f6d00) */
     --color-accent: #c9a226;            /* Lightened to pass 4.5:1 on dark bg (3.92→4.58:1) */
+}
+
+/* === DARK MODE LINK CONTRAST ===
+   In dark mode, normal text links need 4.5:1 contrast (not just 3:1).
+   Override .link-primary to use the lighter on-alt color which passes 4.5:1
+   on all dark backgrounds.
+*/
+[data-theme="dark"] .link-primary {
+    color: var(--color-primary-on-alt);
 }
 
 /* === DARK MODE INVERSE SECTION HANDLING ===
@@ -639,6 +650,25 @@ footer a:hover {
     .link-primary {
         color: var(--color-primary);
     }
+
+    /* Links and primary-colored elements on gray backgrounds (WCAG AA compliance) */
+    code a,
+    .page-index .findings a,
+    .page-index .findings .link-primary,
+    .page-philosophy .methodology-note a,
+    .page-philosophy .methodology-note .link-primary,
+    .page-contact .timezone-note a,
+    .page-contact .timezone-note .link-primary,
+    .page-testimonials .exhibits a:not(.exhibit-card a),
+    .page-testimonials .exhibits .link-primary,
+    .page-portfolio .portfolio-flagships a,
+    .page-portfolio .portfolio-flagships .link-primary,
+    .page-portfolio .portfolio-stats a,
+    .page-portfolio .portfolio-stats .link-primary,
+    .section-alt a,
+    .section-alt .link-primary {
+        color: var(--color-primary-on-alt);
+    }
 }
 
 @layer pages {
@@ -891,7 +921,7 @@ footer a:hover {
 
 .page-index .finding-label {
     background: var(--color-primary);
-    color: var(--color-surface);
+    color: var(--color-inverse-text);
     padding: var(--space-xs) var(--space-md);
     font-weight: 700;
     margin-right: var(--space-md);
@@ -1783,7 +1813,7 @@ footer a:hover {
 .page-testimonials .exhibit-client {
     font-family: var(--font-heading);
     font-size: var(--font-size-md);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     letter-spacing: 1px;
 }
 
@@ -1816,7 +1846,7 @@ footer a:hover {
     top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     opacity: 0.3;
     font-family: Georgia, serif;
 }
@@ -1883,7 +1913,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -1971,7 +2001,7 @@ footer a:hover {
 }
 
 .page-testimonials .metric-card h3 {
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     font-size: var(--font-size-lg);
     margin-bottom: var(--space-md);
 }
@@ -1991,7 +2021,7 @@ footer a:hover {
     content: '\2192';
     position: absolute;
     left: 0;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
 }
 
 /* ================================================================
@@ -2103,7 +2133,7 @@ footer a:hover {
 .page-exhibit .section-number {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     line-height: 1;
     flex-shrink: 0;
 }
@@ -2138,6 +2168,11 @@ footer a:hover {
     color: var(--color-heading);
 }
 
+/* Key facts inside highlighted impact tags need inverse text color for contrast */
+.impact-tag.highlight .key-fact {
+    color: var(--color-inverse-text);
+}
+
 /* ========== BLOCKQUOTES ========== */
 .page-exhibit blockquote {
     border-left: 3px solid var(--color-primary);
@@ -2156,7 +2191,7 @@ footer a:hover {
     top: calc(-1 * var(--space-xs));
     left: var(--space-sm);
     font-size: var(--font-size-4xl);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     opacity: 0.3;
     font-family: Georgia, serif;
 }
@@ -2188,7 +2223,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -2313,7 +2348,7 @@ footer a:hover {
 .page-exhibit-a .personnel-table .person-org {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     letter-spacing: 0.5px;
 }
 
@@ -2369,7 +2404,7 @@ footer a:hover {
 .page-exhibit .timeline-date {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
@@ -2457,7 +2492,7 @@ footer a:hover {
 .page-exhibit-a .resolution-table .issue-id {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     white-space: nowrap;
 }
 
@@ -2522,7 +2557,7 @@ footer a:hover {
 .page-exhibit-a .outcome-metric .metric-value {
     font-family: var(--font-heading);
     font-size: var(--font-size-3xl);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     line-height: 1;
     margin-bottom: var(--space-sm);
 }
@@ -2542,7 +2577,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
@@ -2612,7 +2647,7 @@ footer a:hover {
 .page-exhibit-l .personnel-table .person-org {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     letter-spacing: 0.5px;
 }
 
@@ -2658,7 +2693,7 @@ footer a:hover {
 .page-exhibit-l .resolution-table .issue-id {
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     white-space: nowrap;
 }
 
@@ -2776,7 +2811,7 @@ footer a:hover {
 .page-exhibit-j .timeline-date {
     font-family: var(--font-mono);
     font-size: var(--font-size-sm);
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
@@ -2952,7 +2987,7 @@ footer a:hover {
 
 .page-technologies .badge-working {
     background: var(--color-accent);
-    color: var(--color-inverse);
+    color: var(--color-inverse-text);
 }
 
 .page-technologies .badge-aware {
@@ -3317,7 +3352,7 @@ footer a:hover {
         font-size: var(--font-size-xs);
         letter-spacing: 0.5px;
         text-transform: uppercase;
-        color: var(--color-primary-on-dark);
+        color: var(--color-primary);
         display: block;
         margin-bottom: var(--space-xs);
     }
@@ -3615,7 +3650,7 @@ footer a:hover {
 .page-portfolio .flagship-role {
     font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     margin-bottom: var(--space-sm);
 }
 
@@ -3650,7 +3685,7 @@ footer a:hover {
     font-size: var(--font-size-sm);
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--color-primary-on-dark);
+    color: var(--color-primary);
     text-decoration: none;
     border: 1px solid var(--color-primary);
     padding: var(--space-sm) var(--space-md);
