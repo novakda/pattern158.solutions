@@ -1,0 +1,31 @@
+DUPLICATE CONTENT REPORT
+Generated: 2026-02-21T02:46:38.380Z
+Pages analyzed: 16 public pages
+
+================================================================================
+
+EXACT DUPLICATES
+(Identical text appearing on multiple pages)
+
+1. Found on 2 pages:
+   - testimonials.html
+   - exhibits/exhibit-c.html
+   Text: "Dan Novak "The Fiddler" (Automation) — Dan gets this name not only because he makes extensive use of the Fiddler application to help us troubleshoot c..."
+
+================================================================================
+
+NEAR DUPLICATES
+(Similar text with minor variations appearing on multiple pages)
+
+1. Found on 2 pages with 2 variations:
+   - philosophy.html
+     "Dan, thank you for being such a team player with the GP team and the client, and thank you for your incredible knowledge and expertise."
+   - portfolio.html
+     "“Dan, thank you for being such a team player with the GP team and the client, and thank you for your incredible knowledge and expertise.”"
+
+================================================================================
+
+SUMMARY:
+  Exact duplicates: 1
+  Near duplicates: 1
+  Total blocks analyzed: 488

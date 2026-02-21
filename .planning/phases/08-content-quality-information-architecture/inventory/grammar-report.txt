@@ -1,0 +1,916 @@
+GRAMMAR AND PROSE QUALITY REPORT
+Generated: 2026-02-21T02:46:35.235Z
+Tool: write-good
+Pages analyzed: 16 public pages
+
+NOTE: These are suggestions for review, NOT errors requiring fixes.
+Passive voice and adverbs are sometimes appropriate.
+
+================================================================================
+
+index.html:
+  1 suggestions
+
+  1. ["methodology" is wordy or unneeded] at position ~3823
+     Context: "... The Influences Air crash investigation (forensic methodology) Speedrunning/TAS culture (optimal paths) Pipe or..."
+
+philosophy.html:
+  15 suggestions
+
+  1. ["Just" can weaken meaning] at position ~576
+     Context: "...hree Stooges, "Tassels in the Air," 1938 3. Don't Just Fix the Bug, Build the Tool The approach. Don't s..."
+
+  2. ["just" can weaken meaning] at position ~1727
+     Context: "...plates, AI agents) to solve the root cause. Don't just fix individual bugs — prevent entire categories o..."
+
+  3. ["it is" is wordy or unneeded] at position ~2766
+     Context: "... you not to touch the green book — because inside it is their father Atrus, and he knows the truth about ..."
+
+  4. ["just" can weaken meaning] at position ~3085
+     Context: "...the green book) is sitting right next to it — you just have to see through the manipulation to find it. ..."
+
+  5. ["Methodology" is wordy or unneeded] at position ~3603
+     Context: "... engineering problems. 1. Air Crash Investigation Methodology Sources: Mayday (Air Crash Investigation TV), Men..."
+
+  6. ["multiple" is wordy or unneeded] at position ~3815
+     Context: "...design. The Swiss cheese model: disasters require multiple contributing factors aligning. Root cause vs. pro..."
+
+  7. ["it was" is wordy or unneeded] at position ~4067
+     Context: "...rted a 4x spike in incomplete courses and assumed it was a tracking bug. I ran an NTSB-style investigation..."
+
+  8. ["it was" is wordy or unneeded] at position ~4242
+     Context: "...r interviews. The root cause wasn't a single bug; it was a perfect storm of fragile architecture, confusin..."
+
+  9. ["perfect storm" is a cliche] at position ~4251
+     Context: "...ews. The root cause wasn't a single bug; it was a perfect storm of fragile architecture, confusing navigation, an..."
+
+  10. ["methodology" is wordy or unneeded] at position ~5107
+     Context: "... dropped from hours to seconds. Pure speedrunning methodology applied to professional work. 3. The Three Stooge..."
+
+  11. ["fairly" is a weasel word and can weaken meaning] at position ~5458
+     Context: "... tool I build "cheats" by automating tedium, but "fairly" because the output is proper, documented, mainta..."
+
+  12. ["fairly" is a weasel word and can weaken meaning] at position ~5624
+     Context: "... by eliminating manual zip-file email chains, but fairly because it was proper CORS engineering, version-c..."
+
+  13. ["it was" is wordy or unneeded] at position ~5639
+     Context: "... manual zip-file email chains, but fairly because it was proper CORS engineering, version-controlled, and ..."
+
+  14. ["fairly" is a weasel word and can weaken meaning] at position ~5783
+     Context: "...heated by bypassing hours of manual clicking, but fairly because it generated legitimate SCORM API respons..."
+
+  15. ["just" can weaken meaning] at position ~7040
+     Context: "...daries are. I don't reverse-engineer a legacy CMS just to fix bugs; I do it to understand the mind of th..."
+
+portfolio.html:
+  8 suggestions
+
+  1. ["numerous" is wordy or unneeded] at position ~573
+     Context: "...echanism for hundreds of eLearning courses across numerous client deployments including BP, Calpine, FPL, Ex..."
+
+  2. ["really" can weaken meaning] at position ~833
+     Context: "...M AICC JavaScript HTML/CSS Flash/ActionScript “We really appreciate your information and troubleshooting h..."
+
+  3. ["multiple" is wordy or unneeded] at position ~1201
+     Context: "...gagement producing custom training courses across multiple PNC lines of business including AMG, Retail, Corp..."
+
+  4. ["multiple" is wordy or unneeded] at position ~2179
+     Context: "...on, Nuclear, HR, and Finance. Legacy content from multiple eras: MarTech courses, Dreamweaver builds, RapidI..."
+
+  5. ["multiple" is wordy or unneeded] at position ~2838
+     Context: "...hing, and troubleshooting SCORM courseware across multiple GM brands including Chevrolet and GMC, covering v..."
+
+  6. ["multiple" is wordy or unneeded] at position ~3977
+     Context: "...al specialist and SCORM/LMS troubleshooter across multiple Cigna business units Long-running eLearning techn..."
+
+  7. ["Really" can weaken meaning] at position ~5617
+     Context: "...shoot under limited information from client side. Really appreciate the efforts.” HSBC Bank Global eLearni..."
+
+  8. ["approximately" can weaken meaning] at position ~6582
+     Context: "...nvironment, with courses arriving in batches over approximately six months. SCORM Xyleme Adobe Captivate Articula..."
+
+technologies.html:
+  5 suggestions
+
+  1. ["Deep" is repeated] at position ~405
+     Context: "...Cigna National Grid HSBC State Farm PNC AICC Deep Deep understanding of HACP protocol. Led Chrome 80 imp..."
+
+  2. ["Multiple" is wordy or unneeded] at position ~957
+     Context: "...mediation across customer base. Electric Boat GPU Multiple Energy Utilities Cornerstone OnDemand Deep Go-to ..."
+
+  3. ["multiple" is wordy or unneeded] at position ~1390
+     Context: "...d platform-specific technical requirements across multiple client accounts. Migration consulting and integra..."
+
+  4. ["Deep" is repeated] at position ~1758
+     Context: "...g interactive eLearning Articulate Storyline Deep Deep knowledge of published package internals. Customi..."
+
+  5. ["early" can weaken meaning] at position ~3067
+     Context: "...LEARN UOB HSBC Cigna Flash/ActionScript Deep From early 2000s through end-of-life. ActionScript debugging..."
+
+faq.html:
+  16 suggestions
+
+  1. ["currently" can weaken meaning] at position ~199
+     Context: "...ents Are you available for new projects? Yes, I'm currently available for contract, contract-to-hire, or full..."
+
+  2. ["was laid" may be passive voice] at position ~277
+     Context: "...ract, contract-to-hire, or full-time positions. I was laid off from GP Strategies in January 2026 and am act..."
+
+  3. ["particularly" can weaken meaning] at position ~372
+     Context: "...26 and am actively seeking new opportunities. I'm particularly interested in roles involving legacy system moder..."
+
+  4. ["assistance" is wordy or unneeded] at position ~2239
+     Context: "...aluable for documentation generation, code review assistance, and rapid prototyping. What industries have you ..."
+
+  5. ["prioritize" is wordy or unneeded] at position ~2725
+     Context: "..., and approach How do you handle communication? I prioritize clear, documented communication. I'm comfortable ..."
+
+  6. ["are undefined" may be passive voice] at position ~3531
+     Context: "...it as a forensic investigation. When requirements are undefined or contradictory, I document what exists, map the..."
+
+  7. ["exactly" can weaken meaning] at position ~3811
+     Context: "...u have an unclear situation, let's talk - this is exactly the kind of problem I'm good at solving. Are you ..."
+
+  8. ["Very" is a weasel word and can weaken meaning] at position ~3903
+     Context: "...lving. Are you comfortable working independently? Very. I've often been "the engineer" on projects - the..."
+
+  9. ["things" can weaken meaning] at position ~3974
+     Context: "... "the engineer" on projects - the one who figures things out, builds the tool, and hands off documentation..."
+
+  10. ["been solved" may be passive voice] at position ~4210
+     Context: "..., documentation is missing, or the problem hasn't been solved before. Give me a complex puzzle and I'll map it,..."
+
+  11. ["Methodology" is wordy or unneeded] at position ~4309
+     Context: "...I'll map it, solve it, and document it. Process & Methodology How Dan works in practice What's your typical wor..."
+
+  12. ["multiple" is wordy or unneeded] at position ~5031
+     Context: "...tems thinking first. I look for patterns, examine multiple angles (technical, UX, user behavior), and verify..."
+
+  13. ["clearly" is a weasel word and can weaken meaning] at position ~5136
+     Context: "...ify hypotheses with evidence. I document findings clearly so others can follow the reasoning. I'm methodica..."
+
+  14. ["only" can weaken meaning] at position ~5401
+     Context: "...umentation? Yes, extensively. I believe tools are only as good as their documentation. I write clear REA..."
+
+  15. ["evaluate" is wordy or unneeded] at position ~5898
+     Context: "...libraries over hand-rolled, simple over clever. I evaluate tools based on: Does it solve the actual problem?..."
+
+  16. ["very" is a weasel word and can weaken meaning] at position ~6268
+     Context: "...hese notes so that the developer can get going is very helpful and appreciated. Thank you so much for yo..."
+
+contact.html:
+  2 suggestions
+
+  1. ["are involved" may be passive voice] at position ~431
+     Context: "...dget or rate range? Tech stack: What technologies are involved? Timezone: US Pacific (PT) Project Preferences I'..."
+
+  2. ["particularly" can weaken meaning] at position ~495
+     Context: "...Timezone: US Pacific (PT) Project Preferences I'm particularly interested in: Legacy system modernization and re..."
+
+testimonials.html:
+  31 suggestions
+
+  1. ["are drawn" may be passive voice] at position ~201
+     Context: "...005–2022 Executive Summary The following exhibits are drawn from professional correspondence spanning 17 year..."
+
+  2. ["is sourced" may be passive voice] at position ~386
+     Context: "...Wells Fargo, SunTrust, and TD Bank. Each citation is sourced from professional correspondence. 17 Years Docume..."
+
+  3. ["huge" is a weasel word] at position ~796
+     Context: "...ical Advisory I'd consider the last couple days a huge success, and I look forward to working with Dan i..."
+
+  4. ["really" can weaken meaning] at position ~1809
+     Context: "... Pattern I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making th..."
+
+  5. ["things" can weaken meaning] at position ~1896
+     Context: "...k you for making the trip and doing all the great things you do! Director of Learning Technologies, GP Str..."
+
+  6. ["all of" is wordy or unneeded] at position ~1971
+     Context: "...f Learning Technologies, GP Strategies Thanks for all of the great work you did out there. I heard about y..."
+
+  7. ["several" is a weasel word] at position ~2041
+     Context: "...k you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, ..."
+
+  8. ["multiple" is wordy or unneeded] at position ~2299
+     Context: "...d through GP Strategies' leadership hierarchy via multiple unsolicited channels. Three named independent sou..."
+
+  9. ["only" can weaken meaning] at position ~2659
+     Context: "...he Fiddler" (Automation) — Dan gets this name not only because he makes extensive use of the Fiddler app..."
+
+  10. ["stuff" can weaken meaning] at position ~2811
+     Context: "...errors for customers, but because he fiddles with stuff until we get a tool that makes things… possible. ..."
+
+  11. ["things" can weaken meaning] at position ~2848
+     Context: "...fiddles with stuff until we get a tool that makes things… possible. He also used Fiddler to figure out how..."
+
+  12. ["in order to" is wordy or unneeded] at position ~3798
+     Context: "...ey her appreciation for the work that you two did in order to test the WF courses in spite of the fact that you..."
+
+  13. ["of the fact that" is wordy or unneeded] at position ~3839
+     Context: "... two did in order to test the WF courses in spite of the fact that you were seeing issues related to IE. Thanks for ..."
+
+  14. ["promptly" can weaken meaning] at position ~5458
+     Context: "...Rapid Diagnosis Kudos on finding this solution so promptly! … This email was a huge relief. GP Strategies (c..."
+
+  15. ["huge" is a weasel word] at position ~5487
+     Context: "...ing this solution so promptly! … This email was a huge relief. GP Strategies (combined from multiple res..."
+
+  16. ["multiple" is wordy or unneeded] at position ~5529
+     Context: "...l was a huge relief. GP Strategies (combined from multiple respondents) Context SCORM completion tracking fa..."
+
+  17. ["multiple" is wordy or unneeded] at position ~5718
+     Context: "...nd fix deployed same day, prompting relief across multiple stakeholders. Rapid Resolution LMS Troubleshootin..."
+
+  18. ["Methodology" is wordy or unneeded] at position ~5911
+     Context: "...s) 2021–2024 Enterprise Accessibility Initiative: Methodology Creation Thank you for all your amazing work! Sen..."
+
+  19. ["amazing" is wordy or unneeded] at position ~5955
+     Context: "...tive: Methodology Creation Thank you for all your amazing work! Senior Learning Project Manager, GP Strateg..."
+
+  20. ["methodology" is wordy or unneeded] at position ~6133
+     Context: "...ative (2021–2024). Created WCAG 2.1 AA evaluation methodology, JAWS/NVDA interaction protocols, and ARIA remedi..."
+
+  21. ["Methodology" is wordy or unneeded] at position ~6235
+     Context: "...IA remediation templates used across the account. Methodology Creation TD Bank WCAG 2.1 Accessibility View Full..."
+
+  22. ["Methodology" is wordy or unneeded] at position ~6340
+     Context: "...w Full Investigation Report Investigation Reports Methodology-driven case studies: the investigation is the del..."
+
+  23. ["Investigation" is repeated] at position ~6501
+     Context: "...g Portal: Course Completion Anomaly Investigation Investigation Summary GM reported a 4x spike in incomplete cour..."
+
+  24. ["it was" is wordy or unneeded] at position ~6839
+     Context: "...heese model.” The root cause wasn’t a single bug; it was a systemic mismatch between how the platform was ..."
+
+  25. ["was designed" may be passive voice] at position ~6891
+     Context: "... was a systemic mismatch between how the platform was designed and how people actually worked. NTSB Methodology ..."
+
+  26. ["Methodology" is wordy or unneeded] at position ~6941
+     Context: "...was designed and how people actually worked. NTSB Methodology Systems Thinking Forensic Analysis User Research ..."
+
+  27. ["was brought" may be passive voice] at position ~7226
+     Context: "...ategies’ embedded work on Microsoft accounts, Dan was brought in to evolve their AI training agent in Copilot S..."
+
+  28. ["was lost" may be passive voice] at position ~7849
+     Context: "...n on Power Platform where institutional knowledge was lost through organizational transitions. AI-assisted f..."
+
+  29. ["stuff" can weaken meaning] at position ~8490
+     Context: "...ent teams Recognized as someone who "fiddles with stuff until we get a tool that makes things possible" C..."
+
+  30. ["things" can weaken meaning] at position ~8527
+     Context: "...fiddles with stuff until we get a tool that makes things possible" Client Impact Work praised independentl..."
+
+  31. ["huge" is a weasel word] at position ~8941
+     Context: "...ctric Boat) Course completion fix described as "a huge relief" Solutions delivered under tight security ..."
+
+exhibits/exhibit-a.html:
+  32 suggestions
+
+  1. ["was hosted" may be passive voice] at position ~1188
+     Context: "...ed persistent training delivery failures. The LMS was hosted externally by Cornerstone, while EB's content res..."
+
+  2. ["was sponsored" may be passive voice] at position ~1817
+     Context: "...hitect. On the GP Strategies side, the engagement was sponsored by a Senior Vice President who initiated the oppo..."
+
+  3. ["It is" is wordy or unneeded] at position ~3278
+     Context: "... The Confined Spaces log has interesting results. It is posting to the 'proxlet' included for cross-domai..."
+
+  4. ["silently" can weaken meaning] at position ~3512
+     Context: "...t (from Articulate) as having no error checking — silently failing on all cross-domain requests. That SCORM ..."
+
+  5. ["very" is a weasel word and can weaken meaning] at position ~3671
+     Context: "...4 here than 1.2, but having both options would be very helpful! Chief of Learning Services, Electric Boa..."
+
+  6. ["definitely" can weaken meaning] at position ~4036
+     Context: "...ture Confirmed Our LMS and our content server are definitely on different domains… we can't put content up on ..."
+
+  7. ["huge" is a weasel word] at position ~4845
+     Context: "...ent outcomes. I'd consider the last couple days a huge success, and I look forward to working with Dan i..."
+
+  8. ["really" can weaken meaning] at position ~5070
+     Context: "...ognition I hear you did an AWESOME job onsite! EB really appreciated your support. Sr. Director, Learning ..."
+
+  9. ["all of" is wordy or unneeded] at position ~5199
+     Context: "...s August 21, 2018 Director Recognition Thanks for all of the great work you did out there. I heard about y..."
+
+  10. ["several" is a weasel word] at position ~5269
+     Context: "...k you did out there. I heard about your work from several folks across the organization. Director of Learni..."
+
+  11. ["just" can weaken meaning] at position ~5460
+     Context: "...RM 2004 cross-domain wrapper prototype working. I just got the first API call to work across domains wit..."
+
+  12. ["very" is a weasel word and can weaken meaning] at position ~5698
+     Context: "...! One of our more regular SCORM 2004 customers is very excited about not needing the Cornerstone player ..."
+
+  13. ["very" is a weasel word and can weaken meaning] at position ~7136
+     Context: "...ire course catalog. You are so awesome. Thank you very much for your fast and clear response. We really ..."
+
+  14. ["really" can weaken meaning] at position ~7183
+     Context: "...ou very much for your fast and clear response. We really appreciate you. When are you visiting again? I ow..."
+
+  15. ["were identified" may be passive voice] at position ~7676
+     Context: "...er 7 years. 4. Findings The following five issues were identified and resolved during the on-site engagement at Ele..."
+
+  16. ["was used" may be passive voice] at position ~8088
+     Context: "...down, all SCORM courses stopped functioning. AICC was used as a workaround but had significant limitations. ..."
+
+  17. ["was prototyped" may be passive voice] at position ~8344
+     Context: "...GP's enterprise client base. A SCORM 2004 version was prototyped within one week of the on-site visit. F-02 HTML5 ..."
+
+  18. ["multiple" is wordy or unneeded] at position ~8850
+     Context: "...ailures AICC could not properly reset quizzes for multiple attempts. Bookmarking was unreliable, limiting co..."
+
+  19. ["multiple" is wordy or unneeded] at position ~9050
+     Context: "...wrapper properly supports bookmarking, reset, and multiple quiz attempts. Curriculum developers gained new d..."
+
+  20. ["previously" can weaken meaning and is wordy or unneeded] at position ~9122
+     Context: ".... Curriculum developers gained new design freedom previously unavailable under AICC constraints. F-04 No tools..."
+
+  21. ["methodology" is wordy or unneeded] at position ~9582
+     Context: "... staff on SCORM data concepts and troubleshooting methodology. F-05 Bulk SCORM import not available Cornerstone..."
+
+  22. ["only" can weaken meaning] at position ~9644
+     Context: "... F-05 Bulk SCORM import not available Cornerstone only allowed single-course uploads. GP's enterprise co..."
+
+  23. ["Successfully" can weaken meaning] at position ~9934
+     Context: "...SCORM courses from the enterprise course library. Successfully validated the migration path for future large-sca..."
+
+  24. ["silently" can weaken meaning] at position ~10521
+     Context: "...this gap via AICC — had no error handling and was silently failing on all cross-domain POST requests. The so..."
+
+  25. ["benefit from" is wordy or unneeded] at position ~11892
+     Context: "...roup, which also uses Cornerstone OnDemand, could benefit from the same cross-domain solutions deployed at Elect..."
+
+  26. ["huge" is a weasel word] at position ~12072
+     Context: "...to Leadership I'd consider the last couple days a huge success, and I look forward to working with Dan i..."
+
+  27. ["really" can weaken meaning] at position ~12408
+     Context: "...ognition I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making th..."
+
+  28. ["things" can weaken meaning] at position ~12495
+     Context: "...k you for making the trip and doing all the great things you do! Sr. Director, Learning Solutions, GP Stra..."
+
+  29. ["all of" is wordy or unneeded] at position ~12624
+     Context: "...- Director Recognition (Multi-Channel) Thanks for all of the great work you did out there. I heard about y..."
+
+  30. ["several" is a weasel word] at position ~12694
+     Context: "...k you did out there. I heard about your work from several folks across the organization. Director of Learni..."
+
+  31. ["very" is a weasel word and can weaken meaning] at position ~13246
+     Context: "...Relationship (2020) You are so awesome. Thank you very much for your fast and clear response. We really ..."
+
+  32. ["really" can weaken meaning] at position ~13293
+     Context: "...ou very much for your fast and clear response. We really appreciate you. When are you visiting again? I ow..."
+
+exhibits/exhibit-b.html:
+  12 suggestions
+
+  1. ["multiple" is wordy or unneeded] at position ~455
+     Context: "...d through GP Strategies' leadership hierarchy via multiple independent channels, unsolicited, before formal ..."
+
+  2. ["were filed" may be passive voice] at position ~526
+     Context: "...channels, unsolicited, before formal trip reports were filed. The fact that the same pattern repeated eight mo..."
+
+  3. ["multiple" is wordy or unneeded] at position ~1061
+     Context: "...ies Dan's management chain. Relayed feedback from multiple independent sources after both visits. — Sr. Dire..."
+
+  4. ["multiple" is wordy or unneeded] at position ~1870
+     Context: "...ologies emails Dan, citing positive feedback from multiple sources across the organization. The Sr. Director..."
+
+  5. ["was filed" may be passive voice] at position ~2836
+     Context: "...rategies' hierarchy before the formal trip report was filed. August 17, 2018 — The EB client contact (Chief o..."
+
+  6. ["multiple" is wordy or unneeded] at position ~3052
+     Context: "... The Director of Learning Technologies hears from multiple sources and emails Dan directly to relay the feed..."
+
+  7. ["really" can weaken meaning] at position ~3260
+     Context: "...t chain. I hear you did an AWESOME job onsite! EB really appreciated your support. Thank you for making th..."
+
+  8. ["things" can weaken meaning] at position ~3347
+     Context: "...k you for making the trip and doing all the great things you do! Director of Learning Technologies, GP Str..."
+
+  9. ["all of" is wordy or unneeded] at position ~4165
+     Context: "...dependently relayed positive feedback. Thanks for all of the great work you did out there. I heard about y..."
+
+  10. ["several" is a weasel word] at position ~4235
+     Context: "...k you did out there. I heard about your work from several folks including Chris Sproule, Tracey Nicholson, ..."
+
+  11. ["Multiple" is wordy or unneeded] at position ~4613
+     Context: "...thin days of each visit, not weeks Independence — Multiple channels activated without coordination or solici..."
+
+  12. ["be attributed" may be passive voice] at position ~5051
+     Context: "...ion 7 Significance A single recognition event can be attributed to politics, timing, or courtesy. Two independent..."
+
+exhibits/exhibit-c.html:
+  19 suggestions
+
+  1. ["Automation" is repeated] at position ~114
+     Context: "...fresh Project: 600 Hours Saved Through Automation Automation · Process Engineering · December 2015 Section 1 B..."
+
+  2. ["be verified" may be passive voice] at position ~314
+     Context: "...ourse library. A total of 1,216 lessons needed to be verified, fixed, and republished through the Xyleme conten..."
+
+  3. ["several" is a weasel word] at position ~440
+     Context: "...tform. The project involved 15+ team members over several months and represented one of the largest single ..."
+
+  4. ["multiple" is wordy or unneeded] at position ~840
+     Context: "...ting for confirmation. With 1,216 lessons needing multiple publish cycles, the labor cost was enormous. The ..."
+
+  5. ["currently" can weaken meaning] at position ~983
+     Context: "...that all content in every lesson matched what was currently being served to customers. This meant each lesson..."
+
+  6. ["being served" may be passive voice] at position ~993
+     Context: "...ontent in every lesson matched what was currently being served to customers. This meant each lesson went through..."
+
+  7. ["multiple" is wordy or unneeded] at position ~1056
+     Context: "...to customers. This meant each lesson went through multiple rounds of verification and republishing, compound..."
+
+  8. ["overall" is wordy or unneeded] at position ~1824
+     Context: "... Authored the team recognition email. Managed the overall refresh project. Dan Novak "The Fiddler" Built th..."
+
+  9. ["additional" is wordy or unneeded] at position ~2157
+     Context: "...g 75+ more hours) and the new responsive skin. 13 additional team members, each recognized with unique nicknam..."
+
+  10. ["only" can weaken meaning] at position ~2385
+     Context: "...he Fiddler" (Automation) — Dan gets this name not only because he makes extensive use of the Fiddler app..."
+
+  11. ["stuff" can weaken meaning] at position ~2537
+     Context: "...errors for customers, but because he fiddles with stuff until we get a tool that makes things… possible. ..."
+
+  12. ["things" can weaken meaning] at position ~2574
+     Context: "...fiddles with stuff until we get a tool that makes things… possible. He also used Fiddler to figure out how..."
+
+  13. ["it was" is wordy or unneeded] at position ~2942
+     Context: "...he team took the task at hand and worked it until it was done — and then asked for more. Relentless forwar..."
+
+  14. ["was done" may be passive voice] at position ~2945
+     Context: "...team took the task at hand and worked it until it was done — and then asked for more. Relentless forward mot..."
+
+  15. ["Additional" is wordy or unneeded] at position ~3130
+     Context: "...eam's approach in the recognition email Section 6 Additional Context The recognition email gave each of 15 tea..."
+
+  16. ["all of" is wordy or unneeded] at position ~3447
+     Context: "...e visibility. The team collectively verified that all of the content in 1,216 lessons matched the content ..."
+
+  17. ["currently" can weaken meaning] at position ~3503
+     Context: "... the content in 1,216 lessons matched the content currently being served to customers. The content delivery f..."
+
+  18. ["being served" may be passive voice] at position ~3513
+     Context: "...nt in 1,216 lessons matched the content currently being served to customers. The content delivery framework libr..."
+
+  19. ["Additional" is wordy or unneeded] at position ~3758
+     Context: "...Automation 1,216 Lessons Refreshed & Verified 75+ Additional Hours Saved (Custom Code) 15+ Team Members Recogn..."
+
+exhibits/exhibit-d.html:
+  26 suggestions
+
+  1. ["be published" may be passive voice] at position ~546
+     Context: "...nt System (LCMS). The migrated content would then be published as SCORM 1.2 packages for deployment to the Wells..."
+
+  2. ["was assigned" may be passive voice] at position ~641
+     Context: "...ment to the Wells Fargo enterprise LMS. Dan Novak was assigned as the technical lead for functional quality assu..."
+
+  3. ["approximately" can weaken meaning] at position ~732
+     Context: "...nctional quality assurance. The engagement lasted approximately six months and generated 223 emails of technical ..."
+
+  4. ["was classified" may be passive voice] at position ~821
+     Context: "...223 emails of technical coordination. Wells Fargo was classified as a critical account for GP Strategies; reliable..."
+
+  5. ["facilitate" is wordy or unneeded] at position ~1323
+     Context: "...trative access to their Xyleme Studio instance to facilitate troubleshooting and validation. Section 2 Personn..."
+
+  6. ["methodology" is wordy or unneeded] at position ~1582
+     Context: "...eme publishing expertise. Developed QA estimation methodology. Diagnosed cross-browser completion tracking fail..."
+
+  7. ["Overall" is wordy or unneeded] at position ~1992
+     Context: "...ger, GP Strategies Program Manager, GP Strategies Overall engagement coordination and client relationship. ..."
+
+  8. ["methodology" is wordy or unneeded] at position ~2440
+     Context: "... functional QA into technical problem-solving and methodology development: QA Budget Estimation Methodology Dan..."
+
+  9. ["Methodology" is wordy or unneeded] at position ~2486
+     Context: "...and methodology development: QA Budget Estimation Methodology Dan developed a structured approach to estimating..."
+
+  10. ["methodology" is wordy or unneeded] at position ~2605
+     Context: "...rt based on interactivity-level multipliers. This methodology allowed the project team to forecast testing time..."
+
+  11. ["is published" may be passive voice] at position ~3190
+     Context: "...e's "thin package" approach — where SCORM content is published as a minimal wrapper that loads the bulk of its a..."
+
+  12. ["additional" is wordy or unneeded] at position ~3833
+     Context: "...by Xyleme's thin package architecture introducing additional latency into the API call sequence. Dan documente..."
+
+  13. ["rarely" can weaken meaning] at position ~4172
+     Context: "...o their Xyleme Studio instance — a level of trust rarely extended to vendor contractors in a financial ser..."
+
+  14. ["validate" is wordy or unneeded] at position ~4274
+     Context: "... services environment. This access enabled Dan to validate content structure, inspect publishing settings, a..."
+
+  15. ["several" is a weasel word] at position ~4469
+     Context: "...ection 4 Findings The migration project presented several classes of technical challenges: Legacy Format In..."
+
+  16. ["methodology" is wordy or unneeded] at position ~5648
+     Context: "...ocess. Dan's interactivity-level-based estimation methodology provided the predictability needed to schedule te..."
+
+  17. ["methodology" is wordy or unneeded] at position ~5753
+     Context: "...ule testing across the full course portfolio. The methodology accounted for module complexity, enabling the tea..."
+
+  18. ["allocate" is wordy or unneeded] at position ~5819
+     Context: "...unted for module complexity, enabling the team to allocate testing resources efficiently and maintain delive..."
+
+  19. ["been used" may be passive voice] at position ~6263
+     Context: "...espite IE compatibility obstacles that could have been used to justify delays. Section 5 Evidence The client ..."
+
+  20. ["in order to" is wordy or unneeded] at position ~6411
+     Context: "...ey her appreciation for the work that you two did in order to test the WF courses in spite of the fact that you..."
+
+  21. ["of the fact that" is wordy or unneeded] at position ~6452
+     Context: "... two did in order to test the WF courses in spite of the fact that you were seeing issues related to IE. Thanks for ..."
+
+  22. ["being architected" may be passive voice] at position ~7397
+     Context: "...to function in a legacy browser environment while being architected for a post-Flash future. Xyleme represented a mod..."
+
+  23. ["However" is wordy or unneeded] at position ~7584
+     Context: "...ti-channel publishing (SCORM, xAPI, web, mobile). However, Xyleme's thin package SCORM architecture — desig..."
+
+  24. ["be allowed" may be passive voice] at position ~8138
+     Context: "...e environment where technical obstacles could not be allowed to disrupt delivery timelines. The team's ability..."
+
+  25. ["Methodology" is wordy or unneeded] at position ~8667
+     Context: "...bleshooting Wells Fargo's SCORM publishing issues Methodology Development: Created reusable QA estimation frame..."
+
+  26. ["Methodology" is wordy or unneeded] at position ~9640
+     Context: "...ourses Wells Fargo Xyleme LCMS SCORM Expertise QA Methodology Flash/ActionScript IE Compatibility Financial Ser..."
+
+exhibits/exhibit-f.html:
+  5 suggestions
+
+  1. ["were concentrated" may be passive voice] at position ~811
+     Context: "...application development. The technical challenges were concentrated at the protocol level — SCORM communication failu..."
+
+  2. ["terminate" is wordy or unneeded] at position ~2559
+     Context: "...mi.core.exit value, causing the LMS to improperly terminate user sessions. This was not a content issue — it ..."
+
+  3. ["it was" is wordy or unneeded] at position ~2615
+     Context: "...ate user sessions. This was not a content issue — it was a platform-level bug embedded in the communicatio..."
+
+  4. ["been lost" may be passive voice] at position ~2917
+     Context: "...sed courses but the original FLA source files had been lost, Dan decompiled the published SWF files to recove..."
+
+  5. ["correctly" can weaken meaning] at position ~3299
+     Context: "...L5 Sales Suitability course was failing to deploy correctly on HSBC’s global SAP SuccessFactors instance. The..."
+
+exhibits/exhibit-g.html:
+  16 suggestions
+
+  1. ["Implement" is wordy or unneeded] at position ~2586
+     Context: "...tead of local browser storage Fallback Mechanism: Implement cookie-based fallback for scenarios where API con..."
+
+  2. ["was degraded" may be passive voice] at position ~2655
+     Context: "...sed fallback for scenarios where API connectivity was degraded Browser Expansion: Support modern browsers (Chrom..."
+
+  3. ["in addition" is wordy or unneeded] at position ~2729
+     Context: "...ansion: Support modern browsers (Chrome, Firefox) in addition to legacy IE8/IE10 requirements Security and Trus..."
+
+  4. ["was issued" may be passive voice] at position ~2878
+     Context: "...d such deep access to SunTrust's systems that Dan was issued a dedicated SunTrust laptop and employee credenti..."
+
+  5. ["were set" may be passive voice] at position ~4273
+     Context: "...me behavior—identifying which data model elements were set, in what sequence, and with what values during re..."
+
+  6. ["Modify" is wordy or unneeded] at position ~4375
+     Context: "...ing real courseware execution Wrapper Adaptation: Modify GP's existing SCORM-to-AICC bridge to route calls..."
+
+  7. ["requirement" is wordy or unneeded] at position ~4872
+     Context: "... training on one device and continue on another—a requirement that mandated server-side state storage rather th..."
+
+  8. ["requirement" is wordy or unneeded] at position ~5223
+     Context: "...ment and Testing Environment Needs: Specified the requirement for proper dev/test/prod environment separation t..."
+
+  9. ["sufficient" is wordy or unneeded] at position ~5944
+     Context: "...cates the quality of the technical analysis built sufficient confidence to move directly to implementation. Th..."
+
+  10. ["immediately" can weaken meaning] at position ~6071
+     Context: "...rn—reading a technical investigation document and immediately asking for a quote rather than requesting clarifi..."
+
+  11. ["additional" is wordy or unneeded] at position ~6142
+     Context: "...r a quote rather than requesting clarification or additional analysis—signals that the documentation was clear..."
+
+  12. ["several" is a weasel word] at position ~7001
+     Context: "...tirely. Significance This engagement demonstrates several key capabilities: Architectural Leadership: Dan d..."
+
+  13. ["just" can weaken meaning] at position ~7064
+     Context: "...apabilities: Architectural Leadership: Dan didn't just implement requirements—he shaped the API definiti..."
+
+  14. ["implement" is wordy or unneeded] at position ~7069
+     Context: "...lities: Architectural Leadership: Dan didn't just implement requirements—he shaped the API definition through..."
+
+  15. ["immediately" can weaken meaning] at position ~7970
+     Context: "...ble proposals that clients trusted enough to fund immediately Multi-Year Engagement Stability: 133 emails spann..."
+
+  16. ["indicate" is wordy or unneeded] at position ~8045
+     Context: "...gagement Stability: 133 emails spanning 2015-2018 indicate sustained involvement and ongoing value delivery ..."
+
+exhibits/exhibit-h.html:
+  15 suggestions
+
+  1. ["it was" is wordy or unneeded] at position ~319
+     Context: "...cturing" had functionality issues — specifically, it was failing to record course completions in the LMS. ..."
+
+  2. ["Multiple" is wordy or unneeded] at position ~375
+     Context: "... failing to record course completions in the LMS. Multiple stakeholders were involved and urgency was high. ..."
+
+  3. ["were involved" may be passive voice] at position ~397
+     Context: "...rse completions in the LMS. Multiple stakeholders were involved and urgency was high. The course was live and lea..."
+
+  4. ["promptly" can weaken meaning] at position ~1039
+     Context: "...tion 3 Evidence Kudos on finding this solution so promptly! GP Strategies — GP Strategies Agreed. Thank you ..."
+
+  5. ["huge" is a weasel word] at position ~1123
+     Context: "...egies Agreed. Thank you so much. This email was a huge relief. GP Strategies — GP Strategies Yes, thank ..."
+
+  6. ["very" is a weasel word and can weaken meaning] at position ~1188
+     Context: "... Strategies — GP Strategies Yes, thank you all so very much for your time and diligence on this effort!!..."
+
+  7. ["are met" may be passive voice] at position ~1378
+     Context: "...ure we close the loop and everyone's expectations are met here. GP Strategies — GP Strategies Section 4 Roo..."
+
+  8. ["adjustment" is wordy or unneeded] at position ~1570
+     Context: "...ue causing the completion tracking failure. After adjustment, testing confirmed successful completion recordin..."
+
+  9. ["was isolated" may be passive voice] at position ~1706
+     Context: "...lieved significant stakeholder anxiety. The issue was isolated to the LMS configuration layer rather than the co..."
+
+  10. ["be applied" may be passive voice] at position ~1811
+     Context: "... the courseware itself, which meant the fix could be applied without republishing the course content — a criti..."
+
+  11. ["quickly" can weaken meaning] at position ~1974
+     Context: "...gs Significance Cross-functional collaboration to quickly resolve a client-impacting issue. Three independe..."
+
+  12. ["indicate" is wordy or unneeded] at position ~2070
+     Context: "...e independent expressions of relief and gratitude indicate the pressure the team was under and the quality o..."
+
+  13. ["particularly" can weaken meaning] at position ~2188
+     Context: "...lution. The word "relief" from one team member is particularly telling — it reveals the weight of the situation ..."
+
+  14. ["was found" may be passive voice] at position ~2265
+     Context: "...eveals the weight of the situation before the fix was found. The directive to "share this resolution with any..."
+
+  15. ["multiple" is wordy or unneeded] at position ~2441
+     Context: "... not a minor issue but one with visibility across multiple stakeholder groups. Rapid Resolution 3 Independen..."
+
+exhibits/exhibit-i.html:
+  27 suggestions
+
+  1. ["Methodology" is wordy or unneeded] at position ~99
+     Context: "... I — TD Bank Accessibility Initiative: Enterprise Methodology Creation Corroborated · WCAG 2.1 · Enterprise Ini..."
+
+  2. ["was assigned" may be passive voice] at position ~236
+     Context: "...2022-2024 Section 1 Background In 2021, Dan Novak was assigned by GP Strategies management to establish an enter..."
+
+  3. ["methodology" is wordy or unneeded] at position ~549
+     Context: "...lenge was not merely compliance verification, but methodology invention. The TD Bank engagement (2022-2024) was..."
+
+  4. ["methodology" is wordy or unneeded] at position ~888
+     Context: "...essibility evaluation independently, applying the methodology he created to deliver confirmation statements, is..."
+
+  5. ["methodology" is wordy or unneeded] at position ~1085
+     Context: "...king clients where Dan deployed his accessibility methodology. The initiative peaked in 2022 with 479 accessibi..."
+
+  6. ["Methodology" is wordy or unneeded] at position ~1352
+     Context: "... Novak Accessibility Evaluator (Solo), Enterprise Methodology Lead Senior Learning Project Manager, GP Strategi..."
+
+  7. ["methodology" is wordy or unneeded] at position ~1620
+     Context: "...rise Accessibility Initiative he established. The methodology created for TD Bank was subsequently applied to H..."
+
+  8. ["particularly" can weaken meaning] at position ~1854
+     Context: "...ith no standard?" Interactive eLearning content — particularly Articulate Storyline courses with custom navigati..."
+
+  9. ["was tasked" may be passive voice] at position ~2570
+     Context: "...ose standards to complex interactive content. Dan was tasked in 2021 to close this gap — not for a single clie..."
+
+  10. ["Methodology" is wordy or unneeded] at position ~2749
+     Context: "...rategies' portfolio of banking clients. Section 4 Methodology Dan created the accessibility testing practice th..."
+
+  11. ["methodology" is wordy or unneeded] at position ~4020
+     Context: "...sibility verification with development cycles The methodology was validated through deployment across four majo..."
+
+  12. ["was validated" may be passive voice] at position ~4032
+     Context: "...ification with development cycles The methodology was validated through deployment across four major banking clie..."
+
+  13. ["was executed" may be passive voice] at position ~5153
+     Context: "...lve accessibility barriers The TD Bank engagement was executed solo — Dan handled the entire accessibility evalu..."
+
+  14. ["methodology" is wordy or unneeded] at position ~5249
+     Context: "...essibility evaluation independently, applying the methodology he established during the 2021 research phase. Se..."
+
+  15. ["amazing" is wordy or unneeded] at position ~5350
+     Context: "... phase. Section 6 Evidence Thank you for all your amazing work! Senior Learning Project Manager, GP Strateg..."
+
+  16. ["amazing" is wordy or unneeded] at position ~5446
+     Context: "... GP Strategies — August 2022, TD MIC Project The "amazing work" recognition from the Senior PM indicates ab..."
+
+  17. ["multiple" is wordy or unneeded] at position ~6053
+     Context: "... of the practice established and sustained across multiple banking clients. The methodology created for TD B..."
+
+  18. ["methodology" is wordy or unneeded] at position ~6083
+     Context: "...nd sustained across multiple banking clients. The methodology created for TD Bank was deployed across four majo..."
+
+  19. ["was deployed" may be passive voice] at position ~6115
+     Context: "...king clients. The methodology created for TD Bank was deployed across four major banking institutions (TD Bank, ..."
+
+  20. ["simply" can weaken meaning] at position ~6307
+     Context: "...lity. Section 7 Findings Significance Dan did not simply test for accessibility compliance — he invented t..."
+
+  21. ["was assigned" may be passive voice] at position ~6657
+     Context: "...rategic capability beyond tactical execution. Dan was assigned an open-ended problem ("establish an accessibilit..."
+
+  22. ["methodology" is wordy or unneeded] at position ~6748
+     Context: "...blish an accessibility practice") and delivered a methodology deployed across four major banking clients over a..."
+
+  23. ["it is" is wordy or unneeded] at position ~6985
+     Context: "...l institutions, WCAG compliance is not optional — it is a legal and regulatory requirement. Dan's methodo..."
+
+  24. ["requirement" is wordy or unneeded] at position ~7014
+     Context: "...ce is not optional — it is a legal and regulatory requirement. Dan's methodology directly impacted TD Bank's re..."
+
+  25. ["methodology" is wordy or unneeded] at position ~7033
+     Context: "...— it is a legal and regulatory requirement. Dan's methodology directly impacted TD Bank's regulatory compliance..."
+
+  26. ["impacted" is wordy or unneeded] at position ~7054
+     Context: "...egulatory requirement. Dan's methodology directly impacted TD Bank's regulatory compliance posture and provi..."
+
+  27. ["Methodology" is wordy or unneeded] at position ~7199
+     Context: "...differentiator in the enterprise learning market. Methodology Creation Enterprise Initiative WCAG 2.1 Section 5..."
+
+exhibits/exhibit-j.html:
+  21 suggestions
+
+  1. ["being marked" may be passive voice] at position ~425
+     Context: "...rs reported that 19% of launched lessons were not being marked completed or passed — nearly four times their his..."
+
+  2. ["was designed" may be passive voice] at position ~922
+     Context: "...framing assumed a tracking bug. The investigation was designed to test that assumption — and look deeper if the ..."
+
+  3. ["was assembled" may be passive voice] at position ~1025
+     Context: "...r if the evidence pointed elsewhere. A small team was assembled to conduct a multi-angle forensic investigation, ..."
+
+  4. ["methodology" is wordy or unneeded] at position ~1121
+     Context: "...c investigation, applying air crash investigation methodology: never blame the user first — investigate the sys..."
+
+  5. ["being marked" may be passive voice] at position ~1647
+     Context: "...s Flagged GM reports ~19% of launched lessons not being marked completed — nearly 4x the historical baseline of ..."
+
+  6. ["roughly" can weaken meaning] at position ~1799
+     Context: "...de stakeholders describe the problem as affecting roughly “30% of cases” in some course categories. Initial..."
+
+  7. ["is conducted" may be passive voice] at position ~1911
+     Context: "...ew Initial Investigation An initial investigation is conducted but cannot identify the root cause. The problem p..."
+
+  8. ["only" can weaken meaning] at position ~2374
+     Context: "...he LMS holds all course state in memory cache and only persists to the database via form submit when the..."
+
+  9. ["was designed" may be passive voice] at position ~3164
+     Context: "...s — not the hour-long desktop sessions the system was designed for. This reframes the entire investigation. Synt..."
+
+  10. ["perfect storm" is a cliche] at position ~3427
+     Context: "...tterns, and poor connectivity align to produce a “perfect storm” — a systemic mismatch between how the system was..."
+
+  11. ["was designed" may be passive voice] at position ~3487
+     Context: "...orm” — a systemic mismatch between how the system was designed and how people actually work. Delivery Findings D..."
+
+  12. ["honestly" can weaken meaning] at position ~3699
+     Context: "...e technical assessment. Dan documents uncertainty honestly: the cache vulnerability couldn’t be conclusively..."
+
+  13. ["multiple" is wordy or unneeded] at position ~4186
+     Context: "...e bug, but a “Swiss cheese model” alignment where multiple holes in defenses lined up to produce a 4x degrad..."
+
+  14. ["Only" can weaken meaning] at position ~4372
+     Context: "...ty The LMS held all course state in memory cache. Only saved to database via form submit when the course..."
+
+  15. ["was designed" may be passive voice] at position ~5330
+     Context: "...n a gamble. F-05 Short-Burst Usage Pattern System was designed for hour-long desktop sessions. Actual users took..."
+
+  16. ["was designed" may be passive voice] at position ~5671
+     Context: "... but a systemic mismatch between how the platform was designed and how people actually worked. Five concurrent f..."
+
+  17. ["repeatedly" can weaken meaning] at position ~6062
+     Context: "...ge pattern that triggered the cache vulnerability repeatedly (F-05). No single failure would have caused a 4x ..."
+
+  18. ["perfect storm" is a cliche] at position ~6181
+     Context: "...on in completion rates. Together, they created a “perfect storm” where the system design set users up to fail — t..."
+
+  19. ["was delivered" may be passive voice] at position ~6339
+     Context: "... 6. Outcome & Validation The comprehensive report was delivered documenting all findings. Not all stakeholders ag..."
+
+  20. ["honestly" can weaken meaning] at position ~6567
+     Context: "...lled environment. Dan documented this uncertainty honestly, presenting evidence-based hypotheses while ackno..."
+
+  21. ["be proven" may be passive voice] at position ~6648
+     Context: "...ased hypotheses while acknowledging what couldn’t be proven. Years later, GM abandoned the platform entirely ..."
+
+exhibits/exhibit-k.html:
+  8 suggestions
+
+  1. ["methodology" is wordy or unneeded] at position ~998
+     Context: "...ot Studio experience — brought in for engineering methodology and learning technology domain knowledge, not pla..."
+
+  2. ["overall" is wordy or unneeded] at position ~1633
+     Context: "... lead on the Copilot Studio implementation. Drove overall architecture and delivery. Dan Novak AI Agent Dev..."
+
+  3. ["be told" may be passive voice] at position ~2437
+     Context: "...orce deterministic state. A declarative agent can be told “track which lessons the user has completed,” but..."
+
+  4. ["be enforced" may be passive voice] at position ~2728
+     Context: "...terministic, not approximate Course sequence must be enforced, not suggested Assessment scores must be persiste..."
+
+  5. ["be persisted" may be passive voice] at position ~2778
+     Context: "...be enforced, not suggested Assessment scores must be persisted, not remembered State must survive across convers..."
+
+  6. ["being asked" may be passive voice] at position ~2951
+     Context: "...ion design alone couldn’t solve this. The LLM was being asked to serve as both the interface and the data store..."
+
+  7. ["it was" is wordy or unneeded] at position ~3880
+     Context: "...n’t fighting its nature trying to be a database — it was doing what LLMs do best while structured data han..."
+
+  8. ["accidentally" can weaken meaning] at position ~4378
+     Context: "...ttons enforce valid navigation paths. Users can’t accidentally skip or repeat lessons. Assessments Adaptive Card..."
+
+exhibits/exhibit-l.html:
+  24 suggestions
+
+  1. ["was lost" may be passive voice] at position ~446
+     Context: "...ganizational transitions, institutional knowledge was lost and the project’s original architectural vision b..."
+
+  2. ["been brought" may be passive voice] at position ~586
+     Context: "...ution. An external Power Platform consultancy had been brought in to architect the solution. They produced high-..."
+
+  3. ["was assigned" may be passive voice] at position ~937
+     Context: "...iew or adherence to Microsoft best practices. Dan was assigned development lead on a scheduling module. By the t..."
+
+  4. ["multiple" is wordy or unneeded] at position ~1879
+     Context: "...s Degradation Chain Requirements degraded through multiple format conversions, each losing fidelity. By the ..."
+
+  5. ["were treated" may be passive voice] at position ~2210
+     Context: "...ch conversion lost fidelity. High-level summaries were treated as actionable work items when they were all epic-..."
+
+  6. ["Methodology" is wordy or unneeded] at position ~2444
+     Context: "...acklog but functioned as a wish list. 3. Forensic Methodology Dan had a hunch something was fundamentally wrong..."
+
+  7. ["apparent" is wordy or unneeded] at position ~2959
+     Context: "...atically exposed what was absent. The gaps became apparent quickly, not because the AI was sophisticated, bu..."
+
+  8. ["quickly" can weaken meaning] at position ~2968
+     Context: "...exposed what was absent. The gaps became apparent quickly, not because the AI was sophisticated, but becaus..."
+
+  9. ["was sophisticated" may be passive voice] at position ~2996
+     Context: "... gaps became apparent quickly, not because the AI was sophisticated, but because the problems were that fundamental. ..."
+
+  10. ["were confirmed" may be passive voice] at position ~3076
+     Context: "... the problems were that fundamental. The findings were confirmed through convergence: practical deployment pain, M..."
+
+  11. ["being created" may be passive voice] at position ~3492
+     Context: "...defined data model existed. Dataverse tables were being created ad hoc during development without a schema design..."
+
+  12. ["were improvised" may be passive voice] at position ~3613
+     Context: "...Entity relationships, data types, and constraints were improvised. F-02 No Version Control Critical No git, no sour..."
+
+  13. ["only" can weaken meaning] at position ~3706
+     Context: "...itical No git, no source control of any kind. The only method of versioning was solution exports kept by..."
+
+  14. ["being built" may be passive voice] at position ~4555
+     Context: "...atched business intent. The gap between “what was being built” and “what the business actually needed” was invi..."
+
+  15. ["is designed" may be passive voice] at position ~4722
+     Context: "...e of Power Platform’s limitations. Power Platform is designed for citizen developer tools, departmental apps, a..."
+
+  16. ["were removed" may be passive voice] at position ~4917
+     Context: "... practices were never applied. The domain experts were removed. Requirements were never decomposed. Architecture..."
+
+  17. ["being built" may be passive voice] at position ~5057
+     Context: "...Microsoft best practices. The result was a system being built at enterprise scale with citizen-developer method..."
+
+  18. ["methodology" is wordy or unneeded] at position ~5112
+     Context: "... built at enterprise scale with citizen-developer methodology — tool misuse, not a tool problem. The diagnosis ..."
+
+  19. ["being built" may be passive voice] at position ~5447
+     Context: "..., they were in the architecture that the code was being built on. Findings were shared with management and the ..."
+
+  20. ["were shared" may be passive voice] at position ~5472
+     Context: "...ecture that the code was being built on. Findings were shared with management and the governance architect via ..."
+
+  21. ["methodology" is wordy or unneeded] at position ~5679
+     Context: ".... This case demonstrates how forensic engineering methodology, augmented by AI-assisted analysis, can surface f..."
+
+  22. ["early" can weaken meaning] at position ~5757
+     Context: "...-assisted analysis, can surface foundational gaps early — before they become production failures. The ear..."
+
+  23. ["are applied" may be passive voice] at position ~5831
+     Context: "...me production failures. The earlier these methods are applied, the more costly the problems they prevent. Diagn..."
+
+  24. ["Methodology" is wordy or unneeded] at position ~6003
+     Context: "...rse AI-Assisted Analysis GitHub Spec Kit Forensic Methodology Architecture Audit ← Back to Field Reports..."
+
+================================================================================
+
+SUMMARY: 283 total suggestions across 18 pages
