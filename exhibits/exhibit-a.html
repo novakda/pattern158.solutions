@@ -8,7 +8,7 @@
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-a.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit A: The Accessibility Practice - Electric Boat Investigation">
+    <meta property="og:title" content="Pattern 158 | Exhibit A: Electric Boat LMS Integration">
     <meta property="og:description" content="Electric Boat LMS Integration: 7-year engagement (2015-2022) with General Dynamics. Cross-domain SCORM framework, Flash remediation, and embedded technical advisory.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
@@ -42,7 +42,7 @@
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
     <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit A: The Accessibility Practice - Electric Boat Investigation</title>
+    <title>Pattern 158 | Exhibit A: Electric Boat LMS Integration</title>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -110,81 +110,41 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>EXHIBIT A: <span class="pattern-number">THE ACCESSIBILITY PRACTICE</span></h1>
-            <p class="subtitle">Building Enterprise Accessibility Methodology from Zero Training</p>
+            <h1>EXHIBIT A: <span class="pattern-number">ELECTRIC BOAT LMS INTEGRATION</span></h1>
+            <p class="subtitle">Cross-Domain SCORM Resolution &amp; Embedded Technical Advisory</p>
             <div class="report-meta">
                 <strong>Classification:</strong> Client Engagement / Technical Investigation<br>
                 <strong>Client:</strong> General Dynamics Electric Boat (GDEB)<br>
                 <strong>Location:</strong> Groton, Connecticut<br>
-                <strong>Period:</strong> 2015 &ndash; 2020 (on-site investigation: August 2018)<br>
+                <strong>Period:</strong> 2015 &ndash; 2022 (on-site investigation: August 2018)<br>
                 <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
             </div>
             <span class="classification">Field Report &middot; Exhibit A &middot; Electric Boat &middot; General Dynamics</span>
         </div>
     </section>
 
-    <!-- 1. THE CHALLENGE: NO TRAINING, ENTERPRISE EXPECTATIONS -->
+    <!-- 1. BACKGROUND -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
                 <span class="section-number">1.</span>
-                <span class="section-title">The Challenge: Accessibility Practice from Zero</span>
+                <span class="section-title">Background</span>
             </div>
             <div class="background-content">
-                <p>In 2008, I was assigned to sign off on accessibility audits for Electric Boat's eLearning content &mdash; with zero formal training in accessibility standards, no WCAG certification, and no existing methodology. Electric Boat, a division of General Dynamics building nuclear submarines for the U.S. Navy, required Section 508 compliance for all training materials. The expectation: enterprise-grade accessibility verification. The reality: I had to build the practice from scratch.</p>
+                <p>Electric Boat, a division of General Dynamics, has been the primary submarine builder for the United States Navy for over <strong>120 years</strong>. Located in Groton, Connecticut, EB designs, builds, and maintains nuclear submarines including the <em>Virginia</em>-class attack submarine and the <em>Columbia</em>-class ballistic missile submarine. With a significant percentage of its workforce approaching retirement within 10 years, recruitment and onboarding became paramount to maintaining institutional knowledge and operational readiness.</p>
 
-                <p>What followed was not a single project but a 14-year evolution (2008-2022) where accessibility methodology, cross-domain SCORM expertise, and embedded technical advisory converged into a comprehensive engagement spanning <strong>574 emails across 49 personnel</strong>.</p>
+                <p>EB used <span class="key-fact">Cornerstone OnDemand</span> as their Learning Management System, with course content hosted on separate internal EB servers &mdash; a cross-domain architecture that caused persistent training delivery failures. The LMS was hosted externally by Cornerstone, while EB's content resided on internal EB network servers. This split created a same-origin policy conflict that broke standard LMS-to-course communication protocols.</p>
 
-                <p><strong>The arc:</strong> No training → Technical methodology → Organizational standard. This exhibit documents that full trajectory.</p>
+                <p>GP Strategies Corporation provided learning solutions to General Dynamics/Electric Boat as a <strong>major client</strong>. GP maintained an on-site training support team at EB. The Senior Vice President of Learning Solutions flagged the engagement opportunity and directed the technical team to pursue resolution.</p>
             </div>
         </div>
     </section>
 
-    <!-- 2. BUILDING THE PRACTICE: ACCESSIBILITY METHODOLOGY (2008-2015) -->
+    <!-- 2. PERSONNEL INVOLVED -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
                 <span class="section-number">2.</span>
-                <span class="section-title">Building the Practice: Accessibility Methodology (2008–2015)</span>
-            </div>
-            <div class="background-content">
-                <p>Without formal training, I reverse-engineered accessibility compliance through a combination of WCAG documentation study, screen reader testing (JAWS, NVDA), and iterative validation against Section 508 requirements. The methodology evolved into a systematic technical audit process:</p>
-
-                <ul class="recommendations-list">
-                    <li><strong>Keyboard navigation verification</strong> &mdash; Tab order, focus indicators, skip navigation, keyboard traps</li>
-                    <li><strong>Screen reader compatibility</strong> &mdash; ARIA labels, alt text, semantic HTML, form labels, error identification</li>
-                    <li><strong>Visual accessibility</strong> &mdash; Color contrast ratios (WCAG AA), text resizing, responsive layouts</li>
-                    <li><strong>Media accessibility</strong> &mdash; Captions, transcripts, audio descriptions</li>
-                    <li><strong>Cognitive load mitigation</strong> &mdash; Clear navigation, consistent UI patterns, timeout warnings</li>
-                </ul>
-
-                <p>This methodology became the foundation for all subsequent EB accessibility audits and, later, GP Strategies' division-wide accessibility standard. What started as "figure it out" became documented, repeatable process engineering.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. THE TECHNICAL INVESTIGATION: CROSS-DOMAIN SCORM (2015-2020) -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">3.</span>
-                <span class="section-title">The Technical Investigation: Cross-Domain SCORM Resolution</span>
-            </div>
-            <div class="background-content">
-                <p>In 2015, the engagement expanded beyond accessibility into technical infrastructure. Electric Boat used <span class="key-fact">Cornerstone OnDemand</span> as their Learning Management System, with course content hosted on separate internal EB servers &mdash; a cross-domain architecture causing persistent training delivery failures. The LMS was hosted externally by Cornerstone; EB's content resided on internal EB network servers. This split created a same-origin policy conflict that broke standard LMS-to-course communication protocols.</p>
-
-                <p>GP Strategies Corporation provided learning solutions to General Dynamics/Electric Boat as a <strong>major client</strong>. GP maintained an on-site training support team at EB. The Senior Vice President of Learning Solutions flagged the cross-domain SCORM issue as a strategic engagement opportunity and directed the technical team to pursue resolution.</p>
-
-                <p>This investigation became the second major pillar of the EB relationship: accessibility methodology + technical problem-solving depth.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. PERSONNEL INVOLVED -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">4.</span>
                 <span class="section-title">Personnel Involved</span>
             </div>
             <div class="background-content">
@@ -195,12 +155,12 @@
         </div>
     </section>
 
-    <!-- 5. SEQUENCE OF EVENTS: CROSS-DOMAIN SCORM INVESTIGATION -->
+    <!-- 3. SEQUENCE OF EVENTS -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">5.</span>
-                <span class="section-title">Sequence of Events: Cross-Domain SCORM Investigation</span>
+                <span class="section-number">3.</span>
+                <span class="section-title">Sequence of Events</span>
             </div>
 
             <div class="timeline">
@@ -442,11 +402,11 @@
         </div>
     </section>
 
-    <!-- 6. FINDINGS -->
+    <!-- 4. FINDINGS -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">6.</span>
+                <span class="section-number">4.</span>
                 <span class="section-title">Findings</span>
             </div>
             <p class="report-intro">The following five issues were identified and resolved during the on-site engagement at Electric Boat, August 15&ndash;16, 2018. This table reconstructs the summary report sent to EB leadership.</p>
@@ -496,11 +456,11 @@
         </div>
     </section>
 
-    <!-- 7. PROBABLE CAUSE -->
+    <!-- 5. PROBABLE CAUSE -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">7.</span>
+                <span class="section-number">5.</span>
                 <span class="section-title">Probable Cause</span>
             </div>
 
@@ -511,11 +471,11 @@
         </div>
     </section>
 
-    <!-- 8. RECOMMENDATIONS IMPLEMENTED -->
+    <!-- 6. RECOMMENDATIONS IMPLEMENTED -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">8.</span>
+                <span class="section-number">6.</span>
                 <span class="section-title">Recommendations Implemented</span>
             </div>
             <ul class="recommendations-list">
@@ -528,11 +488,11 @@
         </div>
     </section>
 
-    <!-- 9. CORROBORATING EVIDENCE -->
+    <!-- 7. CORROBORATING EVIDENCE -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">9.</span>
+                <span class="section-number">7.</span>
                 <span class="section-title">Corroborating Evidence</span>
             </div>
 
@@ -595,11 +555,11 @@
         </div>
     </section>
 
-    <!-- 10. CONTINUED ENGAGEMENT -->
+    <!-- 8. CONTINUED ENGAGEMENT -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">10.</span>
+                <span class="section-number">8.</span>
                 <span class="section-title">Continued Engagement (2019&ndash;2022)</span>
             </div>
 
@@ -623,59 +583,24 @@
         </div>
     </section>
 
-    <!-- 11. THE FULL ARC: ORGANIZATIONAL IMPACT -->
+    <!-- 9. TECHNOLOGIES -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
-                <span class="section-number">11.</span>
-                <span class="section-title">The Full Arc: From No Training to Organizational Standard</span>
-            </div>
-
-            <div class="background-content">
-                <p>The Electric Boat engagement demonstrates three converging capabilities that evolved from initial knowledge gaps into organizational standards:</p>
-
-                <h3 class="sub-heading">Accessibility Practice (2008–2022)</h3>
-                <p>What began as "sign off on accessibility audits with zero training" became a systematic, documented methodology for WCAG/Section 508 compliance. The practice expanded beyond Electric Boat to become GP Strategies' division-wide accessibility audit standard, applied across banking, energy, healthcare, and defense clients.</p>
-
-                <p><strong>Impact:</strong> Methodology I built from scratch without certification became the template for enterprise accessibility verification across a Fortune 500 learning solutions provider.</p>
-
-                <h3 class="sub-heading">Cross-Domain SCORM Expertise (2015–2022)</h3>
-                <p>The SCORM cross-domain wrapper solved a fundamental architectural constraint (browser same-origin policy) that affected not just Electric Boat but any client with split LMS/content hosting. The solution was battle-tested, reusable, and became part of GP Strategies' standard SCORM toolkit for enterprise deployments.</p>
-
-                <p><strong>Impact:</strong> Single technical solution deployed in 2018 remained in production through 2022+, eliminating dependency on Cornerstone Network Player for EB's entire course catalog.</p>
-
-                <h3 class="sub-heading">Embedded Technical Advisory (2015–2022)</h3>
-                <p>The relationship evolved from project-based troubleshooting into a 7-year embedded advisory role. Dan became the Chief of Learning Services' primary escalation resource for complex LMS and courseware issues &mdash; a trust-based technical partnership spanning Flash remediation, Chrome browser impact analysis, SCORM 2004 extensions, and EB Trades specialized content.</p>
-
-                <p><strong>Impact:</strong> "Quick win" in 2017 became 7-year strategic engagement generating multi-level recognition cascades and sustained client relationship.</p>
-            </div>
-
-            <div class="probable-cause-box">
-                <p><strong>The arc, complete:</strong> Assigned accessibility audits with no training (2008) → Built technical methodology through hands-on practice → Became division standard (2010s) → Converged with cross-domain SCORM expertise → Evolved into 7-year embedded advisory role → 574 emails, 49 personnel, 2 on-site visits, sustained through 2022.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 12. TECHNOLOGIES -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">12.</span>
+                <span class="section-number">9.</span>
                 <span class="section-title">Technologies</span>
             </div>
 
             <div class="background-content">
-                <p><strong>Accessibility & Standards:</strong> WCAG 2.0/2.1 (AA), Section 508, ARIA, JAWS, NVDA, keyboard navigation testing, color contrast analysis</p>
+                <p><strong>eLearning Protocols:</strong> SCORM 1.2, SCORM 2004, AICC, cross-domain communication (postMessage, EasyXDM), same-origin policy workarounds</p>
 
-                <p><strong>eLearning Protocols:</strong> SCORM 1.2, SCORM 2004, AICC, xAPI (Tin Can), cross-domain communication (postMessage, EasyXDM), same-origin policy workarounds</p>
+                <p><strong>LMS Platforms:</strong> Cornerstone OnDemand</p>
 
-                <p><strong>LMS Platforms:</strong> Cornerstone OnDemand, SAP SuccessFactors, SumTotal, Moodle</p>
+                <p><strong>Authoring &amp; Legacy:</strong> Adobe Flash/ActionScript, HTML5, Articulate Storyline</p>
 
-                <p><strong>Authoring & Legacy:</strong> Adobe Flash/ActionScript, HTML5, Articulate Storyline, Adobe Presenter, Xyleme LCMS</p>
+                <p><strong>Development &amp; Debugging:</strong> JavaScript, PHP, Fiddler (network analysis), browser DevTools, Chrome, IE compatibility, synchronous XHR deprecation</p>
 
-                <p><strong>Development & Debugging:</strong> JavaScript, PHP, Fiddler (network analysis), browser DevTools, Chrome, IE compatibility, synchronous XHR deprecation</p>
-
-                <p><strong>Content Engineering:</strong> Responsive design, mobile-first layouts, Flash-to-HTML5 migration, ESM course JavaScript rewrites</p>
+                <p><strong>Content Engineering:</strong> Flash-to-HTML5 migration, ESM course JavaScript rewrites, bulk course import tooling</p>
             </div>
         </div>
     </section>
