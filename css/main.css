@@ -2866,6 +2866,17 @@ footer a:hover {
    ================================================================ */
 
 @media (max-width: 768px) {
+    /* Responsive typography — scale font-size tokens for mobile */
+    html {
+        --font-size-5xl: 3rem !important;    /* 5rem -> 3rem (hero title) */
+        --font-size-4xl: 2.25rem !important; /* 3.5rem -> 2.25rem (page h1) */
+        --font-size-3xl: 1.75rem !important; /* 2.25rem -> 1.75rem (section h2) */
+        --font-size-2xl: 1.5rem !important;  /* 1.875rem -> 1.5rem */
+        --font-size-xl: 1.25rem !important;  /* 1.5rem -> 1.25rem (subsection h3) */
+        --font-size-lg: 1.125rem !important; /* 1.25rem -> 1.125rem */
+        /* md, base, sm, xs stay the same — body text doesn't need to shrink */
+    }
+
     /* Prevent horizontal overflow on mobile */
     html,
     body {
@@ -3043,9 +3054,7 @@ footer a:hover {
         font-size: var(--font-size-3xl);
     }
 
-    .page-faq .faq-category h2 {
-        font-size: var(--font-size-3xl);
-    }
+    /* .page-faq .faq-category h2 — removed: uses 3xl on desktop, token scaling handles mobile */
 
     .page-faq .category-intro {
         font-size: var(--font-size-base);
@@ -3085,9 +3094,7 @@ footer a:hover {
         max-width: 200px;
     }
 
-    .page-contact .guidance h2 {
-        font-size: var(--font-size-3xl);
-    }
+    /* .page-contact .guidance h2 — removed: uses 3xl on desktop, token scaling handles mobile */
 
     .page-contact .guidance-list li {
         padding: var(--space-ms) var(--space-sm);
@@ -3333,9 +3340,7 @@ footer a:hover {
         font-size: var(--font-size-3xl);
     }
 
-    .page-technologies .tech-category h2 {
-        font-size: var(--font-size-3xl);
-    }
+    /* .page-technologies .tech-category h2 — removed: uses 3xl on desktop, token scaling handles mobile */
 
     .page-technologies .tech-cards {
         grid-template-columns: 1fr;
