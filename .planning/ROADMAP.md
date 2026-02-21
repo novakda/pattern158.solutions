@@ -79,11 +79,12 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 **Requirements:** NAV-05, NAV-06, NAV-07
 
-**Plans:** 2/2 plans complete
+**Plans:** 3 plans (2 complete, 1 gap closure)
 
 Plans:
-- [ ] 14-01-PLAN.md — Nav/footer audit, canonical structure, and uniform application with active states
-- [ ] 14-02-PLAN.md — Comprehensive link audit across all pages with fixes
+- [x] 14-01-PLAN.md — Nav/footer audit, canonical structure, and uniform application with active states
+- [x] 14-02-PLAN.md — Comprehensive link audit across all pages with fixes
+- [ ] 14-03-PLAN.md — Replace hardcoded mobile active state color with CSS variable (gap closure)
 
 **Scope:**
 - Verify navigation structure identical across all 21 pages (including 3 new exhibits)
