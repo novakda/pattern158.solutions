@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright';
 /**
  * Accessibility Test Suite for pattern158.solutions
  *
- * Tests all 22 HTML pages for:
+ * Tests all 23 HTML pages for:
  * - WCAG 2.1 AA compliance (via axe-core)
  * - Semantic structure (landmarks, headings, images)
  * - Light and dark mode support
@@ -22,6 +22,7 @@ const pages = [
   { path: '/portfolio.html', name: 'Portfolio' },
   { path: '/technologies.html', name: 'Technologies' },
   { path: '/testimonials.html', name: 'Field Reports' },
+  { path: '/accessibility.html', name: 'Accessibility' },
 
   // Exhibit pages
   { path: '/exhibits/exhibit-a.html', name: 'Exhibit A - Electric Boat' },
