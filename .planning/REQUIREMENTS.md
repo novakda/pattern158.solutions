@@ -36,8 +36,8 @@ Requirements for the Comprehensive Quality Audit & Polish milestone. Each maps t
 
 ### Color & Contrast
 
-- [ ] **COLOR-01**: All text meets WCAG AA contrast ratios (4.5:1 normal text, 3:1 large text and UI) in both light and dark modes
-- [ ] **COLOR-02**: Dark mode visually consistent with brand (navy-based, not generic black) across all 17 pages
+- [x] **COLOR-01**: All text meets WCAG AA contrast ratios (4.5:1 normal text, 3:1 large text and UI) in both light and dark modes
+- [x] **COLOR-02**: Dark mode visually consistent with brand (navy-based, not generic black) across all 17 pages
 - [ ] **COLOR-03**: Link colors distinct from body text and consistent across all pages in both themes
 
 ### Exhibit Content
@@ -124,8 +124,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | TYPO-01 | Phase 10 | Complete |
 | TYPO-02 | Phase 10 | Complete |
 | TYPO-03 | Phase 10 | Complete |
-| COLOR-01 | Phase 11 | Pending |
-| COLOR-02 | Phase 11 | Pending |
+| COLOR-01 | Phase 11 | Complete |
+| COLOR-02 | Phase 11 | Complete |
 | COLOR-03 | Phase 11 | Pending |
 | EXHIBIT-01 | Phase 12 | Pending |
 | EXHIBIT-02 | Phase 12 | Pending |
