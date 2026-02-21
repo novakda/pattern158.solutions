@@ -61,6 +61,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Three Lenses on portfolio.html | Lightweight positioning without JS filtering |
 | Influences on homepage as dl list | Compact format, links to philosophy.html for depth |
 | TECH-04 (analytics) deferred past v1.2 | Not needed for immediate Rustici opportunity |
+| Phase 13 P02 | 280 | 2 tasks | 7 files |
 
 ### Quick Tasks Completed (v1.0)
 
