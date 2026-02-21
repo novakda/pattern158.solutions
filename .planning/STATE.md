@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-20)
 ## Current Position
 
 Phase: 8 - Content Quality & Information Architecture
-Plan: 02 / 05
+Plan: 03 / 05
 Status: In Progress
-Last activity: 2026-02-21 — Completed 08-02 (Editorial pass on 6 core pages with ROT audit)
+Last activity: 2026-02-21 — Completed 08-03 (Exhibit restructuring A-F with NTSB investigation model)
 
 Progress: [■■■■■■■□□□□□□□] 7/14 phases complete (50%)
 
@@ -29,6 +29,8 @@ Progress: [■■■■■■■□□□□□□□] 7/14 phases complete (50%
 - Phase 7, Plan 02: 6.8 min (2 tasks, 21 files)
 - Phase 7, Plan 03: 2.4 min (2 tasks, 4 files)
 - Phase 8, Plan 01: 6.6 min (2 tasks, 7 files)
+- Phase 8, Plan 02: 6.5 min (2 tasks, 7 files)
+- Phase 8, Plan 03: 4.0 min (1 task, 5 files)
 - Phase 9: Not started
 - Phase 10: Not started
 - Phase 11: Not started
@@ -64,6 +66,10 @@ All v1.0 decisions logged in PROJECT.md Key Decisions table (15 entries).
 - [Phase 08-02]: FAQ decision: STRENGTHEN in place (15 substantive questions justify retention)
 - [Phase 08-02]: Removed philosophy section from homepage (major redundancy trim)
 - [Phase 08-02]: Added engagement criteria to contact page with billable-hours anti-pattern
+| Phase 08 P03 | 4.0 | 1 task | 5 files |
+- [Phase 08-03]: Exhibit A accessibility practice arc emphasizes full evolution (no training → methodology → organizational standard)
+- [Phase 08-03]: NTSB investigation structure variants per exhibit (investigation-inspired, pattern analysis, process engineering, standard technical, long-running)
+| Phase 08 P03 | 4 | 1 tasks | 5 files |
 
 ### Quick Tasks Completed (v1.0)
 
