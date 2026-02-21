@@ -74,8 +74,8 @@
 
     /* --- Spacing --- */
     --space-xs: 0.25rem;
-    --space-sm: var(--space-sm);
-    --space-ms: var(--space-ms);  /* medium-small: mobile horizontal padding */
+    --space-sm: 0.5rem;
+    --space-ms: 0.75rem;  /* medium-small: mobile horizontal padding */
     --space-md: 1rem;
     --space-lg: 1.5rem;
     --space-xl: 2rem;
@@ -2865,12 +2865,20 @@ footer a:hover {
    ================================================================ */
 
 @media (max-width: 768px) {
+    /* Prevent horizontal overflow on mobile */
+    html,
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
     /* Mobile spacing overrides — recover horizontal space */
     .container,
     .page-index .container,
     .page-testimonials .container,
     .page-exhibit .container {
         padding: 0 var(--space-ms);
+        max-width: 100%;
     }
 
     /* Section vertical + horizontal padding — covers all page-specific overrides */
@@ -3117,6 +3125,8 @@ footer a:hover {
     .resolution-table {
         display: block;
         border: none;
+        width: 100%;
+        max-width: 100%;
     }
 
     .directory-table thead,
@@ -3143,6 +3153,8 @@ footer a:hover {
         box-shadow: var(--shadow-sm);
         position: relative;
         transition: box-shadow 0.2s;
+        box-sizing: border-box;
+        max-width: 100%;
     }
 
     .directory-table tr:hover,
