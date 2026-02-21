@@ -9,9 +9,9 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 
 ### Rustici-Targeted Content (Phase 12 — Delivered, Phase 16 — Verification)
 
-- [ ] **CONTENT-05**: SCORM Debugger exhibit page with TASBot methodology, Rustici gap callout
-- [ ] **CONTENT-06**: CSBB Dispatch exhibit page — "Built 2011, 5 years before Rustici Content Controller"
-- [ ] **CONTENT-07**: BP Learning Platform exhibit page — Rustici Content Controller integration experience
+- [x] **CONTENT-05**: SCORM Debugger exhibit page with TASBot methodology, Rustici gap callout
+- [x] **CONTENT-06**: CSBB Dispatch exhibit page — "Built 2011, 5 years before Rustici Content Controller"
+- [x] **CONTENT-07**: BP Learning Platform exhibit page — Rustici Content Controller integration experience
 - [ ] **CONTENT-08**: Three positioning narratives surfaced on portfolio page
 - [ ] **CONTENT-09**: GM Investigation exhibit strengthened with Swiss cheese model, three-angle methodology
 - [ ] **CONTENT-10**: Homepage Five Core Influences section with application context

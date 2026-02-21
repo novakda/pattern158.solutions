@@ -105,7 +105,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 **Gap Closure:** Closes gaps from audit
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
 - [ ] 16-01-PLAN.md — Fix testimonials.html integration gap (add E, M, N exhibit cards) + clean up debug scripts
@@ -136,7 +136,7 @@ Plans:
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
-| 16. Phase 12 Remediation & Verification | v1.2 | 0/2 | Planned | - |
+| 16. Phase 12 Remediation & Verification | 1/2 | In Progress|  | - |
 
 ---
 *Roadmap created: 2026-02-13*
