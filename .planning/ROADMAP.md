@@ -79,7 +79,7 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 **Requirements:** NAV-05, NAV-06, NAV-07
 
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 Plans:
 - [ ] 14-01-PLAN.md — Nav/footer audit, canonical structure, and uniform application with active states
@@ -141,7 +141,7 @@ Plans:
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
-| 14. Navigation & Footer Consistency | v1.2 | 0/2 | Planned | - |
+| 14. Navigation & Footer Consistency | 1/2 | In Progress|  | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
 | 16. Phase 12 Remediation & Verification | 2/2 | Complete    | 2026-02-21 | - |
 

@@ -27,8 +27,8 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 
 ### Navigation & Footer (Phase 14)
 
-- [ ] **NAV-05**: Navigation structure 100% identical across all 22 pages
-- [ ] **NAV-06**: Footer optimized — contact visibility, social links, trust elements
+- [x] **NAV-05**: Navigation structure 100% identical across all 22 pages
+- [x] **NAV-06**: Footer optimized — contact visibility, social links, trust elements
 - [ ] **NAV-07**: Zero broken internal links across all 22 pages
 
 ### Accessibility QA (Phase 15)
@@ -73,8 +73,8 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 | EXHIBIT-02 | Phase 13 | Complete |
 | EXHIBIT-03 | Phase 13 | Complete |
 | EXHIBIT-04 | Phase 13 | Complete |
-| NAV-05 | Phase 14 | Pending |
-| NAV-06 | Phase 14 | Pending |
+| NAV-05 | Phase 14 | Complete |
+| NAV-06 | Phase 14 | Complete |
 | NAV-07 | Phase 14 | Pending |
 | A11Y-02 | Phase 15 | Pending |
 | A11Y-03 | Phase 15 | Pending |
