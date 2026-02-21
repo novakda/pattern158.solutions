@@ -221,6 +221,29 @@ code {
     font-size: 0.9em; /* Intentional: relative to parent, not root */
 }
 
+/* === BASE LINK STYLING ===
+   Body content links must be distinguishable by more than color alone (WCAG 1.4.1).
+   Apply underline + teal color for visual distinction.
+
+   Component-specific links (nav, buttons, footer, etc.) override this via cascade
+   layers (components/pages > base), maintaining their existing non-underline styling.
+
+   Color Distribution Principle (60-30-10):
+   - 60%: Backgrounds (cream/navy) — dominant visual
+   - 30%: Content areas (white/surface cards, text)
+   - 10%: Accents (teal primary, gold accent) — sparing emphasis
+*/
+a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+a:hover {
+    text-decoration-style: solid;
+    color: var(--color-primary-hover);
+}
+
 /* === ACCESSIBILITY === */
 a:focus,
 button:focus,
