@@ -130,7 +130,7 @@
                 <span class="section-title">Background</span>
             </div>
             <div class="background-content">
-                <p>General Motors reported that <strong>19% of launched lessons</strong> were not being marked completed or passed &mdash; nearly <strong>four times</strong> their historical baseline of ~5%. The spike coincided with a migration to a new LMS platform six months prior. Completion of training had direct financial impact on GM dealerships, making this a high-priority investigation.</p>
+                <p>General Motors reported that <strong><span class="key-fact">19% of launched lessons</span></strong> were not being marked completed or passed &mdash; nearly <strong><span class="key-fact">four times</span></strong> their historical baseline of ~5%. The spike coincided with a migration to a new LMS platform six months prior. Completion of training had direct financial impact on GM dealerships, making this a high-priority investigation.</p>
 
                 <p>With over <span class="key-fact">10,000 courses</span> in the library, reviewing every course was impractical. The team relied on data reports to identify candidate courses for analysis. GM&rsquo;s initial framing assumed a tracking bug. The investigation was designed to test that assumption &mdash; and look deeper if the evidence pointed elsewhere.</p>
 
@@ -267,7 +267,7 @@
                 <span class="section-number">4.</span>
                 <span class="section-title">Findings &mdash; Five System Failures</span>
             </div>
-            <p class="report-intro">The investigation identified five concurrent systemic failures &mdash; not a single bug, but a <strong>Swiss cheese model</strong> alignment, the same framework used in aviation safety analysis. In the Swiss cheese model, each layer of defense has holes; an accident occurs when the holes in multiple layers momentarily align. Applied to software: fragile architecture, misleading UX, confusing navigation, mobile workforce constraints, and usage pattern mismatch each had individual vulnerabilities. Alone, none would cause a 4x degradation. Together, the holes aligned.</p>
+            <p class="report-intro">The investigation identified <strong><span class="key-fact">five concurrent systemic failures</span></strong> &mdash; not a single bug, but a <strong>Swiss cheese model</strong> alignment, the same framework used in aviation safety analysis. In the Swiss cheese model, each layer of defense has holes; an accident occurs when the holes in multiple layers momentarily align. Applied to software: fragile architecture, misleading UX, confusing navigation, mobile workforce constraints, and usage pattern mismatch each had individual vulnerabilities. Alone, none would cause a 4x degradation. Together, the holes aligned.</p>
 
             <table class="resolution-table">
                 <thead>
@@ -317,7 +317,7 @@
             </div>
 
             <div class="probable-cause-box">
-                <p>The investigation determined that the root cause was <strong>not a single tracking bug</strong> but a systemic mismatch between how the platform was designed and how people actually worked. Five concurrent failures aligned in a <strong>Swiss cheese model</strong>: fragile memory-cache architecture with no auto-save (F-01), a completion UI that actively misled users (F-02), navigation so confusing that even experts struggled (F-03), a mobile workforce on unreliable WiFi (F-04), and a short-burst usage pattern that triggered the cache vulnerability repeatedly (F-05).</p>
+                <p>The investigation determined that the root cause was <strong>not a single tracking bug</strong> but a systemic mismatch between how the platform was designed and how people actually worked. <span class="key-fact">Five concurrent failures</span> aligned in a <strong>Swiss cheese model</strong>: fragile memory-cache architecture with no auto-save (F-01), a completion UI that actively misled users (F-02), navigation so confusing that even experts struggled (F-03), a mobile workforce on unreliable WiFi (F-04), and a short-burst usage pattern that triggered the cache vulnerability repeatedly (F-05).</p>
                 <p>No single failure would have caused a 4x degradation in completion rates. Together, they created a &ldquo;perfect storm&rdquo; where the system design set users up to fail &mdash; then the metrics blamed the users for failing.</p>
             </div>
         </div>
