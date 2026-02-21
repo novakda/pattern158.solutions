@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 MVP** — Phases 1-6 (shipped 2026-02-19)
 - ✅ **v1.1 Quality Audit & Polish** — Phases 7-11 (shipped 2026-02-21)
-- 📋 **v1.2 Rustici-Targeted Content + Quality** — Phases 12-15 (in progress)
+- 📋 **v1.2 Rustici-Targeted Content + Quality** — Phases 12-16 (in progress)
 
 ## Phases
 
@@ -97,6 +97,20 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 - Light/dark mode visual verification on desktop and mobile
 - Semantic HTML audit
 
+#### Phase 16: Phase 12 Remediation & Verification
+
+**Goal:** Close audit gaps from Phase 12's quick execution — fix critical testimonials integration, create retroactive verification, and clean up tech debt.
+
+**Requirements:** CONTENT-05, CONTENT-06, CONTENT-07, CONTENT-08, CONTENT-09, CONTENT-10, CONTENT-11, CONTENT-12 (verification)
+
+**Gap Closure:** Closes gaps from audit
+
+**Scope:**
+- Add exhibit cards for E, M, N to testimonials.html (critical integration fix)
+- Create Phase 12 directory with retroactive VERIFICATION.md (un-orphan 8 CONTENT requirements)
+- Clean up debug/audit scripts from project root (tech debt)
+- Verify E2E flow: Homepage → Field Reports → all 14 exhibits accessible
+
 ## Progress
 
 | Phase | Milestone | Plans Complete | Status | Completed |
@@ -116,8 +130,9 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | v1.2 | 0/? | Not started | - |
 | 15. Comprehensive Accessibility QA | v1.2 | 0/? | Not started | - |
+| 16. Phase 12 Remediation & Verification | v1.2 | 0/? | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 13 (Exhibit Content Optimization) complete*
+*Last updated: 2026-02-21 — Phase 16 added (gap closure from milestone audit)*

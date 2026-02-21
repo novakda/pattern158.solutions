@@ -5,18 +5,18 @@
 
 ## v1.2 Requirements
 
-Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) is complete. Phases 13-15 carry forward from v1.1.
+Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered but orphaned — verification in Phase 16. Phases 13-15 carry forward from v1.1.
 
-### Rustici-Targeted Content (Phase 12 — Complete)
+### Rustici-Targeted Content (Phase 12 — Delivered, Phase 16 — Verification)
 
-- [x] **CONTENT-05**: SCORM Debugger exhibit page with TASBot methodology, Rustici gap callout
-- [x] **CONTENT-06**: CSBB Dispatch exhibit page — "Built 2011, 5 years before Rustici Content Controller"
-- [x] **CONTENT-07**: BP Learning Platform exhibit page — Rustici Content Controller integration experience
-- [x] **CONTENT-08**: Three positioning narratives surfaced on portfolio page
-- [x] **CONTENT-09**: GM Investigation exhibit strengthened with Swiss cheese model, three-angle methodology
-- [x] **CONTENT-10**: Homepage Five Core Influences section with application context
-- [x] **CONTENT-11**: Cross-references updated across philosophy, homepage, sitemap
-- [x] **CONTENT-12**: Framing correction verified — no "budget substitute" language
+- [ ] **CONTENT-05**: SCORM Debugger exhibit page with TASBot methodology, Rustici gap callout
+- [ ] **CONTENT-06**: CSBB Dispatch exhibit page — "Built 2011, 5 years before Rustici Content Controller"
+- [ ] **CONTENT-07**: BP Learning Platform exhibit page — Rustici Content Controller integration experience
+- [ ] **CONTENT-08**: Three positioning narratives surfaced on portfolio page
+- [ ] **CONTENT-09**: GM Investigation exhibit strengthened with Swiss cheese model, three-angle methodology
+- [ ] **CONTENT-10**: Homepage Five Core Influences section with application context
+- [ ] **CONTENT-11**: Cross-references updated across philosophy, homepage, sitemap
+- [ ] **CONTENT-12**: Framing correction verified — no "budget substitute" language
 
 ### Exhibit Content Optimization (Phase 13)
 
@@ -61,14 +61,14 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) is complete
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CONTENT-05 | Phase 12 | Complete |
-| CONTENT-06 | Phase 12 | Complete |
-| CONTENT-07 | Phase 12 | Complete |
-| CONTENT-08 | Phase 12 | Complete |
-| CONTENT-09 | Phase 12 | Complete |
-| CONTENT-10 | Phase 12 | Complete |
-| CONTENT-11 | Phase 12 | Complete |
-| CONTENT-12 | Phase 12 | Complete |
+| CONTENT-05 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-06 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-07 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-08 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-09 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-10 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-11 | Phase 12, Phase 16 (verification) | Pending Verification |
+| CONTENT-12 | Phase 12, Phase 16 (verification) | Pending Verification |
 | EXHIBIT-01 | Phase 13 | Complete |
 | EXHIBIT-02 | Phase 13 | Complete |
 | EXHIBIT-03 | Phase 13 | Complete |
@@ -89,4 +89,4 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) is complete
 
 ---
 *Requirements defined: 2026-02-21*
-*Last updated: 2026-02-21 after Phase 12 completion*
+*Last updated: 2026-02-21 — Phase 16 gap closure added, CONTENT checkboxes reset pending verification*
