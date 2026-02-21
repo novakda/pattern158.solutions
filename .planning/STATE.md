@@ -21,12 +21,12 @@ See: .planning/PROJECT.md (updated 2026-02-21)
 
 ## Current Position
 
-Phase: 12 complete — Rustici-targeted content implemented
-Plan: N/A (Phase 12 executed directly)
-Status: Phase 12 complete, awaiting roadmap for phases 13-15
-Last activity: 2026-02-21 — Phase 12 content implementation
+Phase: 13-exhibit-content-optimization
+Plan: 01 of 03 complete
+Status: Active — Exhibit content optimization in progress
+Last activity: 2026-02-21 — Plan 01 complete (section heading standardization)
 
-Progress: [■■■■■■■■■■■■□□□] 12/15 phases complete (80%)
+Progress: [■■■■■■■■■■■■■□□] 13/15 phases in progress (86%)
 
 ## Performance Metrics
 
@@ -41,6 +41,12 @@ Progress: [■■■■■■■■■■■■□□□] 12/15 phases complete 
 - Average duration: ~9.1 min
 - Total execution time: ~137 min
 - Timeline: 2 days (2026-02-20 to 2026-02-21)
+
+**v1.2 Velocity (in progress):**
+- Total plans completed: 1 (13-01)
+- Average duration: ~8.6 min
+- Total execution time: ~9 min
+- Timeline: Started 2026-02-21
 
 ## Accumulated Context
 
@@ -61,7 +67,14 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Three Lenses on portfolio.html | Lightweight positioning without JS filtering |
 | Influences on homepage as dl list | Compact format, links to philosophy.html for depth |
 | TECH-04 (analytics) deferred past v1.2 | Not needed for immediate Rustici opportunity |
-| Phase 13 P02 | 280 | 2 tasks | 7 files |
+
+### v1.2 Phase 13-01 Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Python script approach for HTML restructuring | Edit tool changes didn't persist reliably — scripted transformation ensured consistent application |
+| CSS class consolidation (removed section-surface/section-alt) | Simplified to consistent report-section class matching exhibit-a gold standard |
+| Metrics highlighting with key-fact spans | Quantifiable results (email counts, timelines, scales) wrapped for visual prominence |
 
 ### Quick Tasks Completed (v1.0)
 
@@ -83,11 +96,11 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-21 (v1.2 Phase 12 implemented)
-Stopped at: Phase 12 complete, milestone formalization in progress
+Last session: 2026-02-21 (v1.2 Phase 13-01 complete)
+Stopped at: Phase 13 Plan 01 complete — 7 exhibits restructured with section-heading pattern
 Resume file: None
 
-**Next step:** Commit Phase 12, then `/gsd:plan-phase 13` for Exhibit Content Optimization
+**Next step:** Continue with Phase 13 remaining plans (02: Navigation consistency, 03: Accessibility QA)
 
 ---
 *Milestone v1.2 started: 2026-02-21*
