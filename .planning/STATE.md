@@ -22,9 +22,9 @@ See: .planning/PROJECT.md (updated 2026-02-21)
 ## Current Position
 
 Phase: 13-exhibit-content-optimization
-Plan: 01 of 03 complete
-Status: Active — Exhibit content optimization in progress
-Last activity: 2026-02-21 — Plan 01 complete (section heading standardization)
+Plan: 03 of 03 complete
+Status: Complete — Exhibit content optimization finished
+Last activity: 2026-02-21 — Plan 03 complete (impact-first headlines and visual consistency)
 
 Progress: [■■■■■■■■■■■■■□□] 13/15 phases in progress (86%)
 
@@ -43,9 +43,9 @@ Progress: [■■■■■■■■■■■■■□□] 13/15 phases in progre
 - Timeline: 2 days (2026-02-20 to 2026-02-21)
 
 **v1.2 Velocity (in progress):**
-- Total plans completed: 1 (13-01)
-- Average duration: ~8.6 min
-- Total execution time: ~9 min
+- Total plans completed: 4 (12-01, 12-02, 13-01, 13-02, 13-03)
+- Average duration: ~7.4 min
+- Total execution time: ~37 min
 - Timeline: Started 2026-02-21
 
 ## Accumulated Context
@@ -67,6 +67,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Three Lenses on portfolio.html | Lightweight positioning without JS filtering |
 | Influences on homepage as dl list | Compact format, links to philosophy.html for depth |
 | TECH-04 (analytics) deferred past v1.2 | Not needed for immediate Rustici opportunity |
+| Phase 13 P03 | 5 | 3 tasks | 22 files |
 
 ### v1.2 Phase 13-01 Decisions
 
@@ -75,6 +76,14 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Python script approach for HTML restructuring | Edit tool changes didn't persist reliably — scripted transformation ensured consistent application |
 | CSS class consolidation (removed section-surface/section-alt) | Simplified to consistent report-section class matching exhibit-a gold standard |
 | Metrics highlighting with key-fact spans | Quantifiable results (email counts, timelines, scales) wrapped for visual prominence |
+
+### v1.2 Phase 13-03 Decisions
+
+| Decision | Rationale |
+|----------|-----------|
+| Personnel/role tables restructured to narrative paragraphs | Removed blended table format that made items hard to distinguish — narrative format matches exhibit-a benchmark |
+| Findings/resolution tables preserved | Investigation data (F-01, F-02 format) kept in table format as appropriate for data presentation |
+| Visual audit used Playwright screenshots at 1200px/375px in light/dark modes | Saved to phase directory for verification — 4 representative exhibits sampled |
 
 ### Quick Tasks Completed (v1.0)
 
@@ -96,11 +105,11 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-21 (v1.2 Phase 13-01 complete)
-Stopped at: Phase 13 Plan 01 complete — 7 exhibits restructured with section-heading pattern
+Last session: 2026-02-21 (v1.2 Phase 13-03 complete)
+Stopped at: Phase 13 complete — All 3 plans finished (section heading standardization, enhanced hierarchy/grids, impact-first headlines)
 Resume file: None
 
-**Next step:** Continue with Phase 13 remaining plans (02: Navigation consistency, 03: Accessibility QA)
+**Next step:** Begin Phase 14 (Navigation and Footer Consistency)
 
 ---
 *Milestone v1.2 started: 2026-02-21*

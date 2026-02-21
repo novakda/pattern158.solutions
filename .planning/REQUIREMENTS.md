@@ -22,8 +22,8 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) is complete
 
 - [x] **EXHIBIT-01**: All exhibits follow Challenge → Approach → Solution → Results structure
 - [x] **EXHIBIT-02**: Quantifiable results/metrics highlighted in summaries
-- [ ] **EXHIBIT-03**: Impact-first headlines — outcomes visible within 30-second scan
-- [ ] **EXHIBIT-04**: Visual consistency across all exhibit pages (now 14 exhibits)
+- [x] **EXHIBIT-03**: Impact-first headlines — outcomes visible within 30-second scan
+- [x] **EXHIBIT-04**: Visual consistency across all exhibit pages (now 14 exhibits)
 
 ### Navigation & Footer (Phase 14)
 
@@ -71,8 +71,8 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) is complete
 | CONTENT-12 | Phase 12 | Complete |
 | EXHIBIT-01 | Phase 13 | Complete |
 | EXHIBIT-02 | Phase 13 | Complete |
-| EXHIBIT-03 | Phase 13 | Pending |
-| EXHIBIT-04 | Phase 13 | Pending |
+| EXHIBIT-03 | Phase 13 | Complete |
+| EXHIBIT-04 | Phase 13 | Complete |
 | NAV-05 | Phase 14 | Pending |
 | NAV-06 | Phase 14 | Pending |
 | NAV-07 | Phase 14 | Pending |
