@@ -16,7 +16,7 @@ All milestones through v1.2 shipped. Next milestone TBD via `/gsd:new-milestone`
 Phase: None (between milestones)
 Plan: N/A
 Status: Milestone v1.2 shipped
-Last activity: 2026-02-22 — v1.2 milestone archived
+Last activity: 2026-02-22 - Completed quick task 6: Fix Three Stooges brand element citation and content
 
 Progress: [■■■■■■■■■■■■■■■■■■] 18/18 phases complete across v1.0-v1.2
 
@@ -58,6 +58,12 @@ None.
 ### Blockers/Concerns
 
 None.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 6 | Fix Three Stooges brand element citation and content | 2026-02-22 | 3bf6118 | [6-fix-three-stooges-brand-element-citation](./quick/6-fix-three-stooges-brand-element-citation/) |
 
 ## Session Continuity
 
