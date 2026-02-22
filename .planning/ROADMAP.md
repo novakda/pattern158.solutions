@@ -124,17 +124,22 @@ Plans:
 
 **Gap Closure:** Closes gaps from audit
 
-**Plans:** 2/2 plans complete
+**Plans:** 3 plans
 
 Plans:
-- [ ] 16-01-PLAN.md — Fix testimonials.html integration gap (add E, M, N exhibit cards) + clean up debug scripts
-- [ ] 16-02-PLAN.md — Create Phase 12 retroactive VERIFICATION.md + verify E2E flows + update REQUIREMENTS.md
+- [ ] 16-01-PLAN.md — Redesign exhibit cards with improved visual hierarchy + add E, M, N to testimonials.html
+- [ ] 16-02-PLAN.md — Archive debug scripts to .archive/, clean up .bak files, create .gitignore
+- [ ] 16-03-PLAN.md — Full E2E QA verification matrix + retroactive Phase 12 VERIFICATION.md + REQUIREMENTS.md update
 
 **Scope:**
+- Redesign all 14 exhibit cards with improved visual hierarchy (cleaner, simpler)
 - Add exhibit cards for E, M, N to testimonials.html (critical integration fix)
-- Create Phase 12 directory with retroactive VERIFICATION.md (un-orphan 8 CONTENT requirements)
-- Clean up debug/audit scripts from project root (tech debt)
-- Verify E2E flow: Homepage → Field Reports → all 14 exhibits accessible
+- Archive debug/audit scripts to .archive/ folder (not delete)
+- Create .gitignore for tool artifacts (node_modules, test-results, playwright-report)
+- Full E2E QA pass: links + content + styling + accessibility + dark mode for all 14 exhibits
+- Verification matrix: 14 exhibits x 5 QA dimensions with pass/fail per cell
+- Create Phase 12 retroactive VERIFICATION.md with full QA matrix
+- Verify and update REQUIREMENTS.md for all 8 CONTENT requirements
 
 ## Progress
 
@@ -155,9 +160,9 @@ Plans:
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
 | 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
-| 16. Phase 12 Remediation & Verification | 2/2 | Complete    | 2026-02-21 | - |
+| 16. Phase 12 Remediation & Verification | v1.2 | 0/3 | Planned | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 15 planned (3 plans)*
+*Last updated: 2026-02-21 — Phase 16 planned (3 plans)*
