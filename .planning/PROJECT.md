@@ -128,7 +128,7 @@ This website was originally developed as part of a broader "Career Documentation
 
 **Brand identity:**
 - Name: Pattern 158 (Myst fireplace puzzle reference -- 1:5:8 ratio)
-- Tagline: "I cheat, but I cheat fair." (The Three Stooges, "Tassels in the Air," 1938)
+- Tagline: "I cheat, but I cheat fair." (The Three Stooges, "Healthy, Wealthy and Dumb," 1938)
 - Aesthetic: NTSB investigation reports, industrial/technical
 - Six elements: Provider of Clarity, Cheat Fair, Build the Tool, Seek Knowledge, Time Machine, TASBot
 
