@@ -142,6 +142,35 @@ Plans:
 - Create Phase 12 retroactive VERIFICATION.md with full QA matrix
 - Verify and update REQUIREMENTS.md for all 8 CONTENT requirements
 
+#### Phase 17: Dark Mode WCAG AA Badge Contrast Fix
+
+**Goal:** Resolve remaining dark mode WCAG AA failures — fix badge/label contrast on 14 pages to achieve 129/129 accessibility test pass rate.
+
+**Requirements:** A11Y-02 (partial → satisfied)
+
+**Gap Closure:** Closes A11Y-02 gap from v1.2 audit
+
+**Scope:**
+- Audit all badge/label elements with colored backgrounds in dark mode
+- Fix Pattern 1: Change `color: var(--color-surface)` → `var(--color-inverse-text)` for badges on colored backgrounds
+- Fix Patterns 2 & 3: Add dark mode overrides for impact tags, key facts, expertise badges
+- Run full accessibility test suite — target 129/129 passing (currently 115/129)
+
+#### Phase 18: Milestone Documentation Reconciliation
+
+**Goal:** Resolve conflicting documentation, update ROADMAP tracking, and fix state inconsistencies to prepare for clean milestone closure.
+
+**Requirements:** None (documentation/tech debt only)
+
+**Gap Closure:** Closes documentation tech debt from v1.2 audit
+
+**Scope:**
+- Resolve conflicting accessibility test documentation (15-02-SUMMARY vs 15-ACCESSIBILITY-REPORT)
+- Update ROADMAP.md: check off completed plan boxes for 14-03, 15-01, 15-02, 15-03, 16-04
+- Add completion dates for Phases 14, 15, 16 in progress table
+- Fix progress table formatting inconsistencies
+- Fix state tracking (4/5 → 5/5 phases complete)
+
 ## Progress
 
 | Phase | Milestone | Plans Complete | Status | Completed |
@@ -162,8 +191,10 @@ Plans:
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
 | 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
 | 16. Phase 12 Remediation & Verification | 4/4 | Complete    | 2026-02-22 | - |
+| 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 0/0 | Pending | - |
+| 18. Milestone Documentation Reconciliation | v1.2 | 0/0 | Pending | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 16 gap closure plan added (16-04)*
+*Last updated: 2026-02-21 — Gap closure phases 17-18 added from v1.2 audit*
