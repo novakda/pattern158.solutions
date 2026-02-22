@@ -124,7 +124,7 @@ Plans:
 
 **Gap Closure:** Closes gaps from audit
 
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 
 Plans:
 - [ ] 16-01-PLAN.md — Redesign exhibit cards with improved visual hierarchy + add E, M, N to testimonials.html
@@ -160,7 +160,7 @@ Plans:
 | 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
 | 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
-| 16. Phase 12 Remediation & Verification | v1.2 | 0/3 | Planned | - |
+| 16. Phase 12 Remediation & Verification | 3/3 | Complete   | 2026-02-22 | - |
 
 ---
 *Roadmap created: 2026-02-13*
