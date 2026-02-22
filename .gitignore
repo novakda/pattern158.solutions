@@ -1,0 +1,14 @@
+# Tool artifacts
+node_modules/
+test-results/
+playwright-report/
+
+# Lighthouse temporary directories
+C:\\Users\\*/
+
+# Package lock (not needed for static site)
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
