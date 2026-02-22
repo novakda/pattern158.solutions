@@ -1,0 +1,103 @@
+# Requirements: Pattern 158 Solutions
+
+**Defined:** 2026-02-22
+**Core Value:** Accurately and compellingly present Dan's professional identity and body of work to hiring managers, engineers, and potential clients -- with every claim traceable to primary sources.
+
+## v1.3 Requirements
+
+Requirements for GitHub Profile Brand Alignment milestone. Each maps to roadmap phases.
+
+### Profile Settings
+
+- [ ] **PROF-01**: GitHub bio updated to reflect professional identity aligned with pattern158.solutions brand
+- [ ] **PROF-02**: Website URL set to pattern158.solutions in GitHub profile settings
+
+### Profile README
+
+- [ ] **README-01**: Public novakda/novakda repo created with README.md that displays on profile
+- [ ] **README-02**: README includes brand headline aligned with Pattern 158 identity
+- [ ] **README-03**: README includes 2-3 sentence professional introduction
+- [ ] **README-04**: README includes key skills/domains section (eLearning, SCORM, accessibility, systems architecture)
+- [ ] **README-05**: README includes featured projects section with links to pattern158.solutions exhibits
+- [ ] **README-06**: README includes link to pattern158.solutions website and contact info
+
+### Repository Metadata
+
+- [ ] **META-01**: pattern158.solutions repo description updated to reflect professional portfolio
+- [ ] **META-02**: pattern158.solutions repo homepage URL set to https://pattern158.solutions
+- [ ] **META-03**: pattern158.solutions repo has domain-specific topics (portfolio, accessibility, wcag, static-site)
+- [ ] **META-04**: All visible original repos have descriptive one-liner descriptions
+- [ ] **META-05**: eLearning-relevant forks have descriptions clarifying professional context
+
+### Fork Curation
+
+- [ ] **FORK-01**: Hobby/personal forks archived (~25 repos)
+- [ ] **FORK-02**: eLearning-relevant forks kept visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
+
+### Repo Pinning
+
+- [ ] **PIN-01**: 3-6 repos pinned in strategic order (flagship first, then technical depth)
+- [ ] **PIN-02**: pattern158.solutions pinned in position 1 as flagship repo
+
+## Future Requirements
+
+Deferred to future milestone. Tracked but not in current roadmap.
+
+### Profile Polish
+
+- **POLISH-01**: Live deployment links added to pinned repos
+- **POLISH-02**: Selective shields.io badges on repo READMEs (build status, coverage)
+- **POLISH-03**: Polished READMEs with setup/features/examples on all pinned repos
+- **POLISH-04**: Professional profile photo aligned with NTSB aesthetic
+
+### Advanced
+
+- **ADV-01**: Contribute to domain-relevant open-source projects (eLearning, accessibility)
+- **ADV-02**: GitHub Actions dynamic README updates (if warranted)
+
+## Out of Scope
+
+Explicitly excluded. Documented to prevent scope creep.
+
+| Feature | Reason |
+|---------|--------|
+| Dynamic stats widgets (github-readme-stats, streak counters) | Unreliable on public instances, break frequently, conflict with static-first philosophy |
+| Animated GIFs/banners in profile README | Conflicts with NTSB investigation aesthetic |
+| Contribution graph optimization | Behavioral over time, not a one-time update |
+| GitHub Sponsors profile | Requires monetization strategy outside current scope |
+| Deleting forks (vs archiving) | Archiving is reversible and preserves history |
+| GitHub Pages for pattern158.solutions | Site hosted elsewhere; GitHub Pages not needed |
+| Polishing individual repo READMEs beyond descriptions | Deferred to future; descriptions provide immediate value |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| PROF-01 | TBD | Pending |
+| PROF-02 | TBD | Pending |
+| README-01 | TBD | Pending |
+| README-02 | TBD | Pending |
+| README-03 | TBD | Pending |
+| README-04 | TBD | Pending |
+| README-05 | TBD | Pending |
+| README-06 | TBD | Pending |
+| META-01 | TBD | Pending |
+| META-02 | TBD | Pending |
+| META-03 | TBD | Pending |
+| META-04 | TBD | Pending |
+| META-05 | TBD | Pending |
+| FORK-01 | TBD | Pending |
+| FORK-02 | TBD | Pending |
+| PIN-01 | TBD | Pending |
+| PIN-02 | TBD | Pending |
+
+**Coverage:**
+- v1.3 requirements: 17 total
+- Mapped to phases: 0
+- Unmapped: 17
+
+---
+*Requirements defined: 2026-02-22*
+*Last updated: 2026-02-22 after initial definition*
