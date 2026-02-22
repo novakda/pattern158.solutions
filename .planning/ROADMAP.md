@@ -150,6 +150,11 @@ Plans:
 
 **Gap Closure:** Closes A11Y-02 gap from v1.2 audit
 
+**Plans:** 1 plan
+
+Plans:
+- [ ] 17-01-PLAN.md — Audit and fix all dark mode badge/label contrast violations, verify A11Y-02 satisfied
+
 **Scope:**
 - Audit all badge/label elements with colored backgrounds in dark mode
 - Fix Pattern 1: Change `color: var(--color-surface)` → `var(--color-inverse-text)` for badges on colored backgrounds
@@ -191,7 +196,7 @@ Plans:
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
 | 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
 | 16. Phase 12 Remediation & Verification | 4/4 | Complete    | 2026-02-22 | - |
-| 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 0/0 | Pending | - |
+| 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 0/1 | Planned | - |
 | 18. Milestone Documentation Reconciliation | v1.2 | 0/0 | Pending | - |
 
 ---
