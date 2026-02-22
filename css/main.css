@@ -147,6 +147,10 @@
     --color-primary-hover: #2abdd0;     /* Proportionally adjusted */
     --color-primary-on-alt: #30c9dc;    /* Same as primary in dark mode */
 
+    /* Text color for elements using primary/accent as backgrounds (bright bg needs dark text) */
+    --color-on-primary: #0a1e2e;        /* 7.83:1 on #30c9dc — dark text on bright teal */
+    --color-on-accent: #1a1400;         /* 7.56:1 on #c9a226 — dark text on bright gold */
+
     /* Hover state */
     --color-hover-background: #324456;
 
@@ -160,11 +164,11 @@
     --overlay-grid-line: rgba(14, 124, 140, 0.08);
     --overlay-hover-row: rgba(14, 124, 140, 0.1);
 
-    /* Danger: lightened for dark mode contrast */
-    --color-danger: #ff6b7a;            /* Lightened from #dc3545 to pass 4.5:1 on dark bg (3.30→4.52:1) */
+    /* Danger: lightened for dark mode contrast on surface (#2a3f54) */
+    --color-danger: #ff8c99;            /* 4.57:1 on surface (#2a3f54), passes WCAG AA 4.5:1 */
 
-    /* Accent: lightened for dark mode (light mode uses darker #8f6d00) */
-    --color-accent: #c9a226;            /* Lightened to pass 4.5:1 on dark bg (3.92→4.58:1) */
+    /* Accent: lightened for dark mode contrast on surface (#2a3f54) */
+    --color-accent: #d9b232;            /* 5.06:1 on surface (#2a3f54), passes WCAG AA 4.5:1 */
 }
 
 /* === DARK MODE LINK CONTRAST ===
@@ -174,6 +178,51 @@
 */
 [data-theme="dark"] .link-primary {
     color: var(--color-primary-on-alt);
+}
+
+/* === DARK MODE: TEXT ON PRIMARY/ACCENT BACKGROUNDS ===
+   In dark mode, primary (#30c9dc) and accent (#d9b232) are bright.
+   Elements using them as backgrounds need dark text, not light.
+*/
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .page-index .btn-primary {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .btn-social {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .page-index .finding-label {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .impact-tag.highlight {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .impact-tag.highlight .key-fact {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .page-contact .copy-btn {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .page-technologies .badge-deep {
+    color: var(--color-on-primary);
+}
+
+[data-theme="dark"] .page-testimonials .detail-exhibit .exhibit-label {
+    color: var(--color-on-accent);
+}
+
+[data-theme="dark"] .page-technologies .badge-working {
+    color: var(--color-on-accent);
+}
+
+[data-theme="dark"] .page-technologies .badge-aware {
+    color: var(--color-background);
 }
 
 /* === DARK MODE INVERSE SECTION HANDLING ===
