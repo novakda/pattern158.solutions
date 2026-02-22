@@ -4,7 +4,7 @@
 
 - ✅ **v1.0 MVP** — Phases 1-6 (shipped 2026-02-19)
 - ✅ **v1.1 Quality Audit & Polish** — Phases 7-11 (shipped 2026-02-21)
-- 📋 **v1.2 Rustici-Targeted Content + Quality** — Phases 12-16 (in progress)
+- ✅ **v1.2 Rustici-Targeted Content + Quality** — Phases 12-18 (shipped 2026-02-22)
 
 ## Phases
 
@@ -35,9 +35,11 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 
 </details>
 
-### 📋 v1.2 Rustici-Targeted Content + Quality (In Progress)
+### ✅ v1.2 Rustici-Targeted Content + Quality (Complete)
 
 **Goal:** Add Rustici-relevant exhibits and positioning narratives, then complete deferred quality audit phases from v1.1.
+
+**Completed:** 2026-02-22
 
 #### Phase 12: Rustici-Targeted Content ✅
 
@@ -84,7 +86,9 @@ Full details: `.planning/milestones/v1.1-ROADMAP.md`
 Plans:
 - [x] 14-01-PLAN.md — Nav/footer audit, canonical structure, and uniform application with active states
 - [x] 14-02-PLAN.md — Comprehensive link audit across all pages with fixes
-- [ ] 14-03-PLAN.md — Replace hardcoded mobile active state color with CSS variable (gap closure)
+- [x] 14-03-PLAN.md — Replace hardcoded mobile active state color with CSS variable (gap closure)
+
+**Completed:** 2026-02-21
 
 **Scope:**
 - Verify navigation structure identical across all 21 pages (including 3 new exhibits)
@@ -101,9 +105,11 @@ Plans:
 **Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 15-01-PLAN.md — Semantic HTML overhaul + automated accessibility test suite (axe-core/Playwright)
-- [ ] 15-02-PLAN.md — WCAG AA audit-fix cycle + cross-browser rendering verification
-- [ ] 15-03-PLAN.md — Visual evidence (screenshots), Lighthouse reports, internal report, public accessibility statement page
+- [x] 15-01-PLAN.md — Semantic HTML overhaul + automated accessibility test suite (axe-core/Playwright)
+- [x] 15-02-PLAN.md — WCAG AA audit-fix cycle + cross-browser rendering verification
+- [x] 15-03-PLAN.md — Visual evidence (screenshots), Lighthouse reports, internal report, public accessibility statement page
+
+**Completed:** 2026-02-22
 
 **Scope:**
 - Semantic HTML overhaul across all 22 pages
@@ -130,7 +136,9 @@ Plans:
 - [x] 16-01-PLAN.md — Redesign exhibit cards with improved visual hierarchy + add E, M, N to testimonials.html
 - [x] 16-02-PLAN.md — Archive debug scripts to .archive/, clean up .bak files, create .gitignore
 - [x] 16-03-PLAN.md — Full E2E QA verification matrix + retroactive Phase 12 VERIFICATION.md + REQUIREMENTS.md update
-- [ ] 16-04-PLAN.md — Recover deleted scripts to .archive/, archive .bak files, create .gitignore (gap closure)
+- [x] 16-04-PLAN.md — Recover deleted scripts to .archive/, archive .bak files, create .gitignore (gap closure)
+
+**Completed:** 2026-02-22
 
 **Scope:**
 - Redesign all 14 exhibit cards with improved visual hierarchy (cleaner, simpler)
@@ -197,12 +205,12 @@ Plans:
 | 10. Typography & Hierarchy | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 11. Color Refinement & Contrast Verification | v1.1 | 2/2 | ✓ Complete | 2026-02-21 |
 | 12. Rustici-Targeted Content | v1.2 | 1/1 | ✓ Complete | 2026-02-21 |
-| 13. Exhibit Content Optimization | v1.2 | Complete    | 2026-02-21 | 2026-02-21 |
-| 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
-| 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
-| 16. Phase 12 Remediation & Verification | 4/4 | Complete    | 2026-02-22 | - |
-| 17. Dark Mode WCAG AA Badge Contrast Fix | 1/1 | Complete    | 2026-02-22 | - |
-| 18. Milestone Documentation Reconciliation | v1.2 | 0/0 | Pending | - |
+| 13. Exhibit Content Optimization | v1.2 | 3/3 | ✓ Complete | 2026-02-21 |
+| 14. Navigation & Footer Consistency | v1.2 | 3/3 | ✓ Complete | 2026-02-21 |
+| 15. Comprehensive Accessibility QA | v1.2 | 3/3 | ✓ Complete | 2026-02-22 |
+| 16. Phase 12 Remediation & Verification | v1.2 | 4/4 | ✓ Complete | 2026-02-22 |
+| 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
+| 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 
 ---
 *Roadmap created: 2026-02-13*
