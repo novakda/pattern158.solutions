@@ -5,6 +5,7 @@
 - ✅ **v1.0 MVP** — Phases 1-6 (shipped 2026-02-19)
 - ✅ **v1.1 Quality Audit & Polish** — Phases 7-11 (shipped 2026-02-21)
 - ✅ **v1.2 Rustici-Targeted Content + Quality** — Phases 12-18 (shipped 2026-02-22)
+- 🚧 **v1.3 GitHub Profile Brand Alignment** — Phases 19-22 (in progress)
 
 ## Phases
 
@@ -50,6 +51,79 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 
 </details>
 
+### 🚧 v1.3 GitHub Profile Brand Alignment (In Progress)
+
+**Milestone Goal:** Align the GitHub profile (github.com/novakda) with the professional identity established on pattern158.solutions — update bio, create profile README, curate repos, and link the website.
+
+- [ ] **Phase 19: Profile Foundation & Brand Voice** — Establish GitHub profile identity aligned with Pattern 158 brand
+- [ ] **Phase 20: Repository Metadata & Discoverability** — Create SEO breadcrumbs and context for all visible repositories
+- [ ] **Phase 21: Fork Curation & Visibility Strategy** — Reduce profile noise while preserving domain expertise signals
+- [ ] **Phase 22: Strategic Pinning & Final Integration** — Curate portfolio homepage with strategic repository pinning
+
+## Phase Details
+
+### Phase 19: Profile Foundation & Brand Voice
+**Goal**: Establish GitHub profile identity aligned with Pattern 158 brand
+**Depends on**: Phase 18
+**Requirements**: PROF-01, PROF-02, README-01, README-02, README-03, README-04, README-05, README-06
+**Success Criteria** (what must be TRUE):
+  1. GitHub profile bio reflects Pattern 158 professional identity with website link
+  2. Profile README (novakda/novakda) exists with brand headline aligned to NTSB aesthetic
+  3. README includes professional introduction, key skills, featured projects, and contact info
+  4. Profile tone is consistent with pattern158.solutions (Provider of Clarity, Three Stooges tagline, no emoji overload)
+  5. Hiring managers can navigate from GitHub profile to portfolio website seamlessly
+**Plans**: TBD
+
+Plans:
+- [ ] 19-01: TBD
+- [ ] 19-02: TBD
+
+### Phase 20: Repository Metadata & Discoverability
+**Goal**: Create SEO breadcrumbs and context for all visible repositories
+**Depends on**: Phase 19
+**Requirements**: META-01, META-02, META-03, META-04, META-05
+**Success Criteria** (what must be TRUE):
+  1. pattern158.solutions repo has professional description, homepage URL, and domain-specific topics
+  2. All visible original repos have descriptive one-liner descriptions
+  3. eLearning-relevant forks have descriptions clarifying professional context
+  4. GitHub search can connect repos to Dan's eLearning and accessibility expertise
+  5. Repository metadata aligns with portfolio positioning (systems architecture, SCORM, WCAG)
+**Plans**: TBD
+
+Plans:
+- [ ] 20-01: TBD
+- [ ] 20-02: TBD
+
+### Phase 21: Fork Curation & Visibility Strategy
+**Goal**: Reduce profile noise while preserving domain expertise signals
+**Depends on**: Phase 20
+**Requirements**: FORK-01, FORK-02
+**Success Criteria** (what must be TRUE):
+  1. Hobby and personal forks are archived (approximately 25 repos reduced from main view)
+  2. eLearning-relevant forks remain visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
+  3. Profile appears focused and professional rather than cluttered with abandoned hobby projects
+  4. Domain expertise in eLearning and accessibility is evident from visible forks
+  5. All kept forks have custom descriptions explaining professional relevance
+**Plans**: TBD
+
+Plans:
+- [ ] 21-01: TBD
+
+### Phase 22: Strategic Pinning & Final Integration
+**Goal**: Curate portfolio homepage with strategic repository pinning
+**Depends on**: Phase 21
+**Requirements**: PIN-01, PIN-02
+**Success Criteria** (what must be TRUE):
+  1. 3-6 repositories are pinned in strategic order (flagship first, then technical depth)
+  2. pattern158.solutions is pinned in position 1 as flagship portfolio repo
+  3. Pinned repos demonstrate professional completeness (docs, tests, polish)
+  4. Profile creates cohesive narrative aligned with portfolio exhibits
+  5. Bidirectional linking verified: website links to GitHub, GitHub links to website
+**Plans**: TBD
+
+Plans:
+- [ ] 22-01: TBD
+
 ## Progress
 
 | Phase | Milestone | Plans Complete | Status | Completed |
@@ -72,9 +146,14 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 | 16. Phase 12 Remediation & Verification | v1.2 | 4/4 | ✓ Complete | 2026-02-22 |
 | 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
+| 19. Profile Foundation & Brand Voice | v1.3 | 0/TBD | Not started | - |
+| 20. Repository Metadata & Discoverability | v1.3 | 0/TBD | Not started | - |
+| 21. Fork Curation & Visibility Strategy | v1.3 | 0/TBD | Not started | - |
+| 22. Strategic Pinning & Final Integration | v1.3 | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-13*
 *v1.0 shipped: 2026-02-19*
 *v1.1 shipped: 2026-02-21*
 *v1.2 shipped: 2026-02-22*
+*v1.3 started: 2026-02-22*
