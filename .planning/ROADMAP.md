@@ -75,7 +75,7 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
 **Plans**: 2 plans
 
 Plans:
-- [ ] 19-01-PLAN.md -- Profile settings update and profile README creation (private)
+- [x] 19-01-PLAN.md -- Profile settings update and profile README creation (private)
 - [ ] 19-02-PLAN.md -- Human verification and publish (flip to public)
 
 ### Phase 20: Repository Metadata & Discoverability
@@ -146,7 +146,7 @@ Plans:
 | 16. Phase 12 Remediation & Verification | v1.2 | 4/4 | ✓ Complete | 2026-02-22 |
 | 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
-| 19. Profile Foundation & Brand Voice | v1.3 | 0/2 | Planned | - |
+| 19. Profile Foundation & Brand Voice | v1.3 | 1/2 | In Progress | - |
 | 20. Repository Metadata & Discoverability | v1.3 | 0/TBD | Not started | - |
 | 21. Fork Curation & Visibility Strategy | v1.3 | 0/TBD | Not started | - |
 | 22. Strategic Pinning & Final Integration | v1.3 | 0/TBD | Not started | - |
