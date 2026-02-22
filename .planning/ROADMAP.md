@@ -142,7 +142,7 @@ Plans:
 - Create Phase 12 retroactive VERIFICATION.md with full QA matrix
 - Verify and update REQUIREMENTS.md for all 8 CONTENT requirements
 
-#### Phase 17: Dark Mode WCAG AA Badge Contrast Fix
+#### Phase 17: Dark Mode WCAG AA Badge Contrast Fix ✅
 
 **Goal:** Resolve remaining dark mode WCAG AA failures — fix badge/label contrast on 14 pages to achieve 129/129 accessibility test pass rate.
 
@@ -153,7 +153,7 @@ Plans:
 **Plans:** 1/1 plans complete
 
 Plans:
-- [ ] 17-01-PLAN.md — Audit and fix all dark mode badge/label contrast violations, verify A11Y-02 satisfied
+- [x] 17-01-PLAN.md — Audit and fix all dark mode badge/label contrast violations, verify A11Y-02 satisfied
 
 **Scope:**
 - Audit all badge/label elements with colored backgrounds in dark mode
@@ -196,7 +196,7 @@ Plans:
 | 14. Navigation & Footer Consistency | 3/3 | Complete    | 2026-02-21 | - |
 | 15. Comprehensive Accessibility QA | 3/3 | Complete    | 2026-02-22 | - |
 | 16. Phase 12 Remediation & Verification | 4/4 | Complete    | 2026-02-22 | - |
-| 17. Dark Mode WCAG AA Badge Contrast Fix | 1/1 | Complete   | 2026-02-22 | - |
+| 17. Dark Mode WCAG AA Badge Contrast Fix | 1/1 | Complete    | 2026-02-22 | - |
 | 18. Milestone Documentation Reconciliation | v1.2 | 0/0 | Pending | - |
 
 ---
