@@ -72,11 +72,11 @@ Full details: `.planning/milestones/v1.2-ROADMAP.md`
   3. README includes professional introduction, key skills, featured projects, and contact info
   4. Profile tone is consistent with pattern158.solutions (Provider of Clarity, Three Stooges tagline, no emoji overload)
   5. Hiring managers can navigate from GitHub profile to portfolio website seamlessly
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 19-01: TBD
-- [ ] 19-02: TBD
+- [ ] 19-01-PLAN.md -- Profile settings update and profile README creation (private)
+- [ ] 19-02-PLAN.md -- Human verification and publish (flip to public)
 
 ### Phase 20: Repository Metadata & Discoverability
 **Goal**: Create SEO breadcrumbs and context for all visible repositories
@@ -146,7 +146,7 @@ Plans:
 | 16. Phase 12 Remediation & Verification | v1.2 | 4/4 | ✓ Complete | 2026-02-22 |
 | 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
-| 19. Profile Foundation & Brand Voice | v1.3 | 0/TBD | Not started | - |
+| 19. Profile Foundation & Brand Voice | v1.3 | 0/2 | Planned | - |
 | 20. Repository Metadata & Discoverability | v1.3 | 0/TBD | Not started | - |
 | 21. Fork Curation & Visibility Strategy | v1.3 | 0/TBD | Not started | - |
 | 22. Strategic Pinning & Final Integration | v1.3 | 0/TBD | Not started | - |
