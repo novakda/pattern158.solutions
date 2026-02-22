@@ -112,6 +112,7 @@
     --overlay-hero: rgba(26, 40, 56, 0.65);
     --overlay-grid-line: rgba(14, 124, 140, 0.03);
     --overlay-hover-row: rgba(14, 124, 140, 0.04);
+    --overlay-stripe-row: rgba(0, 0, 0, 0.03);
 }
 
 /* === DARK MODE OVERRIDES === */
@@ -163,6 +164,7 @@
     --overlay-hero: rgba(26, 40, 56, 0.80);
     --overlay-grid-line: rgba(14, 124, 140, 0.08);
     --overlay-hover-row: rgba(14, 124, 140, 0.1);
+    --overlay-stripe-row: rgba(255, 255, 255, 0.035);
 
     /* Danger: lightened for dark mode contrast on surface (#2a3f54) */
     --color-danger: #ff8c99;            /* 4.57:1 on surface (#2a3f54), passes WCAG AA 4.5:1 */
@@ -2765,6 +2767,19 @@ footer a:hover {
 
 .page-exhibit-l .resolution-table .severity-high {
     color: var(--color-accent);
+}
+
+/* ========== SHARED: Table Zebra Striping ========== */
+.personnel-table tbody tr:nth-child(even) td,
+.resolution-table tbody tr:nth-child(even) td,
+.directory-table tbody tr:nth-child(even) td {
+    background: var(--overlay-stripe-row);
+}
+
+.personnel-table tbody tr:nth-child(even):hover td,
+.resolution-table tbody tr:nth-child(even):hover td,
+.directory-table tbody tr:nth-child(even):hover td {
+    background: var(--overlay-hover-row);
 }
 
 /* ========== SHARED: Probable Cause Box ========== */
