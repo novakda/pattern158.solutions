@@ -33,7 +33,7 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 
 ### Accessibility QA (Phase 15)
 
-- [ ] **A11Y-02**: Full WCAG AA re-verification passes after all v1.2 changes
+- [x] **A11Y-02**: Full WCAG AA re-verification passes after all v1.2 changes
 - [x] **A11Y-03**: Automated accessibility test suite passes
 - [x] **A11Y-04**: Cross-browser rendering verified
 - [x] **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
@@ -76,7 +76,7 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 | NAV-05 | Phase 14 | Complete |
 | NAV-06 | Phase 14 | Complete |
 | NAV-07 | Phase 14 | Complete |
-| A11Y-02 | Phase 15, Phase 17 (gap closure) | Pending |
+| A11Y-02 | Phase 15, Phase 17 (gap closure) | Complete |
 | A11Y-03 | Phase 15 | Complete |
 | A11Y-04 | Phase 15 | Complete |
 | A11Y-05 | Phase 15 | Complete |
@@ -89,4 +89,4 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 
 ---
 *Requirements defined: 2026-02-21*
-*Last updated: 2026-02-21 — A11Y-02 reset to Pending for Phase 17 gap closure (dark mode badge contrast)*
+*Last updated: 2026-02-22 — A11Y-02 marked Complete: All 270 accessibility tests pass (dark mode WCAG AA compliance achieved)*
