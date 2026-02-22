@@ -124,12 +124,13 @@ Plans:
 
 **Gap Closure:** Closes gaps from audit
 
-**Plans:** 3/3 plans complete
+**Plans:** 3/3 plans complete + 1 gap closure plan
 
 Plans:
-- [ ] 16-01-PLAN.md — Redesign exhibit cards with improved visual hierarchy + add E, M, N to testimonials.html
-- [ ] 16-02-PLAN.md — Archive debug scripts to .archive/, clean up .bak files, create .gitignore
-- [ ] 16-03-PLAN.md — Full E2E QA verification matrix + retroactive Phase 12 VERIFICATION.md + REQUIREMENTS.md update
+- [x] 16-01-PLAN.md — Redesign exhibit cards with improved visual hierarchy + add E, M, N to testimonials.html
+- [x] 16-02-PLAN.md — Archive debug scripts to .archive/, clean up .bak files, create .gitignore
+- [x] 16-03-PLAN.md — Full E2E QA verification matrix + retroactive Phase 12 VERIFICATION.md + REQUIREMENTS.md update
+- [ ] 16-04-PLAN.md — Recover deleted scripts to .archive/, archive .bak files, create .gitignore (gap closure)
 
 **Scope:**
 - Redesign all 14 exhibit cards with improved visual hierarchy (cleaner, simpler)
@@ -165,4 +166,4 @@ Plans:
 ---
 *Roadmap created: 2026-02-13*
 *v1.1 shipped: 2026-02-21*
-*Last updated: 2026-02-21 — Phase 16 planned (3 plans)*
+*Last updated: 2026-02-21 — Phase 16 gap closure plan added (16-04)*
