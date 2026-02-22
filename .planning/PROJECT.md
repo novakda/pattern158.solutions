@@ -88,9 +88,19 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ### Active
 
-<!-- No active milestone. Next milestone TBD. -->
+<!-- Current milestone: v1.3 GitHub Profile Brand Alignment -->
 
-(None — all requirements shipped through v1.2)
+## Current Milestone: v1.3 GitHub Profile Brand Alignment
+
+**Goal:** Align the GitHub profile (github.com/novakda) with the professional identity established on pattern158.solutions — update bio, create profile README, curate repos, and link the website.
+
+**Target features:**
+- Update GitHub bio and profile settings to match professional brand
+- Create hybrid profile README (novakda/novakda repo) with brand headline + GitHub-native content
+- Update pattern158.solutions repo metadata (description, homepage, topics)
+- Archive hobby/personal forks to reduce noise
+- Keep eLearning-relevant forks visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
+- Pin key repos for professional presentation
 
 ### Out of Scope
 
@@ -177,4 +187,4 @@ This website was originally developed as part of a broader "Career Documentation
 | Public accessibility statement page | Footer-linked across all pages; demonstrates commitment to WCAG compliance | ✓ Good |
 
 ---
-*Last updated: 2026-02-22 after v1.2 milestone completion*
+*Last updated: 2026-02-22 after v1.3 milestone start*
