@@ -227,6 +227,10 @@
     color: var(--color-background);
 }
 
+[data-theme="dark"] .page-exhibit-l .resolution-table .severity-critical {
+    color: #ffb3bd;  /* 5.17:1 on striped row bg (#31465a), passes WCAG AA 4.5:1 */
+}
+
 /* === DARK MODE INVERSE SECTION HANDLING ===
    In light mode, inverse sections (nav, hero, footer) use --color-inverse (#1a2838)
    as their background, which matches dark mode's --color-background.
