@@ -67,3 +67,30 @@ Phases 12-14 were not started. 12 requirements deferred to v1.2:
 
 ---
 
+
+## v1.2 Rustici-Targeted Content + Quality (Shipped: 2026-02-22)
+
+**Delivered:** Added 3 Rustici-targeted exhibit pages with positioning narratives, standardized all 14 exhibits to NTSB investigation structure, achieved 100% WCAG AA compliance with permanent automated test suite, and closed all deferred quality gaps from v1.1.
+
+**Phases completed:** 12-18 (7 phases, 15 plans + Phase 12 quick execution, 21 tasks)
+
+**Key accomplishments:**
+- Created 3 Rustici-targeted exhibits (SCORM Debugger, CSBB Dispatch, BP Learning Platform) with Three Lenses positioning narratives and Five Core Influences homepage section
+- Standardized all 14 exhibits to consistent NTSB investigation structure with impact-first headlines and quantifiable results highlighted
+- Achieved 100% navigation/footer consistency across 22 pages — zero broken links (687 audited), active state indicators, optimized footer with social links
+- Full WCAG AA compliance — 270/270 accessibility tests pass in both light and dark modes across Chromium + Firefox
+- Built permanent automated accessibility test suite (Playwright + axe-core), semantic HTML overhaul, public accessibility statement page
+- Complete Phase 12 retroactive verification (70/70 QA matrix checks), all tech debt resolved, documentation reconciled
+
+**Stats:**
+- 207 files modified (13,216 insertions, 522 deletions)
+- ~15,579 lines of code (11,652 HTML + 3,927 CSS)
+- 53 commits over 2 days (2026-02-21 to 2026-02-22)
+- 20/20 requirements satisfied, 270/270 accessibility tests passing
+
+**Git range:** `feat(12-01)` to `docs(v1.2): complete milestone re-audit`
+
+**What's next:** TBD — analytics integration (TECH-04), deployment, or new milestone
+
+---
+
