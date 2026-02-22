@@ -36,7 +36,7 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 - [x] **A11Y-02**: Full WCAG AA re-verification passes after all v1.2 changes
 - [x] **A11Y-03**: Automated accessibility test suite passes
 - [x] **A11Y-04**: Cross-browser rendering verified
-- [ ] **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
+- [x] **A11Y-05**: All pages verified in light/dark modes on desktop and mobile
 - [x] **A11Y-06**: Semantic HTML verified
 
 ## Future Requirements
@@ -79,7 +79,7 @@ Requirements for milestone v1.2. Phase 12 (Rustici-targeted content) delivered b
 | A11Y-02 | Phase 15 | Complete |
 | A11Y-03 | Phase 15 | Complete |
 | A11Y-04 | Phase 15 | Complete |
-| A11Y-05 | Phase 15 | Pending |
+| A11Y-05 | Phase 15 | Complete |
 | A11Y-06 | Phase 15 | Complete |
 
 **Coverage:**

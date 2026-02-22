@@ -22,11 +22,11 @@ See: .planning/PROJECT.md (updated 2026-02-21)
 ## Current Position
 
 Phase: 15-comprehensive-accessibility-qa
-Plan: 02 of 03 complete
-Status: In Progress
-Last activity: 2026-02-21 — Phase 15 Plan 02 complete: WCAG AA light mode compliance (100%), cross-browser validation (Chromium + Firefox)
+Plan: 03 of 03 complete
+Status: Complete
+Last activity: 2026-02-21 — Phase 15 Plan 03 complete: Evidence capture (85 screenshots), internal WCAG report, public accessibility statement page
 
-Progress: [■■■■■■■■■■■■■■■] 15/15 phases, 2/3 plans complete in Phase 15
+Progress: [■■■■■■■■■■■■■■■] 15/15 phases, 3/3 plans complete in Phase 15
 
 ## Performance Metrics
 
@@ -43,9 +43,9 @@ Progress: [■■■■■■■■■■■■■■■] 15/15 phases, 2/3 plan
 - Timeline: 2 days (2026-02-20 to 2026-02-21)
 
 **v1.2 Velocity (in progress):**
-- Total plans completed: 12 (12-01, 12-02, 13-01, 13-02, 13-03, 16-01, 16-02, 14-01, 14-02, 14-03, 15-01, 15-02)
-- Average duration: ~14.6 min
-- Total execution time: ~134 min
+- Total plans completed: 13 (12-01, 12-02, 13-01, 13-02, 13-03, 16-01, 16-02, 14-01, 14-02, 14-03, 15-01, 15-02, 15-03)
+- Average duration: ~24.7 min
+- Total execution time: ~274.5 min
 - Timeline: Started 2026-02-21
 
 ## Accumulated Context
@@ -72,6 +72,11 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 - [Phase 15-02]: Fixed 18 instances of incorrect --color-primary-on-dark usage on light backgrounds
 - [Phase 15-02]: Updated dark mode --color-primary to #30c9dc for 4.5:1 contrast requirement
 - [Phase 15-02]: Disabled WebKit testing (WSL system dependency limitations), using Chromium + Firefox
+- [Phase 15-03]: Evidence capture approach: Playwright script generating full-page screenshots in 4 configurations (light/dark x desktop/mobile)
+- [Phase 15-03]: Lighthouse integration: Playwright CDP for programmatic audits with JSON output
+- [Phase 15-03]: Accessibility report structure: Executive summary, methodology, per-page results, WCAG criterion checklist, issues fixed log
+- [Phase 15-03]: Public statement placement: Footer link across all pages, /accessibility.html standalone page
+- [Phase 15-03]: Fixed .key-fact contrast in .probable-cause-box from #1a1a1a to #000000 for 4.5:1 contrast (user-identified during checkpoint)
 
 ### v1.2 Phase 12 Decisions
 
@@ -91,6 +96,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Phase 14 P03 | 1 | 1 tasks | 1 files |
 | Phase 15 P01 | 11 | 2 tasks | 25 files |
 | Phase 15 P02 | 65 | 2 tasks | 2 files |
+| Phase 15 P03 | 8428 | 4 tasks | 29 files |
 
 ### v1.2 Phase 13-01 Decisions
 
@@ -128,16 +134,17 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-21 (v1.2 Phase 15 Plan 02 complete)
-Stopped at: Completed 15-02-PLAN.md — WCAG AA light mode compliance + cross-browser validation
+Last session: 2026-02-21 (v1.2 Phase 15 complete)
+Stopped at: Completed 15-03-PLAN.md — Evidence capture, internal WCAG report, public accessibility statement page
 Resume file: None
 
-**Next step:** Continue Phase 15 Plan 03 or mark phase complete
+**Next step:** v1.2 Milestone complete — all planned phases executed
 
 ---
 *Milestone v1.2 started: 2026-02-21*
 *Phase 12 (Rustici-targeted content): complete*
 *Phase 13 (Exhibit optimization): complete*
 *Phase 14 (Navigation/footer consistency): complete*
+*Phase 15 (Accessibility QA): complete*
 *Phase 16 (Phase 12 retroactive verification): complete*
-*Remaining: Phase 15 (Accessibility QA)*
+*v1.2 Milestone: COMPLETE*
