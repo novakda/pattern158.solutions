@@ -85,6 +85,8 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 - [Phase 16-04]: Used .archive/ directory for all archived debug/backup artifacts
 - [Phase 16-04]: Created .gitignore excluding tool artifacts while preserving .archive/ and .planning/ in git tracking
 - [Phase 17]: Used hex color #ffb3bd for dark mode severity-critical override (5.17:1 contrast) instead of design token per established pattern
+- [Phase 18]: Inverted light/dark mode data in 15-ACCESSIBILITY-REPORT corrected to match 15-02-SUMMARY ground truth
+- [Phase 18]: Progress table formatting standardized to 5-column format for all phases
 
 ### v1.2 Phase 12 Decisions
 
@@ -107,6 +109,7 @@ Full v1.1 decision log archived in `.planning/milestones/v1.1-ROADMAP.md`.
 | Phase 15 P03 | 8428 | 4 tasks | 29 files |
 | Phase 16 P04 | 67 | 2 tasks | 6 files |
 | Phase 17 P01 | 5 | 2 tasks | 2 files |
+| Phase 18 P01 | 7 | 2 tasks | 5 files |
 
 ### v1.2 Phase 13-01 Decisions
 
