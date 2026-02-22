@@ -2173,6 +2173,11 @@ footer a:hover {
     color: var(--color-inverse-text);
 }
 
+/* Key facts inside probable-cause-box (dark bg) need inverse text color for contrast */
+.probable-cause-box .key-fact {
+    color: var(--color-inverse-text);
+}
+
 /* ========== BLOCKQUOTES ========== */
 .page-exhibit blockquote {
     border-left: 3px solid var(--color-primary);
