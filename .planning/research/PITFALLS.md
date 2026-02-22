@@ -1,262 +1,196 @@
 # Pitfalls Research
 
-**Domain:** Static HTML Portfolio Site Quality Audit & Polish
-**Researched:** 2026-02-20
-**Confidence:** MEDIUM-HIGH
+**Domain:** GitHub Profile Brand Alignment for Existing Professional Identity
+**Researched:** 2026-02-22
+**Confidence:** HIGH
 
 ## Critical Pitfalls
 
-### Pitfall 1: Accessibility Regressions from Visual Changes
+### Pitfall 1: Dynamic Widget Dependence Creates Maintenance Burden
 
 **What goes wrong:**
-Visual polish improvements (color refinements, typography changes, new focus states) inadvertently break WCAG AA compliance that was previously achieved. Common failures include new colors failing 4.5:1 contrast ratio, removed focus indicators during "cleanup", and dark mode changes that break light mode accessibility.
+Profile READMEs with dynamic widgets (GitHub stats, streak counters, activity feeds) break when third-party services fail, rate limit, or shut down. The public Vercel instance for github-readme-stats explicitly warns it's "best-effort and can be unreliable due to rate limits and traffic spikes." Broken widgets display error messages or stale data, making profiles look abandoned.
 
 **Why it happens:**
-Developers focus on how changes look in isolation (testing only one theme, one viewport size) without comprehensive cross-state verification. The site already has WCAG AA compliance, making regression testing feel redundant. Changes to CSS custom properties cascade in unexpected ways across light/dark themes.
+Developers are attracted to eye-catching dynamic content without considering ongoing maintenance costs. The ecosystem encourages widget adoption (the awesome-github-profile-readme repo showcases 16+ widget categories) but doesn't emphasize reliability concerns. Services that work today may rate-limit, change APIs, or disappear tomorrow.
 
 **How to avoid:**
-1. Test every visual change in BOTH light and dark modes
-2. Verify contrast ratios with automated tools (4.5:1 for normal text, 3:1 for large text and UI components)
-3. Test design-system components in the pages where they are deployed to detect accessibility regressions caused by inherited styles
-4. Maintain automated accessibility tests (Playwright) that run on every change
-5. Never remove focus indicators without replacing them with higher-quality alternatives
+- **Prefer static content** that aligns with brand voice over dynamic widgets
+- If using widgets, self-host critical ones (both github-readme-stats and streak-stats recommend self-hosting)
+- Test widget reliability over 30 days before adding to profile
+- Have fallback plan: what does profile look like if widget breaks?
+- Limit to 1-2 widgets maximum; avoid dependency on multiple third-party services
 
 **Warning signs:**
-- CSS changes to color variables without checking all contexts where used
-- Focus state modifications for "cleaner" appearance
-- Typography size changes that affect contrast calculations
-- Adding new visual elements (badges, icons) without contrast verification
+- Widget displays "loading..." or error messages
+- Stats haven't updated in days/weeks (check cache timeframes: 24h for stats, 6 days for languages)
+- GitHub Actions workflows failing silently
+- Profile looks dated because dynamic content froze
 
 **Phase to address:**
-Every phase involving visual changes must include accessibility regression testing as a gate. Specifically:
-- Color refinement phase: contrast verification required
-- Typography phase: focus state verification required
-- Layout polish phase: full WCAG re-audit required
-
-**Sources:**
-- [WebAIM: 2026 Predictions: The Next Big Shifts in Web Accessibility](https://webaim.org/blog/2026-predictions/)
-- [Color Contrast Accessibility: Complete WCAG 2025 Guide](https://www.allaccessible.org/blog/color-contrast-accessibility-wcag-guide-2025)
-- [WCAG 2.2: What You Need to Know in 2026](https://accessibe.com/blog/knowledgebase/wcag-two-point-two)
+Phase 1 (Profile Setup) - Establish widget policy before creating profile README. Document maintenance plan if widgets are used.
 
 ---
 
-### Pitfall 2: Mobile Regressions from Desktop Layout Improvements
+### Pitfall 2: Tone Mismatch Between Website and GitHub Profile
 
 **What goes wrong:**
-Layout improvements that look great on desktop break mobile responsive design. Typography changes overflow containers, new spacing rules create horizontal scrolling, or desktop-optimized navigation interferes with the existing hamburger menu.
+GitHub profile adopts generic developer persona (emoji-heavy, casual, meme references) while professional website presents serious, technical brand (e.g., NTSB investigation aesthetic). Hiring managers see inconsistency and question authenticity. The profile becomes "someone else's template" rather than reinforcing established identity.
 
 **Why it happens:**
-Testing during polish happens primarily on desktop viewports where problems are most visible. The hamburger menu already works, so mobile feels "done." Typography changes use fixed units instead of relative units, breaking the responsive scaling system.
+GitHub's culture skews casual and playful. Curated "awesome" lists showcase profiles with heavy emoji usage, GIFs, and visual hierarchy through badges. Developers copy successful templates without considering brand alignment. The path of least resistance is grabbing a popular template, not adapting content to match existing brand voice.
 
 **How to avoid:**
-1. Test every layout change at 320px, 768px, 1024px, and 1920px widths
-2. Use fluid typography (clamp(), em/rem) instead of fixed px values
-3. Run automated visual regression tests across viewport sizes
-4. Verify hamburger menu still functions after navigation changes
-5. Check for horizontal overflow with browser dev tools mobile emulation
+- **Start with brand voice document**: Review philosophy page (six brand elements) and extract tone guidelines before writing profile README
+- **Use website as tone reference**: Profile bio should sound like it belongs on pattern158.solutions/philosophy.html
+- **Test consistency**: Have someone read website About page and GitHub profile bio back-to-back. Do they sound like the same person?
+- **Hybrid approach**: GitHub-native formatting (markdown, structure) but brand-aligned content (NTSB aesthetic, technical precision, Three Stooges tagline)
+- **Visual restraint**: If website avoids animations and parallax scrolling, profile should avoid GIF overload
 
 **Warning signs:**
-- New CSS rules using px units for typography or spacing
-- Changes to navigation structure without mobile testing
-- Desktop-first mindset during polish ("make this look better on my monitor")
-- Content reflow or overflow indicators in browser dev tools
+- Profile uses emojis extensively while website has zero
+- Tagline on GitHub contradicts website tagline ("I cheat, but I cheat fair")
+- Bio mentions interests/hobbies not present on professional website
+- Tone shift obvious: website is formal/technical, profile is casual/playful
+- GitHub "personality" feels generic (could belong to anyone)
 
 **Phase to address:**
-Layout consistency phase must include mobile-first verification. Typography phase requires responsive scaling verification before completion.
-
-**Sources:**
-- [Responsive Web Design Best Practices in 2026](https://www.blushush.co.uk/blogs/responsive-web-design-best-practices-in-2026)
-- [Responsive Website Design in 2026: What Matters Now](https://vajraglobal.com/blogs/responsive-website-development-in-2026-key-technologies-and-trends-you-cannot-ignore/)
+Phase 1 (Profile Setup) - Draft bio and README content with explicit brand voice review before publishing.
 
 ---
 
-### Pitfall 3: Dark Mode Regressions from Light Theme Changes
+### Pitfall 3: Over-Archiving Repos Erases Valuable Context
 
 **What goes wrong:**
-Refining the light theme breaks dark mode in subtle ways: icons lose visibility, borders disappear, hover states become unreadable, or new elements only have light-theme styling defined. The dark theme passes WCAG on launch but fails after "polish" improvements.
+Archiving repos to "clean up" profile removes valuable references that demonstrate expertise. eLearning-relevant forks (SCOBot, lms-content-template) signal domain knowledge. Archiving makes repos harder to find (requires search filter) and signals "abandoned" rather than "reference maintained." Potential employers checking GitHub after reading pattern158.solutions exhibits lose corroborating evidence.
 
 **Why it happens:**
-82.7% of consumers use dark mode, but development/testing often happens in light mode. CSS custom property changes affect both themes, but verification only happens in the active theme. New components get styled for light mode first, with dark mode as an afterthought.
+Advice to "curate repos" gets interpreted as "hide everything except greenfield projects." Fear that forks look unprofessional. Misunderstanding that archived = invisible (it doesn't - archived repos remain searchable but show read-only badge). Impulse to present only "perfect" work rather than learning journey.
 
 **How to avoid:**
-1. Every CSS change must be verified in both light AND dark themes before committing
-2. Use CSS custom properties consistently - never hardcode colors
-3. Maintain automated visual regression tests for both themes
-4. Icons, charts, and visuals must be tested on dark backgrounds for visibility
-5. Document which custom properties affect which theme contexts
+- **Keep domain-relevant forks visible** even if no commits (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices demonstrate eLearning/accessibility expertise)
+- **Archive only truly abandoned hobby projects** with no professional relevance
+- **Update repo descriptions** before archiving to clarify context ("Reference fork - SCORM debugging techniques")
+- **Pin strategically**: Use 6 pins for best original work, let unpinned repos provide supporting context
+- **Test discoverability**: After archiving, can you find the repo within 30 seconds from profile? If not, reconsider.
 
 **Warning signs:**
-- CSS changes using hardcoded color values instead of var(--color-*)
-- New components with only light-mode styling
-- Testing only in your preferred theme
-- User reports of "dark mode looks broken" after polish updates
+- Profile shows 3 repos but hiring manager expects eLearning portfolio
+- Forks mentioned in resume/cover letter are archived or invisible
+- GitHub contributions graph looks sparse because relevant work is hidden
+- Pattern158.solutions exhibits reference tools/libraries not visible on GitHub
 
 **Phase to address:**
-Color refinement phase must verify both themes. Every visual change phase requires dual-theme gate before completion.
-
-**Sources:**
-- [Dark Mode Design Best Practices in 2026](https://www.tech-rz.com/blog/dark-mode-design-best-practices-in-2026/)
-- [The Designer's Guide to Dark Mode Accessibility](https://www.accessibilitychecker.org/blog/dark-mode-accessibility/)
-- [Dark Mode Usage: Data Reports 2026](https://wifitalents.com/dark-mode-usage-statistics/)
+Phase 2 (Repository Curation) - Audit before archiving with explicit "professional relevance" criteria. Document which repos stay visible and why.
 
 ---
 
-### Pitfall 4: CSS Specificity Wars from Polish Layer
+### Pitfall 4: Generic Profile Becomes Invisible
 
 **What goes wrong:**
-Adding polish rules on top of existing CSS creates escalating specificity battles. Developers add more specific selectors to override existing styles, leading to !important declarations, inline styles, and unmaintainable CSS. Future changes become progressively harder.
+Profile README lists skills, tech stack, and GitHub stats without unique positioning. Looks identical to 10,000 other developer profiles. Hiring managers scanning GitHub after visiting pattern158.solutions find nothing memorable, no connection to the distinct NTSB investigation aesthetic or six brand elements. The profile fails to reinforce the professional identity - it's a missed branding opportunity.
 
 **Why it happens:**
-It's faster to add `.section.polished .card` than to refactor the original `.card` rule. Each override compounds the problem. The single CSS file (2,877 LOC) makes it tempting to append rather than refactor. No CSS architecture guidelines for the polish layer.
+Templates optimize for GitHub's culture (badges, stats, emoji) not personal differentiation. The awesome-github-profile-readme repo shows patterns that succeed on GitHub but don't necessarily align with external professional brands. Developers mistake "more content" for "better profile" and add generic sections (languages, tools, stats) without connecting to their unique value proposition.
 
 **How to avoid:**
-1. Refactor existing rules instead of overriding them
-2. Use CSS cascade layers (@layer) to manage polish changes separately
-3. Avoid !important except for utility classes
-4. Maintain consistent specificity patterns (prefer single class selectors)
-5. Audit CSS regularly with tools to identify specificity issues
-6. Use @scope for component-specific polish changes
+- **Lead with unique positioning**: First sentence should connect to pattern158.solutions brand (e.g., "Provider of Clarity for eLearning systems architecture - NTSB investigation approach to technical problems")
+- **Reference website explicitly**: "See detailed case studies at pattern158.solutions" in bio or README
+- **Maintain aesthetic consistency**: If website is NTSB investigation reports, profile shouldn't look like a tech startup landing page
+- **One memorable detail**: Three Stooges tagline, Pattern 158 reference, or brand element excerpt
+- **Quality over quantity**: Better to have 3 lines that sound exactly like you than 30 lines that could be anyone
 
 **Warning signs:**
-- New rules with 3+ class selectors to override existing rules
-- !important declarations appearing in new CSS
-- Copy-pasted rules with slight modifications
-- Difficulty predicting which style will apply
+- Profile bio could apply to 1000 other developers
+- README has skills list but no personality or positioning
+- Nothing connects GitHub profile to pattern158.solutions
+- Removed from website, profile gives no sense of who you are professionally
+- Hiring manager sees GitHub profile and doesn't recognize it as same person from website
 
 **Phase to address:**
-Before starting visual polish phases, establish CSS architecture guidelines. Each polish phase should include CSS quality audit before completion.
-
-**Sources:**
-- [The Hidden Dangers of CSS Specificity Wars](https://blog.pixelfreestudio.com/the-hidden-dangers-of-css-specificity-wars/)
-- [CSS @scope: Complete Guide to Scoped Styles 2026](https://devtoolbox.dedyn.io/blog/css-scope-complete-guide)
-- [CSS in 2026: 7 Features That Let the Browser Do the Work](https://www.southwellmedia.com/blog/css-2026-7-features-that-let-browsers-do-the-work)
+Phase 1 (Profile Setup) - Draft content with explicit "uniqueness test": would this profile be recognizable as Dan Novak without the name?
 
 ---
 
-### Pitfall 5: Content Over-Optimization Losing Important Context
+### Pitfall 5: Badge and Widget Overload Creates Visual Noise
 
 **What goes wrong:**
-Aggressive content pruning removes "redundant" information that serves different audiences or use cases. Removing context for brevity makes content harder to understand. SEO optimization strips away the human voice and storytelling that makes the portfolio compelling.
+Profile README displays 15+ badges (languages, tools, CI status, profile views, social media) creating carnival effect. Visual hierarchy collapses - important information (positioning, contact, portfolio link) drowns in badge soup. The opposite of the intentional whitespace and visual rhythm on pattern158.solutions. Hiring managers bounce rather than read.
 
 **Why it happens:**
-Content audits focus on eliminating redundancy, but what looks redundant may serve different user journeys. Writers optimize for keywords without considering how it reads to humans. The NTSB aesthetic's detailed approach gets mistaken for "too wordy."
+Badge generators make it trivial to add shields.io badges for every technology. Curated profile lists showcase badge-heavy designs that work in isolation but conflict with minimalist professional brands. The beautify-github-profile guide presents 19+ badge options without emphasizing selective use. Developers equate "more badges" with "more impressive" when the opposite is often true.
 
 **How to avoid:**
-1. Before removing content, identify which audience needs it and why it exists
-2. Balanced keyword distribution without over-optimization - preserve natural voice
-3. Use hybrid approach: AI tools for flagging issues, human judgment for context decisions
-4. Test content changes with representative users before finalizing
-5. Preserve storytelling and first-hand expertise signals for AI search visibility
-6. Remember: different content serves different audiences (hiring managers vs. engineers vs. clients)
+- **Set badge budget**: Maximum 3-5 badges total, and only if they serve clear purpose
+- **Prefer text over badges** for technology lists (aligns with static HTML values from PROJECT.md)
+- **No vanity metrics**: Profile view counters and GitHub stats don't support professional positioning
+- **Visual hierarchy test**: Can you identify most important information in 5-second scan?
+- **Website consistency**: If pattern158.solutions uses minimal decoration, profile should too
 
 **Warning signs:**
-- Removing all instances of similar information across pages without considering context
-- Making content "tighter" by removing all examples or explanatory detail
-- SEO recommendations that make content read unnaturally
-- Content that becomes generic after "optimization"
+- README has more badge lines than content lines
+- First screen is dominated by colored rectangles
+- Can't quickly identify what person does or link to portfolio
+- Badge colors clash with each other (no cohesive palette)
+- Badges become outdated (old CI status, deprecated tools, broken view counters)
 
 **Phase to address:**
-Content audit phase must include audience journey mapping before pruning. Every content change requires readability verification from a fresh reader.
-
-**Sources:**
-- [The post-AI cleanup: Why 2026 is the year of the content audit](https://wgcontent.com/blog/post-ai-cleanup-content-audit/)
-- [A Smarter SEO Content Audit: Aligning For Performance, Purpose & LLM Visibility](https://www.searchenginejournal.com/seo-content-audit-aligning-for-performance-purpose-llm-visibility/556584/)
-- [How to Perform a Content Audit in 2026](https://seoprofy.com/blog/content-audit/)
+Phase 1 (Profile Setup) - Establish visual restraint policy. If badges are used, limit scope and test against website aesthetic.
 
 ---
 
-### Pitfall 6: Visual Inconsistency from Piecemeal Polish
+### Pitfall 6: Privacy Leakage Through Profile Content
 
 **What goes wrong:**
-Polishing pages one at a time creates visual drift. Page A gets new button styles, Page B still has old styles, Page C has a hybrid. By the end, the site has 3-4 different visual treatments instead of unified polish. Internal consistency is lost.
+Profile README includes personal information (location, current employer, work patterns via commit graphs) that conflicts with privacy boundaries on professional website. Contact page provides curated contact methods (email, LinkedIn, GitHub) but profile leaks additional vectors. Private contribution visibility settings inadvertently reveal confidential client work existence if not carefully configured.
 
 **Why it happens:**
-Natural tendency to complete pages sequentially without tracking cross-page elements. 17 pages with exhibits in subdirectory make it easy to miss pages. No visual element tracking system. Changes improve individual pages but break site-wide consistency.
+GitHub defaults to public visibility. The platform encourages sharing (contribution graphs, activity feeds, achievement badges) without emphasizing privacy implications. Developers copy templates that include employer name, location, or personal details without considering whether those belong in public professional brand. The "show private contributions" feature reveals work volume without revealing content - but signals existence of confidential projects.
 
 **How to avoid:**
-1. Maintain a style/branding guide documenting all visual elements (buttons, fonts, colors, spacing)
-2. Make cross-cutting changes globally (all buttons, all headings) rather than per-page
-3. Use templated approach - define component styles once, apply everywhere
-4. Create checklist of visual elements that must stay consistent (fonts, button styles, card layouts, spacing patterns)
-5. Visual regression testing across ALL pages before marking phase complete
+- **Match website privacy boundaries**: If contact.html doesn't list location or current employer, profile shouldn't either
+- **Review visibility settings**: Settings → Profile settings → Show Achievements, Show private contributions (decide per brand strategy)
+- **No employer-specific content**: Unless explicitly part of brand (retired, consulting independently), avoid tying profile to current employment
+- **Limit personal details**: Professional brand ≠ personal biography. Reserve personal content for contexts where it serves strategic purpose.
+- **Annual privacy audit**: Review what's visible, compare to website, prune anything that crossed boundaries
 
 **Warning signs:**
-- Updating visual elements on one page without checking other pages
-- Different button styles across pages
-- Inconsistent spacing or typography hierarchy
-- Having to remember "which version" of a component is on which page
+- Profile reveals information website intentionally omits
+- Current employer visible (creates brand conflict if employment changes)
+- Location data narrower than website's geographic positioning
+- Private contribution graphs reveal existence of confidential client work
+- Achievement badges reveal personal projects you haven't publicly shared
 
 **Phase to address:**
-Visual polish phase must establish global component system first. Each change phase requires all-pages verification before completion.
-
-**Sources:**
-- [8 Common Website Design Mistakes to Avoid in 2026](https://www.zachsean.com/post/8-common-website-design-mistakes-to-avoid-in-2026-for-better-conversions-and-user-experience)
-- [A Beginner's Guide to Achieving Web Design Consistency](https://gofishdigital.com/blog/guide-design-consistency/)
-- [Consistency in web design](https://www.nibusinessinfo.co.uk/content/consistency-web-design)
+Phase 1 (Profile Setup) - Privacy review before publishing. Document what information is intentionally public vs. private.
 
 ---
 
-### Pitfall 7: Scope Creep - "While We're Here" Syndrome
+### Pitfall 7: Mismatched Repository Metadata Undermines SEO
 
 **What goes wrong:**
-Audit reveals improvement opportunities that expand beyond original scope. "Let's also add..." leads to timeline extensions, budget overruns, and never-shipping syndrome. 52% of projects experience scope creep, especially during refinement work.
+Primary repository (pattern158.solutions) has no description, no topics, no homepage URL. GitHub search and discoverability algorithms can't connect repo to professional identity. Hiring managers who find GitHub before website have no breadcrumb trail. Repository appears as generic static site rather than strategic professional brand platform.
 
 **Why it happens:**
-Polish work naturally surfaces opportunities. The site is already good, so improvements feel low-risk. No clear boundaries between "quality audit" and "new features." Examining existing work triggers ideas for enhancements.
+Developers create repos, push code, but never revisit Settings → General to add metadata. The focus is on content (HTML, CSS) rather than repository presentation. GitHub doesn't force metadata completion - it's optional, so it gets skipped. Pattern158.solutions repo predates current brand clarity, metadata wasn't added when brand solidified.
 
 **How to avoid:**
-1. Document explicit scope boundaries before starting (reference PROJECT.md "Out of Scope")
-2. Maintain a "future enhancements" backlog for good ideas outside current scope
-3. Require formal change request process with timeline/effort impact assessment
-4. Use "trade-off visibility" - adding X means removing/deferring Y
-5. Distinguish between fixing quality issues (in scope) vs. adding features (out of scope)
-6. Time-box each audit phase - when time expires, phase ends
+- **Description template**: "[Project name] - [one-line value prop from website] - [tech stack]"
+  - Example: "Pattern 158 Solutions - Professional portfolio site for systems architecture and eLearning engineering - Static HTML/CSS with WCAG AA compliance"
+- **Homepage URL**: Always link to live site (https://pattern158.solutions)
+- **Topics**: 5-7 relevant tags (portfolio, eLearning, systems-architecture, accessibility, static-site, HTML-CSS, wcag-aa)
+- **About section**: Expand description with context (NTSB aesthetic, case studies, design token system)
+- **Metadata audit**: When website updates, review repo metadata for alignment
 
 **Warning signs:**
-- "While we're here, let's also..." statements
-- Adding new pages or features during "audit and polish"
-- Timeline extending without corresponding scope reduction elsewhere
-- Perfectionism preventing phase completion
+- Repository description is empty or default
+- No homepage URL despite site being live
+- No topics/tags (missed GitHub search discoverability)
+- Repository name doesn't match brand name (novakda vs. Pattern 158)
+- About section doesn't connect to professional value proposition
 
 **Phase to address:**
-Project planning must establish scope boundaries with examples. Each phase kickoff should reaffirm scope boundaries and defer new ideas to backlog.
-
-**Sources:**
-- [Scope Creep Control | Development Project Focus 2026](https://docs.gitscrum.com/en/best-practices/managing-scope-creep-in-development-projects)
-- [How to Avoid Scope Creep in Website Redesign Projects](https://www.f22labs.com/blogs/how-to-avoid-scope-creep-in-website-redesign-projects/)
-- [How to Handle Scope Creep in Web Design](https://speckyboy.com/scope-creep-web-design/)
-
----
-
-### Pitfall 8: Breaking SEO from Content Reorganization
-
-**What goes wrong:**
-Information architecture improvements move content between pages, change page purposes, or consolidate pages - creating dead links (internal and external), breaking Open Graph metadata, losing keyword rankings, or confusing returning visitors who bookmarked old structure.
-
-**Why it happens:**
-Content audit identifies logical reorganization opportunities. Current structure has quirks that "could be better." Focus on ideal organization without considering existing links, search rankings, or user expectations.
-
-**How to avoid:**
-1. Audit internal links before moving content - update all references
-2. Implement proper 301 redirects if consolidating pages (not applicable to static HTML - must maintain URLs)
-3. Verify Open Graph metadata matches new page purpose after changes
-4. Check which pages have external backlinks before restructuring (avoid changing URLs)
-5. Content moves should preserve URLs - move content within existing files, not to new files
-6. Test navigation flows to ensure users can still find key information
-
-**Warning signs:**
-- Planning to change page URLs or consolidate pages
-- Moving content without checking where it's linked from
-- Reorganizing without considering existing search rankings
-- Treating information architecture as purely logical exercise
-
-**Phase to address:**
-Information architecture phase must include link audit and URL stability verification. SEO metadata must be updated when page purposes change.
-
-**Sources:**
-- [The Complete Website Audit Checklist for 2026 (SEO + UX)](https://redrattlercreative.com/complete-website-audit-checklist-2026/)
-- [Common Website Audit Mistakes and How to Avoid Them](https://acclaim.agency/blog/common-website-audit-mistakes-and-how-to-avoid-them)
-- [Website Audits in 2026: SEO, AI Search, Performance](https://websi.com/why-full-website-audits-matter-in-2026-with-data-led-insights-you-need/)
+Phase 2 (Repository Curation) - Metadata update for pattern158.solutions repo must precede profile README creation.
 
 ---
 
@@ -266,25 +200,25 @@ Shortcuts that seem reasonable but create long-term problems.
 
 | Shortcut | Immediate Benefit | Long-term Cost | When Acceptable |
 |----------|-------------------|----------------|-----------------|
-| Adding override CSS instead of refactoring | Faster to ship change | CSS specificity wars, unmaintainable stylesheet | Never - always refactor |
-| Testing only in light mode | 50% faster testing | Dark mode breaks in production | Never - both themes required |
-| Testing only on desktop viewport | Matches development environment | Mobile users experience broken layout | Never - mobile-first required |
-| Skipping accessibility re-verification | Assumes previous compliance maintained | WCAG AA regressions go undetected | Never - verify on every visual change |
-| Manual testing without automated regression | Quick validation for small changes | Regressions slip through as site evolves | Only for one-off hotfixes, not systematic changes |
-| Approving changes in isolation without cross-page check | Faster page-by-page progress | Visual inconsistency across site | Never for visual elements that appear on multiple pages |
-| Inline color values instead of CSS custom properties | Saves looking up variable name | Theme changes require finding/replacing all instances | Never - site has dark mode |
+| Using public Vercel instances for widgets | No self-hosting setup | Rate limits, unreliability, stale data, profile looks broken | Never for professional profiles - self-host or skip widgets |
+| Copying popular profile template | Fast setup, proven design | Generic positioning, tone mismatch, no brand differentiation | Only as inspiration source, never as final content |
+| Archiving all forks to "clean up" | Shorter repo list | Lost professional context, harder to demonstrate domain expertise | Never - curate selectively, keep domain-relevant forks visible |
+| Adding every technology badge | Comprehensive skills display | Visual noise, outdated badges, maintenance burden | Acceptable in private README as inventory, not in public profile |
+| Enabling all contribution visibility | Demonstrates work volume | Privacy leakage, reveals confidential client projects | Only if all work is public or explicitly showcased |
+| Skipping repository metadata | Faster to just push code | Lost discoverability, missed SEO, weak professional presentation | Never for portfolio repos - acceptable only for throwaway experiments |
+| GitHub Actions for daily updates | Dynamic content, always fresh | Dependency on cron reliability, GitHub inactivity timeouts (60 days) | Only with enable_keepalive and manual fallback plan |
 
 ## Integration Gotchas
 
-Common mistakes when polish changes affect integrated systems.
+Common mistakes when connecting GitHub to external professional presence.
 
 | Integration | Common Mistake | Correct Approach |
 |-------------|----------------|------------------|
-| Dark mode theme toggle | Changing theme detection logic breaks localStorage persistence | Test theme toggle, persistence, system preference detection, and FOUC prevention after any theme-related changes |
-| Hamburger menu | Modifying navigation structure breaks mobile menu JavaScript | Test hamburger functionality, keyboard accessibility, and ARIA attributes after nav changes |
-| SEO metadata (Open Graph, JSON-LD) | Content changes don't update page descriptions | Verify meta descriptions, OG tags, and structured data match new content |
-| CSS custom properties | Changing variable values breaks components that depend on them | Document which components use which variables; test all contexts |
-| Analytics (future) | Layout changes break event tracking | Not yet applicable (TECH-04 not implemented), but will require verification when added |
+| Portfolio website ↔ GitHub | Link to GitHub in footer, forget to link website in GitHub bio/repo | Bidirectional: website footer → GitHub, GitHub bio/repo homepage URL → website |
+| LinkedIn ↔ GitHub | LinkedIn lists GitHub but GitHub profile contradicts LinkedIn headline/summary | Ensure positioning consistency: if LinkedIn says "eLearning systems architect," GitHub should reinforce not contradict |
+| Resume ↔ GitHub | Resume mentions projects, GitHub repos are archived/private/missing | Audit resume before GitHub curation - keep referenced repos visible and well-documented |
+| Profile README ↔ Pinned repos | README claims expertise, pinned repos show unrelated projects | Pin repos that support README claims - alignment between narrative and evidence |
+| Personal brand ↔ GitHub username | Brand is "Pattern 158" but username is "novakda" | Accept mismatch if username predates brand, but use full name in profile bio and README header to connect dots |
 
 ## Performance Traps
 
@@ -292,10 +226,10 @@ Patterns that work at small scale but fail as usage grows.
 
 | Trap | Symptoms | Prevention | When It Breaks |
 |------|----------|------------|----------------|
-| Growing CSS file without pruning | Stylesheet grows from 2,877 to 4,000+ lines | Audit for unused rules; refactor instead of appending | Minimal risk - static site loads fast, but affects maintainability |
-| Multiple font weights/variants | Adding "just one more" font weight | Audit font usage; use variable fonts; font-display: swap | Already optimized with font-display: swap |
-| Uncompressed images for "quality" | Reverting compression for "better visuals" | Maintain Q72 JPEG compression standard; measure quality objectively | Hero image already optimized (118KB at Q72) |
-| Typography complexity | Adding multiple heading variants and sizes | Maintain hierarchical consistency; use fewer, well-defined levels | Not a performance issue but creates visual inconsistency |
+| Embedding large images in profile README | README loads slowly, especially on mobile | Use compressed images, or host on CDN rather than in repo | Images >500KB or multiple images >100KB each |
+| Multiple GitHub Actions workflows updating README | Commit spam (10+ automated commits/day), confusing contribution graph | Consolidate to single workflow, daily or weekly schedule | More than 1-2 automated commits per day |
+| Linking to large repos from profile | Slow page loads when previewing repos | N/A - GitHub handles this, not a real trap | Not applicable |
+| Using iframe embeds in README | GitHub strips iframes, content doesn't display | Use static images/links, not embedded content | All iframes - GitHub markdown doesn't support them |
 
 ## Security Mistakes
 
@@ -303,10 +237,11 @@ Domain-specific security issues beyond general web security.
 
 | Mistake | Risk | Prevention |
 |---------|------|------------|
-| Hardcoding email addresses in HTML | Increased spam/harvesting | Already using mailto: link with visible email - acceptable for portfolio site |
-| Exposing .planning/ directory | Research/strategy exposed to public | Verify .planning/ not deployed to production; check build/deploy process |
-| Committing credentials to git | API keys leaked in version history | N/A - static site has no credentials |
-| Client-side only theme preference | Minor privacy issue (localStorage readable) | Acceptable - no sensitive data, localStorage is standard for theme |
+| Exposing API keys in profile README or repo | Compromised services, quota theft, security breach | Never commit keys - use repository secrets for GitHub Actions, self-host widgets with env vars |
+| Linking to portfolio site before HTTPS | Professional credibility loss, security warnings | Ensure pattern158.solutions has valid HTTPS before linking from GitHub |
+| Including current employer in profile | Brand conflict on job change, potential NDA violations | Omit current employer unless it's your own company or explicitly part of brand strategy |
+| Showing private contribution activity | Signals existence of confidential projects | Only enable if comfortable revealing you work on private/internal repos without naming clients |
+| Personal email in public commits | Spam, phishing, privacy violation | Use GitHub's no-reply email (username@users.noreply.github.com) or professional domain email |
 
 ## UX Pitfalls
 
@@ -314,28 +249,27 @@ Common user experience mistakes in this domain.
 
 | Pitfall | User Impact | Better Approach |
 |---------|-------------|-----------------|
-| Over-polishing navigation | Changes familiar navigation patterns for returning visitors | Preserve core navigation structure; polish visual treatment only |
-| Removing "redundant" content | Different audiences need different entry points and context levels | Map content to user journeys before pruning; preserve multi-audience value |
-| Typography changes for aesthetics | Reduced readability on mobile or at different zoom levels | Use relative units; test at 200% zoom; verify mobile readability |
-| "Cleaner" design removes signifiers | Users can't identify interactive elements or navigation cues | Maintain clear affordances; test with fresh users |
-| Consistency over usability | Forcing NTSB aesthetic where UX should win | Follow PROJECT.md principle: "UX takes priority when best practices conflict with NTSB aesthetic" |
-| Information architecture for logic | New structure makes sense to architect but confuses users | Validate changes against actual user tasks and mental models |
-| Content "improvement" changes voice | Professional polish removes personality and differentiation | Preserve brand voice and unique elements while improving clarity |
+| No above-the-fold positioning statement | Visitor must scroll/read to understand who you are | Lead with one-line professional identity in bio and README first paragraph |
+| Broken widget images/errors | Profile looks abandoned, unprofessional | Test widgets before adding, have fallback plan, prefer static content |
+| README longer than 2 screens | Cognitive overload, visitors bounce | Prioritize ruthlessly - positioning, portfolio link, 2-3 highlights max |
+| No link to portfolio website | Missed conversion opportunity - visitor doesn't know next step | Prominent link in bio, README header, repo homepage URL |
+| Emoji inconsistency | Website is formal, GitHub is emoji-heavy = authenticity question | Match emoji usage to website tone (pattern158.solutions uses zero emojis) |
+| Generic "Hi there" greeting | Wasted above-the-fold space on template boilerplate | Replace with brand-aligned opening (Three Stooges reference, NTSB framing, etc.) |
 
 ## "Looks Done But Isn't" Checklist
 
 Things that appear complete but are missing critical pieces.
 
-- [ ] **Visual polish:** Often missing dark mode verification - verify BOTH themes for every visual change
-- [ ] **Typography changes:** Often missing mobile responsiveness check - verify 320px, 768px, 1024px viewports
-- [ ] **Layout improvements:** Often missing accessibility re-verification - run WCAG contrast and focus state checks
-- [ ] **Content edits:** Often missing SEO metadata updates - verify meta descriptions and OG tags match new content
-- [ ] **Navigation changes:** Often missing cross-page consistency check - verify all 17 pages including exhibits
-- [ ] **CSS refactoring:** Often missing specificity audit - check for increasing selector complexity or !important usage
-- [ ] **Component polish:** Often missing all-instances verification - changing one button style requires updating all buttons
-- [ ] **Color refinement:** Often missing theme integration check - new colors must work in light AND dark mode
-- [ ] **Information architecture:** Often missing link audit - verify no broken internal links after content moves
-- [ ] **Phase completion:** Often missing regression test suite run - verify automated Playwright tests still pass
+- [ ] **Profile bio**: Has professional title and link to website, not just GitHub username
+- [ ] **Profile README**: Exists (novakda/novakda repo) and renders correctly with brand positioning
+- [ ] **Repository metadata**: pattern158.solutions has description, topics, homepage URL
+- [ ] **Pinned repos**: 3-6 pins showcase best/relevant work, support professional positioning
+- [ ] **Repository visibility**: eLearning-relevant forks are public and described, only irrelevant repos archived
+- [ ] **Tone consistency**: Profile bio → README → repo descriptions sound like same person who wrote pattern158.solutions
+- [ ] **Bidirectional links**: Website links to GitHub, GitHub links back to website
+- [ ] **Privacy alignment**: Profile reveals no information website intentionally omits
+- [ ] **Widget reliability**: If widgets used, tested over 30 days or self-hosted with monitoring
+- [ ] **Mobile rendering**: Profile README displays correctly on mobile (GitHub's primary traffic source)
 
 ## Recovery Strategies
 
@@ -343,15 +277,16 @@ When pitfalls occur despite prevention, how to recover.
 
 | Pitfall | Recovery Cost | Recovery Steps |
 |---------|---------------|----------------|
-| Accessibility regression | LOW | Run automated WCAG checks; fix contrast/focus issues; re-verify both themes |
-| Mobile layout broken | LOW-MEDIUM | Use browser dev tools to identify overflow/reflow; switch to relative units; test viewports |
-| Dark mode regression | LOW | Check CSS custom property usage; verify new components have dark theme styles; visual comparison test |
-| CSS specificity war | MEDIUM | Audit specificity patterns; refactor high-specificity rules to simpler selectors; consider @layer |
-| Content over-optimization | MEDIUM | Restore removed content from git history; re-evaluate what serves which audience |
-| Visual inconsistency | MEDIUM | Document all visual variants; standardize on one; apply site-wide; regression test all pages |
-| Scope creep | MEDIUM-HIGH | Re-establish boundaries; move new features to backlog; return to original milestone scope |
-| SEO/link breaking | HIGH | Audit all internal links; update references; verify external backlinks still work; monitor search rankings |
-| Lost brand voice | HIGH | Restore from git history; re-evaluate content changes with brand guidelines; fresh review |
+| Widget breaks, shows errors | LOW | Remove broken widget, replace with static content, update README in <5 minutes |
+| Tone mismatch discovered | MEDIUM | Rewrite bio/README to match brand voice (1-2 hours), preserve technical accuracy |
+| Over-archived repos | LOW | Unarchive repos (Settings → General → Unarchive), update descriptions (30 min per repo) |
+| Generic profile doesn't differentiate | MEDIUM | Add unique positioning, brand elements, website reference (1-2 hours rewrite) |
+| Badge overload creates noise | LOW | Remove all badges, selectively re-add max 3-5 (30 minutes) |
+| Privacy leak (employer, location) | LOW | Edit bio/README to remove, review visibility settings (15 minutes) |
+| Missing repo metadata | LOW | Add description, topics, homepage URL to repos (5-10 min per repo) |
+| GitHub Actions workflow failing | MEDIUM | Debug workflow logs, fix config, or disable automation and switch to static content (1-3 hours) |
+| Broken links to portfolio | LOW | Update URLs in bio, README, repo settings (10 minutes) |
+| Commit spam from Actions | MEDIUM | Disable workflow, configure less frequent schedule, squash commit history (1-2 hours) |
 
 ## Pitfall-to-Phase Mapping
 
@@ -359,67 +294,41 @@ How roadmap phases should address these pitfalls.
 
 | Pitfall | Prevention Phase | Verification |
 |---------|------------------|--------------|
-| Accessibility regressions | Every visual change phase | Automated WCAG tests pass; manual verification of focus states and contrast in both themes |
-| Mobile regressions | Layout consistency phase, Typography phase | Visual regression tests at 320px/768px/1024px pass; no horizontal overflow |
-| Dark mode regressions | Color refinement phase, Any visual change | Both themes verified; automated visual comparison tests pass |
-| CSS specificity wars | Before visual polish begins | CSS complexity audit shows no increasing specificity trends; no new !important declarations |
-| Content over-optimization | Content audit phase | User journey mapping complete; test readers confirm clarity without voice loss |
-| Visual inconsistency | Visual polish phase | All 17 pages verified; component inventory shows single variant per element type |
-| Scope creep | Project planning phase | Milestone completes within defined scope; backlog tracks deferred ideas |
-| SEO/link breaking | Information architecture phase | Link audit shows zero broken internal links; meta tags match page purposes |
-
-## Audit-Specific Recovery Checklist
-
-When polish goes wrong, recover with this process:
-
-1. **Stop and assess:** Don't compound the problem with more changes
-2. **Git history:** Identify when regression was introduced
-3. **Scope check:** Is this a regression or scope creep revealing itself?
-4. **Cross-state verification:** Test the change in ALL contexts (light/dark, mobile/desktop, all pages)
-5. **Automated tests:** Run full Playwright test suite to identify cascading failures
-6. **User perspective:** Fresh eyes review - does this actually improve the experience?
-7. **Revert if needed:** Better to revert and re-approach than ship broken polish
+| Dynamic widget dependence | Phase 1 (Profile Setup) | Test widgets 30 days before launch OR skip widgets entirely |
+| Tone mismatch website ↔ GitHub | Phase 1 (Profile Setup) | Brand voice review: bio and README match philosophy.html tone |
+| Over-archiving repos | Phase 2 (Repository Curation) | Audit checklist: eLearning forks (SCOBot, lms-content-template, etc.) remain visible |
+| Generic profile | Phase 1 (Profile Setup) | Uniqueness test: profile recognizable as Dan Novak without name present |
+| Badge/widget overload | Phase 1 (Profile Setup) | Visual hierarchy test: identify most important info in 5-second scan |
+| Privacy leakage | Phase 1 (Profile Setup) | Privacy boundary audit: GitHub reveals nothing website omits |
+| Mismatched repo metadata | Phase 2 (Repository Curation) | Metadata completeness: pattern158.solutions has description, topics, homepage URL |
+| No bidirectional links | Phase 3 (Integration) | Link verification: website → GitHub → website paths work |
+| Broken widgets after launch | Phase 4 (Maintenance) | Monthly check if widgets used, quarterly if static content only |
+| Profile README doesn't render | Phase 1 (Profile Setup) | Cross-device test: profile displays on desktop and mobile |
 
 ## Sources
 
-### Accessibility & Testing
-- [WebAIM: 2026 Predictions: The Next Big Shifts in Web Accessibility](https://webaim.org/blog/2026-predictions/)
-- [Color Contrast Accessibility: Complete WCAG 2025 Guide](https://www.allaccessible.org/blog/color-contrast-accessibility-wcag-guide-2025)
-- [WCAG 2.2: What You Need to Know in 2026](https://accessibe.com/blog/knowledgebase/wcag-two-point-two)
-- [The Designer's Guide to Dark Mode Accessibility](https://www.accessibilitychecker.org/blog/dark-mode-accessibility/)
+**GitHub Official Documentation:**
+- [Managing your profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) - Prerequisites, visibility controls, removal triggers
+- [Archiving repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) - Effects of archiving, read-only implications, discoverability impact
+- [Pinning items to your profile](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile) - 6-item limit, strategic selection
+- [Showing your private contributions](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-settings-on-your-profile/showing-your-private-contributions-and-achievements-on-your-profile) - Privacy controls, anonymized activity
 
-### Dark Mode & Responsive Design
-- [Dark Mode Design Best Practices in 2026](https://www.tech-rz.com/blog/dark-mode-design-best-practices-in-2026/)
-- [Dark Mode Usage: Data Reports 2026](https://wifitalents.com/dark-mode-usage-statistics/)
-- [Responsive Web Design Best Practices in 2026](https://www.blushush.co.uk/blogs/responsive-web-design-best-practices-in-2026)
-- [Responsive Website Design in 2026: What Matters Now](https://vajraglobal.com/blogs/responsive-website-development-in-2026-key-technologies-and-trends-you-cannot-ignore/)
+**Ecosystem Resources:**
+- [awesome-github-profile-readme](https://github.com/abhisheknaiidu/awesome-github-profile-readme) - Patterns from successful profiles, 16+ widget categories
+- [beautify-github-profile](https://github.com/rzashakeri/beautify-github-profile) - Curation vs. overload warnings
+- [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) - Rate limiting warning: "public Vercel instance...can be unreliable due to rate limits and traffic spikes," self-hosting recommendation
+- [github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats) - "It is recommended to self-host the project for better reliability"
+- [blog-post-workflow](https://github.com/gautamkrishnar/blog-post-workflow) - GitHub inactivity timeout warning: "GitHub will stop running all cron based triggers if the repository is not active for more than 60 days"
 
-### CSS Architecture
-- [The Hidden Dangers of CSS Specificity Wars](https://blog.pixelfreestudio.com/the-hidden-dangers-of-css-specificity-wars/)
-- [CSS @scope: Complete Guide to Scoped Styles 2026](https://devtoolbox.dedyn.io/blog/css-scope-complete-guide)
-- [CSS in 2026: 7 Features That Let the Browser Do the Work](https://www.southwellmedia.com/blog/css-2026-7-features-that-let-browsers-do-the-work)
+**Project Context:**
+- `.planning/PROJECT.md` - Brand identity (NTSB aesthetic, Six elements, Three Stooges tagline), tone constraints, accessibility requirements
 
-### Content & Information Architecture
-- [The post-AI cleanup: Why 2026 is the year of the content audit](https://wgcontent.com/blog/post-ai-cleanup-content-audit/)
-- [A Smarter SEO Content Audit: Aligning For Performance, Purpose & LLM Visibility](https://www.searchenginejournal.com/seo-content-audit-aligning-for-performance-purpose-llm-visibility/556584/)
-- [How to Perform a Content Audit in 2026](https://seoprofy.com/blog/content-audit/)
-
-### Visual Consistency & Design
-- [8 Common Website Design Mistakes to Avoid in 2026](https://www.zachsean.com/post/8-common-website-design-mistakes-to-avoid-in-2026-for-better-conversions-and-user-experience)
-- [A Beginner's Guide to Achieving Web Design Consistency](https://gofishdigital.com/blog/guide-design-consistency/)
-- [Consistency in web design](https://www.nibusinessinfo.co.uk/content/consistency-web-design)
-
-### Project Management
-- [Scope Creep Control | Development Project Focus 2026](https://docs.gitscrum.com/en/best-practices/managing-scope-creep-in-development-projects)
-- [How to Avoid Scope Creep in Website Redesign Projects](https://www.f22labs.com/blogs/how-to-avoid-scope-creep-in-website-redesign-projects/)
-- [How to Handle Scope Creep in Web Design](https://speckyboy.com/scope-creep-web-design/)
-
-### Website Audits
-- [The Complete Website Audit Checklist for 2026 (SEO + UX)](https://redrattlercreative.com/complete-website-audit-checklist-2026/)
-- [Common Website Audit Mistakes and How to Avoid Them](https://acclaim.agency/blog/common-website-audit-mistakes-and-how-to-avoid-them)
-- [Website Audits in 2026: SEO, AI Search, Performance](https://websi.com/why-full-website-audits-matter-in-2026-with-data-led-insights-you-need/)
+**Confidence Assessment:**
+- **HIGH for widget reliability issues** - Official warnings from most popular widget projects
+- **HIGH for archiving behavior** - GitHub official documentation
+- **MEDIUM for tone mismatch patterns** - Inferred from ecosystem observation and project brand constraints
+- **MEDIUM for privacy implications** - GitHub documentation on visibility settings, extrapolated to professional brand context
 
 ---
-*Pitfalls research for: Static HTML Portfolio Site Quality Audit & Polish*
-*Researched: 2026-02-20*
-*Context: 17-page site with dark mode, mobile responsive, WCAG AA compliant - adding polish without breaking what works*
+*Pitfalls research for: GitHub Profile Brand Alignment*
+*Researched: 2026-02-22*
