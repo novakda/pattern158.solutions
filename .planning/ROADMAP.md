@@ -169,6 +169,11 @@ Plans:
 
 **Gap Closure:** Closes documentation tech debt from v1.2 audit
 
+**Plans:** 1/1 plans complete
+
+Plans:
+- [x] 18-01-PLAN.md — Documentation reconciliation and ROADMAP tracking fixes
+
 **Scope:**
 - Resolve conflicting accessibility test documentation (15-02-SUMMARY vs 15-ACCESSIBILITY-REPORT)
 - Update ROADMAP.md: check off completed plan boxes for 14-03, 15-01, 15-02, 15-03, 16-04
