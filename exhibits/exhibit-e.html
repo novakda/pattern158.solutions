@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. 100+ packages, 7+ energy clients, 10+ years in production.">
+    <meta name="description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
     <meta name="author" content="Dan Novak">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-e.html">
     <meta property="og:title" content="Pattern 158 | Exhibit E: CSBB Dispatch — Cross-Domain Content Delivery">
-    <meta property="og:description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. 100+ packages, 7+ energy clients, 10+ years in production.">
+    <meta property="og:description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
     <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
     <meta property="og:image:width" content="1024">
     <meta property="og:image:height" content="559">
@@ -141,7 +141,7 @@
                 <span class="section-title">Background</span>
             </div>
             <div class="background-content">
-                <p>Version control nightmare: every course update required emailing zip files to <strong><span class="key-fact">7+ energy utility clients</span></strong> for manual re-upload to their respective LMS platforms. Different versions of the same content running on different client systems, with no centralized control over what was deployed where. A single course update could take days to propagate across all client deployments.</p>
+                <p>Version control nightmare: every course update required emailing zip files to <strong><span class="key-fact">~20 energy utility clients</span></strong> for manual re-upload to their respective LMS platforms. Different versions of the same content running on different client systems, with no centralized control over what was deployed where. A single course update could take days to propagate across all client deployments.</p>
 
                 <p>The problem wasn&rsquo;t just logistics &mdash; it was architectural. Each client&rsquo;s LMS enforced same-origin security policies, making direct cross-domain content hosting impossible with standard approaches. The content needed to live on GP Strategies&rsquo; servers for centralized control, but execute inside each client&rsquo;s LMS domain for SCORM communication. No commercial product existed to solve this problem in 2011.</p>
             </div>
@@ -176,7 +176,7 @@
                     <div class="timeline-date">The Problem</div>
                     <div class="timeline-title">Version Control Nightmare</div>
                     <div class="timeline-content">
-                        <p>Course updates require emailing zip files to 7+ energy clients for manual re-upload. Version chaos across deployments.</p>
+                        <p>Course updates require emailing zip files to ~20 energy clients for manual re-upload. Version chaos across deployments.</p>
                     </div>
                 </div>
 
@@ -216,7 +216,7 @@
                     <div class="timeline-date">Scale</div>
                     <div class="timeline-title">Multi-Client Deployment</div>
                     <div class="timeline-content">
-                        <p>Deployed across <span class="key-fact">7+ energy utility clients</span>: FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP. <strong><span class="key-fact">100+ packages</span></strong> in production.</p>
+                        <p>Deployed across <span class="key-fact">~20 energy utility clients</span> including FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP. <strong><span class="key-fact">~2,000 courses</span></strong> in the central library — each client drawing a curated subset.</p>
                     </div>
                 </div>
 
@@ -274,7 +274,7 @@
                     <tr>
                         <td class="issue-id" data-label="#">F-04</td>
                         <td data-label="Finding"><strong>Automation at Scale</strong></td>
-                        <td data-label="Description">CSBB Generator tooling (Groovy, Access, Windows Forms) automated package creation for <span class="key-fact">100+ courses</span> across <span class="key-fact">7+ clients</span> &mdash; global deployments without touching individual systems.</td>
+                        <td data-label="Description">CSBB Generator tooling (Groovy, Access, Windows Forms) automated package creation for a <span class="key-fact">~2,000 course library</span> across <span class="key-fact">~20 clients</span> &mdash; global deployments without touching individual systems.</td>
                     </tr>
                     <tr>
                         <td class="issue-id" data-label="#">F-05</td>
@@ -309,7 +309,7 @@
                 <span class="section-title">Outcome</span>
             </div>
             <div class="background-content">
-                <p>The system served <strong><span class="key-fact">7+ major energy utility clients</span></strong> (FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, BP) with <strong><span class="key-fact">100+ packages</span></strong> in production. It remained operational for <span class="key-fact">10+ years</span> &mdash; outlasting most of the projects it was built to support.</p>
+                <p>The system served <strong><span class="key-fact">~20 energy utility clients</span></strong> including FPL, Puget Sound Energy, NRG, Colorado Springs Utilities, Calpine, Exelon, and BP — each drawing a curated subset from a <strong><span class="key-fact">~2,000 course central library</span></strong>. It remained operational for <span class="key-fact">10+ years</span> &mdash; outlasting most of the projects it was built to support.</p>
 
                 <p>The architecture proved reusable when adapted for General Dynamics Electric Boat&rsquo;s defense sector deployment, demonstrating that the cross-domain dispatch pattern wasn&rsquo;t a one-off solution but a generalizable approach to multi-tenant content delivery.</p>
 
@@ -318,11 +318,24 @@
         </div>
     </section>
 
-    <!-- 7. TECHNOLOGIES -->
+    <!-- 7. NAMING -->
     <section class="report-section">
         <div class="container">
             <div class="section-heading">
                 <span class="section-number">7.</span>
+                <span class="section-title">Naming</span>
+            </div>
+            <div class="background-content">
+                <p>The system was called <strong>CSBB</strong> &mdash; Content Server Black Box &mdash; internally, reflecting its function: a black box mediating between GP&rsquo;s content servers and client LMS platforms. The &ldquo;Dispatch&rdquo; descriptor was adopted informally after Rustici released SCORM Dispatch as part of SCORM Cloud, because it more accurately described what the thin-package architecture was doing. <strong>CSBB Dispatch was never an official product name</strong> &mdash; it&rsquo;s retrospective shorthand that aligns the architecture with the problem it solved.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TECHNOLOGIES -->
+    <section class="report-section">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-number">8.</span>
                 <span class="section-title">Technologies</span>
             </div>
 
