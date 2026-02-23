@@ -2,7 +2,7 @@
 
 ## What This Is
 
-The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site features 22 pages including 14 detailed exhibit case studies, a comprehensive design token system (font-size, spacing, color, cascade layers) with Stylelint enforcement, dark mode, responsive mobile navigation, full SEO coverage, and full WCAG AA accessibility compliance (270/270 automated tests passing in light and dark modes) with a permanent Playwright + axe-core test suite.
+The personal brand website for Dan Novak (pattern158.solutions) -- a static HTML portfolio site presenting 28 years of systems architecture and eLearning engineering through an NTSB investigation report aesthetic. The site features 22 pages including 14 detailed exhibit case studies, a comprehensive design token system (font-size, spacing, color, cascade layers) with Stylelint enforcement, dark mode, responsive mobile navigation, full SEO coverage, and full WCAG AA accessibility compliance (270/270 automated tests passing in light and dark modes) with a permanent Playwright + axe-core test suite. The GitHub profile (github.com/novakda) is fully aligned with the site brand -- profile README, curated repo metadata, archived hobby forks, and 5 strategically pinned repos with bidirectional cross-links.
 
 ## Core Value
 
@@ -85,22 +85,29 @@ The site must accurately and compellingly present Dan's professional identity an
 - ✓ **A11Y-04**: Cross-browser rendering verified (Chromium + Firefox) -- v1.2
 - ✓ **A11Y-05**: All 22 pages verified in light/dark modes on desktop and mobile -- v1.2
 - ✓ **A11Y-06**: Semantic HTML verified — proper landmarks, headings, ARIA on all pages -- v1.2
+- ✓ **PROF-01**: GitHub bio updated to reflect professional identity aligned with pattern158.solutions brand -- v1.3
+- ✓ **PROF-02**: Website URL set to pattern158.solutions in GitHub profile settings -- v1.3
+- ✓ **README-01**: Public novakda/novakda repo created with README.md that displays on profile -- v1.3
+- ✓ **README-02**: README includes brand headline aligned with Pattern 158 identity -- v1.3
+- ✓ **README-03**: README includes 2-3 sentence professional introduction -- v1.3
+- ✓ **README-04**: README includes key skills/domains section (eLearning, SCORM, accessibility, systems architecture) -- v1.3
+- ✓ **README-05**: README includes featured projects section with links to pattern158.solutions exhibits -- v1.3
+- ✓ **README-06**: README includes link to pattern158.solutions website and contact info -- v1.3
+- ✓ **META-01**: pattern158.solutions repo description updated to reflect professional portfolio -- v1.3
+- ✓ **META-02**: pattern158.solutions repo homepage URL set to https://pattern158.solutions -- v1.3
+- ✓ **META-03**: pattern158.solutions repo has domain-specific topics (portfolio, accessibility, wcag, static-site) -- v1.3
+- ✓ **META-04**: All visible original repos have descriptive one-liner descriptions -- v1.3
+- ✓ **META-05**: eLearning-relevant forks have descriptions clarifying professional context -- v1.3
+- ✓ **FORK-01**: Hobby/personal forks archived (~25 repos) -- v1.3
+- ✓ **FORK-02**: eLearning-relevant forks kept visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices) -- v1.3
+- ✓ **PIN-01**: 3-6 repos pinned in strategic order (flagship first, then technical depth) -- v1.3
+- ✓ **PIN-02**: pattern158.solutions pinned in position 1 as flagship repo -- v1.3
 
 ### Active
 
-<!-- Current milestone: v1.3 GitHub Profile Brand Alignment -->
+<!-- No active milestone. Use /gsd:new-milestone to start next. -->
 
-## Current Milestone: v1.3 GitHub Profile Brand Alignment
-
-**Goal:** Align the GitHub profile (github.com/novakda) with the professional identity established on pattern158.solutions — update bio, create profile README, curate repos, and link the website.
-
-**Target features:**
-- Update GitHub bio and profile settings to match professional brand
-- Create hybrid profile README (novakda/novakda repo) with brand headline + GitHub-native content
-- Update pattern158.solutions repo metadata (description, homepage, topics)
-- Archive hobby/personal forks to reduce noise
-- Keep eLearning-relevant forks visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
-- Pin key repos for professional presentation
+(No active milestone)
 
 ### Out of Scope
 
@@ -120,9 +127,9 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ## Context
 
-Shipped v1.2 with ~15,579 LOC (11,652 HTML + 3,927 CSS) across 22 pages. Tech stack: static HTML, single CSS file with cascade layers, 80+ design tokens (colors, fonts, spacing, shadows, font-sizes), Stylelint enforcement, minimal vanilla JS (theme toggle, hamburger menu), Playwright + axe-core automated accessibility test suite. No build tools, no frameworks, no runtime dependencies.
+Shipped v1.3 with ~15,579 LOC (11,652 HTML + 3,927 CSS) across 22 pages. Tech stack: static HTML, single CSS file with cascade layers, 80+ design tokens (colors, fonts, spacing, shadows, font-sizes), Stylelint enforcement, minimal vanilla JS (theme toggle, hamburger menu), Playwright + axe-core automated accessibility test suite. No build tools, no frameworks, no runtime dependencies. GitHub profile fully aligned with site brand.
 
-v1.0 established the foundation (2026-02-10 to 2026-02-19): CSS extraction, dark mode, navigation, SEO, performance. v1.1 audited and polished CSS architecture, content quality, layout spacing, typography hierarchy, and color accessibility (2026-02-20 to 2026-02-21). v1.2 added 3 Rustici-targeted exhibits, standardized all 14 exhibits to NTSB structure, achieved 100% WCAG AA compliance with 270/270 automated tests, and built a permanent accessibility test suite (2026-02-21 to 2026-02-22).
+v1.0 established the foundation (2026-02-10 to 2026-02-19): CSS extraction, dark mode, navigation, SEO, performance. v1.1 audited and polished CSS architecture, content quality, layout spacing, typography hierarchy, and color accessibility (2026-02-20 to 2026-02-21). v1.2 added 3 Rustici-targeted exhibits, standardized all 14 exhibits to NTSB structure, achieved 100% WCAG AA compliance with 270/270 automated tests, and built a permanent accessibility test suite (2026-02-21 to 2026-02-22). v1.3 aligned the GitHub profile with the site brand — profile README, curated metadata, archived hobby forks, and 5 strategically pinned repos (2026-02-22).
 
 This website was originally developed as part of a broader "Career Documentation Refactoring" GSD project in an Obsidian vault. The website-specific work was factored out to this standalone repository. This repo is now the source of truth.
 
@@ -185,6 +192,13 @@ This website was originally developed as part of a broader "Career Documentation
 | Chromium + Firefox testing (WebKit disabled) | WSL limitation; covers 95%+ audience | ✓ Good |
 | Retroactive Phase 12 verification (via Phase 16) | Quick execution skipped formal QA; retroactive verification closed the gap | ✓ Good |
 | Public accessibility statement page | Footer-linked across all pages; demonstrates commitment to WCAG compliance | ✓ Good |
+| 60% NTSB / 40% GitHub-native for profile README | Title Case headers, narrative skills section, subtle brand alignment without alienating GitHub conventions | ✓ Good |
+| Bio character allocation: 124/160 chars | Prioritized domain expertise + tech stack + availability + tagline | ✓ Good |
+| 31 repos made private, 8 remain public | Clean professional signal; only repos with evaluator/researcher value visible | ✓ Good |
+| Separate WCAG and SCORM topic vocabularies | aria-practices/wai-tutorials get accessibility topics only; SCORM repos get scorm/elearning/lms topics | ✓ Good |
+| Archive eLearning forks (not delete) | "Evaluated and preserved" signal; archived is reversible and preserves history | ✓ Good |
+| 5 pins over 6 for narrative coherence | Flagship + profile intro + accessibility depth + eLearning domain; 6th slot would dilute signal | ✓ Good |
+| dewordify instead of SCOBot for pin position 4 | User preference; both meet quality bar and signal eLearning domain depth | ✓ Good |
 
 ---
-*Last updated: 2026-02-22 after v1.3 milestone start*
+*Last updated: 2026-02-23 after v1.3 milestone completion*
