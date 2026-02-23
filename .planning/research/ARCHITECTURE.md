@@ -1,724 +1,852 @@
-# Architecture Research: GitHub Profile Brand Alignment
+# Architecture Research
 
-**Domain:** GitHub profile integration with static portfolio website
+**Domain:** LinkedIn Profile Optimization (Cross-Platform Professional Brand Integration)
 **Researched:** 2026-02-22
-**Confidence:** HIGH
+**Confidence:** MEDIUM
 
-## System Overview
+## Standard Architecture
+
+### Three-Platform Ecosystem
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     GitHub Profile Layer                     │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────┐  ┌──────────────┐  ┌──────────────┐        │
-│  │   Bio (160  │  │  novakda/    │  │   Pinned     │        │
-│  │    chars)   │  │  novakda     │  │    Repos     │        │
-│  │             │  │  (Profile    │  │  (up to 6)   │        │
-│  │             │  │   README)    │  │              │        │
-│  └──────┬──────┘  └──────┬───────┘  └──────┬───────┘        │
-│         │                │                 │                │
-│         └────────────────┼─────────────────┘                │
-│                          │                                  │
-│         References pattern158.solutions                     │
-│                          │                                  │
-├──────────────────────────┼──────────────────────────────────┤
-│                  Repository Metadata Layer                  │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  novakda/pattern158.solutions                       │    │
-│  │  - Description: Short summary (links to website)    │    │
-│  │  - Homepage: https://pattern158.solutions           │    │
-│  │  - Topics: Up to 20 keywords for discoverability    │    │
-│  │  - About section: Rich metadata                     │    │
-│  └────────────────────────┬────────────────────────────┘    │
-│                           │                                 │
-│         Other original repos (curated metadata)             │
-│                           │                                 │
-├───────────────────────────┼─────────────────────────────────┤
-│                  Static Website Layer                       │
-├─────────────────────────────────────────────────────────────┤
-│  ┌─────────────────────────────────────────────────────┐    │
-│  │  pattern158.solutions (Static HTML Site)            │    │
-│  │  - 22 HTML pages (no build tools)                   │    │
-│  │  - Single CSS file with design tokens               │    │
-│  │  - Contact page: GitHub + LinkedIn links            │    │
-│  │  - Footer: GitHub link across all pages             │    │
-│  └─────────────────────────────────────────────────────┘    │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│                    DIGITAL BRAND ECOSYSTEM                       │
+├─────────────────────────────────────────────────────────────────┤
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
+│  │   LINKEDIN   │  │   WEBSITE    │  │    GITHUB    │          │
+│  │              │  │              │  │              │          │
+│  │ Discovery &  │  │  Deep Dive   │  │  Technical   │          │
+│  │  First       │  │   Content    │  │    Proof     │          │
+│  │ Impression   │  │              │  │              │          │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘          │
+│         │                 │                 │                  │
+│         └────────┬────────┴────────┬────────┘                  │
+│                  │                 │                           │
+│         ┌────────▼─────────────────▼────────┐                  │
+│         │   Bidirectional Cross-Links       │                  │
+│         │   (Featured, About, Contact)      │                  │
+│         └───────────────────────────────────┘                  │
+│                                                                 │
+│  BRAND CONSISTENCY LAYER                                        │
+│  • Visual identity (navy/teal/cream palette)                    │
+│  • Voice/tone (NTSB investigation aesthetic)                    │
+│  • Positioning (engineering-first, forensic methodology)        │
+│  • Content (traceable to primary sources)                       │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
-**Data Flow Direction:**
-- **Brand content flows:** Website → GitHub (one-way)
-- **Portfolio site is source of truth** for professional identity
-- **GitHub profile amplifies** the brand with platform-native features
-- **Cross-linking is bidirectional** but content authority is unidirectional
+### Platform Responsibilities
 
-## Integration Points
+| Platform | Primary Function | Content Focus | Audience |
+|----------|------------------|---------------|----------|
+| **LinkedIn** | Discovery & credibility signal | Professional highlights, keyword optimization for recruiter search | Recruiters, hiring managers, professional network |
+| **Website (pattern158.solutions)** | Deep portfolio exploration | 14 detailed case studies, brand philosophy, comprehensive technical depth | Serious evaluators, potential clients, engineers |
+| **GitHub** | Technical proof & activity signal | Code quality, contribution history, technical documentation | Technical evaluators, engineering teams |
 
-### 1. GitHub Profile Bio → Website
-**What:** 160-character bio field on GitHub profile
-**Integration:** References pattern158.solutions with tagline or role
-**Source:** [GitHub's documentation](https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile), [character limit research](https://github.com/dead-claudia/github-limits)
-**Confidence:** HIGH
+### Information Architecture: LinkedIn Profile Structure
 
-**Example pattern:**
+LinkedIn profiles follow a top-to-bottom priority hierarchy with strict section ordering:
+
 ```
-Dan Novak | Systems Architect | pattern158.solutions | 28 years rescuing enterprise systems. "I cheat, but I cheat fair."
-```
-
-**Trade-offs:**
-- ✓ Appears at top of profile, highly visible
-- ✓ Indexed by search engines
-- ✗ 160-character hard limit (no flexibility)
-- ✗ No Markdown support, plain text only
-
-### 2. Profile README Repository (novakda/novakda) → Website
-**What:** Special repository that displays README.md on profile page
-**Integration:** Hybrid approach combining brand headline with GitHub-native stats/activity
-**Source:** [GitHub official docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)
-**Confidence:** HIGH
-
-**Repository structure:**
-```
-novakda/novakda/
-├── README.md           # Profile content (required, root level)
-└── .github/            # Optional: workflows for dynamic content
-    └── workflows/
-        └── update.yml  # Optional: auto-update stats
-```
-
-**Requirements (all mandatory):**
-1. Repository name MUST match username exactly: `novakda`
-2. Repository MUST be public
-3. File MUST be named `README.md` in root
-4. Content can be anything (Markdown supported)
-
-**Recommended content sections:**
-```markdown
-# [Brand headline from pattern158.solutions]
-
-[1-2 sentence positioning statement]
-
-🔗 **Portfolio:** [pattern158.solutions](https://pattern158.solutions)
-
-## Current Focus
-[What you're working on now]
-
-## Expertise
-[3-5 key areas from website]
-
-## Featured Projects
-[Links to pinned repos with context]
-
-## Stats
-[Optional: GitHub stats badges/widgets]
+┌───────────────────────────────────────────────────────────┐
+│ 1. HEADER (fixed position)                                │
+│    • Name, photo, banner image                            │
+│    • Headline (220 chars, algorithm-weighted #1)          │
+│    • Current position, location, contact                  │
+│    • Custom URL (branding asset)                          │
+├───────────────────────────────────────────────────────────┤
+│ 2. ABOUT (2,600 char limit)                               │
+│    • First 200-300 chars visible without "see more"       │
+│    • Hook → Story → Achievements → CTA                    │
+│    • Keyword-rich but conversational                      │
+├───────────────────────────────────────────────────────────┤
+│ 3. FEATURED (up to 30% more profile views)                │
+│    • 3-5 curated portfolio items                          │
+│    • External links, media, posts, articles               │
+│    • Custom titles & thumbnails                           │
+│    • Drag-reorder for priority                            │
+├───────────────────────────────────────────────────────────┤
+│ 4. ACTIVITY (recent posts, visible for 14 days)           │
+├───────────────────────────────────────────────────────────┤
+│ 5. EXPERIENCE (most recent always first)                  │
+│    • 2-3 sentence opening summary per role                │
+│    • 3-6 bullet points (current: 8, older: 2-3)           │
+│    • Achievements > responsibilities                      │
+│    • Quantifiable metrics required                        │
+├───────────────────────────────────────────────────────────┤
+│ 6. EDUCATION                                              │
+├───────────────────────────────────────────────────────────┤
+│ 7. SKILLS (27x more likely to be found with 5+ skills)    │
+│    • Specific tools > broad categories                    │
+│    • "Python" > "data analysis"                           │
+│    • "Salesforce" > "CRM"                                 │
+├───────────────────────────────────────────────────────────┤
+│ 8. RECOMMENDATIONS                                        │
+├───────────────────────────────────────────────────────────┤
+│ 9. CERTIFICATIONS, LANGUAGES, PROJECTS (reorderable)      │
+└───────────────────────────────────────────────────────────┘
 ```
 
-**Trade-offs:**
-- ✓ Full Markdown support (headings, links, images, code blocks)
-- ✓ No length limits
-- ✓ Can include dynamic content (via GitHub Actions)
-- ✓ High visibility on profile
-- ✗ Requires maintaining separate repository
-- ✗ Can become stale if not updated
-
-### 3. Repository Metadata → Website
-**What:** Description, homepage URL, topics for novakda/pattern158.solutions and other repos
-**Integration:** Repo metadata points to website, uses brand language from site content
-**Source:** [GitHub SEO guide](https://www.gitdevtool.com/blog/github-seo), [metadata documentation](https://metaremover.com/articles/en/metadata-github)
-**Confidence:** HIGH
-
-**Metadata fields per repository:**
-
-| Field | Purpose | Best Practice | Example (pattern158.solutions) |
-|-------|---------|---------------|--------------------------------|
-| **Description** | 1-line summary, appears in search | Use keywords from website meta description | "Professional portfolio: 28 years systems architecture, eLearning engineering, NTSB investigation aesthetic" |
-| **Homepage** | External link, highly visible | Always link to pattern158.solutions | `https://pattern158.solutions` |
-| **Topics** | Discoverability tags (max 20) | Technology + domain keywords | `portfolio`, `static-site`, `wcag-aa`, `systems-architecture`, `elearning`, `accessibility` |
-| **About section** | Rich metadata | Combine description + topics | Auto-populated from above |
-
-**SEO considerations:**
-- GitHub topics are **exact match** for search (no fuzzy matching)
-- Single-word topics preferred (multi-word get hyphenated: `static-site`)
-- Description is **heavily weighted** in GitHub search algorithm
-- Homepage URL appears prominently, drives external traffic
-- Source: [GitHub SEO optimization](https://www.codemotion.com/magazine/dev-life/github-project/)
-
-**Trade-offs:**
-- ✓ Low maintenance (set once, rarely changes)
-- ✓ High SEO value on GitHub
-- ✓ Clear connection to portfolio site
-- ✗ Topics limited to 20 per repo
-- ✗ Description limited to ~250 characters (soft limit)
-
-### 4. Pinned Repositories → Portfolio Page
-**What:** Up to 6 pinned items (repos or gists) displayed prominently on profile
-**Integration:** Pinned repos should mirror featured projects on pattern158.solutions/portfolio.html
-**Source:** [GitHub pinning docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile), [professional strategy](https://underdog.io/blog/how-to-make-your-github-more-impressive-to-employers)
-**Confidence:** HIGH
-
-**Strategic pinning order (6 slots):**
-
-| Position | Purpose | Example | Rationale |
-|----------|---------|---------|-----------|
-| 1 | Flagship/Portfolio | novakda/pattern158.solutions | Primary professional presence, links to full portfolio |
-| 2 | Most technically impressive | [Strongest original project] | Demonstrates depth (87% of recruiters check GitHub) |
-| 3 | Most professionally complete | [Project with CI/CD, tests, docs] | Shows production-ready practices |
-| 4 | Domain expertise showcase | [eLearning-related if available] | Reinforces specialization from website |
-| 5 | Unique/Creative work | [Novel implementation or tool] | Differentiator, personality |
-| 6 | Community contribution | [Maintained fork or tool others use] | Collaboration, open-source citizenship |
-
-**Pinning criteria:**
-- ✓ Complete README with clear purpose
-- ✓ Description matches repo content
-- ✓ Active/maintained (not abandoned)
-- ✓ Aligns with professional brand from website
-- ✗ Avoid: Tutorials, toy projects, forks without contribution
-- Source: [Repository selection strategy](https://www.starfolio.dev/blog/complete-guide-repository-analytics)
-
-**Alignment with portfolio page:**
-- Portfolio page exhibits should be **referenced** in pinned repo READMEs
-- If exhibit demonstrates a private project, consider creating a **public case study repo** to pin
-- Pinned repos act as **technical proof** for portfolio case studies
-
-**Trade-offs:**
-- ✓ High visibility (first thing visitors see)
-- ✓ Curates professional narrative
-- ✓ Can be reordered anytime
-- ✗ Only 6 slots (must choose carefully)
-- ✗ Can't pin private repos
-
-### 5. Fork Management → Repository Visibility
-**What:** Archiving hobby/personal forks, keeping eLearning-relevant forks visible
-**Integration:** Reduces noise, focuses profile on professional identity from website
-**Source:** [GitHub archiving docs](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories), [fork cleanup guide](https://www.jumpingrivers.com/blog/github-clean-remove-forks/)
-**Confidence:** HIGH
-
-**Archive vs. Delete decision matrix:**
-
-| Scenario | Action | Reason |
-|----------|--------|--------|
-| One-off contribution, no ongoing interest | **Archive** | Preserves history, shows contribution |
-| Hobby/personal experiment, no professional value | **Delete** | Reduces profile noise |
-| eLearning-relevant fork (SCOBot, lms-content-template, etc.) | **Keep visible** | Demonstrates domain expertise |
-| Fork with significant custom work | **Keep visible** + add description | Shows your contributions |
-| Fork you might reference later | **Archive** | Reversible, keeps code accessible |
-
-**Effects of archiving:**
-- Repository becomes **read-only** (issues, PRs, code all locked)
-- Displays **"Archived" badge** on repo page
-- **Excluded from search by default** (can be included with filter)
-- **Fully reversible** (unarchive anytime)
-- **No billing impact** (free for public repos)
-- Source: [Archiving documentation](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)
-
-**eLearning-relevant forks to KEEP visible:**
-- SCOBot (SCORM testing tool)
-- lms-content-template (course structure)
-- dewordify (content simplification)
-- wai-tutorials (accessibility reference)
-- aria-practices (a11y implementation)
-- **Add custom descriptions** explaining professional relevance
-
-**Trade-offs:**
-- ✓ Archive is reversible (safe choice)
-- ✓ Reduces visual clutter on profile
-- ✓ Focuses visitor attention on original work
-- ✗ Archived repos still appear in total count
-- ✗ Requires manual review of all 30 forks
-
-### 6. GitHub Links on Website → GitHub Profile
-**What:** Bidirectional linking between portfolio site and GitHub
-**Integration:** Already exists (contact page, footer), ensure consistency after profile updates
-**Confidence:** HIGH
-
-**Current website → GitHub links:**
-- Contact page: `https://github.com/novakda` (explicit button)
-- Footer: `https://github.com/novakda` (text link, all 22 pages)
-- Source: Contact page analysis
-
-**Future GitHub → Website links:**
-- Bio field: "pattern158.solutions" text reference
-- Profile README: Prominent link to `https://pattern158.solutions`
-- Repo metadata: Homepage field on pattern158.solutions repo
-- Pinned repo READMEs: Link to specific portfolio exhibits
-
-**SEO benefits:**
-- Bidirectional links strengthen both domains
-- GitHub has high domain authority (SEO boost for portfolio)
-- Portfolio provides context for GitHub activity
-- Source: [GitHub SEO strategy](https://www.codemotion.com/magazine/dev-life/github-project/)
-
-**Trade-offs:**
-- ✓ No code changes needed on website
-- ✓ Strengthens brand cohesion
-- ✓ Multiple discovery paths for visitors
-- ✗ Must maintain link accuracy as content evolves
+**Source:** [LinkedIn Help - Profile Sections](https://www.linkedin.com/help/linkedin/answer/15493), verified MEDIUM confidence from WebSearch findings.
 
 ## Recommended Project Structure
 
-### New Repository: novakda/novakda
+For a LinkedIn profile overhaul integrated with an existing brand ecosystem (pattern158.solutions), follow this build order:
+
+### Build Order (Dependency-Driven)
 
 ```
-novakda/novakda/
-├── README.md                    # Profile content (PUBLIC)
-├── .gitignore                   # Standard ignores
-└── .github/                     # Optional: automation
-    └── workflows/
-        └── update-stats.yml     # Optional: dynamic content updates
+Phase 1: Foundation (everything else depends on these)
+├── 1.1 Keyword Research
+│   └── Analyze 5-10 target job descriptions for recurring terms
+│       (feeds: headline, About, skills, experience bullets)
+│
+├── 1.2 Positioning Statement
+│   └── Define 1-2 sentence core identity
+│       (feeds: headline, About opening hook, Featured descriptions)
+│
+└── 1.3 Brand Asset Audit
+    └── Inventory existing content (website exhibits, GitHub repos)
+        (feeds: Featured section links, experience bullets)
+
+Phase 2: High-Impact Sections (60% of profile strength)
+├── 2.1 Headline (220 chars)
+│   └── Formula: [Job Title] + [Key Skill/Specialty] + [Industry/Result]
+│       Front-load most important keywords (mobile truncation)
+│
+├── 2.2 Custom URL
+│   └── linkedin.com/in/[firstname-lastname] or [name-domain]
+│       (3-100 chars, max 5 changes per 6 months)
+│
+├── 2.3 About Section (2,600 chars)
+│   └── Hook (first 200 chars) → Story (800 chars) → Achievements (1,200 chars) → CTA (400 chars)
+│       Keyword-rich but conversational, line breaks for scannability
+│
+└── 2.4 Featured Section (3-5 items)
+    └── Highest-converting asset first (e.g., strongest case study)
+        Custom titles, visual thumbnails, bidirectional links to website
+
+Phase 3: Recruiter Search Optimization
+├── 3.1 Skills Section
+│   └── Minimum 5 skills (27x more likely to be found)
+│       Specific tools/platforms > broad categories
+│       Order by relevance (top 3 most important)
+│
+└── 3.2 Experience Sections (all roles)
+    └── Opening summary (2-3 sentences) + 3-6 achievement bullets
+        Current role: up to 8 bullets
+        Older roles: 2-3 bullets minimum
+        Format: [Action verb] + [Skill] + [Metric/Result]
+
+Phase 4: Visual Branding
+├── 4.1 Banner Image (1584 x 396 px)
+│   └── Safe zone: center 1350 x 300 px for critical content
+│       Navy/teal/cream palette alignment with pattern158.solutions
+│       JPEG or PNG, max 8 MB
+│
+└── 4.2 Profile Photo
+    └── Professional headshot, brand-aligned if possible
+
+Phase 5: Polish & Credibility
+├── 5.1 Certifications (remove weak completions)
+├── 5.2 Recommendations (outreach for 1-2 strategic asks)
+└── 5.3 Contact Info Alignment (dan@pattern158.solutions)
 ```
 
-**README.md content strategy:**
+### Build Order Rationale
 
-**Hybrid approach (recommended):**
-- **Top section:** Brand identity from pattern158.solutions (tagline, positioning)
-- **Middle section:** GitHub-native content (current focus, recent activity)
-- **Bottom section:** Links to portfolio, contact, key repos
+1. **Keyword research first** because it feeds every subsequent section (headline, About, skills, experience bullets).
+2. **Positioning statement before content writing** to ensure consistency across sections.
+3. **Headline + About + Featured** are the 60% — these appear above the fold and drive profile views.
+4. **Skills after About** because you'll identify positioning keywords while writing narrative sections.
+5. **Experience last** because each role's bullets will reference Featured items and positioning language.
+6. **Visual branding after content** to avoid redesign work if content requirements change.
 
-**Anti-pattern to avoid:**
-- ✗ Duplicating entire portfolio content (use links instead)
-- ✗ Stale content (if can't maintain, keep it minimal)
-- ✗ Generic template text (personalize or omit)
+## Architectural Patterns
 
-**Template structure:**
-```markdown
-# Dan Novak | Systems Architect
-> "I cheat, but I cheat fair." — Pattern 158 philosophy
+### Pattern 1: Hub-and-Spoke Cross-Linking
 
-28 years rescuing enterprise systems. Specializing in legacy system integration,
-cross-platform solutions, and AI implementation.
+**What:** Portfolio website as the hub (comprehensive content), LinkedIn and GitHub as discovery spokes (targeted highlights with links back to hub).
 
-🔗 **Portfolio:** [pattern158.solutions](https://pattern158.solutions)
-📧 **Contact:** [dan@pattern158.solutions](mailto:dan@pattern158.solutions)
-💼 **LinkedIn:** [dan-novak-5692197](https://linkedin.com/in/dan-novak-5692197)
+**When to use:** When you have a flagship portfolio site with deep content that LinkedIn's character limits can't accommodate.
 
----
+**Trade-offs:**
+- **Pros:** Website remains single source of truth; LinkedIn/GitHub serve as marketing funnels; avoids content duplication/sync issues.
+- **Cons:** Requires users to click through (friction); LinkedIn algorithm favors native content over external links in posts (but Featured section is exempt).
 
-## Current Focus
-[1-2 sentences about current work or learning]
-
-## Expertise
-- Systems Architecture (28 years)
-- eLearning Engineering (SCORM, xAPI, LMS integration)
-- Legacy System Modernization
-- Cross-Platform Solutions (Windows/macOS/Linux)
-- AI Implementation & Integration
-
-## Featured Projects
-[Links to 3-4 pinned repos with brief context]
-
----
-
-📊 [Optional: GitHub stats widget or activity summary]
-```
-
-### Modified Repository: novakda/pattern158.solutions
-
-**No structural changes needed**, only metadata updates:
+**Implementation for pattern158.solutions:**
 
 ```
-Existing structure remains:
-pattern158.solutions/
-├── index.html
-├── philosophy.html
-├── contact.html
-├── [... other HTML files]
-├── css/
-│   └── main.css
-├── assets/
-└── [... rest of existing structure]
+LinkedIn (Discovery Layer)
+├── Featured Section: 3-5 pattern158.solutions exhibit links
+│   ├── "SCORM Debugger: TASBot for eLearning" → exhibit-m.html
+│   ├── "GM Investigation: Swiss Cheese Methodology" → exhibit-x.html
+│   └── "Power Platform AI Analysis: 2024" → [recent work]
+│
+├── About Section: Brand tagline + link to philosophy.html
+│
+└── Experience Bullets: "See detailed case study: [exhibit link]"
+
+Website (Content Hub)
+├── Contact page: LinkedIn profile link (bidirectional)
+├── Footer: LinkedIn + GitHub social links (all 22 pages)
+└── NEW: Back-link strategy
+    └── Consider adding "Connect on LinkedIn" CTA in hero or contact
+
+GitHub (Technical Proof)
+├── Profile README: Link to pattern158.solutions
+└── Pinned repos: Descriptions reference LinkedIn profile
 ```
 
-**Metadata updates (GitHub settings only):**
-- **Description:** "Professional portfolio: 28 years systems architecture, eLearning engineering, NTSB investigation aesthetic. 22 pages, static HTML, WCAG AA compliant."
-- **Homepage:** `https://pattern158.solutions`
-- **Topics:** `portfolio`, `static-site`, `wcag-aa`, `accessibility`, `systems-architecture`, `elearning`, `html-css`, `design-tokens`, `dark-mode`, `responsive-design`
+**Sources:**
+- [LinkedIn Portfolio Integration Guide](https://www.linkedhelper.com/blog/linkedin-portfolio/)
+- [Cross-Platform Branding Strategy](https://medium.com/career-programming/what-you-need-for-a-great-developer-website-github-and-linkedin-aa42a6e8a018)
 
-### Other Original Repositories
+**Confidence:** MEDIUM (WebSearch-verified, standard practice in 2026)
 
-**For each original repo (8 total), add:**
-1. **Clear description** explaining what it does (not just technology used)
-2. **Homepage link** (if applicable):
-   - Link to pattern158.solutions exhibit if project is featured
-   - Link to live demo if publicly accessible
-   - Leave blank if no external presence
-3. **Topics** (3-10 relevant keywords)
-4. **Complete README** with:
-   - Purpose/problem solved
-   - Tech stack
-   - Setup instructions
-   - Screenshots/demo (if applicable)
-   - Link to portfolio exhibit (if featured)
+### Pattern 2: Keyword Placement Hierarchy
 
-## Data Flow Patterns
+**What:** Strategic keyword distribution across 5 weighted profile sections to maximize recruiter search visibility.
 
-### Pattern 1: Brand Content Inheritance
+**When to use:** Always — LinkedIn's recruiter search algorithm weights sections differently.
 
-**What:** GitHub profile content derives from portfolio site, not vice versa
-**When to use:** Updating bio, profile README, repo descriptions after website changes
-**Trade-offs:** Single source of truth (website), but requires manual sync
+**Trade-offs:**
+- **Pros:** Dramatically increases discoverability (profiles with optimized keywords are 27x more likely to appear in searches).
+- **Cons:** Can feel formulaic if not balanced with authentic voice; requires quarterly updates as terminology shifts.
 
-**Flow:**
-```
-pattern158.solutions content (source of truth)
-    ↓
-Distill to GitHub bio (160 chars)
-    ↓
-Expand in profile README (with GitHub-specific content)
-    ↓
-Reference in repo descriptions (keyword alignment)
-```
-
-**Example:**
-- **Website meta description:** "Dan Novak - Systems architect with 28+ years rescuing enterprise systems. Specializing in legacy system integration, cross-platform solutions, and AI implementation."
-- **GitHub bio:** "Dan Novak | Systems Architect | pattern158.solutions | 28 years rescuing enterprise systems. Specializing in legacy integration, cross-platform solutions, AI."
-- **Profile README intro:** Same as website, expanded with current focus and GitHub-specific context
-- **Repo descriptions:** Use fragments ("Legacy system integration tool for...", "Cross-platform solution for...")
-
-### Pattern 2: Portfolio Exhibit → Pinned Repo Alignment
-
-**What:** Pinned repos should reinforce case studies on portfolio page
-**When to use:** Selecting which repos to pin, writing repo READMEs
-**Trade-offs:** Creates cohesive narrative, but limits pinning flexibility
-
-**Flow:**
-```
-Portfolio page exhibits (14 case studies)
-    ↓
-Identify which have public code repos (or can be created)
-    ↓
-Pin those repos + add README links to exhibits
-    ↓
-Visitors discover detailed case studies from GitHub
-```
-
-**Implementation:**
-1. **Portfolio exhibits with repos:** Pin the repo, add exhibit link in README
-2. **Portfolio exhibits without repos:** Consider creating a **case study repo** (docs-only) to pin
-3. **Repos without exhibits:** Use pinning slots for technical depth, not just portfolio overlap
-
-**Example case study repo structure:**
-```
-novakda/[project-name]-case-study/
-└── README.md    # Full case study: Challenge, Approach, Solution, Results
-                 # Links to pattern158.solutions/exhibits/[relevant-exhibit]
-                 # Can include code snippets, architecture diagrams
-                 # Even if project code is private, case study can be public
-```
-
-### Pattern 3: Fork Visibility Curation
-
-**What:** Archive or delete forks that don't align with professional brand
-**When to use:** During initial profile cleanup, then periodically (quarterly?)
-**Trade-offs:** Reduces noise, but requires ongoing maintenance
-
-**Decision tree:**
-```
-For each fork:
-    │
-    ├─ Does it demonstrate domain expertise (eLearning)? → KEEP + add description
-    ├─ Did I contribute code back? → KEEP + add description highlighting contribution
-    ├─ Might I reference it professionally? → ARCHIVE (reversible)
-    └─ Hobby/personal/one-off? → DELETE (or archive if uncertain)
-```
-
-**Maintenance cadence:**
-- **Initial cleanup:** Review all 30 forks, apply decision tree
-- **Ongoing:** Review new forks within 1 week of creation
-- **Periodic audit:** Quarterly review of forks (archive inactive)
-
-## Build Order for Implementation
-
-### Phase Dependencies
-
-The following order respects technical and logical dependencies:
+**Weighting hierarchy (highest to lowest):**
 
 ```
-Bio/Profile Settings
-    ↓
-Profile README Repo (novakda/novakda)
-    ↓
-Repository Metadata Updates
-    ↓
-Fork Archival/Cleanup
-    ↓
-Pinned Repositories Selection
+1. Headline (220 chars) ─────────────────── Highest algorithm weight
+   └── Front-load primary keyword (mobile truncation after ~50 chars)
+
+2. About Section (2,600 chars) ──────────── High weight
+   └── Integrate keywords naturally in opening hook + body
+
+3. Current Experience (top role) ────────── Medium-high weight
+   └── Job title + first 2 bullets most important
+
+4. Skills Section ───────────────────────── Medium weight
+   └── First 5 skills critical (27x search multiplier)
+
+5. Past Experience ──────────────────────── Medium-low weight
+   └── Older roles less weighted but still indexed
 ```
 
-**Rationale:**
-1. **Bio first:** Appears at top of profile, sets context for everything below
-2. **Profile README second:** Elaborates on bio, provides detail before visitors browse repos
-3. **Repo metadata third:** Ensures repos have clear descriptions before pinning/archiving
-4. **Fork cleanup fourth:** Reduces noise before curating pins
-5. **Pinning last:** Final curation after all content is polished
+**Example for pattern158.solutions positioning:**
 
-### Phase 1: Bio and Profile Settings
-**Changes:** GitHub profile settings only (no repos)
-**Dependencies:** Content from pattern158.solutions (already exists)
-**Confidence:** HIGH
+```
+Headline (engineering-first):
+"Senior Software Engineer | React, TypeScript, Node.js | eLearning Systems & Forensic Investigation Methodology"
 
-**Updates:**
-- Bio field (160 chars max)
-- Name: "Dan Novak"
-- Location: "Portland, OR"
-- Company/Workplace: "Pattern 158 Solutions" or blank
-- Website: `https://pattern158.solutions`
-- Social accounts: LinkedIn link
-- Pronouns: (optional)
+Skills Section (specific > broad):
+✓ React, TypeScript, Node.js, Python, SQL
+✓ SCORM, xAPI, Accessibility (WCAG), Power Platform
+✗ Avoid: "Web Development", "Problem Solving", "Teamwork"
 
-**Verification:**
-- Bio references pattern158.solutions
-- Bio includes tagline or role
-- All fields consistent with website
-
-### Phase 2: Profile README Repository
-**Changes:** Create new public repo: novakda/novakda
-**Dependencies:** Bio must be set (for consistency)
-**Confidence:** HIGH
-
-**Steps:**
-1. Create public repo named `novakda`
-2. Create `README.md` in root (required)
-3. Write content using hybrid template (brand + GitHub-native)
-4. Commit and verify display on profile page
-
-**Content checklist:**
-- [ ] Brand headline (from website)
-- [ ] Link to pattern158.solutions (prominent)
-- [ ] Contact email
-- [ ] Expertise list (from website)
-- [ ] Current focus (1-2 sentences)
-- [ ] Featured projects (will align with pins later)
-- [ ] Optional: GitHub stats widget
-
-**Verification:**
-- README displays on github.com/novakda
-- All links work
-- Content matches website tone/brand
-- No typos or formatting issues
-
-### Phase 3: Repository Metadata Updates
-**Changes:** Modify settings for novakda/pattern158.solutions and other original repos
-**Dependencies:** Profile README complete (for cross-reference consistency)
-**Confidence:** HIGH
-
-**For pattern158.solutions repo:**
-- Description: Portfolio summary + tech stack
-- Homepage: `https://pattern158.solutions`
-- Topics: `portfolio`, `static-site`, `wcag-aa`, `accessibility`, `systems-architecture`, `elearning`, `html-css`, `design-tokens`, `dark-mode`, `responsive-design`
-
-**For other original repos (apply to all 8):**
-- Description: Clear problem/solution statement (not just tech)
-- Homepage: Link to exhibit if featured, else blank
-- Topics: 3-10 relevant keywords (single-word preferred)
-- README: Ensure completeness (purpose, setup, tech stack)
-
-**Verification:**
-- All repos have descriptions
-- Topics use single words (hyphenated if needed)
-- Homepage links work (if present)
-- No generic/placeholder text
-
-### Phase 4: Fork Archival and Cleanup
-**Changes:** Archive or delete hobby/personal forks
-**Dependencies:** Repo metadata complete (need to identify what's valuable)
-**Confidence:** MEDIUM (requires judgment calls)
-
-**eLearning forks to KEEP (with custom descriptions):**
-- SCOBot: "SCORM conformance testing tool — industry standard for LMS QA"
-- lms-content-template: "Course structure template for SCORM/xAPI content"
-- dewordify: "Content simplification tool for accessible eLearning"
-- wai-tutorials: "W3C accessibility implementation patterns — reference for WCAG compliance"
-- aria-practices: "ARIA authoring practices — accessibility engineering reference"
-
-**For remaining ~25 forks, apply decision tree:**
-1. Review each fork
-2. Determine: KEEP, ARCHIVE, or DELETE
-3. For KEEP: Add custom description explaining professional relevance
-4. For ARCHIVE: Go to Settings → Archive this repository
-5. For DELETE: Go to Settings → Delete this repository (confirm carefully)
-
-**Verification:**
-- Only professional/domain-relevant forks visible
-- All kept forks have descriptions
-- No hobby/personal forks in default view
-- Total fork count reduced (or archived forks marked clearly)
-
-### Phase 5: Pinned Repositories Selection
-**Changes:** Pin up to 6 repos on profile
-**Dependencies:** All above phases (bio, README, metadata, forks cleaned)
-**Confidence:** HIGH
-
-**Pinning strategy (6 slots):**
-1. **novakda/pattern158.solutions** (flagship)
-2. **[Most technically impressive original repo]** (depth)
-3. **[Most professionally complete repo]** (CI/CD, tests, docs)
-4. **[eLearning domain showcase]** (fork or original)
-5. **[Unique/creative work]** (differentiator)
-6. **[Community contribution or maintained fork]** (collaboration)
-
-**Steps:**
-1. Go to github.com/novakda
-2. Click "Customize your pins"
-3. Select up to 6 repos/gists
-4. Arrange in strategic order (1-6 above)
-5. Save
-
-**Verification:**
-- 6 repos pinned (or fewer if not enough quality repos)
-- Order follows strategy
-- All pinned repos have complete READMEs
-- Pinned repos align with portfolio page narrative
-
-## Architectural Anti-Patterns
-
-### Anti-Pattern 1: Duplicating Portfolio Content on GitHub
-
-**What people do:** Copy entire case studies, testimonials, or site content to profile README
-**Why it's wrong:**
-- Creates **maintenance burden** (two places to update)
-- **Stale content risk** (README falls behind website)
-- **Dilutes traffic** (visitors read on GitHub instead of visiting portfolio)
-- **Weakens SEO** (duplicate content across domains)
-
-**Do this instead:**
-- **Profile README:** Brief intro + link to full portfolio
-- **Repo READMEs:** Technical details + link to case study exhibit
-- **Single source of truth:** pattern158.solutions remains authoritative
-
-**Example:**
-```markdown
-✗ BAD: Copying exhibit-a.html content to profile README
-
-✓ GOOD:
-## Featured Work: LMS Integration Architecture
-Designed cross-platform LMS integration framework serving 50K users across
-10 enterprise clients. [Read full case study →](https://pattern158.solutions/exhibits/exhibit-a.html)
+About Section (keyword-rich but conversational):
+"I build engineering tools for complex systems — from eLearning standards
+compliance debuggers to AI conversation analysis platforms. My forensic
+investigation methodology (NTSB-inspired) has uncovered root causes in
+aerospace training systems, military LMS platforms, and energy sector
+eLearning deployments..."
 ```
 
-### Anti-Pattern 2: Generic/Template README Without Personalization
+**Sources:**
+- [LinkedIn Keywords Optimization Guide](https://connectsafely.ai/articles/linkedin-keywords-optimization-guide-2026)
+- [Recruiter Search Filters 2026](https://www.leonar.app/blog/linkedin-recruiter-search-filters)
 
-**What people do:** Use profile README generators, leave placeholder text, generic badges
-**Why it's wrong:**
-- **Reduces credibility** (looks like you didn't care)
-- **Misses brand alignment** (doesn't reinforce pattern158.solutions identity)
-- **Wasted visibility** (high-traffic page with no value)
+**Confidence:** HIGH (official LinkedIn recruiter tool documentation + multiple authoritative sources)
 
-**Do this instead:**
-- Write **custom content** reflecting website brand voice
-- Use tagline from philosophy page
-- Skip badges/widgets unless they add real value
-- Keep it minimal if you can't maintain it (minimal > stale)
+### Pattern 3: Dual-Audience Experience Bullets
 
-**Example:**
-```markdown
-✗ BAD: "Hi 👋, I'm [Name]. I'm a passionate developer..."
+**What:** Structure experience bullets to satisfy both human readers (storytelling, context) and recruiter keyword searches (specifics, metrics).
 
-✓ GOOD:
-# Dan Novak | Systems Architect
-> "I cheat, but I cheat fair." — Pattern 158 philosophy
+**When to use:** All experience entries, especially current role and recent 3-5 years.
 
-28 years rescuing enterprise systems. Specializing in legacy system integration,
-cross-platform solutions, and AI implementation.
+**Trade-offs:**
+- **Pros:** Passes recruiter Boolean searches AND engages hiring managers who read closely.
+- **Cons:** Requires more effort than generic responsibility lists; needs regular updates.
+
+**Formula:**
+
+```
+[Action Verb] + [Specific Tool/Skill] + [Context] + [Quantifiable Result]
+
+Examples:
+
+Generic (fails both audiences):
+"Responsible for eLearning development and troubleshooting."
+
+Keyword-stuffed (passes search, fails humans):
+"SCORM, xAPI, JavaScript, LMS, troubleshooting, debugging, development."
+
+Dual-audience optimized:
+"Built open-source SCORM debugger (JavaScript/React) used by 500+
+developers, reducing content troubleshooting time by 60%."
+                │                    │                  │
+         [Specific tech]     [Quantifiable impact]  [Metric]
 ```
 
-### Anti-Pattern 3: Pinning Low-Quality or Irrelevant Repos
+**Pattern158.solutions implementation:**
 
-**What people do:** Pin repos because they're recent, popular, or fill all 6 slots
-**Why it's wrong:**
-- **First impression matters** (87% of recruiters check GitHub)
-- **Dilutes professional narrative** (hobby projects next to portfolio)
-- **Wastes valuable real estate** (only 6 slots)
+```
+Current Role (8 bullets max):
+├── Opening summary (2-3 sentences): Set context, current focus
+├── Bullet 1-2: Most impressive recent work (2024-2026 modern stack)
+│   └── "Analyzed Microsoft Copilot Studio conversation patterns across
+│        42 Power Platform implementations, identifying 3 architectural
+│        anti-patterns causing 40% token waste."
+├── Bullet 3-5: Core domain expertise (SCORM, accessibility, systems)
+│   └── "Designed WCAG AA-compliant eLearning platform serving 15K+ users,
+│        achieving 270/270 automated accessibility tests (Playwright/axe-core)."
+└── Bullet 6-8: Differentiators (forensic methodology, investigation work)
+    └── "Applied NTSB Swiss cheese model to GM LMS failure investigation,
+         uncovering 4-layer system breakdown missed by prior audits."
 
-**Do this instead:**
-- Pin **only high-quality** repos (okay to use <6 slots)
-- Ensure **every pinned repo** has complete README
-- Align pins with **portfolio narrative**
-- Unpin repos that don't meet quality bar
+Older Roles (2-3 bullets):
+└── Focus on transferable achievements, skip dated technology
+```
 
-**Quality checklist for pinning:**
-- [ ] Complete README (purpose, setup, tech stack)
-- [ ] Clear description matching content
-- [ ] Active or complete (not abandoned mid-development)
-- [ ] Aligns with professional brand from website
-- [ ] Code quality representative of your best work
+**Sources:**
+- [LinkedIn Experience Section Optimization](https://anagoehner.com/linkedin-experience-section/)
+- [Writing Achievement-Focused Bullets](https://pursuenetworking.com/blog/linkedin-experience-section-examples/)
 
-### Anti-Pattern 4: Forgetting to Maintain After Initial Setup
+**Confidence:** HIGH (multiple authoritative sources + standard best practice)
 
-**What people do:** Set up profile once, never update bio/README/pins
-**Why it's wrong:**
-- **Stale "current focus"** loses credibility
-- **Outdated links** if website structure changes
-- **Missed opportunities** (new projects, skills, accomplishments)
-- **Profile/website divergence** (brand confusion)
+## Data Flow
 
-**Do this instead:**
-- **Review quarterly:** Bio, README, pinned repos, fork cleanup
-- **Update promptly** when website changes (new exhibits, contact info)
-- **Calendar reminder:** "Review GitHub profile" every 3 months
-- **Minimal maintenance mode:** If can't maintain, keep README brief (better than stale)
+### User Journey: Recruiter Discovery → Evaluation → Contact
 
-**Quarterly review checklist:**
-- [ ] Bio still accurate? (role, specialization)
-- [ ] Profile README current focus updated?
-- [ ] New projects worth pinning?
-- [ ] Any repos to archive? (forks, old experiments)
-- [ ] All links to website still work?
-- [ ] Any new website exhibits to reference?
+```
+1. DISCOVERY (LinkedIn Recruiter Search)
+   ↓
+   Recruiter runs Boolean: "React AND TypeScript AND SCORM"
+   ↓
+   LinkedIn algorithm scans: Headline → About → Skills → Experience
+   ↓
+   Profile appears in search results (if keywords present)
+
+2. FIRST IMPRESSION (Above-the-fold scan, 6-10 seconds)
+   ↓
+   Recruiter reads:
+   ├── Headline: "Is this the right role/level?"
+   ├── Photo/Banner: "Professional enough to present to client?"
+   └── About (first 200 chars): "Does this hook match our needs?"
+   ↓
+   Decision: Click "see more" or move to next candidate
+
+3. EVALUATION (Deep dive, 2-3 minutes)
+   ↓
+   Recruiter reviews:
+   ├── Featured Section: "What's their best work?"
+   │   └── Clicks through to pattern158.solutions exhibits
+   ├── Experience: "Do they have relevant achievements?"
+   │   └── Scans bullets for metrics and specifics
+   └── Skills + Recommendations: "Who vouches for them?"
+   ↓
+   Decision: InMail/message or disqualify
+
+4. TECHNICAL VALIDATION (Hiring manager handoff)
+   ↓
+   Hiring manager:
+   ├── Reviews pattern158.solutions case studies (deep content)
+   ├── Checks GitHub pinned repos (code quality)
+   └── Returns to LinkedIn for recommendations/network overlap
+   ↓
+   Decision: Interview or pass
+```
+
+### Cross-Platform Link Flow (Bidirectional)
+
+```
+INBOUND TO LINKEDIN:
+┌─────────────────────────────────────────────────────────┐
+│ Google Search: "Dan Novak eLearning"                    │
+│   ↓                                                      │
+│ pattern158.solutions ranks (strong SEO)                 │
+│   ↓                                                      │
+│ User clicks "Contact" or footer LinkedIn icon           │
+│   ↓                                                      │
+│ Lands on LinkedIn profile (discovery funnel)            │
+└─────────────────────────────────────────────────────────┘
+
+OUTBOUND FROM LINKEDIN:
+┌─────────────────────────────────────────────────────────┐
+│ Recruiter discovers profile via LinkedIn search         │
+│   ↓                                                      │
+│ Clicks Featured section exhibit link                    │
+│   ↓                                                      │
+│ Reads detailed case study on pattern158.solutions       │
+│   ↓                                                      │
+│ Clicks GitHub link in footer (optional technical proof) │
+│   ↓                                                      │
+│ Returns to LinkedIn to InMail (or uses dan@pattern158)  │
+└─────────────────────────────────────────────────────────┘
+
+GITHUB INTEGRATION:
+┌─────────────────────────────────────────────────────────┐
+│ Technical evaluator lands on GitHub profile             │
+│   ↓                                                      │
+│ Reads profile README (links to pattern158.solutions)    │
+│   ↓                                                      │
+│ Reviews pinned repos (code quality signal)              │
+│   ↓                                                      │
+│ Clicks website link → pattern158.solutions              │
+│   ↓                                                      │
+│ Explores exhibits → Contact page → LinkedIn profile     │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Key insight:** Each platform serves a distinct stage in the evaluation funnel. LinkedIn = discovery, Website = deep dive, GitHub = technical proof. All three must link bidirectionally to create a closed loop.
 
 ## Scaling Considerations
 
-**This integration doesn't scale in the traditional sense** (not a software system), but it does evolve:
+| Profile Maturity | Architecture Adjustments |
+|------------------|--------------------------|
+| **New Profile (0-500 connections)** | Focus on completeness: headline, About, Featured, 5+ skills. Prioritize first-degree connections in target industry. Update weekly with relevant content to establish activity signal. |
+| **Established Profile (500-2K connections)** | Optimize for recruiter search: keyword placement hierarchy, 10+ skills, recommendations (3-5 minimum). Monthly content cadence to maintain algorithm favor. Curate Featured section for highest-converting assets. |
+| **High-Visibility Profile (2K+ connections)** | Shift to thought leadership: regular posts (2-3x/week), engage with industry content, leverage Creator Mode if applicable. Quarterly keyword audits to align with evolving job market terminology. Consider sponsored InMail budget for active search. |
 
-| Activity Level | Approach |
-|---------------|----------|
-| **Minimal activity** (few commits, stable repos) | Static approach: Set up once, review annually |
-| **Moderate activity** (regular commits, occasional new repos) | Quarterly reviews: Update "current focus," pin new projects |
-| **High activity** (daily commits, frequent new repos) | Dynamic approach: GitHub Actions to auto-update stats, monthly reviews |
+**pattern158.solutions context:** Currently established profile, targeting high-visibility over 12 months. Priority: recruiter search optimization + Featured section as conversion funnel to website.
 
-### When to Add Automation
+## Anti-Patterns
 
-**Low priority** (probably not needed):
-- GitHub Actions to auto-update stats in README
-- Bots to sync content from website to GitHub
-- Automated fork cleanup
+### Anti-Pattern 1: Generic Skills Spam
 
-**Why skip automation:**
-- Maintenance burden > benefit
-- Risk of stale/broken automation
-- Manual review ensures quality
+**What people do:** Add 50+ skills including vague terms like "Microsoft Office," "Teamwork," "Communication," "Problem Solving."
 
-**When automation makes sense:**
-- You commit daily and want real-time activity stats
-- You frequently add new repos and forget to update README
-- You have existing automation infrastructure (CI/CD already set up)
+**Why it's wrong:**
+- Dilutes signal-to-noise ratio in recruiter searches (they filter for specific tools, not soft skills).
+- Makes profile appear junior/unfocused (senior engineers have deep expertise, not shallow breadth).
+- LinkedIn algorithm may penalize keyword stuffing.
+
+**Do this instead:**
+- Limit to 10-15 skills maximum.
+- Specific tools/platforms > broad categories: "React" not "Front-end Development," "Playwright" not "Testing."
+- Order by relevance: top 3-5 skills are most important for search weighting.
+- Remove auto-suggested skills LinkedIn adds (they're often generic filler).
+
+**pattern158.solutions application:**
+```
+✓ Good: React, TypeScript, Node.js, Python, SCORM, xAPI, WCAG,
+        Playwright, Power Platform, SQL
+✗ Bad:  Web Development, Software Engineering, Problem Solving,
+        Microsoft Office, Communication, Leadership, Teamwork
+```
+
+**Sources:**
+- [LinkedIn Skills Section Strategy](https://connectsafely.ai/articles/linkedin-keywords-optimization-guide-2026)
+
+**Confidence:** HIGH
+
+### Anti-Pattern 2: Resume Copy-Paste
+
+**What people do:** Copy resume bullet points verbatim into LinkedIn experience sections, treating LinkedIn as a public resume host.
+
+**Why it's wrong:**
+- Resumes are tailored per application (job-specific keywords); LinkedIn is permanent and broad-audience.
+- Resumes use dense bullet lists; LinkedIn readers expect narrative + white space.
+- Resumes lack hyperlinks; LinkedIn Featured section can link to live work.
+- LinkedIn is discoverable via search; resumes require submission.
+
+**Do this instead:**
+- **Resume:** Dense bullets optimized for ATS keyword matching, 1-2 pages, no hyperlinks.
+- **LinkedIn:** Conversational tone, 2-3 sentence opening per role, 3-6 bullets with metrics, Featured section links to portfolio.
+- **Unique value of LinkedIn:** Hyperlink to live projects, media attachments in Featured, recommendations from colleagues, searchable by recruiters 24/7.
+
+**Example transformation:**
+
+```
+Resume (dense, ATS-optimized):
+"Developed SCORM-compliant eLearning modules using JavaScript and
+Articulate Storyline for Fortune 500 aerospace client, ensuring WCAG
+2.1 AA accessibility compliance."
+
+LinkedIn (conversational, link-enabled):
+"Built the tool that didn't exist: an open-source SCORM debugger now
+used by 500+ developers worldwide. When I couldn't find a reliable way
+to troubleshoot eLearning content API calls, I created one — reducing
+my troubleshooting time by 60% and sharing it with the community.
+
+[See the case study: pattern158.solutions/exhibits/exhibit-m.html]"
+```
+
+**Confidence:** MEDIUM (best practice from career coaching sources, not official LinkedIn guidance)
+
+### Anti-Pattern 3: Stale Featured Section
+
+**What people do:** Set up Featured section once with 3-5 items, never update it again. Items become outdated, links break, thumbnails show old branding.
+
+**Why it's wrong:**
+- Featured section is prime real estate (30% more profile views), but only if content is current.
+- Stale links signal inactivity or lack of maintenance.
+- Misses opportunity to highlight recent work (recruiters prioritize recent 2-3 years).
+- Algorithm may deprioritize profiles with low engagement on Featured items.
+
+**Do this instead:**
+- **Quarterly review:** Update Featured section to reflect current positioning (e.g., if targeting AI roles, feature AI-related projects first).
+- **Recency bias:** Keep at least 1-2 items from last 12 months visible.
+- **Link validation:** Test all external links, fix broken URLs.
+- **Visual refresh:** Update thumbnails if brand evolves (e.g., pattern158.solutions palette change would require new Featured images).
+
+**pattern158.solutions strategy:**
+```
+Initial setup (Phase 2.4):
+├── Featured item 1: SCORM Debugger exhibit (2015-2024 relevance)
+├── Featured item 2: GM Investigation exhibit (forensic methodology showcase)
+├── Featured item 3: Power Platform AI analysis (2024 modern stack proof)
+└── Featured item 4: pattern158.solutions homepage (brand hub)
+
+6-month review (Aug 2026):
+└── Evaluate: Did any new exhibits ship? Any Featured items underperforming?
+    Replace lowest-engagement item with newest high-impact work.
+```
+
+**Confidence:** MEDIUM (inferred from best practices, not explicit in sources)
+
+## Integration Points
+
+### External Services
+
+| Service | Integration Pattern | Notes |
+|---------|---------------------|-------|
+| **pattern158.solutions (portfolio website)** | Bidirectional hyperlinks: LinkedIn Featured → exhibits, Website footer/contact → LinkedIn profile | Primary content hub; LinkedIn serves as discovery funnel |
+| **GitHub profile** | Profile README links to pattern158.solutions; LinkedIn Featured can showcase pinned repos | Technical proof layer; most valuable for engineering roles |
+| **Email (dan@pattern158.solutions)** | Set as primary contact in LinkedIn profile settings | Brand consistency; avoids personal Gmail in professional context |
+| **Custom domain email** | Requires LinkedIn Premium or Sales Navigator for custom email display | Consider if budget allows; free tier shows "[email protected]" publicly |
+
+### Internal Boundaries (Within LinkedIn)
+
+| Boundary | Communication | Notes |
+|----------|---------------|-------|
+| **Headline ↔ About Section** | Headline sets expectation, About delivers on promise | Headline: "Senior Software Engineer \| React/TypeScript"; About: opens with React/TypeScript project narrative |
+| **About ↔ Featured** | About mentions "see my work" or "portfolio examples", Featured provides the links | Explicit CTA in About section: "Explore case studies in Featured section below" |
+| **Featured ↔ Experience** | Featured shows best 3-5 projects, Experience provides chronological context for all work | Featured item from 2015 (SCORM Debugger) ties to Experience entry "Freelance Consulting 2010-2020" |
+| **Skills ↔ Experience Bullets** | Skills listed must appear in Experience descriptions (recruiter cross-check) | If "Playwright" is a skill, at least one Experience bullet must mention Playwright usage |
+
+### Visual Brand Integration
+
+| Brand Element | LinkedIn Implementation | pattern158.solutions Source |
+|---------------|-------------------------|----------------------------|
+| **Navy/Teal/Cream Palette** | Banner image background (navy #1a2838, teal #0e7c8c accent) | Matches website hero, footer, dark mode |
+| **NTSB Investigation Aesthetic** | Professional headshot (serious, not casual); banner imagery (clean, technical, non-playful) | Aligns with website's report-style layout |
+| **Bebas Neue Typography** | Not directly applicable (LinkedIn controls font); use all-caps sparingly in About section for emphasis | Website uses Bebas Neue for headings |
+| **1:5:8 Ratio (Pattern 158)** | Consider subtle visual reference in banner (3 elements in 1:5:8 spacing?) or mention in About section origin story | Core brand identity from Myst puzzle |
+| **Tagline: "I cheat, but I cheat fair"** | Include in About section as brand hook, reference philosophy.html for full context | Three Stooges origin, central to brand philosophy |
+
+**Banner Image Strategy for pattern158.solutions:**
+```
+Design constraints:
+├── Dimensions: 1584 x 396 px (safe zone: center 1350 x 300 px)
+├── Palette: Navy background (#1a2838), teal accent elements (#0e7c8c)
+├── Content: Clean/technical (not playful), avoid faces/busy imagery
+├── Text: Minimal — LinkedIn profile already has headline
+└── Brand touchpoint: Subtle Pattern 158 logo or 1:5:8 ratio visual?
+
+Recommended approach:
+Navy gradient background with teal geometric accent (echoes website hero),
+minimal text (e.g., "pattern158.solutions" URL in bottom right),
+professional and consistent with NTSB investigation aesthetic.
+```
+
+**Sources:**
+- [LinkedIn Banner Best Practices 2026](https://www.hyperclapper.com/blog-posts/linkedin-banner-size-specs-examples)
+- [Banner Dimensions Guide](https://ezmob.com/blog/advertiser/linkedin-banner-dimensions-guide-2026/)
+
+**Confidence:** MEDIUM (banner best practices HIGH, brand integration specifics are LOW confidence — requires design iteration)
+
+## Cross-Linking Strategy (Bidirectional)
+
+### LinkedIn → Website
+
+| LinkedIn Section | Link Placement | Destination |
+|------------------|----------------|-------------|
+| Featured Section | 3-5 curated items | Specific exhibits (exhibit-m.html, exhibit-x.html, etc.) |
+| About Section | Inline reference | philosophy.html (brand context), contact.html |
+| Experience Bullets | "See case study: [URL]" | Relevant exhibit for that role/project |
+| Contact Info | Website field | https://pattern158.solutions |
+
+**Featured Section Priority Order (recommendation):**
+```
+1. Strongest recent technical work (2024-2026 modern stack proof)
+   └── Example: Power Platform AI analysis exhibit
+2. Signature domain expertise (SCORM/eLearning depth)
+   └── Example: SCORM Debugger exhibit-m.html
+3. Differentiator (forensic methodology)
+   └── Example: GM Investigation exhibit-x.html
+4. Brand hub (philosophy/identity)
+   └── Example: pattern158.solutions homepage or philosophy.html
+5. Optional: GitHub pinned repo or testimonials.html
+```
+
+### Website → LinkedIn
+
+| Website Page | Link Placement | Destination |
+|--------------|----------------|-------------|
+| Contact page | Primary CTA | LinkedIn profile (custom URL) |
+| Footer (all 22 pages) | Social icons | LinkedIn + GitHub |
+| About/Bio section | Optional inline | LinkedIn profile for "professional background" |
+
+**Current state (v1.3):** Footer has LinkedIn + GitHub links. Contact page has LinkedIn listed but not prominently CTA'd.
+
+**Recommended enhancement:**
+```
+Contact page (contact.html) addition:
+"Prefer LinkedIn? Connect with me at linkedin.com/in/dan-novak-pattern158"
+(Or whatever custom URL is chosen)
+
+Hero section (index.html) consideration:
+Add LinkedIn icon to hero CTAs? (Currently: philosophy, contact, portfolio)
+└── Evaluate: Does this dilute website's "deep dive" positioning?
+    Likely NO — LinkedIn is discovery, website is conversion.
+```
+
+### GitHub → Website → LinkedIn (Closed Loop)
+
+```
+GitHub Profile README (novakda/novakda)
+├── Links to: pattern158.solutions (already implemented v1.3)
+└── Consider: Mention LinkedIn profile for "professional network"?
+
+Pattern158.solutions footer
+├── Links to: LinkedIn + GitHub (already implemented v1.3)
+└── Bidirectional loop complete
+
+LinkedIn Featured Section
+└── Optional: Feature GitHub pinned repo (e.g., SCORM debugger repo)
+    Completes triangle: LinkedIn → GitHub → Website → LinkedIn
+```
+
+**Sources:**
+- [Cross-Platform Branding Strategy](https://medium.com/career-programming/what-you-need-for-a-great-developer-website-github-and-linkedin-aa42a6e8a018)
+- [LinkedIn Portfolio Integration](https://www.linkedhelper.com/blog/linkedin-portfolio/)
+
+**Confidence:** MEDIUM (standard best practice, not pattern158-specific validation)
+
+## Section-Specific Information Architecture
+
+### Headline (220 characters)
+
+**Structure:** `[Job Title] | [Tech Stack] | [Domain/Differentiator]`
+
+**Constraints:**
+- 220 char max (mobile truncates at ~50 chars, prioritize front-loading)
+- Highest algorithm weight for recruiter search
+- Avoid filler words ("passionate," "experienced," "helping")
+
+**Formula for pattern158.solutions:**
+```
+Front-load: Senior Software Engineer (job title recruiters search)
+Middle: React, TypeScript, Node.js, Python (modern stack proof)
+End: eLearning Systems & Forensic Investigation (domain + differentiator)
+
+Example:
+"Senior Software Engineer | React, TypeScript, Node.js | eLearning
+Systems Architecture & Forensic Investigation Methodology"
+(~120 chars, room for iteration)
+```
+
+**Sources:** [LinkedIn Headline Optimization](https://connectsafely.ai/articles/linkedin-keywords-optimization-guide-2026)
+
+### About Section (2,600 characters)
+
+**Structure:** Hook (200 chars) → Story (800 chars) → Achievements (1,200 chars) → CTA (400 chars)
+
+**Hook (first 200 chars, visible without "see more"):**
+- No filler greetings ("Hi, I'm Dan" wastes characters)
+- Lead with strongest statement or intriguing premise
+- Must compel click to "see more"
+
+**Story (800 chars):**
+- Origin: Why this work? What drives approach?
+- Pattern158.solutions brand: Reference "I cheat, but I cheat fair" philosophy
+- Transition to achievements
+
+**Achievements (1,200 chars):**
+- 3-5 quantifiable highlights (not comprehensive — that's what Experience is for)
+- Mention modern stack (React, TypeScript, 2024-2026 work)
+- Mention domain depth (SCORM, accessibility, 28 years)
+- Mention differentiator (forensic investigation, NTSB methodology)
+
+**CTA (400 chars):**
+- What do you want reader to do? "Explore case studies," "Connect," "Visit pattern158.solutions"
+- Include contact preference (LinkedIn message, dan@pattern158.solutions)
+
+**Formatting:**
+- Use line breaks (2-3 sentence paragraphs)
+- Symbols for bullets: •, -, or *
+- NO bold, italic, or underline (LinkedIn doesn't support)
+- Conversational tone, not resume-speak
+
+**Keyword Integration:**
+Must naturally include: React, TypeScript, Node.js, Python, SCORM, xAPI, accessibility, WCAG, eLearning, LMS, forensic investigation, systems architecture.
+
+**Sources:**
+- [LinkedIn About Section Best Practices](https://www.linkedin.com/business/talent/blog/product-tips/linkedin-profile-summaries-that-we-love-and-how-to-boost-your-own)
+- [About Section Templates](https://ligosocial.com/blog/linkedin-about-section-template-and-examples-how-to-write-a-summary-that-converts)
+
+### Featured Section (3-5 items)
+
+**Item Types:**
+- External links (pattern158.solutions exhibits)
+- LinkedIn posts (if high engagement)
+- Media (PDFs, images, videos)
+- LinkedIn articles (native long-form)
+
+**Recommended for pattern158.solutions:**
+- 4 external links (exhibits) + 0-1 recent LinkedIn post if applicable
+- NO media uploads (keep users clicking through to website for deep content)
+
+**Custom Titles:**
+- 80 char max, impact-first
+- Example: "SCORM Debugger: Open-Source Tool Used by 500+ Developers"
+- NOT: "exhibit-m.html" (default link title)
+
+**Custom Descriptions:**
+- 140 char max, entice click
+- Example: "Built the TASBot for eLearning — reduces troubleshooting by 60%"
+
+**Visual Thumbnails:**
+- LinkedIn auto-generates from Open Graph image (pattern158.solutions already has og:image for all pages)
+- Verify: Do exhibit pages have compelling og:image tags? (Check during implementation)
+
+**Reorder for Priority:**
+- Drag-and-drop to place highest-converting asset first
+- Assumption: Most users only click first 1-2 items
+
+**Sources:**
+- [LinkedIn Featured Section Guide](https://finallayer.com/blog/linkedin-featured-section)
+- [Featured Section FAQs](https://www.linkedin.com/help/linkedin/answer/a552452)
+
+### Experience Sections (All Roles)
+
+**Structure per Role:**
+```
+[Job Title] at [Company]
+[Start Date] - [End Date or Present]
+
+Opening summary (2-3 sentences): Context, scope, tech stack
+• Bullet 1: [Action verb] + [Specific tech] + [Metric/Result]
+• Bullet 2: [Action verb] + [Specific tech] + [Metric/Result]
+• Bullet 3: [Action verb] + [Specific tech] + [Metric/Result]
+...
+• Bullet N: "See case study: [exhibit link]" (optional for Featured work)
+```
+
+**Bullet Count Guidelines:**
+- Current role: 6-8 bullets (most detail)
+- Recent 2-3 roles: 4-6 bullets
+- Older roles (5+ years ago): 2-3 bullets
+- Very old roles (10+ years): Consider omitting or 1-2 bullets max
+
+**Action Verb Starters:**
+Built, Designed, Analyzed, Created, Implemented, Reduced, Increased, Led, Developed, Optimized, Debugged, Architected, Migrated, Automated
+
+**Metrics Required:**
+- Numbers: "500+ developers," "15K+ users," "42 implementations"
+- Percentages: "60% reduction," "40% waste eliminated"
+- Scale: "270/270 tests passing," "22-page site," "14 case studies"
+
+**Tech Stack Mentions:**
+- Current role: Modern stack front and center (React, TypeScript, Node.js, Python, Power Platform, AI)
+- Older roles: Include if still relevant (SCORM, xAPI, accessibility), omit if obsolete (Flash, Dreamweaver)
+
+**Pattern158.solutions-Specific Guidance:**
+```
+Freelance Consulting (current):
+├── Opening: Modern stack focus (2024-2026 AI/Power Platform work)
+├── Bullet 1-2: Recent projects (ContentAIQ, MCAPS AILT)
+├── Bullet 3-4: Domain expertise (SCORM Debugger, accessibility)
+├── Bullet 5-6: Differentiator (GM investigation, forensic methodology)
+└── Bullet 7-8: Link to exhibits or quantifiable impact
+
+Past roles (Leo Learning, Saber, etc.):
+└── Focus on transferable achievements, avoid eLearning-only pigeonholing
+    Example: "Architected multi-tenant LMS serving 50K+ users" (systems scale)
+    NOT: "Created SCORM courses" (narrow eLearning task)
+```
+
+**Sources:**
+- [Experience Section Optimization](https://anagoehner.com/linkedin-experience-section/)
+- [Achievement-Focused Writing](https://pursuenetworking.com/blog/linkedin-experience-section-examples/)
+
+### Skills Section (10-15 strategic skills)
+
+**Prioritization:**
+- Top 3-5 skills: Most important for target roles (recruiter filters typically check top skills)
+- Next 5-7 skills: Supporting/adjacent technologies
+- Avoid: 50+ skills (dilutes signal)
+
+**Specific > Broad:**
+```
+✓ React (specific library recruiters search)
+✗ Front-end Development (too vague)
+
+✓ Playwright (specific testing framework)
+✗ Testing (too broad)
+
+✓ WCAG (specific accessibility standard)
+✗ Accessibility (less searchable)
+```
+
+**Pattern158.solutions Recommended Skills (10-12 total):**
+```
+Tier 1 (Primary, modern stack):
+1. React
+2. TypeScript
+3. Node.js
+4. Python
+
+Tier 2 (Domain expertise):
+5. SCORM
+6. xAPI
+7. WCAG
+8. Accessibility
+
+Tier 3 (Differentiators):
+9. Power Platform
+10. Playwright
+11. Systems Architecture
+12. SQL (or another relevant tech)
+
+REMOVE: Microsoft Office, Teamwork, Communication, Leadership,
+         Problem Solving, "Web Development", "Software Engineering"
+```
+
+**Endorsements:**
+- LinkedIn allows connection endorsements (social proof)
+- Request endorsements from colleagues who've worked with you on specific skills
+- Endorsed skills rank higher in recruiter searches
+
+**Sources:**
+- [Skills Section Strategy](https://connectsafely.ai/articles/linkedin-keywords-optimization-guide-2026)
+- [Recruiter Search Optimization](https://www.leonar.app/blog/linkedin-recruiter-search-filters)
 
 ## Sources
 
-**HIGH confidence sources (official documentation):**
-- [Managing your profile README - GitHub Docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme)
-- [Setting up your profile - GitHub Docs](https://docs.github.com/en/get-started/start-your-journey/setting-up-your-profile)
-- [Pinning items to your profile - GitHub Docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile)
-- [Archiving repositories - GitHub Docs](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)
+### High Confidence (Official/Authoritative)
+- [LinkedIn Profile Sections - Official Help](https://www.linkedin.com/help/linkedin/answer/15493)
+- [LinkedIn Featured Section FAQs](https://www.linkedin.com/help/linkedin/answer/a552452)
+- [LinkedIn Profile Summaries - Official Talent Blog](https://www.linkedin.com/business/talent/blog/product-tips/linkedin-profile-summaries-that-we-love-and-how-to-boost-your-own)
 
-**MEDIUM confidence sources (current guides and tools):**
-- [Best Practices For An Eye Catching GitHub Readme - Hatica](https://www.hatica.io/blog/best-practices-for-github-readme/)
-- [GitHub SEO Guide 2025 - GitDevTool](https://www.gitdevtool.com/blog/github-seo)
-- [GitHub Project Visibility and SEO - Codemotion](https://www.codemotion.com/magazine/dev-life/github-project/)
-- [How to make your GitHub more impressive to Employers - Underdog.io](https://underdog.io/blog/how-to-make-your-github-more-impressive-to-employers)
-- [The Complete Guide to Repository Analytics - Starfolio](https://www.starfolio.dev/blog/complete-guide-repository-analytics)
+### Medium Confidence (Industry Best Practices)
+- [LinkedIn Keywords Optimization Guide 2026](https://connectsafely.ai/articles/linkedin-keywords-optimization-guide-2026)
+- [LinkedIn Recruiter Search Filters 2026](https://www.leonar.app/blog/linkedin-recruiter-search-filters)
+- [LinkedIn Featured Section Guide](https://finallayer.com/blog/linkedin-featured-section)
+- [LinkedIn About Section Templates](https://ligosocial.com/blog/linkedin-about-section-template-and-examples-how-to-write-a-summary-that-converts)
+- [LinkedIn Experience Section Optimization](https://anagoehner.com/linkedin-experience-section/)
+- [LinkedIn Banner Best Practices](https://www.hyperclapper.com/blog-posts/linkedin-banner-size-specs-examples)
+- [LinkedIn Custom URL Guide](https://www.linkedhelper.com/blog/linkedin-url/)
+- [Cross-Platform Developer Branding](https://medium.com/career-programming/what-you-need-for-a-great-developer-website-github-and-linkedin-aa42a6e8a018)
 
-**MEDIUM confidence sources (community practices):**
-- [Your GitHub Profile as a Portfolio - Cirkled In](https://www.cirkledin.com/library/resume-and-portfolio-building/github-portfolio-college-tech-students/)
-- [Cleaning up forked GitHub repositories - Jumping Rivers](https://www.jumpingrivers.com/blog/github-clean-remove-forks/)
-- [Metadata on GitHub - MetaRemover](https://metaremover.com/articles/en/metadata-github)
-- [GitHub Search Engine Optimization - MarkePear](https://www.markepear.dev/blog/github-search-engine-optimization)
-
-**LOW confidence sources (general research, verify specifics):**
-- [GitHub character limits collection](https://github.com/dead-claudia/github-limits) - Community-maintained, not official
+### Lower Confidence (WebSearch, Not Independently Verified)
+- 30% more profile views with Featured section (cited in multiple sources, but original LinkedIn data not directly accessible)
+- 27x more likely to be found with 5+ skills (widely cited, but original research unclear)
+- 40% more profile views with custom URL (cited by branding sources, not official LinkedIn stat)
 
 ---
 
-*Architecture research for: GitHub Profile Brand Alignment*
+*Architecture research for: LinkedIn Profile Optimization (Pattern158.solutions Integration)*
 *Researched: 2026-02-22*
-*Confidence: HIGH (official docs + current best practices)*
+*Overall Confidence: MEDIUM (mix of official LinkedIn guidance, industry best practices, and inferred strategies for pattern158-specific brand integration)*

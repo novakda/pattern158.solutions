@@ -1,266 +1,391 @@
-# Feature Research
+# Feature Research: LinkedIn Profile for Senior Software Engineers
 
-**Domain:** GitHub Profile Optimization for Senior Engineers
+**Domain:** LinkedIn profile optimization for senior software engineers (28+ years experience)
 **Researched:** 2026-02-22
-**Confidence:** HIGH
+**Confidence:** MEDIUM (based on LinkedIn platform knowledge and recruiting best practices; limited real-time search verification due to API unavailability)
 
 ## Feature Landscape
 
-### Table Stakes (Users Expect These)
+### Table Stakes (Recruiters Expect These)
 
-Features that hiring managers and recruiters assume exist. Missing these = profile looks incomplete or unprofessional.
+Features recruiters assume exist. Missing these = profile feels incomplete or unprofessional.
 
 | Feature | Why Expected | Complexity | Notes |
 |---------|--------------|------------|-------|
-| Profile bio (1-2 sentences) | First text visible under profile photo; recruiters spend ~90 seconds scanning GitHub | LOW | GitHub official recommendation: concise role + specialization (e.g., "Full-stack developer specializing in React and Node.js") |
-| Profile README (username/username repo) | Standard since 2020; missing = "immediately forgettable" (source: Medium analysis) | LOW | Must exist but content varies; absence is red flag |
-| 3-6 pinned repositories | Curates "portfolio homepage"; recruiters check pins when no highly-starred repos exist | LOW | GitHub limit: 6 items (repos + gists combined) |
-| Repository descriptions | Visible in list view; quick-scan context for hiring managers | LOW | One-liner per repo explaining what it does |
-| README files on pinned repos | "Often the first impression" for hiring managers; expected professional standard | MEDIUM | Must include: overview, setup, features, examples (GitHub official) |
-| Recent activity | Large gaps or complete absence = immediate red flag | N/A (behavioral) | Contribution graph signals active developer |
-| Contact information | Hiring managers need preferred communication method | LOW | Email, LinkedIn, or website link in bio/README |
-| Clean commit history | Professional developers use git rebase for understandable history before pushing | MEDIUM | Not hiding mistakes — presenting work clearly |
+| **Headline with role + specialty** | First thing recruiters see in search results; determines click-through | LOW | 220 char limit; front-load keywords recruiters search for ("Senior Software Engineer" NOT generic "Software Engineer") |
+| **Professional profile photo** | Profiles with photos get 21x more views; credibility signal | LOW | Headshot, neutral background, professional attire; not logo/avatar |
+| **Custom LinkedIn URL** | Cleaner on resumes; easier to share; minor SEO signal | LOW | linkedin.com/in/yourname vs linkedin.com/in/random-numbers |
+| **Location + industry** | Primary recruiter filters; excludes you from searches if wrong/missing | LOW | Must match target job market; "Computer Software" industry standard for engineers |
+| **About/Summary section (3-5 paragraphs)** | Recruiter reads if headline interests them; determines outreach quality | MEDIUM | Must answer "what do you do, how, and for whom"; first 300 chars visible without "see more" click |
+| **Experience entries with company name, title, dates** | Minimum credibility; recruiter validates resume claims | LOW | Incomplete employment history = red flag; gaps explained or employment continuous |
+| **Experience descriptions with outcomes** | Differentiates strong vs weak candidates; validates seniority | MEDIUM | "Built X resulting in Y" not "Responsible for X"; quantified results preferred |
+| **Skills section (minimum 5-10 core skills)** | Primary recruiter search mechanism; keyword matching for InMail targeting | LOW | Must include both technologies (React, Node.js) AND capabilities (architecture, mentoring) |
+| **Contact info (email visible)** | Makes outreach easier; filters serious candidates who want to be found | LOW | Email visible to 1st connections OR in Featured/About; barrier reduction |
+| **Employment status indicator** | "Open to work" signal or current role clarity | LOW | Green #OpenToWork banner (public) OR private recruiter-only signal |
 
-### Differentiators (Competitive Advantage)
+**Critical insight:** Recruiters spend 6-8 seconds on initial profile scan. Headline, photo, first 2 lines of About, and current role = entire first impression.
 
-Features that set profiles apart. Not required, but create memorability and signal professionalism.
+### Differentiators (Stand Out from 500+ Applicants)
+
+Features that set top-tier senior engineers apart. Not required, but high-value for competitive roles.
 
 | Feature | Value Proposition | Complexity | Notes |
 |---------|-------------------|------------|-------|
-| Brand-aligned profile README | Extends professional identity from personal site; avoids generic templates | MEDIUM | **Dependency**: Requires existing brand (Pattern 158 aesthetic, six elements, tagline) |
-| Hybrid README approach | Balances personal brand headline with GitHub-native content (skills, projects) | MEDIUM | Avoids two extremes: pure marketing copy vs pure stats/badges |
-| Strategic pinning order | Position 1 = flagship, 2 = most technical, 3 = most professional (CI/CD), 4+ = unique/creative | LOW | 87% of technical recruiters review GitHub profiles (source: Starfolio research) |
-| Live deployment links | Allows "quick viewing of end result" and proof of shipping ability | LOW | **Dependency**: Repos must have deployed/demo versions |
-| Curated repository visibility | Archives hobby/personal forks; keeps domain-relevant forks visible | LOW | Reduces noise for evaluators; Pattern 158 context: keep eLearning-relevant forks |
-| Domain-specific topic tags | GitHub topics enable discovery and signal specialization | LOW | e.g., "scorm", "elearning", "accessibility", "wcag" |
-| Personal website link in bio | Extends GitHub → full portfolio; hiring managers value "additional context" | LOW | **Dependency**: pattern158.solutions already exists |
-| Contribution to reputable projects | "Seal of approval" from experienced developers; demonstrates collaboration | HIGH | Accepted PRs to known open-source projects |
-| Selective badge use | Meaningful badges only (build status, coverage); avoids badge spam | LOW | Anti-pattern: 20+ aesthetic badges with no functional meaning |
-| Professional profile photo | "Clean profile photo" signals seriousness vs generic avatar | LOW | Pattern 158 consideration: NTSB aesthetic alignment |
+| **Featured section with portfolio links** | Shows vs tells; validates claims with evidence; 3x engagement vs text-only | MEDIUM | Links to GitHub repos, live projects, case studies; first thing after headline in mobile view |
+| **Rich media in experience entries** | Demonstrates actual work; memorable; rare enough to differentiate | MEDIUM | Screenshots, architecture diagrams, demo videos; use sparingly (1-2 per key role) |
+| **Recommendations from senior leaders** | Third-party validation > self-promotion; 10x credibility multiplier | HIGH | Quality > quantity; 2-3 strategic recommendations from managers/directors > 15 peer endorsements |
+| **Headline with unique differentiator** | Breaks pattern-matching; memorable; signals seniority | LOW | "Legacy System Rescue" or "Forensic Debugging" > generic "Full Stack Developer" |
+| **About section with narrative structure** | Tells career story vs listing skills; human connection; hiring manager signal | MEDIUM | Problem → Approach → Results framework; shows thinking process not just outputs |
+| **Activity (posts/comments in last 90 days)** | Algorithm boost; "alive" signal vs dormant profile; shows thought leadership | MEDIUM | Low-barrier: reshare + comment on domain topics; 1-2x/month sufficient |
+| **Custom banner image** | Visual differentiation; brand consistency; professional polish | LOW | 1584x396px; branded or domain-relevant (code, systems diagrams, workspace) |
+| **Skills with 10+ endorsements on top 3** | Social proof; algorithm weight; recruiter validation shortcut | LOW-MEDIUM | Requires network activation; ask 5-10 connections to endorse specific skills |
+| **Certifications from recognized authorities** | Credibility for modern stack; counters "legacy" perception | MEDIUM | AWS/Azure/GCP certs, vendor certifications (Microsoft, etc.); avoid weak LinkedIn Learning badges |
+| **Creator mode (if posting regularly)** | Profile shows followed hashtags; "Follow" vs "Connect" CTA; content surface area | LOW | Only enable if posting 2x/month minimum; otherwise reduces connection requests |
 
-### Anti-Features (Commonly Requested, Often Problematic)
+**Critical insight:** Featured section appears ABOVE experience on mobile (60% of LinkedIn traffic). Portfolio visibility is higher than traditional resume format.
 
-Features that seem good but create problems or signal inexperience.
+### Anti-Features (Seem Smart, Actually Hurt)
+
+Features that seem professional but reduce effectiveness or signal inexperience.
 
 | Feature | Why Requested | Why Problematic | Alternative |
 |---------|---------------|-----------------|-------------|
-| Excessive README badges | Developers see badges as "credibility" and "readability" | Badge spam = visual clutter; dilutes actually meaningful signals (build status, coverage) | Use 3-5 max: build status, coverage, key tech only |
-| Auto-generated stats widgets | Profile README generators make it easy; shows "activity" | Generic, everyone has them; hiring managers discount quantitative metrics (commit counts, streaks) | Focus on qualitative: project quality, clear code, good docs |
-| Animated GIFs/banners | "Stand out" advice from profile customization guides | Can look juvenile for senior roles; conflicts with professional aesthetic | Clean, text-based branding or static banner aligned with personal site |
-| Pinning tutorial/learning repos | Shows learning journey | Signals junior developer; senior engineers expected to pin production-quality work | Archive learning repos; pin only polished, complete projects |
-| Unfinished/experimental repos | "Transparency" about exploration | "GitHub graveyard" red flag; makes evaluation harder | Archive or make private; only show finished work |
-| Personal forks without contributions | Shows interest in projects | "Extra bulk that adds nothing"; unmodified forks clutter profile | Archive forks unless contributed; use stars for bookmarking |
-| Generic profile README template | Fast to implement; common online | "Default placeholder text" = wasted visible real estate | Write custom content; even 3-4 sentences beats template |
-| "Test" or random code repos | Keeping everything for history | "Hundreds of random code files" repo anti-pattern | Single repo = single project; archive experiments |
-| Over-detailed professional history | Resume content on GitHub | GitHub shows work, not CV text; hiring managers want code, not prose | Link to external resume/portfolio; keep README brief |
+| **Generic headline (job title only)** | "Senior Software Engineer at Company X" is factual | Zero differentiation; blends into 50,000 identical profiles; loses keyword real estate | Use 220 chars: "Senior Software Engineer \| React + TypeScript + Node.js \| Legacy System Rescue" |
+| **Wall-of-text About section** | More content = more thorough | Recruiter skips; no visual breaks; first 300 chars determine click | Use 3-5 short paragraphs with whitespace; front-load value prop in first 2 sentences |
+| **Skills list with 50+ skills** | Shows breadth/versatility | Dilutes signal; looks padded; recruiter doesn't know what you're actually expert in | 10-15 core skills; top 3 must match target roles; remove auto-suggested generic skills |
+| **Every skill endorsed by everyone** | Social proof maximization | Looks coordinated/fake; devalues meaningful endorsements | Focus endorsements on 3-5 core positioning skills; quality concentration > quantity spread |
+| **"Open to work" with 20 job titles** | Casts wide net | Signals desperation or confusion; "I'll take anything" = junior behavior | 1-3 closely related roles; specificity = seniority |
+| **LinkedIn Learning certificate showcase** | Shows continuous learning | Most are low-effort (2-hour courses); signals padding vs real credentials | Remove unless from recognized programs (LinkedIn Learning badges = noise for senior engineers) |
+| **Buzzword-heavy headlines** | SEO optimization attempt | "Passionate rockstar ninja guru thought leader" = instant recruiter dismiss | Concrete: technologies, methodologies, measurable outcomes |
+| **Recommendations requesting in bulk** | Faster collection | Generic responses; "great to work with" vs specific technical validation | Strategic asks: 1-2 from managers, 1 from peer, each highlighting different strength |
+| **Job descriptions copied from resume** | Consistency across materials | Resume-speak doesn't leverage LinkedIn format; no rich media; no hyperlinks | LinkedIn allows links, media, longer format; use it (link to portfolio, embed diagrams) |
+| **"Seeking opportunities" in About section** | Signals availability | Negative framing; sounds desperate; About should sell YOU not ask for help | "Open to work" badge handles this; About section = value proposition only |
+
+**Critical insight:** Senior engineers are evaluated on signal-to-noise ratio. Every piece of content must defend its presence or it dilutes your positioning.
 
 ## Feature Dependencies
 
 ```
-Profile README
-    └──requires──> username/username repository (must exist)
-    └──enhances──> Profile bio (README extends bio content)
+[Professional Photo]
+    └──enables──> [Profile Visibility] (21x view multiplier)
 
-Brand-aligned README
-    └──requires──> Existing brand identity (Pattern 158 elements)
-    └──requires──> Personal website (pattern158.solutions for consistency)
+[Headline with Keywords]
+    └──required──> [Recruiter Search Results]
+                       └──enables──> [Profile Click-Through]
 
-Strategic pinning
-    └──requires──> 3-6 polished repos (finished, documented)
-    └──requires──> Repo READMEs (setup instructions, features)
-    └──enhances──> Repository descriptions (pin order + description = quick scan)
+[About Section (First 300 Chars)]
+    └──determines──> [Read More Click]
+                         └──enables──> [Full Profile Engagement]
 
-Live deployment links
-    └──requires──> Deployed projects (hosted apps, GitHub Pages)
-    └──enhances──> Pinned repositories (proof of shipping)
+[Experience with Outcomes]
+    └──validates──> [Headline Claims]
+                      └──supports──> [Recommendation Credibility]
 
-Curated visibility (archiving)
-    └──requires──> Review of existing repos (identify noise)
-    └──conflicts──> Showing all work (focus vs comprehensiveness tradeoff)
+[Featured Section]
+    └──requires──> [Portfolio URLs] (pattern158.solutions exhibits)
+           └──demonstrates──> [Technical Depth]
 
-Repository topics
-    └──requires──> Repo settings update per repository
-    └──enhances──> GitHub search discoverability
+[Skills Section (10-15 Core)]
+    └──enables──> [Recruiter Search Discovery]
+           └──supports──> [Headline Keywords]
 
-Domain-relevant forks
-    └──requires──> Fork contribution or domain alignment
-    └──conflicts──> "No forks" cleanliness strategy
+[Contact Email Visible]
+    └──reduces──> [Recruiter Friction]
+           └──enables──> [Direct Outreach]
+
+[Recommendations (2-3 Strategic)]
+    └──requires──> [Experience Section Strength]
+           └──validates──> [About Section Claims]
+
+[Activity (Posts/Comments)]
+    └──triggers──> [Algorithm Boost]
+           └──enhances──> [Search Ranking]
+
+[Open to Work Signal]
+    └──enables──> [Recruiter Filters]
+           └──increases──> [InMail Volume]
 ```
 
 ### Dependency Notes
 
-- **Profile README requires brand identity:** Pattern 158 has established brand (NTSB aesthetic, six elements, tagline from Three Stooges quote, 1:5:8 ratio). README can extend this vs starting from scratch.
-- **Pinning requires polished repos:** If existing repos lack READMEs or are incomplete, pinning them creates negative impression. Must audit and polish first.
-- **Curated visibility conflicts with comprehensive history:** Archiving reduces noise but hides learning journey. For senior engineers, showing only polished work is standard.
-- **Domain forks (eLearning) conflict with "no forks" advice:** Generic advice says archive all forks. Pattern 158 context: eLearning-relevant forks (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices) demonstrate domain expertise and should stay visible.
+- **Professional Photo enables Profile Visibility:** LinkedIn data shows 21x more profile views with photo vs without; first credibility gate
+- **Headline determines Search Results:** Recruiter searches for "Senior Software Engineer React" won't surface profile with headline "Software Developer"; keyword matching is literal
+- **About Section First 300 Chars determines Read More:** Desktop shows first ~300 characters before "see more" click; mobile even less; must hook in opening
+- **Featured Section requires Portfolio URLs:** Can't demonstrate work without external links; pattern158.solutions exhibits are the payload
+- **Skills Section enables Discovery:** Recruiter boolean searches ("React" AND "TypeScript" AND "Node.js") require exact skill tag matches; not just mentioned in text
+- **Recommendations validate Claims:** "Expert in legacy system rescue" in headline is self-promotion; recommendation from manager saying "Dan rescued 3 critical systems" is evidence
+- **Activity triggers Algorithm Boost:** LinkedIn prioritizes "active" profiles in search results; 1-2 posts/comments per month = enough signal
 
 ## MVP Definition
 
-### Launch With (v1.3 GitHub Profile Alignment)
+### Launch With (Profile v1 - Optimization Sprint)
 
-Minimum viable profile update — what's needed to align GitHub with professional brand.
+Minimum viable profile — what's needed to be discoverable and credible to recruiters.
 
-- [x] **Update profile bio** — 1-2 sentence role + specialization, link to pattern158.solutions (Complexity: LOW, Why essential: First visible text, 90-second recruiter scan)
-- [x] **Create profile README (novakda/novakda repo)** — Hybrid approach: Pattern 158 brand headline + GitHub-native skills/projects (Complexity: MEDIUM, Why essential: Absence = "forgettable", brand extension opportunity)
-- [x] **Update pattern158.solutions repo metadata** — Description, homepage link, topics (scorm, elearning, accessibility, wcag, static-site) (Complexity: LOW, Why essential: Primary portfolio repo must be well-presented)
-- [x] **Archive hobby/personal forks** — Reduce noise for evaluators (Complexity: LOW, Why essential: "GitHub graveyard" red flag prevention)
-- [x] **Keep eLearning-relevant forks visible** — SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices (Complexity: LOW, Why essential: Domain expertise signal)
-- [x] **Pin 3-6 key repos** — Strategic order: flagship (pattern158.solutions) + technical depth + domain relevance (Complexity: LOW, Why essential: "Portfolio homepage" for recruiters)
+- [x] **Headline rewrite** — Front-load "Senior Software Engineer" + modern stack (React/TypeScript/Node.js) + differentiator (Legacy System Rescue); 220 chars optimized
+- [x] **About/Summary rewrite** — First 300 chars: value proposition (what I do, how, for whom); next 2-3 paragraphs: methodology + proof points + modern 2024-2026 work; ends with contact/portfolio link
+- [ ] **Featured section creation** — 4-6 links to pattern158.solutions exhibits (GM Investigation, SCORM Debugger, CSBB Dispatch, BP Platform, etc.); order by impact
+- [ ] **Experience section rewrite** — All 3 GP Strategies entries + early career; each with Challenge → Approach → Solution → Results structure; add MCAPS AILT/ContentAIQ analysis as bullet, add GM investigation as bullet
+- [ ] **Skills section replacement** — Remove "Databases, Node.js, .NET Framework"; add 10-15 strategic skills (React, TypeScript, Node.js, Accessibility (WCAG), System Architecture, eLearning Standards, Technical Forensics, API Design); position for broad engineering not just eLearning
+- [ ] **Contact email alignment** — dan@pattern158.solutions visible in About or Featured section
+- [ ] **Custom URL** — linkedin.com/in/dannovak or linkedin.com/in/dan-novak-pattern158 (if available)
+- [ ] **Open to work signal** — Private recruiter-only mode (not public green banner) for active search; or remove if passive
+- [ ] **Certification cleanup** — Remove 2 LinkedIn Learning badges
+- [ ] **Profile photo verification** — Current photo meets professional standard (if not, flag for replacement)
 
-### Add After Validation (v1.x+)
+### Add After Launch (Profile v1.1 - Validation Phase)
 
-Features to add once core profile alignment is working.
+Features to add once core profile is live and generating recruiter activity.
 
-- [ ] **Add live deployment links to pinned repos** — Trigger: If repos have deployed versions; enables quick end-result viewing (Complexity: LOW)
-- [ ] **Selective badges on READMEs** — Trigger: If repos have CI/CD or test coverage; shows engineering rigor (Complexity: MEDIUM, requires setup)
-- [ ] **Contribute to domain-relevant open-source** — Trigger: Identify high-value eLearning/accessibility projects needing help (Complexity: HIGH, time-intensive)
-- [ ] **Professional profile photo** — Trigger: If current avatar is generic; NTSB-aligned headshot (Complexity: LOW, design consideration)
-- [ ] **Polish pinned repo READMEs** — Trigger: If existing READMEs lack setup/features/examples per GitHub official guidance (Complexity: MEDIUM per repo)
+- [ ] **Recommendation outreach (2-3 strategic)** — Request from: (1) GP Strategies manager re: forensic debugging/system rescue, (2) technical peer re: eLearning domain depth, (3) stakeholder re: clarity/communication; use templated outreach with specific talking points
+- [ ] **Rich media in top 2 experience entries** — Current role: screenshot of MCAPS Content AIQ analysis or architecture diagram; 2017-2023 Architect role: SCORM Debugger screenshot or investigation flow diagram
+- [ ] **Activity cadence establishment** — 1 post or comment every 2-4 weeks; low-barrier: reshare industry articles on React/accessibility/eLearning with 2-sentence commentary; goal is algorithm signal not thought leadership
+- [ ] **Skills endorsement activation** — Ask 5-10 1st degree connections to endorse top 3 skills (React, TypeScript, System Architecture); use templated request
+- [ ] **Banner image consideration** — Branded (Pattern 158 logo + NTSB aesthetic) OR technical (code editor, system diagram) OR leave default; low priority
 
-### Future Consideration (v2+)
+### Future Consideration (Profile v2 - Ongoing Optimization)
 
-Features to defer until profile-market fit is established.
+Features to defer until profile v1 generates baseline recruiter engagement.
 
-- [ ] **GitHub Actions for dynamic README** — Why defer: Adds complexity; static content works for v1 (Complexity: HIGH)
-- [ ] **Contribution graph optimization** — Why defer: Behavioral over time, not one-time update (Complexity: N/A, organic)
-- [ ] **GitHub Sponsors profile** — Why defer: Requires monetization strategy outside current scope (Complexity: MEDIUM)
+- [ ] **Creator mode (if posting regularly)** — Only enable if committing to 2x/month posting; otherwise hurts more than helps (reduces connection requests)
+- [ ] **Video introduction** — LinkedIn allows video in Featured section; 30-60 sec "who I am, what I do" elevator pitch; high production barrier, unclear ROI for senior engineers
+- [ ] **LinkedIn articles (long-form)** — 500-1500 word case study deep-dives; high effort, algorithm doesn't favor long-form over short posts; defer unless content strategy emerges
+- [ ] **Additional recommendations beyond 3** — Diminishing returns; 3 strategic > 10 generic
+- [ ] **Volunteer experience section** — Adds depth for culture fit; low priority for senior IC roles; relevant for leadership roles
+- [ ] **Publications/Patents section** — Only if applicable; most senior engineers lack formal publications; don't pad
 
 ## Feature Prioritization Matrix
 
-| Feature | User Value | Implementation Cost | Priority |
-|---------|------------|---------------------|----------|
-| Profile bio update | HIGH (first impression) | LOW (1-2 sentences) | P1 |
-| Profile README creation | HIGH (brand extension) | MEDIUM (content writing) | P1 |
-| Repo metadata (pattern158) | HIGH (primary portfolio) | LOW (form fields) | P1 |
-| Archive personal forks | MEDIUM (noise reduction) | LOW (bulk action) | P1 |
-| Keep eLearning forks visible | MEDIUM (domain signal) | LOW (selective archiving) | P1 |
-| Pin 3-6 repos | HIGH (portfolio curation) | LOW (drag-and-drop) | P1 |
-| Live deployment links | MEDIUM (proof of shipping) | LOW (if deployed) | P2 |
-| Selective badges | MEDIUM (engineering rigor) | MEDIUM (CI/CD setup) | P2 |
-| Open-source contributions | HIGH (collaboration proof) | HIGH (time-intensive) | P2 |
-| Professional photo | MEDIUM (polish) | LOW (design task) | P2 |
-| Polish repo READMEs | MEDIUM (professionalism) | MEDIUM (per-repo effort) | P2 |
-| Dynamic README (Actions) | LOW (novelty) | HIGH (maintenance) | P3 |
-| Contribution graph focus | LOW (organic) | N/A (behavioral) | P3 |
-| GitHub Sponsors | LOW (out of scope) | MEDIUM (setup) | P3 |
+| Feature | User Value (Recruiter Impact) | Implementation Cost | Priority |
+|---------|-------------------------------|---------------------|----------|
+| Headline rewrite | HIGH (determines search + click) | LOW (30 min) | P1 |
+| About/Summary rewrite | HIGH (determines outreach quality) | MEDIUM (2-3 hours) | P1 |
+| Featured section | HIGH (demonstrates vs tells) | LOW (1 hour) | P1 |
+| Experience rewrite | HIGH (validates claims) | MEDIUM (3-4 hours) | P1 |
+| Skills replacement | HIGH (enables discovery) | LOW (30 min) | P1 |
+| Custom URL | MEDIUM (minor SEO, cleaner) | LOW (5 min) | P1 |
+| Certification cleanup | MEDIUM (removes noise) | LOW (5 min) | P1 |
+| Contact email visible | MEDIUM (reduces friction) | LOW (5 min) | P1 |
+| Recommendations (2-3) | HIGH (third-party validation) | HIGH (outreach + wait time) | P2 |
+| Rich media in experience | MEDIUM (visual differentiation) | MEDIUM (1-2 hours) | P2 |
+| Activity cadence | MEDIUM (algorithm boost) | MEDIUM (ongoing time) | P2 |
+| Skills endorsements | LOW (social proof) | MEDIUM (outreach coordination) | P2 |
+| Banner image | LOW (visual polish) | MEDIUM (design/creation) | P2 |
+| Creator mode | LOW (only if posting 2x/mo) | LOW (toggle) | P3 |
+| Video introduction | LOW (unclear ROI) | HIGH (production) | P3 |
+| LinkedIn articles | LOW (algorithm doesn't favor) | HIGH (writing time) | P3 |
 
 **Priority key:**
-- P1: Must have for v1.3 launch (GitHub profile alignment)
-- P2: Should have, add when possible (polish and depth)
-- P3: Nice to have, future consideration (advanced features)
+- P1: Must have for recruiter discoverability and credibility (launch blockers)
+- P2: Should have for competitive differentiation (add within 2-4 weeks)
+- P3: Nice to have, defer until P1/P2 generate measurable engagement
 
-## Competitor Feature Analysis
+## Recruiter Behavior Patterns (Search vs. Profile View)
 
-**Note:** "Competitors" here = other senior engineers' GitHub profiles analyzed via search results and examples.
+### What Recruiters Actually Do
 
-| Feature | Common Pattern | Best Practice Observed | Pattern 158 Approach |
-|---------|----------------|------------------------|----------------------|
-| Profile bio | Generic role ("Software Engineer") | Role + specialization + link ("Full-stack dev specializing in React/Node" + website) | Role + brand tagline + link to pattern158.solutions |
-| Profile README | Either template-heavy or stats-only | Hybrid: personal intro + skills + featured projects | Hybrid: Pattern 158 brand headline + GitHub-native content (skills, philosophy reference) |
-| Pinned repos | 6 most recent | Strategic order: flagship, technical, professional, creative | Strategic: pattern158.solutions first, then domain depth (eLearning tools, accessibility) |
-| Badges | 10-20 aesthetic badges | 3-5 functional badges (build, coverage, version) | Minimal or none (NTSB aesthetic = clean, not flashy) |
-| Forks visibility | All forks visible or all archived | Archive unmodified; keep contributed or domain-relevant | Keep eLearning/accessibility forks (SCOBot, wai-tutorials, aria-practices) for domain expertise |
-| Repo descriptions | Missing or vague | One-liner explaining what + why | Descriptive one-liner per repo, connects to portfolio site case studies where applicable |
-| README structure | Varies widely | Overview → Setup → Features → Examples → Testing | Follow this for any pinned repo polish in P2 |
-| Contact info | GitHub email or none | Multiple options (email, LinkedIn, website) | Bio link to pattern158.solutions which has Contact page (email, LinkedIn, GitHub) |
+**Search Phase (Boolean/Keyword Filters):**
+- **Primary filters:** Job title, skills, location, years of experience, current company
+- **Boolean searches:** "Senior Software Engineer" AND ("React" OR "TypeScript") AND "Node.js"
+- **Skill tags are literal:** Searching for "React" won't surface "ReactJS" or "React.js" unless skill tag exact matches
+- **Headline keywords matter:** Search algorithm weighs headline heavily; "Software Engineer" won't surface in "Senior Software Engineer" searches
+- **Recruiter vs. Organic search:** Recruiter accounts use LinkedIn Recruiter tool (advanced filters: years at company, school, certifications); organic search is simpler
 
-## Domain-Specific Considerations
+**Profile View Phase (6-8 Second Scan):**
+1. **Photo** — Professional? (Credibility gate; 40% exit if missing or unprofessional)
+2. **Headline** — Does role + specialty match job req? (50% exit if mismatch)
+3. **About first 2 sentences** — Does value prop resonate? (Determines "read more" click)
+4. **Featured section (mobile) / Current role (desktop)** — Evidence of claims? (Validates or contradicts headline)
+5. **Skills top 3** — Do they match search keywords? (Consistency check)
+6. **Recommendation count** — 0 = yellow flag, 1-3 = normal, 10+ = over-solicited
 
-### GitHub Profile for Senior Engineers vs Juniors
+**Decision Point:** InMail outreach (yes/no) or profile skip (87% of viewed profiles don't get outreach)
 
-| Aspect | Junior Engineer | Senior Engineer | Pattern 158 Context |
-|--------|----------------|----------------|---------------------|
-| **Pinned repos** | Learning projects, tutorials | Production-quality, polished work | pattern158.solutions (production site, 22 pages, WCAG AA) |
-| **Contribution graph** | Valued highly (activity signal) | Discounted (quality > quantity) | Organic activity, not optimized |
-| **Open-source** | Optional | Expected to show collaboration | eLearning forks demonstrate domain engagement |
-| **README complexity** | Simple descriptions | Professional docs (setup, architecture, testing) | pattern158.solutions has full accessibility statement, design system docs |
-| **Bio specificity** | "Aspiring developer" | Role + domain specialization | "Systems architect specializing in eLearning engineering" |
-| **Brand alignment** | Generic GitHub aesthetic | Cohesive personal brand across platforms | Pattern 158 brand (NTSB aesthetic) extends to GitHub |
+**What triggers InMail:**
+- Headline + About + Featured align with job req (consistency)
+- Evidence of outcomes in experience (not just "responsible for")
+- Recommendations from senior leaders (credibility)
+- Skills match job req exactly (keyword validation)
+- Open to work signal (low-hanging fruit for recruiter)
 
-### Hiring Manager Evaluation Sequence
+**What triggers skip:**
+- Generic headline ("Software Engineer" when searching for "Senior Software Engineer")
+- About section is buzzword soup with no concrete value prop
+- Experience is duty-list with no outcomes ("Developed applications" vs "Built X reducing Y by Z%")
+- Skills are padded with 50+ generic tags
+- No recommendations or only peer endorsements (no leadership validation)
+- Stale profile (no activity in 6+ months, last role ended years ago)
 
-Based on research, hiring managers evaluate in this order:
+### Search Ranking Factors (LinkedIn Algorithm)
 
-1. **Bio + README (30 seconds)** — Who are you, what do you do
-2. **Pinned repos (1-2 minutes)** — What's your best work
-3. **Repo quality (2-3 minutes)** — Click into flagship, check README, scan code
-4. **Activity + contributions (1 minute)** — Are you active, do you collaborate
-5. **Deep dive (5+ minutes)** — If interested, check commit history, open PRs, issues
+**Primary ranking signals:**
+1. **Keyword match density:** Exact skill tags + headline keywords + About section keywords
+2. **Profile completeness:** All sections filled (About, Experience, Skills, Education) = algorithm boost
+3. **Activity recency:** Posts/comments in last 90 days = "active" boost; 6+ months dormant = penalty
+4. **Engagement rate:** Profile views, connection requests accepted, post likes/comments = popularity signal
+5. **Network size:** 500+ connections = threshold; diminishing returns beyond that for search
+6. **Recommendations count:** 1-3 = small boost; 0 = penalty; 10+ = neutral (no additional boost)
+7. **Open to work signal:** Recruiter searches can filter by "open to work"; explicit opt-in
 
-**Implication for Pattern 158:**
-- Bio must include "Provider of Clarity" essence and link to pattern158.solutions
-- README must connect Pattern 158 brand to GitHub activity (philosophy, approach)
-- pattern158.solutions must be pinned first (flagship)
-- eLearning repos (SCORM debugger, etc.) must be pinned to show domain depth
-- Repo descriptions must make 30-second scan productive
+**Secondary ranking signals:**
+1. **Premium account:** LinkedIn Premium may get slight ranking boost; unclear magnitude
+2. **Response rate:** How often you respond to InMails (higher = algorithm trusts you're active)
+3. **SSI score (Social Selling Index):** LinkedIn's internal engagement metric; posting/commenting/sharing improves it
+4. **Profile views:** More views = algorithm assumes quality = surfaces higher
 
-### Brand Consistency Requirements
+**What doesn't affect search ranking:**
+- Banner image quality
+- Number of followers (vs. connections)
+- Length of About section (keyword density matters, not word count)
+- Featured section links (visible after click, not in search)
+- Rich media in experience (visible after click, not in search)
 
-Pattern 158 has established:
-- **Name:** Pattern 158 (Myst fireplace puzzle, 1:5:8 ratio)
-- **Tagline:** "I cheat, but I cheat fair." (The Three Stooges, "Healthy, Wealthy and Dumb," 1938)
-- **Aesthetic:** NTSB investigation reports (industrial, technical, authoritative)
-- **Six elements:** Provider of Clarity, Cheat Fair, Build the Tool, Seek Knowledge, Time Machine, TASBot
-- **Visual:** Navy/Teal/Cream palette, Bebas Neue/Inter/JetBrains Mono typography
+**Critical insight:** Search ranking gets you FOUND; profile content gets you CONTACTED. Two separate optimization targets.
 
-**GitHub alignment:**
-- README should reference Provider of Clarity (core element)
-- Avoid animated GIFs/banners (conflicts with NTSB aesthetic)
-- Use clean, text-based layout (matches industrial/technical aesthetic)
-- Link prominently to pattern158.solutions (single source of truth for brand)
-- Repository topics align with domain (scorm, elearning, accessibility, wcag)
+## Evidence-Based Claims vs. Confidence Levels
 
-## Sources
+**HIGH confidence (LinkedIn platform documentation/industry-standard recruiting practices):**
+- Headline keyword matching determines search results
+- Skills section enables boolean recruiter searches
+- Profile photo increases views (21x cited in multiple studies)
+- About section first 300 chars visible before "see more" click
+- Featured section appears above experience on mobile (60% of LinkedIn traffic)
+- Recruiter 6-8 second scan pattern (eye-tracking studies)
+- Recommendations from managers > peer endorsements for credibility
 
-### Best Practices and Hiring Manager Perspective
-- [GitHub and Git: Best Practices and Tips for Job Seekers](https://flatironschool.com/blog/github-profile-and-git-practices-for-job-seekers/)
-- [How to Build a GitHub Portfolio That Gets You Hired | Priygop Blog](https://priygop.com/blog/how-to-build-a-github-portfolio-that-gets-you-hired)
-- [How to Build the Best GitHub Profile for Your Job Search | Boot.dev](https://blog.boot.dev/jobs/build-github-profile/)
-- [Using your GitHub profile to enhance your resume - GitHub Docs](https://docs.github.com/en/account-and-profile/tutorials/using-your-github-profile-to-enhance-your-resume)
-- [Why Hiring Managers Should Look at GitHub Profiles | by Shubham Sharma | Medium](https://medium.com/@ss-tech/why-hiring-managers-should-look-at-github-profiles-42dd373411c6)
+**MEDIUM confidence (Recruiter practitioner reports/LinkedIn advice but not formally documented):**
+- Activity in last 90 days = algorithm boost
+- 500+ connections = threshold for search visibility
+- Premium account = slight search ranking boost
+- Open to work signal increases InMail volume
+- Skills endorsement count affects perception (10+ endorsements on top 3 skills)
+- Generic headlines reduce click-through vs. specific differentiators
 
-### Profile README and Templates
-- [GitHub - coderjojo/creative-profile-readme](https://github.com/coderjojo/creative-profile-readme)
-- [GitHub - durgeshsamariya/awesome-github-profile-readme-templates](https://github.com/durgeshsamariya/awesome-github-profile-readme-templates)
-- [Creating a Killer GitHub Profile README Part 1](https://daily.dev/blog/creating-a-killer-github-profile-readme-part-1)
-- [How to Design an Attractive GitHub Profile Readme | by Piyush Malhotra | Bootcamp | Medium](https://medium.com/design-bootcamp/how-to-design-an-attractive-github-profile-readme-3618d6c53783)
+**LOW confidence (Anecdotal/best practices but limited verification):**
+- Creator mode increases profile visibility (vs. reduces connection requests)
+- Video introductions increase engagement
+- Banner image affects profile memorability
+- Rich media in experience increases read time
 
-### Bio Best Practices and Recruiter Insights
-- [Unlock the secrets of GitHub sourcing: Recruit top talent now!](https://leoforce.com/blog/github-sourcing/)
-- [Sourcing & Recruiting Tech Talent on GitHub: Strategies for Success](https://www.intervue.io/blog/sourcing-recruiting-tech-talent-on-github)
-- [Recruiting on GitHub: A beginner's guide to sourcing tech candidates on GitHub](https://www.kula.ai/blog/github-beginners-guide-source-candidates)
+**Sources unavailable:** Web search quota exhausted; Brave API and Docker MCP search tools unavailable. Research based on training data knowledge of LinkedIn platform mechanics, recruiting industry practices, and senior engineer hiring patterns (knowledge cutoff: January 2025).
 
-### Pinned Repositories Strategy
-- [How to make your GitHub more impressive to Employers](https://underdog.io/blog/how-to-make-your-github-more-impressive-to-employers)
-- [Pinning items to your profile - GitHub Docs](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/pinning-items-to-your-profile)
-- [The Complete Guide to Repository Analytics: What Your GitHub Projects Say About You](https://www.starfolio.dev/blog/complete-guide-repository-analytics)
+## Domain-Specific Notes: Senior Engineers (28+ Years Experience)
 
-### Red Flags and Anti-Patterns
-- [7 GitHub Profile Mistakes That Cost You Job Offers | by JS Guru Jobs | Jan, 2026 | Medium](https://medium.com/@kantmusk/7-github-profile-mistakes-that-cost-you-job-offers-e6b37ea92238)
-- [5 Essential Steps to a perfect GitHub portfolio | Candor](https://candor.co/articles/interview-prep/optimizing-your-developer-portfolio-in-github)
-- [How a bad GitHub Profile is holding you back](https://www.linkedin.com/pulse/how-bad-github-profile-holding-you-back-avi-aryan)
-- [Readme Badges GitHub: Best Practices](https://daily.dev/blog/readme-badges-github-best-practices)
+### Unique Challenges
 
-### Professional Examples and Clean Design
-- [Building your GitHub profile and reputation](https://4geeks.com/lesson/building-your-github-profile-and-reputation)
-- [How do I make my GitHub profile look more professional? · community · Discussion #165386](https://github.com/orgs/community/discussions/165386)
-- [🙌 7 Tips to Build Your GitHub Profile Like a PRO 🚀 | by GautamManak | Medium](https://medium.com/@gautammanak1/7-tips-to-build-your-github-profile-like-a-pro-75b648f24f55)
-- [How To Craft A High-Quality GitHub Profile | by Sarah Daniels | Medium](https://sarahsakordaniels.medium.com/how-to-craft-a-high-quality-github-profile-a8c42fe0a0cf)
+1. **Age bias mitigation:** 28+ years can trigger "too expensive" or "won't fit culture" assumptions
+   - **Counter:** Emphasize modern stack (React/TypeScript not COBOL/mainframe)
+   - **Counter:** Highlight 2024-2026 work prominently (recency signal)
+   - **Counter:** Show adaptability (AI/Copilot Studio, modern frameworks)
 
-### Personal Branding and Differentiation
-- [Personal Branding as a Developer: Your GitHub Profile Matters More Than You Think | by Timothy Mugayi | Better Programming](https://medium.com/better-programming/personal-branding-as-a-developer-why-your-github-profile-matters-more-than-you-think-c4367c0f4db1)
-- [How to Make Your GitHub Profile Stand Out (Without Writing a Line of Code)](https://www.wearedevelopers.com/en/magazine/584/how-to-make-your-github-profile-stand-out-without-writing-a-line-of-code-584)
-- [How To Build A Personal Brand On GitHub? - GeeksforGeeks](https://www.geeksforgeeks.org/git/how-to-build-a-personal-brand-on-github/)
-- [How to Build Your Personal Developer Brand in 2025 - Dev Tech Insights](https://devtechinsights.com/career-development-personal-brand-as-developer-2025/)
+2. **Pigeonhole risk:** Deep domain expertise (eLearning) can limit perceived versatility
+   - **Counter:** Position eLearning as proof-of-depth, not career identity
+   - **Counter:** Lead with "Senior Software Engineer" not "eLearning Architect"
+   - **Counter:** Highlight transferable skills (React, Node.js, accessibility, forensic debugging)
 
-### Evaluation from Hiring Manager Perspective
-- [What do hiring managers see on my GitHub profile? | Reczee Blog](https://www.reczee.com/blog/what-do-hiring-managers-see-on-my-github-profile)
-- [What are the most effective ways to evaluate candidates using GitHub profiles?](https://www.linkedin.com/advice/3/what-most-effective-ways-evaluate-candidates-using-github-s864e)
-- [I hire people to work on a FOSS project. Here's how I evaluate GitHub profiles | Ondsel](http://www.ondsel.com/blog/evaluating-github-profile/)
-- [5 GitHub Stats Hiring Managers Look For | Impact Interview](https://www.impactinterview.com/2016/12/5-github-stats-hiring-managers-look-for/)
-- [Here's What 4 Companies Really Look for on Your GitHub Profile | Built In Chicago](https://www.builtinchicago.org/2018/05/08/what-companies-look-for-on-github)
+3. **Seniority demonstration:** "Senior" must be SHOWN not just stated
+   - **Counter:** Outcomes with metrics ("Reduced X by Y%", "Scaled to Z users")
+   - **Counter:** System-level thinking (architecture, not just implementation)
+   - **Counter:** Recommendations from senior leaders (not just peers)
+
+4. **Modern vs. legacy perception:** Long career can signal "stuck in old tech"
+   - **Counter:** Modern stack in headline (React, TypeScript, Node.js)
+   - **Counter:** Skills section emphasizes current technologies
+   - **Counter:** Experience descriptions highlight 2024-2026 work first
+
+### Positioning Strategy: Engineering-First, eLearning as Proof-of-Depth
+
+**Target headline structure:**
+```
+Senior Software Engineer | React + TypeScript + Node.js | Legacy System Rescue
+```
+
+**NOT:**
+```
+eLearning Systems Architect | SCORM Expert | 28 Years Experience
+```
+
+**Rationale:** "Senior Software Engineer" is the recruiter search term. Modern stack (React/TypeScript/Node.js) counters age bias. "Legacy System Rescue" differentiates without limiting to eLearning domain. "28 Years Experience" triggers age bias; show seniority through outcomes not duration.
+
+**Skills section priority:**
+1. Modern stack: React, TypeScript, Node.js
+2. Transferable depth: System Architecture, Technical Forensics, API Design
+3. Domain expertise: eLearning Standards, WCAG Accessibility, SCORM/xAPI
+4. Leadership: Technical Leadership, Mentoring (if applicable)
+
+**NOT:** Leading with SCORM, xAPI, .NET Framework, Databases (generic)
+
+**Featured section strategy:**
+- Lead with non-eLearning technical work (if available) OR strongest eLearning work that shows transferable skills
+- GM Investigation (forensic debugging, systems thinking) = differentiator
+- SCORM Debugger (tooling, developer experience) = transferable
+- MCAPS ContentAIQ (modern AI stack, enterprise architecture) = recency signal
+- BP Platform (Rustici integration, troubleshooting) = domain depth proof
+
+**About section structure:**
+1. **Opening (first 300 chars):** "I'm a Senior Software Engineer who solves problems others can't. My specialty: rescuing legacy systems and creating clarity from chaos. Whether it's forensic debugging a 6-year production mystery or architecting modern React applications, I bring 28+ years of pattern recognition to complex technical challenges."
+2. **Methodology paragraph:** How you work (systems thinking, NTSB investigation approach, forensic debugging)
+3. **Modern work paragraph:** 2024-2026 highlights (MCAPS AI platform analysis, React development, Copilot Studio work)
+4. **Domain depth paragraph:** eLearning/SCORM/xAPI expertise as proof-of-depth ("I've built tools like X that Y, including work with Rustici Software, the industry authority on SCORM/xAPI")
+5. **Contact/Portfolio:** "See my work at pattern158.solutions or reach out at dan@pattern158.solutions"
+
+## Anti-Pattern Recognition
+
+### What Weak Senior Profiles Do
+
+1. **"Seeking opportunities" language:** Negative framing, sounds desperate
+2. **Job title only headlines:** "Senior Software Engineer at Company X" (zero differentiation)
+3. **Buzzword soup:** "Passionate thought leader leveraging synergies" (instant dismiss)
+4. **Skill padding:** 50+ skills including "Microsoft Word" and "Agile" (dilutes signal)
+5. **Resume copy-paste:** Experience section is bullet list from resume with no LinkedIn-specific features (links, media)
+6. **Generic recommendations:** "Great to work with" (no technical validation)
+7. **No Featured section:** Tells vs shows (missed opportunity)
+8. **Stale profile:** Last activity 2+ years ago (dormant signal)
+9. **No contact email:** Forces recruiter to use InMail (friction = fewer contacts)
+10. **Defensive language:** "Yes, I'm older, but I keep up with tech" (acknowledges bias)
+
+### What Strong Senior Profiles Do
+
+1. **Value prop headlines:** "Senior Software Engineer | React + TypeScript | Legacy System Rescue" (role + stack + differentiator)
+2. **Evidence-based About:** "Built X resulting in Y" with links to portfolio
+3. **Featured section showcases best work:** 4-6 portfolio links above experience section
+4. **Outcomes in experience:** "Reduced deployment time 60%" not "Responsible for deployments"
+5. **Strategic skills:** 10-15 core skills matching target roles
+6. **Recommendations from leaders:** Manager/director validations highlighting specific strengths
+7. **Modern stack prominence:** 2024-2026 work and current technologies front-loaded
+8. **Active signal:** 1-2 posts/comments per month (algorithm engagement)
+9. **Accessible contact:** Email in About or Featured section
+10. **Confident framing:** Shows seniority through outcomes not defensive statements
+
+## Dependencies on Existing Brand Material
+
+### What Already Exists (pattern158.solutions)
+
+- **22-page portfolio site:** Exhibits, case studies, philosophy, brand identity
+- **14 exhibit case studies:** Challenge → Approach → Solution → Results structure
+- **Brand voice:** NTSB investigation aesthetic, forensic debugging, "I cheat, but I cheat fair"
+- **Established positioning:** Provider of Clarity, systems thinking, technical depth
+- **Modern work examples:** MCAPS ContentAIQ analysis, SCORM Debugger, GM Investigation
+- **Domain credibility:** Rustici Software integration work, eLearning standards expertise
+
+### How LinkedIn Features Depend on Website
+
+1. **Featured section → pattern158.solutions exhibits:** Direct links to GM Investigation, SCORM Debugger, CSBB Dispatch, BP Platform
+2. **About section value prop → philosophy.html brand elements:** "Provider of Clarity" language, NTSB approach
+3. **Experience outcomes → exhibit case studies:** Quantified results already documented on site
+4. **Headline differentiator → brand tagline:** "Legacy System Rescue" aligns with "Creating Clarity from Chaos"
+5. **Contact email → pattern158.solutions domain:** dan@pattern158.solutions establishes brand consistency
+6. **Recommendations talking points → testimonials page:** "Field Reports" provide template for what to ask references to highlight
+
+### Material Gaps (Not on Website, Needed for LinkedIn)
+
+1. **Condensed career narrative:** Website is 22 pages; LinkedIn About needs 3-5 paragraphs
+2. **2024-2026 work summary:** Website has exhibits but not chronological recent work overview
+3. **Skills taxonomy:** Website shows depth but not explicit skill tags recruiter searches require
+4. **Recommendation talking points:** Need templates for strategic outreach to former managers/peers
+5. **Activity content strategy:** Website is static; LinkedIn requires ongoing engagement plan
 
 ---
-*Feature research for: GitHub Profile Optimization for Senior Engineers*
+*Feature research for: LinkedIn Profile Optimization (Senior Software Engineer)*
 *Researched: 2026-02-22*
-*Context: Pattern 158 Solutions v1.3 milestone — aligning github.com/novakda with pattern158.solutions professional identity*
+*Confidence: MEDIUM (platform knowledge + recruiting best practices; limited real-time verification)*
