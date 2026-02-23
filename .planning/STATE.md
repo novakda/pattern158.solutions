@@ -74,6 +74,8 @@ Full decision logs archived in:
 - [Phase 21]: Archive 5 eLearning forks to signal 'evaluated and preserved' rather than 'actively maintained'
 - [Phase 21]: Keep get-shit-done fork active as it's a dev tool currently in use
 - [Phase 21]: 4-dimension verification ensures all repo metadata (count, archive status, descriptions, topics) remain intact
+- [Phase ?]: User selected dewordify instead of SCOBot for position 4 pin (both meet quality bar, both signal eLearning domain depth)
+- [Phase 22]: 5 pins chosen over 6 to maintain narrative coherence (flagship + profile intro + accessibility depth + eLearning domain)
 
 ### Pending Todos
 
