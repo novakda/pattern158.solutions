@@ -64,7 +64,7 @@ Full details: `.planning/milestones/v1.3-ROADMAP.md`
 
 </details>
 
-### 🚧 v1.4 LinkedIn Profile Brand Alignment (In Progress)
+### v1.4 LinkedIn Profile Brand Alignment (In Progress)
 
 **Milestone Goal:** Overhaul LinkedIn profile to match pattern158.solutions quality — optimized for engineering roles broadly, with eLearning as proof-of-depth not pigeonhole.
 
@@ -78,11 +78,11 @@ Full details: `.planning/milestones/v1.3-ROADMAP.md`
   3. Custom LinkedIn URL claimed (dan-novak or dannovak) and consistent across platforms
   4. Contact email dan@pattern158.solutions visible in Contact Info section and About text
   5. LinkedIn profile appears in recruiter searches for "Senior Software Engineer React" (keyword optimization verified)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 23-01: TBD
-- [ ] 23-02: TBD
+- [ ] 23-01-PLAN.md — Write LinkedIn headline and about section (PROF-01, PROF-02)
+- [ ] 23-02-PLAN.md — Custom URL strategy, contact email, and application instructions (PROF-03, PROF-04)
 
 #### Phase 24: Featured Section & Cross-Platform Linking
 **Goal**: Create Featured section with pattern158.solutions exhibits, establishing hub-and-spoke cross-linking
@@ -192,7 +192,7 @@ Phases execute in numeric order: 23 → 24 → 25 → 26 → 27 → 28
 | 20. Repo Metadata | v1.3 | 2/2 | Complete | 2026-02-23 |
 | 21. Fork Curation | v1.3 | 1/1 | Complete | 2026-02-23 |
 | 22. Strategic Pinning | v1.3 | 1/1 | Complete | 2026-02-23 |
-| 23. Foundation & Search | v1.4 | 0/2 | Not started | - |
+| 23. Foundation & Search | v1.4 | 0/2 | Planned | - |
 | 24. Featured Section | v1.4 | 0/1 | Not started | - |
 | 25. Experience Section | v1.4 | 0/3 | Not started | - |
 | 26. Skills & Certifications | v1.4 | 0/1 | Not started | - |
