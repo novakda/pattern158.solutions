@@ -119,10 +119,10 @@ Plans:
   3. Pinned repos demonstrate professional completeness (docs, tests, polish)
   4. Profile creates cohesive narrative aligned with portfolio exhibits
   5. Bidirectional linking verified: website links to GitHub, GitHub links to website
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 22-01: TBD
+- [ ] 22-01-PLAN.md -- Cross-link verification, manual pinning (5 repos), pin verification, and v1.3 milestone closure
 
 ## Progress
 
