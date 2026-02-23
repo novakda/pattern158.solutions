@@ -31,8 +31,8 @@ Requirements for GitHub Profile Brand Alignment milestone. Each maps to roadmap 
 
 ### Fork Curation
 
-- [ ] **FORK-01**: Hobby/personal forks archived (~25 repos)
-- [ ] **FORK-02**: eLearning-relevant forks kept visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
+- [x] **FORK-01**: Hobby/personal forks archived (~25 repos)
+- [x] **FORK-02**: eLearning-relevant forks kept visible (SCOBot, lms-content-template, dewordify, wai-tutorials, aria-practices)
 
 ### Repo Pinning
 
@@ -88,8 +88,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | META-03 | Phase 20 | Complete |
 | META-04 | Phase 20 | Complete |
 | META-05 | Phase 20 | Complete |
-| FORK-01 | Phase 21 | Pending |
-| FORK-02 | Phase 21 | Pending |
+| FORK-01 | Phase 21 | Complete |
+| FORK-02 | Phase 21 | Complete |
 | PIN-01 | Phase 22 | Pending |
 | PIN-02 | Phase 22 | Pending |
 
