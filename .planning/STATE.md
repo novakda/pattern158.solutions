@@ -16,10 +16,10 @@ See: .planning/PROJECT.md (updated 2026-02-22)
 
 ## Current Position
 
-Phase: 23 of 28 (Foundation & Search Optimization)
-Plan: 2 of 2 complete
-Status: Phase 23 complete — all deliverables ready for LinkedIn UI application (headline, about, URL strategy, instructions)
-Last activity: 2026-02-23 — completed 23-02 (custom URL strategy + consolidated instructions)
+Phase: 24 of 28 (Featured Section & Cross-Platform Linking)
+Plan: 1 of 2 complete
+Status: Phase 24 in progress — Featured exhibit selection and OG image strategy complete, HTML implementation pending
+Last activity: 2026-02-23 — completed 24-01 (Featured exhibit selection + copy variants + OG image strategy)
 
 Progress: [████████████████████░░░░░░░░] 79% (22 of 28 phases complete)
 
@@ -79,6 +79,14 @@ Recent decisions affecting v1.4 work:
 - [Phase 23]: Contact email dual-placement: Contact Info (authoritative) + About section (visible convenience)
 - [Phase 23]: Open to Work: recruiter-only mode recommended (no public green banner)
 
+**Phase 24 Plan 01 decisions (2026-02-23):**
+
+- **Featured section: 5 exhibits selected**: GM Investigation, SCORM Debugger, MCAPS AI Agent, Cross-Domain SCORM Framework, Homepage — balances brand recognition, skill diversity, story impact
+- **3 copy variants per item**: Outcome-focused, curiosity-driven, technical showcase — gives user choice over tone/framing
+- **Strength-first ordering**: Lead with GM Investigation (forensic differentiator), mobile context optimized (Featured appears above Experience on 60% of traffic)
+- **OG image strategy: consistent branding (Option A)**: Same logo at 1200x627 across all pages; unique per-exhibit images deferred (Option B can be implemented later if engagement data supports)
+- **Copy distinct from site OG tags**: Featured copy optimized for LinkedIn click-through context, not generic social sharing
+
 ### Pending Todos
 
 None.
@@ -102,14 +110,15 @@ None.
 | 6 | Fix Three Stooges brand element citation and content | 2026-02-22 | 3bf6118 | [6-fix-three-stooges-brand-element-citation](./quick/6-fix-three-stooges-brand-element-citation/) |
 | Phase 23 P01 | 3 | 2 tasks | 2 files |
 | Phase 23 P02 | 3 | 2 tasks | 2 files |
+| Phase 24 P01 | 3 | 2 tasks | 2 files |
 
 ## Session Continuity
 
-Last session: 2026-02-22 (v1.4 roadmap creation)
-Stopped at: v1.4 roadmap creation complete, all files written (ROADMAP.md, STATE.md, REQUIREMENTS.md traceability updated)
-Resume file: None (ready for /gsd:plan-phase 23)
+Last session: 2026-02-23 (Phase 24 Plan 01 execution)
+Stopped at: Completed 24-01 (Featured exhibit selection + copy variants + OG image strategy)
+Resume file: None (ready for /gsd:execute-plan 24-02)
 
-**Next step:** `/gsd:plan-phase 23`
+**Next step:** `/gsd:execute-plan 24-02`
 
 ---
 *v1.0 shipped: 2026-02-19*
