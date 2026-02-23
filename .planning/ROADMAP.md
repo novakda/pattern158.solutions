@@ -88,11 +88,11 @@ Plans:
   3. eLearning-relevant forks have descriptions clarifying professional context
   4. GitHub search can connect repos to Dan's eLearning and accessibility expertise
   5. Repository metadata aligns with portfolio positioning (systems architecture, SCORM, WCAG)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 20-01: TBD
-- [ ] 20-02: TBD
+- [ ] 20-01-PLAN.md -- Profile cleanup (31 repos private) and flagship repo metadata (pattern158.solutions + novakda)
+- [ ] 20-02-PLAN.md -- Fork metadata (5 eLearning forks + get-shit-done descriptions and topics) and comprehensive verification
 
 ### Phase 21: Fork Curation & Visibility Strategy
 **Goal**: Reduce profile noise while preserving domain expertise signals
