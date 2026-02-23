@@ -79,38 +79,47 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| PROF-01 | — | Pending |
-| PROF-02 | — | Pending |
-| PROF-03 | — | Pending |
-| PROF-04 | — | Pending |
-| FEAT-01 | — | Pending |
-| FEAT-02 | — | Pending |
-| FEAT-03 | — | Pending |
-| EXP-01 | — | Pending |
-| EXP-02 | — | Pending |
-| EXP-03 | — | Pending |
-| EXP-04 | — | Pending |
-| EXP-05 | — | Pending |
-| EXP-06 | — | Pending |
-| EXP-07 | — | Pending |
-| EXP-08 | — | Pending |
-| SKIL-01 | — | Pending |
-| SKIL-02 | — | Pending |
-| SKIL-03 | — | Pending |
-| SKIL-04 | — | Pending |
-| VIS-01 | — | Pending |
-| VIS-02 | — | Pending |
-| VIS-03 | — | Pending |
-| REC-01 | — | Pending |
-| REC-02 | — | Pending |
-| REC-03 | — | Pending |
-| REC-04 | — | Pending |
+| PROF-01 | Phase 23 | Pending |
+| PROF-02 | Phase 23 | Pending |
+| PROF-03 | Phase 23 | Pending |
+| PROF-04 | Phase 23 | Pending |
+| FEAT-01 | Phase 24 | Pending |
+| FEAT-02 | Phase 24 | Pending |
+| FEAT-03 | Phase 24 | Pending |
+| EXP-01 | Phase 25 | Pending |
+| EXP-02 | Phase 25 | Pending |
+| EXP-03 | Phase 25 | Pending |
+| EXP-04 | Phase 25 | Pending |
+| EXP-05 | Phase 25 | Pending |
+| EXP-06 | Phase 25 | Pending |
+| EXP-07 | Phase 25 | Pending |
+| EXP-08 | Phase 25 | Pending |
+| SKIL-01 | Phase 26 | Pending |
+| SKIL-02 | Phase 26 | Pending |
+| SKIL-03 | Phase 26 | Pending |
+| SKIL-04 | Phase 26 | Pending |
+| VIS-01 | Phase 27 | Pending |
+| VIS-02 | Phase 27 | Pending |
+| VIS-03 | Phase 27 | Pending |
+| REC-01 | Phase 28 | Pending |
+| REC-02 | Phase 28 | Pending |
+| REC-03 | Phase 28 | Pending |
+| REC-04 | Phase 28 | Pending |
 
 **Coverage:**
 - v1.4 requirements: 26 total
-- Mapped to phases: 0
-- Unmapped: 26 (awaiting roadmap)
+- Mapped to phases: 26 (100% coverage)
+- Unmapped: 0
+
+**Phase distribution:**
+- Phase 23: 4 requirements (Profile Foundation)
+- Phase 24: 3 requirements (Featured Section)
+- Phase 25: 8 requirements (Experience)
+- Phase 26: 4 requirements (Skills & Certifications)
+- Phase 27: 3 requirements (Visual Branding)
+- Phase 28: 4 requirements (Recommendations & Polish)
 
 ---
 *Requirements defined: 2026-02-22*
-*Last updated: 2026-02-22 after initial definition*
+*Roadmap created: 2026-02-22*
+*Last updated: 2026-02-22 with Phase 23-28 mappings*
