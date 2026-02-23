@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-02-23T04:21:54Z",
+  "website_to_github": {
+    "contact_html_links": 1,
+    "link_url": "https://github.com/novakda",
+    "verified": true
+  },
+  "github_to_website": {
+    "profile_bio": "28 years building eLearning systems (SCORM/xAPI) and accessible platforms. Open to opportunities. If you want to cheat, cheat fair.",
+    "profile_blog": "https://pattern158.solutions",
+    "repo_homepage": "https://pattern158.solutions",
+    "readme_references": 5,
+    "verified": true
+  },
+  "pin_candidates": [
+    {
+      "name": "pattern158.solutions",
+      "description": "Pattern 158 Solutions — eLearning systems architecture and accessibility portfolio",
+      "homepage": "https://pattern158.solutions",
+      "topics": ["accessibility", "portfolio", "static-site", "wcag"],
+      "archived": false,
+      "fork": false,
+      "ready": true
+    },
+    {
+      "name": "novakda",
+      "description": "GitHub profile README — Dan Novak, eLearning systems architect",
+      "homepage": null,
+      "topics": [],
+      "archived": false,
+      "fork": false,
+      "ready": true
+    },
+    {
+      "name": "aria-practices",
+      "description": "Fork of w3c/aria-practices — Evaluated as reference for implementing WCAG-compliant interactive components in eLearning platforms",
+      "homepage": "https://www.w3.org/wai/aria/apg/",
+      "topics": ["accessibility", "aria", "wai-aria", "wcag"],
+      "archived": true,
+      "fork": true,
+      "ready": true
+    },
+    {
+      "name": "wai-tutorials",
+      "description": "Fork of w3c/wai-tutorials — Evaluated as reference for implementing WCAG-compliant content patterns in eLearning platforms",
+      "homepage": "https://www.w3.org/WAI/tutorials/",
+      "topics": ["accessibility", "html", "tutorials", "wcag"],
+      "archived": true,
+      "fork": true,
+      "ready": true
+    },
+    {
+      "name": "SCOBot",
+      "description": "Fork of cybercussion/SCOBot — Evaluated as part of SCORM API standards research for JavaScript runtime communication libraries",
+      "homepage": "https://cybercussion.com",
+      "topics": ["elearning", "javascript", "lms", "scorm", "scorm-api"],
+      "archived": true,
+      "fork": true,
+      "ready": true
+    }
+  ],
+  "current_pins": [],
+  "all_cross_links_verified": true
+}
