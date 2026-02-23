@@ -94,10 +94,11 @@ Plans:
   3. Featured section appears above Experience on mobile view (60% of LinkedIn traffic)
   4. Open Graph thumbnails display correctly for all Featured links (visual preview verified)
   5. Cross-platform closed loop verified: LinkedIn → pattern158.solutions → GitHub → LinkedIn (bidirectional links functional)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 24-01: TBD
+- [ ] 24-01-PLAN.md — Select Featured exhibits and write LinkedIn-specific copy variants + OG image strategy (FEAT-01, FEAT-02)
+- [ ] 24-02-PLAN.md — Update OG image dimensions, fix GitHub footer links, cross-platform link map, Featured instructions (FEAT-01, FEAT-02, FEAT-03)
 
 #### Phase 25: Experience Section Rewrite
 **Goal**: Rewrite all experience entries with NTSB structure, modern stack visibility, and layoff framing
@@ -193,7 +194,7 @@ Phases execute in numeric order: 23 → 24 → 25 → 26 → 27 → 28
 | 21. Fork Curation | v1.3 | 1/1 | Complete | 2026-02-23 |
 | 22. Strategic Pinning | v1.3 | 1/1 | Complete | 2026-02-23 |
 | 23. Foundation & Search | 2/2 | Complete   | 2026-02-23 | - |
-| 24. Featured Section | v1.4 | 0/1 | Not started | - |
+| 24. Featured Section | v1.4 | 0/2 | Not started | - |
 | 25. Experience Section | v1.4 | 0/3 | Not started | - |
 | 26. Skills & Certifications | v1.4 | 0/1 | Not started | - |
 | 27. Visual Branding | v1.4 | 0/1 | Not started | - |
