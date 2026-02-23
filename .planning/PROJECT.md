@@ -105,9 +105,32 @@ The site must accurately and compellingly present Dan's professional identity an
 
 ### Active
 
-<!-- No active milestone. Use /gsd:new-milestone to start next. -->
+<!-- Current milestone: v1.4 LinkedIn Profile Brand Alignment -->
 
-(No active milestone)
+## Current Milestone: v1.4 LinkedIn Profile Brand Alignment
+
+**Goal:** Overhaul the LinkedIn profile to match pattern158.solutions quality — optimized for engineering roles broadly, with eLearning as proof-of-depth not pigeonhole.
+
+**Target features:**
+- Headline optimization (engineering-first positioning, domain-agnostic)
+- About/Summary rewrite (brand voice, modern 2024-2026 work, proper formatting)
+- Featured section (new — links to pattern158.solutions exhibits)
+- Experience sections rewrite (all entries, add MCAPS AILT/ContentAIQ/Power Platform analysis, GM investigation)
+- Skills section replacement (kill generic auto-suggestions, add real positioning skills)
+- Certifications cleanup (remove weak LinkedIn Learning completions)
+- Visual branding guidance (banner image, URL customization, profile photo)
+- Recommendations strategy (outreach templates for 1-2 strategic asks beyond Max Glick's)
+- Content strategy (low-barrier posting approach for ongoing engagement)
+- Contact email alignment (dan@pattern158.solutions)
+
+**Positioning strategy:** Lead with Senior Software Engineer + systems thinking. eLearning/SCORM/xAPI depth is evidence of capability, not career identity. Modern stack (React, TypeScript, Node.js, AI/Copilot Studio) front and center. Forensic investigation methodology is the rare differentiator.
+
+**Deliverable format:** Section-by-section document with copy-paste-ready content and LinkedIn-specific instructions. User applies changes manually in LinkedIn UI.
+
+**Constraints:**
+- No direct billing pressure roles, no QA/manual testing roles
+- Every claim traceable to primary sources (same factual accuracy standard as website)
+- Brand voice consistent with pattern158.solutions and writing style profile
 
 ### Out of Scope
 
@@ -116,7 +139,7 @@ The site must accurately and compellingly present Dan's professional identity an
 - Blog platform -- major feature, separate project if ever
 - Resume hosting/download -- resumes are tailored per application, managed elsewhere
 - Backend/CMS -- static site, no server-side processing
-- Cover letter or LinkedIn management -- external platforms
+- Cover letter management -- external platforms (LinkedIn brought in scope for v1.4)
 - Content creation (new case studies, new testimonials) -- content sourced from existing archives
 - JavaScript frameworks (React, Vue, etc.) -- violates static HTML constraint
 - Build tools (Webpack, Vite, etc.) -- site intentionally has zero build dependencies
@@ -201,4 +224,4 @@ This website was originally developed as part of a broader "Career Documentation
 | dewordify instead of SCOBot for pin position 4 | User preference; both meet quality bar and signal eLearning domain depth | ✓ Good |
 
 ---
-*Last updated: 2026-02-23 after v1.3 milestone completion*
+*Last updated: 2026-02-22 after v1.4 milestone start*
