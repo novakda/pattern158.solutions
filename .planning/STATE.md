@@ -5,7 +5,7 @@
 See: .planning/PROJECT.md (updated 2026-02-22)
 
 **Core value:** Accurately and compellingly present Dan's professional identity and body of work to hiring managers, engineers, and potential clients
-**Current focus:** Phase 23: Foundation & Search Optimization
+**Current focus:** Phase 24: Featured Section & Cross-Platform Linking (COMPLETE)
 
 ## Milestone History
 
@@ -16,12 +16,12 @@ See: .planning/PROJECT.md (updated 2026-02-22)
 
 ## Current Position
 
-Phase: 24 of 28 (Featured Section & Cross-Platform Linking)
-Plan: 1 of 2 complete
-Status: Phase 24 in progress — Featured exhibit selection and OG image strategy complete, HTML implementation pending
-Last activity: 2026-02-23 — completed 24-01 (Featured exhibit selection + copy variants + OG image strategy)
+Phase: 24 of 28 (Featured Section & Cross-Platform Linking — COMPLETE)
+Plan: 2 of 2 complete
+Status: Phase 24 complete — OG dimensions updated, GitHub links corrected, cross-platform link map and LinkedIn instructions delivered
+Last activity: 2026-02-23 — completed 24-02 (HTML implementation + cross-platform linking documentation)
 
-Progress: [████████████████████░░░░░░░░] 79% (22 of 28 phases complete)
+Progress: [████████████████████░░░░░░░░] 82% (23 of 28 phases complete)
 
 ## Performance Metrics
 
@@ -49,9 +49,12 @@ Progress: [████████████████████░░░
 - Total execution time: ~9 min
 - Timeline: 2026-02-22 (same day)
 
-**v1.4 Expectation:**
-- Content/copy project (LinkedIn profile = deliverable documents, not code)
-- Expected velocity similar to v1.3 (fast execution, minimal complexity)
+**v1.4 Velocity:**
+- Total plans completed: 4 (2 phases)
+- Average duration: 3.5 min
+- Total execution time: ~14 min
+- Timeline: 2026-02-23 (same day)
+- Pattern: Content/copy project with occasional HTML bulk updates (Phase 23 pure docs, Phase 24 mixed docs + HTML)
 
 ## Accumulated Context
 
@@ -87,6 +90,14 @@ Recent decisions affecting v1.4 work:
 - **OG image strategy: consistent branding (Option A)**: Same logo at 1200x627 across all pages; unique per-exhibit images deferred (Option B can be implemented later if engagement data supports)
 - **Copy distinct from site OG tags**: Featured copy optimized for LinkedIn click-through context, not generic social sharing
 
+**Phase 24 Plan 02 decisions (2026-02-23):**
+
+- **Updated OG dimensions to 1200x627**: All 22 HTML pages now have LinkedIn-optimized og:image:width and og:image:height meta tags (actual image file resize deferred to user/designer work)
+- **Corrected GitHub links from xhiris to novakda**: Footer links on 18 pages updated to reference primary GitHub account (eliminates inconsistent secondary account references)
+- **Documented bidirectional link loop**: Cross-platform-links.md maps all connections between LinkedIn, pattern158.solutions, and GitHub with verification status tracking
+- **Combined Featured + Phase 23 in single workflow**: instructions.md provides step-by-step guide for applying all LinkedIn profile optimizations in one 28-40 minute session
+- **Copy variant selection guidance**: Explained when to use outcome/curiosity/technical variants based on target audience (hiring managers vs engineers vs architects)
+
 ### Pending Todos
 
 None.
@@ -111,14 +122,16 @@ None.
 | Phase 23 P01 | 3 | 2 tasks | 2 files |
 | Phase 23 P02 | 3 | 2 tasks | 2 files |
 | Phase 24 P01 | 3 | 2 tasks | 2 files |
+| Phase 24 P02 | 4 | 2 tasks | 24 files |
+| Phase 24-featured-section-cross-platform-linking P02 | 236 | 2 tasks | 24 files |
 
 ## Session Continuity
 
-Last session: 2026-02-23 (Phase 24 Plan 01 execution)
-Stopped at: Completed 24-01 (Featured exhibit selection + copy variants + OG image strategy)
-Resume file: None (ready for /gsd:execute-plan 24-02)
+Last session: 2026-02-23 (Phase 24 Plan 02 execution)
+Stopped at: Completed 24-02 (HTML implementation + cross-platform linking) — Phase 24 COMPLETE
+Resume file: None (ready for next phase planning)
 
-**Next step:** `/gsd:execute-plan 24-02`
+**Next step:** Plan Phase 25 (Skills & Endorsements optimization) or continue with remaining v1.4 phases
 
 ---
 *v1.0 shipped: 2026-02-19*
