@@ -147,7 +147,7 @@ Plans:
 | 17. Dark Mode WCAG AA Badge Contrast Fix | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 19. Profile Foundation & Brand Voice | 2/2 | Complete    | 2026-02-22 | - |
-| 20. Repository Metadata & Discoverability | 2/2 | Complete   | 2026-02-23 | - |
+| 20. Repository Metadata & Discoverability | 2/2 | Complete    | 2026-02-23 | - |
 | 21. Fork Curation & Visibility Strategy | v1.3 | 0/TBD | Not started | - |
 | 22. Strategic Pinning & Final Integration | v1.3 | 0/TBD | Not started | - |
 
