@@ -104,10 +104,10 @@ Plans:
   3. Profile appears focused and professional rather than cluttered with abandoned hobby projects
   4. Domain expertise in eLearning and accessibility is evident from visible forks
   5. All kept forks have custom descriptions explaining professional relevance
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 21-01: TBD
+- [ ] 21-01-PLAN.md -- Archive 5 eLearning forks, verify profile integrity, visual review
 
 ### Phase 22: Strategic Pinning & Final Integration
 **Goal**: Curate portfolio homepage with strategic repository pinning
