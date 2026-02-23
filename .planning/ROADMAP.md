@@ -148,7 +148,7 @@ Plans:
 | 18. Milestone Documentation Reconciliation | v1.2 | 1/1 | ✓ Complete | 2026-02-22 |
 | 19. Profile Foundation & Brand Voice | 2/2 | Complete    | 2026-02-22 | - |
 | 20. Repository Metadata & Discoverability | 2/2 | Complete    | 2026-02-23 | - |
-| 21. Fork Curation & Visibility Strategy | 1/1 | Complete   | 2026-02-23 | - |
+| 21. Fork Curation & Visibility Strategy | 1/1 | Complete    | 2026-02-23 | - |
 | 22. Strategic Pinning & Final Integration | v1.3 | 0/TBD | Not started | - |
 
 ---
