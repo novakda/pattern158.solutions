@@ -17,9 +17,9 @@ See: .planning/PROJECT.md (updated 2026-02-22)
 ## Current Position
 
 Phase: 23 of 28 (Foundation & Search Optimization)
-Plan: Ready to plan
-Status: Milestone v1.4 roadmap created, awaiting Phase 23 planning
-Last activity: 2026-02-22 — v1.4 roadmap created with 6 phases (23-28), 26 requirements mapped
+Plan: 2 of 2 complete
+Status: Phase 23 complete — all deliverables ready for LinkedIn UI application (headline, about, URL strategy, instructions)
+Last activity: 2026-02-23 — completed 23-02 (custom URL strategy + consolidated instructions)
 
 Progress: [████████████████████░░░░░░░░] 79% (22 of 28 phases complete)
 
@@ -66,6 +66,19 @@ Recent decisions affecting v1.4 work:
 - **Depth calibration**: Standard depth (6 phases) derived from dependency-driven build order in research
 - **Deliverable format**: Markdown documents in .planning directory, not code changes
 
+**Phase 23 Plan 01 decisions (2026-02-22):**
+
+- **Vue.js first in headline and about**: Authentic to strongest competency, React immediately follows for market reach. Both keywords captured.
+- **Forensic engineering as differentiator**: GM investigation as hook in about section (first 300 chars), methodology woven throughout profile.
+- **GP Strategies reframed as "5+ distinct engineering roles"**: Addresses single-employer perception directly.
+- **2024-2026 work leads**: AI/LLM integration and Next.js platform prove currency and modern stack competency.
+- **WCAG positioned as engineering quality**: Embedded in craft/quality paragraph, not headline (avoids QA perception).
+- **Layoff framed as builder-in-transition**: "Currently building pattern158.solutions and ready for my next senior engineering role."
+- **pattern158.solutions in about only**: Omitted from headline for cleaner keyword focus.
+- [Phase 23]: Custom URL priority: pattern158 (brand-aligned) > dan-novak (name-based) > dannovak (fallback)
+- [Phase 23]: Contact email dual-placement: Contact Info (authoritative) + About section (visible convenience)
+- [Phase 23]: Open to Work: recruiter-only mode recommended (no public green banner)
+
 ### Pending Todos
 
 None.
@@ -87,6 +100,8 @@ None.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 6 | Fix Three Stooges brand element citation and content | 2026-02-22 | 3bf6118 | [6-fix-three-stooges-brand-element-citation](./quick/6-fix-three-stooges-brand-element-citation/) |
+| Phase 23 P01 | 3 | 2 tasks | 2 files |
+| Phase 23 P02 | 3 | 2 tasks | 2 files |
 
 ## Session Continuity
 
