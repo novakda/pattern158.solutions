@@ -36,8 +36,8 @@ Requirements for GitHub Profile Brand Alignment milestone. Each maps to roadmap 
 
 ### Repo Pinning
 
-- [ ] **PIN-01**: 3-6 repos pinned in strategic order (flagship first, then technical depth)
-- [ ] **PIN-02**: pattern158.solutions pinned in position 1 as flagship repo
+- [x] **PIN-01**: 3-6 repos pinned in strategic order (flagship first, then technical depth)
+- [x] **PIN-02**: pattern158.solutions pinned in position 1 as flagship repo
 
 ## Future Requirements
 
@@ -90,8 +90,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | META-05 | Phase 20 | Complete |
 | FORK-01 | Phase 21 | Complete |
 | FORK-02 | Phase 21 | Complete |
-| PIN-01 | Phase 22 | Pending |
-| PIN-02 | Phase 22 | Pending |
+| PIN-01 | Phase 22 | Complete |
+| PIN-02 | Phase 22 | Complete |
 
 **Coverage:**
 - v1.3 requirements: 17 total
