@@ -23,10 +23,10 @@ Requirements for GitHub Profile Brand Alignment milestone. Each maps to roadmap 
 
 ### Repository Metadata
 
-- [ ] **META-01**: pattern158.solutions repo description updated to reflect professional portfolio
-- [ ] **META-02**: pattern158.solutions repo homepage URL set to https://pattern158.solutions
-- [ ] **META-03**: pattern158.solutions repo has domain-specific topics (portfolio, accessibility, wcag, static-site)
-- [ ] **META-04**: All visible original repos have descriptive one-liner descriptions
+- [x] **META-01**: pattern158.solutions repo description updated to reflect professional portfolio
+- [x] **META-02**: pattern158.solutions repo homepage URL set to https://pattern158.solutions
+- [x] **META-03**: pattern158.solutions repo has domain-specific topics (portfolio, accessibility, wcag, static-site)
+- [x] **META-04**: All visible original repos have descriptive one-liner descriptions
 - [ ] **META-05**: eLearning-relevant forks have descriptions clarifying professional context
 
 ### Fork Curation
@@ -83,10 +83,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | README-04 | Phase 19 | Complete |
 | README-05 | Phase 19 | Complete |
 | README-06 | Phase 19 | Complete |
-| META-01 | Phase 20 | Pending |
-| META-02 | Phase 20 | Pending |
-| META-03 | Phase 20 | Pending |
-| META-04 | Phase 20 | Pending |
+| META-01 | Phase 20 | Complete |
+| META-02 | Phase 20 | Complete |
+| META-03 | Phase 20 | Complete |
+| META-04 | Phase 20 | Complete |
 | META-05 | Phase 20 | Pending |
 | FORK-01 | Phase 21 | Pending |
 | FORK-02 | Phase 21 | Pending |
