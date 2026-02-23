@@ -11,8 +11,8 @@ Requirements for LinkedIn profile overhaul. Each maps to roadmap phases.
 
 - [x] **PROF-01**: Headline rewritten with engineering-first positioning (220 chars, keywords front-loaded, ~60 chars visible on mobile)
 - [x] **PROF-02**: About/Summary rewritten with brand voice, modern 2024-2026 work, proper formatting (2600 chars, hook in first 300 visible chars)
-- [ ] **PROF-03**: Custom LinkedIn URL claimed (dan-novak preferred, fallbacks identified)
-- [ ] **PROF-04**: Contact email updated to dan@pattern158.solutions
+- [x] **PROF-03**: Custom LinkedIn URL claimed (dan-novak preferred, fallbacks identified)
+- [x] **PROF-04**: Contact email updated to dan@pattern158.solutions
 
 ### Featured Section
 
@@ -81,8 +81,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | PROF-01 | Phase 23 | Complete |
 | PROF-02 | Phase 23 | Complete |
-| PROF-03 | Phase 23 | Pending |
-| PROF-04 | Phase 23 | Pending |
+| PROF-03 | Phase 23 | Complete |
+| PROF-04 | Phase 23 | Complete |
 | FEAT-01 | Phase 24 | Pending |
 | FEAT-02 | Phase 24 | Pending |
 | FEAT-03 | Phase 24 | Pending |
