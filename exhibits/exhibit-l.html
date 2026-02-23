@@ -137,7 +137,13 @@
 
                 <p>An external Power Platform consultancy had been brought in to architect the solution. They produced high-level requirements documents and recommended that experienced Power Platform developers were essential to succeed. That recommendation was not followed. Domain expertise left the project, and development continued without architectural review or adherence to Microsoft best practices.</p>
 
-                <p>Dan was assigned development lead on a scheduling module. By the time he joined, the original architects were long gone &mdash; there was no overlap for consultation.</p>
+                <p>Dan was assigned development lead on a scheduling module with no prior Power Platform experience &mdash; only 28 years of software engineering instincts that mapped poorly to the platform&rsquo;s conventions. Power Platform operates on its own paradigms: no one-to-one relationships in Dataverse, business logic implemented through plugins and Power Automate flows rather than database triggers and well-factored schemas, PowerFX as the formula language &mdash; closer to Excel than to a programming language, and notoriously difficult to refactor or debug. For an engineer with deep relational database and application development experience, these weren&rsquo;t just unfamiliar patterns. They were antipatterns &mdash; but recognizing them as such required first understanding why they existed, where the platform&rsquo;s boundaries actually were, and which friction was inherent to Power Platform versus which was the result of avoidable project decisions.</p>
+
+                <p>That distinction took a year to develop.</p>
+
+                <p>Over the following year, Dan taught himself Power Platform by building on it under production conditions &mdash; no overlap with the original architects, no onboarding, no documentation of design intent. He was constantly aware that something felt wrong, but lacked the platform fluency to articulate it or trust his own instincts. Early in the learning curve, that uncertainty cuts both ways: experienced engineers know enough to recognize the smell of bad architecture, but not yet enough to distinguish &ldquo;this platform is genuinely strange&rdquo; from &ldquo;this project is genuinely broken.&rdquo; Every friction point was data. Every deployment problem narrowed the gap.</p>
+
+                <p>The deployment experience was where ambiguity collapsed into certainty. Tasked with deploying the scheduling module to a test environment, Dan discovered there was no established process &mdash; no source control, no deployment pipeline, no clean solution boundary. He had to manually identify dependencies, reconstruct a deployable solution from scratch, and navigate a monolithic architecture that had never been designed for deployment by anyone other than its original author. A well-architected system doesn&rsquo;t make deployment feel like archaeology. By that point, he knew enough to know the difference.</p>
             </div>
 
             <table class="resolution-table">
@@ -150,7 +156,7 @@
                 <tbody>
                     <tr>
                         <td data-label="Role"><strong>Dan Novak</strong> &mdash; Development Lead, Scheduling Module</td>
-                        <td data-label="Involvement">Assigned to build scheduling apps on Power Platform. Identified foundational gaps, conducted AI-assisted forensic analysis, and authored the architectural findings deliverable.</td>
+                        <td data-label="Involvement">Assigned to build scheduling apps on Power Platform with no prior platform experience. Spent a year teaching himself the platform under production conditions, identifying foundational gaps through accumulated firsthand friction, and ultimately conducting AI-assisted forensic analysis to document and deliver the architectural findings.</td>
                     </tr>
                     <tr>
                         <td data-label="Role"><strong>External Power Platform Consultancy</strong></td>
@@ -204,11 +210,15 @@
                 <span class="section-title">Forensic Methodology</span>
             </div>
             <div class="background-content">
-                <p>Dan had a hunch something was fundamentally wrong. Rather than continuing to build on a suspect foundation, he used <strong>GitHub Spec Kit</strong> &mdash; an AI-assisted requirements analysis tool &mdash; to generate a baseline from his understanding of what the scheduling apps should do, then compared that baseline against the project&rsquo;s reality.</p>
+                <p>The AI-assisted analysis came last, not first &mdash; and it only became possible once Dan knew enough to use it.</p>
 
-                <p>This was <strong>collaborative analysis</strong>: engineering intuition pressure-tested with an AI tool. Not &ldquo;AI wrote the requirements&rdquo; &mdash; AI systematically exposed what was absent. The gaps became apparent quickly, not because the AI was sophisticated, but because the problems were that fundamental.</p>
+                <p>For most of the year, the problem had no clean shape. There was persistent friction, a constant low-level sense that the foundation was wrong, but not enough platform fluency to distinguish inherent Power Platform constraints from avoidable architectural failures. This is the uncomfortable middle of any steep learning curve: enough experience to recognize that something is wrong, not enough to prove it &mdash; even to yourself.</p>
 
-                <p>The findings were confirmed through <strong>convergence</strong>: practical deployment pain, Microsoft documentation comparison, and AI analysis all pointed to the same conclusions independently.</p>
+                <p>The AI analysis resolved that. Once Dan had sufficient platform knowledge to frame the right questions, he used <strong>GitHub Spec Kit</strong> to generate a baseline from his understanding of what the scheduling apps should do, then compared that baseline against the project&rsquo;s reality. What came back wasn&rsquo;t a surprise &mdash; it was confirmation. The same problems he&rsquo;d been working around for months, now enumerated, evidenced, and structured in a form that could be delivered to leadership and defended under scrutiny.</p>
+
+                <p>This is an important distinction: <strong>the AI didn&rsquo;t find the problems</strong>. A year of platform immersion found the problems. The AI transformed hard-won frustration into a defensible deliverable &mdash; and gave Dan the external confirmation needed to trust what his engineering instincts had been signaling all along.</p>
+
+                <p>The findings were confirmed through <strong>convergence</strong>: practical deployment pain experienced firsthand, Microsoft documentation comparison showing platform best practices absent from the project, and AI-assisted analysis providing systematic gap enumeration. Three independent methods, same five findings. That convergence is what made the diagnosis actionable &mdash; not any single source, and certainly not the AI alone.</p>
             </div>
         </div>
     </section>
