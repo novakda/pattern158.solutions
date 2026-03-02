@@ -1623,14 +1623,18 @@ footer a:hover {
     line-height: 1.8;
 }
 
-/* Testimonial section */
-.page-contact .testimonial {
+/* Testimonial section (shared across contact, philosophy, faq) */
+.page-contact .testimonial,
+.page-philosophy .testimonial,
+.page-faq .testimonial {
     background: var(--color-inverse);
     color: var(--color-inverse-text);
     padding: var(--space-4xl) var(--space-xl);
 }
 
-.page-contact .testimonial-quote {
+.page-contact .testimonial-quote,
+.page-philosophy .testimonial-quote,
+.page-faq .testimonial-quote {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -1638,7 +1642,9 @@ footer a:hover {
     padding: var(--space-xl);
 }
 
-.page-contact .testimonial-quote::before {
+.page-contact .testimonial-quote::before,
+.page-philosophy .testimonial-quote::before,
+.page-faq .testimonial-quote::before {
     content: '\201C';
     font-size: var(--font-size-5xl);
     color: var(--color-primary-on-dark);
@@ -1649,20 +1655,26 @@ footer a:hover {
     opacity: 0.3;
 }
 
-.page-contact .quote-text {
+.page-contact .quote-text,
+.page-philosophy .quote-text,
+.page-faq .quote-text {
     font-size: var(--font-size-lg);
     line-height: 1.8;
     font-style: italic;
     margin-bottom: var(--space-xl);
 }
 
-.page-contact .quote-attribution {
+.page-contact .quote-attribution,
+.page-philosophy .quote-attribution,
+.page-faq .quote-attribution {
     font-style: normal;
     border-top: 2px solid var(--color-primary);
     padding-top: var(--space-md);
 }
 
-.page-contact .quote-attribution cite {
+.page-contact .quote-attribution cite,
+.page-philosophy .quote-attribution cite,
+.page-faq .quote-attribution cite {
     display: block;
     font-size: var(--font-size-md);
     font-weight: 600;
@@ -1670,19 +1682,31 @@ footer a:hover {
     margin-bottom: var(--space-sm);
 }
 
-.page-contact .quote-context {
+.page-contact .quote-context,
+.page-philosophy .quote-context,
+.page-faq .quote-context {
     font-size: var(--font-size-sm);
     color: var(--color-inverse-text-muted);
 }
 
-.page-contact .testimonial-secondary {
+.page-contact .testimonial-secondary,
+.page-philosophy .testimonial-secondary,
+.page-faq .testimonial-secondary {
     margin-top: var(--space-2xl);
     padding-top: var(--space-2xl);
     border-top: 1px solid var(--color-border-primary);
 }
 
-.page-contact .testimonial-secondary .quote-text {
+.page-contact .testimonial-secondary .quote-text,
+.page-philosophy .testimonial-secondary .quote-text,
+.page-faq .testimonial-secondary .quote-text {
     font-size: var(--font-size-xl);
+}
+
+/* Override heading color inside dark testimonial section */
+.page-philosophy .testimonial .section-heading-styled,
+.page-faq .testimonial .section-heading-styled {
+    color: var(--color-inverse-text);
 }
 
 /* ================================================================
@@ -3336,11 +3360,15 @@ footer a:hover {
         padding: var(--space-ms) var(--space-sm);
     }
 
-    .page-contact .quote-text {
+    .page-contact .quote-text,
+    .page-philosophy .quote-text,
+    .page-faq .quote-text {
         font-size: var(--font-size-md);
     }
 
-    .page-contact .testimonial-quote::before {
+    .page-contact .testimonial-quote::before,
+    .page-philosophy .testimonial-quote::before,
+    .page-faq .testimonial-quote::before {
         font-size: var(--font-size-5xl);
         top: -1rem;
     }
