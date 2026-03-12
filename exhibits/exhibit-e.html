@@ -4,17 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
-    <meta name="author" content="Dan Novak">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-e.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit E: CSBB Dispatch — Cross-Domain Content Delivery">
-    <meta property="og:description" content="CSBB Dispatch: Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
-    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
-    <meta property="og:site_name" content="Pattern 158 Solutions">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Theme detection: MUST run before CSS to prevent flash -->
     <script>
@@ -38,29 +27,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+    
+<style>
+/* Print styles for exhibit pages */
+@media print {
+    /* Hide navigation and theme controls */
+    header, footer, .theme-toggle, .back-link, .skip-link {
+        display: none !important;
+    }
+
+    /* Force light theme colors for print */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero {
+        background: white !important;
+        color: black !important;
+        border-bottom: 2px solid #333 !important;
+    }
+
+    /* Adjust typography for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+
+    /* Ensure page breaks work well */
+    .report-section {
+        page-break-inside: avoid;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+</style>
+
+
+    
+    <meta name="description" content="CSBB Dispatch - Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
+    <meta property="og:title" content="CSBB Dispatch">
+    <meta property="og:description" content="CSBB Dispatch - Cross-domain content delivery architecture built in 2011, five years before Rustici Content Controller. ~2,000 courses, ~20 energy clients, 10+ years in production.">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-e.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-e.html">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
-    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit E: CSBB Dispatch &mdash; Cross-Domain Content Delivery</title>
+    
+
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+
+    <title>CSBB Dispatch — Pattern 158 Solutions</title>
+
+    
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Pattern 158 Solutions",
-  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "description": "Senior Software Engineer and Systems Architect with 28+ years building and rescuing enterprise systems. Available for new opportunities.",
   "url": "https://pattern158.solutions"
 }
+    </script>
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://pattern158.solutions/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://pattern158.solutions/testimonials.html",
+        "name": "Field Reports"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://pattern158.solutions/exhibits/exhibit-e.html",
+        "name": "Exhibit E: CSBB Dispatch"
+      }
+    }
+  ]
+}
 </script>
+
 </head>
 <body class="page-exhibit page-exhibit-e">
-    <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header>
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation">
         <div class="container">
             <a href="/index.html" class="logo-link">
                 <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
@@ -105,25 +188,100 @@
             </ul>
         </div>
     </nav>
+
     </header>
 
-    <!-- Main Content -->
     <main id="main-content" aria-label="Main content">
+        
+<!-- Breadcrumb Navigation -->
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>EXHIBIT E: <span class="pattern-number">CSBB DISPATCH</span></h1>
-            <p class="subtitle">Cross-Domain Content Delivery — Built 5 Years Before Content Controller</p>
-            <div class="report-meta">
-                <strong>Client:</strong> GP Strategies (Multiple Energy Utility Clients)<br>
-                <strong>Period:</strong> 2011&ndash;2016+ (10+ years in production)<br>
-                <strong>Team:</strong> Dan Novak (Architect/Developer), Zach Taylor (GPiLEARN Developer), Ron Cyran (Program Manager), Tom Pizer (Director of Learning Technologies)
-            </div>
-            <span class="classification">Field Report &middot; Exhibit E &middot; GP Strategies &middot; 2011&ndash;2016+</span>
+
+<style>
+/* Breadcrumb styles — sits on dark inverse background (nav/hero area) */
+.breadcrumbs {
+    background: var(--color-inverse);
+    padding: 0.75rem 0 0;
+    margin: 0;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-sm);
+}
+
+/* Chevron separator between items */
+.breadcrumbs li + li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: var(--color-inverse-text-muted);
+    font-size: 1.2em;
+}
+
+.breadcrumbs a {
+    color: var(--color-inverse-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-inverse-text);
+    text-decoration: underline;
+}
+
+/* Current page - non-link */
+.breadcrumbs li[aria-current="page"] {
+    color: var(--color-inverse-text-light);
+    font-weight: 500;
+}
+
+/* Responsive: smaller font on mobile */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 0.875rem;
+    }
+}
+</style>
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/testimonials.html">Field Reports</a></li>
+            <li aria-current="page">Exhibit E: CSBB Dispatch</li>
+        </ol>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>EXHIBIT E: <span class="pattern-number">CSBB DISPATCH</span></h1>
+        <p class="subtitle">Cross-Domain Content Delivery — Built 5 Years Before Content Controller</p>
+        <div class="report-meta">
+            <strong>Classification:</strong> Internal Platform Development<br>
+            <strong>Client:</strong> GP Strategies (Multiple Energy Utility Clients)<br>
+            
+            <strong>Period:</strong> 2011 – 2016+ (10+ years in production)<br>
+            <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
         </div>
-    </section>
+        <span class="classification">Field Report &middot; Exhibit E &middot; GP Strategies (Multiple Energy Utility Clients)</span>
+    </div>
+</section>
 
+<!-- Report Body -->
+<div class="report-body">
+    
     <!-- Prominent Callout -->
     <section class="report-section">
         <div class="container">
@@ -386,8 +544,6 @@
         </div>
     </section>
 
-    </main>
-
     <!-- Back Link -->
     <div class="back-link-section">
         <a href="../portfolio.html" class="back-link">
@@ -395,19 +551,216 @@
         </a>
     </div>
 
-    <!-- Footer -->
-        <!-- Footer -->
-    <footer id="contact">
+</div>
+
+<!-- Meta Sidebar -->
+
+<aside class="exhibit-meta">
+    <div class="container">
+        <h2>Engagement Metadata</h2>
+
+        
+        <div class="meta-item">
+            <strong>Industry:</strong>
+            <p>Energy &amp; Utilities</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Technologies:</strong>
+            <ul>
+            
+                <li>JavaScript</li>
+            
+                <li>ES5</li>
+            
+                <li>HTML5</li>
+            
+                <li>EasyXDM</li>
+            
+                <li>CORS</li>
+            
+                <li>postMessage</li>
+            
+                <li>SCORM 1.2</li>
+            
+                <li>AICC</li>
+            
+                <li>Groovy</li>
+            
+                <li>Microsoft Access</li>
+            
+                <li>Windows Forms</li>
+            
+                <li>SQL</li>
+            
+            </ul>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Skills Demonstrated:</strong>
+            <ul>
+            
+                <li>System architecture</li>
+            
+                <li>Cross-domain communication</li>
+            
+                <li>Protocol translation</li>
+            
+                <li>Package generation tooling</li>
+            
+                <li>Multi-tenant content delivery</li>
+            
+                <li>Content versioning</li>
+            
+                <li>eLearning standards</li>
+            
+                <li>Automation development</li>
+            
+            </ul>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Duration:</strong>
+            <p>10 years</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Personnel Involved:</strong>
+            <p>4 individuals</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Outcome:</strong>
+            <p>Architected cross-domain content delivery platform serving ~2,000 courses to ~20 energy utility clients, eliminating version control chaos. Built 5 years before Rustici Content Controller addressed the same problem commercially</p>
+        </div>
+        
+    </div>
+</aside>
+
+
+<!-- Related Exhibits Section -->
+
+<section class="related-exhibits">
+    <div class="container">
+        <h2>Related Field Reports</h2>
+        <div class="related-exhibits-grid">
+        
+            
+                
+                <a href="/exhibits/exhibit-a.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit A</span>
+                    <span class="related-exhibit-title">Electric Boat LMS Integration</span>
+                    
+                    <span class="related-exhibit-client">General Dynamics Electric Boat (GDEB)</span>
+                    
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+                <a href="/exhibits/exhibit-d.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit D</span>
+                    <span class="related-exhibit-title">Wells Fargo Migration</span>
+                    
+                    <span class="related-exhibit-client">Wells Fargo</span>
+                    
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+        </div>
+    </div>
+</section>
+
+
+<!-- Extra Content Block -->
+
+
+<!-- Back to Field Reports -->
+<div class="container">
+    <p><a href="/testimonials.html" class="back-link">&larr; Back to Field Reports</a></p>
+</div>
+
+    </main>
+
+        <footer>
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
-            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a></p>
-            <p><a href="https://linkedin.com/in/dan-novak-5692197" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com/novakda" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="/accessibility.html">Accessibility</a></p>
-            <p class="footer-stats">28+ years engineering experience | 14 case studies</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a> | <a href="/accessibility.html">Accessibility</a></p>
             <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
         </div>
     </footer>
 
-    <!-- Navigation toggle -->
+        <!-- Navigation toggle -->
     <script>
     (function() {
         var hamburger = document.querySelector('.hamburger');
