@@ -4,17 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="TD Bank Accessibility Testing investigation report. Enterprise-level accessibility methodology creation for interactive eLearning compliance across major banking institutions (2021-2024).">
-    <meta name="author" content="Dan Novak">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-i.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit I: TD Bank Accessibility - Enterprise Methodology Creation">
-    <meta property="og:description" content="TD Bank Accessibility Testing investigation report. Enterprise accessibility methodology creation for WCAG 2.1 compliance in interactive eLearning across major banking institutions.">
-    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
-    <meta property="og:site_name" content="Pattern 158 Solutions">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Theme detection: MUST run before CSS to prevent flash -->
     <script>
@@ -38,29 +27,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+    
+<style>
+/* Print styles for exhibit pages */
+@media print {
+    /* Hide navigation and theme controls */
+    header, footer, .theme-toggle, .back-link, .skip-link {
+        display: none !important;
+    }
+
+    /* Force light theme colors for print */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero {
+        background: white !important;
+        color: black !important;
+        border-bottom: 2px solid #333 !important;
+    }
+
+    /* Adjust typography for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+
+    /* Ensure page breaks work well */
+    .report-section {
+        page-break-inside: avoid;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+</style>
+
+
+    
+    <meta name="description" content="TD Bank Accessibility Testing investigation report. Enterprise-level accessibility methodology creation for interactive eLearning compliance across major banking institutions (2021-2024).">
+    <meta property="og:title" content="TD Bank Accessibility">
+    <meta property="og:description" content="TD Bank Accessibility Testing investigation report. Enterprise-level accessibility methodology creation for interactive eLearning compliance across major banking institutions (2021-2024).">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-i.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-i.html">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
-    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit I: TD Bank Accessibility - Enterprise Methodology Creation</title>
+    
+
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+
+    <title>TD Bank Accessibility — Pattern 158 Solutions</title>
+
+    
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Pattern 158 Solutions",
-  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "description": "Senior Software Engineer and Systems Architect with 28+ years building and rescuing enterprise systems. Available for new opportunities.",
   "url": "https://pattern158.solutions"
 }
+    </script>
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://pattern158.solutions/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://pattern158.solutions/testimonials.html",
+        "name": "Field Reports"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://pattern158.solutions/exhibits/exhibit-i.html",
+        "name": "Exhibit I: TD Bank Accessibility"
+      }
+    }
+  ]
+}
 </script>
+
 </head>
 <body class="page-exhibit page-exhibit-i">
-    <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header>
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation">
         <div class="container">
             <a href="/index.html" class="logo-link">
                 <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
@@ -105,276 +188,562 @@
             </ul>
         </div>
     </nav>
+
     </header>
 
-    <!-- Main Content -->
     <main id="main-content" aria-label="Main content">
+        
+<!-- Breadcrumb Navigation -->
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>EXHIBIT I: <span class="pattern-number">TD BANK ACCESSIBILITY</span></h1>
-            <p class="subtitle">Enterprise Accessibility Methodology Across 4 Major Banking Clients</p>
-            <span class="classification">Corroborated &middot; WCAG 2.1 &middot; Enterprise Initiative &middot; Accessibility &middot; 2022-2024</span>
-        </div>
-    </section>
 
-    <!-- Section 1: Background -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">1.</span>
-                <span class="section-title">Background</span>
-            </div>
-            <div class="background-content">
-                <p>Dan Novak's accessibility practice evolved organically through client engagements rather than a top-down directive. The practice originated with HSBC's Simple Learning courses, where accessibility requirements first surfaced in the context of compliance eLearning. As GP Strategies' banking portfolio expanded, the methodology matured through accessibility testing for PNC Bank and TD Bank Articulate Storyline courses &mdash; interactive content that demanded testing protocols beyond anything standard resources provided.</p>
-                <p>The TD Bank engagement (2022-2024) represented the practice at full maturity. TD MIC (Mutual Investment Counsellor) training courses required WCAG 2.1 and Section 508 compliance testing for Articulate Storyline content. Dan executed the entire accessibility evaluation independently, applying the methodology refined across prior banking engagements to deliver confirmation statements, issue triage, and remediation recommendations.</p>
-                <p>The initiative peaked in 2022 with <span class="key-fact">479 accessibility-related emails</span> out of <span class="key-fact">4,173 total professional correspondence</span> &mdash; reflecting the scale of the practice Dan built across multiple banking clients.</p>
-            </div>
-            </div>
-        </div>
-    </section>
+<style>
+/* Breadcrumb styles — sits on dark inverse background (nav/hero area) */
+.breadcrumbs {
+    background: var(--color-inverse);
+    padding: 0.75rem 0 0;
+    margin: 0;
+}
 
-    <!-- Section 2: Personnel -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">2.</span>
-                <span class="section-title">Personnel</span>
-            </div>
-            <div class="background-content">
-                <p><strong>Dan Novak</strong> &mdash; Accessibility Evaluator, TD MIC. Most experienced tester on the team, bringing forensic-level Storyline debugging, ARIA patterns and practices, and screen reader workarounds developed through prior HSBC Simple Learning and PNC Bank engagements. Dan had also contributed to establishing GP&rsquo;s formal accessibility reporting templates and confirmation statement formats across the broader banking accessibility practice before TD MIC began. Where other testers could identify accessibility issues, Dan could diagnose the underlying ARIA failure mode and prescribe the specific Storyline implementation fix.</p>
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
 
-                <p><strong>GP Accessibility Testing Team</strong> (2 additional testers, anonymized) &mdash; Fellow GP employees contributing to TD MIC accessibility evaluation alongside Dan. Operated within the formal GP accessibility practice framework.</p>
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-sm);
+}
 
-                <p><strong>Senior Learning Project Manager, GP Strategies</strong> &mdash; Coordinated the TD MIC project and provided program-level oversight.</p>
-            </div>
-            </div>
-        </div>
-    </section>
+/* Chevron separator between items */
+.breadcrumbs li + li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: var(--color-inverse-text-muted);
+    font-size: 1.2em;
+}
 
-    <!-- Section 3: The Standards Gap -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">3.</span>
-                <span class="section-title">The Standards Gap</span>
-            </div>
-            <div class="background-content">
-                <p>The core challenge Dan solved: "How do you test something with no standard?"</p>
-                <p>Interactive eLearning content &mdash; particularly Articulate Storyline courses with custom navigation, gamification, and dynamic state management &mdash; exhibited non-deterministic screen reader behavior. Unlike static web content, where WCAG guidelines provide clear success criteria, interactive courseware lacked established testing protocols.</p>
-                <p>Existing accessibility resources (WebAIM, The A11Y Project) provided foundational knowledge for static HTML but offered no guidance for testing screen reader interactions with authoring tool output, branching scenarios, or custom JavaScript-driven navigation patterns. The industry gap was not in standards themselves (WCAG 2.1 / Section 508) but in applying those standards to complex interactive content.</p>
-                <p>The gap became apparent through successive banking engagements &mdash; starting with HSBC Simple Learning courses, then PNC Bank and TD Bank Storyline content &mdash; where each new client's interactive courseware exposed limitations in existing testing approaches. What began as ad hoc accessibility review evolved into a systematic enterprise-level practice.</p>
-            </div>
-            </div>
-        </div>
-    </section>
+.breadcrumbs a {
+    color: var(--color-inverse-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
 
-    <!-- Section 4: Methodology -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">4.</span>
-                <span class="section-title">Methodology</span>
-            </div>
-            <div class="background-content">
-                <p>Dan&rsquo;s methodology for TD MIC was built on two foundations: GP&rsquo;s established accessibility practice framework, and the deeper technical layer he had developed through HSBC and PNC engagements that the framework alone couldn&rsquo;t provide.</p>
+.breadcrumbs a:hover {
+    color: var(--color-inverse-text);
+    text-decoration: underline;
+}
 
-                <h2>GP&rsquo;s Formal Practice (already established)</h2>
-                <p>GP had developed formal accessibility reporting templates and confirmation statement formats before TD MIC began &mdash; a structured framework for delivering accessibility evaluations to banking clients. Dan had contributed to establishing these practices across the broader banking accessibility engagement portfolio. For TD MIC, this framework provided the reporting and triage structure the team operated within:</p>
-                <ul>
-                    <li>Accessibility confirmation statement templates for client reporting</li>
-                    <li>Issue triage categories (critical / major / minor) aligned with WCAG conformance levels</li>
-                    <li>Remediation recommendation documentation translating technical WCAG violations into actionable instructional design guidance</li>
-                </ul>
+/* Current page - non-link */
+.breadcrumbs li[aria-current="page"] {
+    color: var(--color-inverse-text-light);
+    font-weight: 500;
+}
 
-                <h2>What Dan Brought from HSBC and PNC</h2>
-                <p>The formal framework handled structure and reporting. What it couldn&rsquo;t provide was forensic depth &mdash; and that&rsquo;s where Dan&rsquo;s prior engagements made the difference:</p>
-                <ul>
-                    <li><strong>ARIA Patterns and Practices</strong> &mdash; understanding how ARIA roles, states, and properties behave in screen readers, and how Articulate Storyline&rsquo;s HTML output maps (and frequently fails to map) to those patterns</li>
-                    <li><strong>Forensic Storyline Debugging</strong> &mdash; the ability to diagnose not just that a screen reader interaction was failing, but why &mdash; tracing failures to specific Storyline output patterns, JavaScript-driven state changes, or focus management gaps</li>
-                    <li><strong>Screen Reader Workarounds</strong> &mdash; accumulated knowledge of what actually makes screen readers behave gracefully with authored courseware, including Storyline-specific implementation fixes not documented anywhere in WCAG or the ARIA spec</li>
-                    <li><strong>General Accessibility Best Practices</strong> &mdash; applied knowledge of WCAG 2.1 and Section 508 in the context of interactive eLearning, where standard guidance for static web content doesn&rsquo;t translate directly</li>
-                </ul>
+/* Responsive: smaller font on mobile */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 0.875rem;
+    }
+}
+</style>
 
-                <h2>Testing Protocol</h2>
-                <ul>
-                    <li>Keyboard navigation testing across all interactive elements (tab order, focus management, keyboard traps)</li>
-                    <li>Screen reader compatibility verification (JAWS and NVDA) with focus on announcement clarity and navigation logic</li>
-                    <li>Cross-browser testing to identify browser-specific ARIA implementation inconsistencies</li>
-                    <li>Sprint-based workflow integration (SCRUM: TD MIC meetings) to align accessibility verification with development cycles</li>
-                </ul>
-
-                <p>The methodology was refined through deployment across <span class="key-fact">four major banking clients</span>: HSBC (origin), PNC Bank, TD Bank, and UOB. The templates and protocols Dan contributed to became the standard for GP Strategies&rsquo; accessibility practice.</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5: Accessibility Scope (TD MIC) -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">5.</span>
-                <span class="section-title">Accessibility Scope (TD MIC)</span>
-            </div>
-            <div class="background-content">
-                <p>Dan performed comprehensive accessibility testing for TD Bank's Mutual Investment Counsellor (TD MIC) training program, delivered as Articulate Storyline courses. The engagement included:</p>
-
-                <h2>Testing Deliverables</h2>
-                <ul>
-                    <li>WCAG 2.1 compliance verification against Level A and AA success criteria</li>
-                    <li>Section 508 conformance testing for U.S. federal accessibility requirements</li>
-                    <li>Screen reader testing (JAWS and NVDA) with detailed interaction documentation</li>
-                    <li>Keyboard navigation testing across all course modules and assessments</li>
-                </ul>
-
-                <h2>Reporting & Remediation</h2>
-                <ul>
-                    <li>Accessibility confirmation statements for client delivery</li>
-                    <li>Issue triage with severity classification and WCAG reference mapping</li>
-                    <li>Remediation recommendations with specific Articulate Storyline implementation guidance</li>
-                    <li>Cross-functional collaboration with instructional designers and media teams to resolve accessibility barriers</li>
-                </ul>
-
-                <p>Dan served as the most experienced evaluator on the TD MIC accessibility team, applying forensic-level Storyline debugging and ARIA expertise developed through prior HSBC and PNC Bank engagements.</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 6: Evidence -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">6.</span>
-                <span class="section-title">Evidence</span>
-            </div>
-            <div class="background-content">
-
-                <blockquote>
-                    Thank you for all your amazing work!
-                    <div class="attribution">
-                        Senior Learning Project Manager, GP Strategies
-                        <span class="role">&mdash; August 2022, TD MIC Project</span>
-                    </div>
-                </blockquote>
-
-                <p>The "amazing work" recognition from the Senior PM indicates above-expectations contribution. Project managers at this level have visibility across all workstreams and calibrate praise against the full team's output &mdash; making this a meaningful signal rather than a pro-forma acknowledgment.</p>
-
-                <h2>Quantitative Scale</h2>
-                <p>The Enterprise Accessibility Initiative peaked in 2022 with <span class="key-fact">479 accessibility-related emails</span> out of <span class="key-fact">4,173 total professional correspondence</span>. This represents <span class="key-fact">11.5%</span> of Dan's annual communication volume dedicated to accessibility work &mdash; reflecting the scale of the practice established and sustained across multiple banking clients.</p>
-                <p>The methodology was refined across <span class="key-fact">four major banking institutions</span> (HSBC, PNC Bank, TD Bank, UOB), demonstrating repeatability and enterprise-level applicability.</p>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 7: Findings -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">7.</span>
-                <span class="section-title">Findings</span>
-            </div>
-            <div class="background-content">
-
-                <h2>Significance</h2>
-                <p>Dan did not simply test for accessibility compliance &mdash; he built the testing practice through successive client engagements. The challenge was methodological: creating a repeatable, scalable protocol for evaluating non-deterministic screen reader behavior in interactive eLearning where no industry standards existed.</p>
-                <p>The initiative demonstrates strategic capability beyond tactical execution. What started with HSBC Simple Learning courses evolved into a methodology deployed across four major banking clients. The 479 accessibility emails in 2022 reflect sustained execution, not a one-time deliverable.</p>
-                <p>For financial institutions, WCAG compliance is not optional &mdash; it is a legal and regulatory requirement. Dan's methodology directly impacted TD Bank's regulatory compliance posture and provided GP Strategies with a competitive differentiator in the enterprise learning market.</p>
-
-                <div class="impact-tags">
-                    <span class="impact-tag highlight">Methodology Creation</span>
-                    <span class="impact-tag highlight">Enterprise Initiative</span>
-                    <span class="impact-tag highlight">WCAG 2.1</span>
-                    <span class="impact-tag highlight">Section 508</span>
-                    <span class="impact-tag">ARIA Authoring Practices</span>
-                    <span class="impact-tag">JAWS/NVDA</span>
-                    <span class="impact-tag">Articulate Storyline</span>
-                    <span class="impact-tag">TD Bank</span>
-                    <span class="impact-tag">Multi-Client Deployment</span>
-                    <span class="impact-tag">479 Emails (2022)</span>
-                    <span class="impact-tag">Solo Execution</span>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 8: Technologies -->
-    <section class="report-section">
-        <div class="container">
-            
-                <div class="section-heading">
-                <span class="section-number">8.</span>
-                <span class="section-title">Technologies</span>
-            </div>
-            <div class="background-content">
-
-                <h2>Accessibility Standards & Compliance</h2>
-                <ul>
-                    <li><strong>WCAG 2.1:</strong> Web Content Accessibility Guidelines (Level A and AA success criteria)</li>
-                    <li><strong>Section 508:</strong> U.S. federal accessibility requirements</li>
-                    <li><strong>ARIA Authoring Practices:</strong> Bridge between WCAG principles and interactive content patterns</li>
-                </ul>
-
-                <h2>Screen Reader Testing</h2>
-                <ul>
-                    <li><strong>JAWS:</strong> Job Access With Speech (screen reader compatibility testing, announcement clarity)</li>
-                    <li><strong>NVDA:</strong> NonVisual Desktop Access (open-source screen reader, cross-platform testing)</li>
-                </ul>
-
-                <h2>eLearning Authoring</h2>
-                <ul>
-                    <li><strong>Articulate Storyline:</strong> HTML output analysis, ARIA implementation patterns, custom navigation accessibility</li>
-                </ul>
-
-                <h2>Testing Methodology</h2>
-                <ul>
-                    <li><strong>Keyboard Navigation Testing:</strong> Tab order, focus management, keyboard trap detection</li>
-                    <li><strong>Cross-Browser Testing:</strong> Browser-specific ARIA implementation inconsistencies</li>
-                    <li><strong>Issue Triage:</strong> Critical/major/minor severity classification aligned with WCAG conformance levels</li>
-                    <li><strong>Sprint Integration:</strong> SCRUM workflows (TD MIC meetings), alignment with development cycles</li>
-                </ul>
-
-                <h2>Deployment Scale</h2>
-                <ul>
-                    <li><strong>Banking Clients:</strong> TD Bank, HSBC, PNC Bank, UOB (4 major financial institutions)</li>
-                    <li><strong>Email Volume:</strong> 479 accessibility-related emails in 2022 (11.5% of annual professional correspondence)</li>
-                </ul>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Back Link -->
-    <div class="back-link-section">
-        <a href="../portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/testimonials.html">Field Reports</a></li>
+            <li aria-current="page">Exhibit I: TD Bank Accessibility</li>
+        </ol>
     </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>EXHIBIT I: <span class="pattern-number">TD BANK ACCESSIBILITY</span></h1>
+        <p class="subtitle">Enterprise Accessibility Methodology Across 4 Major Banking Clients</p>
+        <div class="report-meta">
+            <strong>Classification:</strong> Corroborated / WCAG 2.1 / Enterprise Initiative / Accessibility<br>
+            <strong>Client:</strong> TD Bank, HSBC, PNC Bank, UOB (via GP Strategies)<br>
+            <strong>Location:</strong> United States, Canada<br>
+            <strong>Period:</strong> 2022–2024<br>
+            <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
+        </div>
+        <span class="classification">Field Report &middot; Exhibit I &middot; TD Bank, HSBC, PNC Bank, UOB (via GP Strategies)</span>
+    </div>
+</section>
+
+<!-- Report Body -->
+<div class="report-body">
+    
+<!-- Section 1: Background -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">1.</span>
+            <span class="section-title">Background</span>
+        </div>
+        <div class="background-content">
+            <p>Dan Novak's accessibility practice evolved organically through client engagements rather than a top-down directive. The practice originated with HSBC's Simple Learning courses, where accessibility requirements first surfaced in the context of compliance eLearning. As GP Strategies' banking portfolio expanded, the methodology matured through accessibility testing for PNC Bank and TD Bank Articulate Storyline courses &mdash; interactive content that demanded testing protocols beyond anything standard resources provided.</p>
+            <p>The TD Bank engagement (2022-2024) represented the practice at full maturity. TD MIC (Mutual Investment Counsellor) training courses required WCAG 2.1 and Section 508 compliance testing for Articulate Storyline content. Dan executed the entire accessibility evaluation independently, applying the methodology refined across prior banking engagements to deliver confirmation statements, issue triage, and remediation recommendations.</p>
+            <p>The initiative peaked in 2022 with <span class="key-fact">479 accessibility-related emails</span> out of <span class="key-fact">4,173 total professional correspondence</span> &mdash; reflecting the scale of the practice Dan built across multiple banking clients.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Personnel -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">2.</span>
+            <span class="section-title">Personnel</span>
+        </div>
+        <div class="background-content">
+            <p><strong>Dan Novak</strong> &mdash; Accessibility Evaluator, TD MIC. Most experienced tester on the team, bringing forensic-level Storyline debugging, ARIA patterns and practices, and screen reader workarounds developed through prior HSBC Simple Learning and PNC Bank engagements. Dan had also contributed to establishing GP&rsquo;s formal accessibility reporting templates and confirmation statement formats across the broader banking accessibility practice before TD MIC began. Where other testers could identify accessibility issues, Dan could diagnose the underlying ARIA failure mode and prescribe the specific Storyline implementation fix.</p>
+
+            <p><strong>GP Accessibility Testing Team</strong> (2 additional testers, anonymized) &mdash; Fellow GP employees contributing to TD MIC accessibility evaluation alongside Dan. Operated within the formal GP accessibility practice framework.</p>
+
+            <p><strong>Senior Learning Project Manager, GP Strategies</strong> &mdash; Coordinated the TD MIC project and provided program-level oversight.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: The Standards Gap -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">3.</span>
+            <span class="section-title">The Standards Gap</span>
+        </div>
+        <div class="background-content">
+            <p>The core challenge Dan solved: "How do you test something with no standard?"</p>
+            <p>Interactive eLearning content &mdash; particularly Articulate Storyline courses with custom navigation, gamification, and dynamic state management &mdash; exhibited non-deterministic screen reader behavior. Unlike static web content, where WCAG guidelines provide clear success criteria, interactive courseware lacked established testing protocols.</p>
+            <p>Existing accessibility resources (WebAIM, The A11Y Project) provided foundational knowledge for static HTML but offered no guidance for testing screen reader interactions with authoring tool output, branching scenarios, or custom JavaScript-driven navigation patterns. The industry gap was not in standards themselves (WCAG 2.1 / Section 508) but in applying those standards to complex interactive content.</p>
+            <p>The gap became apparent through successive banking engagements &mdash; starting with HSBC Simple Learning courses, then PNC Bank and TD Bank Storyline content &mdash; where each new client's interactive courseware exposed limitations in existing testing approaches. What began as ad hoc accessibility review evolved into a systematic enterprise-level practice.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Methodology -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">4.</span>
+            <span class="section-title">Methodology</span>
+        </div>
+        <div class="background-content">
+            <p>Dan&rsquo;s methodology for TD MIC was built on two foundations: GP&rsquo;s established accessibility practice framework, and the deeper technical layer he had developed through HSBC and PNC engagements that the framework alone couldn&rsquo;t provide.</p>
+
+            <h2>GP&rsquo;s Formal Practice (already established)</h2>
+            <p>GP had developed formal accessibility reporting templates and confirmation statement formats before TD MIC began &mdash; a structured framework for delivering accessibility evaluations to banking clients. Dan had contributed to establishing these practices across the broader banking accessibility engagement portfolio. For TD MIC, this framework provided the reporting and triage structure the team operated within:</p>
+            <ul>
+                <li>Accessibility confirmation statement templates for client reporting</li>
+                <li>Issue triage categories (critical / major / minor) aligned with WCAG conformance levels</li>
+                <li>Remediation recommendation documentation translating technical WCAG violations into actionable instructional design guidance</li>
+            </ul>
+
+            <h2>What Dan Brought from HSBC and PNC</h2>
+            <p>The formal framework handled structure and reporting. What it couldn&rsquo;t provide was forensic depth &mdash; and that&rsquo;s where Dan&rsquo;s prior engagements made the difference:</p>
+            <ul>
+                <li><strong>ARIA Patterns and Practices</strong> &mdash; understanding how ARIA roles, states, and properties behave in screen readers, and how Articulate Storyline&rsquo;s HTML output maps (and frequently fails to map) to those patterns</li>
+                <li><strong>Forensic Storyline Debugging</strong> &mdash; the ability to diagnose not just that a screen reader interaction was failing, but why &mdash; tracing failures to specific Storyline output patterns, JavaScript-driven state changes, or focus management gaps</li>
+                <li><strong>Screen Reader Workarounds</strong> &mdash; accumulated knowledge of what actually makes screen readers behave gracefully with authored courseware, including Storyline-specific implementation fixes not documented anywhere in WCAG or the ARIA spec</li>
+                <li><strong>General Accessibility Best Practices</strong> &mdash; applied knowledge of WCAG 2.1 and Section 508 in the context of interactive eLearning, where standard guidance for static web content doesn&rsquo;t translate directly</li>
+            </ul>
+
+            <h2>Testing Protocol</h2>
+            <ul>
+                <li>Keyboard navigation testing across all interactive elements (tab order, focus management, keyboard traps)</li>
+                <li>Screen reader compatibility verification (JAWS and NVDA) with focus on announcement clarity and navigation logic</li>
+                <li>Cross-browser testing to identify browser-specific ARIA implementation inconsistencies</li>
+                <li>Sprint-based workflow integration (SCRUM: TD MIC meetings) to align accessibility verification with development cycles</li>
+            </ul>
+
+            <p>The methodology was refined through deployment across <span class="key-fact">four major banking clients</span>: HSBC (origin), PNC Bank, TD Bank, and UOB. The templates and protocols Dan contributed to became the standard for GP Strategies&rsquo; accessibility practice.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Accessibility Scope (TD MIC) -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">5.</span>
+            <span class="section-title">Accessibility Scope (TD MIC)</span>
+        </div>
+        <div class="background-content">
+            <p>Dan performed comprehensive accessibility testing for TD Bank's Mutual Investment Counsellor (TD MIC) training program, delivered as Articulate Storyline courses. The engagement included:</p>
+
+            <h2>Testing Deliverables</h2>
+            <ul>
+                <li>WCAG 2.1 compliance verification against Level A and AA success criteria</li>
+                <li>Section 508 conformance testing for U.S. federal accessibility requirements</li>
+                <li>Screen reader testing (JAWS and NVDA) with detailed interaction documentation</li>
+                <li>Keyboard navigation testing across all course modules and assessments</li>
+            </ul>
+
+            <h2>Reporting & Remediation</h2>
+            <ul>
+                <li>Accessibility confirmation statements for client delivery</li>
+                <li>Issue triage with severity classification and WCAG reference mapping</li>
+                <li>Remediation recommendations with specific Articulate Storyline implementation guidance</li>
+                <li>Cross-functional collaboration with instructional designers and media teams to resolve accessibility barriers</li>
+            </ul>
+
+            <p>Dan served as the most experienced evaluator on the TD MIC accessibility team, applying forensic-level Storyline debugging and ARIA expertise developed through prior HSBC and PNC Bank engagements.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Evidence -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">6.</span>
+            <span class="section-title">Evidence</span>
+        </div>
+        <div class="background-content">
+
+            <blockquote>
+                Thank you for all your amazing work!
+                <div class="attribution">
+                    Senior Learning Project Manager, GP Strategies
+                    <span class="role">&mdash; August 2022, TD MIC Project</span>
+                </div>
+            </blockquote>
+
+            <p>The "amazing work" recognition from the Senior PM indicates above-expectations contribution. Project managers at this level have visibility across all workstreams and calibrate praise against the full team's output &mdash; making this a meaningful signal rather than a pro-forma acknowledgment.</p>
+
+            <h2>Quantitative Scale</h2>
+            <p>The Enterprise Accessibility Initiative peaked in 2022 with <span class="key-fact">479 accessibility-related emails</span> out of <span class="key-fact">4,173 total professional correspondence</span>. This represents <span class="key-fact">11.5%</span> of Dan's annual communication volume dedicated to accessibility work &mdash; reflecting the scale of the practice established and sustained across multiple banking clients.</p>
+            <p>The methodology was refined across <span class="key-fact">four major banking institutions</span> (HSBC, PNC Bank, TD Bank, UOB), demonstrating repeatability and enterprise-level applicability.</p>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Findings -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">7.</span>
+            <span class="section-title">Findings</span>
+        </div>
+        <div class="background-content">
+
+            <h2>Significance</h2>
+            <p>Dan did not simply test for accessibility compliance &mdash; he built the testing practice through successive client engagements. The challenge was methodological: creating a repeatable, scalable protocol for evaluating non-deterministic screen reader behavior in interactive eLearning where no industry standards existed.</p>
+            <p>The initiative demonstrates strategic capability beyond tactical execution. What started with HSBC Simple Learning courses evolved into a methodology deployed across four major banking clients. The 479 accessibility emails in 2022 reflect sustained execution, not a one-time deliverable.</p>
+            <p>For financial institutions, WCAG compliance is not optional &mdash; it is a legal and regulatory requirement. Dan's methodology directly impacted TD Bank's regulatory compliance posture and provided GP Strategies with a competitive differentiator in the enterprise learning market.</p>
+
+            <div class="impact-tags">
+                <span class="impact-tag highlight">Methodology Creation</span>
+                <span class="impact-tag highlight">Enterprise Initiative</span>
+                <span class="impact-tag highlight">WCAG 2.1</span>
+                <span class="impact-tag highlight">Section 508</span>
+                <span class="impact-tag">ARIA Authoring Practices</span>
+                <span class="impact-tag">JAWS/NVDA</span>
+                <span class="impact-tag">Articulate Storyline</span>
+                <span class="impact-tag">TD Bank</span>
+                <span class="impact-tag">Multi-Client Deployment</span>
+                <span class="impact-tag">479 Emails (2022)</span>
+                <span class="impact-tag">Solo Execution</span>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 8: Technologies -->
+<section class="report-section">
+    <div class="container">
+
+            <div class="section-heading">
+            <span class="section-number">8.</span>
+            <span class="section-title">Technologies</span>
+        </div>
+        <div class="background-content">
+
+            <h2>Accessibility Standards & Compliance</h2>
+            <ul>
+                <li><strong>WCAG 2.1:</strong> Web Content Accessibility Guidelines (Level A and AA success criteria)</li>
+                <li><strong>Section 508:</strong> U.S. federal accessibility requirements</li>
+                <li><strong>ARIA Authoring Practices:</strong> Bridge between WCAG principles and interactive content patterns</li>
+            </ul>
+
+            <h2>Screen Reader Testing</h2>
+            <ul>
+                <li><strong>JAWS:</strong> Job Access With Speech (screen reader compatibility testing, announcement clarity)</li>
+                <li><strong>NVDA:</strong> NonVisual Desktop Access (open-source screen reader, cross-platform testing)</li>
+            </ul>
+
+            <h2>eLearning Authoring</h2>
+            <ul>
+                <li><strong>Articulate Storyline:</strong> HTML output analysis, ARIA implementation patterns, custom navigation accessibility</li>
+            </ul>
+
+            <h2>Testing Methodology</h2>
+            <ul>
+                <li><strong>Keyboard Navigation Testing:</strong> Tab order, focus management, keyboard trap detection</li>
+                <li><strong>Cross-Browser Testing:</strong> Browser-specific ARIA implementation inconsistencies</li>
+                <li><strong>Issue Triage:</strong> Critical/major/minor severity classification aligned with WCAG conformance levels</li>
+                <li><strong>Sprint Integration:</strong> SCRUM workflows (TD MIC meetings), alignment with development cycles</li>
+            </ul>
+
+            <h2>Deployment Scale</h2>
+            <ul>
+                <li><strong>Banking Clients:</strong> TD Bank, HSBC, PNC Bank, UOB (4 major financial institutions)</li>
+                <li><strong>Email Volume:</strong> 479 accessibility-related emails in 2022 (11.5% of annual professional correspondence)</li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- Meta Sidebar -->
+
+<aside class="exhibit-meta">
+    <div class="container">
+        <h2>Engagement Metadata</h2>
+
+        
+        <div class="meta-item">
+            <strong>Industry:</strong>
+            <p>Banking / Financial Services</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Skills Demonstrated:</strong>
+            <ul>
+            
+                <li>Accessibility evaluation</li>
+            
+                <li>WCAG compliance testing</li>
+            
+                <li>Screen reader testing (JAWS/NVDA)</li>
+            
+                <li>ARIA pattern implementation</li>
+            
+                <li>Forensic Storyline debugging</li>
+            
+                <li>Methodology creation</li>
+            
+                <li>Issue triage and remediation</li>
+            
+                <li>Enterprise-level practice development</li>
+            
+                <li>Multi-client deployment</li>
+            
+            </ul>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Duration:</strong>
+            <p>2 years</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Personnel Involved:</strong>
+            <p>5 individuals</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Evidence Trail:</strong>
+            <p>479 emails analyzed</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Outcome:</strong>
+            <p>Created enterprise accessibility methodology for interactive eLearning WCAG 2.1 compliance testing. Practice deployed across 4 major banking clients (TD Bank, HSBC, PNC Bank, UOB). 479 accessibility emails in 2022 representing 11.5% of annual professional correspondence.</p>
+        </div>
+        
+    </div>
+</aside>
+
+
+<!-- Related Exhibits Section -->
+
+<section class="related-exhibits">
+    <div class="container">
+        <h2>Related Field Reports</h2>
+        <div class="related-exhibits-grid">
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a href="/exhibits/exhibit-f.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit F</span>
+                    <span class="related-exhibit-title">HSBC Global Banking</span>
+                    
+                    <span class="related-exhibit-client">HSBC (via GP Strategies)</span>
+                    
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+                <a href="/exhibits/exhibit-a.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit A</span>
+                    <span class="related-exhibit-title">Electric Boat LMS Integration</span>
+                    
+                    <span class="related-exhibit-client">General Dynamics Electric Boat (GDEB)</span>
+                    
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a href="/exhibits/exhibit-g.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit G</span>
+                    <span class="related-exhibit-title">SunTrust AWARE Platform</span>
+                    
+                    <span class="related-exhibit-client">SunTrust Bank (via GP Strategies)</span>
+                    
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+        </div>
+    </div>
+</section>
+
+
+<!-- Extra Content Block -->
+
+
+<!-- Back to Field Reports -->
+<div class="container">
+    <p><a href="/testimonials.html" class="back-link">&larr; Back to Field Reports</a></p>
+</div>
 
     </main>
 
-    <!-- Footer -->
-        <!-- Footer -->
-    <footer id="contact">
+        <footer>
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
-            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a></p>
-            <p><a href="https://linkedin.com/in/dan-novak-5692197" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com/novakda" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="/accessibility.html">Accessibility</a></p>
-            <p class="footer-stats">28+ years engineering experience | 14 case studies</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a> | <a href="/accessibility.html">Accessibility</a></p>
             <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
         </div>
     </footer>
 
-    <!-- Navigation toggle -->
+        <!-- Navigation toggle -->
     <script>
     (function() {
         var hamburger = document.querySelector('.hamburger');

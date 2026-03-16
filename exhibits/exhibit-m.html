@@ -4,17 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
-    <meta name="description" content="SCORM Debugger: TASBot for eLearning. Vue.js tool using emulator save-state methodology to reduce QA testing cycles from hours to minutes. Dan Novak's approach to developer productivity tooling.">
-    <meta name="author" content="Dan Novak">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-m.html">
-    <meta property="og:title" content="Pattern 158 | Exhibit M: SCORM Debugger &mdash; TASBot for eLearning">
-    <meta property="og:description" content="SCORM Debugger: TASBot for eLearning. Vue.js tool using emulator save-state methodology to reduce QA testing cycles from hours to minutes. Dan Novak's approach to developer productivity tooling.">
-    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="627">
-    <meta property="og:site_name" content="Pattern 158 Solutions">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Theme detection: MUST run before CSS to prevent flash -->
     <script>
@@ -38,29 +27,123 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+    
+<style>
+/* Print styles for exhibit pages */
+@media print {
+    /* Hide navigation and theme controls */
+    header, footer, .theme-toggle, .back-link, .skip-link {
+        display: none !important;
+    }
+
+    /* Force light theme colors for print */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .hero {
+        background: white !important;
+        color: black !important;
+        border-bottom: 2px solid #333 !important;
+    }
+
+    /* Adjust typography for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+
+    /* Ensure page breaks work well */
+    .report-section {
+        page-break-inside: avoid;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+</style>
+
+
+    
+    <meta name="description" content="SCORM Debugger - TASBot for eLearning. Vue.js tool using emulator save-state methodology to reduce QA testing cycles from hours to minutes. Dan Novak&#39;s approach to developer productivity tooling.">
+    <meta property="og:title" content="SCORM Debugger — TASBot for eLearning">
+    <meta property="og:description" content="SCORM Debugger - TASBot for eLearning. Vue.js tool using emulator save-state methodology to reduce QA testing cycles from hours to minutes. Dan Novak&#39;s approach to developer productivity tooling.">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-m.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-m.html">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
-    <link rel="icon" href="../assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
-    <link rel="apple-touch-icon" href="../assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
-    <title>Pattern 158 | Exhibit M: SCORM Debugger &mdash; TASBot for eLearning</title>
+    
+
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+
+    <title>SCORM Debugger — TASBot for eLearning — Pattern 158 Solutions</title>
+
+    
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Pattern 158 Solutions",
-  "description": "Dan Novak's professional portfolio - Systems architecture and legacy system rescue",
+  "description": "Senior Software Engineer and Systems Architect with 28+ years building and rescuing enterprise systems. Available for new opportunities.",
   "url": "https://pattern158.solutions"
 }
+    </script>
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://pattern158.solutions/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://pattern158.solutions/testimonials.html",
+        "name": "Field Reports"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://pattern158.solutions/exhibits/exhibit-m.html",
+        "name": "Exhibit M: SCORM Debugger — TASBot for eLearning"
+      }
+    }
+  ]
+}
 </script>
+
 </head>
 <body class="page-exhibit page-exhibit-m">
-    <!-- Skip link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header>
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
+            <nav aria-label="Main navigation">
         <div class="container">
             <a href="/index.html" class="logo-link">
                 <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
@@ -105,271 +188,412 @@
             </ul>
         </div>
     </nav>
+
     </header>
 
-    <!-- Main Content -->
     <main id="main-content" aria-label="Main content">
+        
+<!-- Breadcrumb Navigation -->
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>EXHIBIT M: <span class="pattern-number">SCORM DEBUGGER &mdash; TASBOT FOR ELEARNING</span></h1>
-            <p class="subtitle">Automated Testing Architecture — QA Cycles from Hours to Minutes</p>
-            <div class="report-meta">
-                <strong>Client:</strong> GP Strategies (Internal Tooling)<br>
-                <strong>Period:</strong> ~2019&ndash;2020<br>
-                <strong>Team:</strong> Dan Novak (Creator/Developer), Max Glick (Engineering Manager)
-            </div>
-            <span class="classification">Field Report &middot; Exhibit M &middot; GP Strategies &middot; ~2019&ndash;2020</span>
+
+<style>
+/* Breadcrumb styles — sits on dark inverse background (nav/hero area) */
+.breadcrumbs {
+    background: var(--color-inverse);
+    padding: 0.75rem 0 0;
+    margin: 0;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-sm);
+}
+
+/* Chevron separator between items */
+.breadcrumbs li + li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: var(--color-inverse-text-muted);
+    font-size: 1.2em;
+}
+
+.breadcrumbs a {
+    color: var(--color-inverse-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--color-inverse-text);
+    text-decoration: underline;
+}
+
+/* Current page - non-link */
+.breadcrumbs li[aria-current="page"] {
+    color: var(--color-inverse-text-light);
+    font-weight: 500;
+}
+
+/* Responsive: smaller font on mobile */
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 0.875rem;
+    }
+}
+</style>
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/testimonials.html">Field Reports</a></li>
+            <li aria-current="page">Exhibit M: SCORM Debugger — TASBot for eLearning</li>
+        </ol>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>EXHIBIT M: <span class="pattern-number">SCORM DEBUGGER — TASBOT FOR ELEARNING</span></h1>
+        <p class="subtitle">Automated Testing Architecture — QA Cycles from Hours to Minutes</p>
+        <div class="report-meta">
+            <strong>Classification:</strong> Field Report<br>
+            <strong>Client:</strong> GP Strategies (Internal Tooling)<br>
+            <strong>Location:</strong> Internal Development<br>
+            <strong>Period:</strong> ~2019–2020<br>
+            <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
         </div>
-    </section>
+        <span class="classification">Field Report &middot; Exhibit M &middot; GP Strategies (Internal Tooling)</span>
+    </div>
+</section>
 
-    <!-- 1. BACKGROUND -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">1.</span>
-                <span class="section-title">Background</span>
-            </div>
-            <div class="background-content">
-                <p>During QA at GP Strategies, testing gated eLearning courses &mdash; both completion-gated and assessment-gated &mdash; required manually clicking through every section to reach the part needing testing. Hours per QA cycle, per bug, per regression check. With hundreds of courses in production across clients, the QA burden was enormous but invisible &mdash; counted as &ldquo;just part of the job&rdquo; in a direct-labor billing model.</p>
-
-                <p>The inspiration came from speedrunning and TASBot culture: <strong>emulator save states</strong> as the model. Dan recognized that course state management was the same problem speedrunners had solved decades ago. Instead of replaying from the beginning every time, save the state and restore it instantly.</p>
-            </div>
+<!-- Report Body -->
+<div class="report-body">
+    
+<!-- 1. BACKGROUND -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">1.</span>
+            <span class="section-title">Background</span>
         </div>
-    </section>
+        <div class="background-content">
+            <p>During QA at GP Strategies, testing gated eLearning courses &mdash; both completion-gated and assessment-gated &mdash; required manually clicking through every section to reach the part needing testing. Hours per QA cycle, per bug, per regression check. With hundreds of courses in production across clients, the QA burden was enormous but invisible &mdash; counted as &ldquo;just part of the job&rdquo; in a direct-labor billing model.</p>
 
-    <!-- 2. PERSONNEL INVOLVED -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">2.</span>
-                <span class="section-title">Personnel Involved</span>
-            </div>
-            <div class="background-content">
-                <p>Dan Novak created and developed the SCORM Debugger, handling architecture design, Vue.js implementation, SCORM API emulation, and tool deployment.</p>
-
-                <p>Max Glick, Engineering Manager, provided team advocacy and engineering group leadership support for the project.</p>
-            </div>
+            <p>The inspiration came from speedrunning and TASBot culture: <strong>emulator save states</strong> as the model. Dan recognized that course state management was the same problem speedrunners had solved decades ago. Instead of replaying from the beginning every time, save the state and restore it instantly.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 3. SEQUENCE OF EVENTS -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">3.</span>
-                <span class="section-title">Sequence of Events</span>
-            </div>
+<!-- 2. PERSONNEL INVOLVED -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">2.</span>
+            <span class="section-title">Personnel Involved</span>
+        </div>
+        <div class="background-content">
+            <p>Dan Novak created and developed the SCORM Debugger, handling architecture design, Vue.js implementation, SCORM API emulation, and tool deployment.</p>
 
-            <div class="timeline">
-                <div class="timeline-entry">
-                    <div class="timeline-date">QA Pain Point</div>
-                    <div class="timeline-title">Manual Playthrough Bottleneck</div>
-                    <div class="timeline-content">
-                        <p>Testing gated courses required full manual playthrough to reach test targets. <span class="key-fact">Hours per cycle</span>, repeated for every bug and every regression check across <span class="key-fact">hundreds of courses</span> in production.</p>
-                    </div>
+            <p>Max Glick, Engineering Manager, provided team advocacy and engineering group leadership support for the project.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 3. SEQUENCE OF EVENTS -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">3.</span>
+            <span class="section-title">Sequence of Events</span>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-entry">
+                <div class="timeline-date">QA Pain Point</div>
+                <div class="timeline-title">Manual Playthrough Bottleneck</div>
+                <div class="timeline-content">
+                    <p>Testing gated courses required full manual playthrough to reach test targets. <span class="key-fact">Hours per cycle</span>, repeated for every bug and every regression check across <span class="key-fact">hundreds of courses</span> in production.</p>
                 </div>
+            </div>
 
-                <div class="timeline-entry milestone">
-                    <div class="timeline-date">The Parallel</div>
-                    <div class="timeline-title">Emulator Save State Model</div>
-                    <div class="timeline-content">
-                        <p>Dan recognizes the emulator save state model from speedrunning and TASBot culture. Course state management is the same problem &mdash; instead of replaying from the beginning every time, save the state and restore it instantly.</p>
-                    </div>
+            <div class="timeline-entry milestone">
+                <div class="timeline-date">The Parallel</div>
+                <div class="timeline-title">Emulator Save State Model</div>
+                <div class="timeline-content">
+                    <p>Dan recognizes the emulator save state model from speedrunning and TASBot culture. Course state management is the same problem &mdash; instead of replaying from the beginning every time, save the state and restore it instantly.</p>
                 </div>
+            </div>
 
-                <div class="timeline-entry milestone">
-                    <div class="timeline-date">Architecture</div>
-                    <div class="timeline-title">Vue.js Wrapper with SCORM Emulation</div>
-                    <div class="timeline-content">
-                        <p>Vue.js wrapper with open-source SCORM API emulation library providing a fake SCORM runtime environment. Courses run inside the wrapper as if they were in a real LMS &mdash; but with full state control.</p>
-                    </div>
+            <div class="timeline-entry milestone">
+                <div class="timeline-date">Architecture</div>
+                <div class="timeline-title">Vue.js Wrapper with SCORM Emulation</div>
+                <div class="timeline-content">
+                    <p>Vue.js wrapper with open-source SCORM API emulation library providing a fake SCORM runtime environment. Courses run inside the wrapper as if they were in a real LMS &mdash; but with full state control.</p>
                 </div>
+            </div>
 
-                <div class="timeline-entry milestone">
-                    <div class="timeline-date">Core Features</div>
-                    <div class="timeline-title">Save, Restore, Edit, Inspect</div>
-                    <div class="timeline-content">
-                        <p>Save course state at any point. Restore previous state for instant replay. Manually edit SCORM values (completion status, scores, suspend data). Jump directly to any section. Inspect real-time SCORM communication.</p>
-                    </div>
+            <div class="timeline-entry milestone">
+                <div class="timeline-date">Core Features</div>
+                <div class="timeline-title">Save, Restore, Edit, Inspect</div>
+                <div class="timeline-content">
+                    <p>Save course state at any point. Restore previous state for instant replay. Manually edit SCORM values (completion status, scores, suspend data). Jump directly to any section. Inspect real-time SCORM communication.</p>
                 </div>
+            </div>
 
-                <div class="timeline-entry">
-                    <div class="timeline-date">Adoption</div>
-                    <div class="timeline-title">Team Adoption and Impact</div>
-                    <div class="timeline-content">
-                        <p>Some team members adopted the tool for their QA workflows. Testing cycles dropped from <strong><span class="key-fact">hours to minutes</span></strong> for gated content.</p>
-                    </div>
+            <div class="timeline-entry">
+                <div class="timeline-date">Adoption</div>
+                <div class="timeline-title">Team Adoption and Impact</div>
+                <div class="timeline-content">
+                    <p>Some team members adopted the tool for their QA workflows. Testing cycles dropped from <strong><span class="key-fact">hours to minutes</span></strong> for gated content.</p>
                 </div>
+            </div>
 
-                <div class="timeline-entry">
-                    <div class="timeline-date">The Wall</div>
-                    <div class="timeline-title">Business Model Barrier</div>
-                    <div class="timeline-content">
-                        <p>GP Strategies&rsquo; direct-labor, billable-hours-first business model prevented investing non-billable time in internal tooling, even though it would have paid for itself many times over in QA savings.</p>
-                    </div>
+            <div class="timeline-entry">
+                <div class="timeline-date">The Wall</div>
+                <div class="timeline-title">Business Model Barrier</div>
+                <div class="timeline-content">
+                    <p>GP Strategies&rsquo; direct-labor, billable-hours-first business model prevented investing non-billable time in internal tooling, even though it would have paid for itself many times over in QA savings.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 4. FINDINGS -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">4.</span>
-                <span class="section-title">Findings</span>
-            </div>
-
-            <table class="resolution-table">
-                <thead>
-                    <tr>
-                        <th style="width: 5%;">#</th>
-                        <th style="width: 22%;">Finding</th>
-                        <th style="width: 73%;">Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="issue-id" data-label="#">F-01</td>
-                        <td data-label="Finding"><strong>QA Time Sink</strong></td>
-                        <td data-label="Description">Testing gated courses consumed <span class="key-fact">hours per cycle</span> &mdash; manual clickthrough of every section to reach test target, repeated for every bug and regression check.</td>
-                    </tr>
-                    <tr>
-                        <td class="issue-id" data-label="#">F-02</td>
-                        <td data-label="Finding"><strong>State Management Parallel</strong></td>
-                        <td data-label="Description">Course state management is isomorphic to emulator save states &mdash; the same problem speedrunners solved decades ago with different tools.</td>
-                    </tr>
-                    <tr>
-                        <td class="issue-id" data-label="#">F-03</td>
-                        <td data-label="Finding"><strong>Tool Effectiveness</strong></td>
-                        <td data-label="Description">Save/restore reduced testing cycles from <strong><span class="key-fact">hours to minutes</span></strong>. SCORM value editing eliminated the need for full course playthrough to test specific scenarios.</td>
-                    </tr>
-                    <tr>
-                        <td class="issue-id" data-label="#">F-04</td>
-                        <td data-label="Finding"><strong>Adoption Barrier</strong></td>
-                        <td data-label="Description">GP&rsquo;s direct-labor billing model treated internal tooling as unbillable overhead &mdash; no budget category existed for &ldquo;tools that make everyone faster.&rdquo;</td>
-                    </tr>
-                    <tr>
-                        <td class="issue-id" data-label="#">F-05</td>
-                        <td data-label="Finding"><strong>Rustici Gap</strong></td>
-                        <td data-label="Description">SCORM Cloud and SCORM Engine are excellent products, but reproducible debug states and session state inspection are not first-class features. This tool addressed exactly that gap from the integrator side.</td>
-                    </tr>
-                </tbody>
-            </table>
+<!-- 4. FINDINGS -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">4.</span>
+            <span class="section-title">Findings</span>
         </div>
-    </section>
 
-    <!-- 5. PROBABLE CAUSE -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">5.</span>
-                <span class="section-title">Probable Cause</span>
-            </div>
+        <table class="resolution-table">
+            <thead>
+                <tr>
+                    <th style="width: 5%;">#</th>
+                    <th style="width: 22%;">Finding</th>
+                    <th style="width: 73%;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="issue-id" data-label="#">F-01</td>
+                    <td data-label="Finding"><strong>QA Time Sink</strong></td>
+                    <td data-label="Description">Testing gated courses consumed <span class="key-fact">hours per cycle</span> &mdash; manual clickthrough of every section to reach test target, repeated for every bug and regression check.</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-02</td>
+                    <td data-label="Finding"><strong>State Management Parallel</strong></td>
+                    <td data-label="Description">Course state management is isomorphic to emulator save states &mdash; the same problem speedrunners solved decades ago with different tools.</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-03</td>
+                    <td data-label="Finding"><strong>Tool Effectiveness</strong></td>
+                    <td data-label="Description">Save/restore reduced testing cycles from <strong><span class="key-fact">hours to minutes</span></strong>. SCORM value editing eliminated the need for full course playthrough to test specific scenarios.</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-04</td>
+                    <td data-label="Finding"><strong>Adoption Barrier</strong></td>
+                    <td data-label="Description">GP&rsquo;s direct-labor billing model treated internal tooling as unbillable overhead &mdash; no budget category existed for &ldquo;tools that make everyone faster.&rdquo;</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-05</td>
+                    <td data-label="Finding"><strong>Rustici Gap</strong></td>
+                    <td data-label="Description">SCORM Cloud and SCORM Engine are excellent products, but reproducible debug states and session state inspection are not first-class features. This tool addressed exactly that gap from the integrator side.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
 
-            <div class="probable-cause-box">
-                <p>The SCORM Debugger was never fully polished or formally adopted &mdash; not because the tool didn&rsquo;t work, but because GP Strategies&rsquo; organizational structure had no mechanism for investing in internal tooling. The direct-labor, billable-hours-first business model prevented allocating non-billable time to polish and deploy productivity tools, even when the ROI was obvious. Dan spent more time developing it than using it because there was never enough uninterrupted time to both build and deploy it properly.</p>
-                <p>This is not a failure story &mdash; it&rsquo;s a <strong>culture-fit diagnostic</strong>. Organizations that invest in developer productivity and internal tooling are the right environment for this kind of work. The SCORM Debugger functions as a signal: when Dan tells this story in interviews, the listener&rsquo;s reaction reveals whether their organization values engineering investment or treats tooling as overhead.</p>
-            </div>
+<!-- 5. PROBABLE CAUSE -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">5.</span>
+            <span class="section-title">Probable Cause</span>
         </div>
-    </section>
 
-    <!-- 6. OUTCOME -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">6.</span>
-                <span class="section-title">Outcome</span>
-            </div>
-            <div class="background-content">
-                <p><strong>What worked:</strong> Testing cycles dropped from <strong><span class="key-fact">hours to minutes</span></strong> for gated content. Some team members adopted the tool and used it productively.</p>
-
-                <p><strong>What didn&rsquo;t:</strong> The tool was never fully finished or formally adopted across the team. The business model prevented the investment that would have made it a standard part of the QA workflow.</p>
-
-                <p><strong>The Rustici connection:</strong> SCORM Cloud and SCORM Engine provide excellent runtime environments, but reproducible debug states &mdash; the ability to save, restore, and edit course state for targeted testing &mdash; are not first-class features in any commercial SCORM product. This tool was purpose-built to fill that gap from the integrator&rsquo;s perspective.</p>
-            </div>
+        <div class="probable-cause-box">
+            <p>The SCORM Debugger was never fully polished or formally adopted &mdash; not because the tool didn&rsquo;t work, but because GP Strategies&rsquo; organizational structure had no mechanism for investing in internal tooling. The direct-labor, billable-hours-first business model prevented allocating non-billable time to polish and deploy productivity tools, even when the ROI was obvious. Dan spent more time developing it than using it because there was never enough uninterrupted time to both build and deploy it properly.</p>
+            <p>This is not a failure story &mdash; it&rsquo;s a <strong>culture-fit diagnostic</strong>. Organizations that invest in developer productivity and internal tooling are the right environment for this kind of work. The SCORM Debugger functions as a signal: when Dan tells this story in interviews, the listener&rsquo;s reaction reveals whether their organization values engineering investment or treats tooling as overhead.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- 7. TECHNOLOGIES -->
-    <section class="report-section">
-        <div class="container">
-            <div class="section-heading">
-                <span class="section-number">7.</span>
-                <span class="section-title">Technologies</span>
-            </div>
-
-            <table class="resolution-table">
-                <thead>
-                    <tr>
-                        <th style="width: 30%;">Category</th>
-                        <th style="width: 70%;">Technologies & Tools</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Category"><strong>Frontend Framework</strong></td>
-                        <td data-label="Technologies & Tools">Vue.js (component architecture, reactive state management)</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Category"><strong>SCORM Integration</strong></td>
-                        <td data-label="Technologies & Tools">SCORM 1.2 API emulation, SCORM 2004 API emulation (open-source library)</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Category"><strong>Core Languages</strong></td>
-                        <td data-label="Technologies & Tools">JavaScript (ES6+), HTML5, CSS3</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Category"><strong>State Management</strong></td>
-                        <td data-label="Technologies & Tools">Course state serialization/deserialization, localStorage persistence, SCORM suspend_data manipulation</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Category"><strong>Debugging</strong></td>
-                        <td data-label="Technologies & Tools">Real-time SCORM API call inspection, value editing, completion status manipulation</td>
-                    </tr>
-                    <tr>
-                        <td data-label="Category"><strong>Inspiration</strong></td>
-                        <td data-label="Technologies & Tools">Tool-Assisted Speedrunning (TASBot), emulator save states, frame-perfect optimization methodology</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="background-content">
-                <h2>Key Technical Insights</h2>
-                <ul class="detail-list">
-                    <li><strong>Save State Architecture:</strong> Course state serialized to JSON snapshots &mdash; restore any previous state instantly without replaying from beginning</li>
-                    <li><strong>Fake SCORM Runtime:</strong> Open-source SCORM API emulation provided complete runtime environment without requiring LMS &mdash; courses couldn&rsquo;t tell the difference</li>
-                    <li><strong>The TASBot Parallel:</strong> Just as tool-assisted speedrunners use save states to achieve frame-perfect optimization, SCORM Debugger used state snapshots to achieve targeted, reproducible QA &mdash; turning hours of manual testing into minutes of precision work</li>
-                    <li><strong>Integrator-Side Gap:</strong> Commercial SCORM tools (SCORM Cloud, SCORM Engine) excel at runtime and conformance testing, but reproducible debug states and session-level state inspection remain underserved &mdash; this tool addressed that specific gap</li>
-                </ul>
-            </div>
+<!-- 6. OUTCOME -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">6.</span>
+            <span class="section-title">Outcome</span>
         </div>
-    </section>
+        <div class="background-content">
+            <p><strong>What worked:</strong> Testing cycles dropped from <strong><span class="key-fact">hours to minutes</span></strong> for gated content. Some team members adopted the tool and used it productively.</p>
+
+            <p><strong>What didn&rsquo;t:</strong> The tool was never fully finished or formally adopted across the team. The business model prevented the investment that would have made it a standard part of the QA workflow.</p>
+
+            <p><strong>The Rustici connection:</strong> SCORM Cloud and SCORM Engine provide excellent runtime environments, but reproducible debug states &mdash; the ability to save, restore, and edit course state for targeted testing &mdash; are not first-class features in any commercial SCORM product. This tool was purpose-built to fill that gap from the integrator&rsquo;s perspective.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 7. TECHNOLOGIES -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">7.</span>
+            <span class="section-title">Technologies</span>
+        </div>
+
+        <table class="resolution-table">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Category</th>
+                    <th style="width: 70%;">Technologies & Tools</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Category"><strong>Frontend Framework</strong></td>
+                    <td data-label="Technologies & Tools">Vue.js (component architecture, reactive state management)</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>SCORM Integration</strong></td>
+                    <td data-label="Technologies & Tools">SCORM 1.2 API emulation, SCORM 2004 API emulation (open-source library)</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Core Languages</strong></td>
+                    <td data-label="Technologies & Tools">JavaScript (ES6+), HTML5, CSS3</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>State Management</strong></td>
+                    <td data-label="Technologies & Tools">Course state serialization/deserialization, localStorage persistence, SCORM suspend_data manipulation</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Debugging</strong></td>
+                    <td data-label="Technologies & Tools">Real-time SCORM API call inspection, value editing, completion status manipulation</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Inspiration</strong></td>
+                    <td data-label="Technologies & Tools">Tool-Assisted Speedrunning (TASBot), emulator save states, frame-perfect optimization methodology</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="background-content">
+            <h2>Key Technical Insights</h2>
+            <ul class="detail-list">
+                <li><strong>Save State Architecture:</strong> Course state serialized to JSON snapshots &mdash; restore any previous state instantly without replaying from beginning</li>
+                <li><strong>Fake SCORM Runtime:</strong> Open-source SCORM API emulation provided complete runtime environment without requiring LMS &mdash; courses couldn&rsquo;t tell the difference</li>
+                <li><strong>The TASBot Parallel:</strong> Just as tool-assisted speedrunners use save states to achieve frame-perfect optimization, SCORM Debugger used state snapshots to achieve targeted, reproducible QA &mdash; turning hours of manual testing into minutes of precision work</li>
+                <li><strong>Integrator-Side Gap:</strong> Commercial SCORM tools (SCORM Cloud, SCORM Engine) excel at runtime and conformance testing, but reproducible debug states and session-level state inspection remain underserved &mdash; this tool addressed that specific gap</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- Meta Sidebar -->
+
+<aside class="exhibit-meta">
+    <div class="container">
+        <h2>Engagement Metadata</h2>
+
+        
+        <div class="meta-item">
+            <strong>Industry:</strong>
+            <p>eLearning / EdTech</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Skills Demonstrated:</strong>
+            <ul>
+            
+                <li>Developer Productivity Tools</li>
+            
+                <li>State Management</li>
+            
+                <li>Frontend Architecture</li>
+            
+                <li>SCORM Integration</li>
+            
+                <li>QA Automation</li>
+            
+                <li>Tool Design</li>
+            
+                <li>Emulator Architecture</li>
+            
+            </ul>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Duration:</strong>
+            <p>1 years</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Personnel Involved:</strong>
+            <p>2 individuals</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Outcome:</strong>
+            <p>Testing cycles reduced from hours to minutes for gated content through save/restore state functionality. Some team members adopted the tool productively, but business model prevented full polish and formal team-wide adoption.</p>
+        </div>
+        
+    </div>
+</aside>
+
+
+<!-- Related Exhibits Section -->
+
+
+<!-- Extra Content Block -->
+
+
+<!-- Back to Field Reports -->
+<div class="container">
+    <p><a href="/testimonials.html" class="back-link">&larr; Back to Field Reports</a></p>
+</div>
 
     </main>
 
-    <!-- Back Link -->
-    <div class="back-link-section">
-        <a href="../portfolio.html" class="back-link">
-            <span class="arrow">&larr;</span> Back to Portfolio
-        </a>
-    </div>
-
-    <!-- Footer -->
-        <!-- Footer -->
-    <footer id="contact">
+        <footer>
         <div class="container">
             <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
-            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a></p>
-            <p><a href="https://linkedin.com/in/dan-novak-5692197" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://github.com/novakda" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="/accessibility.html">Accessibility</a></p>
-            <p class="footer-stats">28+ years engineering experience | 14 case studies</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a> | <a href="/accessibility.html">Accessibility</a></p>
             <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
         </div>
     </footer>
 
-    <!-- Navigation toggle -->
+        <!-- Navigation toggle -->
     <script>
     (function() {
         var hamburger = document.querySelector('.hamburger');

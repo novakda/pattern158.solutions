@@ -1,0 +1,334 @@
+{
+  "clients": [
+    {
+      "id": "Aep",
+      "name": "American Electric Power",
+      "industry": "Energy & Utilities",
+      "displayTag": "AEP"
+    },
+    {
+      "id": "Aicpa",
+      "name": "AICPA",
+      "industry": "Government & Professional Services",
+      "displayTag": "AICPA"
+    },
+    {
+      "id": "Airgas",
+      "name": "Airgas",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Airgas"
+    },
+    {
+      "id": "Basf",
+      "name": "BASF",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "BASF"
+    },
+    {
+      "id": "BankOfAmerica",
+      "name": "Bank of America",
+      "industry": "Financial Services",
+      "displayTag": "BofA"
+    },
+    {
+      "id": "BayerAg",
+      "name": "Bayer AG",
+      "industry": "Pharmaceutical & Healthcare",
+      "displayTag": "Bayer"
+    },
+    {
+      "id": "BellHelicopter",
+      "name": "Bell Helicopter (Textron)",
+      "industry": "Aerospace & Defense",
+      "displayTag": "Bell"
+    },
+    {
+      "id": "Bms",
+      "name": "Bristol-Myers Squibb",
+      "industry": "Pharmaceutical & Healthcare",
+      "displayTag": "BMS"
+    },
+    {
+      "id": "Bp",
+      "name": "BP",
+      "industry": "Energy & Utilities",
+      "displayTag": "BP"
+    },
+    {
+      "id": "Bcg",
+      "name": "Boston Consulting Group",
+      "industry": "Government & Professional Services",
+      "displayTag": "BCG"
+    },
+    {
+      "id": "Calpine",
+      "name": "Calpine Corporation",
+      "industry": "Energy & Utilities",
+      "displayTag": "Calpine"
+    },
+    {
+      "id": "CdkGlobal",
+      "name": "CDK Global",
+      "industry": "Technology",
+      "displayTag": "CDK"
+    },
+    {
+      "id": "Cigna",
+      "name": "Cigna",
+      "industry": "Pharmaceutical & Healthcare",
+      "displayTag": "Cigna"
+    },
+    {
+      "id": "Corning",
+      "name": "Corning Incorporated",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Corning"
+    },
+    {
+      "id": "Csc",
+      "name": "CSC",
+      "industry": "Technology",
+      "displayTag": "CSC"
+    },
+    {
+      "id": "Csu",
+      "name": "CSU",
+      "industry": "Energy & Utilities",
+      "displayTag": "CSU"
+    },
+    {
+      "id": "Entergy",
+      "name": "Entergy Corporation",
+      "industry": "Energy & Utilities",
+      "displayTag": "Entergy"
+    },
+    {
+      "id": "Exeloncorp",
+      "name": "Exelon Corporation",
+      "industry": "Energy & Utilities",
+      "displayTag": "Exelon"
+    },
+    {
+      "id": "Fpl",
+      "name": "Florida Power & Light",
+      "industry": "Energy & Utilities",
+      "displayTag": "FPL"
+    },
+    {
+      "id": "Gdeb",
+      "name": "General Dynamics Electric Boat",
+      "industry": "Aerospace & Defense",
+      "displayTag": "GDEB"
+    },
+    {
+      "id": "GdAis",
+      "name": "General Dynamics AIS",
+      "industry": "Aerospace & Defense",
+      "displayTag": "GD-AIS"
+    },
+    {
+      "id": "Genon",
+      "name": "GenOn Energy",
+      "industry": "Energy & Utilities",
+      "displayTag": "GenOn"
+    },
+    {
+      "id": "Gm",
+      "name": "General Motors",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "GM"
+    },
+    {
+      "id": "GpStrategies",
+      "name": "GP Strategies",
+      "industry": "Government & Professional Services",
+      "displayTag": "GP"
+    },
+    {
+      "id": "Gulfstream",
+      "name": "Gulfstream Aerospace",
+      "industry": "Aerospace & Defense",
+      "displayTag": "Gulfstream"
+    },
+    {
+      "id": "Hhs",
+      "name": "U.S. Dept. of Health & Human Services",
+      "industry": "Government & Professional Services",
+      "displayTag": "HHS"
+    },
+    {
+      "id": "Hilton",
+      "name": "Hilton Hotels",
+      "industry": "Government & Professional Services",
+      "displayTag": "Hilton"
+    },
+    {
+      "id": "Hsbc",
+      "name": "HSBC",
+      "industry": "Financial Services",
+      "displayTag": "HSBC"
+    },
+    {
+      "id": "KeurigDrPepper",
+      "name": "Keurig Dr Pepper",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "KDP"
+    },
+    {
+      "id": "Lilly",
+      "name": "Eli Lilly",
+      "industry": "Pharmaceutical & Healthcare",
+      "displayTag": "Lilly"
+    },
+    {
+      "id": "Luxottica",
+      "name": "Luxottica",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Luxottica"
+    },
+    {
+      "id": "Metlife",
+      "name": "MetLife, Inc.",
+      "industry": "Financial Services",
+      "displayTag": "MetLife"
+    },
+    {
+      "id": "Microsoft",
+      "name": "Microsoft",
+      "industry": "Technology",
+      "displayTag": "Microsoft"
+    },
+    {
+      "id": "Microsofthup",
+      "name": "Microsoft (HUP Program)",
+      "industry": "Technology",
+      "displayTag": "Microsoft HUP"
+    },
+    {
+      "id": "Mirant",
+      "name": "Mirant Corporation",
+      "industry": "Energy & Utilities",
+      "displayTag": "Mirant"
+    },
+    {
+      "id": "Mondelez",
+      "name": "Mondelez International",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Mondelez"
+    },
+    {
+      "id": "Nalco",
+      "name": "Nalco (Ecolab)",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Nalco"
+    },
+    {
+      "id": "Nasa",
+      "name": "NASA",
+      "industry": "Government & Professional Services",
+      "displayTag": "NASA"
+    },
+    {
+      "id": "Nationalgrid",
+      "name": "National Grid",
+      "industry": "Energy & Utilities",
+      "displayTag": "National Grid"
+    },
+    {
+      "id": "Nike",
+      "name": "Nike",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Nike"
+    },
+    {
+      "id": "Nrgenergy",
+      "name": "NRG Energy",
+      "industry": "Energy & Utilities",
+      "displayTag": "NRG"
+    },
+    {
+      "id": "Pella",
+      "name": "Pella Corporation",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Pella"
+    },
+    {
+      "id": "Pnc",
+      "name": "PNC Financial Services",
+      "industry": "Financial Services",
+      "displayTag": "PNC"
+    },
+    {
+      "id": "PortlandGe",
+      "name": "Portland General Electric",
+      "industry": "Energy & Utilities",
+      "displayTag": "PGE"
+    },
+    {
+      "id": "Sikorsky",
+      "name": "Sikorsky Aircraft (Lockheed Martin)",
+      "industry": "Aerospace & Defense",
+      "displayTag": "Sikorsky"
+    },
+    {
+      "id": "Solvay",
+      "name": "Solvay",
+      "industry": "Consumer & Manufacturing",
+      "displayTag": "Solvay"
+    },
+    {
+      "id": "Suntrust",
+      "name": "SunTrust Bank",
+      "industry": "Financial Services",
+      "displayTag": "SunTrust"
+    },
+    {
+      "id": "Td",
+      "name": "TD Bank",
+      "industry": "Financial Services",
+      "displayTag": "TD Bank"
+    },
+    {
+      "id": "Topazpower",
+      "name": "Topaz Power Group",
+      "industry": "Energy & Utilities",
+      "displayTag": "Topaz"
+    },
+    {
+      "id": "Uob",
+      "name": "UOB (United Overseas Bank)",
+      "industry": "Financial Services",
+      "displayTag": "UOB"
+    },
+    {
+      "id": "UsDoj",
+      "name": "U.S. Dept. of Justice",
+      "industry": "Government & Professional Services",
+      "displayTag": "DOJ"
+    },
+    {
+      "id": "UnitedTech",
+      "name": "United Technologies",
+      "industry": "Aerospace & Defense",
+      "displayTag": "UTC"
+    },
+    {
+      "id": "WeillCornell",
+      "name": "Weill Cornell Medicine",
+      "industry": "Pharmaceutical & Healthcare",
+      "displayTag": "Weill Cornell"
+    },
+    {
+      "id": "Wellsfargo",
+      "name": "Wells Fargo",
+      "industry": "Financial Services",
+      "displayTag": "Wells Fargo"
+    },
+    {
+      "id": "HorizonBcbs",
+      "name": "Horizon BCBS NJ",
+      "industry": "Financial Services",
+      "displayTag": "Horizon"
+    }
+  ]
+}
