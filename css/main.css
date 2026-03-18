@@ -1760,20 +1760,26 @@ footer a:hover {
     opacity: 0.3;
 }
 
-.page-contact .quote-text {
+.page-contact .quote-text,
+.page-philosophy .quote-text,
+.page-faq .quote-text {
     font-size: var(--font-size-lg);
     line-height: 1.8;
     font-style: italic;
     margin-bottom: var(--space-xl);
 }
 
-.page-contact .quote-attribution {
+.page-contact .quote-attribution,
+.page-philosophy .quote-attribution,
+.page-faq .quote-attribution {
     font-style: normal;
     border-top: 2px solid var(--color-primary);
     padding-top: var(--space-md);
 }
 
-.page-contact .quote-attribution cite {
+.page-contact .quote-attribution cite,
+.page-philosophy .quote-attribution cite,
+.page-faq .quote-attribution cite {
     display: block;
     font-size: var(--font-size-md);
     font-weight: 600;
@@ -1781,7 +1787,9 @@ footer a:hover {
     margin-bottom: var(--space-sm);
 }
 
-.page-contact .quote-context {
+.page-contact .quote-context,
+.page-philosophy .quote-context,
+.page-faq .quote-context {
     font-size: var(--font-size-sm);
     color: var(--color-inverse-text-muted);
 }
@@ -3754,11 +3762,15 @@ footer a:hover {
         padding: var(--space-ms) var(--space-sm);
     }
 
-    .page-contact .quote-text {
+    .page-contact .quote-text,
+    .page-philosophy .quote-text,
+    .page-faq .quote-text {
         font-size: var(--font-size-md);
     }
 
-    .page-contact .testimonial-quote::before {
+    .page-contact .testimonial-quote::before,
+    .page-philosophy .testimonial-quote::before,
+    .page-faq .testimonial-quote::before {
         font-size: var(--font-size-5xl);
         top: -1rem;
     }
