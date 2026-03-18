@@ -28,50 +28,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
 
-    
-<style>
-/* Print styles for exhibit pages */
-@media print {
-    /* Hide navigation and theme controls */
-    header, footer, .theme-toggle, .back-link, .skip-link {
-        display: none !important;
-    }
-
-    /* Force light theme colors for print */
-    body {
-        background: white !important;
-        color: black !important;
-    }
-
-    .hero {
-        background: white !important;
-        color: black !important;
-        border-bottom: 2px solid #333 !important;
-    }
-
-    /* Adjust typography for print */
-    body {
-        font-size: 12pt;
-        line-height: 1.5;
-    }
-
-    h1 { font-size: 20pt; }
-    h2 { font-size: 16pt; }
-    h3 { font-size: 14pt; }
-
-    /* Ensure page breaks work well */
-    .report-section {
-        page-break-inside: avoid;
-    }
-
-    /* Show URLs for links */
-    a[href^="http"]:after {
-        content: " (" attr(href) ")";
-        font-size: 10pt;
-        color: #666;
-    }
-}
-</style>
 
 
     
@@ -196,61 +152,6 @@
 <!-- Breadcrumb Navigation -->
 
 
-<style>
-/* Breadcrumb styles — sits on dark inverse background (nav/hero area) */
-.breadcrumbs {
-    background: var(--color-inverse);
-    padding: 0.75rem 0 0;
-    margin: 0;
-}
-
-.breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 0.5rem;
-}
-
-.breadcrumbs li {
-    display: flex;
-    align-items: center;
-    font-size: var(--font-size-sm);
-}
-
-/* Chevron separator between items */
-.breadcrumbs li + li::before {
-    content: "›";
-    margin-right: 0.5rem;
-    color: var(--color-inverse-text-muted);
-    font-size: 1.2em;
-}
-
-.breadcrumbs a {
-    color: var(--color-inverse-text-muted);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.breadcrumbs a:hover {
-    color: var(--color-inverse-text);
-    text-decoration: underline;
-}
-
-/* Current page - non-link */
-.breadcrumbs li[aria-current="page"] {
-    color: var(--color-inverse-text-light);
-    font-weight: 500;
-}
-
-/* Responsive: smaller font on mobile */
-@media (max-width: 768px) {
-    .breadcrumbs {
-        font-size: 0.875rem;
-    }
-}
-</style>
 
 <nav aria-label="Breadcrumb" class="breadcrumbs">
     <div class="container">

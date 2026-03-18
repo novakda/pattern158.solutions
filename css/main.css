@@ -4398,3 +4398,82 @@ footer a,
 [style*="background: var(--color-inverse)"] a {
     /* Inherits from specific selectors already updated */
 }
+
+/* =============================================================================
+   Exhibit pages — print styles
+   Extracted from inline <style> blocks in exhibit-a.html through exhibit-o.html
+   ============================================================================= */
+@media print {
+    header, footer, .theme-toggle, .back-link, .skip-link {
+        display: none !important;
+    }
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+    .hero {
+        background: white !important;
+        color: black !important;
+        border-bottom: 2px solid #333 !important;
+    }
+    h1 { font-size: 20pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+    .report-section {
+        page-break-inside: avoid;
+    }
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* =============================================================================
+   Breadcrumb navigation
+   Extracted from inline <style> blocks in exhibit-a.html through exhibit-o.html
+   ============================================================================= */
+.breadcrumbs {
+    background: var(--color-inverse);
+    padding: 0.75rem 0 0;
+    margin: 0;
+}
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5rem;
+}
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-sm);
+}
+.breadcrumbs li + li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    color: var(--color-inverse-text-muted);
+    font-size: 1.2em;
+}
+.breadcrumbs a {
+    color: var(--color-inverse-text-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.breadcrumbs a:hover {
+    color: var(--color-inverse-text);
+    text-decoration: underline;
+}
+.breadcrumbs li[aria-current="page"] {
+    color: var(--color-inverse-text-light);
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .breadcrumbs {
+        font-size: 0.875rem;
+    }
+}
