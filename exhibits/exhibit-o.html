@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    
+    <meta name="description" content="Integration expertise as the organic path to AI product work - three GP Strategies projects (BP Learning Platform, AICPA Bridge Adapter, ContentAIQ) unified by a common thread of making multiple systems work together.">
+    <meta property="og:title" content="ContentAIQ">
+    <meta property="og:description" content="Integration expertise as the organic path to AI product work - three GP Strategies projects (BP Learning Platform, AICPA Bridge Adapter, ContentAIQ) unified by a common thread of making multiple systems work together.">
+    <meta property="og:url" content="https://pattern158.solutions/exhibits/exhibit-o.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://pattern158.solutions/exhibits/exhibit-o.html">
+    
+
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+
+    <title>ContentAIQ — Pattern 158 Solutions</title>
+
+    
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Senior Software Engineer and Systems Architect with 28+ years building and rescuing enterprise systems. Available for new opportunities.",
+  "url": "https://pattern158.solutions"
+}
+    </script>
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://pattern158.solutions/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://pattern158.solutions/testimonials.html",
+        "name": "Field Reports"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "https://pattern158.solutions/exhibits/exhibit-o.html",
+        "name": "Exhibit O: ContentAIQ"
+      }
+    }
+  ]
+}
+</script>
+
+</head>
+<body class="page-exhibit page-exhibit-o">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+            <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/technologies.html">Technologies</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html" aria-current="page">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    </header>
+
+    <main id="main-content" aria-label="Main content">
+        
+<!-- Breadcrumb Navigation -->
+
+
+
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+    <div class="container">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/testimonials.html">Field Reports</a></li>
+            <li aria-current="page">Exhibit O: ContentAIQ</li>
+        </ol>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1>EXHIBIT O: <span class="pattern-number">CONTENTAIQ</span></h1>
+        <p class="subtitle">The Integration Thread — Pattern Recognition Across Three Projects</p>
+        <div class="report-meta">
+            <strong>Classification:</strong> Field Report<br>
+            <strong>Client:</strong> GP Strategies (internal product)<br>
+            <strong>Location:</strong> Cloud-based multitenant SaaS<br>
+            <strong>Period:</strong> 2024–2025<br>
+            <strong>Investigator:</strong> Dan Novak, Computer Programmer, GP Strategies
+        </div>
+        <span class="classification">Field Report &middot; Exhibit O &middot; GP Strategies (internal product)</span>
+    </div>
+</section>
+
+<!-- Report Body -->
+<div class="report-body">
+    
+<!-- 1. BACKGROUND -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">1.</span>
+            <span class="section-title">Background</span>
+        </div>
+        <div class="background-content">
+            <p>Integration expertise as the organic path to AI product work: three GP Strategies projects (BP Learning Platform, AICPA Bridge Adapter, ContentAIQ) unified by a common thread of making multiple systems work together. The progression wasn&rsquo;t deliberate career planning &mdash; these were assignments that came through the same employer &mdash; but the skill thread was real. Each project represented integration complexity at increasing levels of sophistication.</p>
+
+            <p>The BP Learning Platform was a React/GraphQL facade over <span class="key-fact">four independent systems</span> (Rustici Content Controller, PeopleFluent LMS, Watershed LRS, Amazon Cognito). Dan recognized this federated architecture because he&rsquo;d built his own version as CSBB Dispatch <span class="key-fact">a decade earlier</span> &mdash; same pattern, different tooling.</p>
+
+            <p>The AICPA Bridge Adapter was an integration layer Dan co-maintained with another developer, supporting the original senior engineer: a webhook-driven sync pipeline moving curriculum and registration data from AirTable through Node.js to Bridge LMS. Dan became an <span class="key-fact">L3 escalation point</span> for complex sync failures, co-owning a multi-system integration he didn&rsquo;t build.</p>
+
+            <p>ContentAIQ is GP Strategies&rsquo; AI-powered learning content creation platform &mdash; a cloud-based, multitenant SaaS product that generates course outlines, scripts, assessments, metadata, and gamification elements using AI agents with built-in instructional design expertise. Dan was one of several frontend developers in the engineering group building the UX: implementing new React components and pages from Adobe XD designs, modifying UX flows across the multitenant architecture. An <span class="key-fact">early-stage product in pilot program</span>, rapidly iterating toward production.</p>
+
+            <p>The thread connecting all three projects is integration expertise &mdash; making multiple systems work together, whether that&rsquo;s SCORM content servers, LMS platforms, AirTable data, or AI agents. This thread naturally led to AI product work because AI products are fundamentally integration challenges: the frontend surfaces capabilities generated by backend AI pipelines, requiring the same cross-system coordination and debugging skills honed on traditional integrations.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 2. BP LEARNING PLATFORM -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">2.</span>
+            <span class="section-title">BP Learning Platform — Federated Facade</span>
+        </div>
+        <div class="background-content">
+            <p>The BP Learning Platform represents the first point in the arc: a federated React/GraphQL frontend integrating Rustici Content Controller, PeopleFluent LMS, Watershed LRS, and Amazon Cognito into a coherent whole. (Full details in <a href="exhibit-n.html">Exhibit N</a>.)</p>
+
+            <p>Dan&rsquo;s central challenge was a multi-tenant rebranding through Material UI&rsquo;s largely undocumented theming system &mdash; initially scoped as one week, it expanded to several months as deeply interrelated style dependencies revealed themselves. But the architectural signal is more significant: Dan recognized this federated facade pattern because he&rsquo;d invented his own version as CSBB Dispatch in 2011. Different authors, same pattern. In 2011, it was EasyXDM bridging SCORM content servers; in 2024, it was React/GraphQL bridging enterprise backend services.</p>
+
+            <p><strong>Key signal:</strong> Pattern recognition across <span class="key-fact">thirteen years</span> &mdash; the same architectural approach to making multiple independent systems behave as one.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 3. AICPA BRIDGE ADAPTER -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">3.</span>
+            <span class="section-title">AICPA Bridge Adapter — Webhook Sync Pipeline</span>
+        </div>
+        <div class="background-content">
+            <p>The AICPA Bridge Adapter represents the second point in the arc: an integration layer Dan inherited rather than built. A Node.js plugin syncing curriculum and registration data between AirTable (AICPA&rsquo;s source of truth) and Bridge LMS (course delivery platform), using webhooks to trigger sync operations and PostgreSQL to track state across subaccounts.</p>
+
+            <p><strong>Data flow:</strong> AirTable fires webhook &rarr; Node.js receives webhook and pulls full record via AirTable API &rarr; PostgreSQL tracks sync state &rarr; Node.js builds and executes Bridge REST API calls to create/update curricula, courses, enrollments. The PostgreSQL layer compensates for the Bridge API&rsquo;s inability to track what&rsquo;s been synced where per subaccount.</p>
+
+            <p>Dan was one of two developers supporting the original senior engineer who built the integration &mdash; <span class="key-fact">inherited code stewardship</span> as a team. Working under senior architect guidance, they fixed bugs in the webhook-driven sync logic, improved error handling, and troubleshot failed sync issues. Dan served as an <span class="key-fact">L3 escalation point</span> when complex failures escalated through support tiers, and worked on the React/Material UI admin dashboard component.</p>
+
+            <p><strong>Key signal:</strong> Co-ownership of a complex multi-system integration built by others &mdash; the ability to step into existing codebases, understand architectures quickly, and maintain production systems reliably as part of a small support team.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 4. CONTENTAIQ -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">4.</span>
+            <span class="section-title">ContentAIQ — AI Product Frontend</span>
+        </div>
+        <div class="background-content">
+            <p>ContentAIQ is the destination: GP Strategies&rsquo; AI-powered learning content creation platform, a cloud-based multitenant SaaS product built on Microsoft Azure. The product uses AI agents with built-in instructional design expertise to generate course outlines, scripts, assessments, metadata, gamification elements, and more. (See <a href="https://www.gpstrategies.com/ai-solutions/learning-content-aiq/" target="_blank" rel="noopener noreferrer">official product page</a>.)</p>
+
+            <p>Dan was one of several frontend developers in the engineering group working on the UX that surfaces these AI capabilities: implementing new React components and pages from Adobe XD designs, modifying existing UX flows across the multitenant architecture. Framed honestly, Dan contributed to the interface for an AI product &mdash; he didn&rsquo;t build the AI pipeline itself, and he wasn&rsquo;t the sole frontend developer, but he was part of the team building the components users interact with to access AI-generated content.</p>
+
+            <p>The technical architecture is a <span class="key-fact">Turborepo monorepo</span> built with Next.js, React, TypeScript, and Tailwind CSS, deployed on Azure. The multitenant architecture was designed for per-client theming, but during Dan&rsquo;s tenure the system was still on the base UX &mdash; work focused on getting the shared foundation right before client-specific branding.</p>
+
+            <p><strong>Design translation challenge:</strong> UX was designed by a graphic artist using Adobe XD (not a UX/interaction designer), which created translation challenges from static layouts to interactive components. The designs often didn&rsquo;t account for interactive states, responsive behavior, or component reusability &mdash; the engineering team had to translate visual mockups into pragmatic React implementations that worked across devices and usage patterns.</p>
+
+            <p><strong>Product stage:</strong> Early-stage product in pilot program with select clients. UX in heavy flux, designs changing frequently, rapid iteration toward production. This environment required frontend agility &mdash; building features quickly while maintaining architectural flexibility for future pivots.</p>
+
+            <p><strong>Key signals:</strong> AI product work (contributing to the interface for LLM-powered content generation), full product lifecycle experience (pilot-stage rapid iteration), enterprise-scale React (Next.js monorepo, multitenant SaaS), and design-to-code pragmatism (translating imperfect handoffs into working software).</p>
+        </div>
+    </div>
+</section>
+
+<!-- 5. FINDINGS -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">5.</span>
+            <span class="section-title">Findings</span>
+        </div>
+
+        <table class="resolution-table">
+            <thead>
+                <tr>
+                    <th style="width: 5%;">#</th>
+                    <th style="width: 25%;">Finding</th>
+                    <th style="width: 70%;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="issue-id" data-label="#">F-01</td>
+                    <td data-label="Finding"><strong>Pattern Recognition</strong></td>
+                    <td data-label="Description">The same architectural pattern expressed across different contexts: CSBB Dispatch (2011) &rarr; BP Learning Platform (2024) &mdash; federated integration layers making multiple systems behave as one. Dan recognized the 2024 version because he&rsquo;d built his own in 2011</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-02</td>
+                    <td data-label="Finding"><strong>Organic Evolution</strong></td>
+                    <td data-label="Description">Integration expertise naturally leading to AI product work &mdash; not deliberate career planning, but organic evolution where the skill thread was real. All three projects came through the same employer over a <span class="key-fact">2024&ndash;2025 period</span></td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-03</td>
+                    <td data-label="Finding"><strong>Inherited Code Stewardship</strong></td>
+                    <td data-label="Description">AICPA Bridge Adapter demonstrated the ability to step into complex codebases built by others as part of a two-developer support team, becoming an L3 escalation point for production issues &mdash; system co-ownership without original authorship</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-04</td>
+                    <td data-label="Finding"><strong>Design-to-Code Pragmatism</strong></td>
+                    <td data-label="Description">ContentAIQ required the engineering team to translate Adobe XD mockups from a graphic artist into interactive React components, navigating the gap between static visual design and functional UI implementation</td>
+                </tr>
+                <tr>
+                    <td class="issue-id" data-label="#">F-05</td>
+                    <td data-label="Finding"><strong>Cross-System Debugging</strong></td>
+                    <td data-label="Description">All three projects required tracing issues across system boundaries: GraphQL &rarr; backend services, webhook &rarr; database &rarr; REST API, frontend &rarr; AI pipeline &mdash; each with different debugging tools and failure modes</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- 6. PROBABLE CAUSE -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">6.</span>
+            <span class="section-title">Probable Cause</span>
+        </div>
+
+        <div class="probable-cause-box">
+            <p>The thread connecting BP Learning Platform, AICPA Bridge Adapter, and ContentAIQ is integration expertise &mdash; the ability to make multiple systems work together as a coherent whole. Whether that&rsquo;s SCORM content servers and LMS platforms, AirTable data and Bridge LMS, or AI agents and frontend interfaces, the underlying challenge is the same: coordinating across boundaries, debugging failures that span systems, and building layers that unify disparate components.</p>
+            <p>This thread naturally led to AI product work because AI products are fundamentally integration challenges. The AI pipeline generates content; the frontend surfaces it. The AI agent produces outputs; the UI translates them into user-facing features. Contributing to the interface for an AI product as part of an engineering team requires the same cross-system coordination, debugging across boundaries, and architectural thinking that Dan applied to federated LMS facades and webhook sync pipelines.</p>
+            <p>The progression wasn&rsquo;t deliberate career planning &mdash; these were assignments from the same employer, not a pre-planned trajectory. But the skill thread was real, and pattern recognition mattered: Dan recognized the BP Learning Platform&rsquo;s federated facade because he&rsquo;d built his own version a decade earlier. The same patterns, expressed in increasingly sophisticated contexts.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 7. TECHNOLOGIES -->
+<section class="report-section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="section-number">7.</span>
+            <span class="section-title">Technologies</span>
+        </div>
+
+        <table class="resolution-table">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Category</th>
+                    <th style="width: 25%;">BP Learning Platform</th>
+                    <th style="width: 25%;">AICPA Bridge Adapter</th>
+                    <th style="width: 25%;">ContentAIQ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Category"><strong>Frontend Framework</strong></td>
+                    <td data-label="BP Learning Platform">React, Material UI</td>
+                    <td data-label="AICPA Bridge Adapter">React, Material UI (admin dashboard)</td>
+                    <td data-label="ContentAIQ">Next.js, React, TypeScript</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Styling</strong></td>
+                    <td data-label="BP Learning Platform">Material UI theming</td>
+                    <td data-label="AICPA Bridge Adapter">Material UI</td>
+                    <td data-label="ContentAIQ">Tailwind CSS</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>API/Backend</strong></td>
+                    <td data-label="BP Learning Platform">GraphQL</td>
+                    <td data-label="AICPA Bridge Adapter">Node.js, PostgreSQL</td>
+                    <td data-label="ContentAIQ">Azure, AI/LLM integration</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Architecture</strong></td>
+                    <td data-label="BP Learning Platform">Federated facade (4 systems)</td>
+                    <td data-label="AICPA Bridge Adapter">Webhook sync pipeline</td>
+                    <td data-label="ContentAIQ">Turborepo monorepo, multitenant SaaS</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Integrations</strong></td>
+                    <td data-label="BP Learning Platform">Rustici, PeopleFluent, Watershed LRS, Cognito</td>
+                    <td data-label="AICPA Bridge Adapter">AirTable API, Bridge LMS REST API, Webhooks</td>
+                    <td data-label="ContentAIQ">AI agents, Azure services</td>
+                </tr>
+                <tr>
+                    <td data-label="Category"><strong>Design Handoff</strong></td>
+                    <td data-label="BP Learning Platform">&mdash;</td>
+                    <td data-label="AICPA Bridge Adapter">&mdash;</td>
+                    <td data-label="ContentAIQ">Adobe XD (graphic artist mockups)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="background-content">
+            <h2>Key Technical Insights</h2>
+            <ul class="detail-list">
+                <li><strong>The Integration Thread:</strong> All three projects share a common challenge &mdash; making multiple systems work together. BP: federated facade over four backend services. AICPA: webhook pipeline syncing AirTable &rarr; Node.js &rarr; Bridge LMS. ContentAIQ: frontend surfacing AI pipeline outputs</li>
+                <li><strong>Pattern Recognition Across Time:</strong> CSBB Dispatch (2011) &rarr; BP Learning Platform (2024). Same federated integration pattern, different tooling (EasyXDM/SCORM vs. React/GraphQL). Dan recognized the 2024 architecture because he&rsquo;d built his own version a decade earlier</li>
+                <li><strong>Inherited System Co-Ownership:</strong> AICPA Bridge Adapter stewardship &mdash; Dan was one of two developers supporting the original senior engineer&rsquo;s webhook sync pipeline, becoming an L3 escalation point. Demonstrates ability to step into complex existing codebases and maintain production reliability as part of a small team</li>
+                <li><strong>AI Product Frontend:</strong> ContentAIQ &mdash; contributing to the interface that surfaces AI-generated content as part of the engineering team. Next.js/Turborepo monorepo architecture, multitenant SaaS, pilot-stage rapid iteration. Enterprise-scale React with modern tooling</li>
+                <li><strong>Design Translation:</strong> Adobe XD &rarr; React component translation challenge. Graphic artist mockups without interaction design &mdash; the team navigated pragmatic implementation decisions for responsive behavior, interactive states, component reusability</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<!-- Meta Sidebar -->
+
+<aside class="exhibit-meta">
+    <div class="container">
+        <h2>Engagement Metadata</h2>
+
+        
+        <div class="meta-item">
+            <strong>Industry:</strong>
+            <p>eLearning / EdTech / AI</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Skills Demonstrated:</strong>
+            <ul>
+            
+                <li>AI Product Frontend</li>
+            
+                <li>Multitenant Architecture</li>
+            
+                <li>Design Translation</li>
+            
+                <li>Integration Patterns</li>
+            
+                <li>Pattern Recognition</li>
+            
+                <li>Cross-System Coordination</li>
+            
+                <li>Federated Systems</li>
+            
+            </ul>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Duration:</strong>
+            <p>0.5 years</p>
+        </div>
+        
+
+        
+        <div class="meta-item">
+            <strong>Personnel Involved:</strong>
+            <p>1 individuals</p>
+        </div>
+        
+
+        
+
+        
+        <div class="meta-item">
+            <strong>Outcome:</strong>
+            <p>Contributed to ContentAIQ AI product frontend as part of engineering team implementing React components and pages from Adobe XD designs. Recognized integration pattern thread across BP Learning Platform (federated facade), AICPA Bridge Adapter (webhook sync pipeline), and ContentAIQ (AI product interface). Pattern recognition across 13 years from CSBB Dispatch to modern federated systems.</p>
+        </div>
+        
+    </div>
+</aside>
+
+
+<!-- Related Exhibits Section -->
+
+<section class="related-exhibits">
+    <div class="container">
+        <h2>Related Field Reports</h2>
+        <div class="related-exhibits-grid">
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a href="/exhibits/exhibit-n.html" class="related-exhibit-card">
+                    <span class="related-exhibit-letter">Exhibit N</span>
+                    <span class="related-exhibit-title">BP Learning Platform</span>
+                    
+                    <span class="related-exhibit-client">BP (via Leo Learning / GP Strategies)</span>
+                    
+                </a>
+                
+            
+                
+            
+        
+        </div>
+    </div>
+</section>
+
+
+<!-- Extra Content Block -->
+
+
+<!-- Back to Field Reports -->
+<div class="container">
+    <p><a href="/testimonials.html" class="back-link">&larr; Back to Field Reports</a></p>
+</div>
+
+    </main>
+
+        <footer>
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a> | <a href="/accessibility.html">Accessibility</a></p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+        <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>

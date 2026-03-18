@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Theme detection: MUST run before CSS to prevent flash -->
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var prefersDarkQuery = '(prefers-color-scheme: dark)';
+        var mql = window.matchMedia(prefersDarkQuery);
+        var supportsColorScheme = mql.media === prefersDarkQuery;
+        var savedTheme = null;
+        try { savedTheme = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        } else if (savedTheme === null && supportsColorScheme && mql.matches) {
+            document.documentElement.setAttribute(THEME_ATTR, 'dark');
+        }
+    })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+
+    
+
+    
+    <meta name="description" content="Client engagements spanning 8+ industries — from AI innovation and financial services to aerospace, energy, and healthcare. Dan Novak&#39;s enterprise breadth through GP Strategies consulting.">
+    <meta property="og:title" content="Industry Verticals | Pattern 158 - Dan Novak">
+    <meta property="og:description" content="Client engagements spanning 8+ industries — from AI innovation and financial services to aerospace, energy, and healthcare. Dan Novak&#39;s enterprise breadth through GP Strategies consulting.">
+    <meta property="og:url" content="https://pattern158.solutions/industries.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://pattern158.solutions/assets/images/logos/pattern158_logo_3pipes_detailed.png">
+    <meta property="og:site_name" content="Pattern 158 Solutions">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://pattern158.solutions/industries.html">
+    
+
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/assets/images/icons/pattern158_favicon_flat.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/assets/images/icons/pattern158_favicon_flat.png" sizes="180x180">
+
+    <title>Industry Verticals | Pattern 158 - Dan Novak — Pattern 158 Solutions</title>
+
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Pattern 158 Solutions",
+  "description": "Senior Software Engineer and Systems Architect with 28+ years building and rescuing enterprise systems. Available for new opportunities.",
+  "url": "https://pattern158.solutions"
+}
+    </script>
+    
+    
+</head>
+<body class="page-industries">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+            <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="/index.html" class="logo-link">
+                <img src="/assets/images/logos/pattern158_logo_3pipes_detailed.png"
+                     alt="Pattern 158 - Provider of Clarity"
+                     class="logo-img"
+                     width="88"
+                     height="48">
+            </a>
+
+            <!-- Hamburger button (mobile only) -->
+            <button class="hamburger"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="nav-menu"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+
+            <!-- Navigation menu -->
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/philosophy.html">Philosophy</a></li>
+                <li><a href="/faq.html">FAQ</a></li>
+                <li><a href="/technologies.html">Technologies</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/testimonials.html">Field Reports</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" type="button"
+                            aria-label="Toggle dark mode" aria-pressed="false">
+                        <svg class="icon-sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                        </svg>
+                        <svg class="icon-moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                        </svg>
+                        <span class="sr-only">Toggle dark mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    </header>
+
+    <main id="main-content" aria-label="Main content">
+        
+        <!-- Hero -->
+        <section class="hero-minimal">
+            <div class="container">
+                <h1>Industries</h1>
+                <p class="subtitle">Enterprise breadth across 8 industry verticals — all engagements delivered through GP Strategies</p>
+            </div>
+        </section>
+
+        <!-- Overview / Jump Links -->
+        <section class="industries-overview" aria-labelledby="overview-heading">
+            <div class="container">
+                <h2 id="overview-heading" class="sr-only">Industry Overview</h2>
+                <nav class="vertical-index" aria-label="Jump to industry vertical">
+                    <a href="#ai-innovation">AI &amp; Innovation</a>
+                    <a href="#financial-services">Financial Services</a>
+                    <a href="#energy-utilities">Energy &amp; Utilities</a>
+                    <a href="#aerospace-defense">Aerospace &amp; Defense</a>
+                    <a href="#pharmaceutical-healthcare">Pharmaceutical &amp; Healthcare</a>
+                    <a href="#technology">Technology</a>
+                    <a href="#consumer-manufacturing">Consumer &amp; Manufacturing</a>
+                    <a href="#government-professional-services">Government &amp; Professional Services</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- AI & Innovation Vertical -->
+        <section id="ai-innovation" class="industry-vertical" aria-labelledby="ai-innovation-heading">
+            <div class="container">
+                <h2 id="ai-innovation-heading">AI &amp; Innovation (3 engagements)</h2>
+                <p class="vertical-narrative">Modern AI product development and enterprise platform architecture — from Copilot Studio hybrid agents to AI-powered content creation.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">Microsoft MCAPS</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-k.html">Copilot Studio Hybrid AI Training Agent</a></td>
+                                <td data-label="Dates">Dec 2025–Jan 2026</td>
+                                <td data-label="Role">Architect (Hybrid AI Pattern)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Enterprise Client (Confidential)</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-l.html">Power Platform Architecture Audit</a></td>
+                                <td data-label="Dates">2025</td>
+                                <td data-label="Role">Forensic Architecture Auditor</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">GP Strategies (ContentAIQ)</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-o.html">AI-Powered Content Creation Platform</a></td>
+                                <td data-label="Dates">2024–2025</td>
+                                <td data-label="Role">Frontend Engineer (Next.js/React)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Financial Services Vertical -->
+        <section id="financial-services" class="industry-vertical" aria-labelledby="financial-services-heading">
+            <div class="container">
+                <h2 id="financial-services-heading">Financial Services (9 engagements)</h2>
+                <p class="vertical-narrative">Banking, insurance, and financial technology — Simple Learning course development, SCORM integration, accessibility testing, and LMS troubleshooting.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">HSBC</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-f.html">Simple Learning Course Development &amp; Custom Components</a></td>
+                                <td data-label="Dates">2015–2024</td>
+                                <td data-label="Role">Course Developer / FQA / Accessibility</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">HSBC Canada</td>
+                                <td data-label="Engagement">Course Localization</td>
+                                <td data-label="Dates">2022–2024</td>
+                                <td data-label="Role">Localization Specialist</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">UOB (United Overseas Bank)</td>
+                                <td data-label="Engagement">Simple Learning Course Rebuild with Mobile Support</td>
+                                <td data-label="Dates">2022–2024</td>
+                                <td data-label="Role">Course Developer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">TD Bank</td>
+                                <td data-label="Engagement">Storyline Development &amp; Accessibility Testing</td>
+                                <td data-label="Dates">2020–2022</td>
+                                <td data-label="Role">Storyline Developer / Accessibility Tester</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">SunTrust Bank</td>
+                                <td data-label="Engagement">AWARE Onboarding &amp; eLearning Platform</td>
+                                <td data-label="Dates">2015–2018</td>
+                                <td data-label="Role">Lead Technical Engineer (SCORM-to-REST Integration)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Bank of America</td>
+                                <td data-label="Engagement">Lectora Course LMS Troubleshooting</td>
+                                <td data-label="Dates">2018</td>
+                                <td data-label="Role">LMS Troubleshooting Lead</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Horizon BCBS NJ</td>
+                                <td data-label="Engagement">FWA and Compliance Training</td>
+                                <td data-label="Dates">2018</td>
+                                <td data-label="Role">Technical Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">MetLife</td>
+                                <td data-label="Engagement">Home Hail Damage VR</td>
+                                <td data-label="Dates">2018–2020</td>
+                                <td data-label="Role">SCORM Expert / Technical Team Member</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">SAP SuccessFactors</td>
+                                <td data-label="Engagement">LMS Client Engagements</td>
+                                <td data-label="Dates">2015–2018</td>
+                                <td data-label="Role">eLearning Content Integration Specialist</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy & Utilities Vertical -->
+        <section id="energy-utilities" class="industry-vertical" aria-labelledby="energy-utilities-heading">
+            <div class="container">
+                <h2 id="energy-utilities-heading">Energy &amp; Utilities (5 engagements)</h2>
+                <p class="vertical-narrative">Long-term platform engineering for energy utilities — GPiLEARN/CSBB content delivery architecture serving 20+ utility clients.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">BP</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-n.html">Learning Platform (Federated React/GraphQL Facade)</a></td>
+                                <td data-label="Dates">2024</td>
+                                <td data-label="Role">Frontend Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Exelon Corporation</td>
+                                <td data-label="Engagement">eLearning &amp; LMS Support</td>
+                                <td data-label="Dates">2015–2017</td>
+                                <td data-label="Role">AICC/SCORM Troubleshooter</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">National Grid</td>
+                                <td data-label="Engagement">LMS &amp; eLearning Support</td>
+                                <td data-label="Dates">2019–2020</td>
+                                <td data-label="Role">Technical Consultant</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Portland General Electric</td>
+                                <td data-label="Engagement">Energy Education Center LMS</td>
+                                <td data-label="Dates">2013–2016</td>
+                                <td data-label="Role">Learning Systems Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">GP Strategies (GPiLEARN)</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-c.html">CSBB Dispatch &amp; Platform Engineering</a></td>
+                                <td data-label="Dates">2011–2020</td>
+                                <td data-label="Role">Core Platform Developer</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aerospace & Defense Vertical -->
+        <section id="aerospace-defense" class="industry-vertical" aria-labelledby="aerospace-defense-heading">
+            <div class="container">
+                <h2 id="aerospace-defense-heading">Aerospace &amp; Defense (3 engagements)</h2>
+                <p class="vertical-narrative">Technical validation and cross-domain architecture for defense and aerospace programs — including a 7-year embedded advisory at Electric Boat.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">General Dynamics Electric Boat</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-a.html">LMS Integration &amp; Cross-Domain SCORM</a></td>
+                                <td data-label="Dates">2015–2022</td>
+                                <td data-label="Role">Cross-Domain Architecture / 7-year Advisory</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Gulfstream Aerospace</td>
+                                <td data-label="Engagement">Leading Edge eLearning Program</td>
+                                <td data-label="Dates">2017–2020</td>
+                                <td data-label="Role">Technical Troubleshooting Lead</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">United Technologies</td>
+                                <td data-label="Engagement">Legacy Branding &amp; eLearning Content Audit</td>
+                                <td data-label="Dates">2018–2020</td>
+                                <td data-label="Role">Technical Lead (Content Audit Tooling)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pharmaceutical & Healthcare Vertical -->
+        <section id="pharmaceutical-healthcare" class="industry-vertical" aria-labelledby="pharmaceutical-healthcare-heading">
+            <div class="container">
+                <h2 id="pharmaceutical-healthcare-heading">Pharmaceutical &amp; Healthcare (3 engagements)</h2>
+                <p class="vertical-narrative">eLearning platform integration and LMS troubleshooting for pharmaceutical and medical education.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">Eli Lilly</td>
+                                <td data-label="Engagement">eLearning Platform Integration &amp; AICC Wrapper</td>
+                                <td data-label="Dates">2015–2020</td>
+                                <td data-label="Role">AICC/LMS Integration Specialist</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Bayer AG</td>
+                                <td data-label="Engagement">eLearning Course Development &amp; LMS Integration</td>
+                                <td data-label="Dates">2012</td>
+                                <td data-label="Role">LMS Integration Specialist</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Weill Cornell Medicine</td>
+                                <td data-label="Engagement">LMS Readiness &amp; Course Troubleshooting</td>
+                                <td data-label="Dates">2017–2018</td>
+                                <td data-label="Role">Lead Technical Investigator</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Vertical -->
+        <section id="technology" class="industry-vertical" aria-labelledby="technology-heading">
+            <div class="container">
+                <h2 id="technology-heading">Technology (3 engagements)</h2>
+                <p class="vertical-narrative">Enterprise technology platforms — Windows 10 training at scale, LMS health checks, and online learning systems.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">Microsoft</td>
+                                <td data-label="Engagement">eLearning Windows 10 Training</td>
+                                <td data-label="Dates">2015–2019</td>
+                                <td data-label="Role">Learning Systems Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">CSC</td>
+                                <td data-label="Engagement">University Online Learning Modules</td>
+                                <td data-label="Dates">2014</td>
+                                <td data-label="Role">Web Developer / SCORM Integration</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">CDK Global</td>
+                                <td data-label="Engagement">LMS Health Check &amp; LinkedIn Learning Integration</td>
+                                <td data-label="Dates">2019</td>
+                                <td data-label="Role">LMS/AICC Integration Troubleshooter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Consumer & Manufacturing Vertical -->
+        <section id="consumer-manufacturing" class="industry-vertical" aria-labelledby="consumer-manufacturing-heading">
+            <div class="container">
+                <h2 id="consumer-manufacturing-heading">Consumer &amp; Manufacturing (6 engagements)</h2>
+                <p class="vertical-narrative">SCORM expertise and accessibility remediation for consumer brands and manufacturing companies.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">Nike</td>
+                                <td data-label="Engagement">eLearning Accessibility Evaluation &amp; Remediation</td>
+                                <td data-label="Dates">2018</td>
+                                <td data-label="Role">Accessibility Technical Advisor</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Luxottica</td>
+                                <td data-label="Engagement">LMS Optimization Assessment</td>
+                                <td data-label="Dates">2015</td>
+                                <td data-label="Role">Technical Expert / Content Analyst</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Mondelez International</td>
+                                <td data-label="Engagement">eLearning Support</td>
+                                <td data-label="Dates">2015–2018</td>
+                                <td data-label="Role">SCORM Technical Expert</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Corning Incorporated</td>
+                                <td data-label="Engagement">eLearning Support</td>
+                                <td data-label="Dates">2018–2020</td>
+                                <td data-label="Role">SCORM/LMS Technical Specialist</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Pella Corporation</td>
+                                <td data-label="Engagement">eLearning Platform &amp; Course Development</td>
+                                <td data-label="Dates">2014–2016</td>
+                                <td data-label="Role">LMS/SCORM Integration Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Keurig Dr Pepper</td>
+                                <td data-label="Engagement">SuccessFactors SCORM Integration</td>
+                                <td data-label="Dates">2018</td>
+                                <td data-label="Role">Lead SCORM Troubleshooting Expert</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Government & Professional Services Vertical -->
+        <section id="government-professional-services" class="industry-vertical" aria-labelledby="government-professional-services-heading">
+            <div class="container">
+                <h2 id="government-professional-services-heading">Government &amp; Professional Services (6 engagements)</h2>
+                <p class="vertical-narrative">Government compliance, professional services consulting, and internal platform work.</p>
+                <div class="directory-table-wrap">
+                    <table class="directory-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Engagement</th>
+                                <th>Dates</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Client">AICPA</td>
+                                <td data-label="Engagement"><a href="/exhibits/exhibit-m.html">Bridge Adapter (Webhook Sync Pipeline)</a></td>
+                                <td data-label="Dates">2024</td>
+                                <td data-label="Role">L3 Escalation / Integration Engineer</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">U.S. Dept. of Justice</td>
+                                <td data-label="Engagement">Civil Division Flash Content Conversion</td>
+                                <td data-label="Dates">2019</td>
+                                <td data-label="Role">Technical Lead (Assessment)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Hilton Hotels</td>
+                                <td data-label="Engagement">Legacy LMS Content Conversion</td>
+                                <td data-label="Dates">2013</td>
+                                <td data-label="Role">Technical Lead (SCORM Packaging)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">Boston Consulting Group</td>
+                                <td data-label="Engagement">Content Support &amp; Flash Readiness</td>
+                                <td data-label="Dates">2018–2019</td>
+                                <td data-label="Role">Technical Lead (Content Analysis)</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">GP Strategies (Internal)</td>
+                                <td data-label="Engagement">Technical Consulting</td>
+                                <td data-label="Dates">2021</td>
+                                <td data-label="Role">Internal SME / Technical Consultant</td>
+                            </tr>
+                            <tr>
+                                <td data-label="Client">GP Strategies (GPU)</td>
+                                <td data-label="Engagement">GP University LMS</td>
+                                <td data-label="Dates">2018–2020</td>
+                                <td data-label="Role">SCORM/LMS Troubleshooting Specialist</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="industries-cta" aria-label="Contact">
+            <div class="container">
+                <p>Interested in how this experience maps to your industry?</p>
+                <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </section>
+
+    </main>
+
+        <footer>
+        <div class="container">
+            <p><strong>Dan Novak</strong> | Senior Software Engineer | Systems Architect</p>
+            <p>Portland, OR | <a href="mailto:dan@pattern158.solutions">dan@pattern158.solutions</a> | <a href="https://linkedin.com/in/dan-novak-5692197">LinkedIn</a> | <a href="/accessibility.html">Accessibility</a></p>
+            <p class="footer-tagline">Pattern 158: I cheat, but I cheat fair.</p>
+        </div>
+    </footer>
+
+        <!-- Navigation toggle -->
+    <script>
+    (function() {
+        var hamburger = document.querySelector('.hamburger');
+        var navMenu = document.querySelector('.nav-menu');
+
+        if (!hamburger || !navMenu) return;
+
+        function toggleMenu() {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            var newState = !isOpen;
+
+            hamburger.setAttribute('aria-expanded', String(newState));
+            hamburger.classList.toggle('is-active', newState);
+            navMenu.classList.toggle('is-open', newState);
+
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = newState ? 'hidden' : '';
+        }
+
+        function closeMenu() {
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-open');
+            document.body.style.overflow = '';
+        }
+
+        // Click handler
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard: Enter or Space activates button
+        hamburger.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Escape closes menu, returns focus to hamburger
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    closeMenu();
+                    hamburger.focus();
+                }
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            var isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+            if (isOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked (for same-page navigation)
+        navMenu.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                closeMenu();
+            }
+        });
+
+        // Close menu on window resize to desktop (cleanup stale mobile state)
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+    })();
+    </script>
+
+    <script>
+    (function() {
+        var STORAGE_KEY = 'theme';
+        var THEME_ATTR = 'data-theme';
+        var toggle = document.getElementById('theme-toggle');
+        if (!toggle) return;
+
+        // Set initial ARIA state based on current theme
+        var isDark = document.documentElement.getAttribute(THEME_ATTR) === 'dark';
+        toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+
+        // Toggle handler
+        toggle.addEventListener('click', function() {
+            var html = document.documentElement;
+            var currentlyDark = html.getAttribute(THEME_ATTR) === 'dark';
+            var newTheme = currentlyDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                html.setAttribute(THEME_ATTR, 'dark');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+            }
+
+            toggle.setAttribute('aria-pressed', newTheme === 'dark' ? 'true' : 'false');
+
+            try { localStorage.setItem(STORAGE_KEY, newTheme); } catch (e) {}
+        });
+
+        // Cross-tab synchronization
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                var html = document.documentElement;
+                if (e.newValue === 'dark') {
+                    html.setAttribute(THEME_ATTR, 'dark');
+                    toggle.setAttribute('aria-pressed', 'true');
+                } else {
+                    html.removeAttribute(THEME_ATTR);
+                    toggle.setAttribute('aria-pressed', 'false');
+                }
+            }
+        });
+
+        // System preference change listener (respects manual override)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            try {
+                if (localStorage.getItem(STORAGE_KEY) !== null) return;
+            } catch (err) {}
+            var html = document.documentElement;
+            if (e.matches) {
+                html.setAttribute(THEME_ATTR, 'dark');
+                toggle.setAttribute('aria-pressed', 'true');
+            } else {
+                html.removeAttribute(THEME_ATTR);
+                toggle.setAttribute('aria-pressed', 'false');
+            }
+        });
+    })();
+    </script>
+
+</body>
+</html>
